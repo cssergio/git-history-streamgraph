@@ -1,0 +1,4 @@
+dataProcessingScripts/repositories
+dataProcessingScripts/data
+*.swp
+node_modules
