@@ -1,0 +1,1194 @@
+☕d6feb94🔪2022-02-19 10:26:49 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4b62285🔪2021-12-31 03:41:08 +0700🔪duyanton🔪Add vi-VN locale (#109)🔪
+ locale/vi-VN.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕0497d0a🔪2021-12-20 22:34:47 -0500🔪Adam Pearce🔪Fixes code block formatting (#108)🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕76cfef1🔪2021-12-04 09:02:48 -0800🔪Mike Bostock🔪4.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3a77e7c🔪2021-12-04 09:02:35 -0800🔪Mike Bostock🔪upgrade dependencies🔪
+ package.json |   4 +-
+ yarn.lock    | 539 ++++++++++++++++++++++++-----------------------------------
+ 2 files changed, 225 insertions(+), 318 deletions(-)
+
+☕066640a🔪2021-12-04 17:46:17 +0100🔪Webmaster91🔪Arabic months names (#100)🔪* Add files via upload
+
+* Update ar-SY.json
+ locale/ar-SY.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕092d858🔪2021-12-04 17:46:04 +0100🔪j-dc🔪Added nl-BE locale (#104)🔪Co-authored-by: Jan Declercq <Jan.Declercq@alsic.be>
+ locale/nl-BE.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕10f3e9c🔪2021-12-04 17:45:40 +0100🔪milotype🔪Add hr-HR.json (#106)🔪* Add hr-HR.json
+
+Add Croatian translation
+
+* Update hr-HR.json
+
+Typo-correction for December (Porsinac vs Prosinac)
+ locale/hr-HR.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕3d0e773🔪2021-12-04 17:45:12 +0100🔪Philippe Rivière🔪export locales (#99)🔪the new syntax is:
+`import localeCh from "d3-time-format/locale/de-CH";`
+
+closes #98
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕2f95374🔪2021-06-05 12:00:44 -0700🔪Mike Bostock🔪4.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fcb2fdc🔪2021-06-05 20:59:35 +0200🔪Philippe Rivière🔪Adopt type=module (#95)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* es6 rather than no-undef
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* Update README
+
+* stricter eslint
+
+* related d3/d3#3502; extract copyrights from LICENSE
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                        |    4 +-
+ .github/eslint.json (new)             |   18 +
+ .github/workflows/node.js.yml (new)   |   30 +
+ LICENSE                               |   40 +-
+ README.md                             |   70 +-
+ d3-time-format.sublime-project (gone) |   17 -
+ package.json                          |   51 +-
+ rollup.config.js                      |   10 +-
+ test/.eslintrc.json (new)             |   11 +
+ test/date.js                          |   12 +-
+ test/defaultLocale-test.js            |   93 +--
+ test/format-test.js                   |  605 +++++++-------
+ test/isoFormat-test.js                |   13 +-
+ test/isoParse-test.js                 |   15 +-
+ test/locale-test.js                   |   32 +-
+ test/parse-test.js                    |  584 ++++++-------
+ test/utcFormat-test.js                |  634 +++++++-------
+ test/utcParse-test.js                 |  413 +++++----
+ yarn.lock                             | 1473 ++++++++++++++++++---------------
+ 19 files changed, 2076 insertions(+), 2049 deletions(-)
+
+☕d1e06a3🔪2020-08-23 15:45:18 +0200🔪Philippe Rivière🔪dependencies🔪
+ package.json | 2 +-
+ yarn.lock    | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕614d25a🔪2020-08-23 15:31:36 +0200🔪Philippe Rivière🔪v2.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕88c62a9🔪2020-07-27 09:51:17 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕1d2f330🔪2020-07-27 09:48:54 +0200🔪Philippe Rivière🔪v3.0.0-rc.1🔪
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕4bc1c60🔪2020-07-27 09:46:53 +0200🔪Philippe Rivière🔪remove devDependency on d3-queue fixes #89🔪
+ package.json        |  1 -
+ test/locale-test.js | 17 ++++++-----------
+ yarn.lock           |  7 +------
+ 3 files changed, 7 insertions(+), 18 deletions(-)
+
+☕09d57d9🔪2020-07-27 09:44:43 +0200🔪Philippe Rivière🔪fix test after https://github.com/d3/d3-time-format/pull/85🔪
+ test/defaultLocale-test.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕37472b9🔪2020-07-10 22:09:02 +0200🔪Philippe Rivière🔪simplify dateTime🔪
+ locale/ja-JP.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1c5bde9🔪2020-07-10 16:56:34 +0300🔪maksdanik🔪update nl-NL locale dateTime format🔪
+ locale/nl-NL.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6756642🔪2020-06-09 19:44:01 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @3 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+(Note: I tested the change speed-wise, it's faster in my browser)
+
+ src/locale.js | 14 ++++++--------
+ 1 file changed, 6 insertions(+), 8 deletions(-)
+
+☕3339480🔪2020-06-09 19:26:09 +0200🔪Philippe Rivière🔪- dependencies: d3-time: "1 - 2" - links🔪
+ README.md    | 32 ++++++++++++++++----------------
+ package.json |  2 +-
+ 2 files changed, 17 insertions(+), 17 deletions(-)
+
+☕0ddd743🔪2020-06-09 19:18:13 +0200🔪Philippe Rivière🔪French format for %c datetime🔪locale.format("%c")(new Date()) returns "mardi, le  9 juin 2020, 18:58:57", which is weird.
+
+I can't find a very clear spec, but:
+~~~{js}
+new Intl.DateTimeFormat('fr-FR', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric'
+}).format(new Date())
+~~~
+
+returns "mardi 9 juin 2020 à 19:09:23", which definitely sounds better.
+
+(This commit returns "mardi  9 juin 2020 à 19:09:23" with an extra space.)
+
+ locale/fr-FR.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0e7a6b7🔪2019-01-04 10:28:29 +0100🔪David Nowinsky🔪Documentation for ISO 8601 years (%G and %g)🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕ba0267e🔪2019-01-04 10:17:52 +0100🔪David Nowinsky🔪Test %V %g parsing🔪
+ test/parse-test.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕e5ff0c9🔪2019-01-04 10:04:45 +0100🔪David Nowinsky🔪Format ISO 8601 years (%g)🔪
+ src/locale.js          | 29 +++++++++++++++++++++++++----
+ test/format-test.js    |  8 ++++++++
+ test/parse-test.js     | 12 ++++++++++++
+ test/utcFormat-test.js |  8 ++++++++
+ test/utcParse-test.js  | 15 +++++++++++++++
+ 5 files changed, 68 insertions(+), 4 deletions(-)
+
+☕2dc3c76🔪2019-01-04 09:43:46 +0100🔪David Nowinsky🔪Format ISO 8601 years (%G)🔪
+ src/locale.js          | 15 +++++++++++++++
+ test/format-test.js    |  8 ++++++++
+ test/parse-test.js     |  6 ++++--
+ test/utcFormat-test.js |  8 ++++++++
+ test/utcParse-test.js  | 28 ++++++++++++++++++++++++++++
+ 5 files changed, 63 insertions(+), 2 deletions(-)
+
+☕3d6a214🔪2020-06-06 23:14:11 +0800🔪muyueh🔪Update zh-TW.json🔪
+ locale/zh-TW.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b85fc8f🔪2020-03-10 18:53:29 +0900🔪Ryusei Yamaguchi🔪Correct ja-JP time format🔪- The old format of date time `"%Y %b %e %a %X"` generates strings like `2020 3月 10 火 15:20:22`, which is not correct. The date part of them should be either `2020/03/10` using slashes as separators or `2020年3月10日` using 年 (year), 月 (month) and 日 (day) as suffixes. Using suffixes partly should be avoided.
+- Month names are replaced with numeric notation with kanji suffix because these names are obsolete and mostly used for Chinese luni-solar calendar.
+ locale/ja-JP.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9632a7e🔪2020-02-20 15:36:03 +0100🔪Ilaria Venturini🔪Fix broken anchor in documentation🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e3bb9e4🔪2019-12-29 08:47:44 -0800🔪Mike Bostock🔪2.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ecdfaba🔪2019-12-29 08:46:15 -0800🔪Mike Bostock🔪Rename zh-TW.json.🔪
+ locale/{zh-TW => zh-TW.json} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕cc63001🔪2019-12-02 15:06:05 +0800🔪Hsu Ching Feng🔪Add zh-TW locale🔪We use `週` (zh-TW) instead of `周` (zh-CN)
+We need this for full i18n support for Taiwan / Hong Kong users. They think it's typo.
+ locale/zh-TW (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕ba4a0ed🔪2019-12-20 14:59:22 -0800🔪Mike Bostock🔪Setting the default locale is a side effect?🔪
+ package.json | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕b2642d5🔪2019-11-16 11:24:41 -0800🔪Mike Bostock🔪2.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed80f8b🔪2018-07-08 15:35:34 +0430🔪Mohsen Taleb🔪Added fa-IR locale.🔪
+ locale/fa-IR.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕6ea27ff🔪2019-11-02 08:23:38 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕fa4c7fb🔪2019-10-23 10:22:20 -0700🔪Mike Bostock🔪2.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9266876🔪2019-10-23 10:22:19 -0700🔪Mike Bostock🔪Publish locales. Fixes #66.🔪
+ package.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕ec7dec6🔪2019-10-22 21:40:24 -0700🔪Mike Bostock🔪2.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕52e5ceb🔪2019-10-22 21:40:11 -0700🔪Mike Bostock🔪Update d3-time.🔪
+ yarn.lock | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕0800851🔪2019-09-27 10:26:48 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕23c1c6a🔪2019-10-22 21:36:54 -0700🔪Mike Bostock🔪More tests.🔪
+ test/utcFormat-test.js | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕4c63b2b🔪2019-10-22 21:34:47 -0700🔪Mike Bostock🔪Fix off-by-one in utcFormat.🔪
+ src/locale.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6c78f73🔪2019-10-22 21:32:19 -0700🔪Mike Bostock🔪Fix off-by-one-millisecond error.🔪
+ src/locale.js       |  4 ++--
+ test/format-test.js | 10 ++++++++++
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+☕3486461🔪2019-10-22 21:12:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕cd830bc🔪2019-10-22 21:03:42 -0700🔪Mike Bostock🔪Implement parsing for %q.🔪
+ src/locale.js      | 21 +++++++++++++++------
+ test/parse-test.js | 18 ++++++++++++++++++
+ 2 files changed, 33 insertions(+), 6 deletions(-)
+
+☕f7e8e14🔪2019-03-09 22:30:50 -0800🔪Jeffrey Heer🔪Add quarter (%q) format directive.🔪
+ README.md              |  1 +
+ src/locale.js          | 10 ++++++++++
+ test/format-test.js    |  9 +++++++++
+ test/utcFormat-test.js |  9 +++++++++
+ 4 files changed, 29 insertions(+)
+
+☕5b1e668🔪2019-10-22 20:43:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9d8df49🔪2019-10-22 20:41:03 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf600f9🔪2018-04-21 10:36:39 -0700🔪Ben Welsh🔪%Y example🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2a4dcab🔪2019-10-22 20:37:46 -0700🔪Mike Bostock🔪Add tests for parsing %s.🔪
+ test/utcParse-test.js | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+
+☕f7a85e5🔪2019-10-22 20:33:49 -0700🔪Mike Bostock🔪Allow %s to work with %L and %f.🔪
+ src/locale.js          |  3 ++-
+ test/utcFormat-test.js | 14 ++++++++++++++
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+
+☕db47711🔪2019-10-22 20:17:57 -0700🔪Mike Bostock🔪Make tests slightly harder.🔪
+ test/utcParse-test.js | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+☕aea0bc8🔪2019-10-22 20:12:43 -0700🔪Mike Bostock🔪Fix UTC week and weekday number parsing.🔪
+ src/locale.js         | 15 +++++++++------
+ test/parse-test.js    |  6 ++++++
+ test/utcParse-test.js | 16 ++++++++++++++--
+ 3 files changed, 29 insertions(+), 8 deletions(-)
+
+☕094fcf9🔪2019-08-09 16:17:19 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 881 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 522 insertions(+), 365 deletions(-)
+
+☕dfc48ac🔪2019-08-09 15:54:41 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕a551b88🔪2019-08-09 15:44:51 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/defaultLocale.js | 2 +-
+ src/index.js         | 8 ++++----
+ src/isoFormat.js     | 2 +-
+ src/isoParse.js      | 4 ++--
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+
+☕8b1727d🔪2018-08-24 14:35:31 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕da8ef47🔪2018-08-24 14:05:03 -0700🔪Mike Bostock🔪2.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bfc3372🔪2018-08-24 13:43:35 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 4 ----
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 4 ++++
+ 4 files changed, 12 insertions(+), 11 deletions(-)
+
+☕de131ec🔪2018-08-24 12:35:42 -0700🔪Mike Bostock🔪2.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e94715🔪2018-08-24 12:35:40 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)               |   8 -
+ .eslintrc.json (new)           |  15 +
+ .gitignore                     |   2 +-
+ .npmignore                     |   3 +-
+ d3-time-format.sublime-project |  16 +-
+ locale/ar-EG.json              |   2 +-
+ package.json                   |  17 +-
+ rollup.config.js               |  42 +-
+ yarn.lock (new)                | 943 +++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 1012 insertions(+), 36 deletions(-)
+
+☕584d909🔪2018-04-16 18:32:12 +0200🔪Aya Azzam🔪fix date format by removing the extra slash🔪
+ locale/ar-EG.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c47e715🔪2018-04-12 21:10:33 +0200🔪Aya Azzam🔪create ar-EG.json🔪
+ locale/ar-EG.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕32c041d🔪2018-01-23 14:41:45 +0100🔪Simen Heggestøyl🔪Add nb-NO locale.🔪
+ locale/nb-NO.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕00867e4🔪2017-11-21 16:48:55 -0500🔪Mike Bostock🔪2.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6673d84🔪2017-11-21 13:57:24 +0300🔪Filiz Altıntürk🔪Add tr-TR locale JSON data🔪
+ locale/tr-TR.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕4914347🔪2017-10-09 10:25:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ed3b411🔪2017-10-09 10:19:55 -0700🔪Mike Bostock🔪2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ff3f84c🔪2017-10-09 10:19:24 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ LICENSE                |  2 +-
+ package.json           | 12 ++++++------
+ rollup.config.js (new) | 14 ++++++++++++++
+ src/locale.js          |  4 ++--
+ 4 files changed, 23 insertions(+), 9 deletions(-)
+
+☕f61973d🔪2017-10-09 10:16:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7f9f662🔪2017-10-09 10:14:19 -0700🔪Mike Bostock🔪Coerce instead of getTime.🔪
+ src/locale.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕46053d6🔪2017-10-09 10:14:11 -0700🔪Mike Bostock🔪First check for UNIX timestamp.🔪
+ src/locale.js | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕dd25a6d🔪2016-02-19 23:40:55 +0100🔪Wojtek Kruk🔪Added %Q and %s directives for Unix timestamps🔪
+ README.md              |  2 ++
+ src/locale.js          | 29 +++++++++++++++++++++++++++++
+ test/utcFormat-test.js | 16 ++++++++++++++++
+ test/utcParse-test.js  | 14 ++++++++++++++
+ 4 files changed, 61 insertions(+)
+
+☕66ee751🔪2016-10-06 16:41:50 -0700🔪Mike Bostock🔪Fix #24 - %f for microseconds.🔪
+ README.md              |  1 +
+ src/locale.js          | 16 ++++++++++++++++
+ test/format-test.js    |  7 +++++++
+ test/parse-test.js     | 12 ++++++++++++
+ test/utcFormat-test.js |  7 +++++++
+ test/utcParse-test.js  | 12 ++++++++++++
+ 6 files changed, 55 insertions(+)
+
+☕c2eccc6🔪2017-10-09 09:52:57 -0700🔪Mike Bostock🔪Style tweaks.🔪
+ src/locale.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕89ca217🔪2017-10-09 09:47:51 -0700🔪Mike Bostock🔪Style tweaks.🔪
+ README.md             |  5 +++--
+ src/locale.js         | 54 ++++++++++++++++++++++-----------------------------
+ test/utcParse-test.js |  2 +-
+ 3 files changed, 27 insertions(+), 34 deletions(-)
+
+☕a3c36a0🔪2017-10-07 14:44:05 -0500🔪Brian Mitchell🔪Split if-else blocks🔪
+ src/locale.js | 46 ++++++++++++++++++++++------------------------
+ 1 file changed, 22 insertions(+), 24 deletions(-)
+
+☕d38e0f4🔪2017-10-07 14:41:55 -0500🔪Brian Mitchell🔪Week number parsing should consume two characters at most🔪
+ src/locale.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕3b8e065🔪2017-10-07 02:10:20 -0500🔪Brian Mitchell🔪Documentation for ISO 8601 week numbers (%V)🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕b232c64🔪2017-10-07 02:01:20 -0500🔪Brian Mitchell🔪Parse ISO 8601 week numbers (%V)🔪
+ src/locale.js         | 37 ++++++++++++++++++++++++++++++++-----
+ test/parse-test.js    | 11 +++++++++++
+ test/utcParse-test.js | 24 ++++++++++++++++++++++++
+ 3 files changed, 67 insertions(+), 5 deletions(-)
+
+☕ed66593🔪2017-10-06 23:28:11 -0500🔪Brian Mitchell🔪Format ISO 8601 week numbers (%V)🔪
+ src/locale.js          | 35 ++++++++++++++++++++++++++++++++++-
+ test/format-test.js    | 15 +++++++++++++++
+ test/utcFormat-test.js | 15 +++++++++++++++
+ 3 files changed, 64 insertions(+), 1 deletion(-)
+
+☕8efc194🔪2017-10-02 20:57:14 -0500🔪Brian Mitchell🔪More concise numerical day of week parsing🔪
+ src/locale.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕c792141🔪2017-10-01 22:52:00 -0500🔪Brian Mitchell🔪Implement ISO weekday number (%u)🔪
+ README.md              |  1 +
+ src/locale.js          | 34 +++++++++++++++++++++++++++-------
+ test/format-test.js    |  8 ++++++++
+ test/parse-test.js     | 24 ++++++++++++++++++++++--
+ test/utcFormat-test.js |  8 ++++++++
+ 5 files changed, 66 insertions(+), 9 deletions(-)
+
+☕7e0ce7b🔪2017-08-14 14:54:17 +0200🔪Kristoffer🔪Create da-DK.json🔪
+ locale/da-DK.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕c5f3b6f🔪2017-07-05 14:40:46 -0400🔪Mike Bostock🔪Fix link.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕13b91be🔪2017-03-10 09:44:42 -0800🔪Mike Bostock🔪2.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5756045🔪2017-03-10 09:44:30 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c3d93f🔪2017-02-28 09:09:11 -0800🔪Mike Bostock🔪2.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕52f1bc5🔪2017-02-28 09:09:06 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ea27907🔪2016-12-05 10:32:17 -0800🔪Mike Bostock🔪Link to examples.🔪
+ README.md | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+☕7a68228🔪2016-11-23 09:46:18 -0800🔪Mike Bostock🔪Use en-US for examples. Related #26.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕42cf66a🔪2016-11-22 16:58:04 -0800🔪Mike Bostock🔪2.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04d6f6e🔪2016-11-22 16:57:56 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕2c375f9🔪2016-10-05 22:47:50 -0500🔪Víctor Adrián🔪Add es-MX locale.🔪
+ locale/es-MX.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕22cf39e🔪2016-08-21 11:12:53 +0100🔪Mehdi El Fadil🔪Add links to source d3-shape🔪d3/d3#2936
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕195b3ea🔪2016-08-02 14:28:33 -0700🔪Mike Bostock🔪2.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4a78c3f🔪2016-08-02 14:28:32 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕606eb8b🔪2016-07-29 15:56:04 -0700🔪Mike Bostock🔪2.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a34103a🔪2016-07-29 15:56:00 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕553cb89🔪2016-07-14 15:37:21 -0400🔪Mike Bostock🔪Add cs-CZ locale. Related d3/d3#2786.🔪
+ locale/cs-CZ.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕6480fc7🔪2016-07-14 15:28:27 -0400🔪Mike Bostock🔪Add uk-UA locale. Related d3/d3#2693.🔪
+ locale/uk-UA.json (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕ee70451🔪2016-06-24 10:49:12 -0700🔪Mike Bostock🔪2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕77f0d8d🔪2016-06-24 10:49:09 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕2155c85🔪2016-06-23 08:25:05 -0700🔪Mike Bostock🔪More sensible default en-US locale.🔪The previous default en-US locale used 24-hour time. This matched the default
+behavior of the `date` command on macOS, but isn’t the local convention. These
+new definitions are based on the behavior of date.toLocale{,Date,Time}String in
+Chrome, Node and Firefox. (Safari is a little different.)
+
+    %C: "%a %b %e %X %Y" ↦ "%x, %X"
+    %x: "%H:%M:%S" ↦ "%-I:%M:%S %p"
+    %X: "%m/%d/%Y" ↦ "%-m/%-d/%Y"
+
+Fixes #19.
+
+ locale/en-US.json          |  6 +++---
+ src/defaultLocale.js       |  6 +++---
+ test/defaultLocale-test.js | 34 +++++++---------------------------
+ test/format-test.js        | 24 ++++++++++++------------
+ test/parse-test.js         | 36 ++++++++++++++++--------------------
+ test/utcFormat-test.js     | 10 +++++-----
+ test/utcParse-test.js      | 16 ++++++----------
+ 7 files changed, 52 insertions(+), 80 deletions(-)
+
+☕ea139b5🔪2016-06-22 15:50:40 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bfd0880🔪2016-06-22 15:38:33 -0700🔪Mike Bostock🔪More tests for the default locale.🔪
+ test/defaultLocale-test.js | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+☕5a913f0🔪2016-06-22 15:18:30 -0700🔪Mike Bostock🔪Add d3.timeFormatDefaultLocale.🔪
+ README.md                        | 12 ++++---
+ index.js                         |  3 +-
+ package.json                     |  1 +
+ src/defaultLocale.js (new)       | 27 ++++++++++++++
+ src/isoFormat.js                 |  2 +-
+ src/isoParse.js                  |  2 +-
+ src/locale.js                    | 16 ---------
+ test/defaultLocale-test.js (new) | 78 ++++++++++++++++++++++++++++++++++++++++
+ test/locale-test.js (new)        | 30 ++++++++++++++++
+ 9 files changed, 148 insertions(+), 23 deletions(-)
+
+☕8d4ea1b🔪2016-06-14 15:57:03 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0246e78🔪2016-06-14 15:56:59 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 6 +++---
+ package.json | 6 +++---
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+☕674b341🔪2016-06-14 09:21:51 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕9a9c1b0🔪2016-06-07 17:54:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 96 +++------------------------------------------------------------
+ 1 file changed, 4 insertions(+), 92 deletions(-)
+
+☕66c1c61🔪2016-06-07 17:51:53 -0700🔪Mike Bostock🔪0.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac3f1e2🔪2016-06-07 17:50:58 -0700🔪Mike Bostock🔪Fix #18 - publish locales as JSON data.🔪
+ index.js                   | 29 +----------------------------
+ locale/ca-ES.json (new)    | 10 ++++++++++
+ locale/de-CH.json (new)    | 10 ++++++++++
+ locale/de-DE.json (new)    | 10 ++++++++++
+ locale/en-CA.json (new)    | 10 ++++++++++
+ locale/en-GB.json (new)    | 10 ++++++++++
+ locale/en-US.json (new)    | 10 ++++++++++
+ locale/es-ES.json (new)    | 10 ++++++++++
+ locale/fi-FI.json (new)    | 10 ++++++++++
+ locale/fr-CA.json (new)    | 10 ++++++++++
+ locale/fr-FR.json (new)    | 10 ++++++++++
+ locale/he-IL.json (new)    | 10 ++++++++++
+ locale/hu-HU.json (new)    | 10 ++++++++++
+ locale/it-IT.json (new)    | 10 ++++++++++
+ locale/ja-JP.json (new)    | 10 ++++++++++
+ locale/ko-KR.json (new)    | 10 ++++++++++
+ locale/mk-MK.json (new)    | 10 ++++++++++
+ locale/nl-NL.json (new)    | 10 ++++++++++
+ locale/pl-PL.json (new)    | 10 ++++++++++
+ locale/pt-BR.json (new)    | 10 ++++++++++
+ locale/ru-RU.json (new)    | 10 ++++++++++
+ locale/sv-SE.json (new)    | 10 ++++++++++
+ locale/zh-CN.json (new)    | 10 ++++++++++
+ src/isoFormat.js           |  4 ++--
+ src/isoParse.js            |  4 ++--
+ src/locale.js              | 18 +++++++++++++++++-
+ src/locale/ca-ES.js (gone) | 12 ------------
+ src/locale/de-CH.js (gone) | 12 ------------
+ src/locale/de-DE.js (gone) | 12 ------------
+ src/locale/en-CA.js (gone) | 12 ------------
+ src/locale/en-GB.js (gone) | 12 ------------
+ src/locale/en-US.js (gone) | 12 ------------
+ src/locale/es-ES.js (gone) | 12 ------------
+ src/locale/fi-FI.js (gone) | 12 ------------
+ src/locale/fr-CA.js (gone) | 12 ------------
+ src/locale/fr-FR.js (gone) | 12 ------------
+ src/locale/he-IL.js (gone) | 12 ------------
+ src/locale/hu-HU.js (gone) | 12 ------------
+ src/locale/it-IT.js (gone) | 12 ------------
+ src/locale/ja-JP.js (gone) | 12 ------------
+ src/locale/ko-KR.js (gone) | 12 ------------
+ src/locale/mk-MK.js (gone) | 12 ------------
+ src/locale/nl-NL.js (gone) | 12 ------------
+ src/locale/pl-PL.js (gone) | 12 ------------
+ src/locale/pt-BR.js (gone) | 12 ------------
+ src/locale/ru-RU.js (gone) | 12 ------------
+ src/locale/sv-SE.js (gone) | 12 ------------
+ src/locale/zh-CN.js (gone) | 12 ------------
+ test/parse-test.js         |  5 +++--
+ 49 files changed, 245 insertions(+), 299 deletions(-)
+
+☕8fda0db🔪2016-06-07 17:44:04 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  8 ++++----
+ index.js     |  1 -
+ package.json | 14 +++++++-------
+ 3 files changed, 11 insertions(+), 12 deletions(-)
+
+☕e83de68🔪2016-06-05 17:17:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕68dc97f🔪2016-05-18 09:51:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕45bebea🔪2016-05-14 21:02:56 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕a5b3a05🔪2016-05-03 11:23:57 -0700🔪Mike Bostock🔪0.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8100a10🔪2016-05-03 11:23:55 -0700🔪Mike Bostock🔪Update rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b53f067🔪2016-04-20 07:21:05 -0700🔪Mike Bostock🔪Port mbostock/d3#2804.🔪
+ src/locale/zh-CN.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕1940b3f🔪2016-03-15 10:21:44 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0b17ffc🔪2016-03-14 13:09:25 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕6f03a6a🔪2016-03-14 12:34:47 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕8fbde3c🔪2016-03-06 15:10:51 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8f30c4d🔪2016-03-04 09:49:20 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕54c6ce6🔪2016-03-01 14:12:34 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕95f4cbb🔪2016-02-24 15:54:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕b1864cf🔪2016-02-21 16:30:36 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7f024d3🔪2016-01-29 10:39:06 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕75d2872🔪2016-01-20 17:37:17 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/locale.js   |  2 +-
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+
+☕7612135🔪2016-01-07 15:54:48 -0800🔪Mike Bostock🔪Better words.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕1cc7cbc🔪2016-01-07 14:42:23 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕d2e589e🔪2016-01-07 14:38:08 -0800🔪Mike Bostock🔪Separate parsing from formatting.🔪Also prefix exported symbols with “time” and update dependencies.
+
+ README.md                                          | 148 +++++++++++----------
+ index.js                                           |  51 +++----
+ package.json                                       |   4 +-
+ src/isoFormat.js                                   |  13 +-
+ src/isoParse.js (new)                              |  13 ++
+ src/locale.js                                      |  20 ++-
+ test/format-test.js                                | 132 +++++++++---------
+ test/isoFormat-test.js                             |  12 --
+ test/isoParse-test.js (new)                        |  10 ++
+ test/{format-parse-test.js => parse-test.js}       | 110 +++++++--------
+ test/{utcFormat-parse-test.js => utcParse-test.js} |  56 ++++----
+ 11 files changed, 295 insertions(+), 274 deletions(-)
+
+☕e264157🔪2016-01-05 08:29:40 -0800🔪Mike Bostock🔪Fix broken link.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4957581🔪2015-12-18 14:34:54 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 109 +++++++++++++++++++++++++++++------------------------------
+ package.json |   4 +--
+ 2 files changed, 56 insertions(+), 57 deletions(-)
+
+☕5056e3d🔪2015-11-30 09:51:15 -0800🔪Mike Bostock🔪Fix #14 - coerce inputs to the appropriate type.🔪
+ src/locale.js             |  4 +++-
+ test/format-parse-test.js | 12 ++++++++++++
+ test/format-test.js       | 12 ++++++++++++
+ 3 files changed, 27 insertions(+), 1 deletion(-)
+
+☕5c41273🔪2015-11-30 09:43:27 -0800🔪Mike Bostock🔪Fix #15 - Use symbols, not strings.🔪
+ README.md                 | 125 +++++++++++++++++++++++++++++++++++-----------
+ index.js                  |  85 ++++++++++---------------------
+ package.json              |   2 +-
+ src/locale/ca-ES.js       |   6 ++-
+ src/locale/de-CH.js       |   6 ++-
+ src/locale/de-DE.js       |   6 ++-
+ src/locale/en-CA.js       |   6 ++-
+ src/locale/en-GB.js       |   6 ++-
+ src/locale/en-US.js       |   6 ++-
+ src/locale/es-ES.js       |   6 ++-
+ src/locale/fi-FI.js       |   6 ++-
+ src/locale/fr-CA.js       |   6 ++-
+ src/locale/fr-FR.js       |   6 ++-
+ src/locale/he-IL.js       |   6 ++-
+ src/locale/hu-HU.js       |   6 ++-
+ src/locale/it-IT.js       |   6 ++-
+ src/locale/ja-JP.js       |   6 ++-
+ src/locale/ko-KR.js       |   6 ++-
+ src/locale/mk-MK.js       |   6 ++-
+ src/locale/nl-NL.js       |   6 ++-
+ src/locale/pl-PL.js       |   6 ++-
+ src/locale/pt-BR.js       |   6 ++-
+ src/locale/ru-RU.js       |   6 ++-
+ src/locale/sv-SE.js       |   6 ++-
+ src/locale/zh-CN.js       |   6 ++-
+ test/format-parse-test.js |   2 +-
+ 26 files changed, 210 insertions(+), 136 deletions(-)
+
+☕e40d151🔪2015-11-11 14:28:37 -0800🔪Mike Bostock🔪Clearer.🔪
+ src/locale.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕53beaf3🔪2015-11-11 14:17:53 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/locale.js | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+☕ae1db70🔪2015-11-11 14:00:31 -0800🔪Mike Bostock🔪Consolidate weekday logic.🔪
+ src/locale.js | 22 ++++++++--------------
+ 1 file changed, 8 insertions(+), 14 deletions(-)
+
+☕37becbd🔪2015-11-11 13:51:33 -0800🔪Mike Bostock🔪Parse week-of-year with implicit day-of-week.🔪Related mbostock/d3#1914.
+
+ src/locale.js             |  6 ++++--
+ test/format-parse-test.js | 16 ++++++++++++++++
+ 2 files changed, 20 insertions(+), 2 deletions(-)
+
+☕72ee7c8🔪2015-11-11 13:38:06 -0800🔪Mike Bostock🔪Fix long period name parsing.🔪The code assumed that the period was always exactly two characters, but in some
+locales it may have a different length (e.g., “a.m.” and “p.m.”).
+
+ src/locale.js             | 13 +++++++------
+ test/format-parse-test.js | 10 ++++++++++
+ 2 files changed, 17 insertions(+), 6 deletions(-)
+
+☕d29b007🔪2015-11-11 11:30:04 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕0b41c11🔪2015-11-04 15:04:27 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕1ca01b0🔪2015-11-03 23:56:44 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+
+☕e731439🔪2015-10-25 20:14:34 -0700🔪Mike Bostock🔪Add hu-HU locale.🔪
+ README.md                 |  1 +
+ index.js                  |  2 ++
+ src/locale/hu-HU.js (new) | 10 ++++++++++
+ 3 files changed, 13 insertions(+)
+
+☕f6ef703🔪2015-10-21 11:55:55 -0700🔪Mike Bostock🔪Add de-CH locale.🔪
+ README.md                 |  1 +
+ index.js                  |  2 ++
+ src/locale/de-CH.js (new) | 10 ++++++++++
+ 3 files changed, 13 insertions(+)
+
+☕2688383🔪2015-10-21 11:43:19 -0700🔪Mike Bostock🔪Add ko-KR locale.🔪
+ README.md                 |  1 +
+ index.js                  |  2 ++
+ src/locale/ko-KR.js (new) | 10 ++++++++++
+ 3 files changed, 13 insertions(+)
+
+☕bbb7098🔪2015-10-21 10:51:16 -0700🔪Mike Bostock🔪Add sv-SE locale.🔪
+ README.md                 |  1 +
+ index.js                  |  2 ++
+ src/locale/sv-SE.js (new) | 10 ++++++++++
+ 3 files changed, 13 insertions(+)
+
+☕7c6e6df🔪2015-10-17 20:32:02 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4fd3f10🔪2015-10-16 22:22:09 -0500🔪Rob Brackett🔪Performance improvements for timezone parsing (per @mbostock).🔪* Shortening the candidate string for faster regex execution.
+* Using smarter conditions to do math instead of string concatenation when there are no minutes in the TZ specifier.
+
+ src/locale.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕0fed41a🔪2015-10-16 10:52:22 -0700🔪Rob Brackett🔪Modify time zone parsing (%Z) to accept any ISO 8601 compatible time zone format.🔪This includes:
+  * +-hhmm (the only previously accepted format)
+  * +-hh:mm
+  * +-hh
+  * Z (for UTC)
+
+This addresses an old issue from the single module version 3.x: https://github.com/mbostock/d3/issues/2055
+
+ README.md                    |  2 +-
+ src/locale.js                | 11 ++++++++---
+ test/format-parse-test.js    | 20 ++++++++++++++++++++
+ test/utcFormat-parse-test.js | 20 ++++++++++++++++++++
+ 4 files changed, 49 insertions(+), 4 deletions(-)
+
+☕2493e4a🔪2015-10-14 21:58:42 -0700🔪Mike Bostock🔪Remove Map polyfill. Fixes #1.🔪
+ index.js      | 43 ++++++++++++++++++++++---------------------
+ package.json  |  4 ++--
+ src/locale.js | 14 +++++++-------
+ 3 files changed, 31 insertions(+), 30 deletions(-)
+
+☕d5d5b9d🔪2015-09-18 23:22:16 +0900🔪Yuichi Yazaki🔪add ja-JP description.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕73c36df🔪2015-09-11 19:09:25 -0700🔪Mike Bostock🔪Add ja-JP.🔪
+ index.js            | 2 ++
+ src/locale/ja-JP.js | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+☕3a48370🔪2015-09-12 10:46:50 +0900🔪Yuichi Yazaki🔪add Japan locale file.🔪
+ src/locale/ja-JP.js (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕a4f276b🔪2015-07-30 11:00:48 -0700🔪Mike Bostock🔪Include built-in locales by default.🔪Related d3/d3-format#8.
+
+ README.md                          | 50 +++++++++++++++++-----------------
+ index.js                           | 56 ++++++++++++++++++++++++++++++++++----
+ package.json                       |  2 +-
+ src/{localeFormat.js => locale.js} |  0
+ src/locale/ca-ES.js                |  6 ++--
+ src/locale/de-DE.js                |  6 ++--
+ src/locale/en-CA.js                |  6 ++--
+ src/locale/en-GB.js                |  6 ++--
+ src/locale/en-US.js                |  6 ++--
+ src/locale/es-ES.js                |  6 ++--
+ src/locale/fi-FI.js                |  6 ++--
+ src/locale/fr-CA.js                |  6 ++--
+ src/locale/fr-FR.js                |  6 ++--
+ src/locale/he-IL.js                |  6 ++--
+ src/locale/it-IT.js                |  6 ++--
+ src/locale/mk-MK.js                |  6 ++--
+ src/locale/nl-NL.js                |  6 ++--
+ src/locale/pl-PL.js                |  6 ++--
+ src/locale/pt-BR.js                |  6 ++--
+ src/locale/ru-RU.js                |  6 ++--
+ src/locale/zh-CN.js                |  6 ++--
+ 21 files changed, 110 insertions(+), 100 deletions(-)
+
+☕47d7643🔪2015-07-01 11:10:13 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b2df022🔪2015-07-01 10:49:02 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕92eaa98🔪2015-07-01 10:48:05 -0700🔪Mike Bostock🔪Remove UtcDate hack.🔪Rather than temporarily setting the Date global and using a Date-like UtcDate
+class, the localeFormat now has separate implementations for local and UTC time.
+
+ src/UtcDate.js (gone) |  31 ----
+ src/localeFormat.js   | 405 ++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 293 insertions(+), 143 deletions(-)
+
+☕5271dfa🔪2015-06-30 21:17:30 -0700🔪Mike Bostock🔪Fix test.date.🔪
+ test/date.js | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕edb7184🔪2015-06-30 21:09:04 -0700🔪Mike Bostock🔪Use deepEqual, not dateEqual.🔪
+ test/dateEqual.js (gone)     |  10 ----
+ test/format-parse-test.js    | 130 +++++++++++++++++++++----------------------
+ test/isoFormat-test.js       |   6 +-
+ test/utcFormat-parse-test.js |  76 ++++++++++++-------------
+ 4 files changed, 103 insertions(+), 119 deletions(-)
+
+☕7c59f49🔪2015-06-30 10:14:23 -0700🔪Mike Bostock🔪Shorter description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d621f54🔪2015-06-30 10:13:44 -0700🔪Mike Bostock🔪Update description.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕0596622🔪2015-06-30 10:12:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e1b9264🔪2015-06-30 10:11:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b1a919b🔪2015-06-30 10:09:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e7bdca2🔪2015-06-30 10:07:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf8e81f🔪2015-06-30 10:07:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b58989a🔪2015-06-30 10:06:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕4627578🔪2015-06-30 10:06:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 ++++++++++++++--------
+ 1 file changed, 14 insertions(+), 8 deletions(-)
+
+☕0cb00c7🔪2015-06-30 08:01:58 -0700🔪Mike Bostock🔪Use consistent terminology.🔪
+ README.md           |  8 ++++----
+ src/localeFormat.js | 38 +++++++++++++++++++-------------------
+ 2 files changed, 23 insertions(+), 23 deletions(-)
+
+☕5ae3923🔪2015-06-30 07:46:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕fddaf85🔪2015-06-30 07:44:00 -0700🔪Mike Bostock🔪Mark localized directives.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕fb63358🔪2015-06-30 07:41:05 -0700🔪Mike Bostock🔪The isoFormat is not localized.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7feeed7🔪2015-06-30 07:39:09 -0700🔪Mike Bostock🔪Double-quotes.🔪
+ src/locale/pt-BR.js | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕f13ab00🔪2015-06-30 07:37:04 -0700🔪Mike Bostock🔪Add other locales.🔪
+ README.md                 | 16 ++++++++++++++++
+ src/locale/ca-ES.js (new) | 12 ++++++++++++
+ src/locale/de-DE.js (new) | 12 ++++++++++++
+ src/locale/en-CA.js (new) | 12 ++++++++++++
+ src/locale/en-GB.js (new) | 12 ++++++++++++
+ src/locale/es-ES.js (new) | 12 ++++++++++++
+ src/locale/fi-FI.js (new) | 12 ++++++++++++
+ src/locale/fr-CA.js (new) | 12 ++++++++++++
+ src/locale/fr-FR.js (new) | 12 ++++++++++++
+ src/locale/he-IL.js (new) | 12 ++++++++++++
+ src/locale/it-IT.js (new) | 12 ++++++++++++
+ src/locale/mk-MK.js (new) | 12 ++++++++++++
+ src/locale/nl-NL.js (new) | 12 ++++++++++++
+ src/locale/pl-PL.js (new) | 12 ++++++++++++
+ src/locale/pt-BR.js (new) | 12 ++++++++++++
+ src/locale/ru-RU.js (new) | 12 ++++++++++++
+ src/locale/zh-CN.js (new) | 12 ++++++++++++
+ 17 files changed, 208 insertions(+)
+
+☕4c02596🔪2015-06-29 21:01:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕9f13ba2🔪2015-06-29 20:46:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c82a88a🔪2015-06-29 20:46:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕fb4d868🔪2015-06-29 20:44:55 -0700🔪Mike Bostock🔪Add isoFormat.🔪
+ README.md                    | 12 ++++++++++--
+ index.js                     |  2 ++
+ src/isoFormat.js (new)       | 22 ++++++++++++++++++++++
+ test/isoFormat-test.js (new) | 23 +++++++++++++++++++++++
+ 4 files changed, 57 insertions(+), 2 deletions(-)
+
+☕235879c🔪2015-06-29 20:33:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c00dec2🔪2015-06-29 20:33:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2e1afa9🔪2015-06-29 20:33:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a66832e🔪2015-06-29 20:32:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕107c0d1🔪2015-06-29 20:30:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+☕18035d7🔪2015-06-29 20:25:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕87c1683🔪2015-06-29 20:25:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕193a1cc🔪2015-06-29 20:24:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb084a3🔪2015-06-29 20:24:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕23bae48🔪2015-06-29 20:23:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e730594🔪2015-06-29 20:23:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f1a72dd🔪2015-06-29 20:22:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕0f32a43🔪2015-06-29 20:22:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕59d7900🔪2015-06-29 20:22:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕d006c2f🔪2015-06-29 20:20:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕44baec5🔪2015-06-29 20:18:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 75 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 74 insertions(+), 1 deletion(-)
+
+☕621f74e🔪2015-06-29 19:27:29 -0700🔪Mike Bostock🔪Non-g regexes don’t need to set lastIndex.🔪
+ src/localeFormat.js | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+☕800ac5d🔪2015-06-29 19:22:51 -0700🔪Mike Bostock🔪Readability.🔪
+ src/localeFormat.js | 90 ++++++++++++++++++++++++++---------------------------
+ 1 file changed, 45 insertions(+), 45 deletions(-)
+
+☕5d912fe🔪2015-06-29 18:04:19 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/localeFormat.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9277892🔪2015-06-29 18:00:55 -0700🔪Mike Bostock🔪Remove obsolete multi-format.🔪
+ src/localeFormat.js | 16 +---------------
+ 1 file changed, 1 insertion(+), 15 deletions(-)
+
+☕7f1a750🔪2015-06-29 17:58:32 -0700🔪Mike Bostock🔪Readability.🔪
+ src/localeFormat.js | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕219723f🔪2015-06-29 17:54:27 -0700🔪Mike Bostock🔪Readability.🔪
+ src/localeFormat.js | 168 ++++++++++++++++++++++++++--------------------------
+ 1 file changed, 83 insertions(+), 85 deletions(-)
+
+☕da3e48e🔪2015-06-29 17:45:34 -0700🔪Mike Bostock🔪Test two-digit year parsing.🔪
+ src/localeFormat.js       | 6 +-----
+ test/format-parse-test.js | 4 +++-
+ 2 files changed, 4 insertions(+), 6 deletions(-)
+
+☕0b377b9🔪2015-06-29 17:40:47 -0700🔪Mike Bostock🔪Consistent capitalization.🔪
+ src/UtcDate.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f455c9c🔪2015-06-29 17:22:13 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ README.md                          |  27 +++-
+ index.js                           |   6 +-
+ src/UtcDate.js                     |  25 ++--
+ src/localeFormat.js                | 217 ++++++++++++++++----------------
+ test/date.js (new)                 |  31 +++++
+ test/dateEqual.js (new)            |  10 ++
+ test/format-parse-test.js (new)    | 191 ++++++++++++++++++++++++++++
+ test/format-test.js (new)          | 248 +++++++++++++++++++++++++++++++++++++
+ test/timeFormat-test.js (gone)     |   6 -
+ test/utcFormat-parse-test.js (new) | 102 +++++++++++++++
+ test/utcFormat-test.js (new)       | 248 +++++++++++++++++++++++++++++++++++++
+ 11 files changed, 986 insertions(+), 125 deletions(-)
+
+☕a5ba1b8🔪2015-06-29 15:06:51 -0700🔪Mike Bostock🔪Need to set Date temporarily.🔪
+ src/localeFormat.js | 25 ++++++++++++++-----------
+ 1 file changed, 14 insertions(+), 11 deletions(-)
+
+☕0244f98🔪2015-06-29 14:56:47 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                     |   5 +
+ .npmignore (new)                     |   3 +
+ LICENSE (new)                        |  27 +++
+ README.md (new)                      |  15 ++
+ d3-time-format.sublime-project (new) |  13 ++
+ index.js (new)                       |   7 +
+ package.json (new)                   |  35 ++++
+ src/UtcDate.js (new)                 |  30 +++
+ src/locale/en-US.js (new)            |  12 ++
+ src/localeFormat.js (new)            | 366 +++++++++++++++++++++++++++++++++++
+ test/timeFormat-test.js (new)        |   6 +
+ 11 files changed, 519 insertions(+)

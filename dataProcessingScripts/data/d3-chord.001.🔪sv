@@ -1,0 +1,460 @@
+☕57ac4d9🔪2021-06-05 11:26:11 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕21be74b🔪2021-06-05 11:26:08 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕f6ebd4b🔪2021-06-05 11:25:59 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕d304da7🔪2021-06-04 14:31:02 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b50ad41🔪2021-06-04 23:30:19 +0200🔪Philippe Rivière🔪document chordDirected and chordTranspose (#18)🔪As for an example, https://observablehq.com/@d3/chord-diagram is visually interesting with chordTranspose instead of chord, highlighting a different aspect of the dataset. Note that its title popups are inversed since source and target are swapped. We'd need a better example.
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d080765🔪2021-06-04 23:29:36 +0200🔪Philippe Rivière🔪Adopt type=module (#21)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* stricter eslint
+
+* cleaner imports
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    7 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   26 +-
+ d3-chord.sublime-project (gone)     |   17 -
+ package.json                        |   49 +-
+ test/.eslintrc.json (new)           |   10 +
+ test/{inDelta.js => asserts.js}     |   20 +-
+ test/chord-test.js                  |   43 +-
+ test/ribbon-test.js                 |   88 +--
+ yarn.lock                           | 1471 +++++++++++++++++++----------------
+ 12 files changed, 987 insertions(+), 832 deletions(-)
+
+☕0c709fb🔪2020-08-24 11:37:57 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕c657bc0🔪2020-08-24 11:37:44 +0200🔪Philippe Rivière🔪links🔪
+ README.md | 42 +++++++++++++++++++++---------------------
+ 1 file changed, 21 insertions(+), 21 deletions(-)
+
+☕c76ccfe🔪2020-08-23 18:22:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕6ad7471🔪2020-08-24 01:06:07 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕c4f11ac🔪2020-07-27 11:43:10 +0200🔪Philippe Rivière🔪v2.0.0-rc.10🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4e2bc64🔪2020-07-10 16:52:17 +0200🔪Philippe Rivière🔪"d3-path": "1 - 2"🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ yarn.lock    | 8 ++++----
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+☕6ac3ed4🔪2019-12-03 16:06:24 -0800🔪Mike Bostock🔪2.0.0-rc.9🔪
+ package.json       | 2 +-
+ test/chord-test.js | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕538cc63🔪2019-12-03 16:06:08 -0800🔪Mike Bostock🔪Treat the larger as the source.🔪
+ README.md    |  2 +-
+ src/chord.js | 10 ++++++++--
+ 2 files changed, 9 insertions(+), 3 deletions(-)
+
+☕6c431bb🔪2019-12-03 14:47:13 -0800🔪Mike Bostock🔪2.0.0-rc.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14d59b5🔪2019-11-25 23:39:07 -0500🔪Mike Bostock🔪Add d3.chordTranspose.🔪
+ src/chord.js | 32 ++++++++++++++++++++------------
+ src/index.js |  2 +-
+ 2 files changed, 21 insertions(+), 13 deletions(-)
+
+☕24daa3c🔪2019-11-25 21:44:43 -0500🔪Mike Bostock🔪2.0.0-rc.7🔪
+ package.json       |   2 +-
+ test/chord-test.js | 124 +++++++++++++++++++++++++++++++----------------------
+ 2 files changed, 74 insertions(+), 52 deletions(-)
+
+☕e5fe0ac🔪2019-11-25 21:44:31 -0500🔪Mike Bostock🔪Simplify.🔪
+ src/chord.js | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+
+☕ff52707🔪2019-11-25 16:27:48 -0500🔪Mike Bostock🔪Remove subindex nonsense.🔪
+ README.md    |   3 +-
+ src/chord.js | 145 ++++++++++++++++++++---------------------------------------
+ 2 files changed, 49 insertions(+), 99 deletions(-)
+
+☕a4486a3🔪2019-11-24 22:10:58 -0800🔪Mike Bostock🔪Fix for bidirectional links.🔪
+ src/chord.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕eae664a🔪2019-09-27 11:24:30 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕793f196🔪2019-11-24 15:51:58 -0800🔪Mike Bostock🔪2.0.0-rc.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕046433d🔪2019-11-24 15:50:33 -0800🔪Mike Bostock🔪Fix chordDirected.sortSubgroups, again.🔪
+ src/chord.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b78a347🔪2019-11-24 15:47:07 -0800🔪Mike Bostock🔪2.0.0-rc.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕991a2ba🔪2019-11-24 15:46:53 -0800🔪Mike Bostock🔪Fix chordDirected.sortSubgroups.🔪
+ src/chord.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b7f60cc🔪2019-11-24 15:24:39 -0800🔪Mike Bostock🔪2.0.0-rc.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3c9aedd🔪2019-11-24 15:24:29 -0800🔪Mike Bostock🔪Fix chord.sortGroups.🔪
+ src/chord.js | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+
+☕7d6f3f4🔪2019-11-24 15:14:06 -0800🔪Mike Bostock🔪2.0.0-rc.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕200022e🔪2019-11-24 15:13:36 -0800🔪Mike Bostock🔪Add d3.chordDirected.🔪
+ src/chord.js | 52 +++++++++++++++++++++++++++++++++++++++++++++++-----
+ src/index.js |  2 +-
+ 2 files changed, 48 insertions(+), 6 deletions(-)
+
+☕17de2a6🔪2019-11-24 10:46:44 -0800🔪Mike Bostock🔪2.0.0-rc.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7206a28🔪2019-11-24 10:05:27 -0800🔪Mike Bostock🔪Add ribbon.padAngle.🔪
+ README.md     | 12 ++++++++++++
+ src/math.js   |  2 ++
+ src/ribbon.js | 25 ++++++++++++++++++++-----
+ 3 files changed, 34 insertions(+), 5 deletions(-)
+
+☕03d0ae0🔪2019-11-24 09:41:44 -0800🔪Mike Bostock🔪Fix geometry.🔪
+ src/ribbon.js | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕d938b1d🔪2019-11-24 09:29:26 -0800🔪Mike Bostock🔪Add d3.ribbonArrow.🔪
+ README.md     | 14 ++++++++++++++
+ package.json  |  5 ++++-
+ src/index.js  |  2 +-
+ src/ribbon.js | 32 +++++++++++++++++++++++++++-----
+ 4 files changed, 46 insertions(+), 7 deletions(-)
+
+☕4d75d5f🔪2019-11-24 09:05:08 -0800🔪Mike Bostock🔪Remove d3-array dependency.🔪
+ README.md    | 11 +++++------
+ package.json |  1 -
+ src/chord.js | 15 ++++++++-------
+ yarn.lock    |  5 -----
+ 4 files changed, 13 insertions(+), 19 deletions(-)
+
+☕537e166🔪2019-11-24 09:01:18 -0800🔪Mike Bostock🔪Add ribbon.{source,target}Radius.🔪
+ README.md     | 48 +++++++++++++++++++++++++++++++++++-------------
+ src/ribbon.js | 19 ++++++++++++++-----
+ 2 files changed, 49 insertions(+), 18 deletions(-)
+
+☕480d5b9🔪2019-11-02 08:23:17 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕d07a378🔪2019-08-09 17:45:11 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 881 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 522 insertions(+), 365 deletions(-)
+
+☕ab04fe6🔪2019-08-09 16:07:22 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕b8d16ee🔪2019-08-09 15:13:46 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/chord.js  | 2 +-
+ src/index.js  | 4 ++--
+ src/ribbon.js | 6 +++---
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+☕c60c4f1🔪2019-03-05 21:49:36 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c32543b🔪2019-03-05 21:49:18 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕a2fa703🔪2018-08-24 14:23:47 -0700🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b0c1161🔪2018-08-24 14:23:45 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕eee767d🔪2018-08-24 14:02:26 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕afc44d9🔪2018-08-24 13:52:33 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 2 --
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 2 ++
+ 4 files changed, 10 insertions(+), 9 deletions(-)
+
+☕8d19f80🔪2018-08-24 13:52:18 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4f09b14🔪2018-08-24 12:01:42 -0700🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7709a4a🔪2018-08-24 12:01:40 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   9 -
+ .eslintrc.json (new)     |  15 +
+ .gitignore               |   2 +-
+ .npmignore               |   2 +-
+ d3-chord.sublime-project |  16 +-
+ package.json             |  17 +-
+ rollup.config.js (new)   |  36 ++
+ yarn.lock (new)          | 943 +++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1014 insertions(+), 26 deletions(-)
+
+☕7341594🔪2017-03-10 10:21:06 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕00aff3c🔪2017-03-10 10:20:50 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕a8425ef🔪2016-11-22 16:24:54 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fd2284b🔪2016-11-22 16:24:39 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕3c4005b🔪2016-08-07 23:21:27 +0300🔪Devinsuit🔪Add links to source code🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕b3d66dd🔪2016-08-02 14:52:00 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕07476d1🔪2016-08-02 14:51:59 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕013ea0d🔪2016-07-29 15:41:28 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3286dff🔪2016-07-29 15:41:09 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7b23c3b🔪2016-06-27 12:03:50 -0700🔪Mike Bostock🔪Add d3-module keyword.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕a853f65🔪2016-06-24 10:37:55 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕43d3be4🔪2016-06-24 10:37:49 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕6712d2e🔪2016-06-22 10:44:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 49 ++++++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 38 insertions(+), 11 deletions(-)
+
+☕f107b72🔪2016-06-22 10:28:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕bacf667🔪2016-06-22 10:24:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕634b592🔪2016-06-22 10:22:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕000045e🔪2016-06-22 10:22:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕084bfd4🔪2016-06-22 10:20:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 29 +++++++++++++++++------------
+ 1 file changed, 17 insertions(+), 12 deletions(-)
+
+☕8d42c6f🔪2016-06-22 10:00:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕f23678a🔪2016-06-22 10:00:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕af6e94e🔪2016-06-22 10:00:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕726acf1🔪2016-06-22 09:59:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕de72b33🔪2016-06-22 09:58:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 36 ++++++++++++++++++++++++++++++++++--
+ 1 file changed, 34 insertions(+), 2 deletions(-)
+
+☕7421fb1🔪2016-06-22 09:56:36 -0700🔪Mike Bostock🔪Add chord.png.🔪
+ img/chord.png (new) | Bin 0 -> 120690 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕f161d23🔪2016-06-22 09:47:22 -0700🔪Mike Bostock🔪More basic tests.🔪
+ test/chord-test.js  | 67 ++++++++++++++++++++++++++++++++++++++++++-----------
+ test/ribbon-test.js | 56 ++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 108 insertions(+), 15 deletions(-)
+
+☕fd4285e🔪2016-06-22 09:36:52 -0700🔪Mike Bostock🔪Basic test for d3.chord.🔪
+ test/chord-test.js (new) | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ test/inDelta.js (new)    | 34 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 79 insertions(+)
+
+☕1efc000🔪2016-06-21 10:04:10 -0700🔪Mike Bostock🔪0.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0ef498d🔪2016-06-21 09:48:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕4fb58e7🔪2016-06-21 09:47:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 78 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 78 insertions(+)
+
+☕57b558b🔪2016-06-21 09:47:34 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/chord.js  | 13 +++++++------
+ src/math.js   |  4 ++++
+ src/ribbon.js |  5 +----
+ 3 files changed, 12 insertions(+), 10 deletions(-)
+
+☕5fab292🔪2016-06-21 09:41:08 -0700🔪Mike Bostock🔪Add d3.chord.🔪
+ README.md          |   9 +++-
+ index.js           |   1 +
+ package.json       |   3 +-
+ src/chord.js (new) | 120 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 130 insertions(+), 3 deletions(-)
+
+☕d3d4d3f🔪2016-06-20 16:20:26 -0700🔪Mike Bostock🔪Add ribbon.context.🔪
+ package.json        |  4 +--
+ src/array.js (new)  |  1 +
+ src/math.js (new)   |  2 ++
+ src/ribbon.js       | 74 ++++++++++++++++++++++++++---------------------------
+ test/ribbon-test.js |  4 +--
+ 5 files changed, 43 insertions(+), 42 deletions(-)
+
+☕87500b0🔪2016-06-07 21:11:11 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕6433810🔪2016-05-18 09:54:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b319cd7🔪2016-05-14 21:24:51 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕acace49🔪2016-05-02 11:07:11 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7e63901🔪2016-05-02 11:07:09 -0700🔪Mike Bostock🔪Prepare for patch release.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ad8b38b🔪2016-05-02 11:06:56 -0700🔪Mike Bostock🔪Update.🔪
+ .eslintrc (new)                | 13 ++++++
+ LICENSE                        |  2 +-
+ README.md                      | 18 +++++---
+ d3-chord.sublime-project (new) | 13 ++++++
+ index.js                       |  1 +
+ package.json                   | 18 ++++----
+ src/constant.js (new)          |  5 +++
+ src/ribbon.js                  | 93 ++++++++++++++++++++----------------------
+ test/ribbon-test.js            |  6 +--
+ 9 files changed, 104 insertions(+), 65 deletions(-)
+
+☕50727ea🔪2016-01-29 10:14:14 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕12640df🔪2016-01-29 10:12:58 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Related mbostock/d3#2725.
+
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕55d9fdb🔪2015-12-04 09:32:22 -0800🔪Mike Bostock🔪Wording.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕f726f74🔪2015-12-04 09:31:32 -0800🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)          |  5 +++
+ .npmignore (new)          |  3 ++
+ LICENSE (new)             | 27 +++++++++++++
+ README.md (new)           | 17 +++++++++
+ index.js (new)            |  1 +
+ package.json (new)        | 34 +++++++++++++++++
+ src/ribbon.js (new)       | 97 +++++++++++++++++++++++++++++++++++++++++++++++
+ test/ribbon-test.js (new) |  7 ++++
+ 8 files changed, 191 insertions(+)

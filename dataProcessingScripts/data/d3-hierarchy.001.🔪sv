@@ -1,0 +1,2240 @@
+☕7bea49e🔪2022-04-02 17:20:21 -0500🔪Mike Bostock🔪3.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7ae8825🔪2022-04-02 17:19:59 -0500🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 274 +++++++++++++++++++++++++++-----------------------------------
+ 1 file changed, 118 insertions(+), 156 deletions(-)
+
+☕a071e70🔪2022-04-02 17:18:27 -0500🔪Mike Bostock🔪fix #188; floating point error in encloseBasis3🔪
+ src/pack/enclose.js             |  2 +-
+ test/pack/enclose-test.js (new) | 18 ++++++++++++++++++
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+
+☕c3833aa🔪2022-04-01 14:33:36 -0700🔪Mike Bostock🔪reuse lcg during pack (#193)🔪* reuse lcg during pack
+
+* remove unused default
+ src/array.js                    |  5 +----
+ src/pack/enclose.js             |  7 ++++++-
+ src/pack/index.js               | 14 ++++++++------
+ src/pack/siblings.js            |  9 +++++----
+ test/pack/deterministic-test.js | 18 ++++++++++--------
+ 5 files changed, 30 insertions(+), 23 deletions(-)
+
+☕9e0ac43🔪2022-02-28 15:58:43 +0100🔪Philippe Rivière🔪deterministic shuffling (#190)🔪fixes #189
+note: shuffling is here to increase performance (#83)
+ src/array.js                          |  7 +++++--
+ src/lcg.js (new)                      |  9 +++++++++
+ test/pack/deterministic-test.js (new) | 13 +++++++++++++
+ 3 files changed, 27 insertions(+), 2 deletions(-)
+
+☕cfbdb22🔪2021-12-10 07:51:27 -0800🔪Mike Bostock🔪3.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cd01107🔪2021-12-10 07:51:12 -0800🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕296e8c4🔪2021-12-09 14:13:01 -0800🔪Mike Bostock🔪fixes for stratify.path (#187)🔪
+ src/stratify.js       |  40 ++++++++--------
+ test/stratify-test.js | 129 ++++++++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 146 insertions(+), 23 deletions(-)
+
+☕7ca356e🔪2021-12-04 09:14:09 -0800🔪Mike Bostock🔪3.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕83567c0🔪2021-12-04 09:13:42 -0800🔪Mike Bostock🔪upgrade dependencies🔪
+ package.json |   8 +-
+ yarn.lock    | 582 +++++++++++++++++++++++++----------------------------------
+ 2 files changed, 251 insertions(+), 339 deletions(-)
+
+☕6498cc7🔪2021-12-04 09:07:46 -0800🔪Mike Bostock🔪stratify.path (#185)🔪* stratify.path
+
+* simplify root test
+
+* null data for imputed nodes
+
+* minimize imputed roots
+
+* document stratify.path
+
+* allow escape sequences
+
+* Update README
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+ README.md             |  88 ++++++-----
+ src/stratify.js       |  88 +++++++++--
+ test/stratify-test.js | 428 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ 3 files changed, 553 insertions(+), 51 deletions(-)
+
+☕08c7754🔪2021-06-05 11:36:49 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c444b05🔪2021-06-05 11:36:46 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕d8a450d🔪2021-06-05 11:36:38 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕453ad52🔪2021-06-03 21:47:30 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e621081🔪2021-06-04 06:45:24 +0200🔪Philippe Rivière🔪Adopt type=module (#177)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* prettier
+
+* Update README
+
+* fix eslintrc
+
+* expose Node
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    4 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   18 +-
+ d3-hierarchy.sublime-project (gone) |   17 -
+ package.json                        |   49 +-
+ rollup.config.js                    |    8 +-
+ src/index.js                        |    2 +-
+ test/.eslintrc.json (new)           |   10 +
+ test/hierarchy/copy-test.js         |   11 +-
+ test/hierarchy/each-test.js         |   54 +-
+ test/hierarchy/find-test.js         |   16 +-
+ test/hierarchy/index-test.js        |   28 +-
+ test/hierarchy/links-test.js        |   17 +-
+ test/pack/bench-enclose.js          |   57 +-
+ test/pack/find-bugs.js              |   16 +-
+ test/pack/find-enclose-bugs.js      |   24 +-
+ test/pack/flare-test.js             |   40 +-
+ test/pack/siblings-test.js          |   47 +-
+ test/stratify-test.js               |  289 ++++---
+ test/treemap/binary-test.js         |   50 +-
+ test/treemap/dice-test.js           |   58 +-
+ test/treemap/flare-test.js          |   47 +-
+ test/treemap/index-test.js          |  178 ++---
+ test/treemap/resquarify-test.js     |   87 +-
+ test/treemap/round.js               |   14 +-
+ test/treemap/slice-test.js          |   58 +-
+ test/treemap/sliceDice-test.js      |   72 +-
+ test/treemap/squarify-test.js       |  154 ++--
+ yarn.lock                           | 1489 +++++++++++++++++++----------------
+ 31 files changed, 1575 insertions(+), 1427 deletions(-)
+
+☕75c84e8🔪2020-08-27 09:01:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕59c78b5🔪2020-08-24 00:00:19 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c8910d4🔪2020-08-23 23:59:18 +0200🔪Philippe Rivière🔪d3 dependencies🔪
+ package.json |  5 +----
+ yarn.lock    | 20 ++++++++++----------
+ 2 files changed, 11 insertions(+), 14 deletions(-)
+
+☕d368302🔪2020-08-23 20:28:57 +0200🔪Philippe Rivière🔪Update src/pack/enclose.js🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/pack/enclose.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕3b614f2🔪2020-08-17 12:07:40 +0200🔪Philippe Rivière🔪document node.find🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕599d988🔪2020-08-17 12:03:34 +0200🔪Philippe Rivière🔪one more test🔪
+ test/pack/siblings-test.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕3d5510c🔪2020-08-12 11:33:39 +0200🔪Philippe Rivière🔪rescale epsilon to the circles' magnitude fixes #150🔪
+ src/pack/enclose.js        | 3 ++-
+ test/pack/siblings-test.js | 7 +++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+☕a743d15🔪2020-08-12 11:07:26 +0200🔪Philippe Rivière🔪tests for #157🔪
+ test/treemap/binary-test.js     | 10 ++++++++++
+ test/treemap/resquarify-test.js | 10 ++++++++++
+ 2 files changed, 20 insertions(+)
+
+☕39f420c🔪2020-08-11 09:43:55 -0700🔪Mike Bostock🔪Avoid divide by zero.🔪
+ src/treemap/binary.js     | 4 ++--
+ src/treemap/resquarify.js | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕6ab84f8🔪2020-07-27 17:15:41 +0200🔪Philippe Rivière🔪remove devDependency on d3-queue🔪
+ package.json               |  1 -
+ test/pack/flare-test.js    | 86 +++++++++++++++++++-----------------------
+ test/treemap/flare-test.js | 94 +++++++++++++++++++++-------------------------
+ yarn.lock                  |  5 ---
+ 4 files changed, 82 insertions(+), 104 deletions(-)
+
+☕d6adccb🔪2020-07-21 09:42:07 +0200🔪Philippe Rivière🔪indented tree url🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf886c8🔪2020-07-10 19:39:31 +0200🔪Philippe Rivière🔪link to v2🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0ba631f🔪2020-04-13 17:43:16 +0200🔪Thomas Sojka🔪Fix dead link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕46f9e8b🔪2020-01-02 18:37:56 +0100🔪Ilya Vorontsov🔪description of hierarchy.links🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14b8c33🔪2019-12-30 12:53:51 -0800🔪Mike Bostock🔪Don’t mangle Node.🔪
+ rollup.config.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕ddbab8e🔪2019-11-20 21:49:35 +0100🔪Philippe Rivière🔪test node.each and node.find🔪
+ test/hierarchy/each-test.js (new) | 41 +++++++++++++++++++++++++++++++++++++++
+ test/hierarchy/find-test.js (new) | 11 +++++++++++
+ 2 files changed, 52 insertions(+)
+
+☕98c50e6🔪2019-11-18 12:09:52 -0800🔪Mike Bostock🔪2.0.0-rc.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e0d69c9🔪2019-11-18 12:09:35 -0800🔪Mike Bostock🔪Revert "Remap map data to {name, value}."🔪This reverts commit 222f40e7dcf3e2b330505007fa84f0d179e796a4.
+
+ src/hierarchy/index.js | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+
+☕ddb591b🔪2019-11-18 10:44:17 -0800🔪Mike Bostock🔪2.0.0-rc.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕222f40e🔪2019-11-18 10:44:05 -0800🔪Mike Bostock🔪Remap map data to {name, value}.🔪
+ src/hierarchy/index.js | 18 ++++++++++--------
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+
+☕139d13b🔪2019-11-18 09:54:27 -0800🔪Mike Bostock🔪Don’t greedily populate value.🔪
+ src/hierarchy/index.js |  1 -
+ test/stratify-test.js  | 39 ---------------------------------------
+ 2 files changed, 40 deletions(-)
+
+☕90f054c🔪2019-11-18 09:52:00 -0800🔪Mike Bostock🔪Allow d3.hierarchy(Map).🔪
+ README.md                         | 12 +++++++++++-
+ src/hierarchy/index.js            | 19 +++++++++++++++----
+ test/hierarchy/copy-test.js (new) |  8 ++++++++
+ test/stratify-test.js             | 39 +++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 73 insertions(+), 5 deletions(-)
+
+☕3299f0b🔪2019-11-18 09:09:26 -0800🔪Mike Bostock🔪Adopt default argument.🔪
+ src/hierarchy/index.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕39cc860🔪2019-11-18 07:59:33 -0800🔪Mike Bostock🔪2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕b10e3b3🔪2019-11-16 17:33:05 -0800🔪Mike Bostock🔪Remove unnecessary assertion.🔪
+ src/hierarchy/find.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕5e8701c🔪2019-11-16 17:31:25 -0800🔪Mike Bostock🔪Add node.find, node[Symbol.iterator].🔪
+ README.md                       | 10 ++++++++++
+ src/hierarchy/descendants.js    |  6 +-----
+ src/hierarchy/each.js           | 16 ++++------------
+ src/hierarchy/find.js (new)     |  9 +++++++++
+ src/hierarchy/index.js          |  6 +++++-
+ src/hierarchy/iterator.js (new) | 14 ++++++++++++++
+ 6 files changed, 43 insertions(+), 18 deletions(-)
+
+☕62a6211🔪2019-11-16 15:37:18 -0800🔪Mike Bostock🔪Pass index when traversing.🔪
+ README.md                   | 12 ++++++------
+ src/hierarchy/each.js       | 12 +++++++-----
+ src/hierarchy/eachAfter.js  | 14 ++++++++------
+ src/hierarchy/eachBefore.js | 12 +++++++-----
+ 4 files changed, 28 insertions(+), 22 deletions(-)
+
+☕6a9d6db🔪2019-11-16 15:26:26 -0800🔪Mike Bostock🔪Accept iterables.🔪
+ src/array.js         | 6 +++++-
+ src/pack/enclose.js  | 4 ++--
+ src/pack/siblings.js | 3 ++-
+ 3 files changed, 9 insertions(+), 4 deletions(-)
+
+☕7408800🔪2019-11-16 14:53:20 -0800🔪Mike Bostock🔪Accept iterables.🔪
+ src/stratify.js       | 32 +++++++++++++++++---------------
+ test/stratify-test.js | 39 +++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 56 insertions(+), 15 deletions(-)
+
+☕6d25ebd🔪2019-11-16 14:43:01 -0800🔪Mike Bostock🔪Accept iterables as children.🔪
+ src/hierarchy/index.js             |  6 +++---
+ test/hierarchy/index-test.js (new) | 26 ++++++++++++++++++++++++++
+ 2 files changed, 29 insertions(+), 3 deletions(-)
+
+☕1fc4a88🔪2019-11-16 10:39:02 -0800🔪Mike Bostock🔪1.1.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7b56de🔪2019-11-16 10:38:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2be87bd🔪2019-09-27 09:52:58 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕fd2202a🔪2019-11-02 08:23:28 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕0d7e56d🔪2019-08-09 16:29:20 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json          |  10 +-
+ test/stratify-test.js |  10 +-
+ yarn.lock             | 902 +++++++++++++++++++++++++++++---------------------
+ 3 files changed, 541 insertions(+), 381 deletions(-)
+
+☕cd8d54b🔪2019-08-09 15:58:10 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕c6fa6b9🔪2019-08-09 15:29:47 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/hierarchy/index.js    | 22 +++++++++++-----------
+ src/index.js              | 30 +++++++++++++++---------------
+ src/pack/enclose.js       |  2 +-
+ src/pack/index.js         |  6 +++---
+ src/pack/siblings.js      |  2 +-
+ src/partition.js          |  4 ++--
+ src/stratify.js           |  4 ++--
+ src/tree.js               |  2 +-
+ src/treemap/index.js      |  8 ++++----
+ src/treemap/resquarify.js |  6 +++---
+ src/treemap/sliceDice.js  |  4 ++--
+ src/treemap/squarify.js   |  4 ++--
+ 12 files changed, 47 insertions(+), 47 deletions(-)
+
+☕d74b014🔪2019-07-12 11:39:56 -0400🔪Mike Bostock🔪Update README.md🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕24289b9🔪2019-06-17 20:45:28 -0700🔪vasco🔪Small typo fix🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8450e5f🔪2019-06-14 15:40:41 +0200🔪Philippe Rivière🔪link to examples🔪
+ README.md | 122 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 60 insertions(+), 62 deletions(-)
+
+☕7d22381🔪2019-03-09 18:05:55 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕58f5c17🔪2018-10-07 11:09:14 -0400🔪Eric McGregor🔪Changed descendants to children🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c1f038🔪2018-08-24 14:16:21 -0700🔪Mike Bostock🔪1.1.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e1ba90🔪2018-08-24 14:16:17 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕68744c6🔪2018-08-24 14:01:41 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕556e529🔪2018-08-24 13:48:57 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 15 ---------------
+ package.json       |  9 +++++----
+ rollup.config.js   |  6 +++---
+ src/index.js (new) | 15 +++++++++++++++
+ 4 files changed, 23 insertions(+), 22 deletions(-)
+
+☕5fffaf2🔪2018-08-24 13:48:47 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-hierarchy.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8540dc4🔪2018-08-24 13:48:46 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕51adf72🔪2018-08-24 11:33:41 -0700🔪Mike Bostock🔪1.1.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7f25224🔪2018-08-24 11:33:39 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)               |   9 -
+ .eslintrc.json (new)           |  15 +
+ d3-hierarchy.sublime-project   |  16 +-
+ package.json                   |  19 +-
+ rollup.config.js (new)         |  36 ++
+ test/pack/bench-enclose.js     |   2 +
+ test/pack/find-bugs.js         |   2 +
+ test/pack/find-enclose-bugs.js |   2 +
+ test/pack/find-place-bugs.js   |   2 +
+ test/pack/flare-test.js        |   2 +-
+ test/pack/siblings-test.js     |   4 +-
+ yarn.lock (new)                | 974 +++++++++++++++++++++++++++++++++++++++++
+ 12 files changed, 1055 insertions(+), 28 deletions(-)
+
+☕9f24171🔪2018-05-18 12:38:34 +0200🔪denisname🔪Update Readme🔪Remove comment about reserved properties
+preceeding -> preceding
+or -> and
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕392b96c🔪2018-04-25 19:57:54 +0200🔪denis🔪Fix links🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕4147c02🔪2018-04-16 09:16:12 -0700🔪Mike Bostock🔪1.1.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eff2eeb🔪2018-04-16 09:04:51 -0700🔪Mike Bostock🔪Move build to dist.🔪
+ .gitignore   | 2 +-
+ .npmignore   | 2 +-
+ package.json | 8 ++++----
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+☕601a15b🔪2018-04-16 09:04:21 -0700🔪Mike Bostock🔪Switch to prepublishOnly.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕78a2bac🔪2018-04-16 07:53:49 -0700🔪Mike Bostock🔪Fix #114.🔪
+ src/pack/siblings.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2796cb5🔪2018-04-16 07:41:45 -0700🔪Mike Bostock🔪Update test script.🔪
+ test/pack/find-place-bugs.js | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+
+☕f1b1242🔪2018-04-16 07:35:37 -0700🔪Mike Bostock🔪Tweak form.🔪
+ src/pack/siblings.js | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+
+☕4db1c33🔪2018-04-16 13:02:09 +0100🔪Robin Houston🔪Avoid an avoidable sqrt()🔪Since the values that had been divided by scale = sqrt(dc) are
+only being used in pairs, we can avoid the square root and just
+divide by dc instead.
+
+This should help with the precision, marginally, I hope.
+
+ src/pack/siblings.js         | 10 ++++------
+ test/pack/find-place-bugs.js | 10 ++++------
+ 2 files changed, 8 insertions(+), 12 deletions(-)
+
+☕4101447🔪2018-04-15 22:53:36 +0100🔪Robin Houston🔪New place() function that avoids overlaps🔪The old place(a, b, c) function would sometimes place c so it overlapped
+with a and/or b, if c had a much larger radius than a and b.
+
+This version doesn’t seem to.
+
+As per discussion on #111.
+
+This commit also updates the tests in find-place-bugs.js to
+use the new function, and updates the intersection test in
+siblings-test.js to match
+
+Note that flare-test.js fails. I haven’t investigated why: I hope it is simply
+a result of the changes in numerical precision causing slightly different
+circle placements.
+
+ src/pack/siblings.js         | 21 ++++++++++++++-------
+ test/pack/find-place-bugs.js | 25 +++++++++++++++++--------
+ test/pack/siblings-test.js   |  6 ++----
+ 3 files changed, 33 insertions(+), 19 deletions(-)
+
+☕06d4938🔪2018-04-15 15:49:39 +0100🔪Robin Houston🔪Use mbostock indentation style🔪
+ test/pack/find-place-bugs.js | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕2050afb🔪2018-04-15 15:49:09 +0100🔪Robin Houston🔪More readable output🔪
+ test/pack/find-place-bugs.js | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕9c54a69🔪2018-04-15 15:28:10 +0100🔪Robin Houston🔪Test for inconsistencies between place() and intersects()🔪We’re looking for cases where place(a, b, c) will place c so it
+intersects with a or b.
+
+ test/pack/find-place-bugs.js (new) | 51 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 51 insertions(+)
+
+☕2ff381b🔪2018-04-14 17:49:21 -0700🔪Mike Bostock🔪Relax intersection test. Fixes #109.🔪
+ src/pack/siblings.js | 29 +++++++++++++----------------
+ 1 file changed, 13 insertions(+), 16 deletions(-)
+
+☕e51e68d🔪2017-06-09 12:43:12 -0700🔪Mike Bostock🔪1.1.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8cd5e9🔪2017-06-09 12:35:30 -0700🔪Mike Bostock🔪Don’t use a weighted centroid.🔪Instead, just pack around the origin. This avoids drift. Fixes #81.
+
+ src/pack/siblings.js      |   26 +-
+ test/data/flare-pack.json | 1829 +--------------------------------------------
+ 2 files changed, 7 insertions(+), 1848 deletions(-)
+
+☕3a6e72a🔪2017-06-09 12:17:17 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕355cc01🔪2017-06-07 11:59:23 -0700🔪Mike Bostock🔪Revert "Lazy shuffling."🔪This reverts commit e66cf50d72bb062c5bcb1c1267e6a10d4f877c19.
+
+ src/array.js        | 15 +++++++++++++++
+ src/pack/enclose.js |  8 ++++----
+ 2 files changed, 19 insertions(+), 4 deletions(-)
+
+☕c565730🔪2017-06-07 11:29:01 -0700🔪Mike Bostock🔪Generate different inputs while testing.🔪
+ test/pack/bench-enclose.js | 50 ++++++++++++++++++++++++++--------------------
+ 1 file changed, 28 insertions(+), 22 deletions(-)
+
+☕fecb6cd🔪2017-06-07 11:04:07 -0700🔪Mike Bostock🔪Reorder tests.🔪
+ test/pack/bench-enclose.js | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕cb0b432🔪2017-06-07 10:56:09 -0700🔪Mike Bostock🔪Another try.🔪
+ test/pack/bench-enclose.js | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+☕56bf70e🔪2017-06-07 10:49:24 -0700🔪Mike Bostock🔪Fix complete-pass implementation.🔪
+ test/pack/bench-enclose.js | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+☕266cb7b🔪2017-06-07 10:45:37 -0700🔪Mike Bostock🔪More tests.🔪
+ test/pack/bench-enclose.js | 51 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 51 insertions(+)
+
+☕4ae460b🔪2017-06-07 10:36:36 -0700🔪Mike Bostock🔪Add benchmark.🔪
+ package.json                     |   1 +
+ test/pack/bench-enclose.js (new) | 219 +++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 220 insertions(+)
+
+☕1b4eba0🔪2017-06-07 09:38:38 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/pack/enclose.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕e66cf50🔪2017-06-07 09:33:05 -0700🔪Mike Bostock🔪Lazy shuffling.🔪This also implicitly reshuffles the array on restart, improving performance!
+
+ src/array.js        | 15 ---------------
+ src/pack/enclose.js |  8 ++++----
+ 2 files changed, 4 insertions(+), 19 deletions(-)
+
+☕f90f6d3🔪2017-06-07 09:01:47 -0700🔪Mike Bostock🔪A strong and a weak enclosure test.🔪We use a weak enclosure test to see whether the current basis encloses an input
+circle, and a strong enclosure test to reject a potential extended basis.
+
+ src/pack/enclose.js            | 43 ++++++++++++++++++++----------------------
+ test/pack/find-enclose-bugs.js |  2 +-
+ 2 files changed, 21 insertions(+), 24 deletions(-)
+
+☕c8ddf26🔪2017-06-07 08:41:30 -0700🔪Mike Bostock🔪Remove unused variable.🔪
+ src/array.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕2dfc05f🔪2017-06-07 07:59:23 -0700🔪Mike Bostock🔪Revert c53c23ca5fc792b40d4639193f0ded5a22f95b77.🔪
+ src/pack/enclose.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4401b72🔪2017-06-01 16:38:29 -0700🔪Mike Bostock🔪Shuffle before enclose.🔪Fixes #83.
+
+ src/array.js (new)  | 17 +++++++++++++++++
+ src/pack/enclose.js |  4 +++-
+ 2 files changed, 20 insertions(+), 1 deletion(-)
+
+☕d4ffc60🔪2017-06-01 08:24:51 -0700🔪Mike Bostock🔪Optimize two-basis test.🔪
+ src/pack/enclose.js | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+
+☕b3f92a5🔪2017-05-31 16:18:12 -0700🔪Mike Bostock🔪Stricter test.🔪
+ src/pack/enclose.js | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+☕5c1b638🔪2017-05-31 07:05:59 -0700🔪Mike Bostock🔪Style tweaks.🔪
+ src/pack/enclose.js | 16 ++++++----------
+ 1 file changed, 6 insertions(+), 10 deletions(-)
+
+☕7cbe1f9🔪2017-05-31 12:15:11 +0100🔪Robin Houston🔪Iterative implementation of MSW algorithm🔪It’s a little faster (10–15%), arguably easier to understand,
+uses constant space, and avoids any potential for stack overflow.
+
+ src/pack/enclose.js | 19 +++++++++----------
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+
+☕29ca015🔪2017-05-27 13:56:03 -0700🔪Mike Bostock🔪Relax test.🔪
+ test/pack/find-bugs.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c53c23c🔪2017-05-26 19:05:14 -0700🔪Mike Bostock🔪Simplify encloses test.🔪
+ src/pack/enclose.js            |  4 ++--
+ test/pack/find-bugs.js         | 10 ++++------
+ test/pack/find-enclose-bugs.js | 14 +++++++-------
+ 3 files changed, 13 insertions(+), 15 deletions(-)
+
+☕bd6b2b2🔪2017-05-26 18:45:16 -0700🔪Mike Bostock🔪Use d3-random.🔪
+ test/pack/find-bugs.js | 27 +++------------------------
+ 1 file changed, 3 insertions(+), 24 deletions(-)
+
+☕b93fe09🔪2017-05-26 18:37:04 -0700🔪Mike Bostock🔪Revert aee6cca9a97a52077d8972135af957ca89abb8e0.🔪
+ src/pack/enclose.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕346a0aa🔪2017-05-26 13:05:57 -0700🔪Mike Bostock🔪Formatting tweak.🔪
+ src/pack/enclose.js | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+
+☕aee6cca🔪2017-05-26 11:17:08 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/pack/enclose.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕140e458🔪2017-05-26 10:31:00 -0700🔪Mike Bostock🔪Air it out.🔪
+ src/pack/enclose.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕395d296🔪2017-05-26 10:13:38 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/pack/enclose.js | 40 ++++++++++++++++++++--------------------
+ 1 file changed, 20 insertions(+), 20 deletions(-)
+
+☕8991212🔪2017-05-25 14:45:27 -0700🔪Mike Bostock🔪Fix #89 enclosees for small dr.🔪
+ src/pack/enclose.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ad8af97🔪2017-05-25 14:17:48 -0700🔪Mike Bostock🔪Add failing test for #89.🔪
+ test/pack/siblings-test.js | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+☕cc4baa8🔪2017-05-25 14:11:31 -0700🔪Mike Bostock🔪Log radii on error.🔪
+ test/pack/find-bugs.js | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+☕7a3d2b8🔪2017-05-25 13:44:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕34f6713🔪2017-05-25 13:40:26 -0700🔪Mike Bostock🔪Local style tweaks.🔪
+ src/pack/enclose.js | 28 ++++++++++++----------------
+ 1 file changed, 12 insertions(+), 16 deletions(-)
+
+☕38afbdf🔪2017-05-25 20:21:06 +0100🔪Robin Houston🔪Fix the encloses() function so that a circle encloses itself🔪
+ src/pack/enclose.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3b80c9a🔪2017-05-25 20:20:48 +0100🔪Robin Houston🔪Remove unused list module🔪
+ src/pack/enclose.js     |  2 --
+ src/pack/list.js (gone) | 23 -----------------------
+ 2 files changed, 25 deletions(-)
+
+☕f87a18c🔪2017-05-25 20:10:31 +0100🔪Robin Houston🔪Replace Welzl’s algorithm with MSW🔪The MSW algorithm is more efficient and is proven correct.
+
+Matoušek, Jiří; Sharir, Micha; Welzl, Emo (1996), "A subexponential bound for linear programming", Algorithmica, 16: 498–516, doi:10.1007/BF01940877
+http://www.inf.ethz.ch/personal/emo/PublFiles/SubexLinProg_ALG16_96.pdf
+
+ src/pack/enclose.js | 88 +++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 51 insertions(+), 37 deletions(-)
+
+☕eefe14d🔪2017-05-24 10:30:39 -0700🔪Mike Bostock🔪More-accurate enclose3.🔪
+ src/pack/enclose.js | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+☕67590fd🔪2017-05-22 11:53:34 -0700🔪Mike Bostock🔪Optimize slightly.🔪
+ src/pack/enclose.js | 29 +++++++++++++++--------------
+ 1 file changed, 15 insertions(+), 14 deletions(-)
+
+☕325de13🔪2017-05-21 19:52:32 -0700🔪Mike Bostock🔪More robust enclosure test.🔪
+ src/pack/enclose.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ddaf0eb🔪2017-05-19 15:25:26 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/pack/enclose.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕7241a88🔪2017-05-19 15:24:35 -0700🔪Mike Bostock🔪Fix quadratic solution when A = 0.🔪
+ src/pack/enclose.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕24a3fe9🔪2017-05-19 14:16:53 -0700🔪Mike Bostock🔪Avoid Math.sqrt.🔪
+ src/pack/enclose.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕709eefa🔪2017-05-19 14:02:09 -0700🔪Mike Bostock🔪Rename shuffle to list.🔪Related #83.
+
+ src/pack/enclose.js              | 4 ++--
+ src/pack/{shuffle.js => list.js} | 0
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕d344430🔪2017-05-19 14:01:25 -0700🔪Mike Bostock🔪Fix encloses test.🔪
+ package.json                   |  2 ++
+ src/pack/enclose.js            |  6 ++--
+ test/pack/find-enclose-bugs.js | 62 ++++++++++++++++++------------------------
+ 3 files changed, 31 insertions(+), 39 deletions(-)
+
+☕98f0f6a🔪2017-05-08 07:06:39 -0700🔪Mike Bostock🔪Add d3.packEnclose test script.🔪
+ test/pack/find-enclose-bugs.js (new) | 45 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 45 insertions(+)
+
+☕ece66e3🔪2017-04-21 17:58:54 -0400🔪Paul Dechov🔪Fix broken href🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3e7f9d9🔪2017-03-10 09:59:10 -0800🔪Mike Bostock🔪1.1.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5f10921🔪2017-03-10 09:58:53 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕670777b🔪2017-03-06 09:52:54 -0800🔪Mike Bostock🔪Use a larger test set.🔪
+ test/pack/find-bugs.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3c90e62🔪2017-03-06 09:49:38 -0800🔪Mike Bostock🔪Optimize circle packing.🔪This test is not necessary because we are already using it to determine whether
+to advance forwards or backwards along the front chain.
+
+ src/pack/siblings.js | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+
+☕fb131aa🔪2017-03-02 15:58:42 -0800🔪Mike Bostock🔪1.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2c6c855🔪2017-03-02 15:30:05 -0800🔪Mike Bostock🔪Favor vertical partition of squares.🔪With a square layout, this tends to form an initial row across the top rather
+than a column along the left. Related #71.
+
+ src/treemap/binary.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕3c9c4e6🔪2017-03-02 15:29:34 -0800🔪Mike Bostock🔪Fix binary treemap pivot.🔪We were doing binary search, but we weren’t checking whether the previous pivot
+is closer to the target value than the following pivot. Related #71.
+
+ src/treemap/binary.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕3b5ea84🔪2017-02-09 10:58:14 -0800🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕751e222🔪2017-02-07 14:33:19 -0800🔪Mike Bostock🔪Add stress test.🔪
+ test/pack/find-bugs.js (new) | 54 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 54 insertions(+)
+
+☕f5cbbb3🔪2017-02-07 14:25:52 -0800🔪Mike Bostock🔪Fix #78 - use pair tangent.🔪Rather than choosing the closest circle to the origin as one of the two tangent
+circles for placing the next circle, choose the closest pair of circles based on
+how close their tangent point is to the origin.
+
+ src/pack/siblings.js      |   15 +-
+ test/data/flare-pack.json | 1506 ++++++++++++++++++++++-----------------------
+ 2 files changed, 762 insertions(+), 759 deletions(-)
+
+☕abc150a🔪2017-01-28 21:22:13 -0800🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2c75ec1🔪2017-01-28 21:20:18 -0800🔪Mike Bostock🔪Fix #74, again.🔪Tested by generating millions of synthetic datasets!
+
+ src/pack/siblings.js       | 6 +++---
+ test/pack/siblings-test.js | 1 +
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕73c4aad🔪2017-01-28 15:35:06 -0800🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5ebaea0🔪2017-01-28 13:56:31 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a6eb9c1🔪2017-01-28 13:56:25 -0800🔪Mike Bostock🔪Update rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9ad0508🔪2017-01-28 13:42:28 -0800🔪Mike Bostock🔪Optimize.🔪Fix computation of linear distance along the front chain. We can then optimize
+by reusing the distance computed during traversal.
+
+Note: the computed linear distance is under-estimated when there are gaps (non-
+tangent adjacent circles) in the front chain. This state may occur temporarily
+before a circle is placed, but it doesn’t seem to interfere with the algorithm.
+
+ src/pack/siblings.js | 19 +++++++------------
+ 1 file changed, 7 insertions(+), 12 deletions(-)
+
+☕b3ff96b🔪2017-01-28 13:41:42 -0800🔪Mike Bostock🔪Use ${npm_package_version}.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕102024d🔪2017-01-28 13:14:42 -0800🔪Mike Bostock🔪Related #74.🔪
+ src/pack/siblings.js       | 46 +++++++++++++++++-----------------------------
+ test/pack/siblings-test.js | 21 +++++++++++++++++++--
+ 2 files changed, 36 insertions(+), 31 deletions(-)
+
+☕417e544🔪2017-01-28 08:47:07 -0800🔪Mike Bostock🔪Fix #74 - overlap in d3.packSiblings.🔪1. Use epsilon for intersection test. 2. Determine “before” or “after” by
+measuring linear distance along the front chain. 3. When traversing the front
+chain to find the closest intersecting circle, initialize the traversed distance
+using the radius of the two tangent circles.
+
+ src/pack/siblings.js             |   27 +-
+ test/data/flare-pack.json (new)  | 1828 ++++++++++++++++++++++++++++++++++++++
+ test/pack/flare-test.js (new)    |   63 ++
+ test/pack/siblings-test.js (new) |   39 +
+ 4 files changed, 1951 insertions(+), 6 deletions(-)
+
+☕c8f4e62🔪2017-01-13 12:59:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕be1002a🔪2017-01-13 12:43:10 -0800🔪Mike Bostock🔪Add missing file.🔪
+ src/hierarchy/count.js (new) | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕9645c00🔪2017-01-13 12:42:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕b84d341🔪2017-01-13 12:42:19 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ed2b9a🔪2017-01-13 12:41:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0f3f2c0🔪2017-01-13 12:40:48 -0800🔪Mike Bostock🔪Add node.count. Fixes #76.🔪
+ README.md              | 10 +++++++---
+ src/hierarchy/index.js |  2 ++
+ 2 files changed, 9 insertions(+), 3 deletions(-)
+
+☕fecf43f🔪2016-11-22 16:34:45 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b59d1f1🔪2016-11-17 14:15:26 -0800🔪Mike Bostock🔪Add test for leading zero.🔪
+ test/treemap/squarify-test.js | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
+☕a1a0399🔪2016-11-17 13:01:37 -0800🔪Mike Bostock🔪Fix #68.🔪
+ src/treemap/squarify.js | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+☕7b0d3d1🔪2016-11-08 11:06:18 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕44ba491🔪2016-08-22 10:18:03 -0700🔪Mike Bostock🔪Update README. Fixes #56.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cc24a6f🔪2016-08-17 01:32:04 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 108 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 54 insertions(+), 54 deletions(-)
+
+☕633a7df🔪2016-08-08 16:44:00 -0700🔪Mike Bostock🔪Clarify node.copy; related #52.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕72ef683🔪2016-08-02 14:44:29 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕37016e5🔪2016-08-02 14:44:28 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4981cc2🔪2016-07-29 15:48:54 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9446ed5🔪2016-07-29 15:48:50 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ae5af8b🔪2016-07-28 06:57:22 -0700🔪Mike Bostock🔪Update README. Related #50.🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕1f04653🔪2016-06-29 14:40:05 -0700🔪Mike Bostock🔪Fix #49 - stretched treemap example.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕211159a🔪2016-06-27 20:50:23 -0700🔪Mike Bostock🔪Document node.value; fixes #48.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4acadf9🔪2016-06-24 10:47:23 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕edc3733🔪2016-06-24 10:47:19 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 6 +++---
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕86f3841🔪2016-06-15 11:15:06 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕bf700a5🔪2016-06-14 09:23:02 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕1c4c49f🔪2016-06-07 17:40:16 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0a393d6🔪2016-06-07 17:40:07 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 16 ++++++++--------
+ 3 files changed, 11 insertions(+), 12 deletions(-)
+
+☕f5ba7f1🔪2016-06-07 12:27:20 -0700🔪Mike Bostock🔪Slightly cleaner.🔪
+ src/treemap/binary.js | 66 +++++++++++++++++++++++++--------------------------
+ 1 file changed, 33 insertions(+), 33 deletions(-)
+
+☕4add1f6🔪2016-06-02 10:50:40 -0700🔪Mike Bostock🔪0.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f115afe🔪2016-06-02 10:16:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1f17946🔪2016-06-02 10:15:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕de68cf5🔪2016-06-02 10:02:47 -0700🔪Mike Bostock🔪Add d3.treemapResquarify.🔪Fixes #45.
+
+ README.md                             |   8 +++
+ index.js                              |   1 +
+ src/treemap/resquarify.js (new)       |  36 +++++++++++
+ src/treemap/squarify.js               | 109 +++++++++++++++-------------------
+ test/treemap/resquarify-test.js (new) |  76 ++++++++++++++++++++++++
+ test/treemap/squarify-test.js         |  16 +++++
+ 6 files changed, 185 insertions(+), 61 deletions(-)
+
+☕0a986f8🔪2016-05-26 16:13:54 -0700🔪Rohan Padhye🔪Improve asymptotic performance of binary treemap🔪
+ src/treemap/binary.js | 33 +++++++++++++++++++++++++--------
+ 1 file changed, 25 insertions(+), 8 deletions(-)
+
+☕6e4f15a🔪2016-05-20 17:15:28 -0400🔪Paul Dechov🔪Switch x and y in README discussion of radial tree🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7940c29🔪2016-05-18 09:53:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9275457🔪2016-05-15 14:39:53 -0700🔪Mike Bostock🔪0.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13e2693🔪2016-05-15 14:38:02 -0700🔪Mike Bostock🔪Fix #40 - add node.links.🔪
+ README.md                          |  4 ++++
+ src/hierarchy/index.js             |  2 ++
+ src/hierarchy/links.js (new)       |  9 +++++++++
+ test/hierarchy/links-test.js (new) | 15 +++++++++++++++
+ 4 files changed, 30 insertions(+)
+
+☕f9bcddb🔪2016-05-14 21:19:24 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕471d352🔪2016-05-03 11:11:10 -0700🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e44f8a4🔪2016-05-03 11:05:17 -0700🔪Mike Bostock🔪Fix #35 - avoid divide by zero.🔪
+ src/treemap/dice.js           |  2 +-
+ src/treemap/slice.js          |  2 +-
+ src/treemap/squarify.js       |  4 ++--
+ test/treemap/dice-test.js     | 21 +++++++++++++++++++--
+ test/treemap/slice-test.js    | 17 +++++++++++++++++
+ test/treemap/squarify-test.js | 34 ++++++++++++++++++++++++++++++++++
+ 6 files changed, 74 insertions(+), 6 deletions(-)
+
+☕2e8f3c3🔪2016-05-03 09:38:26 -0700🔪Mike Bostock🔪Compute enclosing circle when packing siblings.🔪Fixes #38 - compute enclosing circle using just the front chain.
+Fixes #39 - translate circles after packing siblings.
+
+ src/pack/index.js    | 27 ++++++++-------------------
+ src/pack/siblings.js | 25 +++++++++++++++++++------
+ 2 files changed, 27 insertions(+), 25 deletions(-)
+
+☕6031d28🔪2016-05-02 12:26:15 -0700🔪Mike Bostock🔪Update pack.png.🔪
+ img/pack.png | Bin 99578 -> 88782 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕65d3dac🔪2016-05-02 09:22:26 -0700🔪Mike Bostock🔪0.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7c70e23🔪2016-05-02 09:20:31 -0700🔪Mike Bostock🔪Fix #37 - improve circle-packing.🔪Dramatic improvements by placing the next circle closest to the weighted
+centroid of the previously-placed circles, rather than closest to the origin.
+
+ src/pack/siblings.js | 41 +++++++++++++++++++++++++++++++++--------
+ 1 file changed, 33 insertions(+), 8 deletions(-)
+
+☕7099ff9🔪2016-04-20 20:46:28 -0700🔪Mike Bostock🔪Fix #34 - allow non-unique leaf ids.🔪
+ src/stratify.js       |  7 ++++---
+ test/stratify-test.js | 34 ++++++++++++++++++++++++++++++++--
+ 2 files changed, 36 insertions(+), 5 deletions(-)
+
+☕52ff628🔪2016-04-07 15:59:33 -0700🔪Mike Bostock🔪Nodes cannot be falsey.🔪
+ src/hierarchy/each.js       | 2 +-
+ src/hierarchy/eachAfter.js  | 4 ++--
+ src/hierarchy/eachBefore.js | 2 +-
+ src/hierarchy/index.js      | 2 +-
+ src/tree.js                 | 2 +-
+ 5 files changed, 6 insertions(+), 6 deletions(-)
+
+☕68055b9🔪2016-04-06 14:37:35 -0700🔪Mike Bostock🔪Handle separation of single-branch trees.🔪Fixes mbostock/d3#2646.
+
+ src/tree.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕0482eec🔪2016-04-01 14:15:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9d2f6ae🔪2016-04-01 14:11:18 -0700🔪Mike Bostock🔪0.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b9dbc4c🔪2016-04-01 14:11:13 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕26f1531🔪2016-04-01 14:09:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 --
+ 1 file changed, 2 deletions(-)
+
+☕48d1bea🔪2016-04-01 14:08:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 48 ++++++++++++++++--------------------------------
+ 1 file changed, 16 insertions(+), 32 deletions(-)
+
+☕0faafb1🔪2016-04-01 14:04:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕964cc68🔪2016-04-01 14:04:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕21d44b9🔪2016-04-01 14:02:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0f31f6a🔪2016-04-01 14:02:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9bac621🔪2016-04-01 14:02:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d95c79d🔪2016-04-01 14:01:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕168532c🔪2016-04-01 14:00:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+☕0154c2b🔪2016-04-01 13:20:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9e06a70🔪2016-04-01 13:19:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕067ec92🔪2016-04-01 13:18:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9292244🔪2016-04-01 13:18:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕295ef1d🔪2016-04-01 13:18:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕79bcacd🔪2016-04-01 13:16:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 57 +++++++++++++++++++--------------------------------------
+ 1 file changed, 19 insertions(+), 38 deletions(-)
+
+☕b75b9b9🔪2016-04-01 13:09:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕80268e8🔪2016-04-01 13:08:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1b766bc🔪2016-04-01 13:05:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md              | 125 +++++++------------------------------------------
+ img/stratify.png (new) | Bin 0 -> 33374 bytes
+ 2 files changed, 16 insertions(+), 109 deletions(-)
+
+☕e2f6b32🔪2016-04-01 12:57:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e0da953🔪2016-04-01 12:57:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕49d6279🔪2016-04-01 12:54:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕af8c4aa🔪2016-04-01 12:54:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕399e6de🔪2016-04-01 12:53:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++-------------
+ 1 file changed, 9 insertions(+), 13 deletions(-)
+
+☕f9aff54🔪2016-04-01 12:51:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕b08aa58🔪2016-04-01 12:50:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md          | 393 +++++++++++++++++++++++++++--------------------------
+ img/tree.png (new) | Bin 0 -> 34231 bytes
+ 2 files changed, 197 insertions(+), 196 deletions(-)
+
+☕44b7e09🔪2016-04-01 11:05:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md        | 31 +++++++++++++++++++++++--------
+ src/partition.js | 12 +-----------
+ 2 files changed, 24 insertions(+), 19 deletions(-)
+
+☕589f499🔪2016-04-01 11:01:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕87b2570🔪2016-04-01 11:00:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕67bf577🔪2016-04-01 11:00:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ffe584f🔪2016-04-01 10:58:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕91a322c🔪2016-04-01 10:58:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb9ff5f🔪2016-04-01 10:57:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ec0d30b🔪2016-04-01 10:57:13 -0700🔪Mike Bostock🔪Fix #30 - children accessor for hierarchy.🔪
+ README.md              | 10 ++++++++--
+ src/hierarchy/index.js | 14 ++++++++++----
+ 2 files changed, 18 insertions(+), 6 deletions(-)
+
+☕51be08f🔪2016-04-01 10:46:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕90743ed🔪2016-04-01 10:45:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f770490🔪2016-04-01 10:44:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕06f546f🔪2016-04-01 10:43:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b4c396🔪2016-04-01 10:41:46 -0700🔪Mike Bostock🔪Fix #31 - compute height by default.🔪
+ README.md                  | 16 ++++++++++++++--
+ src/hierarchy/index.js     | 19 ++++++++++++++-----
+ src/stratify.js            |  4 ++--
+ test/stratify-test.js      | 32 ++++++++++++++++++++++++++++++++
+ test/treemap/flare-test.js |  1 +
+ 5 files changed, 63 insertions(+), 9 deletions(-)
+
+☕ae69818🔪2016-04-01 09:37:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 ++++++++++++++++++++++++----------
+ 1 file changed, 24 insertions(+), 10 deletions(-)
+
+☕6e391e5🔪2016-04-01 09:31:10 -0700🔪Mike Bostock🔪Ignore NaN padding.🔪
+ src/pack/index.js | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕6b3a7c2🔪2016-04-01 09:27:47 -0700🔪Mike Bostock🔪Allow pack.padding to be a function.🔪Also fix a confusing case in packEnclose where the circle wasn’t a new object if
+the number of circles being enclosed was exactly one.
+
+ src/pack/enclose.js | 10 ++++++++-
+ src/pack/index.js   | 60 ++++++++++++++++++++++++++---------------------------
+ 2 files changed, 38 insertions(+), 32 deletions(-)
+
+☕42f8038🔪2016-04-01 08:47:10 -0700🔪Mike Bostock🔪Update README.🔪
+ img/partition.png | Bin 15472 -> 26880 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕dbe68e9🔪2016-03-31 18:03:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md               |   4 ++--
+ img/pack.png (new)      | Bin 0 -> 99578 bytes
+ img/partition.png (new) | Bin 0 -> 15472 bytes
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+☕a390bf1🔪2016-03-31 17:31:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕84f497e🔪2016-03-31 17:20:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 ++++++++----------------
+ 1 file changed, 8 insertions(+), 16 deletions(-)
+
+☕9c96652🔪2016-03-31 17:07:07 -0700🔪Mike Bostock🔪Replace hierarchyPath with node.path.🔪
+ index.js               | 1 -
+ src/hierarchy/index.js | 2 ++
+ src/hierarchy/path.js  | 5 +++--
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+☕3119976🔪2016-03-31 17:05:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md             |  49 +++++++++++++++++++++++++++++++++++++------------
+ img/cluster.png (new) | Bin 0 -> 42689 bytes
+ 2 files changed, 37 insertions(+), 12 deletions(-)
+
+☕7a1ddfb🔪2016-03-31 10:11:32 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0451b8e🔪2016-03-31 10:11:21 -0700🔪Mike Bostock🔪Prepare for 0.1.🔪
+ README.md    | 13 ++++++++++++-
+ package.json |  7 ++-----
+ 2 files changed, 14 insertions(+), 6 deletions(-)
+
+☕e51a7de🔪2016-03-31 10:09:20 -0700🔪Mike Bostock🔪Add d3.hierarchyPath.🔪
+ README.md                   |  4 ++++
+ index.js                    |  1 +
+ src/hierarchy/path.js (new) | 29 +++++++++++++++++++++++++++++
+ 3 files changed, 34 insertions(+)
+
+☕d0f161b🔪2016-03-31 09:55:04 -0700🔪Mike Bostock🔪Restore tree layout.🔪
+ README.md         |  52 ++++++++++++
+ index.js          |   1 +
+ src/tree.js (new) | 236 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 289 insertions(+)
+
+☕3ee15e0🔪2016-03-30 17:25:47 -0700🔪Mike Bostock🔪Restore cluster layout.🔪
+ README.md            | 52 ++++++++++++++++++++++++++++++++
+ index.js             |  1 +
+ src/cluster.js (new) | 84 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 137 insertions(+)
+
+☕e698559🔪2016-03-30 15:40:25 -0700🔪Mike Bostock🔪Move partition.🔪
+ index.js                                 | 2 +-
+ src/{partition/index.js => partition.js} | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕2d055e3🔪2016-03-30 15:40:08 -0700🔪Mike Bostock🔪Cleaner inner padding calculation.🔪
+ src/treemap/index.js | 22 +++++++++-------------
+ 1 file changed, 9 insertions(+), 13 deletions(-)
+
+☕3a8c668🔪2016-03-30 12:41:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6ee92ee🔪2016-03-30 12:41:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕28322f8🔪2016-03-30 12:40:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕acb4c85🔪2016-03-30 12:28:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕281ea8c🔪2016-03-30 12:27:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕9f90ea0🔪2016-03-30 11:52:26 -0700🔪Mike Bostock🔪Fix determination of closest circle.🔪
+ src/pack/siblings.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕2690f65🔪2016-03-30 11:40:55 -0700🔪Mike Bostock🔪Expose packSiblings, packEnclose.🔪
+ README.md            | 8 ++++++++
+ index.js             | 2 ++
+ src/pack/siblings.js | 8 +++++---
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+
+☕90be488🔪2016-03-29 15:11:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 37 +++++++++++++++++++++++++------------
+ 1 file changed, 25 insertions(+), 12 deletions(-)
+
+☕8c194c7🔪2016-03-29 15:03:39 -0700🔪Mike Bostock🔪Fix variable inner padding.🔪
+ src/treemap/index.js | 25 ++++++++++++++++---------
+ 1 file changed, 16 insertions(+), 9 deletions(-)
+
+☕4f750b9🔪2016-03-29 13:21:37 -0700🔪Mike Bostock🔪Minor cleanup.🔪
+ src/pack/{enclosingCircle.js => enclose.js} | 20 +++-----------------
+ src/pack/index.js                           |  8 ++++----
+ src/pack/shuffle.js (new)                   | 23 +++++++++++++++++++++++
+ src/pack/{circles.js => siblings.js}        | 23 +++++++++++------------
+ test/treemap/index-test.js                  | 16 +++++++++++++---
+ 5 files changed, 54 insertions(+), 36 deletions(-)
+
+☕ff356f6🔪2016-03-29 11:40:37 -0700🔪Mike Bostock🔪Dynamic padding.🔪
+ README.md             | 16 +++++++++++++
+ src/constant.js (new) |  9 +++++++
+ src/treemap/index.js  | 66 ++++++++++++++++++++++++++++++---------------------
+ 3 files changed, 64 insertions(+), 27 deletions(-)
+
+☕7b2aeb6🔪2016-03-28 14:38:52 -0700🔪Mike Bostock🔪Fix #27 - save node order for resquarify.🔪
+ src/treemap/squarify.js | 102 +++++++++++++++++++++++-------------------------
+ 1 file changed, 48 insertions(+), 54 deletions(-)
+
+☕191236f🔪2016-03-28 12:12:17 -0700🔪Mike Bostock🔪Copy value, too.🔪
+ README.md              | 18 +++++++++---------
+ src/hierarchy/index.js |  2 ++
+ src/partition/index.js | 12 ++++++------
+ src/stratify.js        |  2 +-
+ 4 files changed, 18 insertions(+), 16 deletions(-)
+
+☕ab7b2f2🔪2016-03-28 09:54:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕6b248f5🔪2016-03-28 09:43:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 57 ++-------------------------------------------------------
+ 1 file changed, 2 insertions(+), 55 deletions(-)
+
+☕89e6015🔪2016-03-28 09:31:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕07d40ef🔪2016-03-28 09:28:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6a48184🔪2016-03-28 09:27:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b4089ef🔪2016-03-28 09:27:00 -0700🔪Mike Bostock🔪Layouts take hierarchies as input.🔪
+ README.md                                   | 302 ++++++++++++++++++++--------
+ index.js                                    |   2 +-
+ src/accessors.js                            |   8 -
+ src/{node => hierarchy}/ancestors.js        |   0
+ src/{node => hierarchy}/descendants.js      |   0
+ src/{node => hierarchy}/each.js             |   0
+ src/{node => hierarchy}/eachAfter.js        |   0
+ src/{node => hierarchy}/eachBefore.js       |   0
+ src/{node => hierarchy}/index.js            |  12 +-
+ src/{node => hierarchy}/leaves.js           |   0
+ src/hierarchy/sort.js (new)                 |   7 +
+ src/{hierarchyValue.js => hierarchy/sum.js} |   4 +-
+ src/hierarchySort.js (gone)                 |   7 -
+ src/pack/index.js                           |  20 +-
+ src/partition/index.js                      |  21 +-
+ src/stratify.js                             |  25 +--
+ src/treemap/index.js                        |  31 +--
+ test/stratify-test.js                       | 238 +++++++++++++++-------
+ test/treemap/flare-test.js                  |   8 +-
+ test/treemap/index-test.js                  |  83 ++------
+ 20 files changed, 444 insertions(+), 324 deletions(-)
+
+☕f421c41🔪2016-03-25 13:38:02 -0700🔪Mike Bostock🔪Expose node iteration methods.🔪
+ README.md                                  | 12 ++++++++++++
+ src/hierarchySort.js                       |  4 +---
+ src/hierarchyValue.js                      |  4 +---
+ src/node/descendants.js                    |  4 +---
+ src/{visit.js => node/each.js}             |  5 +++--
+ src/{visitAfter.js => node/eachAfter.js}   |  5 +++--
+ src/{visitBefore.js => node/eachBefore.js} |  5 +++--
+ src/node/index.js                          | 11 +++++++----
+ src/node/leaves.js                         |  4 +---
+ src/pack/index.js                          | 13 ++++---------
+ src/partition/index.js                     |  5 ++---
+ src/stratify.js                            |  4 ++--
+ src/treemap/index.js                       |  5 ++---
+ 13 files changed, 42 insertions(+), 39 deletions(-)
+
+☕f808e3f🔪2016-03-25 11:16:16 -0700🔪Mike Bostock🔪Return leaves in traversal order.🔪
+ README.md          | 2 +-
+ src/node/leaves.js | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕8a3995c🔪2016-03-25 10:20:22 -0700🔪Mike Bostock🔪Asymmetric treemap padding.🔪
+ src/treemap/index.js       | 50 +++++++++++++++++++++++++++-------------------
+ test/treemap/index-test.js |  6 +++---
+ 2 files changed, 32 insertions(+), 24 deletions(-)
+
+☕4afd36c🔪2016-03-25 09:17:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕ce9e5fb🔪2016-03-25 09:10:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7bee252🔪2016-03-25 09:08:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a9196d7🔪2016-03-25 09:06:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 82 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 41 insertions(+), 41 deletions(-)
+
+☕f3ffb14🔪2016-03-25 08:04:38 -0700🔪Mike Bostock🔪Rename hierarchy to stratify.🔪
+ README.md                         | 269 +++++++++++++++++++-------------------
+ index.js                          |   2 +-
+ src/{hierarchy.js => stratify.js} |   0
+ test/hierarchy-test.js (gone)     | 269 --------------------------------------
+ test/stratify-test.js (new)       | 269 ++++++++++++++++++++++++++++++++++++++
+ test/treemap/flare-test.js        |   4 +-
+ 6 files changed, 407 insertions(+), 406 deletions(-)
+
+☕5044207🔪2016-03-24 17:51:42 -0700🔪Mike Bostock🔪Add node.copy.🔪
+ README.md                |  4 ++++
+ src/node/index.js        | 14 ++++++++++++--
+ src/node/value.js (gone) | 11 -----------
+ src/pack/index.js        |  4 ++--
+ 4 files changed, 18 insertions(+), 15 deletions(-)
+
+☕f4db7c7🔪2016-03-24 17:21:15 -0700🔪Mike Bostock🔪Restore stable squarified treemaps.🔪
+ README.md                  | 10 +++++++---
+ src/treemap/index.js       |  9 +++++++++
+ src/treemap/squarify.js    | 39 ++++++++++++++++++++++++++-------------
+ test/treemap/flare-test.js |  1 +
+ 4 files changed, 43 insertions(+), 16 deletions(-)
+
+☕bb2893d🔪2016-03-24 17:08:03 -0700🔪Mike Bostock🔪Exact edge values.🔪
+ src/treemap/squarify.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕99ab639🔪2016-03-24 16:17:06 -0700🔪Mike Bostock🔪Remove tree2csv.🔪
+ bin/tree2csv (gone) | 30 ------------------------------
+ package.json        |  3 ---
+ 2 files changed, 33 deletions(-)
+
+☕7c682c2🔪2016-03-24 14:06:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8e83cc1🔪2016-03-24 14:05:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2546134🔪2016-03-24 14:02:52 -0700🔪Mike Bostock🔪Update README.🔪
+ img/treemap.png | Bin 75525 -> 69890 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕af005be🔪2016-03-24 14:01:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md             |  10 ++++++----
+ img/treemap.png (new) | Bin 0 -> 75525 bytes
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+☕d436fc3🔪2016-03-24 13:14:40 -0700🔪Mike Bostock🔪Remove unused var.🔪
+ src/pack/index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f724b1f🔪2016-03-24 13:05:28 -0700🔪Mike Bostock🔪Add pack.radius.🔪
+ README.md         | 26 ++++++++++-------
+ src/pack/index.js | 85 ++++++++++++++++++++++++++++++++++---------------------
+ 2 files changed, 68 insertions(+), 43 deletions(-)
+
+☕1d31565🔪2016-03-24 11:18:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕41fe6fc🔪2016-03-24 11:17:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+☕1b38d52🔪2016-03-24 11:15:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4b5c9be🔪2016-03-24 11:14:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ea8f916🔪2016-03-24 11:13:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 40 ++++++++++++++++++++++++++++------------
+ 1 file changed, 28 insertions(+), 12 deletions(-)
+
+☕bc4cab7🔪2016-03-24 11:05:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕448e6a5🔪2016-03-24 11:04:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04c2376🔪2016-03-24 11:03:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕61695cb🔪2016-03-24 11:03:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕16a1420🔪2016-03-24 11:02:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 +-------------------------------------
+ 1 file changed, 1 insertion(+), 37 deletions(-)
+
+☕ba94154🔪2016-03-24 11:01:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕815a926🔪2016-03-24 11:01:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕bbf8c99🔪2016-03-24 11:00:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1faf01d🔪2016-03-24 10:58:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md              | 23 ++++++++-------------
+ src/hierarchy.js       |  2 +-
+ test/hierarchy-test.js | 55 +++++++++++++++-----------------------------------
+ 3 files changed, 25 insertions(+), 55 deletions(-)
+
+☕3dd8c8b🔪2016-03-24 10:53:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e64e659🔪2016-03-24 10:53:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 52 ++++++++++++++++++++--------------------------------
+ 1 file changed, 20 insertions(+), 32 deletions(-)
+
+☕8d3fa1a🔪2016-03-24 10:52:02 -0700🔪Mike Bostock🔪Ignore empty ids.🔪
+ README.md              | 118 +++++++++++++++++++++++++++++++++++++++++++++++--
+ src/hierarchy.js       |   6 +--
+ test/hierarchy-test.js |  56 ++++++++++++++++++++++-
+ 3 files changed, 173 insertions(+), 7 deletions(-)
+
+☕139c866🔪2016-03-24 10:32:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d87612🔪2016-03-24 10:30:09 -0700🔪Mike Bostock🔪Remove d3.hierarchyTopDown.🔪Instead, the hierarchy layouts now take simple hierarchical input data as they
+did in D3 3.x, and d3.hierarchy now takes tabular input data and converts it
+into a simple hierarchy. This avoids having the hierarchical layouts mutate
+their inputs. (I’ve omitted the children accessor from the hierarchy layouts,
+but I might bring it back.)
+
+ README.md                                   | 106 ++++++-------
+ index.js                                    |   5 +-
+ src/{hierarchy => }/accessors.js            |   0
+ src/{hierarchy/bottomUp.js => hierarchy.js} |  38 ++---
+ src/hierarchy/topDown.js (gone)             |  41 -----
+ src/hierarchySort.js (new)                  |   9 ++
+ src/{node/revalue.js => hierarchyValue.js}  |   6 +-
+ src/node/ancestors.js                       |   6 +-
+ src/node/descendants.js                     |   6 +-
+ src/node/index.js                           |  35 ++--
+ src/node/leaves.js                          |   8 +-
+ src/node/sort.js (gone)                     |   7 -
+ src/node/value.js (new)                     |  11 ++
+ src/pack/index.js                           |  22 ++-
+ src/partition/index.js                      |  19 ++-
+ src/treemap/index.js                        |  19 ++-
+ src/treemap/squarify.js                     |  39 ++---
+ src/{node/each.js => visit.js}              |   5 +-
+ src/{node/eachAfter.js => visitAfter.js}    |   5 +-
+ src/{node/eachBefore.js => visitBefore.js}  |   5 +-
+ test/hierarchy-test.js (new)                | 238 ++++++++++++++++++++++++++++
+ test/hierarchy/bottomUp-test.js (gone)      | 164 -------------------
+ test/hierarchy/noparent.js (gone)           |  12 --
+ test/hierarchy/noparents.js (gone)          |   5 -
+ test/hierarchy/parents.js (gone)            |   7 -
+ test/hierarchy/topDown-test.js (gone)       |  53 -------
+ test/node/revalue-test.js (gone)            |  44 -----
+ test/node/sort-test.js (gone)               |  13 --
+ test/treemap/flare-test.js                  |  33 ++--
+ test/treemap/index-test.js                  | 156 ++++++++++--------
+ 30 files changed, 528 insertions(+), 589 deletions(-)
+
+☕5938e09🔪2016-03-24 08:39:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+
+☕da7fbbb🔪2016-03-23 16:25:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md                 | 22 +++++++++++++++++++++-
+ src/hierarchy/bottomUp.js |  4 ++--
+ src/hierarchy/topDown.js  |  6 +++---
+ src/node/index.js         |  8 ++++++--
+ 4 files changed, 32 insertions(+), 8 deletions(-)
+
+☕f8d9fb6🔪2016-03-23 16:19:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 48 ++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 40 insertions(+), 8 deletions(-)
+
+☕8dddaf0🔪2016-03-23 16:05:29 -0700🔪Mike Bostock🔪Don’t create an implicit root.🔪
+ src/hierarchy/bottomUp.js       |  22 ++++---
+ src/node/revalue.js             |   3 +-
+ test/hierarchy/bottomUp-test.js | 126 ++++++++++++++++------------------------
+ test/node/revalue-test.js       |  12 ++--
+ test/treemap/flare-test.js      |   3 +-
+ 5 files changed, 73 insertions(+), 93 deletions(-)
+
+☕d013f7b🔪2016-03-23 14:41:19 -0700🔪Mike Bostock🔪More tests.🔪
+ test/data/simple3.json (new) | 25 ++++++++++++
+ test/treemap/index-test.js   | 95 ++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 120 insertions(+)
+
+☕b176efc🔪2016-03-23 14:25:48 -0700🔪Mike Bostock🔪Move value & sort to layouts.🔪Not all hierarchies will need this functionality.
+
+ src/hierarchy/bottomUp.js         |  16 +----
+ src/hierarchy/topDown.js          |  16 +----
+ src/node/revalue.js               |   4 +-
+ src/pack/index.js                 |  15 +++-
+ src/partition/index.js            |  15 +++-
+ src/treemap/index.js              |  17 ++++-
+ test/data/simple.json (new)       |  30 ++++++++
+ test/data/simple2.json (new)      |  25 +++++++
+ test/hierarchy/bottomUp-test.js   |  88 ++++--------------------
+ test/hierarchy/topDown-test.js    |  74 +-------------------
+ test/node/revalue-test.js         |  33 ++++-----
+ test/node/sort-test.js            |  61 ++++-------------
+ test/treemap/binary-test.js (new) |  30 ++++++++
+ test/treemap/dice-test.js         |  18 +----
+ test/treemap/flare-test.js        |  17 ++---
+ test/treemap/index-test.js        | 139 ++++++++++++++------------------------
+ test/treemap/round.js (new)       |  12 ++++
+ test/treemap/slice-test.js        |  22 ++----
+ test/treemap/sliceDice-test.js    |  28 +++-----
+ test/treemap/squarify-test.js     |  28 +++-----
+ 20 files changed, 265 insertions(+), 423 deletions(-)
+
+☕4145353🔪2016-03-23 10:51:03 -0700🔪Mike Bostock🔪More tests.🔪
+ src/hierarchy/accessors.js      |   3 +-
+ src/hierarchy/bottomUp.js       |   2 +-
+ src/hierarchy/topDown.js        |   2 +-
+ src/node/eachAfter.js           |   4 +-
+ src/node/revalue.js             |   2 +-
+ test/hierarchy/bottomUp-test.js |  32 ++++++------
+ test/hierarchy/topDown-test.js  |  38 +++++++-------
+ test/node/revalue-test.js       | 107 ++++++++++++++++++----------------------
+ test/treemap/flare-test.js      |   1 -
+ 9 files changed, 91 insertions(+), 100 deletions(-)
+
+☕43c8d6d🔪2016-03-23 09:46:38 -0700🔪Mike Bostock🔪Tests for hierarchy{BottomUp,TopDown}.🔪
+ src/hierarchy/accessors.js (new)      |  17 ++
+ src/hierarchy/bottomUp.js             |  40 +++--
+ src/hierarchy/topDown.js              |  17 +-
+ src/node/index.js                     |   4 +-
+ src/node/{evaluate.js => revalue.js}  |   0
+ test/hierarchy-test.js (gone)         | 322 ----------------------------------
+ test/hierarchy/bottomUp-test.js (new) | 252 ++++++++++++++++++++++++++
+ test/hierarchy/noparent.js (new)      |  12 ++
+ test/hierarchy/noparents.js (new)     |   5 +
+ test/hierarchy/parents.js (new)       |   7 +
+ test/hierarchy/topDown-test.js (new)  | 121 +++++++++++++
+ test/node/revalue-test.js (new)       |  62 +++++++
+ test/node/sort-test.js (new)          |  50 ++++++
+ test/treemap/flare-test.js            |  44 +++--
+ 14 files changed, 597 insertions(+), 356 deletions(-)
+
+☕96bc3c1🔪2016-03-22 22:03:53 -0700🔪Mike Bostock🔪Move round.🔪
+ src/partition/index.js     | 2 +-
+ src/treemap/index.js       | 2 +-
+ src/{ => treemap}/round.js | 0
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+☕bfe7ac9🔪2016-03-22 22:01:31 -0700🔪Mike Bostock🔪Rename to bottom-up and top-down.🔪
+ index.js                        |   4 +-
+ src/hierarchy.js (gone)         | 127 ----------------------------------------
+ src/hierarchy/bottomUp.js (new) |  69 ++++++++++++++++++++++
+ src/hierarchy/topDown.js (new)  |  40 +++++++++++++
+ test/hierarchy-test.js          |  18 ++++++
+ 5 files changed, 130 insertions(+), 128 deletions(-)
+
+☕21140ce🔪2016-03-22 21:39:49 -0700🔪Mike Bostock🔪Move src/partition.js.🔪
+ index.js                                 | 2 +-
+ src/{partition.js => partition/index.js} | 4 ++--
+ test/hierarchy-test.js                   | 9 +++++----
+ 3 files changed, 8 insertions(+), 7 deletions(-)
+
+☕925ea19🔪2016-03-22 21:36:27 -0700🔪Mike Bostock🔪Combine hierarchy and hierarchy2.🔪
+ index.js                 |  1 -
+ src/hierarchy.js         | 61 ++++++++++++++++++++++++++++++++++++++----------
+ src/hierarchy2.js (gone) | 60 -----------------------------------------------
+ 3 files changed, 49 insertions(+), 73 deletions(-)
+
+☕374c457🔪2016-03-22 21:10:00 -0700🔪Mike Bostock🔪Checkpoint new hierarchy operator.🔪I want to support generating hierarchical layouts from either tabular or
+hierarchical data, and I want to decouple the conversion of tabular data to
+hierarchical data from the hierarchical layout. Also, this should present a
+cleaner interface for updating a layout without needing to reconvert the data.
+
+I need better names for d3.hierarchy (which organizes tabular data into a node
+tree) and d3.hierarchy2 (which converts raw hierarchical data to a node tree).
+
+ README.md                  |  74 +------
+ index.js                   |   1 +
+ src/hierarchy.js           |  50 +----
+ src/hierarchy2.js (new)    |  60 ++++++
+ src/node/evaluate.js (new) |  10 +
+ src/node/index.js          |  13 +-
+ src/node/leaves.js (new)   |   5 +
+ src/pack/index.js          |  22 +-
+ src/partition.js           |  22 +-
+ src/rebind.js (gone)       |  25 ---
+ src/treemap/index.js       |  22 +-
+ test/hierarchy-test.js     | 492 ++++++++++++++++++++++-----------------------
+ 12 files changed, 357 insertions(+), 439 deletions(-)
+
+☕18fb945🔪2016-03-22 15:19:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 98 ++++++++++++++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 72 insertions(+), 26 deletions(-)
+
+☕44fee82🔪2016-03-22 14:10:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 114 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 114 insertions(+)
+
+☕dd91274🔪2016-03-22 13:54:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 72 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 72 insertions(+)
+
+☕fddac40🔪2016-03-22 13:03:18 -0700🔪Mike Bostock🔪Expose packCircles, packEnclosingCircle.🔪
+ index.js                                    |  2 +
+ src/pack/circles.js (new)                   | 96 ++++++++++++++++++++++++++++
+ src/pack/contains.js (gone)                 |  6 --
+ src/pack/{enclose.js => enclosingCircle.js} | 11 +++-
+ src/pack/index.js                           | 98 ++---------------------------
+ src/pack/intersects.js (gone)               |  6 --
+ 6 files changed, 110 insertions(+), 109 deletions(-)
+
+☕71511e4🔪2016-03-22 12:28:43 -0700🔪Mike Bostock🔪Add node.{ancestors,descendants}.🔪
+ src/node/ancestors.js (new)   | 5 +++++
+ src/node/descendants.js (new) | 5 +++++
+ src/node/index.js             | 4 ++++
+ 3 files changed, 14 insertions(+)
+
+☕39d836c🔪2016-03-22 11:06:34 -0700🔪Mike Bostock🔪Circle-packing layout.🔪
+ index.js                           |  2 +-
+ src/pack/contains.js (new)         |  6 +++
+ src/pack/enclose.js                | 22 ++++-----
+ src/pack/{siblings.js => index.js} | 98 ++++++++++++++++++++++++++++++++++----
+ src/pack/intersects.js (new)       |  6 +++
+ 5 files changed, 112 insertions(+), 22 deletions(-)
+
+☕19b8dbc🔪2016-03-22 11:05:46 -0700🔪Mike Bostock🔪Method chaining.🔪
+ src/node/each.js       | 1 +
+ src/node/eachAfter.js  | 1 +
+ src/node/eachBefore.js | 1 +
+ src/node/sort.js       | 2 +-
+ 4 files changed, 4 insertions(+), 1 deletion(-)
+
+☕bb3f1ba🔪2016-03-22 09:32:24 -0700🔪Mike Bostock🔪Allow anonymous leaf nodes.🔪Only parent nodes need names, so all leaf nodes to be anonymous. This is
+particularly convenient for flat (trivial) hierarchies.
+
+ src/hierarchy.js       | 15 +++++++--------
+ src/node/index.js      |  5 ++++-
+ test/hierarchy-test.js | 26 +++++++++++++-------------
+ 3 files changed, 24 insertions(+), 22 deletions(-)
+
+☕e5283a6🔪2016-03-21 21:11:47 -0700🔪Mike Bostock🔪Optimizations.🔪
+ src/pack/siblings.js | 51 ++++++++++++++++++++++++++++-----------------------
+ 1 file changed, 28 insertions(+), 23 deletions(-)
+
+☕da5d6bc🔪2016-03-21 19:31:06 -0700🔪Mike Bostock🔪Fix initial score.🔪
+ src/pack/siblings.js | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+☕734276a🔪2016-03-21 17:05:47 -0700🔪Mike Bostock🔪Recompute closest circle to origin.🔪
+ src/pack/siblings.js | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕291351a🔪2016-03-21 15:46:44 -0700🔪Mike Bostock🔪Only update a if it is closer.🔪
+ src/pack/siblings.js | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕69606fa🔪2016-03-21 15:36:40 -0700🔪Mike Bostock🔪Remove fudge factor.🔪
+ src/pack/siblings.js | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕d2b7954🔪2016-03-21 13:48:10 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/pack/siblings.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕ff6ed48🔪2016-03-21 13:42:15 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/pack/siblings.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕202a8c2🔪2016-03-21 13:38:08 -0700🔪Mike Bostock🔪Rewrite circle-packing, again.🔪
+ index.js                   |  1 +
+ src/pack/pack.js (gone)    | 96 ----------------------------------------------
+ src/pack/siblings.js (new) | 86 +++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 87 insertions(+), 96 deletions(-)
+
+☕52545e4🔪2016-03-17 22:19:16 -0700🔪Mike Bostock🔪Avoid ESLint parse error.🔪
+ src/pack/pack.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕92b54d4🔪2016-03-17 21:49:16 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/pack/pack.js | 27 ++++++++++-----------------
+ 1 file changed, 10 insertions(+), 17 deletions(-)
+
+☕135d06f🔪2016-03-17 21:41:18 -0700🔪Mike Bostock🔪Fix pack overlap, again.🔪Better fix for 57e90ce112fd752d4db659bb8e632359fd2f426f.
+
+Related mbostock/d3#1761.
+
+ src/pack/pack.js | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+
+☕9519b6d🔪2016-03-17 17:58:07 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/pack/pack.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕57e90ce🔪2016-03-17 17:55:03 -0700🔪Mike Bostock🔪Fix pack overlap.🔪If the front chain only has three circles, don’t try to remove any more!
+
+Related mbostock/d3#1761.
+
+ src/pack/pack.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1182ae6🔪2016-03-17 17:38:16 -0700🔪Mike Bostock🔪Fix overlap when packing circles.🔪Fixes mbostock/d3#1761.
+
+ src/pack/pack.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕73fb5c5🔪2016-03-17 16:37:17 -0700🔪Mike Bostock🔪Minor cleanup.🔪
+ src/pack/pack.js | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+☕975aa08🔪2016-03-17 16:16:40 -0700🔪Mike Bostock🔪Checkpoint pack layout.🔪
+ src/pack/enclose.js (new) | 106 ++++++++++++++++++++++++++++++++++++++++++++++
+ src/pack/pack.js (new)    |  93 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 199 insertions(+)
+
+☕f2d99f7🔪2016-03-17 10:14:18 -0700🔪Mike Bostock🔪Restore partition layout.🔪
+ index.js               |  1 +
+ src/partition.js (new) | 78 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/round.js (new)     |  6 ++++
+ src/treemap/index.js   | 12 ++------
+ 4 files changed, 88 insertions(+), 9 deletions(-)
+
+☕492c5ca🔪2016-03-16 13:49:20 -0700🔪Mike Bostock🔪Add binary treemap.🔪Fixes mbostock/d3#653.
+
+ index.js                    |  1 +
+ src/treemap/binary.js (new) | 27 +++++++++++++++++++++++++++
+ 2 files changed, 28 insertions(+)
+
+☕ef72be6🔪2016-03-16 12:38:23 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/treemap/index.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕e44d858🔪2016-03-16 12:37:12 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/treemap/index.js | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+
+☕4d2281a🔪2016-03-16 11:34:30 -0700🔪Mike Bostock🔪Remove d3-collection dependency.🔪
+ package.json     |  3 +--
+ src/hierarchy.js | 14 ++++++++------
+ 2 files changed, 9 insertions(+), 8 deletions(-)
+
+☕0404edd🔪2016-03-16 11:26:38 -0700🔪Mike Bostock🔪Move iteration methods to Node.prototype.🔪
+ src/hierarchy.js             | 22 +++++++---------------
+ src/node/each.js (new)       | 12 ++++++++++++
+ src/node/eachAfter.js (new)  | 12 ++++++++++++
+ src/node/eachBefore.js (new) |  9 +++++++++
+ src/node/index.js (new)      | 14 ++++++++++++++
+ src/node/sort.js (new)       |  7 +++++++
+ src/treemap/index.js         |  5 ++---
+ src/visit.js (gone)          | 35 -----------------------------------
+ test/hierarchy-test.js       |  2 +-
+ 9 files changed, 64 insertions(+), 54 deletions(-)
+
+☕e8f99ee🔪2016-03-15 21:26:06 -0700🔪Mike Bostock🔪Rename to padding{Inner,Outer}.🔪
+ src/treemap/index.js | 39 ++++++++++++++++++++++-----------------
+ 1 file changed, 22 insertions(+), 17 deletions(-)
+
+☕f75c607🔪2016-03-15 16:21:25 -0700🔪Mike Bostock🔪Optimize.🔪
+ src/treemap/index.js | 40 +++++++++++++++++++++-------------------
+ 1 file changed, 21 insertions(+), 19 deletions(-)
+
+☕39d6f40🔪2016-03-15 16:19:21 -0700🔪Mike Bostock🔪Child and sibling padding.🔪
+ src/hierarchy.js     |  9 ++++-----
+ src/treemap/index.js | 34 +++++++++++++++++++++++++++++++---
+ 2 files changed, 35 insertions(+), 8 deletions(-)
+
+☕96f9b54🔪2016-03-15 13:53:26 -0700🔪Mike Bostock🔪Add treemap.revalue for sticky treemaps.🔪The squarified tiler now records row breaks in the semi-private node._squarify
+field so that a treemap can be updated without changing node adjacencies.
+
+ src/hierarchy.js           | 19 ++++++----
+ src/rebind.js              |  1 +
+ src/treemap/index.js       | 22 +++++++++---
+ src/treemap/squarify.js    | 40 ++++++++++++++-------
+ test/hierarchy-test.js     | 88 ++++++++++++++++++++++++++--------------------
+ test/treemap/flare-test.js | 28 +++++++--------
+ 6 files changed, 119 insertions(+), 79 deletions(-)
+
+☕212033d🔪2016-03-15 11:07:11 -0700🔪Mike Bostock🔪Add treemap.round.🔪
+ src/treemap/index.js       | 21 ++++++++++++++++-----
+ test/treemap/index-test.js | 32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 48 insertions(+), 5 deletions(-)
+
+☕a2386ff🔪2016-03-15 10:47:29 -0700🔪Mike Bostock🔪More treemap tests.🔪
+ test/treemap/index-test.js | 100 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 100 insertions(+)
+
+☕6aef06a🔪2016-03-15 10:35:55 -0700🔪Mike Bostock🔪Tests for slice and dice.🔪
+ test/treemap/dice-test.js (new)      | 42 +++++++++++++++++++++
+ test/treemap/slice-test.js (new)     | 42 +++++++++++++++++++++
+ test/treemap/sliceDice-test.js (new) | 71 ++++++++++++++++++++++++++++++++++++
+ 3 files changed, 155 insertions(+)
+
+☕ede80b6🔪2016-03-15 10:31:27 -0700🔪Mike Bostock🔪Add squarify tests.🔪
+ package.json                                       |  2 +-
+ src/hierarchy.js                                   | 25 --------
+ src/rebind.js (new)                                | 24 ++++++++
+ src/treemap/index.js                               |  7 ++-
+ .../flare-test.js}                                 |  2 +-
+ test/treemap/index-test.js (new)                   | 15 +++++
+ test/treemap/squarify-test.js (new)                | 69 ++++++++++++++++++++++
+ 7 files changed, 114 insertions(+), 30 deletions(-)
+
+☕6e7a4b0🔪2016-03-14 22:21:57 -0700🔪Mike Bostock🔪Test treemap against D3 3.x.🔪
+ package.json                     |    1 +
+ src/treemap/squarify.js          |    8 +-
+ test/data/flare-one.json (new)   | 2332 ++++++++++++++++++++++++++++++++++++++
+ test/data/flare-phi.json (new)   | 2332 ++++++++++++++++++++++++++++++++++++++
+ test/hierarchy-test.js           |    4 +-
+ test/treemap-flare-test.js (new) |   76 ++
+ 6 files changed, 4747 insertions(+), 6 deletions(-)
+
+☕141f5a6🔪2016-03-14 17:53:03 -0700🔪Mike Bostock🔪Checkpoint squarified treemaps.🔪
+ index.js                      |  1 +
+ src/treemap/squarify.js (new) | 64 +++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 65 insertions(+)
+
+☕5ccfd8e🔪2016-03-14 17:30:56 -0700🔪Mike Bostock🔪Fix grandchildren order.🔪
+ src/visit.js           |  6 +++---
+ test/hierarchy-test.js | 14 +++++++++-----
+ 2 files changed, 12 insertions(+), 8 deletions(-)
+
+☕5f2f356🔪2016-03-14 17:11:26 -0700🔪Mike Bostock🔪Checkpoint treemap.🔪
+ index.js                       |  4 ++++
+ src/treemap/dice.js (new)      | 12 ++++++++++++
+ src/treemap/index.js (new)     | 32 ++++++++++++++++++++++++++++++++
+ src/treemap/slice.js (new)     | 12 ++++++++++++
+ src/treemap/sliceDice.js (new) |  6 ++++++
+ 5 files changed, 66 insertions(+)
+
+☕c40b69a🔪2016-03-14 15:56:59 -0700🔪Mike Bostock🔪Don’t create an implicit root.🔪
+ src/hierarchy.js       |  28 ++++++-----
+ test/hierarchy-test.js | 131 +++++++++++++++++++++++++------------------------
+ 2 files changed, 82 insertions(+), 77 deletions(-)
+
+☕483a65d🔪2016-03-14 15:07:09 -0700🔪Mike Bostock🔪More hierarchy tests.🔪
+ test/hierarchy-test.js | 96 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 96 insertions(+)
+
+☕b8da40a🔪2016-03-14 15:01:34 -0700🔪Mike Bostock🔪Create children lazily.🔪
+ package.json           |  2 +-
+ src/hierarchy.js       | 20 ++++++++++----------
+ src/visit.js           |  6 +++---
+ test/hierarchy-test.js | 38 ++++++++++++++++++++------------------
+ 4 files changed, 34 insertions(+), 32 deletions(-)
+
+☕341ae4f🔪2016-03-14 13:47:38 -0700🔪Mike Bostock🔪Use id property rather than index by default.🔪Using index to link nodes is extremely brittle, so probably a bad idea.
+
+ src/hierarchy.js       |   6 +-
+ test/hierarchy-test.js | 189 +++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 140 insertions(+), 55 deletions(-)
+
+☕11f0228🔪2016-03-14 13:23:02 -0700🔪Mike Bostock🔪Rename size to value.🔪
+ test/data/flare.csv  |   2 +-
+ test/data/flare.json | 440 +++++++++++++++++++++++++--------------------------
+ 2 files changed, 221 insertions(+), 221 deletions(-)
+
+☕3114bf8🔪2016-03-14 13:17:34 -0700🔪Mike Bostock🔪Remove comment.🔪
+ src/hierarchy.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕c80dd08🔪2016-03-14 13:12:56 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕096183f🔪2016-03-14 12:49:42 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕e5ba5a4🔪2016-03-12 08:44:27 -0800🔪Mike Bostock🔪Detect cycles.🔪
+ src/hierarchy.js       | 13 +++++++++++++
+ test/hierarchy-test.js |  8 ++++++++
+ 2 files changed, 21 insertions(+)
+
+☕204f940🔪2016-03-11 17:13:04 -0800🔪Mike Bostock🔪Delete code that’s not ready.🔪
+ README.md                       |   4 -
+ index.js                        |   8 --
+ src/bundle.js (gone)            |  52 ---------
+ src/cluster.js (gone)           |  89 ---------------
+ src/enclosingCircle.js (gone)   | 112 -------------------
+ src/links.js (gone)             |   9 --
+ src/pack.js (gone)              | 194 ---------------------------------
+ src/partition.js (gone)         |  47 --------
+ src/tree.js (gone)              | 232 ----------------------------------------
+ src/treemap/dice.js (gone)      |  15 ---
+ src/treemap/index.js (gone)     | 148 -------------------------
+ src/treemap/slice.js (gone)     |  15 ---
+ src/treemap/sliceDice.js (gone) |   6 --
+ src/treemap/squarify.js (gone)  |  62 -----------
+ test/cluster-test.js (gone)     |  11 --
+ test/pack-test.js (gone)        |  12 ---
+ test/partition-test.js (gone)   |  40 -------
+ test/tree-test.js (gone)        |  47 --------
+ test/treemap-test.js (gone)     |  18 ----
+ 19 files changed, 1121 deletions(-)
+
+☕c04fc68🔪2016-03-11 17:09:38 -0800🔪Mike Bostock🔪Add tree2csv.🔪
+ bin/tree2csv (new +x)      |  30 ++++
+ package.json               |   7 +-
+ test/data/flare.csv (new)  | 253 ++++++++++++++++++++++++++++++
+ test/data/flare.json (new) | 380 +++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 669 insertions(+), 1 deletion(-)
+
+☕339060a🔪2016-03-11 16:54:24 -0800🔪Mike Bostock🔪Checkpoint hierarchy tests.🔪
+ src/hierarchy.js             | 20 ++++-----
+ test/hierarchy-test.js (new) | 99 ++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 109 insertions(+), 10 deletions(-)
+
+☕709ea5f🔪2016-03-11 16:54:06 -0800🔪Mike Bostock🔪Checkpoint ESLint fixes.🔪
+ src/treemap/dice.js      | 2 +-
+ src/treemap/index.js     | 2 +-
+ src/treemap/slice.js     | 2 +-
+ src/treemap/sliceDice.js | 5 ++++-
+ 4 files changed, 7 insertions(+), 4 deletions(-)
+
+☕b7a924a🔪2016-03-11 15:18:44 -0800🔪Mike Bostock🔪Basic hierarchy.🔪
+ index.js         |  16 +++++----
+ package.json     |   6 ++--
+ src/hierarchy.js | 101 +++++++++++++++++++++++++------------------------------
+ src/visit.js     |  35 ++++++++++++-------
+ 4 files changed, 80 insertions(+), 78 deletions(-)
+
+☕1d02740🔪2016-03-11 11:57:39 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ .eslintrc (new)                      |  13 +++
+ index.js                             |   2 +-
+ package.json                         |   3 +
+ src/hierarchy.js                     | 155 ++++++++++++++++++++---------------
+ src/treemap/dice.js (new)            |  15 ++++
+ src/{treemap.js => treemap/index.js} | 129 +++--------------------------
+ src/treemap/slice.js (new)           |  15 ++++
+ src/treemap/sliceDice.js (new)       |   3 +
+ src/treemap/squarify.js (new)        |  62 ++++++++++++++
+ 9 files changed, 215 insertions(+), 182 deletions(-)
+
+☕2f72451🔪2016-03-03 10:44:40 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ LICENSE                | 2 +-
+ package.json           | 2 +-
+ src/bundle.js          | 2 +-
+ src/cluster.js         | 4 ++--
+ src/enclosingCircle.js | 2 +-
+ src/hierarchy.js       | 6 +++---
+ src/links.js           | 2 +-
+ src/pack.js            | 4 ++--
+ src/partition.js       | 2 +-
+ src/tree.js            | 4 ++--
+ src/treemap.js         | 8 ++++----
+ src/visit.js           | 4 ++--
+ 12 files changed, 21 insertions(+), 21 deletions(-)
+
+☕f7b2683🔪2015-11-04 13:09:40 -0800🔪Mike Bostock🔪Fix tests.🔪
+ test/treemap-test.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕2cd1038🔪2015-11-03 21:11:24 -0800🔪Mike Bostock🔪Rename to childPadding.🔪
+ src/treemap.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕20048c9🔪2015-11-03 21:09:34 -0800🔪Mike Bostock🔪Fix #1 - sibling padding for treemaps.🔪I still need to implement asymmetric padding, and decide whether to retain the
+old treemap.padding property now that there are two types of padding.
+
+ src/hierarchy.js |  27 +++----
+ src/treemap.js   | 220 +++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 139 insertions(+), 108 deletions(-)
+
+☕801c1bd🔪2015-11-03 14:49:49 -0800🔪Mike Bostock🔪Use identity function for padNone.🔪Since we don’t modify rect.
+
+ src/treemap.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a74a0a9🔪2015-11-03 13:53:11 -0800🔪Mike Bostock🔪Rounding.🔪I don’t think we need to worry about overflow and underflow if we compute the
+layout first without rounding, and then carefully round the resulting values.
+The v3 implementation is complicated because it tries to round incrementally.
+
+ src/treemap.js | 27 ++++++++++++++++-----------
+ 1 file changed, 16 insertions(+), 11 deletions(-)
+
+☕5728ac5🔪2015-11-03 12:30:07 -0800🔪Mike Bostock🔪Restore modes.🔪
+ src/treemap.js | 151 +++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 88 insertions(+), 63 deletions(-)
+
+☕7621115🔪2015-11-03 12:14:47 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/treemap.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3ad3cc3🔪2015-11-03 12:09:55 -0800🔪Mike Bostock🔪Shorter.🔪
+ src/treemap.js | 14 +++++---------
+ 1 file changed, 5 insertions(+), 9 deletions(-)
+
+☕36907c0🔪2015-11-03 12:07:54 -0800🔪Mike Bostock🔪Better names.🔪
+ src/treemap.js | 40 ++++++++++++++++++++--------------------
+ 1 file changed, 20 insertions(+), 20 deletions(-)
+
+☕3dd5484🔪2015-11-03 12:03:29 -0800🔪Mike Bostock🔪Cleaner.🔪
+ src/treemap.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕04576ec🔪2015-11-03 11:51:19 -0800🔪Mike Bostock🔪Inline row layout.🔪
+ src/treemap.js | 123 ++++++++++++++++++++++-----------------------------------
+ 1 file changed, 47 insertions(+), 76 deletions(-)
+
+☕7957680🔪2015-11-03 10:42:57 -0800🔪Mike Bostock🔪Reorder.🔪
+ src/treemap.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕47eb9f9🔪2015-11-03 10:41:58 -0800🔪Mike Bostock🔪Optimize.🔪
+ src/treemap.js | 25 ++++++++++++-------------
+ 1 file changed, 12 insertions(+), 13 deletions(-)
+
+☕b754938🔪2015-11-03 10:32:06 -0800🔪Mike Bostock🔪Optimize.🔪
+ src/treemap.js | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
+
+☕3e2544c🔪2015-11-03 10:16:37 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/treemap.js | 30 ++++++++++--------------------
+ 1 file changed, 10 insertions(+), 20 deletions(-)
+
+☕5875de7🔪2015-11-03 10:06:18 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ src/treemap.js | 167 ++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 77 insertions(+), 90 deletions(-)
+
+☕4838280🔪2015-11-03 09:07:18 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ src/treemap.js | 265 ++++++++++++++++++++++++++++++---------------------------
+ 1 file changed, 140 insertions(+), 125 deletions(-)
+
+☕64772bd🔪2016-03-03 10:39:11 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 25 ++++++++-----------------
+ package.json |  2 +-
+ 2 files changed, 9 insertions(+), 18 deletions(-)
+
+☕60eb01f🔪2016-02-21 16:31:31 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1fe08de🔪2016-01-29 10:22:47 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕3e8430c🔪2015-11-11 17:47:46 -0800🔪Mike Bostock🔪Remove space.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2303730🔪2015-11-11 11:09:44 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕91e6b1e🔪2015-11-11 11:08:52 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕c78ea2b🔪2015-11-03 23:26:28 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕b429060🔪2015-09-15 10:34:30 -0700🔪Mike Bostock🔪Compute the exact enclosing circle.🔪
+ src/enclosingCircle.js (new) | 112 +++++++++++++++++++++++++++++++++++++++++++
+ src/pack.js                  |  31 +++---------
+ 2 files changed, 119 insertions(+), 24 deletions(-)
+
+☕269ac8c🔪2015-09-15 10:19:06 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/bundle.js | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
+
+☕5da9f5b🔪2015-09-10 09:40:29 -0700🔪Mike Bostock🔪Add bundle layout.🔪
+ index.js            |  2 ++
+ src/bundle.js (new) | 53 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 55 insertions(+)
+
+☕723452c🔪2015-07-15 14:27:32 -0700🔪Mike Bostock🔪Add pack layout.🔪
+ index.js                |   2 +
+ src/pack.js (new)       | 211 ++++++++++++++++++++++++++++++++++++++++++++++++
+ test/pack-test.js (new) |  12 +++
+ 3 files changed, 225 insertions(+)
+
+☕57fb9c9🔪2015-07-15 13:32:31 -0700🔪Mike Bostock🔪Add cluster layout.🔪
+ index.js                   |  2 ++
+ src/cluster.js (new)       | 89 ++++++++++++++++++++++++++++++++++++++++++++++
+ src/tree.js                |  4 +--
+ test/cluster-test.js (new) | 11 ++++++
+ 4 files changed, 104 insertions(+), 2 deletions(-)
+
+☕c7cc7b9🔪2015-07-15 13:23:48 -0700🔪Mike Bostock🔪Add partition layout.🔪
+ index.js                     |  2 ++
+ src/partition.js (new)       | 47 ++++++++++++++++++++++++++++++++++++++++++++
+ test/partition-test.js (new) | 40 +++++++++++++++++++++++++++++++++++++
+ 3 files changed, 89 insertions(+)
+
+☕0e8f171🔪2015-07-15 13:13:01 -0700🔪Mike Bostock🔪Add tree layout.🔪
+ index.js                |   2 +
+ src/hierarchy.js        |   1 +
+ src/tree.js (new)       | 232 ++++++++++++++++++++++++++++++++++++++++++++++++
+ src/treemap.js          |  10 +--
+ test/tree-test.js (new) |  47 ++++++++++
+ test/treemap-test.js    |   4 +
+ 6 files changed, 291 insertions(+), 5 deletions(-)
+
+☕ad2253d🔪2015-07-15 11:01:24 -0700🔪Mike Bostock🔪Update description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14ce8b8🔪2015-07-15 11:00:53 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                   |   5 +
+ .npmignore (new)                   |   3 +
+ LICENSE (new)                      |  27 +++++
+ README.md (new)                    |  15 +++
+ d3-hierarchy.sublime-project (new) |  13 ++
+ index.js (new)                     |   7 ++
+ package.json (new)                 |  36 ++++++
+ src/hierarchy.js (new)             | 108 +++++++++++++++++
+ src/links.js (new)                 |   9 ++
+ src/treemap.js (new)               | 236 +++++++++++++++++++++++++++++++++++++
+ src/visit.js (new)                 |  26 ++++
+ test/treemap-test.js (new)         |  13 ++
+ 12 files changed, 498 insertions(+)

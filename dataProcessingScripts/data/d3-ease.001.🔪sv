@@ -1,0 +1,1037 @@
+☕a091968🔪2021-06-05 11:33:12 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a4e7824🔪2021-06-05 11:33:01 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕37519a0🔪2021-06-04 16:02:30 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕616e796🔪2021-06-05 01:01:20 +0200🔪Philippe Rivière🔪Adopt type=module (#30)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* update dependencies
+
+* strictEqual, deepStrictEqual
+(@aulonm)
+note that 0 !=== -0, so 2 tests have been changed to use Math.abs
+
+* add eslint.json
+
+* remove Sublime project
+
+* update dependencies
+
+* cleaner imports
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    8 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |    2 +-
+ README.md                           |   30 +-
+ d3-ease.sublime-project (gone)      |   17 -
+ package.json                        |   43 +-
+ test/.eslintrc.json (new)           |   10 +
+ test/asserts.js (new)               |    5 +
+ test/back-test.js                   |  114 ++-
+ test/bounce-test.js                 |  114 ++-
+ test/circle-test.js                 |  114 ++-
+ test/cubic-test.js                  |  114 ++-
+ test/elastic-test.js                |  189 +++--
+ test/exp-test.js                    |  114 ++-
+ test/generic.js                     |   16 +-
+ test/inDelta.js (gone)              |   10 -
+ test/linear-test.js                 |   39 +-
+ test/poly-test.js                   |  191 +++--
+ test/quad-test.js                   |  114 ++-
+ test/sin-test.js                    |  114 ++-
+ yarn.lock                           | 1455 +++++++++++++++++++----------------
+ 22 files changed, 1466 insertions(+), 1395 deletions(-)
+
+☕1e6f392🔪2020-08-23 16:06:12 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕45efb1c🔪2020-08-19 12:52:23 -0700🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d24c5f🔪2020-07-22 18:02:44 +0200🔪Philippe Rivière🔪exact start and end at 0 and 1 for elastic and exp easings🔪fixes #27
+
+ src/elastic.js       | 10 ++++---
+ src/exp.js           |  8 +++---
+ src/math.js (new)    |  4 +++
+ test/elastic-test.js | 74 ++++++++++++++++++++++++++--------------------------
+ test/exp-test.js     | 26 +++++++++---------
+ 5 files changed, 65 insertions(+), 57 deletions(-)
+
+☕49ff665🔪2020-07-22 17:37:17 +0200🔪Philippe Rivière🔪fix back and sin so they return exactly 0 and 1 at the extremities🔪partly addresses #27
+
+(a fix for elastic and exp requires a change to *all* the corresponding tests)
+
+ src/back.js         |  4 ++--
+ src/sin.js          |  2 +-
+ test/back-test.js   | 12 ++++++------
+ test/bounce-test.js | 12 ++++++------
+ test/circle-test.js | 12 ++++++------
+ test/cubic-test.js  | 12 ++++++------
+ test/linear-test.js |  4 ++--
+ test/poly-test.js   | 12 ++++++------
+ test/quad-test.js   |  4 ++--
+ test/sin-test.js    |  4 ++--
+ 10 files changed, 39 insertions(+), 39 deletions(-)
+
+☕ca9d9bb🔪2020-07-24 16:37:13 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕a8f9ffb🔪2020-07-22 16:39:00 +0200🔪Philippe Rivière🔪new github design: images are now 838px wide🔪
+ README.md            |  56 +++++++++++++++++++++++++--------------------------
+ img/backIn.png       | Bin 13607 -> 32386 bytes
+ img/backInOut.png    | Bin 14131 -> 36055 bytes
+ img/backOut.png      | Bin 13970 -> 32972 bytes
+ img/bounceIn.png     | Bin 8327 -> 4425 bytes
+ img/bounceInOut.png  | Bin 12042 -> 4624 bytes
+ img/bounceOut.png    | Bin 11918 -> 4660 bytes
+ img/circleIn.png     | Bin 7389 -> 3570 bytes
+ img/circleInOut.png  | Bin 7823 -> 3823 bytes
+ img/circleOut.png    | Bin 7662 -> 3691 bytes
+ img/cubicIn.png      | Bin 7456 -> 3628 bytes
+ img/cubicInOut.png   | Bin 7813 -> 3810 bytes
+ img/cubicOut.png     | Bin 7656 -> 3693 bytes
+ img/elasticIn.png    | Bin 15279 -> 36931 bytes
+ img/elasticInOut.png | Bin 15182 -> 38324 bytes
+ img/elasticOut.png   | Bin 15640 -> 37521 bytes
+ img/expIn.png        | Bin 7191 -> 3655 bytes
+ img/expInOut.png     | Bin 7550 -> 3789 bytes
+ img/expOut.png       | Bin 7358 -> 3804 bytes
+ img/linear.png       | Bin 6572 -> 4351 bytes
+ img/polyIn.png       | Bin 13868 -> 33649 bytes
+ img/polyInOut.png    | Bin 14455 -> 35145 bytes
+ img/polyOut.png      | Bin 14277 -> 34810 bytes
+ img/quadIn.png       | Bin 7475 -> 3567 bytes
+ img/quadInOut.png    | Bin 7910 -> 3839 bytes
+ img/quadOut.png      | Bin 7684 -> 3636 bytes
+ img/sinIn.png        | Bin 7194 -> 3457 bytes
+ img/sinInOut.png     | Bin 7751 -> 3711 bytes
+ img/sinOut.png       | Bin 7457 -> 3519 bytes
+ 29 files changed, 28 insertions(+), 28 deletions(-)
+
+☕7832640🔪2020-07-10 18:06:31 +0200🔪Philippe Rivière🔪link to v2🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕88da1ca🔪2020-06-09 18:18:53 +0200🔪Philippe Rivière🔪oops (elasticBackIn should have been backIn, etc)🔪
+ img/backIn.png    | Bin 14592 -> 13607 bytes
+ img/backInOut.png | Bin 15077 -> 14131 bytes
+ img/backOut.png   | Bin 14927 -> 13970 bytes
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+☕f59ad61🔪2020-06-09 15:54:23 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/linear.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕d61f095🔪2020-06-09 15:38:33 +0200🔪Philippe Rivière🔪images that match the current API generated by https://observablehq.com/d/a1146016662ae4f3 closes https://github.com/d3/d3-ease/issues/20🔪
+ img/backIn.png       | Bin 32202 -> 14592 bytes
+ img/backInOut.png    | Bin 34648 -> 15077 bytes
+ img/backOut.png      | Bin 32671 -> 14927 bytes
+ img/elasticIn.png    | Bin 34520 -> 15279 bytes
+ img/elasticInOut.png | Bin 35622 -> 15182 bytes
+ img/elasticOut.png   | Bin 34842 -> 15640 bytes
+ img/polyIn.png       | Bin 30981 -> 13868 bytes
+ img/polyInOut.png    | Bin 33382 -> 14455 bytes
+ img/polyOut.png      | Bin 31771 -> 14277 bytes
+ 9 files changed, 0 insertions(+), 0 deletions(-)
+
+☕38cbfb1🔪2019-11-16 10:03:45 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2dae75a🔪2019-11-16 10:02:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 64 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 32 insertions(+), 32 deletions(-)
+
+☕37bac4d🔪2019-09-27 07:58:24 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕d0ce89d🔪2019-11-02 08:23:36 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕7b2f305🔪2019-08-09 17:39:02 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 875 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 518 insertions(+), 363 deletions(-)
+
+☕f5fb628🔪2019-08-09 16:05:06 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕cd4804b🔪2019-08-09 15:18:48 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/index.js | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕91ff7be🔪2018-11-09 16:58:26 +0100🔪Steven Lamarr Reynolds🔪fixed typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f51657e🔪2018-08-24 14:14:50 -0700🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed97820🔪2018-08-24 14:02:00 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕75f7883🔪2018-08-24 13:50:24 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             |  9 +++++----
+ rollup.config.js         |  6 +++---
+ index.js => src/index.js | 20 ++++++++++----------
+ 3 files changed, 18 insertions(+), 17 deletions(-)
+
+☕3d0e110🔪2018-08-24 13:50:17 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-ease.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8ce9bdc🔪2018-08-24 13:50:15 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕46d4810🔪2018-08-24 11:25:39 -0700🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b8edeeb🔪2018-08-24 11:25:37 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)        |   8 -
+ .eslintrc.json (new)    |  15 +
+ .gitignore              |   2 +-
+ .npmignore              |   2 +-
+ d3-ease.sublime-project |  16 +-
+ package.json            |  19 +-
+ rollup.config.js (new)  |  36 ++
+ yarn.lock (new)         | 935 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1007 insertions(+), 26 deletions(-)
+
+☕f1e8d63🔪2017-03-10 10:06:49 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1abe56a🔪2017-03-10 10:06:12 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕3a01821🔪2016-11-22 16:30:53 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e159938🔪2016-11-22 16:30:49 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕b76b002🔪2016-08-12 17:32:09 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 82 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 41 insertions(+), 41 deletions(-)
+
+☕c80afea🔪2016-08-02 14:48:11 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f4690d2🔪2016-08-02 14:48:10 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕be82a4f🔪2016-06-14 15:51:15 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c69fedf🔪2016-06-14 15:51:10 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕cd8620c🔪2016-06-14 09:23:33 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕5b85ad8🔪2016-06-13 16:18:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕22cd382🔪2016-06-07 16:55:34 -0700🔪Mike Bostock🔪0.8.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6b7d682🔪2016-06-07 16:55:25 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  4 ----
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 13 deletions(-)
+
+☕afa441a🔪2016-05-18 09:53:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9267d65🔪2016-05-14 21:21:55 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕ce984cd🔪2016-03-15 10:23:01 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0c95579🔪2016-03-14 13:13:30 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕1114ccb🔪2016-03-14 12:50:58 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕5ed5191🔪2016-03-06 15:12:28 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b34ae75🔪2016-03-04 09:52:32 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕99a4ec1🔪2016-03-01 14:18:55 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 4 ++++
+ package.json | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+☕8aacfa3🔪2016-02-24 16:21:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f62ead2🔪2016-02-24 16:08:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕9c2f21f🔪2016-02-21 16:31:41 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b9bc817🔪2016-02-04 09:48:26 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8ddb9de🔪2016-02-04 09:40:43 -0800🔪Mike Bostock🔪Revert ease interface.🔪Related #13.
+
+ README.md            | 102 ++++++++++++++++----------------
+ src/back.js          |  51 +++++++++-------
+ src/bounce.js        |  24 +++-----
+ src/circle.js        |  24 +++-----
+ src/cubic.js         |  24 +++-----
+ src/elastic.js       |  58 ++++++++++---------
+ src/exp.js           |  24 +++-----
+ src/linear.js        |   8 +--
+ src/poly.js          |  51 +++++++++-------
+ src/quad.js          |  24 +++-----
+ src/sin.js           |  24 +++-----
+ test/back-test.js    |  90 ++++++++++++++---------------
+ test/bounce-test.js  |  90 ++++++++++++++---------------
+ test/circle-test.js  |  90 ++++++++++++++---------------
+ test/cubic-test.js   |  90 ++++++++++++++---------------
+ test/elastic-test.js | 160 +++++++++++++++++++++++++--------------------------
+ test/exp-test.js     |  90 ++++++++++++++---------------
+ test/generic.js      |  12 ++--
+ test/linear-test.js  |  30 +++++-----
+ test/poly-test.js    | 160 +++++++++++++++++++++++++--------------------------
+ test/quad-test.js    |  90 ++++++++++++++---------------
+ test/sin-test.js     |  90 ++++++++++++++---------------
+ 22 files changed, 693 insertions(+), 713 deletions(-)
+
+☕30dda36🔪2016-02-04 09:23:46 -0800🔪Mike Bostock🔪Default easing modes.🔪Is it easeElasticIn or easeElasticOut? I can never remember. And it’s tedious to
+type “InOut” when I want something simple like linear easing. This commit
+removes easeLinearIn, easeLinearOut and easeLinearInOut; they’re all the same,
+so it’s just easeLinear now. The new aliases are as follows:
+
+    easeQuad    ↦ easeQuadInOut
+    easeCubic   ↦ easeCubicInOut
+    easePoly    ↦ easePolyInOut
+    easeSin     ↦ easeSinInOut
+    easeExp     ↦ easeExpInOut
+    easeCircle  ↦ easeCircleInOut
+    easeBounce  ↦ easeBounceOut
+    easeBack    ↦ easeBackInOut
+    easeElastic ↦ easeElasticOut
+
+Thus, the default is typically in-out, except bounce and elastic which use out.
+
+ README.md                        |  55 ++++++++++++++++++++++-----------------
+ img/{linearIn.png => linear.png} | Bin
+ index.js                         |  13 ++++++---
+ src/linear.js                    |   7 +----
+ test/back-test.js                |   5 ++++
+ test/bounce-test.js              |   5 ++++
+ test/circle-test.js              |   5 ++++
+ test/cubic-test.js               |   5 ++++
+ test/elastic-test.js             |   5 ++++
+ test/exp-test.js                 |   5 ++++
+ test/linear-test.js              |  40 +++++++++++-----------------
+ test/poly-test.js                |   5 ++++
+ test/quad-test.js                |   5 ++++
+ test/sin-test.js                 |   5 ++++
+ 14 files changed, 102 insertions(+), 58 deletions(-)
+
+☕ae7fad6🔪2016-02-01 22:10:50 -0800🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e50ea78🔪2016-02-01 11:53:59 -0800🔪Mike Bostock🔪Shorten references.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕a21522f🔪2016-02-01 11:51:46 -0800🔪Mike Bostock🔪Update postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ba03da🔪2016-02-01 11:45:15 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕94d1823🔪2016-02-01 11:44:00 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+☕281064e🔪2016-02-01 11:41:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f896d8a🔪2016-02-01 11:40:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a9b8427🔪2016-02-01 11:39:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕de86ec7🔪2016-02-01 11:39:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b9d8f65🔪2016-02-01 11:38:08 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕39ef61f🔪2016-02-01 11:36:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕22340e1🔪2016-02-01 11:36:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f0ea8b5🔪2016-01-30 07:14:24 -0800🔪Mike Bostock🔪Fox #13 - adopt an easing interface.🔪Rather than expose bare easing functions, this module now exports instances of
+an easing interface: object.ease(t). For example:
+
+    var te = d3.easeCubicIn(t); // BEFORE
+    var te = d3.easeCubicIn.ease(t); // AFTER
+
+The primary motivation of this change is to allow D3 transitions to differ-
+entiate between an easing type and a function that returns an easing type, as
+when the easing type should be determined separately for each selected element.
+Also, it means you can use a class to implement a configurable easing type, if
+you want, rather than a closure.
+
+This commit also changes how optional parameters are specified for configurable
+easing types. Rather than binding optional arguments to the easing function,
+create a new instance using method chaining. For example, to create a cubic
+easing instance using generic polynomial easing:
+
+    var cubicIn = d3.easeBind(d3.easePolyIn, 3); // BEFORE
+    var cubicIn = d3.easePolyIn.exponent(3); // AFTER
+
+Equivalently, to call the function directly:
+
+    var te = d3.easePolyIn(t, 3); // BEFORE
+    var te = d3.easePolyIn.exponent(3).ease(t); // AFTER
+
+By giving the parameters explicit names, usage is now self-documenting! Also, we
+can eliminate d3.easeBind and easing functions are slightly faster.
+
+ README.md                | 139 +++++++++++++++++++---------------
+ index.js                 |   4 -
+ package.json             |   2 +-
+ src/back.js              |  38 +++++++---
+ src/bind.js (gone)       |  31 --------
+ src/bounce.js            |  24 ++++--
+ src/circle.js            |  24 +++---
+ src/cubic.js             |  24 +++---
+ src/elastic.js           |  54 ++++++++-----
+ src/exp.js               |  24 +++---
+ src/linear.js            |   8 +-
+ src/poly.js              |  38 +++++++---
+ src/quad.js              |  24 +++---
+ src/sin.js               |  24 +++---
+ test/back-test.js        |  90 +++++++++++-----------
+ test/bind-test.js (gone) |  29 -------
+ test/bounce-test.js      |  90 +++++++++++-----------
+ test/circle-test.js      |  90 +++++++++++-----------
+ test/cubic-test.js       |  90 +++++++++++-----------
+ test/elastic-test.js     | 180 ++++++++++++++++++++------------------------
+ test/exp-test.js         |  90 +++++++++++-----------
+ test/generic.js          |  16 ++--
+ test/linear-test.js      |  30 ++++----
+ test/poly-test.js        | 192 ++++++++++++++++++++---------------------------
+ test/quad-test.js        |  90 +++++++++++-----------
+ test/sin-test.js         |  90 +++++++++++-----------
+ 26 files changed, 763 insertions(+), 772 deletions(-)
+
+☕60e9d37🔪2016-01-29 10:20:30 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕3fa1022🔪2016-01-20 17:48:16 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/back.js     |  6 +++---
+ src/bind.js     |  2 +-
+ src/bounce.js   |  6 +++---
+ src/circle.js   |  6 +++---
+ src/cubic.js    |  6 +++---
+ src/elastic.js  |  6 +++---
+ src/exp.js      |  6 +++---
+ src/linear.js   |  2 +-
+ src/poly.js     |  6 +++---
+ src/quad.js     |  6 +++---
+ src/sin.js      |  6 +++---
+ 13 files changed, 42 insertions(+), 30 deletions(-)
+
+☕2f074b7🔪2016-01-07 13:09:52 -0800🔪Mike Bostock🔪Fix anchors.🔪
+ README.md | 62 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 31 insertions(+), 31 deletions(-)
+
+☕0a34284🔪2016-01-07 13:07:55 -0800🔪Mike Bostock🔪Fix easeBind export.🔪
+ index.js          |  4 +++-
+ package.json      |  2 +-
+ test/bind-test.js | 30 +++++++++++++++---------------
+ test/poly-test.js |  4 ++--
+ 4 files changed, 21 insertions(+), 19 deletions(-)
+
+☕4b73263🔪2016-01-07 13:04:48 -0800🔪Mike Bostock🔪Prefix symbols with “ease”.🔪
+ README.md            | 116 +++++++++++++++---------------
+ index.js             |  70 +++++++++++++++---
+ package.json         |   2 +-
+ test/back-test.js    |  94 ++++++++++++------------
+ test/bind-test.js    |  36 +++++-----
+ test/bounce-test.js  |  94 ++++++++++++------------
+ test/circle-test.js  |  94 ++++++++++++------------
+ test/cubic-test.js   |  94 ++++++++++++------------
+ test/elastic-test.js | 186 ++++++++++++++++++++++++------------------------
+ test/exp-test.js     |  94 ++++++++++++------------
+ test/linear-test.js  |  38 +++++-----
+ test/poly-test.js    | 196 +++++++++++++++++++++++++--------------------------
+ test/quad-test.js    |  94 ++++++++++++------------
+ test/sin-test.js     |  94 ++++++++++++------------
+ 14 files changed, 676 insertions(+), 626 deletions(-)
+
+☕7fbe308🔪2016-01-05 10:28:19 -0800🔪Mike Bostock🔪Fix link.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕50747fa🔪2016-01-05 10:26:17 -0800🔪Mike Bostock🔪Fix #12 - remove non-in aliases.🔪I can’t think of a good reason to have the alias default to “in” when in many
+cases you want “in-out”.
+
+ README.md            | 34 ++++++++++++----------------------
+ index.js             | 20 ++++++++++----------
+ package.json         |  2 +-
+ test/back-test.js    |  9 ++-------
+ test/bind-test.js    | 22 +++++++++++-----------
+ test/bounce-test.js  |  9 ++-------
+ test/circle-test.js  |  9 ++-------
+ test/cubic-test.js   |  9 ++-------
+ test/elastic-test.js |  9 ++-------
+ test/exp-test.js     |  9 ++-------
+ test/linear-test.js  |  5 -----
+ test/poly-test.js    |  9 ++-------
+ test/quad-test.js    |  9 ++-------
+ test/sin-test.js     |  9 ++-------
+ 14 files changed, 52 insertions(+), 112 deletions(-)
+
+☕fcdc3f2🔪2015-12-18 15:52:40 -0800🔪Mike Bostock🔪Rename curry to bind.🔪
+ src/bind.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕1f5e080🔪2015-12-18 13:27:41 -0800🔪Mike Bostock🔪Fix image name.🔪
+ img/{linear.png => linearIn.png} | Bin
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕c56f8cb🔪2015-12-18 13:26:09 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                  | 164 ++++++++++++++++++++++-----------------------
+ img/backIn.png (new)       | Bin 0 -> 32202 bytes
+ img/backInOut.png (new)    | Bin 0 -> 34648 bytes
+ img/backOut.png (new)      | Bin 0 -> 32671 bytes
+ img/bounceIn.png (new)     | Bin 0 -> 8327 bytes
+ img/bounceInOut.png (new)  | Bin 0 -> 12042 bytes
+ img/bounceOut.png (new)    | Bin 0 -> 11918 bytes
+ img/circleIn.png (new)     | Bin 0 -> 7389 bytes
+ img/circleInOut.png (new)  | Bin 0 -> 7823 bytes
+ img/circleOut.png (new)    | Bin 0 -> 7662 bytes
+ img/cubicIn.png (new)      | Bin 0 -> 7456 bytes
+ img/cubicInOut.png (new)   | Bin 0 -> 7813 bytes
+ img/cubicOut.png (new)     | Bin 0 -> 7656 bytes
+ img/elasticIn.png (new)    | Bin 0 -> 34520 bytes
+ img/elasticInOut.png (new) | Bin 0 -> 35622 bytes
+ img/elasticOut.png (new)   | Bin 0 -> 34842 bytes
+ img/expIn.png (new)        | Bin 0 -> 7191 bytes
+ img/expInOut.png (new)     | Bin 0 -> 7550 bytes
+ img/expOut.png (new)       | Bin 0 -> 7358 bytes
+ img/linear.png (new)       | Bin 0 -> 6572 bytes
+ img/polyIn.png (new)       | Bin 0 -> 30981 bytes
+ img/polyInOut.png (new)    | Bin 0 -> 33382 bytes
+ img/polyOut.png (new)      | Bin 0 -> 31771 bytes
+ img/quadIn.png (new)       | Bin 0 -> 7475 bytes
+ img/quadInOut.png (new)    | Bin 0 -> 7910 bytes
+ img/quadOut.png (new)      | Bin 0 -> 7684 bytes
+ img/sinIn.png (new)        | Bin 0 -> 7194 bytes
+ img/sinInOut.png (new)     | Bin 0 -> 7751 bytes
+ img/sinOut.png (new)       | Bin 0 -> 7457 bytes
+ package.json               |   2 +-
+ 30 files changed, 81 insertions(+), 85 deletions(-)
+
+☕e9ae075🔪2015-11-30 09:10:27 -0800🔪Mike Bostock🔪Fix #11 - rename ease to bind.🔪
+ README.md                |  6 +++---
+ index.js                 |  2 +-
+ package.json             |  2 +-
+ src/{ease.js => bind.js} |  0
+ test/bind-test.js (new)  | 29 +++++++++++++++++++++++++++++
+ test/ease-test.js (gone) | 29 -----------------------------
+ test/poly-test.js        |  4 ++--
+ 7 files changed, 36 insertions(+), 36 deletions(-)
+
+☕de9f559🔪2015-11-25 20:07:15 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a0bef0a🔪2015-11-25 10:27:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1888aa🔪2015-11-25 10:25:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕eb56c3c🔪2015-11-25 10:24:30 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕c6eaaf5🔪2015-11-25 10:24:08 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕94ccfc0🔪2015-11-25 10:23:24 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕10c71f5🔪2015-11-25 10:22:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c2d9b3d🔪2015-11-25 10:22:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7df7b30🔪2015-11-25 10:22:34 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕48b8d1b🔪2015-11-24 22:37:27 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3a70b41🔪2015-11-24 22:28:14 -0800🔪Mike Bostock🔪Add parameterized images.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕0885bcb🔪2015-11-24 22:19:41 -0800🔪Mike Bostock🔪Fix elasticOut, elasticInOut, and backOut.🔪These were not consistent with their “in” counterparts. To verify that all “out”
+and “in-out” easing functions are consistent, we now test against generic
+implementations based on the “in” implementation.
+
+ README.md             |  2 +-
+ src/back.js           |  2 +-
+ src/elastic.js        | 10 +++++-----
+ test/back-test.js     | 49 ++++++++++++++++++++++++++-----------------------
+ test/bounce-test.js   | 49 ++++++++++++++++++++++++++-----------------------
+ test/circle-test.js   | 49 ++++++++++++++++++++++++++-----------------------
+ test/cubic-test.js    | 49 ++++++++++++++++++++++++++-----------------------
+ test/elastic-test.js  | 49 ++++++++++++++++++++++++++-----------------------
+ test/exp-test.js      | 49 ++++++++++++++++++++++++++-----------------------
+ test/generic.js (new) | 11 +++++++++++
+ test/poly-test.js     | 49 ++++++++++++++++++++++++++-----------------------
+ test/quad-test.js     | 49 ++++++++++++++++++++++++++-----------------------
+ test/sin-test.js      | 49 ++++++++++++++++++++++++++-----------------------
+ 13 files changed, 252 insertions(+), 214 deletions(-)
+
+☕953c919🔪2015-11-24 21:17:41 -0800🔪Mike Bostock🔪Fix #9 - parameter documentation.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2aa0b5d🔪2015-11-24 17:08:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8821df1🔪2015-11-24 17:08:30 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e070131🔪2015-11-24 17:04:42 -0800🔪Mike Bostock🔪Fix links in README.🔪
+ README.md | 56 ++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 28 insertions(+), 28 deletions(-)
+
+☕4a7590e🔪2015-11-24 16:46:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b35cc0d🔪2015-11-24 16:46:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3c34746🔪2015-11-24 16:46:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3c55320🔪2015-11-24 16:44:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕9ea75f7🔪2015-11-24 16:39:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 56 ++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 28 insertions(+), 28 deletions(-)
+
+☕5f85dda🔪2015-11-24 16:27:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕6a7ed98🔪2015-11-24 16:10:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕47aea0f🔪2015-11-24 16:10:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e94657c🔪2015-11-24 16:10:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕424d7a7🔪2015-11-24 16:10:02 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕e79cafe🔪2015-11-24 16:06:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕58e624a🔪2015-11-24 16:06:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f66134d🔪2015-11-24 16:06:00 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 36 ++++++++++++++++++++++++++----------
+ 1 file changed, 26 insertions(+), 10 deletions(-)
+
+☕12733ba🔪2015-11-24 16:01:53 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 ++++++++++++++++++++------------
+ 1 file changed, 20 insertions(+), 12 deletions(-)
+
+☕505097d🔪2015-11-24 15:58:50 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 36 ++++++++++++++++++++++++++----------
+ 1 file changed, 26 insertions(+), 10 deletions(-)
+
+☕26b55a2🔪2015-11-24 15:55:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕0ac5bb5🔪2015-11-24 15:54:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕dcaa640🔪2015-11-24 15:53:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 52 +++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 33 insertions(+), 19 deletions(-)
+
+☕3ebcac1🔪2015-11-24 15:47:16 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md            |  64 +++++++++--------
+ index.js             |  10 +++
+ src/back.js          |  23 +++---
+ src/ease.js          |  84 +++++++---------------
+ src/elastic.js       |  37 ++++------
+ src/number.js (gone) |   3 -
+ src/poly.js          |  23 +++---
+ test/back-test.js    | 102 +++++++++++++++------------
+ test/bounce-test.js  | 102 +++++++++++++++------------
+ test/circle-test.js  | 102 +++++++++++++++------------
+ test/cubic-test.js   | 102 +++++++++++++++------------
+ test/ease-test.js    |  27 +++++--
+ test/elastic-test.js | 195 +++++++++++++++++++++++++++++++--------------------
+ test/exp-test.js     | 102 +++++++++++++++------------
+ test/linear-test.js  |  46 ++++++------
+ test/poly-test.js    | 194 +++++++++++++++++++++++++++++++++-----------------
+ test/quad-test.js    | 102 +++++++++++++++------------
+ test/sin-test.js     | 102 +++++++++++++++------------
+ 18 files changed, 797 insertions(+), 623 deletions(-)
+
+☕6e8cfca🔪2015-11-11 11:05:55 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕428c621🔪2015-11-04 13:22:03 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕51cda39🔪2015-11-03 23:22:53 -0800🔪Mike Bostock🔪Update d3-bundler.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕e5257ee🔪2015-10-14 22:03:33 -0700🔪Mike Bostock🔪Remove Map polyfill. Fixes #4 #5.🔪
+ package.json |  4 +--
+ src/ease.js  | 90 +++++++++++++++++++++++++++++++-----------------------------
+ 2 files changed, 48 insertions(+), 46 deletions(-)
+
+☕3d84128🔪2015-07-01 11:30:06 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕35fb025🔪2015-06-16 14:53:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++++++---------
+ 1 file changed, 13 insertions(+), 9 deletions(-)
+
+☕9b25aa6🔪2015-06-16 13:46:39 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕4df5f80🔪2015-06-10 13:41:13 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                       | 2 +-
+ index.sublime-project => d3-ease.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕c6466cf🔪2015-06-07 14:18:20 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6e039db🔪2015-06-07 14:11:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕96a06c5🔪2015-06-07 14:07:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7327d3🔪2015-06-07 14:05:34 -0700🔪Mike Bostock🔪Smaller, linked thumbnails.🔪
+ README.md | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕0f2ddca🔪2015-06-07 14:04:48 -0700🔪Mike Bostock🔪Smaller, linked thumbnails.🔪
+ README.md | 54 +++++++++++++++++++++++++++---------------------------
+ 1 file changed, 27 insertions(+), 27 deletions(-)
+
+☕05eb517🔪2015-06-07 14:01:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕73f086d🔪2015-06-07 13:59:26 -0700🔪Mike Bostock🔪Smaller, linked thumbnails.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕b00e3cf🔪2015-06-07 13:53:12 -0700🔪Mike Bostock🔪Add thumbnails.🔪
+ README.md | 46 ++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 40 insertions(+), 6 deletions(-)
+
+☕7c51fd6🔪2015-06-07 13:04:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7875585🔪2015-06-07 09:17:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 ++++++++++++++++++++----------
+ 1 file changed, 20 insertions(+), 10 deletions(-)
+
+☕b3242a5🔪2015-06-07 09:16:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕88409f5🔪2015-06-07 09:15:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 40 ++++++++++++++++++++--------------------
+ 1 file changed, 20 insertions(+), 20 deletions(-)
+
+☕52c8903🔪2015-06-07 09:15:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 40 ++++++++++++++++++++++++++++++----------
+ 1 file changed, 30 insertions(+), 10 deletions(-)
+
+☕ce34e0c🔪2015-06-07 09:13:28 -0700🔪Mike Bostock🔪Use named export.🔪
+ README.md            | 15 +++++++++----
+ index.js             | 62 +++-------------------------------------------------
+ package.json         |  2 +-
+ src/ease.js (new)    | 61 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ test/back-test.js    |  2 +-
+ test/bounce-test.js  |  2 +-
+ test/circle-test.js  |  2 +-
+ test/cubic-test.js   |  2 +-
+ test/ease-test.js    |  2 +-
+ test/elastic-test.js |  2 +-
+ test/exp-test.js     |  2 +-
+ test/linear-test.js  |  2 +-
+ test/poly-test.js    |  2 +-
+ test/quad-test.js    |  2 +-
+ test/sin-test.js     |  2 +-
+ 15 files changed, 87 insertions(+), 75 deletions(-)
+
+☕245a282🔪2015-06-07 09:09:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕bf2e3d7🔪2015-06-07 09:08:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕207d475🔪2015-06-07 09:08:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕d2ec7a5🔪2015-06-07 09:08:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕a67ad14🔪2015-06-07 09:07:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 53 +++++++++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 41 insertions(+), 12 deletions(-)
+
+☕38e0948🔪2015-06-07 09:03:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e2d4d99🔪2015-06-07 09:03:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕33342d0🔪2015-06-07 09:03:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0a4927c🔪2015-06-07 09:01:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕05ab624🔪2015-06-07 09:01:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕eb84daa🔪2015-06-07 09:00:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕2524802🔪2015-06-07 09:00:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕febb955🔪2015-06-07 08:59:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++----------
+ 1 file changed, 6 insertions(+), 10 deletions(-)
+
+☕220920f🔪2015-06-07 08:54:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+
+☕fcdfaa9🔪2015-06-04 17:58:08 -0700🔪Mike Bostock🔪Update package.json.🔪
+ package.json | 20 +++++++++++++++++---
+ 1 file changed, 17 insertions(+), 3 deletions(-)
+
+☕b820678🔪2015-06-03 14:48:52 -0700🔪Mike Bostock🔪Consolidate duplicate license.🔪
+ LICENSE | 38 ++++----------------------------------
+ 1 file changed, 4 insertions(+), 34 deletions(-)
+
+☕e0fe506🔪2015-06-03 10:07:05 -0700🔪Mike Bostock🔪Rename in-delta to inDelta.🔪
+ test/back-test.js                | 2 +-
+ test/bounce-test.js              | 2 +-
+ test/circle-test.js              | 2 +-
+ test/cubic-test.js               | 2 +-
+ test/elastic-test.js             | 2 +-
+ test/exp-test.js                 | 2 +-
+ test/{in-delta.js => inDelta.js} | 0
+ test/linear-test.js              | 2 +-
+ test/poly-test.js                | 2 +-
+ test/quad-test.js                | 2 +-
+ test/sin-test.js                 | 2 +-
+ 11 files changed, 10 insertions(+), 10 deletions(-)
+
+☕5c2d3ca🔪2015-06-02 07:54:53 -0700🔪Mike Bostock🔪Put images at bottom.🔪
+ README.md | 20 +++++++++-----------
+ 1 file changed, 9 insertions(+), 11 deletions(-)
+
+☕72c8275🔪2015-06-01 20:55:54 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕23fcfbe🔪2015-06-01 20:55:00 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+☕1797df6🔪2015-06-01 17:46:00 -0700🔪Mike Bostock🔪Prune published package.🔪
+ .npmignore   | 2 ++
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+☕c08e398🔪2015-06-01 17:42:22 -0700🔪Mike Bostock🔪Add link to Robert Penner.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5f54768🔪2015-06-01 17:35:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕80c481c🔪2015-06-01 17:27:08 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)            |   5 +++
+ .npmignore (new)            |   1 +
+ LICENSE (new)               |  58 +++++++++++++++++++++++++
+ README.md (new)             |   3 ++
+ index.js (new)              |  61 ++++++++++++++++++++++++++
+ index.sublime-project (new) |  13 ++++++
+ package.json (new)          |  21 +++++++++
+ src/back.js (new)           |  19 +++++++++
+ src/bounce.js (new)         |  22 ++++++++++
+ src/circle.js (new)         |  11 +++++
+ src/cubic.js (new)          |  11 +++++
+ src/elastic.js (new)        |  29 +++++++++++++
+ src/exp.js (new)            |  11 +++++
+ src/linear.js (new)         |   8 ++++
+ src/number.js (new)         |   3 ++
+ src/poly.js (new)           |  19 +++++++++
+ src/quad.js (new)           |  11 +++++
+ src/sin.js (new)            |  14 ++++++
+ test/back-test.js (new)     |  60 ++++++++++++++++++++++++++
+ test/bounce-test.js (new)   |  60 ++++++++++++++++++++++++++
+ test/circle-test.js (new)   |  60 ++++++++++++++++++++++++++
+ test/cubic-test.js (new)    |  60 ++++++++++++++++++++++++++
+ test/ease-test.js (new)     |  12 ++++++
+ test/elastic-test.js (new)  | 101 ++++++++++++++++++++++++++++++++++++++++++++
+ test/exp-test.js (new)      |  60 ++++++++++++++++++++++++++
+ test/in-delta.js (new)      |  10 +++++
+ test/linear-test.js (new)   |  36 ++++++++++++++++
+ test/poly-test.js (new)     |  92 ++++++++++++++++++++++++++++++++++++++++
+ test/quad-test.js (new)     |  60 ++++++++++++++++++++++++++
+ test/sin-test.js (new)      |  60 ++++++++++++++++++++++++++
+ 30 files changed, 991 insertions(+)

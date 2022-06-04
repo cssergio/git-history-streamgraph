@@ -1,0 +1,948 @@
+☕588790e🔪2021-08-17 12:14:38 +0200🔪Philippe Rivière🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4a8ed7d🔪2021-06-05 11:41:47 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6370c5f🔪2021-06-05 11:41:45 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕52b48f5🔪2021-06-05 11:41:36 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕21ad9c2🔪2021-06-03 20:56:18 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f21b2be🔪2021-06-03 20:54:47 -0700🔪Mike Bostock🔪remove Sublime project🔪
+ d3-random.sublime-project (gone) | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+☕e5bd86e🔪2021-06-04 05:52:54 +0200🔪Philippe Rivière🔪Adopt type=module (#40)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* update README
+
+* assert message
+
+* Update README
+
+* Update README
+
+* yarn upgrade
+
+* cleaner imports
+
+* cleaner imports
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                |    7 +-
+ .github/workflows/node.js.yml |    6 +-
+ LICENSE                       |   40 +-
+ README.md                     |   23 +-
+ package.json                  |   42 +-
+ test/.eslintrc.json (new)     |   11 +
+ test/asserts.js (new)         |    5 +
+ test/bates-test.js            |   70 +-
+ test/bernoulli-test.js        |   62 +-
+ test/beta-test.js             |   43 +-
+ test/binomial-test.js         |   90 ++-
+ test/cauchy-test.js           |   21 +-
+ test/exponential-test.js      |   27 +-
+ test/gamma-test.js            |   78 ++-
+ test/geometric-test.js        |   58 +-
+ test/inDelta.js (gone)        |   10 -
+ test/int-test.js              |   36 +-
+ test/irwinHall-test.js        |   58 +-
+ test/kurtosis.js (gone)       |   18 -
+ test/lcg-test.js              |   48 +-
+ test/logNormal-test.js        |   47 +-
+ test/logistic-test.js         |   68 +-
+ test/normal-test.js           |   47 +-
+ test/pareto-test.js           |   46 +-
+ test/poisson-test.js          |   82 ++-
+ test/run.sh (gone)            |    3 -
+ test/skewness.js (gone)       |   18 -
+ test/statistics.js (new)      |   35 +
+ test/uniform-test.js          |   50 +-
+ test/weibull-test.js          |   52 +-
+ yarn.lock                     | 1480 ++++++++++++++++++++---------------------
+ 31 files changed, 1319 insertions(+), 1362 deletions(-)
+
+☕a4c996f🔪2020-08-29 12:42:06 -0700🔪Mike Bostock🔪2.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕438a3ce🔪2020-08-29 12:41:24 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ package.json                        |   13 +-
+ test/bates-test.js                  |   17 +-
+ test/bernoulli-test.js              |   33 +-
+ test/beta-test.js                   |   17 +-
+ test/binomial-test.js               |   33 +-
+ test/cauchy-test.js                 |    5 +-
+ test/exponential-test.js            |   11 +-
+ test/gamma-test.js                  |   17 +-
+ test/geometric-test.js              |   33 +-
+ test/inDelta.js                     |    2 +-
+ test/int-test.js                    |   14 +-
+ test/irwinHall-test.js              |   14 +-
+ test/lcg-test.js                    |    8 +-
+ test/logNormal-test.js              |   17 +-
+ test/logistic-test.js               |   18 +-
+ test/normal-test.js                 |   17 +-
+ test/pareto-test.js                 |   12 +-
+ test/poisson-test.js                |   14 +-
+ test/run.sh (new +x)                |    3 +
+ test/uniform-test.js                |   20 +-
+ test/weibull-test.js                |    8 +-
+ yarn.lock                           | 1377 +++++++++++++++++------------------
+ 24 files changed, 872 insertions(+), 879 deletions(-)
+
+☕52c3fda🔪2020-08-29 07:41:17 -0700🔪Mike Bostock🔪Allow integer seeds.🔪
+ README.md  | 2 +-
+ src/lcg.js | 5 ++---
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+☕101b3a4🔪2020-08-26 20:11:30 +0200🔪Philippe Rivière🔪v2.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f3ac45b🔪2020-08-26 20:08:42 +0200🔪Philippe Rivière🔪Update src/lcg.js🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/lcg.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d6e3b15🔪2020-08-22 17:09:18 -0700🔪Jacob Rus🔪shorten code, slightly faster still🔪
+ src/lcg.js | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+
+☕ca0a54d🔪2020-08-22 02:44:07 -0700🔪Jacob Rus🔪speed up 10x (Safari) or 4x (Chrome/Firefox)🔪
+ src/lcg.js | 17 ++++++++++-------
+ 1 file changed, 10 insertions(+), 7 deletions(-)
+
+☕637bce1🔪2020-08-19 22:16:18 +0200🔪Philippe Rivière🔪links🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b1e0b34🔪2020-08-19 11:49:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕8c33c61🔪2020-08-19 11:46:08 -0700🔪Mike Bostock🔪2.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1db9ce0🔪2020-08-19 11:43:48 -0700🔪Mike Bostock🔪Better seeds.🔪
+ README.md              |  4 ++--
+ test/bates-test.js     | 10 +++++-----
+ test/bernoulli-test.js |  8 ++++----
+ test/beta-test.js      |  4 ++--
+ test/binomial-test.js  |  8 ++++----
+ test/gamma-test.js     | 10 +++++-----
+ test/geometric-test.js |  8 ++++----
+ test/int-test.js       |  8 ++++----
+ test/irwinHall-test.js |  8 ++++----
+ test/logNormal-test.js | 10 +++++-----
+ test/logistic-test.js  |  8 ++++----
+ test/normal-test.js    | 10 +++++-----
+ test/pareto-test.js    |  6 +++---
+ test/poisson-test.js   |  8 ++++----
+ test/uniform-test.js   | 12 ++++++------
+ test/weibull-test.js   |  4 ++--
+ 16 files changed, 63 insertions(+), 63 deletions(-)
+
+☕3898b5c🔪2020-08-19 11:28:47 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/lcg.js | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕e901215🔪2020-08-19 11:27:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕1e621cc🔪2020-08-19 10:26:28 +0200🔪Philippe Rivière🔪the example also changes🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cfa755d🔪2020-08-19 10:19:54 +0200🔪Philippe Rivière🔪0 ≤ seed < 1 update more tests that were too stringent🔪
+ README.md                |  4 +++-
+ src/lcg.js               |  8 ++++----
+ test/bates-test.js       | 10 +++++-----
+ test/bernoulli-test.js   |  8 ++++----
+ test/beta-test.js        |  4 ++--
+ test/binomial-test.js    | 10 +++++-----
+ test/cauchy-test.js      |  2 +-
+ test/exponential-test.js |  2 +-
+ test/gamma-test.js       | 14 +++++++-------
+ test/geometric-test.js   |  8 ++++----
+ test/int-test.js         |  8 ++++----
+ test/irwinHall-test.js   |  8 ++++----
+ test/lcg-test.js         | 25 ++++++-------------------
+ test/logNormal-test.js   | 10 +++++-----
+ test/logistic-test.js    | 24 ++++++++++++------------
+ test/normal-test.js      | 10 +++++-----
+ test/pareto-test.js      | 11 ++++++-----
+ test/poisson-test.js     |  8 ++++----
+ test/uniform-test.js     | 12 ++++++------
+ test/weibull-test.js     |  8 ++++----
+ 20 files changed, 92 insertions(+), 102 deletions(-)
+
+☕cc5aec1🔪2020-08-18 19:53:19 +0200🔪Philippe Rivière🔪Update src/lcg.js🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/lcg.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕ff4714f🔪2020-08-18 10:55:48 +0200🔪Philippe Rivière🔪The example has changed with https://github.com/d3/d3-random/pull/35/commits/75dc4abc47ec02fc234415e60b597a92bda8ef6c#diff-6d3779635a73da0ec4b7148c54697450🔪Note: we do not want to guarantee that the generator will return the same sequence *across versions of d3-random*; mixing more, or taking a different seeding method would not be a breaking change.
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4a30350🔪2020-08-14 10:23:19 +0200🔪Philippe Rivière🔪less stringent tests🔪
+ test/bates-test.js     | 2 +-
+ test/gamma-test.js     | 2 +-
+ test/geometric-test.js | 2 +-
+ test/irwinHall-test.js | 4 ++--
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+☕75dc4ab🔪2020-08-14 10:23:01 +0200🔪Philippe Rivière🔪check the profile of the first numbers for seeds 0…100🔪
+ src/lcg.js       |  6 ++++--
+ test/lcg-test.js | 30 ++++++++++++++++++++++++++++--
+ 2 files changed, 32 insertions(+), 4 deletions(-)
+
+☕eb80a26🔪2020-08-14 09:06:16 +0200🔪Philippe Rivière🔪Fix distribution tests🔪Some of the tests were too stringent and almost never passed with Math.random. Rather than finding the right seed to have them pass, it seems better to make them a bit more tolerant.
+
+Changing variance to deviation (and taking the sqrt of the expected result) also allows a more balanced testing of distribution spread.
+
+A few tests in Pareto were testing the wrong values.
+
+ test/bernoulli-test.js | 10 +++++-----
+ test/gamma-test.js     |  6 +++---
+ test/geometric-test.js |  8 ++++----
+ test/pareto-test.js    | 20 ++++++++++++--------
+ 4 files changed, 24 insertions(+), 20 deletions(-)
+
+☕8226676🔪2020-08-13 22:44:59 +0200🔪Philippe Rivière🔪accept any number as seed negative numbers will be negated; numbers between 0 and 1 inflated (follow-up on https://github.com/d3/d3-random/pull/35#discussion_r470131994)🔪
+ src/lcg.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕69e04b0🔪2020-08-13 19:59:13 +0200🔪Philippe Rivière🔪Update README.md🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9173cec🔪2020-08-13 19:59:07 +0200🔪Philippe Rivière🔪Update README.md🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3e6aae9🔪2020-08-13 18:32:09 +0200🔪Philippe Rivière🔪use d3.randomLcg instead of seedrandom… many tests fail 🌶🔪
+ package.json             |  1 -
+ test/bates-test.js       | 11 +++++------
+ test/bernoulli-test.js   |  9 ++++-----
+ test/beta-test.js        |  5 ++---
+ test/binomial-test.js    |  9 ++++-----
+ test/cauchy-test.js      |  3 +--
+ test/exponential-test.js |  3 +--
+ test/gamma-test.js       | 11 +++++------
+ test/geometric-test.js   |  9 ++++-----
+ test/int-test.js         |  9 ++++-----
+ test/irwinHall-test.js   |  9 ++++-----
+ test/logNormal-test.js   | 11 +++++------
+ test/logistic-test.js    |  9 ++++-----
+ test/normal-test.js      | 11 +++++------
+ test/pareto-test.js      |  7 +++----
+ test/poisson-test.js     |  9 ++++-----
+ test/uniform-test.js     | 13 ++++++-------
+ test/weibull-test.js     |  5 ++---
+ yarn.lock                |  5 -----
+ 19 files changed, 63 insertions(+), 86 deletions(-)
+
+☕44553eb🔪2020-08-13 18:11:48 +0200🔪Philippe Rivière🔪updates to randomLcg🔪
+ README.md        |  2 +-
+ src/lcg.js       |  2 +-
+ test/lcg-test.js | 10 +++++-----
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+☕4783e89🔪2020-08-13 18:05:16 +0200🔪Philippe Rivière🔪constants🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/lcg.js | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+☕2853af4🔪2020-08-13 18:04:42 +0200🔪Philippe Rivière🔪randomLcg🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕617ffe1🔪2020-08-13 11:33:49 +0200🔪Philippe Rivière🔪lcg🔪
+ README.md              | 12 ++++++++----
+ src/index.js           |  1 +
+ src/lcg.js (new)       |  7 +++++++
+ test/lcg-test.js (new) | 32 ++++++++++++++++++++++++++++++++
+ 4 files changed, 48 insertions(+), 4 deletions(-)
+
+☕6a46059🔪2020-02-25 15:10:00 -0800🔪Mike Bostock🔪2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕470be87🔪2020-02-21 11:31:42 -0800🔪Mike Bostock🔪Increase delta.🔪
+ test/gamma-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕93d8d52🔪2020-02-18 09:14:32 -0800🔪Mike Bostock🔪Persist sources.🔪
+ src/bates.js     | 4 +++-
+ src/beta.js      | 6 ++++--
+ src/binomial.js  | 7 +++++--
+ src/gamma.js     | 5 +++--
+ src/logNormal.js | 4 +++-
+ src/poisson.js   | 7 +++++--
+ 6 files changed, 23 insertions(+), 10 deletions(-)
+
+☕1fb96bf🔪2020-02-16 12:32:39 +0800🔪Parcly Taxel🔪Expand domain of randomWeibull to all real numbers🔪The structure of the algorithm for generating Weibull random variates
+allows generating Fréchet variates "for free" by providing a negative
+shape parameter. The Gumbel distribution is what results at zero shape
+parameter, and fills in the gap between the Weibull and Fréchet regimes.
+In this way, no shape parameter is wasted.
+
+randomWeibull now accepts both location and scale parameters, mimicking
+randomCauchy and randomLogistic.
+
+See https://observablehq.com/@parcly-taxel/frechet-gumbel-weibull
+
+ README.md            | 14 ++++++++++----
+ src/weibull.js       | 19 +++++++++++++------
+ test/weibull-test.js | 28 ++++++++++++++++++----------
+ 3 files changed, 41 insertions(+), 20 deletions(-)
+
+☕d4dc6c3🔪2020-02-15 15:07:07 +0800🔪Parcly Taxel🔪Add Poisson distribution🔪The algorithm is also from Ahrens and Dieter (1974).
+
+See https://observablehq.com/@parcly-taxel/the-poisson-distribution
+
+ README.md                  |  6 ++++-
+ src/index.js               |  1 +
+ src/poisson.js (new)       | 24 +++++++++++++++++++
+ test/poisson-test.js (new) | 59 ++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 89 insertions(+), 1 deletion(-)
+
+☕898b5d4🔪2020-02-15 11:37:19 +0800🔪Parcly Taxel🔪Use Math.log1p() in more places🔪The expression -Math.log1p(-source()) is more accurate than
+-Math.log(1 - source()) for generating an exponential(1) variate. It is
+guaranteed finite if source() is in [0,1), which is already required.
+
+ src/exponential.js | 2 +-
+ src/gamma.js       | 2 +-
+ src/weibull.js     | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕4c0434f🔪2020-02-15 11:25:59 +0800🔪Parcly Taxel🔪Introduce O(log log n) binomial generator🔪The current binomial generator takes O(n) time. The new generator, based
+on Ahrens and Dieter (1974), takes less than 0.25 seconds to generate
+10^5 variates at n = 10^12, and remains fast for smaller n.
+
+See also https://observablehq.com/@parcly-taxel/faster-binomial-variates
+
+ src/binomial.js       | 27 +++++++++++++++++++++++----
+ test/binomial-test.js | 18 +++++++++---------
+ 2 files changed, 32 insertions(+), 13 deletions(-)
+
+☕b2d889d🔪2020-02-15 11:00:16 +0800🔪Parcly Taxel🔪Allow 0 as a parameter for randomGeometric🔪Logically, a geometric(0) variate always fails, so it always returns
+infinity. This commit expands the domain of randomGeometric() to
+that case, which will make the implementation of a future binomial
+generator a little easier.
+
+log1p() is also used for higher accuracy.
+
+ README.md              | 2 +-
+ src/geometric.js       | 7 +++++--
+ test/geometric-test.js | 2 +-
+ 3 files changed, 7 insertions(+), 4 deletions(-)
+
+☕f6716ae🔪2020-02-14 16:17:38 +0800🔪Parcly Taxel🔪Touch up two test files🔪In binomial-test.js, require the correct file; in gamma-test.js, put space after commas in the last four test cases
+
+ test/binomial-test.js | 2 +-
+ test/gamma-test.js    | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕1fee252🔪2020-02-12 21:39:36 +0800🔪Parcly Taxel🔪Add readme for Cauchy and logistic distributions🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕18f3ba8🔪2020-02-12 21:35:01 +0800🔪Parcly Taxel🔪Add Cauchy and logistic distributions🔪
+ src/cauchy.js (new)         | 15 ++++++++++++++
+ src/index.js                |  2 ++
+ src/logistic.js (new)       | 16 +++++++++++++++
+ test/bates-test.js          |  2 +-
+ test/cauchy-test.js (new)   | 18 +++++++++++++++++
+ test/logistic-test.js (new) | 49 +++++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 101 insertions(+), 1 deletion(-)
+
+☕4911e34🔪2020-02-12 16:38:43 +0800🔪Parcly Taxel🔪Generalise Irwin-Hall to real n🔪
+ README.md              |  4 ++--
+ src/bates.js           |  2 ++
+ src/irwinHall.js       |  5 +++--
+ test/bates-test.js     | 17 +++++++++++++++++
+ test/irwinHall-test.js |  8 ++++++++
+ 5 files changed, 32 insertions(+), 4 deletions(-)
+
+☕d93227a🔪2020-02-12 15:20:40 +0800🔪Parcly Taxel🔪Add Weibull distribution🔪
+ README.md                  |  4 ++++
+ src/beta.js                |  2 +-
+ src/gamma.js               |  8 +++++---
+ src/index.js               |  1 +
+ src/weibull.js (new)       | 15 +++++++++++++++
+ test/weibull-test.js (new) | 25 +++++++++++++++++++++++++
+ 6 files changed, 51 insertions(+), 4 deletions(-)
+
+☕3af2db6🔪2020-02-12 00:17:32 +0800🔪Parcly Taxel🔪Update readme with gamma and beta distributions🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕03deb17🔪2020-02-12 00:06:35 +0800🔪Parcly Taxel🔪Add tests for gamma and beta distributions🔪
+ test/beta-test.js (new)  | 30 ++++++++++++++++++++++++++
+ test/gamma-test.js (new) | 56 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 86 insertions(+)
+
+☕2f0fc2b🔪2020-02-11 22:38:44 +0800🔪Parcly Taxel🔪Add gamma and beta distributions🔪
+ src/beta.js (new)  | 17 +++++++++++++++++
+ src/gamma.js (new) | 31 +++++++++++++++++++++++++++++++
+ src/index.js       |  2 ++
+ 3 files changed, 50 insertions(+)
+
+☕7be5188🔪2019-11-16 11:08:20 -0800🔪Mike Bostock🔪2.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8eb68a3🔪2019-09-27 10:09:11 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕27454d6🔪2019-11-02 08:23:29 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕221de5a🔪2019-08-09 15:35:22 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/bernoulli.js | 2 +-
+ src/binomial.js  | 2 +-
+ src/geometric.js | 2 +-
+ src/pareto.js    | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+☕2471bb8🔪2019-07-31 12:26:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕4d9df88🔪2019-07-31 10:26:56 -0700🔪Mike Bostock🔪2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕77abfb9🔪2019-07-31 10:26:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕b2d0baf🔪2019-07-31 10:26:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b6ea786🔪2019-07-31 10:25:31 -0700🔪Mike Bostock🔪Shorten.🔪
+ test/bates-test.js       |  8 ++++----
+ test/bernoulli-test.js   |  8 ++++----
+ test/binomial-test.js    |  8 ++++----
+ test/exponential-test.js |  2 +-
+ test/geometric-test.js   |  8 ++++----
+ test/irwinHall-test.js   |  8 ++++----
+ test/logNormal-test.js   | 10 +++++-----
+ test/normal-test.js      | 10 +++++-----
+ test/pareto-test.js      |  6 +++---
+ test/uniform-test.js     | 12 ++++++------
+ 10 files changed, 40 insertions(+), 40 deletions(-)
+
+☕2743d63🔪2019-07-31 10:23:50 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json |    9 +-
+ yarn.lock    | 1395 +++++++++++++++++++++++++++++++++++++++++++---------------
+ 2 files changed, 1048 insertions(+), 356 deletions(-)
+
+☕e74329e🔪2019-07-31 10:21:48 -0700🔪Mike Bostock🔪Explicit files.🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕15e6757🔪2019-07-31 10:21:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d970d8f🔪2019-07-31 10:13:49 -0700🔪Mike Bostock🔪Add binomial, geometric, Pareto and Bernoulli generators.🔪
+ README.md                    | 16 ++++++++++++
+ src/bernoulli.js (new)       | 14 +++++++++++
+ src/binomial.js (new)        | 16 ++++++++++++
+ src/geometric.js (new)       | 14 +++++++++++
+ src/index.js                 |  4 +++
+ src/pareto.js (new)          | 15 +++++++++++
+ test/bernoulli-test.js (new) | 46 +++++++++++++++++++++++++++++++++
+ test/binomial-test.js (new)  | 60 ++++++++++++++++++++++++++++++++++++++++++++
+ test/geometric-test.js (new) | 46 +++++++++++++++++++++++++++++++++
+ test/pareto-test.js (new)    | 32 +++++++++++++++++++++++
+ 10 files changed, 263 insertions(+)
+
+☕718f26b🔪2019-07-31 09:55:52 -0700🔪Mike Bostock🔪Don’t wrap Math.random.🔪If you want to change the seed used by d3-random, use random.source.
+
+ src/defaultSource.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕c8b71ca🔪2019-07-31 09:52:56 -0700🔪Mike Bostock🔪Add randomInt. Fixes #26.🔪
+ README.md              | 15 ++++++++++-----
+ src/index.js           |  1 +
+ src/int.js (new)       | 16 ++++++++++++++++
+ test/int-test.js (new) | 31 +++++++++++++++++++++++++++++++
+ 4 files changed, 58 insertions(+), 5 deletions(-)
+
+☕8b96d5e🔪2018-11-11 12:45:58 -0600🔪Alex Van Camp🔪allow loading in browser via es modules🔪Browser implementations of `import` do not assume a `.js` file extension. As such, the relative imports used in `d3-random` all fail with a 404, because the actual files on disk _do_ have `.js` extensions, while the corresponding `import` statements in the code do not.
+
+This fixes this issue by simply adding explicit `.js` extensions to all `import` statements, thereby allowing the native browser implementations of ES Modules to successfully load these imports.
+ src/bates.js       |  4 ++--
+ src/exponential.js |  2 +-
+ src/index.js       | 12 ++++++------
+ src/irwinHall.js   |  2 +-
+ src/logNormal.js   |  4 ++--
+ src/normal.js      |  2 +-
+ src/uniform.js     |  2 +-
+ 7 files changed, 14 insertions(+), 14 deletions(-)
+
+☕90d46bf🔪2018-08-24 14:19:06 -0700🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b558e9🔪2018-08-24 14:19:04 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8eb2dc4🔪2018-08-24 14:01:18 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕637885f🔪2018-08-24 13:46:18 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 6 ------
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 6 ++++++
+ 4 files changed, 14 insertions(+), 13 deletions(-)
+
+☕ac6e2ed🔪2018-08-24 13:46:01 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-random.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c4d1708🔪2018-08-24 13:45:53 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4e443b9🔪2018-08-24 11:44:43 -0700🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14a1bea🔪2018-08-24 11:44:40 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)          |   9 -
+ .eslintrc.json (new)      |  15 +
+ .gitignore                |   2 +-
+ .npmignore                |   2 +-
+ d3-random.sublime-project |  16 +-
+ package.json              |  19 +-
+ rollup.config.js (new)    |  36 ++
+ yarn.lock (new)           | 943 ++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1015 insertions(+), 27 deletions(-)
+
+☕e080dc8🔪2017-05-03 10:23:03 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5d027db🔪2017-05-03 10:22:45 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d4ff217🔪2017-05-03 10:22:04 -0700🔪Mike Bostock🔪Add random.source example.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕9c443e7🔪2017-05-03 10:19:03 -0700🔪Mike Bostock🔪Style changes for tests.🔪
+ test/bates-test.js       | 35 +++++++++++++++++------------------
+ test/exponential-test.js | 13 ++++++-------
+ test/irwinHall-test.js   | 35 +++++++++++++++++------------------
+ test/kurtosis.js         |  4 ++--
+ test/logNormal-test.js   | 43 +++++++++++++++++++++----------------------
+ test/normal-test.js      | 33 ++++++++++++++++-----------------
+ test/skewness.js         |  4 ++--
+ test/uniform-test.js     | 33 ++++++++++++++++-----------------
+ 8 files changed, 97 insertions(+), 103 deletions(-)
+
+☕e0f841d🔪2017-05-03 12:31:14 -0400🔪Taylor Baldwin🔪empty line after imports🔪
+ src/exponential.js | 1 +
+ src/irwinHall.js   | 1 +
+ src/normal.js      | 1 +
+ src/uniform.js     | 1 +
+ 4 files changed, 4 insertions(+)
+
+☕e1e680c🔪2017-05-03 10:28:27 -0400🔪Taylor Baldwin🔪consistent style🔪
+ src/defaultSource.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d4b1429🔪2017-05-03 10:22:48 -0400🔪Taylor Baldwin🔪support monkey-patching Math.random🔪
+ src/bates.js               | 3 ++-
+ src/defaultSource.js (new) | 3 +++
+ src/exponential.js         | 3 ++-
+ src/irwinHall.js           | 3 ++-
+ src/logNormal.js           | 3 ++-
+ src/normal.js              | 3 ++-
+ src/uniform.js             | 3 ++-
+ 7 files changed, 15 insertions(+), 6 deletions(-)
+
+☕9df394f🔪2017-05-02 21:36:34 -0400🔪Taylor Baldwin🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕41537de🔪2017-05-02 21:35:11 -0400🔪Taylor Baldwin🔪update docs🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6b3fd80🔪2017-05-02 20:43:22 -0400🔪Taylor Baldwin🔪updating tests🔪
+ test/bates-test.js       | 33 +++++++++++++--------------------
+ test/exponential-test.js | 13 +++----------
+ test/irwinHall-test.js   | 33 +++++++++++++--------------------
+ test/logNormal-test.js   | 39 ++++++++++++++++-----------------------
+ test/normal-test.js      | 39 ++++++++++++++++-----------------------
+ test/uniform-test.js     | 39 ++++++++++++++++-----------------------
+ 6 files changed, 77 insertions(+), 119 deletions(-)
+
+☕30bf690🔪2017-05-02 20:15:08 -0400🔪Taylor Baldwin🔪semicolons are friends🔪
+ .eslintrc          | 1 +
+ src/bates.js       | 2 +-
+ src/exponential.js | 4 ++--
+ src/irwinHall.js   | 4 ++--
+ src/logNormal.js   | 2 +-
+ src/normal.js      | 4 ++--
+ src/uniform.js     | 2 +-
+ 7 files changed, 10 insertions(+), 9 deletions(-)
+
+☕4188eab🔪2017-05-02 19:44:11 -0400🔪Taylor Baldwin🔪implement source method on each random function🔪
+ index.js             | 20 ++++++--------------
+ src/bates.js         | 14 +++++++++-----
+ src/exponential.js   | 14 +++++++++-----
+ src/irwinHall.js     | 14 +++++++++-----
+ src/logNormal.js     | 14 +++++++++-----
+ src/normal.js        | 16 ++++++++++------
+ src/source.js (gone) | 17 -----------------
+ src/uniform.js       | 14 +++++++++-----
+ 8 files changed, 61 insertions(+), 62 deletions(-)
+
+☕f5cffb3🔪2017-05-02 14:39:48 -0400🔪Taylor Baldwin🔪implement randomSource function🔪
+ index.js            | 20 ++++++++++++++------
+ src/bates.js        | 10 ++++++----
+ src/exponential.js  |  9 +++++----
+ src/irwinHall.js    | 11 ++++++-----
+ src/logNormal.js    |  8 +++++---
+ src/normal.js       | 33 +++++++++++++++++----------------
+ src/source.js (new) | 17 +++++++++++++++++
+ src/uniform.js      | 17 +++++++++--------
+ 8 files changed, 79 insertions(+), 46 deletions(-)
+
+☕a8a046d🔪2017-05-02 14:38:34 -0400🔪Taylor Baldwin🔪update README🔪
+ README.md | 28 ++++++++++++++++------------
+ 1 file changed, 16 insertions(+), 12 deletions(-)
+
+☕fa8f860🔪2017-04-30 19:17:50 -0400🔪Taylor Baldwin🔪update documentation🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕7e94d3d🔪2017-04-30 19:05:54 -0400🔪Taylor Baldwin🔪fix typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aedd0c3🔪2017-04-30 19:04:40 -0400🔪Taylor Baldwin🔪support other pseudorandom number generators🔪
+ src/bates.js       | 4 ++--
+ src/exponential.js | 5 +++--
+ src/irwinHall.js   | 5 +++--
+ src/normal.js      | 7 ++++---
+ src/uniform.js     | 5 +++--
+ 5 files changed, 15 insertions(+), 11 deletions(-)
+
+☕a761e6b🔪2017-04-13 16:36:27 -0700🔪Harrison Shoff🔪Update README.md🔪Fixing the `Try d3-random in your browser.` link
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3d2cdac🔪2017-03-10 09:52:17 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕26f7886🔪2017-03-10 09:52:09 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕71731b0🔪2016-11-22 16:44:51 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕488b9e4🔪2016-11-22 16:44:40 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕47a013c🔪2016-08-13 15:34:21 +0200🔪Mehdi El Fadil🔪 Add links to source🔪d3/d3#2936
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕a9c981c🔪2016-08-02 14:35:04 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕87f8d59🔪2016-08-02 14:35:04 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕7fbe91a🔪2016-06-14 14:30:29 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕89e040d🔪2016-06-14 14:30:25 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 6 +++---
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+☕3fcf4e3🔪2016-06-14 09:22:32 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕d6b8ec9🔪2016-06-07 17:13:50 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b4f67c3🔪2016-06-07 17:13:19 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 14 +++++++-------
+ 3 files changed, 10 insertions(+), 11 deletions(-)
+
+☕0391096🔪2016-05-18 09:52:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2a4700b🔪2016-05-14 21:15:10 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕6414df4🔪2016-03-15 10:22:27 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3189e41🔪2016-03-14 13:06:24 -0700🔪Mike Bostock🔪Fix #15. Use tape directly.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕0bd93ad🔪2016-03-14 10:50:18 -0700🔪Mike Bostock🔪Remove redundant rm.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕11a8974🔪2016-03-14 09:49:21 -0700🔪Mike Bostock🔪Fix #13.🔪1. Faucet automatically looks in the test folder for tests, so we don’t need to
+pass it an explicit list. 2. Rather than inline the script for exporting the
+version number from the package.json file, use json2module. 3. Rather than mkdir
+-p (which is unavailable on Windows?), remove the build folder and recreate it;
+this has the additional benefit of removing cruft.
+
+ index.js     | 2 +-
+ package.json | 5 +++--
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕2345a49🔪2016-03-06 15:11:46 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5c6ae46🔪2016-03-04 09:46:56 -0800🔪Mike Bostock🔪Remove duplicate rm.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕97f2878🔪2016-03-04 09:40:14 -0800🔪Mike Bostock🔪Fix #8 - build zip in postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕839d233🔪2016-03-01 14:15:30 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕4dfb2a9🔪2016-02-24 16:02:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕fb98f64🔪2016-02-21 16:31:11 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕00adfea🔪2016-01-29 10:28:39 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕7ac7115🔪2016-01-20 17:26:57 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new)    | 12 ++++++++++++
+ package.json       |  2 +-
+ src/bates.js       |  2 +-
+ src/exponential.js |  2 +-
+ src/irwinHall.js   |  2 +-
+ src/logNormal.js   |  2 +-
+ src/normal.js      |  2 +-
+ src/uniform.js     |  2 +-
+ 8 files changed, 19 insertions(+), 7 deletions(-)
+
+☕e26af03🔪2016-01-12 15:11:37 -0800🔪Mike Bostock🔪Relax optional arguments.🔪Related mbostock/d3#2710.
+
+ src/normal.js  | 7 +++----
+ src/uniform.js | 8 ++++----
+ 2 files changed, 7 insertions(+), 8 deletions(-)
+
+☕69b022d🔪2016-01-12 12:32:52 -0800🔪Mike Bostock🔪Fix #3 - use previously-generated random in Box–Muller.🔪
+ src/normal.js | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+☕1e39f91🔪2016-01-07 12:54:34 -0800🔪Mike Bostock🔪Update link.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ad8cbd8🔪2016-01-07 12:54:14 -0800🔪Mike Bostock🔪Fix anchors.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕e63b930🔪2016-01-07 12:52:22 -0800🔪Mike Bostock🔪Adopt “random” prefix.🔪
+ README.md                | 16 ++++++++--------
+ index.js                 | 12 ++++++------
+ package.json             |  4 ++--
+ test/bates-test.js       | 28 ++++++++++++++--------------
+ test/exponential-test.js | 12 ++++++------
+ test/irwinHall-test.js   | 28 ++++++++++++++--------------
+ test/kurtosis.js         | 10 +++++-----
+ test/logNormal-test.js   | 34 +++++++++++++++++-----------------
+ test/normal-test.js      | 34 +++++++++++++++++-----------------
+ test/skewness.js         | 10 +++++-----
+ test/uniform-test.js     | 34 +++++++++++++++++-----------------
+ 11 files changed, 111 insertions(+), 111 deletions(-)
+
+☕c74f2e2🔪2015-12-18 14:41:58 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 30 +++++++++++++++---------------
+ package.json |  4 ++--
+ 2 files changed, 17 insertions(+), 17 deletions(-)
+
+☕b4fe179🔪2015-11-16 10:20:47 -0800🔪Mike Bostock🔪Tweak README and formatting.🔪
+ README.md                |  6 +++---
+ test/exponential-test.js | 18 ++++++------------
+ 2 files changed, 9 insertions(+), 15 deletions(-)
+
+☕917e88e🔪2015-11-16 12:24:01 -0500🔪Noah🔪Switched poisson() -> exponential() and inverted argument from mean to rate (1/mean)🔪
+ README.md                                     |  5 +++--
+ index.js                                      |  2 +-
+ src/exponential.js (new)                      |  5 +++++
+ src/poisson.js (gone)                         |  5 -----
+ test/{poisson-test.js => exponential-test.js} | 27 +++++++--------------------
+ 5 files changed, 16 insertions(+), 28 deletions(-)
+
+☕94819f3🔪2015-11-15 16:37:13 -0500🔪Noah🔪Tweaked test note🔪
+ test/poisson-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0919245🔪2015-11-15 16:35:55 -0500🔪Noah🔪Added Poisson process🔪
+ README.md                  |  5 +++++
+ index.js                   |  1 +
+ src/poisson.js (new)       |  5 +++++
+ test/poisson-test.js (new) | 51 ++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 62 insertions(+)
+
+☕4aea1b7🔪2015-11-11 11:21:00 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕673eaa2🔪2015-11-04 13:26:10 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 18 +++++-------------
+ 1 file changed, 5 insertions(+), 13 deletions(-)
+
+☕0749216🔪2015-11-03 23:39:43 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕8ae0726🔪2015-07-01 11:29:32 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕de75f8d🔪2015-06-16 14:53:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+☕84b5577🔪2015-06-16 14:02:00 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕3a002c8🔪2015-06-10 13:40:04 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                         | 2 +-
+ index.sublime-project => d3-random.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕65462ce🔪2015-06-09 10:45:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8ffdc3f🔪2015-06-09 10:44:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 19 +++++++++++++------
+ 1 file changed, 13 insertions(+), 6 deletions(-)
+
+☕3b9582e🔪2015-06-09 10:38:09 -0700🔪Mike Bostock🔪Add tests for Bates and Irwin–Hall.🔪
+ test/bates-test.js (new)     | 43 +++++++++++++++++++++++++++++++++++++++++++
+ test/irwinHall-test.js (new) | 43 +++++++++++++++++++++++++++++++++++++++++++
+ test/kurtosis.js (new)       | 18 ++++++++++++++++++
+ test/skewness.js (new)       | 18 ++++++++++++++++++
+ 4 files changed, 122 insertions(+)
+
+☕c2576e0🔪2015-06-09 10:19:18 -0700🔪Mike Bostock🔪Add tests for logNormal and uniform.🔪
+ src/logNormal.js             |  4 ++--
+ src/normal.js                |  6 +++--
+ src/uniform.js               |  2 +-
+ test/logNormal-test.js (new) | 48 ++++++++++++++++++++++++++++++++++++++++
+ test/uniform-test.js (new)   | 52 ++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 107 insertions(+), 5 deletions(-)
+
+☕16b8b27🔪2015-06-09 10:04:47 -0700🔪Mike Bostock🔪Add tests for normal.🔪
+ package.json          |  1 +
+ test/inDelta.js (new) | 10 ++++++++++
+ test/normal-test.js   | 37 +++++++++++++++++++++++++++++++++++++
+ 3 files changed, 48 insertions(+)
+
+☕8451d6a🔪2015-06-09 09:48:17 -0700🔪Mike Bostock🔪Delete Kolmogorov-Smirnov test.🔪With apologies to @dangoldbach, but this test didn’t appear to actually be
+verifying that the random number generators passed the KS test: for example,
+replacing random.normal with random.uniform still passed. So I’m going to
+replace this test method with a few simpler tests until I have time to learn how
+KS tests should work.
+
+ test/kolmogorovSmirnov.js (gone) | 30 ------------------------------
+ test/normal-test.js              | 15 ---------------
+ 2 files changed, 45 deletions(-)
+
+☕7951331🔪2015-06-09 09:45:55 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                |  5 +++++
+ .npmignore (new)                |  3 +++
+ LICENSE (new)                   | 27 +++++++++++++++++++++++++++
+ README.md (new)                 | 27 +++++++++++++++++++++++++++
+ index.js (new)                  | 13 +++++++++++++
+ index.sublime-project (new)     | 13 +++++++++++++
+ package.json (new)              | 34 ++++++++++++++++++++++++++++++++++
+ src/bates.js (new)              |  8 ++++++++
+ src/irwinHall.js (new)          |  6 ++++++
+ src/logNormal.js (new)          |  8 ++++++++
+ src/normal.js (new)             | 13 +++++++++++++
+ src/uniform.js (new)            |  9 +++++++++
+ test/kolmogorovSmirnov.js (new) | 30 ++++++++++++++++++++++++++++++
+ test/normal-test.js (new)       | 26 ++++++++++++++++++++++++++
+ 14 files changed, 222 insertions(+)

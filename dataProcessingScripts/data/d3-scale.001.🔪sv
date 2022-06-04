@@ -1,0 +1,3109 @@
+☕83555bd🔪2021-09-24 10:42:59 -0700🔪Mike Bostock🔪4.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cfc7d51🔪2021-09-24 10:29:12 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 64 +++++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 38 insertions(+), 26 deletions(-)
+
+☕13491ee🔪2021-09-24 10:28:49 -0700🔪Mike Bostock🔪default base 10 log ticks to ~s (#255)🔪
+ src/log.js       |  2 +-
+ test/log-test.js | 78 ++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 40 insertions(+), 40 deletions(-)
+
+☕0561e75🔪2021-09-19 11:23:09 -0700🔪Mike Bostock🔪4.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕925dd3a🔪2021-09-19 11:22:59 -0700🔪Mike Bostock🔪upgrade dependencies🔪
+ package.json |   2 +-
+ yarn.lock    | 284 +++++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 151 insertions(+), 135 deletions(-)
+
+☕f0180a8🔪2021-09-19 11:20:50 -0700🔪Mike Bostock🔪simpler exact ticks🔪
+ src/log.js | 27 +++++++++++----------------
+ 1 file changed, 11 insertions(+), 16 deletions(-)
+
+☕9f745d0🔪2021-09-19 09:00:47 -0700🔪Mike Bostock🔪exact log ticks (#253)🔪* fix #234; exact log ticks
+
+* let/const
+
+(see also https://github.com/d3/d3-scale/pull/212)
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+ src/log.js       | 86 +++++++++++++++++++++++++++-----------------------------
+ test/log-test.js |  7 +++++
+ 2 files changed, 48 insertions(+), 45 deletions(-)
+
+☕8fd6d25🔪2021-09-19 07:50:08 -0700🔪Mike Bostock🔪implicit trim for log ticks (#254)🔪
+ src/log.js       |  9 ++++++---
+ test/log-test.js | 31 ++++++++++++++++++++++++++++++-
+ 2 files changed, 36 insertions(+), 4 deletions(-)
+
+☕3281b77🔪2021-08-02 00:00:47 +0200🔪Michael B🔪Update README.md (#252)🔪Jérôme's domain got cybersquatted. Adding direct link to his article.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕07e8aac🔪2021-06-11 12:14:23 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f7cb35b🔪2021-06-05 13:06:40 -0700🔪Mike Bostock🔪4.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕120ad7a🔪2021-06-05 22:04:22 +0200🔪Philippe Rivière🔪adopt InternMap for ordinal scales (#237)🔪* adopt InternMap for ordinal scales
+
+* optimize
+
+* order imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ package.json         |  2 +-
+ src/ordinal.js       | 18 +++++++++---------
+ test/ordinal-test.js | 48 ++++++++++++++++++++++++++++++++++++++----------
+ yarn.lock            |  2 +-
+ 4 files changed, 49 insertions(+), 21 deletions(-)
+
+☕ac30873🔪2021-06-05 21:55:18 +0200🔪Philippe Rivière🔪Adopt type=module (#246)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* add eslint.json
+
+* remove Sublime project
+
+* related d3/d3#3502; extract copyrights from LICENSE
+
+* update dependencies
+
+* update homepage
+
+* cleaner imports
+
+* fix eslintrc
+
+* fix tests
+
+* Update README
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |   4 +-
+ .github/eslint.json (new)           |  18 +
+ .github/workflows/node.js.yml (new) |  30 ++
+ LICENSE                             |  40 +-
+ README.md                           |  30 +-
+ d3-scale.sublime-project (gone)     |  17 -
+ package.json                        |  55 +--
+ rollup.config.js                    |  10 +-
+ test/.eslintrc.json (new)           |  13 +
+ test/asserts.js (new)               |  28 ++
+ test/band-test.js                   | 370 ++++++++--------
+ test/date.js                        |  12 +-
+ test/diverging-test.js              | 282 ++++++------
+ test/identity-test.js               | 327 +++++++-------
+ test/inDelta.js (gone)              |  10 -
+ test/linear-test.js                 | 810 ++++++++++++++++------------------
+ test/log-test.js                    | 605 ++++++++++++--------------
+ test/ordinal-test.js                | 321 +++++++-------
+ test/point-test.js                  |  77 ++--
+ test/pow-test.js                    | 796 ++++++++++++++++------------------
+ test/quantile-test.js               | 233 +++++-----
+ test/quantize-test.js               | 199 ++++-----
+ test/radial-test.js                 | 124 +++---
+ test/roundEpsilon.js                |   4 +-
+ test/sequential-test.js             | 188 ++++----
+ test/sequentialQuantile-test.js     |  40 +-
+ test/sqrt-test.js                   |  26 +-
+ test/symlog-test.js                 | 251 +++++------
+ test/threshold-test.js              | 106 +++--
+ test/tickFormat-test.js             |  80 ++--
+ test/time-test.js                   | 644 +++++++++++++--------------
+ test/utcTime-test.js                | 623 +++++++++++++-------------
+ yarn.lock                           | 840 +++++++++++++++++++-----------------
+ 33 files changed, 3425 insertions(+), 3788 deletions(-)
+
+☕2b7db62🔪2021-04-15 17:08:26 -0700🔪Mike Bostock🔪3.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f3cfd2c🔪2021-04-15 17:08:13 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 49 ++++++++++++++++++++++---------------------------
+ 1 file changed, 22 insertions(+), 27 deletions(-)
+
+☕80ff9b2🔪2021-04-09 19:09:49 -0700🔪Mike Bostock🔪adopt d3-time’s ticks🔪
+ package.json   |  2 +-
+ src/time.js    | 81 ++++++----------------------------------------------------
+ src/utcTime.js |  6 ++---
+ yarn.lock      |  9 ++++++-
+ 4 files changed, 20 insertions(+), 78 deletions(-)
+
+☕8afe6bd🔪2021-03-29 09:38:21 -0700🔪Mike Bostock🔪3.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕60e10c4🔪2021-03-29 09:37:45 -0700🔪Mike Bostock🔪update dependencies🔪
+ package.json |    6 +-
+ yarn.lock    | 1318 +++++++++++++++++++++++++++++++---------------------------
+ 2 files changed, 707 insertions(+), 617 deletions(-)
+
+☕116ac06🔪2021-03-29 09:32:37 -0700🔪Mike Bostock🔪Treat null as undefined. (#241)🔪* treat null as undefined
+
+* undefined isNaN
+
+* treat null as undefined
+
+* more tests
+ src/continuous.js         |  2 +-
+ src/identity.js           |  2 +-
+ src/quantile.js           |  2 +-
+ src/quantize.js           |  2 +-
+ src/sequential.js         |  2 +-
+ src/sequentialQuantile.js |  2 +-
+ src/threshold.js          |  2 +-
+ test/identity-test.js     | 10 ++++++++++
+ test/linear-test.js       |  7 ++-----
+ test/quantile-test.js     |  3 ++-
+ test/quantize-test.js     |  8 ++++++++
+ test/threshold-test.js    |  2 +-
+ 12 files changed, 30 insertions(+), 14 deletions(-)
+
+☕c7efc99🔪2020-09-23 09:44:58 -0700🔪Mike Bostock🔪3.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5d3e9c3🔪2020-09-23 09:44:36 -0700🔪Mike Bostock🔪Update d3-array.🔪
+ package.json | 2 +-
+ yarn.lock    | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕1ff6522🔪2020-09-23 09:40:35 -0700🔪Mike Bostock🔪yarn🔪
+ yarn.lock | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕957482b🔪2020-07-29 11:36:54 +0200🔪michielmetcake🔪Update tickFormat.js🔪Update utcTime.js
+
+Update time.js
+
+Update nice.js
+
+Update number.js
+
+Update constant.js
+
+Update colors.js
+
+ src/colors.js     | 2 +-
+ src/constant.js   | 2 +-
+ src/nice.js       | 2 +-
+ src/number.js     | 2 +-
+ src/tickFormat.js | 2 +-
+ src/time.js       | 2 +-
+ src/utcTime.js    | 2 +-
+ 7 files changed, 7 insertions(+), 7 deletions(-)
+
+☕42d546e🔪2020-09-23 15:45:33 +0200🔪Ilija Puaca🔪scaleQuantile performance fixup🔪
+ src/quantile.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0a427eb🔪2020-08-24 12:39:03 +0200🔪Philippe Rivière🔪time_copy is part of the API but was missing from the README🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕8460207🔪2020-08-24 00:36:14 +0200🔪Philippe Rivière🔪v3.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6169111🔪2020-08-24 00:35:18 +0200🔪Philippe Rivière🔪d3 dependencies🔪update tests (they assume a hyphen-minus, but d3-scale@2 can give a unicode minus)
+
+ package.json            | 10 +++++-----
+ test/linear-test.js     |  9 +++++++++
+ test/log-test.js        |  8 ++++++++
+ test/pow-test.js        |  9 +++++++++
+ test/tickFormat-test.js | 11 ++++++++++-
+ yarn.lock               | 52 ++++++++++++++++++++++++-------------------------
+ 6 files changed, 67 insertions(+), 32 deletions(-)
+
+☕5046251🔪2020-07-10 21:43:45 +0200🔪Philippe Rivière🔪links to d3@6 versions🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕d0a2fe4🔪2020-06-24 12:02:25 +0200🔪Philippe Rivière🔪fix documentation: the diverging scale's default domain is [0, 0.5, 1]🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕da99948🔪2020-06-15 08:16:26 -0700🔪Dominik Moritz🔪Use var🔪
+ src/linear.js | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+☕2751067🔪2020-06-09 14:42:57 +0200🔪Ilya Belsky🔪Fix a typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕96b8f4b🔪2020-05-20 09:50:34 -0700🔪Dominik Moritz🔪Limit the number of iterations in scaleLinear.nice🔪
+ src/linear.js | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕694ed8f🔪2020-05-20 09:25:35 -0700🔪Dominik Moritz🔪Ensure that niced domains always span ticks🔪fixes #209
+
+ src/linear.js       | 62 +++++++++++++++++++++++++----------------------------
+ test/linear-test.js | 30 ++++++++++++++++++++++++++
+ 2 files changed, 59 insertions(+), 33 deletions(-)
+
+☕732ed4b🔪2019-11-23 08:46:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1b5269a🔪2019-11-23 08:45:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+☕9e7aa56🔪2019-11-23 08:40:11 -0800🔪Mike Bostock🔪3.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a8ef733🔪2019-11-23 08:32:28 -0800🔪Mike Bostock🔪Fix ticks for small log domains.🔪
+ src/log.js       | 2 +-
+ test/log-test.js | 5 +++++
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+☕cf2c15b🔪2019-09-08 19:27:48 +0530🔪Shivakumar🔪Adding test cases for SymLog Scale🔪Added new unit test for SymLog Scale.
+
+ test/symlog-test.js (new) | 195 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 195 insertions(+)
+
+☕8999915🔪2019-11-23 07:38:16 -0800🔪Mike Bostock🔪Update yarn.lock.🔪
+ yarn.lock | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕85ccbda🔪2019-11-22 18:00:58 -0600🔪Kevin Kipp🔪Bump d3-interpolate version🔪This package depends on d3-interpolate's `piecewise` function which was added in d3-interpolate@1.2.0.
+https://github.com/d3/d3-scale/blob/master/src/diverging.js#L1
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d81c6dc🔪2019-10-24 07:28:26 -0700🔪Mike Bostock🔪3.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕151f2a0🔪2019-09-02 16:05:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 52 ++++++++++++++++++++++++++--------------------------
+ 1 file changed, 26 insertions(+), 26 deletions(-)
+
+☕0cbbd5c🔪2019-09-02 16:03:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕60858c6🔪2019-09-02 16:00:58 -0700🔪Mike Bostock🔪Fix #188 - {sequential,diverging}.range.🔪
+ README.md               | 20 ++++++++++++++------
+ src/diverging.js        | 14 +++++++++++---
+ src/init.js             | 13 +++++++++++--
+ src/sequential.js       | 14 +++++++++++---
+ test/diverging-test.js  | 21 +++++++++++++++++++++
+ test/sequential-test.js | 21 +++++++++++++++++++++
+ 6 files changed, 89 insertions(+), 14 deletions(-)
+
+☕bcc9711🔪2019-09-02 15:41:14 -0700🔪Mike Bostock🔪Fix #187 - add sequentialQuantile.quantiles.🔪
+ README.md                       | 4 ++++
+ src/sequentialQuantile.js       | 6 +++++-
+ test/sequentialQuantile-test.js | 6 ++++++
+ 3 files changed, 15 insertions(+), 1 deletion(-)
+
+☕e99772a🔪2019-09-02 09:54:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕50e5624🔪2019-09-02 09:46:07 -0700🔪Mike Bostock🔪3.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕864c3ee🔪2019-09-02 09:44:41 -0700🔪Mike Bostock🔪Add sideEffects: false. Related d3/d3#3131.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4300ef7🔪2019-09-02 09:38:08 -0700🔪Mike Bostock🔪Fallback to linear ticks for small domains.🔪Fixes #44.
+Fixes #49.
+Fixes #129.
+
+ src/log.js       | 7 ++++---
+ test/log-test.js | 8 ++++++++
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+☕3d3ac08🔪2019-09-02 09:24:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6f34f42🔪2019-09-02 09:23:37 -0700🔪Mike Bostock🔪More tests.🔪
+ test/radial-test.js | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+☕7efa810🔪2019-09-02 09:11:52 -0700🔪Mike Bostock🔪Add radial.rangeRound; update README.🔪
+ README.md     | 12 ++++++++++--
+ src/radial.js |  4 ++++
+ 2 files changed, 14 insertions(+), 2 deletions(-)
+
+☕1e751e8🔪2019-09-02 08:53:09 -0700🔪Mike Bostock🔪Implement radial.unknown and convenience constructors.🔪
+ src/continuous.js   |  4 ++--
+ src/linear.js       |  4 ++--
+ src/radial.js       | 28 ++++++++++++++++++----------
+ src/time.js         |  4 ++--
+ test/radial-test.js | 30 ++++++++++++++++++++++++++++++
+ 5 files changed, 54 insertions(+), 16 deletions(-)
+
+☕e7b8f15🔪2016-12-16 15:23:56 -0800🔪Mike Bostock🔪Add scaleRadial. Fixes #90.🔪
+ src/index.js              |  4 ++++
+ src/radial.js (new)       | 51 +++++++++++++++++++++++++++++++++++++++++++++++
+ test/radial-test.js (new) | 50 ++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 105 insertions(+)
+
+☕d021b63🔪2019-09-02 08:26:34 -0700🔪Mike Bostock🔪Fix clamp to ignore extra domain values.🔪
+ src/continuous.js   | 12 +++++++-----
+ test/linear-test.js |  8 ++++----
+ 2 files changed, 11 insertions(+), 9 deletions(-)
+
+☕bee6485🔪2019-09-01 21:36:13 -0700🔪Mike Bostock🔪Fix #186 - implement sequential.range.🔪
+ src/diverging.js                      |  4 ++++
+ src/sequential.js                     |  4 ++++
+ src/sequentialQuantile.js             |  4 ++++
+ test/diverging-test.js                |  8 +++++++-
+ test/sequential-test.js               | 12 ++++--------
+ test/sequentialQuantile-test.js (new) | 24 ++++++++++++++++++++++++
+ 6 files changed, 47 insertions(+), 9 deletions(-)
+
+☕18ea228🔪2019-09-01 21:23:19 -0700🔪Mike Bostock🔪Formatting.🔪
+ test/sequential-test.js | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+
+☕cdd3452🔪2019-09-01 21:21:08 -0700🔪Mike Bostock🔪Another fix for descending domains.🔪
+ src/diverging.js       |  2 +-
+ test/diverging-test.js | 24 +++++++++++++++++++++---
+ 2 files changed, 22 insertions(+), 4 deletions(-)
+
+☕903f39d🔪2019-04-23 17:31:38 +0200🔪Philippe Rivière🔪d3.scaleDiverging().domain([2,0,-1]) maps [2,0] to [0,0.5]🔪
+ src/diverging.js       | 5 +++--
+ test/diverging-test.js | 9 +++++++++
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+☕01e9db5🔪2019-05-14 15:01:02 +0200🔪Philippe Rivière🔪d3.scaleIdentity is not useful with brushes anymore since D3 4.0 (https://github.com/d3/d3/blob/master/CHANGES.md#brushes-d3-brush)🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0db99fa🔪2019-08-13 15:07:14 +0200🔪Sylvain Lesage🔪fix: fix broken internal link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1d5109a🔪2019-08-09 16:22:03 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 505 +++++++++++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 388 insertions(+), 123 deletions(-)
+
+☕013aeb8🔪2019-08-09 15:37:25 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/band.js               |  4 ++--
+ src/continuous.js         |  4 ++--
+ src/diverging.js          | 14 +++++++-------
+ src/identity.js           |  4 ++--
+ src/index.js              | 32 ++++++++++++++++----------------
+ src/linear.js             |  6 +++---
+ src/log.js                |  6 +++---
+ src/ordinal.js            |  2 +-
+ src/pow.js                |  6 +++---
+ src/quantile.js           |  2 +-
+ src/quantize.js           |  4 ++--
+ src/sequential.js         | 12 ++++++------
+ src/sequentialQuantile.js |  4 ++--
+ src/symlog.js             |  6 +++---
+ src/threshold.js          |  2 +-
+ src/time.js               |  6 +++---
+ src/utcTime.js            |  4 ++--
+ 17 files changed, 59 insertions(+), 59 deletions(-)
+
+☕3444016🔪2019-07-30 21:55:20 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕201f2a6🔪2019-07-30 21:55:06 -0700🔪Mike Bostock🔪Explicit files.🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕fcb5443🔪2019-07-30 21:54:19 -0700🔪Mike Bostock🔪Simplify version range.🔪
+ package.json | 2 +-
+ yarn.lock    | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕8a8feff🔪2019-07-30 21:51:48 -0700🔪Mike Bostock🔪Remove deprecated step argument. Fixes #183.🔪
+ README.md            |  4 ++--
+ src/time.js          | 16 +++++++++-------
+ test/time-test.js    | 14 +++++++-------
+ test/utcTime-test.js | 14 +++++++-------
+ 4 files changed, 25 insertions(+), 23 deletions(-)
+
+☕d842d6f🔪2019-06-28 15:43:38 +0200🔪Philippe Rivière🔪links to examples🔪
+ README.md | 46 +++++++++++++++++++++++-----------------------
+ 1 file changed, 23 insertions(+), 23 deletions(-)
+
+☕dfffb7a🔪2019-06-26 17:36:53 +0200🔪Philippe Rivière🔪links to examples🔪
+ README.md | 262 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 131 insertions(+), 131 deletions(-)
+
+☕f42151f🔪2019-05-07 15:12:05 -0400🔪nikolas🔪typo fix: shortand -> shorthand🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0dcb80c🔪2019-04-25 11:08:55 +0200🔪Philippe Rivière🔪diverging scales expose .unknown🔪there's nothing specific to say about this, but it exists and should be listed
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕e22963d🔪2019-04-17 23:09:28 +0200🔪Philippe Rivière🔪typos🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕546121e🔪2019-09-01 21:21:08 -0700🔪Mike Bostock🔪Another fix for descending domains.🔪
+ src/diverging.js       |  2 +-
+ test/diverging-test.js | 24 +++++++++++++++++++++---
+ 2 files changed, 22 insertions(+), 4 deletions(-)
+
+☕1409616🔪2019-04-23 17:31:38 +0200🔪Philippe Rivière🔪d3.scaleDiverging().domain([2,0,-1]) maps [2,0] to [0,0.5]🔪
+ src/diverging.js       | 5 +++--
+ test/diverging-test.js | 9 +++++++++
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+☕c8d520f🔪2019-05-14 15:01:02 +0200🔪Philippe Rivière🔪d3.scaleIdentity is not useful with brushes anymore since D3 4.0 (https://github.com/d3/d3/blob/master/CHANGES.md#brushes-d3-brush)🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed008de🔪2019-08-13 15:07:14 +0200🔪Sylvain Lesage🔪fix: fix broken internal link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d8a1f5f🔪2019-08-09 16:22:03 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 505 +++++++++++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 388 insertions(+), 123 deletions(-)
+
+☕7efbc46🔪2019-08-09 15:37:25 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/band.js               |  4 ++--
+ src/continuous.js         |  4 ++--
+ src/diverging.js          | 14 +++++++-------
+ src/identity.js           |  4 ++--
+ src/index.js              | 32 ++++++++++++++++----------------
+ src/linear.js             |  6 +++---
+ src/log.js                |  6 +++---
+ src/ordinal.js            |  2 +-
+ src/pow.js                |  6 +++---
+ src/quantile.js           |  2 +-
+ src/quantize.js           |  4 ++--
+ src/sequential.js         | 12 ++++++------
+ src/sequentialQuantile.js |  4 ++--
+ src/symlog.js             |  6 +++---
+ src/threshold.js          |  2 +-
+ src/time.js               |  6 +++---
+ src/utcTime.js            |  4 ++--
+ 17 files changed, 59 insertions(+), 59 deletions(-)
+
+☕1bcc91c🔪2019-07-30 21:55:20 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2fdedea🔪2019-07-30 21:55:06 -0700🔪Mike Bostock🔪Explicit files.🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕9b886d9🔪2019-07-30 21:54:19 -0700🔪Mike Bostock🔪Simplify version range.🔪
+ package.json | 2 +-
+ yarn.lock    | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕231f22b🔪2019-07-30 21:51:48 -0700🔪Mike Bostock🔪Remove deprecated step argument. Fixes #183.🔪
+ README.md            |  4 ++--
+ src/time.js          | 16 +++++++++-------
+ test/time-test.js    | 14 +++++++-------
+ test/utcTime-test.js | 14 +++++++-------
+ 4 files changed, 25 insertions(+), 23 deletions(-)
+
+☕a04dc0d🔪2019-06-28 15:43:38 +0200🔪Philippe Rivière🔪links to examples🔪
+ README.md | 46 +++++++++++++++++++++++-----------------------
+ 1 file changed, 23 insertions(+), 23 deletions(-)
+
+☕5ce1187🔪2019-06-26 17:36:53 +0200🔪Philippe Rivière🔪links to examples🔪
+ README.md | 262 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 131 insertions(+), 131 deletions(-)
+
+☕1d9c0d6🔪2019-05-07 15:12:05 -0400🔪nikolas🔪typo fix: shortand -> shorthand🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1e35c71🔪2019-04-25 11:08:55 +0200🔪Philippe Rivière🔪diverging scales expose .unknown🔪there's nothing specific to say about this, but it exists and should be listed
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕9d0f909🔪2019-04-17 23:09:28 +0200🔪Philippe Rivière🔪typos🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕154a33f🔪2019-04-17 23:08:25 +0200🔪Philippe Rivière🔪scaleSequentialQuantile() clamps closes https://github.com/d3/d3-scale/issues/172🔪
+ src/sequentialQuantile.js |  2 +-
+ test/sequential-test.js   | 12 ++++++++++++
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+
+☕f50792e🔪2019-04-16 16:30:02 +0200🔪Philippe Rivière🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕63e1e6b🔪2019-04-08 10:05:45 +0200🔪Philippe Rivière🔪fix internal #scaleTime link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8ef7906🔪2019-03-17 20:41:03 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e69f13f🔪2019-03-17 20:40:46 -0700🔪Mike Bostock🔪Prepare for 3.0.0.🔪
+ README.md    |   6 +-
+ package.json |   2 +-
+ yarn.lock    | 589 ++++++++++++++++++++++++-----------------------------------
+ 3 files changed, 246 insertions(+), 351 deletions(-)
+
+☕43ca71c🔪2019-03-17 20:30:56 -0700🔪Mike Bostock🔪Accept iterables. Fixes #163.🔪
+ src/array.js (gone)       |  4 ----
+ src/band.js               | 15 ++++++++-------
+ src/continuous.js         |  7 +++----
+ src/diverging.js          |  2 +-
+ src/identity.js           |  5 ++---
+ src/ordinal.js            | 12 +++++++-----
+ src/quantile.js           |  5 ++---
+ src/quantize.js           |  5 ++---
+ src/sequential.js         |  2 +-
+ src/sequentialQuantile.js |  2 +-
+ src/threshold.js          |  5 ++---
+ src/time.js               |  3 +--
+ test/band-test.js         | 27 +++++++++++++++++++++++++--
+ test/diverging-test.js    |  6 ++++++
+ test/identity-test.js     |  7 +++++++
+ test/linear-test.js       | 15 +++++++++++++++
+ test/ordinal-test.js      | 12 ++++++++++++
+ test/quantile-test.js     | 12 ++++++++++++
+ test/quantize-test.js     |  6 ++++++
+ test/sequential-test.js   |  6 ++++++
+ test/threshold-test.js    | 12 ++++++++++++
+ test/time-test.js         |  6 ++++++
+ 22 files changed, 137 insertions(+), 39 deletions(-)
+
+☕04a7be9🔪2019-03-17 19:36:00 -0700🔪Mike Bostock🔪Fix #165.🔪
+ README.md      | 1 -
+ package.json   | 1 -
+ src/ordinal.js | 5 ++---
+ yarn.lock      | 4 ----
+ 4 files changed, 2 insertions(+), 9 deletions(-)
+
+☕98a39fd🔪2019-03-17 19:25:34 -0700🔪Mike Bostock🔪Fix #94.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕8e9ac5e🔪2019-03-09 13:40:03 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕89703fb🔪2019-01-28 09:54:22 -0800🔪Mike Bostock🔪2.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e09234c🔪2019-01-28 09:54:22 -0800🔪Mike Bostock🔪Add missing export.🔪
+ src/index.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕7eb4b79🔪2019-01-28 09:46:13 -0800🔪Mike Bostock🔪2.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕29a95e8🔪2019-01-28 09:46:05 -0800🔪Mike Bostock🔪Revert "Adopt Map."🔪This reverts commit e29c43383d65680afa93cdce249520e3e516b003.
+
+ README.md      | 1 +
+ package.json   | 1 +
+ src/ordinal.js | 5 +++--
+ yarn.lock      | 4 ++++
+ 4 files changed, 9 insertions(+), 2 deletions(-)
+
+☕9a07b1f🔪2019-01-27 22:23:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+☕d5778cd🔪2019-01-27 22:21:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕b943776🔪2019-01-27 22:11:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕03e1f55🔪2019-01-27 21:44:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕786695c🔪2019-01-27 21:43:21 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8641fad🔪2019-01-27 21:31:05 -0800🔪Mike Bostock🔪2.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0c30bf3🔪2019-01-27 08:17:11 -0800🔪Mike Bostock🔪Fix #83 - add quantize.thresholds.🔪
+ README.md             | 4 ++++
+ src/quantize.js       | 4 ++++
+ test/quantize-test.js | 2 ++
+ 3 files changed, 10 insertions(+)
+
+☕058882b🔪2019-01-26 13:25:35 -0800🔪Mike Bostock🔪Fix #117 (sequential) - use midpoint when collapsed.🔪
+ src/sequential.js       | 2 +-
+ test/sequential-test.js | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕b0bdca4🔪2019-01-26 13:15:21 -0800🔪Mike Bostock🔪Fix #117 - use midpoint when collapsed.🔪
+ src/continuous.js   |  2 +-
+ test/linear-test.js | 12 ++++++------
+ test/pow-test.js    | 12 ++++++------
+ 3 files changed, 13 insertions(+), 13 deletions(-)
+
+☕30876a5🔪2019-01-26 11:59:23 -0800🔪Mike Bostock🔪Fix export.🔪
+ README.md    | 4 ----
+ src/index.js | 3 ++-
+ 2 files changed, 2 insertions(+), 5 deletions(-)
+
+☕3a62189🔪2019-01-26 11:55:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb5f0b3🔪2019-01-26 11:51:22 -0800🔪Mike Bostock🔪Allow unlimited outer padding.🔪Also clarify the documentation for outer padding.
+
+Fixes #101.
+Fixes #102.
+Fixes #132.
+
+ README.md         | 10 +++++-----
+ src/band.js       |  6 +++---
+ test/band-test.js | 10 +++++-----
+ 3 files changed, 13 insertions(+), 13 deletions(-)
+
+☕5d767cb🔪2019-01-26 08:34:45 -0800🔪Mike Bostock🔪Fix #123 - document that quantize.domain must be ascending.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4d89464🔪2019-01-26 08:28:48 -0800🔪Mike Bostock🔪Fix #97 - add scale.unknown.🔪
+ src/continuous.js       | 10 ++++++++--
+ src/diverging.js        | 10 +++++++---
+ src/identity.js         |  9 +++++++--
+ src/quantile.js         | 12 +++++++++---
+ src/quantize.js         | 12 +++++++++---
+ src/sequential.js       | 13 +++++++++----
+ src/threshold.js        | 10 ++++++++--
+ test/linear-test.js     | 23 +++++++++++++++++++++++
+ test/quantile-test.js   | 12 ++++++++++++
+ test/sequential-test.js | 11 +++++++++++
+ 10 files changed, 103 insertions(+), 19 deletions(-)
+
+☕19a03ec🔪2019-01-26 07:52:10 -0800🔪Mike Bostock🔪Add tests for tickFormat.🔪
+ test/tickFormat-test.js (new) | 48 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 48 insertions(+)
+
+☕ac37960🔪2019-01-26 07:49:45 -0800🔪Mike Bostock🔪Expose d3.tickFormat. Fixes #148.🔪
+ README.md         | 16 ++++++++++++++++
+ src/index.js      |  4 ++++
+ src/linear.js     |  3 ++-
+ src/tickFormat.js |  6 ++----
+ 4 files changed, 24 insertions(+), 5 deletions(-)
+
+☕5bfe135🔪2019-01-25 17:16:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕b3d8ce3🔪2019-01-25 17:16:12 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 106 +++++++++++++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 80 insertions(+), 26 deletions(-)
+
+☕9dad02a🔪2019-01-25 16:40:44 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/symlog.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕bf1adbc🔪2019-01-25 16:40:29 -0800🔪Mike Bostock🔪Convenience constructors for all!🔪
+ src/band.js               | 13 ++++---------
+ src/diverging.js          | 34 +++++++++++++++++-----------------
+ src/init.js (new)         | 17 +++++++++++++++++
+ src/linear.js             |  3 +++
+ src/log.js                |  5 ++++-
+ src/ordinal.js            | 13 ++++++-------
+ src/pow.js                |  5 ++++-
+ src/quantile.js           |  3 ++-
+ src/quantize.js           |  3 ++-
+ src/sequential.js         | 34 +++++++++++++++++-----------------
+ src/sequentialQuantile.js |  9 ++++++---
+ src/symlog.js             |  3 +++
+ src/threshold.js          |  3 ++-
+ src/time.js               |  3 ++-
+ src/utcTime.js            |  3 ++-
+ test/linear-test.js       | 16 ++++++++++++++++
+ 16 files changed, 107 insertions(+), 60 deletions(-)
+
+☕f87eeda🔪2019-01-25 16:19:11 -0800🔪Mike Bostock🔪Convenience constructors for identity scales.🔪
+ src/identity.js       | 7 ++++---
+ test/identity-test.js | 7 +++++++
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+
+☕28b4b4a🔪2019-01-25 16:15:49 -0800🔪Mike Bostock🔪Convenience constructors for ordinal scales.🔪
+ README.md         | 12 ++++++------
+ src/band.js       | 16 ++++++++++------
+ src/ordinal.js    | 18 +++++++++---------
+ test/band-test.js | 14 +++++++-------
+ 4 files changed, 32 insertions(+), 28 deletions(-)
+
+☕749e22e🔪2019-01-25 15:39:24 -0800🔪Mike Bostock🔪Simplify.🔪
+ src/symlog.js | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+
+☕23f32d5🔪2019-01-25 14:50:59 -0800🔪Mike Bostock🔪Adopt Webber’s symlog definition.🔪Webber, 2012. A Bi-Symmetric Log transformation for wide-range data. Measurement
+Science and Technology.
+
+ src/diverging.js  | 28 ++++++++++++++++++++++------
+ src/log.js        |  2 +-
+ src/pow.js        |  2 +-
+ src/sequential.js | 28 ++++++++++++++++++++++------
+ src/symlog.js     | 31 +++++++++++++++++++++++--------
+ 5 files changed, 69 insertions(+), 22 deletions(-)
+
+☕a51ea80🔪2019-01-25 14:32:10 -0800🔪Mike Bostock🔪Add symlog scales.🔪
+ src/diverging.js  | 30 ++++++++++--------------------
+ src/index.js      |  4 ++++
+ src/sequential.js | 36 ++++++++++++++++--------------------
+ src/symlog.js     |  8 ++++----
+ 4 files changed, 34 insertions(+), 44 deletions(-)
+
+☕c091e7d🔪2019-01-25 14:18:55 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2427450🔪2019-01-25 13:53:10 -0800🔪Mike Bostock🔪Fix #159 default constructors.🔪
+ src/diverging.js        |  2 ++
+ src/sequential.js       |  2 ++
+ test/diverging-test.js  | 19 +++++++++----------
+ test/sequential-test.js | 19 +++++++++----------
+ 4 files changed, 22 insertions(+), 20 deletions(-)
+
+☕a7671ef🔪2019-01-25 13:49:22 -0800🔪Mike Bostock🔪Revert formatting changes.🔪
+ src/index.js | 78 +++++++++++++++++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 64 insertions(+), 14 deletions(-)
+
+☕0a6350c🔪2019-01-25 13:47:56 -0800🔪Mike Bostock🔪Revert changes to README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕1de765b🔪2019-01-25 13:46:36 -0800🔪Mike Bostock🔪Restore test.🔪
+ test/pow-test.js | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕a1183dc🔪2019-01-25 13:45:38 -0800🔪Mike Bostock🔪Remove exponent and base constructor arguments.🔪
+ src/diverging.js  |  10 +--
+ src/log.js        |   4 +-
+ src/pow.js        |   6 +-
+ src/sequential.js |  10 +--
+ test/pow-test.js  | 224 ++++++++++++++++++++++++++----------------------------
+ 5 files changed, 124 insertions(+), 130 deletions(-)
+
+☕0724fdd🔪2019-01-25 12:05:54 -0800🔪Mike Bostock🔪Fix default divergingLog domain.🔪
+ src/diverging.js  | 2 +-
+ src/log.js        | 8 ++++----
+ src/sequential.js | 2 +-
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+☕93f62cc🔪2019-01-25 11:50:41 -0800🔪Mike Bostock🔪Add scaleSequentialQuantile.🔪
+ src/index.js                    |  1 +
+ src/sequentialQuantile.js (new) | 27 +++++++++++++++++++++++++++
+ 2 files changed, 28 insertions(+)
+
+☕0ac9be5🔪2019-01-25 11:45:54 -0800🔪Mike Bostock🔪Diverging transforms.🔪
+ src/diverging.js            | 60 +++++++++++++++++++++++++++++++++++++++------
+ src/index.js                |  6 ++---
+ src/sequential.js           | 32 +++++++++++++++++++++++-
+ src/sequentialLog.js (gone) | 14 -----------
+ src/sequentialPow.js (gone) | 18 --------------
+ 5 files changed, 86 insertions(+), 44 deletions(-)
+
+☕2f70fdf🔪2019-01-25 11:15:02 -0800🔪Mike Bostock🔪Add d3.scaleSequential{Log,Pow,Sqrt}.🔪
+ src/continuous.js          |  5 ++---
+ src/index.js               |  2 ++
+ src/linear.js              |  4 ++--
+ src/log.js                 | 15 ++++++++++-----
+ src/pow.js                 | 24 +++++++++++++++---------
+ src/sequential.js          | 27 +++++++++++++++++++++------
+ src/sequentialLog.js (new) | 14 ++++++++++++++
+ src/sequentialPow.js (new) | 18 ++++++++++++++++++
+ src/time.js                |  4 ++--
+ 9 files changed, 86 insertions(+), 27 deletions(-)
+
+☕fdd2b15🔪2019-01-25 10:04:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕71c8336🔪2019-01-25 09:34:30 -0800🔪Mike Bostock🔪Remove superfluous coercion.🔪
+ src/continuous.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0fa1462🔪2019-01-25 09:32:02 -0800🔪Mike Bostock🔪Separate functions.🔪
+ src/continuous.js | 14 +++++++-------
+ src/log.js        | 14 +++++++-------
+ src/pow.js        | 29 +++++++++++------------------
+ 3 files changed, 25 insertions(+), 32 deletions(-)
+
+☕84834a3🔪2019-01-25 09:24:35 -0800🔪Mike Bostock🔪Don’t expose transforms.🔪
+ src/continuous.js                | 24 ++++++++++++++--------
+ src/index.js                     |  6 ------
+ src/linear.js                    |  5 ++---
+ src/log.js                       | 27 +++++++++++++++++++------
+ src/pow.js                       | 43 +++++++++++++++++++++++++++++-----------
+ src/symlog.js (new)              | 20 +++++++++++++++++++
+ src/time.js                      |  5 ++---
+ src/transform/identity.js (gone) |  5 -----
+ src/transform/log.js (gone)      |  7 -------
+ src/transform/logn.js (gone)     |  7 -------
+ src/transform/pow.js (gone)      | 10 ----------
+ src/transform/sqrt.js (gone)     |  7 -------
+ src/transform/symlog.js (gone)   |  7 -------
+ test/log-test.js                 |  6 ------
+ test/pow-test.js                 |  6 ------
+ 15 files changed, 92 insertions(+), 93 deletions(-)
+
+☕aa6137d🔪2019-01-25 08:11:29 -0800🔪Mike Bostock🔪Remove default argument.🔪
+ src/continuous.js | 2 +-
+ src/linear.js     | 3 ++-
+ src/time.js       | 3 ++-
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+☕3239e91🔪2019-01-06 15:45:50 -0800🔪Mike Bostock🔪Fix coercion.🔪
+ src/pow.js       |  4 ++--
+ test/pow-test.js | 10 ++++++++--
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+
+☕a432a51🔪2019-01-06 15:45:39 -0800🔪Mike Bostock🔪Fix whitespace.🔪
+ src/transform/symlog.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e342617🔪2019-01-06 09:06:14 -0800🔪Mike Bostock🔪Add transformSymlog; fixes #105.🔪
+ src/index.js                  | 1 +
+ src/transform/symlog.js (new) | 7 +++++++
+ 2 files changed, 8 insertions(+)
+
+☕baeade5🔪2019-01-06 08:59:30 -0800🔪Mike Bostock🔪Expose continuous.transform.🔪
+ README.md                       |   2 +-
+ src/continuous.js               |  12 +-
+ src/index.js                    |  72 +++---------
+ src/log.js                      |  19 +---
+ src/pow.js                      |  29 +++--
+ src/transform/identity.js (new) |   5 +
+ src/transform/log.js (new)      |   7 ++
+ src/transform/logn.js (new)     |   7 ++
+ src/transform/pow.js (new)      |  10 ++
+ src/transform/sqrt.js (new)     |   7 ++
+ test/log-test.js                |   6 +
+ test/pow-test.js                | 236 ++++++++++++++++++++--------------------
+ test/sqrt-test.js (new)         |  19 ++++
+ 13 files changed, 223 insertions(+), 208 deletions(-)
+
+☕e3da4b7🔪2019-01-05 17:31:39 -0800🔪Mike Bostock🔪Optimize log transform.🔪
+ src/log.js | 19 +++++++++++++++----
+ 1 file changed, 15 insertions(+), 4 deletions(-)
+
+☕9fe496e🔪2019-01-05 17:25:29 -0800🔪Mike Bostock🔪Arbitrary transforms for continuous scales.🔪
+ src/continuous.js | 54 ++++++++++++++++++++++++++----------------------------
+ src/linear.js     |  5 ++---
+ src/log.js        | 30 ++++++++++--------------------
+ src/pow.js        | 20 ++++++--------------
+ src/time.js       |  5 ++---
+ 5 files changed, 46 insertions(+), 68 deletions(-)
+
+☕63e3164🔪2018-11-27 12:50:40 +0100🔪Philippe Rivière🔪internal link for unknown🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bce1416🔪2018-11-24 07:35:19 -0800🔪Mike Bostock🔪Fix a few broken anchors.🔪Fixes d3/d3#3316. Thanks for spotting this, @arielbk.
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕56a79db🔪2018-11-18 22:02:03 -0500🔪raja-s🔪Fixed call to "map" forgotten in e29c433🔪
+ src/ordinal.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e29c433🔪2018-11-10 22:07:25 -0800🔪Mike Bostock🔪Adopt Map.🔪
+ README.md      | 1 -
+ package.json   | 1 -
+ src/ordinal.js | 3 +--
+ yarn.lock      | 4 ----
+ 4 files changed, 1 insertion(+), 8 deletions(-)
+
+☕dcc51a1🔪2018-08-24 14:34:50 -0700🔪Mike Bostock🔪2.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6cae66f🔪2018-08-24 14:34:47 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕9b3a141🔪2018-08-24 14:06:27 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e83ac9c🔪2018-08-24 13:45:11 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             |  9 +++++----
+ rollup.config.js         |  6 +++---
+ index.js => src/index.js | 26 +++++++++++++-------------
+ 3 files changed, 21 insertions(+), 20 deletions(-)
+
+☕4548099🔪2018-08-24 12:32:38 -0700🔪Mike Bostock🔪2.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f47c6d2🔪2018-08-24 12:32:35 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |  13 -
+ .eslintrc.json (new)     |  15 +
+ .npmignore               |   1 +
+ d3-scale.sublime-project |   4 +-
+ package.json             |  19 +-
+ rollup.config.js         |  42 +-
+ yarn.lock (new)          | 967 +++++++++++++++++++++++++++++++++++++++++++++++
+ 7 files changed, 1026 insertions(+), 35 deletions(-)
+
+☕7e40ca7🔪2018-06-18 10:17:05 -0700🔪Jeffrey Heer🔪Fix divergingScale source link in README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2df9f6d🔪2018-06-16 11:03:11 -0700🔪Mike Bostock🔪2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕64a3fcb🔪2018-06-16 10:52:36 -0700🔪Mike Bostock🔪Consistent order.🔪
+ src/sequential.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕660255f🔪2018-06-16 10:44:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 192 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 96 insertions(+), 96 deletions(-)
+
+☕cb087da🔪2018-06-16 10:40:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d9d8e89🔪2018-06-16 08:51:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕082a4a1🔪2018-06-16 08:40:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 37 +++++++++++++++++++++++++++++++++++--
+ 1 file changed, 35 insertions(+), 2 deletions(-)
+
+☕e7710aa🔪2018-06-16 08:29:15 -0700🔪Mike Bostock🔪Handle degenerate domains. Related #130🔪
+ src/diverging.js       |  6 ++++--
+ src/sequential.js      |  6 +++---
+ test/diverging-test.js | 34 ++++++++++++++++++++++++++++++++++
+ 3 files changed, 41 insertions(+), 5 deletions(-)
+
+☕cbfd089🔪2018-06-16 08:04:49 -0700🔪Mike Bostock🔪Add scaleDiverging.🔪Fixes #142.
+
+ d3-scale.sublime-project     | 16 ++++++----
+ index.js                     |  4 +++
+ src/diverging.js (new)       | 31 +++++++++++++++++++
+ test/diverging-test.js (new) | 71 ++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 116 insertions(+), 6 deletions(-)
+
+☕840f1d5🔪2018-06-16 08:15:21 -0700🔪Mike Bostock🔪Fix #130🔪
+ src/sequential.js       |  5 +++--
+ test/sequential-test.js | 19 +++++++++++++++++++
+ 2 files changed, 22 insertions(+), 2 deletions(-)
+
+☕c3d8cfd🔪2018-06-16 08:07:34 -0700🔪Mike Bostock🔪Fix #137🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕916f68e🔪2018-01-28 11:02:45 -0800🔪Mike Bostock🔪2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1e0bf8🔪2018-01-28 11:02:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕538bfa8🔪2018-01-28 10:59:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕57bc7fb🔪2018-01-28 10:58:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                  |  86 +--------------------------------------------
+ img/category10.png (gone)  | Bin 3387 -> 0 bytes
+ img/category20.png (gone)  | Bin 3443 -> 0 bytes
+ img/category20b.png (gone) | Bin 3437 -> 0 bytes
+ img/category20c.png (gone) | Bin 3432 -> 0 bytes
+ img/cool.png (gone)        | Bin 4047 -> 0 bytes
+ img/cubehelix.png (gone)   | Bin 4101 -> 0 bytes
+ img/inferno.png (gone)     | Bin 4326 -> 0 bytes
+ img/magma.png (gone)       | Bin 4267 -> 0 bytes
+ img/plasma.png (gone)      | Bin 4318 -> 0 bytes
+ img/rainbow.png (gone)     | Bin 4143 -> 0 bytes
+ img/viridis.png (gone)     | Bin 4387 -> 0 bytes
+ img/warm.png (gone)        | Bin 4000 -> 0 bytes
+ 13 files changed, 1 insertion(+), 85 deletions(-)
+
+☕7819336🔪2018-01-28 10:55:36 -0800🔪Mike Bostock🔪Remove color schemes.🔪They now reside in d3-scale-chromatic. (Except for the category20* color
+schemes, which are removed entirely #88 #96.)
+
+ README.md                       | 12 ++++++------
+ index.js                        | 33 ---------------------------------
+ package.json                    |  4 ++--
+ src/category10.js (gone)        |  3 ---
+ src/category20.js (gone)        |  3 ---
+ src/category20b.js (gone)       |  3 ---
+ src/category20c.js (gone)       |  3 ---
+ src/cubehelix.js (gone)         |  4 ----
+ src/rainbow.js (gone)           | 17 -----------------
+ src/viridis.js (gone)           | 16 ----------------
+ test/category10-test.js (gone)  |  7 -------
+ test/category20-test.js (gone)  |  7 -------
+ test/category20b-test.js (gone) |  7 -------
+ test/category20c-test.js (gone) |  7 -------
+ test/cubehelix-test.js (gone)   | 11 -----------
+ test/rainbow-test.js (gone)     | 18 ------------------
+ test/viridis-test.js (gone)     | 18 ------------------
+ 17 files changed, 8 insertions(+), 165 deletions(-)
+
+☕ccbcc05🔪2018-01-28 10:26:14 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .gitignore               |  2 +-
+ .npmignore               |  2 +-
+ d3-scale.sublime-project |  2 +-
+ package.json             | 14 +++++++-------
+ rollup.config.js (new)   | 14 ++++++++++++++
+ 5 files changed, 24 insertions(+), 10 deletions(-)
+
+☕8896a15🔪2017-11-21 16:37:46 -0500🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d544842🔪2017-11-21 16:37:34 -0500🔪Mike Bostock🔪Fix tests for tiny intervals.🔪
+ test/time-test.js    | 4 ++--
+ test/utcTime-test.js | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕07e829c🔪2017-08-09 18:07:37 -0400🔪Robert Plante🔪Allow Tiny Intervals🔪If you get close enough to the millisecond values things start to get screwy. This change essentially ensures that ticks always come back even if looking at a range of only a few milliseconds.
+ src/time.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c8c282🔪2017-05-15 12:05:09 -0700🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕396d1c9🔪2017-05-15 12:03:52 -0700🔪Mike Bostock🔪Fix #81 - use d3.tickIncrement for linear.nice.🔪
+ package.json  |  4 ++--
+ src/linear.js | 40 ++++++++++++++++++++++++++++++----------
+ 2 files changed, 32 insertions(+), 12 deletions(-)
+
+☕4e2ed12🔪2017-05-09 10:43:16 -0700🔪Mike Bostock🔪Revise domain nicing.🔪
+ src/linear.js | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕4837cf8🔪2017-05-09 10:04:26 -0700🔪danielyule🔪Fix for nice() at certain scales.🔪nice() was calculating the step value twice, but using the initial
+endpoints to calculate the final domain.  Instead, it now
+updates the endpoints each time after calculating the step.
+
+ src/linear.js       | 8 ++++----
+ test/linear-test.js | 2 ++
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+☕4a35a24🔪2017-03-10 09:49:37 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b010c3f🔪2017-03-10 09:49:27 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕2225fe6🔪2016-11-22 16:47:47 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕25d07e3🔪2016-11-22 16:47:34 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 4 +---
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 5 deletions(-)
+
+☕e98b176🔪2016-11-03 12:07:12 +0530🔪Curran Kelleher🔪Correct typo: domain -> range. Closes #82🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕88896e6🔪2016-10-09 11:54:48 +0300🔪Dmitriy Semyushkin🔪Fix two internal links #implicit → #scaleImplicit🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ab2c5d0🔪2016-08-29 11:29:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4aea63d🔪2016-08-29 11:28:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e42e2f9🔪2016-08-29 11:22:33 -0700🔪Mike Bostock🔪Update README. Fixes d3/d3-3.x-api-reference#5.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕376bf2e🔪2016-08-23 00:24:37 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 174 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 87 insertions(+), 87 deletions(-)
+
+☕39ce952🔪2016-08-04 08:31:07 +0200🔪Jeroen🔪Fix typo🔪[39] -> ... use ... to ... using ...
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e994a5🔪2016-08-02 14:32:28 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ccb1f3e🔪2016-08-02 14:32:28 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕9620d29🔪2016-07-29 15:50:34 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e9124ee🔪2016-07-29 15:50:30 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6e9ee93🔪2016-07-10 22:37:26 -0400🔪Mike Bostock🔪Update postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e44ce37🔪2016-07-10 22:34:49 -0400🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0365ee3🔪2016-07-08 06:45:53 +0100🔪Daniel Gavrilov🔪Fix band & point scale hyperlinks in README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕16d5789🔪2016-06-29 14:09:21 -0700🔪Mike Bostock🔪Deprecate the optional step.🔪
+ README.md | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕8d1e283🔪2016-06-24 10:54:13 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed1a14b🔪2016-06-24 10:54:09 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md            | 8 ++++----
+ package.json         | 8 ++++----
+ test/time-test.js    | 2 +-
+ test/utcTime-test.js | 2 +-
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+
+☕989fc81🔪2016-06-23 14:37:03 -0700🔪Mike Bostock🔪Fix order of ticks for huge log domains.🔪
+ src/log.js       | 3 +--
+ test/log-test.js | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+☕119bc4f🔪2016-06-19 11:41:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a974209🔪2016-06-19 11:39:02 -0700🔪Mike Bostock🔪More tests for sequential.interpolator.🔪
+ test/sequential-test.js | 22 +++++++++++++---------
+ 1 file changed, 13 insertions(+), 9 deletions(-)
+
+☕95cc817🔪2016-06-19 23:54:07 +0530🔪Curran🔪Rename interpolate -> interpolator🔪
+ README.md               |  8 ++++----
+ src/sequential.js       | 10 +++++-----
+ test/sequential-test.js |  8 ++++----
+ 3 files changed, 13 insertions(+), 13 deletions(-)
+
+☕5210b74🔪2016-06-19 23:51:39 +0530🔪Curran🔪Correct test description, factory -> function🔪
+ test/sequential-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕34bd648🔪2016-06-19 23:46:37 +0530🔪Curran🔪Update documentation🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2ef3cd6🔪2016-06-19 23:26:22 +0530🔪Curran🔪Revert to original test, with constructor argument🔪
+ test/sequential-test.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕07f78c0🔪2016-06-19 09:31:15 -0700🔪Mike Bostock🔪0.9.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2aca423🔪2016-06-19 09:31:11 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 12 ++++++------
+ package.json | 14 +++++++-------
+ 2 files changed, 13 insertions(+), 13 deletions(-)
+
+☕59b7fdc🔪2016-06-19 21:57:48 +0530🔪Curran🔪Remove interpolator from constructor in test (cleaner).🔪
+ test/sequential-test.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕b193019🔪2016-06-19 21:51:49 +0530🔪Curran🔪Update docs. Closes #67🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕4500a9a🔪2016-06-19 21:49:17 +0530🔪Curran🔪Add implementation🔪
+ src/sequential.js | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕339e7c6🔪2016-06-19 21:41:23 +0530🔪Curran🔪Add failing test🔪
+ test/sequential-test.js | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+☕0389925🔪2016-06-15 12:37:24 -0700🔪Mike Bostock🔪0.9.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9dab7c4🔪2016-06-15 12:36:27 -0700🔪Mike Bostock🔪Fix #68 - fix interpolateCubehelixDefault.🔪
+ src/cubehelix.js             |  4 +---
+ test/cubehelix-test.js (new) | 11 +++++++++++
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+☕87972e2🔪2016-06-14 09:22:22 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕fc03341🔪2016-06-13 10:45:13 -0700🔪Mike Bostock🔪0.9.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ce20af🔪2016-06-13 10:20:03 -0700🔪Mike Bostock🔪Fix #65 - coerce domain to date.🔪Previously it was possible to set a time scale’s domain to valid numbers but not
+valid dates: the allowable range for Number is much larger than the allowable
+range for Date. (The latter is only ±8.64e15!) By coercing the domain to date,
+we avoid a nearly-infinite loop when trying to compute ticks.
+
+ src/time.js       | 11 ++++++++---
+ test/time-test.js |  8 ++++++++
+ 2 files changed, 16 insertions(+), 3 deletions(-)
+
+☕3370d41🔪2016-06-09 16:31:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕c2f525a🔪2016-06-07 20:39:15 -0700🔪Mike Bostock🔪0.9.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6a81928🔪2016-06-07 20:39:03 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 20 ++++++++++----------
+ index.js     |  4 ----
+ package.json | 26 +++++++++++++-------------
+ 3 files changed, 23 insertions(+), 27 deletions(-)
+
+☕d50b051🔪2016-06-06 16:42:24 -0700🔪Mike Bostock🔪0.8.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f786d0c🔪2016-06-06 16:42:20 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕e501956🔪2016-06-06 16:18:16 -0700🔪Mike Bostock🔪Fix #63 - don’t assume ordinal & sequential.🔪This also removes sequential.quantize; I will replace that with something that
+works with any interpolator.
+
+ README.md                | 90 +++++++++++++++++++++---------------------------
+ index.js                 | 24 ++++++-------
+ src/category10.js        |  7 +---
+ src/category20.js        |  7 +---
+ src/category20b.js       |  7 +---
+ src/category20c.js       |  7 +---
+ src/cubehelix.js         |  5 +--
+ src/ordinal.js           |  5 +--
+ src/rainbow.js           | 28 ++++++---------
+ src/sequential.js        |  5 ---
+ src/viridis.js           |  8 ++---
+ test/category10-test.js  | 26 ++------------
+ test/category20-test.js  | 26 ++------------
+ test/category20b-test.js | 26 ++------------
+ test/category20c-test.js | 26 ++------------
+ test/rainbow-test.js     | 64 +++++-----------------------------
+ test/sequential-test.js  |  6 ----
+ test/viridis-test.js     | 51 ++++++---------------------
+ 18 files changed, 106 insertions(+), 312 deletions(-)
+
+☕5365d2b🔪2016-06-06 14:06:22 -0700🔪Mike Bostock🔪Fix #61 - add sequential.quantize.🔪
+ README.md               | 24 ++++++++++++++++++++++--
+ src/sequential.js       |  5 +++++
+ test/sequential-test.js |  6 ++++++
+ 3 files changed, 33 insertions(+), 2 deletions(-)
+
+☕15ea012🔪2016-06-06 11:59:10 -0700🔪Mike Bostock🔪Simpler.🔪
+ src/viridis.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕86f5db6🔪2016-06-06 11:45:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕c67b838🔪2016-06-06 11:43:04 -0700🔪Mike Bostock🔪Fix rounding in color ramps.🔪We were slightly penalizing the first and last color.
+
+Also, we now clamp inside the ramp function, rather than relying on
+sequential.clamp. That wasn’t reliable because the clamp function would get re-
+exposed if you called sequential.copy!
+
+ src/viridis.js       | 30 ++++++++++--------------------
+ test/viridis-test.js |  1 -
+ 2 files changed, 10 insertions(+), 21 deletions(-)
+
+☕7373ec0🔪2016-05-23 15:23:57 -0700🔪Mike Bostock🔪0.7.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕33da621🔪2016-05-23 15:21:12 -0700🔪Mike Bostock🔪Fix #56 - expose d3.scaleSequential.🔪
+ README.md                     | 41 +++++++++++++++++++++++++------
+ index.js                      |  3 +++
+ test/sequential-test.js (new) | 56 +++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 93 insertions(+), 7 deletions(-)
+
+☕5330802🔪2016-05-23 15:06:46 -0700🔪Mike Bostock🔪Defer interpolation creation.🔪This avoids creating interpolators that are unused, such as a scale that is
+never inverted and the intermediate state of a scale during copy.
+
+ src/continuous.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕959f6d5🔪2016-05-20 14:16:45 -0700🔪Mike Bostock🔪0.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8e046f2🔪2016-05-20 14:16:28 -0700🔪Mike Bostock🔪Update d3-interpolate, d3-color.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕31e01e1🔪2016-05-18 09:52:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕85691b6🔪2016-05-14 20:59:28 -0700🔪Mike Bostock🔪Fix whitespace.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6c6c7d8🔪2016-05-14 15:41:22 -0700🔪Mike Bostock🔪Update to ESLint 2. Fixes #59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕0f676a9🔪2016-05-02 09:25:05 -0700🔪Mike Bostock🔪Fix post-publish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0540c9c🔪2016-04-29 13:50:21 -0700🔪Mike Bostock🔪0.7.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ec1be31🔪2016-04-29 13:50:19 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕3cc1011🔪2016-04-29 13:49:33 -0700🔪Mike Bostock🔪Fix #57 - accept and ignore count.🔪
+ README.md            | 4 ++--
+ src/time.js          | 2 +-
+ test/time-test.js    | 4 ++--
+ test/utcTime-test.js | 4 ++--
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+☕b90c921🔪2016-03-23 12:25:02 +0000🔪Luca Sbardella🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8529d1a🔪2016-03-15 10:22:10 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕85106dc🔪2016-03-14 13:10:37 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕ab70edf🔪2016-03-14 12:37:40 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕85c3d9a🔪2016-03-11 10:36:51 -0800🔪Mike Bostock🔪Fix #54.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕24e2cb6🔪2016-03-06 15:11:26 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ef7c53🔪2016-03-04 09:50:29 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8df87f9🔪2016-03-01 14:14:57 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 4 ++++
+ package.json | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+☕97c2fdb🔪2016-02-28 09:34:03 -0800🔪Mike Bostock🔪0.6.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕af93ffd🔪2016-02-28 09:33:57 -0800🔪Mike Bostock🔪Update d3-interpolate.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕0028d6b🔪2016-02-26 13:44:31 -0800🔪Mike Bostock🔪0.6.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕403f563🔪2016-02-26 13:43:49 -0800🔪Mike Bostock🔪Update d3-interpolate.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕33b39ef🔪2016-02-24 15:59:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕3e96d45🔪2016-02-22 09:23:22 -0800🔪Mike Bostock🔪0.6.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a8e5b15🔪2016-02-22 09:22:15 -0800🔪Mike Bostock🔪Rename.🔪
+ src/category10.js  | 4 ++--
+ src/category20.js  | 4 ++--
+ src/category20b.js | 4 ++--
+ src/category20c.js | 4 ++--
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+
+☕c9bca8f🔪2016-02-22 09:20:52 -0800🔪Mike Bostock🔪Lazily construct interpolators.🔪
+ src/rainbow.js | 31 +++++++++++--------------------
+ 1 file changed, 11 insertions(+), 20 deletions(-)
+
+☕e64ce9b🔪2016-02-22 09:19:56 -0800🔪Mike Bostock🔪Lazily construct bisector.🔪
+ src/time.js | 55 +++++++++++++++++++++++++++----------------------------
+ 1 file changed, 27 insertions(+), 28 deletions(-)
+
+☕98d0957🔪2016-02-22 09:15:43 -0800🔪Mike Bostock🔪Lazily initialize log tick formats.🔪
+ src/log.js | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕1f4050f🔪2016-02-22 09:13:32 -0800🔪Mike Bostock🔪Static category ranges.🔪
+ src/category10.js  | 4 +++-
+ src/category20.js  | 4 +++-
+ src/category20b.js | 4 +++-
+ src/category20c.js | 4 +++-
+ 4 files changed, 12 insertions(+), 4 deletions(-)
+
+☕f08b384🔪2016-02-21 16:31:02 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8a2c07🔪2016-02-10 14:47:37 -0800🔪Mike Bostock🔪Fix #52 - README links.🔪
+ README.md | 26 ++++++++++++++------------
+ 1 file changed, 14 insertions(+), 12 deletions(-)
+
+☕b6a7e1f🔪2016-02-03 14:05:22 -0800🔪Mike Bostock🔪Adopt ESLint for tests.🔪
+ .eslintrc                |  3 ++
+ package.json             |  2 +-
+ test/category10-test.js  |  6 ++--
+ test/category20-test.js  |  6 ++--
+ test/category20b-test.js |  6 ++--
+ test/category20c-test.js |  6 ++--
+ test/identity-test.js    | 55 +++++++++++++++++------------------
+ test/linear-test.js      | 60 +++++++++++++++++++--------------------
+ test/log-test.js         | 16 +++++------
+ test/ordinal-test.js     |  2 +-
+ test/pow-test.js         | 74 ++++++++++++++++++++++++------------------------
+ test/quantile-test.js    |  6 ++--
+ 12 files changed, 123 insertions(+), 119 deletions(-)
+
+☕90c1fca🔪2016-02-03 13:51:10 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ README.md            |  6 +++---
+ package.json         |  4 ++--
+ test/linear-test.js  | 34 +++++++++++++++++-----------------
+ test/log-test.js     | 30 +++++++++++++++---------------
+ test/pow-test.js     | 34 +++++++++++++++++-----------------
+ test/rainbow-test.js | 28 ++++++++++++++--------------
+ test/time-test.js    |  4 ++--
+ test/utcTime-test.js |  4 ++--
+ 8 files changed, 72 insertions(+), 72 deletions(-)
+
+☕58f8892🔪2016-02-02 16:17:58 +0500🔪Brian Ng🔪Fix typos🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2674b87🔪2016-02-01 12:25:14 -0800🔪Mike Bostock🔪Remove binding of interpolator parameters.🔪Now that d3.interpolateBind has been removed (see d3/d3-ease#13), there’s no
+need to support automatic binding of optional interpolator parameters.
+
+ README.md         | 21 +++++++++++++++------
+ package.json      |  6 +++---
+ src/continuous.js |  6 +++---
+ 3 files changed, 21 insertions(+), 12 deletions(-)
+
+☕501d81e🔪2016-01-29 10:32:03 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕a30349f🔪2016-01-26 17:48:54 -0800🔪Mike Bostock🔪The default log tick format count is now 10.🔪Previously if you didn’t specify a log tick format count, the ticks would not be
+filtered. Now, for consistency with other scales, it defaults to ten. If you
+want unfiltered ticks, you can specify a count of Infinity.
+
+Fixes d3/d3-axis#3.
+
+ README.md        |  8 ++++----
+ package.json     |  2 +-
+ src/log.js       |  3 ++-
+ test/log-test.js | 12 ++++++------
+ 4 files changed, 13 insertions(+), 12 deletions(-)
+
+☕fd07dd8🔪2016-01-20 17:22:47 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new)    | 12 ++++++++++++
+ package.json       |  2 +-
+ src/band.js        |  4 ++--
+ src/category10.js  |  2 +-
+ src/category20.js  |  2 +-
+ src/category20b.js |  2 +-
+ src/category20c.js |  2 +-
+ src/colors.js      |  2 +-
+ src/constant.js    |  2 +-
+ src/continuous.js  |  8 ++++----
+ src/cubehelix.js   |  2 +-
+ src/identity.js    |  4 ++--
+ src/linear.js      |  4 ++--
+ src/log.js         |  2 +-
+ src/nice.js        |  2 +-
+ src/number.js      |  2 +-
+ src/ordinal.js     |  2 +-
+ src/pow.js         |  4 ++--
+ src/quantile.js    |  2 +-
+ src/quantize.js    |  2 +-
+ src/rainbow.js     |  6 +++---
+ src/sequential.js  |  2 +-
+ src/threshold.js   |  2 +-
+ src/tickFormat.js  |  2 +-
+ src/time.js        |  4 ++--
+ src/utcTime.js     |  2 +-
+ src/viridis.js     |  8 ++++----
+ 27 files changed, 51 insertions(+), 39 deletions(-)
+
+☕a20f775🔪2016-01-12 10:35:31 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕15157cd🔪2016-01-12 08:59:55 -0800🔪Mike Bostock🔪Don’t crash in tickFormat when the domain is invalid.🔪Previously the tick format could be set to ",.NaNf", which is invalid. Now ",f"
+is used instead, which simply uses the default precision.
+
+ src/tickFormat.js   | 44 +++++++++++++++++++++-----------------------
+ test/linear-test.js |  7 +++++++
+ 2 files changed, 28 insertions(+), 23 deletions(-)
+
+☕1fa8f03🔪2016-01-08 11:05:59 -0800🔪Mike Bostock🔪Use a symbol name for debugging.🔪
+ src/ordinal.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕85f56b9🔪2016-01-08 10:29:49 -0800🔪Mike Bostock🔪Consistent ordering.🔪
+ README.md   | 16 ++++++++--------
+ src/log.js  | 14 +++++++-------
+ src/time.js | 14 +++++++-------
+ 3 files changed, 22 insertions(+), 22 deletions(-)
+
+☕1b8d982🔪2016-01-08 10:27:42 -0800🔪Mike Bostock🔪Document inherited methods.🔪
+ README.md | 34 +++++++++++++++++++++++++++++++---
+ 1 file changed, 31 insertions(+), 3 deletions(-)
+
+☕21b9f6c🔪2016-01-08 10:23:59 -0800🔪Mike Bostock🔪Document inherited methods.🔪
+ README.md | 36 ++++++++++++++++++++++++++++++++++--
+ 1 file changed, 34 insertions(+), 2 deletions(-)
+
+☕1a6b402🔪2016-01-08 10:22:00 -0800🔪Mike Bostock🔪Document inherited methods.🔪
+ README.md | 46 +++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 45 insertions(+), 1 deletion(-)
+
+☕2daee68🔪2016-01-08 10:16:23 -0800🔪Mike Bostock🔪Expand documentation for point scales.🔪
+ README.md | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 50 insertions(+), 6 deletions(-)
+
+☕7497abb🔪2016-01-07 19:44:24 -0500🔪Zach Rausnitz🔪Fix links in README🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2cc073c🔪2016-01-07 15:02:43 -0800🔪Mike Bostock🔪Prefix exported symbols with “scale”.🔪
+ README.md                |  94 +++++++++----------
+ index.js                 |  99 ++++++++++++++++----
+ test/band-test.js        |  50 +++++-----
+ test/category10-test.js  |  10 +-
+ test/category20-test.js  |  10 +-
+ test/category20b-test.js |  10 +-
+ test/category20c-test.js |  10 +-
+ test/identity-test.js    |  57 +++++++-----
+ test/linear-test.js      | 222 ++++++++++++++++++++++----------------------
+ test/log-test.js         |  84 ++++++++---------
+ test/ordinal-test.js     |  44 ++++-----
+ test/point-test.js       |  20 ++--
+ test/pow-test.js         | 234 +++++++++++++++++++++++------------------------
+ test/quantile-test.js    |  34 +++----
+ test/quantize-test.js    |  26 +++---
+ test/rainbow-test.js     |  14 +--
+ test/threshold-test.js   |  14 +--
+ test/time-test.js        |  92 +++++++++----------
+ test/utcTime-test.js     | 180 ++++++++++++++++++------------------
+ test/viridis-test.js     |  12 +--
+ 20 files changed, 692 insertions(+), 624 deletions(-)
+
+☕a830459🔪2016-01-07 14:49:14 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ README.md         |  8 ++++----
+ package.json      | 10 +++++-----
+ src/time.js       |  6 +++---
+ test/time-test.js | 24 ++++++++++++------------
+ 4 files changed, 24 insertions(+), 24 deletions(-)
+
+☕2bd8146🔪2016-01-07 13:42:10 -0800🔪Mike Bostock🔪Update d3-interpolate.🔪
+ README.md            | 28 ++++++++++++++--------------
+ package.json         |  2 +-
+ src/continuous.js    |  8 ++++----
+ src/cubehelix.js     |  4 ++--
+ src/linear.js        |  2 +-
+ src/rainbow.js       |  6 +++---
+ src/time.js          |  2 +-
+ test/log-test.js     | 10 +++++-----
+ test/time-test.js    |  2 +-
+ test/utcTime-test.js |  2 +-
+ 10 files changed, 33 insertions(+), 33 deletions(-)
+
+☕87a8518🔪2016-01-07 12:40:24 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ README.md      | 3 ++-
+ package.json   | 7 ++++---
+ src/ordinal.js | 2 +-
+ 3 files changed, 7 insertions(+), 5 deletions(-)
+
+☕49682aa🔪2016-01-06 00:46:39 -0600🔪Brian Ng🔪Fix couple links in README🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕13b2277🔪2015-12-29 07:01:14 -0800🔪Mike Bostock🔪Fix #43 - sequential.copy.🔪
+ src/sequential.js          |  4 +--
+ test/quantize-test.js      | 12 ++++++---
+ test/rainbow-test.js (new) | 64 ++++++++++++++++++++++++++++++++++++++++++++++
+ test/viridis-test.js (new) | 48 ++++++++++++++++++++++++++++++++++
+ 4 files changed, 122 insertions(+), 6 deletions(-)
+
+☕25a7248🔪2015-12-28 09:57:39 -0800🔪Mike Bostock🔪Add link to introduction.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕ec8dd44🔪2015-12-22 16:27:19 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1e85a3d🔪2015-12-22 16:25:46 -0800🔪Mike Bostock🔪Prefix static methods.🔪
+ README.md | 52 ++++++++++++++++++++++++++--------------------------
+ 1 file changed, 26 insertions(+), 26 deletions(-)
+
+☕8abaf35🔪2015-12-22 13:15:39 -0800🔪Mike Bostock🔪Related #41 - change to colorbrewer2.org.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db105d1🔪2015-12-22 10:20:29 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕e72e022🔪2015-12-22 10:19:12 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕5df7f54🔪2015-12-22 10:09:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕9465dae🔪2015-12-22 10:06:54 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕38626ce🔪2015-12-22 10:03:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕3aa37b8🔪2015-12-22 09:56:13 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md             | 54 +++++++++++++++++++++++++++++++--------------------
+ src/quantize.js       |  2 +-
+ test/quantize-test.js |  4 ++--
+ 3 files changed, 36 insertions(+), 24 deletions(-)
+
+☕1bd6ff8🔪2015-12-22 09:46:45 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md           |  58 ++++++++++++++++++++++++++++++++++++++++++++++++++--
+ img/band.png (new)  | Bin 0 -> 13961 bytes
+ img/point.png (new) | Bin 0 -> 7287 bytes
+ 3 files changed, 56 insertions(+), 2 deletions(-)
+
+☕208f934🔪2015-12-22 09:38:48 -0800🔪Mike Bostock🔪Rename band.band to band.bandwidth.🔪
+ README.md          | 10 +++++-----
+ src/band.js        | 10 +++++-----
+ test/band-test.js  | 54 +++++++++++++++++++++++++++---------------------------
+ test/point-test.js |  8 ++++----
+ 4 files changed, 41 insertions(+), 41 deletions(-)
+
+☕176d709🔪2015-12-22 09:31:45 -0800🔪Mike Bostock🔪Rename “reuse” to “implicit”.🔪You can reuse range values in an ordinal scale regardless of the unknown value!
+This name better implies that unknown values are implicitly added to the domain.
+
+ README.md            | 197 ++++++++++++++++++++-------------------------------
+ index.js             |   2 +-
+ src/ordinal.js       |   6 +-
+ test/ordinal-test.js |   4 +-
+ 4 files changed, 84 insertions(+), 125 deletions(-)
+
+☕007118a🔪2015-12-22 09:12:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9484ccc🔪2015-12-22 09:11:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕7bbc0cb🔪2015-12-22 09:11:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 +++++++++++++++-------------
+ 1 file changed, 15 insertions(+), 13 deletions(-)
+
+☕5430a00🔪2015-12-22 09:06:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕35cf79a🔪2015-12-22 09:05:13 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9138ea5🔪2015-12-22 09:04:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕996782b🔪2015-12-22 09:03:50 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5424647🔪2015-12-22 09:03:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7b7ad37🔪2015-12-22 09:02:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕78ef0fd🔪2015-12-22 09:02:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b8876a8🔪2015-12-22 09:01:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕59e8c66🔪2015-12-22 09:00:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕37f6673🔪2015-12-22 08:58:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 265 ++++++++++++++++++++++++--------------------------------------
+ 1 file changed, 101 insertions(+), 164 deletions(-)
+
+☕0278706🔪2015-12-22 08:43:25 -0800🔪Mike Bostock🔪Rename quantitative to continuous.🔪
+ README.md                              | 72 +++++++++++++++++-----------------
+ src/{quantitative.js => continuous.js} |  2 +-
+ src/linear.js                          |  4 +-
+ src/log.js                             |  4 +-
+ src/pow.js                             |  4 +-
+ src/time.js                            |  4 +-
+ 6 files changed, 45 insertions(+), 45 deletions(-)
+
+☕423667e🔪2015-12-22 07:36:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e23d1e🔪2015-12-21 21:07:41 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 369 ++++++++++++++++++++------------------------------------------
+ 1 file changed, 118 insertions(+), 251 deletions(-)
+
+☕3210039🔪2015-12-21 20:08:34 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 110 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 55 insertions(+), 55 deletions(-)
+
+☕26e7020🔪2015-12-21 16:06:30 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                 |  82 +++++-----------------------------------------
+ img/category10.png (new)  | Bin 0 -> 3387 bytes
+ img/category20.png (new)  | Bin 0 -> 3443 bytes
+ img/category20b.png (new) | Bin 0 -> 3437 bytes
+ img/category20c.png (new) | Bin 0 -> 3432 bytes
+ 5 files changed, 8 insertions(+), 74 deletions(-)
+
+☕4a95e0f🔪2015-12-21 15:51:23 -0800🔪Mike Bostock🔪Fix initialize of band scales.🔪
+ src/band.js       | 6 +++---
+ test/band-test.js | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕7cf8877🔪2015-12-21 15:49:59 -0800🔪Mike Bostock🔪Tests for point scales.🔪
+ test/band-test.js  | 111 +++++++++++++++++++++++------------
+ test/point-test.js | 168 +++++++++++++++--------------------------------------
+ 2 files changed, 121 insertions(+), 158 deletions(-)
+
+☕d0f7d8d🔪2015-12-21 15:18:32 -0800🔪Mike Bostock🔪Band tests.🔪
+ index.js             |   2 +-
+ src/band.js          |   7 +-
+ src/ordinal.js       |   2 +-
+ test/band-test.js    | 319 +++++++++++++++++++++++++++++++--------------------
+ test/ordinal-test.js |  65 ++++++++++-
+ 5 files changed, 260 insertions(+), 135 deletions(-)
+
+☕67cd7d6🔪2015-12-21 14:08:01 -0800🔪Mike Bostock🔪Move code.🔪
+ index.js            |  3 +--
+ src/band.js         | 18 ++++++++++++++++++
+ src/point.js (gone) | 19 -------------------
+ 3 files changed, 19 insertions(+), 21 deletions(-)
+
+☕6f25c26🔪2015-12-21 14:03:50 -0800🔪Mike Bostock🔪The point scale is now a special case of the band scale.🔪
+ src/band.js  | 17 +++++++++------
+ src/point.js | 70 ++++++++++--------------------------------------------------
+ 2 files changed, 21 insertions(+), 66 deletions(-)
+
+☕4116aaf🔪2015-12-21 13:49:03 -0800🔪Mike Bostock🔪Fix band and point.🔪
+ src/band.js  | 7 ++++---
+ src/point.js | 7 ++++---
+ 2 files changed, 8 insertions(+), 6 deletions(-)
+
+☕94ab3ca🔪2015-12-21 13:14:23 -0800🔪Mike Bostock🔪Add band.align.🔪
+ src/band.js  | 16 +++++++++++-----
+ src/point.js |  3 ++-
+ 2 files changed, 13 insertions(+), 6 deletions(-)
+
+☕9c6a919🔪2015-12-21 13:10:30 -0800🔪Mike Bostock🔪Add point.align.🔪
+ src/point.js | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+
+☕9c77c9a🔪2015-12-21 12:07:38 -0800🔪Mike Bostock🔪Fix local variable.🔪
+ src/band.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d8bf2d9🔪2015-12-21 11:32:59 -0800🔪Mike Bostock🔪Rename for clarity.🔪
+ src/band.js  | 16 ++++++++--------
+ src/point.js | 16 ++++++++--------
+ 2 files changed, 16 insertions(+), 16 deletions(-)
+
+☕1831381🔪2015-12-21 11:31:31 -0800🔪Mike Bostock🔪Add rangeRound aliases.🔪
+ src/band.js  | 4 ++++
+ src/point.js | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+☕c5755c9🔪2015-12-21 11:28:11 -0800🔪Mike Bostock🔪Consistent formatting.🔪
+ src/band.js    | 7 ++++++-
+ src/ordinal.js | 5 ++++-
+ src/point.js   | 6 +++++-
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+
+☕9b4676e🔪2015-12-17 15:59:02 -0800🔪Mike Bostock🔪Fix {point,band}.copy().🔪
+ src/band.js          |   2 +-
+ src/point.js         |   2 +-
+ test/band-test.js    | 268 +--------------------------------------------------
+ test/ordinal-test.js |  13 ---
+ 4 files changed, 3 insertions(+), 282 deletions(-)
+
+☕e7a7e56🔪2015-12-17 14:37:52 -0800🔪Mike Bostock🔪Fixes.🔪
+ src/band.js  | 12 ++++++------
+ src/point.js |  4 ++--
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+☕941dc30🔪2015-12-17 14:34:23 -0800🔪Mike Bostock🔪Rename ordinalBand to band, ordinalPoint to point.🔪
+ index.js                                     | 4 ++--
+ src/{ordinalBand.js => band.js}              | 0
+ src/{ordinalPoint.js => point.js}            | 0
+ test/{ordinalBand-test.js => band-test.js}   | 0
+ test/{ordinalPoint-test.js => point-test.js} | 0
+ 5 files changed, 2 insertions(+), 2 deletions(-)
+
+☕6be4795🔪2015-12-17 14:29:39 -0800🔪Mike Bostock🔪Add ordinalPoint.🔪
+ index.js                  |  3 ++-
+ src/ordinal.js            | 16 +++++++++------
+ src/ordinalBand.js        | 35 +++++++++++++++----------------
+ src/ordinalPoint.js (new) | 52 +++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 80 insertions(+), 26 deletions(-)
+
+☕d199557🔪2015-12-17 13:40:02 -0800🔪Mike Bostock🔪Checkpoint ordinal band scale.🔪
+ index.js                        |   1 +
+ src/ordinalBand.js (new)        |  66 +++++++
+ test/ordinal-test.js            | 267 ++-----------------------
+ test/ordinalBand-test.js (new)  | 421 ++++++++++++++++++++++++++++++++++++++++
+ test/ordinalPoint-test.js (new) | 123 ++++++++++++
+ 5 files changed, 623 insertions(+), 255 deletions(-)
+
+☕e29ea69🔪2015-12-17 13:06:04 -0800🔪Mike Bostock🔪Checkpoint minimal ordinal scale.🔪
+ src/ordinal.js | 109 ++++++++++-----------------------------------------------
+ 1 file changed, 19 insertions(+), 90 deletions(-)
+
+☕45389cd🔪2015-12-21 11:18:36 -0800🔪Mike Bostock🔪Standardize quantile implementation.🔪
+ src/quantile.js | 56 +++++++++++++++++++++++++++-----------------------------
+ src/quantize.js |  4 +++-
+ 2 files changed, 30 insertions(+), 30 deletions(-)
+
+☕169afb0🔪2015-12-19 10:29:20 -0800🔪Mike Bostock🔪Fix #39 - optional interpolate parameters.🔪
+ README.md           | 34 +++++++++++++++++-----------------
+ package.json        |  2 +-
+ src/quantitative.js |  4 ++--
+ 3 files changed, 20 insertions(+), 20 deletions(-)
+
+☕16c0606🔪2015-12-19 09:54:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕99efbbe🔪2015-12-18 21:50:02 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕2f22b4c🔪2015-12-18 21:47:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9e88c4e🔪2015-12-18 21:22:51 -0800🔪Mike Bostock🔪Fix #38 - sequential color scales.🔪
+ README.md               |  8 ++++----
+ index.js                |  2 +-
+ src/rainbow.js          | 23 ++++++++++-------------
+ src/sequential.js (new) | 26 ++++++++++++++++++++++++++
+ src/viridis.js          | 23 +++++++++++++++++------
+ 5 files changed, 58 insertions(+), 24 deletions(-)
+
+☕22b5963🔪2015-12-18 19:34:16 -0800🔪Mike Bostock🔪Fix #34 - more linearish scales.🔪
+ README.md       | 24 +++++++++++++++++++-----
+ src/identity.js | 13 ++-----------
+ src/quantize.js |  3 ++-
+ 3 files changed, 23 insertions(+), 17 deletions(-)
+
+☕6e13f39🔪2015-12-18 19:29:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕82d6f51🔪2015-12-18 19:28:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕df74148🔪2015-12-18 19:27:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4f1759a🔪2015-12-18 19:26:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕be79324🔪2015-12-18 19:21:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 48 ++++++++++++++++++++++++------------------------
+ 1 file changed, 24 insertions(+), 24 deletions(-)
+
+☕e46d198🔪2015-12-18 19:16:22 -0800🔪Mike Bostock🔪Fix #32 - easier-to-use rainbow scales.🔪
+ README.md          |  14 +++++++++++++-
+ img/cool.png (new) | Bin 0 -> 4047 bytes
+ img/rainbow.png    | Bin 4136 -> 4143 bytes
+ img/warm.png (new) | Bin 0 -> 4000 bytes
+ index.js           |   2 +-
+ src/rainbow.js     |  31 ++++++++++++++++++++++++++++---
+ 6 files changed, 42 insertions(+), 5 deletions(-)
+
+☕8f6af9c🔪2015-12-18 11:57:17 -0800🔪Mike Bostock🔪Fix #35 - descending ticks for descending time domains.🔪
+ src/time.js       | 11 +++++------
+ test/time-test.js |  7 +++++++
+ 2 files changed, 12 insertions(+), 6 deletions(-)
+
+☕cb4ed91🔪2015-12-18 11:50:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 --------------
+ 1 file changed, 14 deletions(-)
+
+☕b2a9059🔪2015-12-18 11:45:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕140c408🔪2015-12-18 11:27:08 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c9b8c2f🔪2015-12-18 11:25:33 -0800🔪Mike Bostock🔪Fix #33 - log.ticks.🔪For small domains (one order of magnitude or less), we no longer generate ticks
+outside the domain. For descending domains, we now generate ticks in descending
+order, matching fa5db527be7120046266e9d8527be69382eaef97.
+
+ src/log.js       | 30 +++++++++++++++++++-----------
+ test/log-test.js | 56 ++++++++++++++++++++++++++++++++++++--------------------
+ 2 files changed, 55 insertions(+), 31 deletions(-)
+
+☕2dd0ce6🔪2015-12-17 21:41:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕4a198bf🔪2015-12-17 21:41:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕1b925ba🔪2015-12-17 21:40:36 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕53f4774🔪2015-12-17 21:40:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕3c08bef🔪2015-12-17 21:38:41 -0800🔪Mike Bostock🔪Fix README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕6f1e652🔪2015-12-17 21:37:34 -0800🔪Mike Bostock🔪Fix README.🔪
+ README.md | 19 +++++++++++--------
+ 1 file changed, 11 insertions(+), 8 deletions(-)
+
+☕bb75f61🔪2015-12-17 21:34:02 -0800🔪Mike Bostock🔪Regroup color scales.🔪
+ README.md | 76 ++++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 39 insertions(+), 37 deletions(-)
+
+☕b37a66d🔪2015-12-17 21:32:48 -0800🔪Mike Bostock🔪Add documentation.🔪
+ README.md               |  32 ++++++++++++++++++++++++++++----
+ img/cubehelix.png (new) | Bin 0 -> 4101 bytes
+ img/inferno.png (new)   | Bin 0 -> 4326 bytes
+ img/magma.png (new)     | Bin 0 -> 4267 bytes
+ img/plasma.png (new)    | Bin 0 -> 4318 bytes
+ img/rainbow.png (new)   | Bin 0 -> 4136 bytes
+ img/viridis.png (new)   | Bin 0 -> 4387 bytes
+ 7 files changed, 28 insertions(+), 4 deletions(-)
+
+☕5856580🔪2015-12-17 21:18:56 -0800🔪Mike Bostock🔪Fix #14 - add viridis color scales.🔪
+ index.js             | 14 ++++++++------
+ src/category10.js    | 14 ++------------
+ src/category20.js    | 14 ++------------
+ src/category20b.js   |  9 ++-------
+ src/category20c.js   |  9 ++-------
+ src/colors.js (new)  |  5 +++++
+ src/quantize.js      |  6 ++----
+ src/viridis.js (new) | 18 ++++++++++++++++++
+ 8 files changed, 41 insertions(+), 48 deletions(-)
+
+☕12adb30🔪2015-12-17 10:49:31 -0800🔪Mike Bostock🔪One fewer closure.🔪
+ src/log.js | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕55c4f06🔪2015-12-17 10:37:58 -0800🔪Mike Bostock🔪Fix #15 - filter powers-of-base ticks for huge domains.🔪Also prefer native log and pow methods for common bases (2, e, 10).
+
+ README.md        |  4 +--
+ src/log.js       | 76 ++++++++++++++++++++++++++++++++------------------------
+ test/log-test.js | 48 +++--------------------------------
+ 3 files changed, 49 insertions(+), 79 deletions(-)
+
+☕669ce5e🔪2015-12-16 22:13:35 -0800🔪Mike Bostock🔪Delete blank line.🔪
+ test/identity-test.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕f3f5dfd🔪2015-12-16 21:42:42 -0800🔪Mike Bostock🔪Log tests!🔪
+ src/log.js          |  28 ++--
+ src/quantitative.js |   7 +-
+ test/log-test.js    | 424 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 3 files changed, 436 insertions(+), 23 deletions(-)
+
+☕12cd7d1🔪2015-12-16 20:56:46 -0800🔪Mike Bostock🔪Fix log.invert; optimize.🔪
+ src/identity.js |  9 +++------
+ src/log.js      | 46 +++++++++++++++++++++++++---------------------
+ 2 files changed, 28 insertions(+), 27 deletions(-)
+
+☕1b07e7a🔪2015-12-16 16:44:31 -0800🔪Mike Bostock🔪Fix #17 - guarantee consistent quantize behavior.🔪The only way to guarantee that quantize.invertExtent(y) is consistent with
+quantize(x) is to use bisection, like a threshold scale.
+
+ src/quantize.js              | 49 +++++++++++++++-------------
+ src/threshold.js             | 29 ++++++++--------
+ test/quantize-test.js        | 78 +++++++++++++++++++++++++-------------------
+ test/threshold-test.js (new) | 61 ++++++++++++++++++++++++++++++++++
+ 4 files changed, 145 insertions(+), 72 deletions(-)
+
+☕e1c6e75🔪2015-12-16 14:39:08 -0800🔪Mike Bostock🔪Fix #9 - nice twice.🔪
+ src/linear.js       | 14 ++++++++++----
+ test/linear-test.js |  1 +
+ 2 files changed, 11 insertions(+), 4 deletions(-)
+
+☕fa5db52🔪2015-12-16 14:20:04 -0800🔪Mike Bostock🔪Use ticks from d3-array.🔪As a side-effect, ticks are now generated in the same order as the domain. So,
+if you have a descending domain, you get descending ticks, too. Yay!
+
+ package.json          |  2 +-
+ src/identity.js       | 18 +++++++++---------
+ src/linear.js         | 19 +++++++++++--------
+ src/tickFormat.js     | 26 ++++++++++----------------
+ src/ticks.js (gone)   | 34 ----------------------------------
+ src/time.js           |  7 +++----
+ test/identity-test.js |  8 ++++----
+ test/linear-test.js   | 42 +++++++++++++++++++++---------------------
+ test/pow-test.js      | 42 +++++++++++++++++++++---------------------
+ 9 files changed, 80 insertions(+), 118 deletions(-)
+
+☕57505b6🔪2015-12-15 22:28:22 -0800🔪Mike Bostock🔪Tests for time.invert and time.clamp.🔪
+ src/time.js       | 13 ++++++-------
+ test/time-test.js | 22 +++++++++++-----------
+ 2 files changed, 17 insertions(+), 18 deletions(-)
+
+☕35a80ac🔪2015-12-15 22:01:08 -0800🔪Mike Bostock🔪Clamp reinterpolate on invert.🔪This is faster and more accurate.
+
+ src/quantitative.js | 19 +++++++++++++------
+ test/pow-test.js    |  7 +++++++
+ 2 files changed, 20 insertions(+), 6 deletions(-)
+
+☕8f4d6a1🔪2015-12-15 21:48:56 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/log.js          | 2 +-
+ src/pow.js          | 9 ++++-----
+ src/quantitative.js | 2 +-
+ src/time.js         | 3 ++-
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+
+☕77e8049🔪2015-12-15 16:29:29 -0800🔪Mike Bostock🔪Adopt standard nice.🔪
+ src/linear.js |  7 ++++---
+ src/log.js    |  5 ++---
+ src/nice.js   |  6 +++---
+ src/time.js   | 23 ++++-------------------
+ 4 files changed, 13 insertions(+), 28 deletions(-)
+
+☕2f35207🔪2015-12-15 16:23:07 -0800🔪Mike Bostock🔪Comment.🔪
+ src/log.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05eab74🔪2015-12-15 16:16:09 -0800🔪Mike Bostock🔪Optimize log.ticks.🔪
+ src/log.js | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+
+☕93a1534🔪2015-12-15 16:15:42 -0800🔪Mike Bostock🔪One fewer closure.🔪
+ src/pow.js | 20 ++++++++------------
+ 1 file changed, 8 insertions(+), 12 deletions(-)
+
+☕b9b7f69🔪2015-12-15 14:35:19 -0800🔪Mike Bostock🔪Restore time, utcTime.🔪
+ index.js       |  4 +--
+ src/time.js    | 84 +++++++++++++++++++++++++++++-----------------------------
+ src/utcTime.js |  5 ++--
+ 3 files changed, 46 insertions(+), 47 deletions(-)
+
+☕3bdbaa2🔪2015-12-15 14:26:05 -0800🔪Mike Bostock🔪Share nice, ticks and tickFormat.🔪
+ src/linear.js | 13 +++++++++----
+ src/pow.js    | 25 ++-----------------------
+ 2 files changed, 11 insertions(+), 27 deletions(-)
+
+☕7d63d4e🔪2015-12-15 14:22:53 -0800🔪Mike Bostock🔪Add pow and sqrt.🔪
+ index.js            |  2 +-
+ src/linear.js       | 14 +++++-------
+ src/log.js          | 30 ++++++++++++-------------
+ src/pow.js          | 64 +++++++++++++++++++++++++++--------------------------
+ src/quantitative.js | 28 ++++++++++++++---------
+ 5 files changed, 71 insertions(+), 67 deletions(-)
+
+☕bf5036f🔪2015-12-15 11:18:45 -0800🔪Mike Bostock🔪Implement log nice, ticks and tickFormat.🔪
+ src/linear.js       |   7 +++-
+ src/log.js          | 115 +++++++++++++++++++++++++++++++---------------------
+ src/nice.js         |   7 ++--
+ src/quantitative.js |  12 +++---
+ 4 files changed, 83 insertions(+), 58 deletions(-)
+
+☕46f03ab🔪2015-12-15 10:50:47 -0800🔪Mike Bostock🔪Comments.🔪
+ src/quantitative.js | 17 +++++++----------
+ 1 file changed, 7 insertions(+), 10 deletions(-)
+
+☕5c48bb3🔪2015-12-15 10:45:17 -0800🔪Mike Bostock🔪Fix quantitative.interpolate.🔪
+ src/quantitative.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f4d4db7🔪2015-12-15 10:43:40 -0800🔪Mike Bostock🔪Fix invert for non-numeric ranges.🔪
+ src/log.js          | 2 +-
+ src/quantitative.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕1787d6d🔪2015-12-15 10:38:40 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/linear.js | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕d506628🔪2015-12-15 10:35:55 -0800🔪Mike Bostock🔪Checkpoint new quantitative scale implementation.🔪Fixes #18.
+
+ index.js                  |   6 +-
+ src/array.js (new)        |   4 ++
+ src/constant.js (new)     |   5 ++
+ src/linear.js             | 136 ++++----------------------------------------
+ src/log.js                | 140 +++++++++++++++++++++-------------------------
+ src/number.js (new)       |   3 +
+ src/quantitative.js (new) | 100 +++++++++++++++++++++++++++++++++
+ 7 files changed, 190 insertions(+), 204 deletions(-)
+
+☕afc14ac🔪2015-12-14 11:06:14 -0800🔪Mike Bostock🔪Fix #26 - More precise log tick filtering.🔪
+ src/log.js       | 12 ++++++------
+ test/log-test.js | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 62 insertions(+), 6 deletions(-)
+
+☕b4243ee🔪2015-12-08 17:40:22 -0800🔪Mike Bostock🔪Rename d3-arrays to d3-array.🔪
+ README.md             | 12 ++++++------
+ package.json          |  4 ++--
+ src/linear.js         |  2 +-
+ src/log.js            |  2 +-
+ src/ordinal.js        |  2 +-
+ src/quantile.js       |  2 +-
+ src/threshold.js      |  2 +-
+ src/ticks.js          |  2 +-
+ src/time.js           |  2 +-
+ test/quantize-test.js | 16 ++++++++--------
+ 10 files changed, 23 insertions(+), 23 deletions(-)
+
+☕44d1ca8🔪2015-11-30 12:49:45 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb7a802🔪2015-11-30 12:47:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 25 ++++++-------------------
+ 1 file changed, 6 insertions(+), 19 deletions(-)
+
+☕538f853🔪2015-11-30 12:41:23 -0800🔪Mike Bostock🔪Adopt latest d3-time.🔪
+ package.json         |   2 +-
+ src/time.js          | 161 ++++++++++++++++++++++-----------------------------
+ src/utcTime.js       |  39 +------------
+ test/time-test.js    |  51 +++++++---------
+ test/utcTime-test.js |  35 +++++------
+ 5 files changed, 106 insertions(+), 182 deletions(-)
+
+☕002b744🔪2015-11-30 10:14:09 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 ++-------
+ 1 file changed, 2 insertions(+), 7 deletions(-)
+
+☕4cce2f4🔪2015-11-30 10:13:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+☕d8c6e5d🔪2015-11-30 10:12:34 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2d61902🔪2015-11-30 10:11:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕48ae2e7🔪2015-11-30 10:08:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 23 +++++++++++++----------
+ 1 file changed, 13 insertions(+), 10 deletions(-)
+
+☕1af77c1🔪2015-11-30 10:04:20 -0800🔪Mike Bostock🔪Fix #22 - update dependencies.🔪
+ package.json         | 10 +++++-----
+ src/cubehelix.js     |  5 +++--
+ src/linear.js        |  8 ++++----
+ src/rainbow.js       |  5 +++--
+ test/time-test.js    |  4 ++--
+ test/utcTime-test.js |  4 ++--
+ 6 files changed, 19 insertions(+), 17 deletions(-)
+
+☕9271c51🔪2015-11-17 13:56:49 -0800🔪Mike Bostock🔪Inline examples of color scales.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕7630785🔪2015-11-11 11:37:37 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕5246d24🔪2015-11-04 13:27:02 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 52 ++++++++++++++++------------------------------------
+ 1 file changed, 16 insertions(+), 36 deletions(-)
+
+☕0b23e44🔪2015-11-03 23:09:49 -0800🔪Mike Bostock🔪Fix global name.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d6a755f🔪2015-11-03 22:50:09 -0800🔪Mike Bostock🔪Include bundled UMD in published release.🔪The package.json’s main entry is still in CommonJS with external dependencies,
+but now there’s also a pre-built UMD for convenience.
+
+ package.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕bbc96cb🔪2015-11-03 04:33:09 -0500🔪Billy Janitsch🔪move d3 devDependencies to dependencies and switch to pure rollup`🔪
+ package.json | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕e84f75a🔪2015-10-29 15:10:05 -0400🔪Mike Bostock🔪Don’t require exact fractional ticks.🔪The tests currently assume that d3-arrays’ range method returns exact values for
+fractional ticks. We shouldn’t make this assumption given the nature of limited
+precision floating point.
+
+ test/linear-test.js        | 63 +++++++++++++++++++++++-----------------------
+ test/pow-test.js           | 63 +++++++++++++++++++++++-----------------------
+ test/roundEpsilon.js (new) |  3 +++
+ 3 files changed, 67 insertions(+), 62 deletions(-)
+
+☕d102fb9🔪2015-10-29 03:16:33 -0400🔪Billy Janitsch🔪switch to standard ES6 default imports🔪
+ index.js       | 2 +-
+ src/linear.js  | 2 +-
+ src/log.js     | 2 +-
+ src/pow.js     | 4 ++--
+ src/time.js    | 2 +-
+ src/utcTime.js | 2 +-
+ 6 files changed, 7 insertions(+), 7 deletions(-)
+
+☕943dfd2🔪2015-10-20 14:24:54 -0700🔪Mike Bostock🔪Remove ES6 Map polyfill.🔪
+ package.json   | 6 +++---
+ src/ordinal.js | 4 +++-
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+☕34627b6🔪2015-10-17 20:14:52 -0700🔪Mike Bostock🔪Update dependencies. Fixes #12.🔪
+ package.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕a2d924d🔪2015-07-09 19:10:18 -0700🔪Mike Bostock🔪Fix imports.🔪
+ src/cubehelix.js | 4 ++--
+ src/rainbow.js   | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕2e226f7🔪2015-07-09 19:06:57 -0700🔪Mike Bostock🔪Add cubehelix and rainbow scales.🔪Related d3/d3-color#12.
+
+ README.md              | 8 ++++++++
+ index.js               | 4 ++++
+ src/cubehelix.js (new) | 8 ++++++++
+ src/rainbow.js (new)   | 9 +++++++++
+ 4 files changed, 29 insertions(+)
+
+☕ec7ca77🔪2015-07-06 10:12:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕040ea4a🔪2015-07-06 10:10:14 -0700🔪Mike Bostock🔪Allow custom time intervals. Fixes #7.🔪
+ README.md            | 19 ++++++++++++++-----
+ package.json         |  2 +-
+ src/time.js          | 20 +++++++-------------
+ test/time-test.js    | 29 +++++++++++++++++++++++++----
+ test/utcTime-test.js | 29 +++++++++++++++++++++++++----
+ 5 files changed, 72 insertions(+), 27 deletions(-)
+
+☕be1a261🔪2015-07-01 13:00:03 -0700🔪Mike Bostock🔪Set description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕70825e0🔪2015-07-01 11:29:16 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕da844a7🔪2015-06-30 22:22:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e193895🔪2015-06-30 22:16:57 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b4e3e52🔪2015-06-30 22:14:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕d9c32c5🔪2015-06-30 22:13:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕287edf4🔪2015-06-30 22:12:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9a63b37🔪2015-06-30 22:10:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b574ac7🔪2015-06-30 22:09:47 -0700🔪Mike Bostock🔪Document time scales.🔪
+ README.md | 246 +++++++++++++++++++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 204 insertions(+), 42 deletions(-)
+
+☕2d26b6f🔪2015-06-30 21:29:36 -0700🔪Mike Bostock🔪Tests for time and utcTime.🔪
+ README.md                  |   3 +-
+ test/date.js (new)         |  31 ++++
+ test/time-test.js (new)    | 431 +++++++++++++++++++++++++++++++++++++++++++++
+ test/utcTime-test.js (new) | 431 +++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 894 insertions(+), 2 deletions(-)
+
+☕f118ecf🔪2015-06-30 20:50:15 -0700🔪Mike Bostock🔪Expose timeFormat as time.ticksFormat(specifier).🔪
+ README.md      | 14 +++++++++++---
+ src/time.js    | 16 ++++++++--------
+ src/utcTime.js | 38 +++++++++++++++++++-------------------
+ 3 files changed, 38 insertions(+), 30 deletions(-)
+
+☕ad4568c🔪2015-06-30 20:40:21 -0700🔪Mike Bostock🔪Add utcTime scale.🔪
+ index.js             |  4 +++-
+ src/time.js          | 10 +++++-----
+ src/utcTime.js (new) | 41 +++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 49 insertions(+), 6 deletions(-)
+
+☕05a8bbb🔪2015-06-30 17:52:17 -0700🔪Mike Bostock🔪Implement time ticks and nice.🔪
+ src/nice.js |   6 +-
+ src/time.js | 220 ++++++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 121 insertions(+), 105 deletions(-)
+
+☕cca4189🔪2015-06-30 11:07:02 -0700🔪Mike Bostock🔪Checkpoint time scale.🔪
+ index.js          |   4 +-
+ package.json      |   2 +
+ src/time.js (new) | 163 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 168 insertions(+), 1 deletion(-)
+
+☕8c0eed8🔪2015-06-26 15:23:39 +0100🔪Jason Davies🔪The tests involving Date assume Pacific Time.🔪Some of the tests will fail for users that run them with other time
+zones set by default.  This fix ensures the tests are run in the PT time
+zone.
+
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕da40e3d🔪2015-06-24 15:50:23 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a45cee4🔪2015-06-23 09:46:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕1cdd893🔪2015-06-23 09:43:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕c11a101🔪2015-06-23 09:41:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕66a9356🔪2015-06-23 09:40:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f5ea946🔪2015-06-23 09:39:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕65e4764🔪2015-06-23 09:37:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕777359c🔪2015-06-23 09:35:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕5e4d784🔪2015-06-23 09:31:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕51fe650🔪2015-06-23 09:17:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5c73aef🔪2015-06-23 09:17:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3b8dc86🔪2015-06-23 09:17:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bde3c2f🔪2015-06-23 09:16:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕7276765🔪2015-06-23 09:16:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cff969e🔪2015-06-23 09:15:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕05afcb0🔪2015-06-23 09:13:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕364c5bd🔪2015-06-23 09:13:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕948d168🔪2015-06-23 09:12:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕a60bccc🔪2015-06-23 09:10:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dbec897🔪2015-06-23 09:09:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aee792f🔪2015-06-23 09:09:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕5ad9156🔪2015-06-23 08:13:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 96 +++++++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 53 insertions(+), 43 deletions(-)
+
+☕489b1a4🔪2015-06-23 07:58:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕76a033a🔪2015-06-23 07:58:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1707aa9🔪2015-06-23 07:58:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 ++++++++++++++++++++++----------------
+ 1 file changed, 22 insertions(+), 16 deletions(-)
+
+☕787dc61🔪2015-06-23 07:51:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕4633d6a🔪2015-06-23 07:50:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0d5b05d🔪2015-06-23 07:49:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a79f974🔪2015-06-23 07:49:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b1f5fab🔪2015-06-23 07:47:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a92bfc0🔪2015-06-23 07:46:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1239e5d🔪2015-06-23 07:46:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1ef88d🔪2015-06-23 07:45:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+☕9fb49bb🔪2015-06-23 07:40:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 37 ++++++++++++++++++++++++++++++++-----
+ 1 file changed, 32 insertions(+), 5 deletions(-)
+
+☕150290d🔪2015-06-22 22:30:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕be3f022🔪2015-06-22 22:28:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕247e213🔪2015-06-22 22:27:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕97e6710🔪2015-06-22 22:23:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 106 ++++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 55 insertions(+), 51 deletions(-)
+
+☕abd819c🔪2015-06-22 22:11:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2e38dd7🔪2015-06-22 22:05:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕947ddc6🔪2015-06-22 19:41:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕03c7a19🔪2015-06-22 19:39:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕b531f53🔪2015-06-22 19:38:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8234d0b🔪2015-06-22 19:38:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕bfe5e20🔪2015-06-22 19:37:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 77 +++++++++++++--------------------------------------------------
+ 1 file changed, 15 insertions(+), 62 deletions(-)
+
+☕8f71e09🔪2015-06-22 19:35:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 19 +++++--------------
+ 1 file changed, 5 insertions(+), 14 deletions(-)
+
+☕9d85359🔪2015-06-22 19:35:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+☕414d6ef🔪2015-06-22 19:34:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+☕dd28de0🔪2015-06-22 16:50:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ea29b92🔪2015-06-22 16:43:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04109fc🔪2015-06-22 16:43:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕23fa33c🔪2015-06-22 16:41:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ebca3d🔪2015-06-22 16:41:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 47 +++++++++++++++++++++++++++--------------------
+ 1 file changed, 27 insertions(+), 20 deletions(-)
+
+☕a794f31🔪2015-06-22 16:37:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+☕c978587🔪2015-06-22 16:36:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4b0100e🔪2015-06-22 16:35:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕54ae17f🔪2015-06-22 16:35:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕0e0a7fc🔪2015-06-22 16:34:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕30c31ad🔪2015-06-22 16:33:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6556ca5🔪2015-06-22 16:30:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕797d020🔪2015-06-22 16:28:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0991ac7🔪2015-06-22 16:27:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2e67485🔪2015-06-22 16:27:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕80de2f0🔪2015-06-22 16:27:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a85d44d🔪2015-06-22 16:26:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕f16bb2f🔪2015-06-22 16:24:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕53c11fa🔪2015-06-22 16:23:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕db1a97a🔪2015-06-22 16:22:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕3421466🔪2015-06-22 16:22:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕f3b72a6🔪2015-06-22 16:20:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 55 ++++++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 48 insertions(+), 7 deletions(-)
+
+☕b587993🔪2015-06-22 16:14:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4c49ce7🔪2015-06-22 16:14:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f3bb57a🔪2015-06-22 16:13:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f441924🔪2015-06-22 16:12:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+☕7e70c1f🔪2015-06-22 16:08:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕a10a818🔪2015-06-22 16:08:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕3241097🔪2015-06-22 16:06:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2fb9c89🔪2015-06-22 16:03:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕65a1ee9🔪2015-06-22 16:02:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 ++++++++++++++++++------------
+ 1 file changed, 18 insertions(+), 12 deletions(-)
+
+☕e1cbbbe🔪2015-06-22 15:59:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕c68201f🔪2015-06-22 15:56:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+☕a6dcdb4🔪2015-06-22 15:55:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕58e1aaf🔪2015-06-22 15:52:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕659171f🔪2015-06-22 15:52:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e9e1060🔪2015-06-22 15:51:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0fb0f61🔪2015-06-22 15:51:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fcae330🔪2015-06-22 15:38:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2596903🔪2015-06-22 15:38:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕84d52f4🔪2015-06-22 15:34:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+
+☕2f6a9db🔪2015-06-22 15:30:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕013d366🔪2015-06-22 15:26:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 80 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 40 insertions(+), 40 deletions(-)
+
+☕8cbc7ca🔪2015-06-22 15:22:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 60 ++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 30 insertions(+), 30 deletions(-)
+
+☕76e87e8🔪2015-06-22 15:18:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 +++++++++++++++++++---------
+ 1 file changed, 19 insertions(+), 9 deletions(-)
+
+☕7be4d16🔪2015-06-22 15:16:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 214 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 214 insertions(+)
+
+☕30a6faf🔪2015-06-22 15:11:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3ddd737🔪2015-06-22 15:10:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕e8c68ef🔪2015-06-22 15:10:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 +++++++++++++++++---------------
+ 1 file changed, 17 insertions(+), 15 deletions(-)
+
+☕666ec8c🔪2015-06-22 15:09:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aaa2f89🔪2015-06-22 15:09:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13f7969🔪2015-06-22 15:08:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕4deebf7🔪2015-06-22 15:07:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕5686c82🔪2015-06-22 15:06:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕ff3d1c7🔪2015-06-22 15:05:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕af3b9cb🔪2015-06-22 15:04:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8bbbeb0🔪2015-06-22 15:03:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕503a7cb🔪2015-06-22 15:02:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+
+☕95bfa9d🔪2015-06-22 14:59:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕c4f15a0🔪2015-06-22 14:58:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1d7c9f2🔪2015-06-22 14:58:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕8c93895🔪2015-06-22 14:56:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5c5bee6🔪2015-06-22 14:55:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cd4716d🔪2015-06-22 14:55:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕c5b3294🔪2015-06-22 14:54:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕0d6bde1🔪2015-06-22 14:52:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕6256537🔪2015-06-22 14:50:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f11bb50🔪2015-06-22 14:49:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 368 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 367 insertions(+), 1 deletion(-)
+
+☕8a47bcc🔪2015-06-22 14:26:55 -0700🔪Mike Bostock🔪Add scale.identity.🔪
+ index.js                    |   2 +
+ src/identity.js (new)       |  35 ++++++++++
+ test/identity-test.js (new) | 164 ++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 201 insertions(+)
+
+☕21237bb🔪2015-06-22 13:45:27 -0700🔪Mike Bostock🔪Simplify.🔪
+ src/category10.js  | 26 ++++++++++++--------------
+ src/category20.js  | 26 ++++++++++++--------------
+ src/category20b.js | 16 +++++++---------
+ src/category20c.js | 16 +++++++---------
+ 4 files changed, 38 insertions(+), 46 deletions(-)
+
+☕dec8299🔪2015-06-22 13:43:12 -0700🔪Mike Bostock🔪Add quantile and quantize scales.🔪
+ index.js                    |   4 ++
+ src/quantile.js (new)       |  53 ++++++++++++++++++++
+ src/quantize.js (new)       |  42 ++++++++++++++++
+ test/quantile-test.js (new) | 117 ++++++++++++++++++++++++++++++++++++++++++++
+ test/quantize-test.js (new) | 107 ++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 323 insertions(+)
+
+☕634201f🔪2015-06-22 13:27:18 -0700🔪Mike Bostock🔪Add category color scales.🔪
+ README.md                      |  3 +++
+ index.js                       |  8 ++++++++
+ src/category10.js (new)        | 18 ++++++++++++++++++
+ src/category20.js (new)        | 18 ++++++++++++++++++
+ src/category20b.js (new)       | 13 +++++++++++++
+ src/category20c.js (new)       | 13 +++++++++++++
+ test/category10-test.js (new)  | 27 +++++++++++++++++++++++++++
+ test/category20-test.js (new)  | 27 +++++++++++++++++++++++++++
+ test/category20b-test.js (new) | 27 +++++++++++++++++++++++++++
+ test/category20c-test.js (new) | 27 +++++++++++++++++++++++++++
+ test/ordinal-test.js           |  1 +
+ 11 files changed, 182 insertions(+)
+
+☕12f19cc🔪2015-06-22 13:04:51 -0700🔪Mike Bostock🔪Add scale.ordinal.🔪
+ index.js                   |   2 +
+ src/ordinal.js (new)       | 107 ++++++++++++
+ src/ticks.js               |   4 +-
+ test/ordinal-test.js (new) | 400 +++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 510 insertions(+), 3 deletions(-)
+
+☕2f41137🔪2015-06-19 15:53:55 -0700🔪Mike Bostock🔪Add threshold scale.🔪
+ index.js               |  4 +++-
+ src/threshold.js (new) | 34 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+☕350e531🔪2015-06-19 15:46:37 -0700🔪Mike Bostock🔪Implement log.tickFormat.🔪
+ src/log.js | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+☕3f01e6e🔪2015-06-19 15:17:24 -0700🔪Mike Bostock🔪Formatting tweak.🔪
+ src/log.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d0826d3🔪2015-06-19 11:41:20 -0700🔪Mike Bostock🔪Checkpoint log.ticks.🔪
+ src/log.js | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+
+☕4f545c2🔪2015-06-19 10:31:42 -0700🔪Mike Bostock🔪Checkpoint log.🔪
+ index.js               |  2 ++
+ src/linear.js          | 28 ++++++++++++++++++++++--
+ src/log.js (new)       | 59 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/nice.js            |  9 ++++----
+ src/pow.js             | 48 ++++++++++++----------------------------
+ test/log-test.js (new) | 12 ++++++++++
+ 6 files changed, 117 insertions(+), 41 deletions(-)
+
+☕d29d59b🔪2015-06-19 10:09:37 -0700🔪Mike Bostock🔪Tests for sqrt.🔪
+ index.js            |  5 +++--
+ src/pow.js          |  4 ++--
+ test/linear-test.js |  5 +++++
+ test/pow-test.js    | 13 +++++++++++++
+ 4 files changed, 23 insertions(+), 4 deletions(-)
+
+☕bc93b6b🔪2015-06-19 10:03:14 -0700🔪Mike Bostock🔪Power scales.🔪
+ index.js               |   4 +-
+ src/pow.js             |   2 +-
+ test/inDelta.js (new)  |  10 ++
+ test/pow-test.js (new) | 477 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 491 insertions(+), 2 deletions(-)
+
+☕2f29c60🔪2015-06-19 09:54:34 -0700🔪Mike Bostock🔪Tests for linear.copy.🔪
+ test/linear-test.js | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+
+☕867e6d9🔪2015-06-19 09:49:49 -0700🔪Mike Bostock🔪More tests.🔪
+ src/nice.js         |  3 +-
+ test/linear-test.js | 94 ++++++++++++++++++++++++++++++++++++++++++++++++++---
+ 2 files changed, 91 insertions(+), 6 deletions(-)
+
+☕1d6d1c4🔪2015-06-19 09:38:56 -0700🔪Mike Bostock🔪Domain & range make defensive copies.🔪
+ src/linear.js       | 11 ++++---
+ src/nice.js         |  2 +-
+ src/pow.js (new)    | 82 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ test/linear-test.js | 34 ++++++++++++++++++++++
+ 4 files changed, 122 insertions(+), 7 deletions(-)
+
+☕9384a21🔪2015-06-19 09:18:56 -0700🔪Mike Bostock🔪Don’t re-export all dependencies.🔪
+ d3.js (gone)        | 116 -----------------------------------
+ package.json        |   6 +-
+ test/linear-test.js | 170 ++++++++++++++++++++++++++--------------------------
+ 3 files changed, 88 insertions(+), 204 deletions(-)
+
+☕5a94d05🔪2015-06-18 13:11:46 -0700🔪Mike Bostock🔪Clean and simplify.🔪
+ src/linear.js                     | 16 ++++++++++++++--
+ src/uninterpolateClamp.js (gone)  |  6 ------
+ src/uninterpolateNumber.js (gone) |  6 ------
+ 3 files changed, 14 insertions(+), 14 deletions(-)
+
+☕a11c39f🔪2015-06-18 13:09:57 -0700🔪Mike Bostock🔪Clean and simplify.🔪
+ src/bilinear.js (gone)   |  7 -------
+ src/extent.js (gone)     |  7 -------
+ src/linear.js            | 41 +++++++++++++++++++++++++++++++++--------
+ src/polylinear.js (gone) | 24 ------------------------
+ src/ticks.js             | 19 +++++++++++--------
+ 5 files changed, 44 insertions(+), 54 deletions(-)
+
+☕785fe71🔪2015-06-18 13:02:39 -0700🔪Mike Bostock🔪More tests.🔪
+ test/linear-test.js | 72 ++++++++++++++++++++++++++++++++---------------------
+ 1 file changed, 43 insertions(+), 29 deletions(-)
+
+☕704bc8d🔪2015-06-18 12:56:57 -0700🔪Mike Bostock🔪More tests.🔪
+ test/linear-test.js | 205 ++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 117 insertions(+), 88 deletions(-)
+
+☕86c5c4c🔪2015-06-18 12:44:06 -0700🔪Mike Bostock🔪Tests for linear.interpolate.🔪
+ test/linear-test.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕3d20319🔪2015-06-18 12:41:02 -0700🔪Mike Bostock🔪Tests for linear.clamp.🔪
+ test/linear-test.js | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
+☕4fce95e🔪2015-06-18 12:34:54 -0700🔪Mike Bostock🔪Move things around a bit.🔪
+ src/linear.js           | 88 +++++--------------------------------------------
+ src/nice.js             | 11 ++++---
+ src/polylinear.js       | 14 ++++----
+ src/tickFormat.js (new) | 39 ++++++++++++++++++++++
+ src/ticks.js (new)      | 33 +++++++++++++++++++
+ 5 files changed, 94 insertions(+), 91 deletions(-)
+
+☕f6de4ea🔪2015-06-18 10:55:28 -0700🔪Mike Bostock🔪Tests for linear.{domain,range}.🔪
+ d3.js               | 37 +++++++++++++++++++++++++++++---
+ test/linear-test.js | 62 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 96 insertions(+), 3 deletions(-)
+
+☕981c5bb🔪2015-06-18 10:45:05 -0700🔪Mike Bostock🔪Add tests for linear.nice.🔪
+ src/linear.js       | 13 ++++++-------
+ src/nice.js         | 18 +++---------------
+ test/linear-test.js | 18 ++++++++++++++++++
+ 3 files changed, 27 insertions(+), 22 deletions(-)
+
+☕ce3e142🔪2015-06-18 10:33:09 -0700🔪Mike Bostock🔪Tests for linear.tickFormat auto-precision.🔪
+ src/linear.js       | 59 +++++++++--------------------------------------------
+ test/linear-test.js | 45 +++++++++++++++++++++++++++++++++-------
+ 2 files changed, 48 insertions(+), 56 deletions(-)
+
+☕4f700cb🔪2015-06-17 15:21:40 -0700🔪Mike Bostock🔪Allow tickFormat specifier.🔪
+ src/linear.js | 29 +++++++++++++++++++++++++++--
+ 1 file changed, 27 insertions(+), 2 deletions(-)
+
+☕713f50a🔪2015-06-17 15:11:56 -0700🔪Mike Bostock🔪First pass at linear.tickFormat.🔪
+ src/linear.js       | 41 +++++++++++++++++++++++++----------------
+ test/linear-test.js | 25 +++++++++++++++++++++++++
+ 2 files changed, 50 insertions(+), 16 deletions(-)
+
+☕112169e🔪2015-06-17 15:00:37 -0700🔪Mike Bostock🔪More precise tick rounding thresholds.🔪
+ src/extent.js       |  7 +++++--
+ src/linear.js       | 24 ++++++++++++++----------
+ test/linear-test.js |  2 +-
+ 3 files changed, 20 insertions(+), 13 deletions(-)
+
+☕a8a4f9f🔪2015-06-17 13:38:56 -0700🔪Mike Bostock🔪Test for linear.ticks.🔪
+ d3.js (new)                      |  85 +++++++++++++++++++++
+ package.json                     |   6 +-
+ src/bilinear.js (new)            |   7 ++
+ src/extent.js (new)              |   4 +
+ src/linear.js                    | 159 ++++++++++++++++++++++++++++++++++++++-
+ src/nice.js (new)                |  28 +++++++
+ src/polylinear.js (new)          |  24 ++++++
+ src/uninterpolateClamp.js (new)  |   6 ++
+ src/uninterpolateNumber.js (new) |   6 ++
+ test/linear-test.js              |  43 ++++++++++-
+ 10 files changed, 361 insertions(+), 7 deletions(-)
+
+☕5a54c89🔪2015-06-16 15:26:15 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)               |  5 +++++
+ .npmignore (new)               |  3 +++
+ LICENSE (new)                  | 27 +++++++++++++++++++++++++++
+ README.md (new)                | 15 +++++++++++++++
+ d3-scale.sublime-project (new) | 13 +++++++++++++
+ index.js (new)                 |  5 +++++
+ package.json (new)             | 37 +++++++++++++++++++++++++++++++++++++
+ src/linear.js (new)            |  5 +++++
+ test/linear-test.js (new)      |  7 +++++++
+ 9 files changed, 117 insertions(+)

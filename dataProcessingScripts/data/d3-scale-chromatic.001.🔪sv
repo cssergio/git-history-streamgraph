@@ -1,0 +1,737 @@
+☕2aa3ad2🔪2021-06-05 12:19:28 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8fc14d0🔪2021-06-05 21:18:35 +0200🔪Philippe Rivière🔪Adopt type=module (#37)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* reinstate colorbrewer license
+
+* related d3/d3#3502; extract copyrights from LICENSE
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* update homepage
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                            |    8 -
+ .github/eslint.json (new)                 |   18 +
+ .github/workflows/node.js.yml (new)       |   30 +
+ LICENSE                                   |   44 +-
+ README.md                                 |   27 +-
+ d3-scale-chromatic.sublime-project (gone) |   17 -
+ package.json                              |   53 +-
+ rollup.config.js                          |   10 +-
+ test/.eslintrc.json (new)                 |   10 +
+ test/index-test.js                        |    9 +-
+ yarn.lock                                 | 1475 ++++++++++++++++-------------
+ 11 files changed, 924 insertions(+), 777 deletions(-)
+
+☕90e7c02🔪2020-08-23 18:04:11 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕540ea6d🔪2020-08-23 18:03:38 +0200🔪Philippe Rivière🔪d3 dependencies🔪
+ package.json |  7 ++-----
+ yarn.lock    | 18 +++++++++---------
+ 2 files changed, 11 insertions(+), 14 deletions(-)
+
+☕ca0e283🔪2020-07-27 11:04:14 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕7d1a33f🔪2020-07-27 10:57:12 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+☕1ae2a28🔪2020-07-10 21:45:56 +0200🔪Philippe Rivière🔪links to @6 versions🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕0510300🔪2020-07-09 13:56:10 -0400🔪Curran Kelleher🔪Fix #29🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6e96e58🔪2020-06-05 16:19:46 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+remove unused src/scheme.js
+
+ src/ramp.js          |  4 +---
+ src/scheme.js (gone) | 11 -----------
+ 2 files changed, 1 insertion(+), 14 deletions(-)
+
+☕cafd1a3🔪2019-08-21 07:06:05 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05e76da🔪2019-08-20 23:35:17 -0700🔪Mike Bostock🔪1.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e2fb5cb🔪2019-08-20 23:35:04 -0700🔪Mike Bostock🔪Fix irregular whitespace.🔪
+ src/sequential-multi/cividis.js | 6 +++---
+ src/sequential-multi/turbo.js   | 6 +++---
+ test/index-test.js              | 2 ++
+ 3 files changed, 8 insertions(+), 6 deletions(-)
+
+☕be6fb1f🔪2019-08-20 23:31:54 -0700🔪Mike Bostock🔪Update d3-color.🔪
+ yarn.lock | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d22e006🔪2019-04-29 16:15:14 +0200🔪Christophe Coevoet🔪Mark the package as having no side-effects🔪This allows for better tree-shaking when using only part of the package.
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕f15e0f6🔪2019-08-20 23:28:38 -0700🔪Mike Bostock🔪Add interpolateCividis. Fixes #15.🔪
+ README.md                             |   6 ++++++
+ img/cividis.png (new)                 | Bin 0 -> 273 bytes
+ src/index.js                          |   1 +
+ src/sequential-multi/cividis.js (new) |   8 ++++++++
+ 4 files changed, 15 insertions(+)
+
+☕8be01a8🔪2019-08-20 23:10:30 -0700🔪Mike Bostock🔪Add interpolateTurbo.🔪
+ README.md                           |   6 ++++++
+ img/turbo.png (new)                 | Bin 0 -> 374 bytes
+ src/index.js                        |   1 +
+ src/sequential-multi/turbo.js (new) |   8 ++++++++
+ 4 files changed, 15 insertions(+)
+
+☕fcae297🔪2019-08-09 18:35:56 -0700🔪Mike Bostock🔪1.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b26f93c🔪2019-08-09 18:35:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b4a76c🔪2019-08-09 16:21:16 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 881 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 522 insertions(+), 365 deletions(-)
+
+☕7309166🔪2019-08-09 15:56:37 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕431d21d🔪2019-08-09 15:39:47 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/categorical/Accent.js        |  2 +-
+ src/categorical/Dark2.js         |  2 +-
+ src/categorical/Paired.js        |  2 +-
+ src/categorical/Pastel1.js       |  2 +-
+ src/categorical/Pastel2.js       |  2 +-
+ src/categorical/Set1.js          |  2 +-
+ src/categorical/Set2.js          |  2 +-
+ src/categorical/Set3.js          |  2 +-
+ src/categorical/category10.js    |  2 +-
+ src/diverging/BrBG.js            |  4 +-
+ src/diverging/PRGn.js            |  4 +-
+ src/diverging/PiYG.js            |  4 +-
+ src/diverging/PuOr.js            |  4 +-
+ src/diverging/RdBu.js            |  4 +-
+ src/diverging/RdGy.js            |  4 +-
+ src/diverging/RdYlBu.js          |  4 +-
+ src/diverging/RdYlGn.js          |  4 +-
+ src/diverging/Spectral.js        |  4 +-
+ src/index.js                     | 80 ++++++++++++++++++++--------------------
+ src/rampClosed.js                |  2 +-
+ src/sequential-multi/BuGn.js     |  4 +-
+ src/sequential-multi/BuPu.js     |  4 +-
+ src/sequential-multi/GnBu.js     |  4 +-
+ src/sequential-multi/OrRd.js     |  4 +-
+ src/sequential-multi/PuBu.js     |  4 +-
+ src/sequential-multi/PuBuGn.js   |  4 +-
+ src/sequential-multi/PuRd.js     |  4 +-
+ src/sequential-multi/RdPu.js     |  4 +-
+ src/sequential-multi/YlGn.js     |  4 +-
+ src/sequential-multi/YlGnBu.js   |  4 +-
+ src/sequential-multi/YlOrBr.js   |  4 +-
+ src/sequential-multi/YlOrRd.js   |  4 +-
+ src/sequential-multi/viridis.js  |  2 +-
+ src/sequential-single/Blues.js   |  4 +-
+ src/sequential-single/Greens.js  |  4 +-
+ src/sequential-single/Greys.js   |  4 +-
+ src/sequential-single/Oranges.js |  4 +-
+ src/sequential-single/Purples.js |  4 +-
+ src/sequential-single/Reds.js    |  4 +-
+ 39 files changed, 105 insertions(+), 105 deletions(-)
+
+☕fec90e5🔪2018-10-09 18:28:43 +0900🔪akngs🔪Explicitly acknowledge Tableau for tableau10 scheme🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f8d1395🔪2018-08-24 14:28:48 -0700🔪Mike Bostock🔪1.3.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕99015bf🔪2018-08-24 14:28:46 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕f897b4c🔪2018-08-24 14:01:13 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9a90e58🔪2018-08-24 13:45:32 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             |  9 +++---
+ rollup.config.js         |  6 ++--
+ index.js => src/index.js | 80 ++++++++++++++++++++++++------------------------
+ 3 files changed, 48 insertions(+), 47 deletions(-)
+
+☕550018d🔪2018-08-24 12:18:53 -0700🔪Mike Bostock🔪1.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕701b375🔪2018-08-24 12:18:51 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .npmignore                         |  1 +
+ d3-scale-chromatic.sublime-project |  2 +-
+ package.json                       |  4 ++--
+ yarn.lock                          | 20 ++++++++++----------
+ 4 files changed, 14 insertions(+), 13 deletions(-)
+
+☕80105c0🔪2018-08-24 10:43:30 -0700🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d93a8aa🔪2018-08-24 10:43:16 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)                   |   9 -
+ .eslintrc.json (new)               |  15 +
+ d3-scale-chromatic.sublime-project |  16 +-
+ package.json                       |  15 +-
+ rollup.config.js                   |  42 +-
+ test/index-test.js (new)           |  80 ++++
+ yarn.lock (new)                    | 945 +++++++++++++++++++++++++++++++++++++
+ 7 files changed, 1089 insertions(+), 33 deletions(-)
+
+☕079034b🔪2018-08-16 16:52:08 +0900🔪akngs🔪Add improved Tableau color scheme.🔪With version 10, Tableau has introduced new categorical color scheme.
+
+See https://www.tableau.com/about/blog/2016/7/colors-upgrade-tableau-10-56782
+
+ README.md                          |   6 ++++++
+ img/Tableau10.png (new)            | Bin 0 -> 404 bytes
+ index.js                           |   1 +
+ src/categorical/Tableau10.js (new) |   3 +++
+ 4 files changed, 10 insertions(+)
+
+☕0509754🔪2018-05-11 12:22:21 -0700🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕756fc0f🔪2018-05-11 12:21:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a5b8f60🔪2018-05-11 12:17:48 -0700🔪Mike Bostock🔪Add d3.interpolateSinebow.🔪
+ README.md                             |   6 ++++++
+ img/sinebow.png (new)                 | Bin 0 -> 333 bytes
+ index.js                              |   1 +
+ src/sequential-multi/rainbow.js       |  10 +++++-----
+ src/sequential-multi/sinebow.js (new) |  14 ++++++++++++++
+ 5 files changed, 26 insertions(+), 5 deletions(-)
+
+☕f9880e5🔪2018-04-06 13:45:10 +0300🔪Finn Fitzsimons🔪Update README.md🔪seems like a typo
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb6ecdf🔪2018-04-10 12:25:37 -0700🔪Mike Bostock🔪Fix #12.🔪
+ README.md | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕a712b88🔪2018-01-28 11:05:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕99d607d🔪2018-01-28 10:45:08 -0800🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕98b8167🔪2018-01-28 10:42:51 -0800🔪Mike Bostock🔪Schemes from d3-scale.🔪
+ README.md                               |  58 +++++++++++++++++++++++++++++++-
+ img/category10.png (new)                | Bin 0 -> 3387 bytes
+ img/cool.png (new)                      | Bin 0 -> 4047 bytes
+ img/cubehelix.png (new)                 | Bin 0 -> 4101 bytes
+ img/inferno.png (new)                   | Bin 0 -> 4326 bytes
+ img/magma.png (new)                     | Bin 0 -> 4267 bytes
+ img/plasma.png (new)                    | Bin 0 -> 4318 bytes
+ img/rainbow.png (new)                   | Bin 0 -> 4143 bytes
+ img/viridis.png (new)                   | Bin 0 -> 4387 bytes
+ img/warm.png (new)                      | Bin 0 -> 4000 bytes
+ index.js                                |   4 +++
+ package.json                            |   3 +-
+ src/categorical/category10.js (new)     |   3 ++
+ src/sequential-multi/cubehelix.js (new) |   4 +++
+ src/sequential-multi/rainbow.js (new)   |  17 ++++++++++
+ src/sequential-multi/viridis.js (new)   |  16 +++++++++
+ 16 files changed, 103 insertions(+), 2 deletions(-)
+
+☕c3692e3🔪2018-01-28 10:32:42 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .gitignore                                               |  2 +-
+ .npmignore                                               |  2 +-
+ LICENSE                                                  |  2 +-
+ ...romatic.project => d3-scale-chromatic.sublime-project |  2 +-
+ package.json                                             | 16 ++++++++--------
+ rollup.config.js (new)                                   | 14 ++++++++++++++
+ 6 files changed, 26 insertions(+), 12 deletions(-)
+
+☕b62589e🔪2017-08-28 16:40:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕502ace8🔪2017-08-28 16:39:58 -0700🔪Mike Bostock🔪Document discrete schemes. Fixes #9.🔪
+ README.md | 72 +++++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 42 insertions(+), 30 deletions(-)
+
+☕7678866🔪2017-02-15 14:25:41 -0800🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f7822cb🔪2017-02-15 14:24:15 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db52ca6🔪2017-02-15 14:24:04 -0800🔪Mike Bostock🔪Remove banding.🔪
+ img/PuOr.png | Bin 438 -> 397 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕d3aa77a🔪2017-02-15 14:18:06 -0800🔪Mike Bostock🔪Fix transposition.🔪
+ src/diverging/PuOr.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕150cf8a🔪2017-02-15 13:32:58 -0800🔪Jeffrey Heer🔪Swap order of PuOr scheme.🔪
+ img/PuOr.png          | Bin 399 -> 438 bytes
+ src/diverging/PuOr.js |  18 +++++++++---------
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+☕a238a4e🔪2016-11-02 22:08:16 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ade54c1🔪2016-11-02 22:06:44 -0700🔪Mike Bostock🔪Export sequential and diverging schemes, too.🔪
+ .eslintrc                        |  7 +--
+ README.md                        | 97 +++++++++++++++++++++++++---------------
+ index.js                         | 57 +++++++++++------------
+ package.json                     |  4 +-
+ src/colors.js                    |  8 ++--
+ src/diverging/BrBG.js            | 15 ++++++-
+ src/diverging/PRGn.js            | 15 ++++++-
+ src/diverging/PiYG.js            | 15 ++++++-
+ src/diverging/PuOr.js            | 15 ++++++-
+ src/diverging/RdBu.js            | 15 ++++++-
+ src/diverging/RdGy.js            | 15 ++++++-
+ src/diverging/RdYlBu.js          | 15 ++++++-
+ src/diverging/RdYlGn.js          | 15 ++++++-
+ src/diverging/Spectral.js        | 15 ++++++-
+ src/ramp.js                      |  5 +--
+ src/sequential-multi/BuGn.js     | 13 +++++-
+ src/sequential-multi/BuPu.js     | 13 +++++-
+ src/sequential-multi/GnBu.js     | 13 +++++-
+ src/sequential-multi/OrRd.js     | 13 +++++-
+ src/sequential-multi/PuBu.js     | 13 +++++-
+ src/sequential-multi/PuBuGn.js   | 13 +++++-
+ src/sequential-multi/PuRd.js     | 13 +++++-
+ src/sequential-multi/RdPu.js     | 13 +++++-
+ src/sequential-multi/YlGn.js     | 13 +++++-
+ src/sequential-multi/YlGnBu.js   | 13 +++++-
+ src/sequential-multi/YlOrBr.js   | 13 +++++-
+ src/sequential-multi/YlOrRd.js   | 13 +++++-
+ src/sequential-single/Blues.js   | 13 +++++-
+ src/sequential-single/Greens.js  | 13 +++++-
+ src/sequential-single/Greys.js   | 13 +++++-
+ src/sequential-single/Oranges.js | 13 +++++-
+ src/sequential-single/Purples.js | 13 +++++-
+ src/sequential-single/Reds.js    | 13 +++++-
+ 33 files changed, 440 insertions(+), 107 deletions(-)
+
+☕1373040🔪2016-08-02 17:27:26 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9440199🔪2016-08-02 17:26:15 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕d4d66ed🔪2016-07-10 22:24:45 -0400🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3078fb3🔪2016-07-05 21:55:06 -0400🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+☕bf5e5f5🔪2016-06-30 20:16:38 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fc9715a🔪2016-06-30 20:16:32 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 8 ++++----
+ package.json | 6 +++---
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+☕10f3157🔪2016-06-14 09:25:02 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕f4629a7🔪2016-06-07 21:51:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕608e0dc🔪2016-06-07 21:13:30 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8e1814d🔪2016-06-07 21:13:22 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 12 +++++++-----
+ index.js     |  2 --
+ package.json | 18 +++++++++---------
+ 3 files changed, 16 insertions(+), 16 deletions(-)
+
+☕9721e75🔪2016-06-06 16:46:20 -0700🔪Mike Bostock🔪0.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕46e83f5🔪2016-06-06 15:59:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕00c7f78🔪2016-06-06 15:58:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 54 +++++++++++++++++++++++++++---------------------------
+ 1 file changed, 27 insertions(+), 27 deletions(-)
+
+☕df0915a🔪2016-06-06 15:57:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕2fb2ff2🔪2016-06-06 15:57:26 -0700🔪Mike Bostock🔪Fix #2 - remove d3-scale dependency.🔪
+ README.md                          | 236 +++++++++++++++++++------------------
+ img/{accent.png => Accent.png}     | Bin
+ img/{blues.png => Blues.png}       | Bin
+ img/{br-b-g.png => BrBG.png}       | Bin
+ img/{bu-gn.png => BuGn.png}        | Bin
+ img/{bu-pu.png => BuPu.png}        | Bin
+ img/{dark2.png => Dark2.png}       | Bin
+ img/{gn-bu.png => GnBu.png}        | Bin
+ img/{greens.png => Greens.png}     | Bin
+ img/{greys.png => Greys.png}       | Bin
+ img/{or-rd.png => OrRd.png}        | Bin
+ img/{oranges.png => Oranges.png}   | Bin
+ img/{p-r-gn.png => PRGn.png}       | Bin
+ img/{paired.png => Paired.png}     | Bin
+ img/{pastel1.png => Pastel1.png}   | Bin
+ img/{pastel2.png => Pastel2.png}   | Bin
+ img/{pi-y-g.png => PiYG.png}       | Bin
+ img/{pu-bu.png => PuBu.png}        | Bin
+ img/{pu-bu-gn.png => PuBuGn.png}   | Bin
+ img/{pu-or.png => PuOr.png}        | Bin
+ img/{pu-rd.png => PuRd.png}        | Bin
+ img/{purples.png => Purples.png}   | Bin
+ img/{rd-bu.png => RdBu.png}        | Bin
+ img/{rd-gy.png => RdGy.png}        | Bin
+ img/{rd-pu.png => RdPu.png}        | Bin
+ img/{rd-yl-bu.png => RdYlBu.png}   | Bin
+ img/{rd-yl-gn.png => RdYlGn.png}   | Bin
+ img/{reds.png => Reds.png}         | Bin
+ img/{set1.png => Set1.png}         | Bin
+ img/{set2.png => Set2.png}         | Bin
+ img/{set3.png => Set3.png}         | Bin
+ img/{spectral.png => Spectral.png} | Bin
+ img/{yl-gn.png => YlGn.png}        | Bin
+ img/{yl-gn-bu.png => YlGnBu.png}   | Bin
+ img/{yl-or-br.png => YlOrBr.png}   | Bin
+ img/{yl-or-rd.png => YlOrRd.png}   | Bin
+ index.js                           |  70 +++++------
+ package.json                       |   9 +-
+ src/categorical/Accent.js          |   7 +-
+ src/categorical/Dark2.js           |   7 +-
+ src/categorical/Paired.js          |   7 +-
+ src/categorical/Pastel1.js         |   7 +-
+ src/categorical/Pastel2.js         |   7 +-
+ src/categorical/Set1.js            |   7 +-
+ src/categorical/Set2.js            |   8 +-
+ src/categorical/Set3.js            |   7 +-
+ src/ramp.js                        |   6 +-
+ 47 files changed, 169 insertions(+), 209 deletions(-)
+
+☕4a5d497🔪2016-06-06 15:21:41 -0700🔪Mike Bostock🔪Match ColorBrewer naming.🔪
+ index.js                                         | 70 ++++++++++++------------
+ src/categorical/{accent.js => Accent.js}         |  0
+ src/categorical/{dark2.js => Dark2.js}           |  0
+ src/categorical/{paired.js => Paired.js}         |  0
+ src/categorical/{pastel1.js => Pastel1.js}       |  0
+ src/categorical/{pastel2.js => Pastel2.js}       |  0
+ src/categorical/{set1.js => Set1.js}             |  0
+ src/categorical/{set2.js => Set2.js}             |  0
+ src/categorical/{set3.js => Set3.js}             |  0
+ src/diverging/{br-b-g.js => BrBG.js}             |  0
+ src/diverging/{p-r-gn.js => PRGn.js}             |  0
+ src/diverging/{pi-y-g.js => PiYG.js}             |  0
+ src/diverging/{pu-or.js => PuOr.js}              |  0
+ src/diverging/{rd-bu.js => RdBu.js}              |  0
+ src/diverging/{rd-gy.js => RdGy.js}              |  0
+ src/diverging/{rd-yl-bu.js => RdYlBu.js}         |  0
+ src/diverging/{rd-yl-gn.js => RdYlGn.js}         |  0
+ src/diverging/{spectral.js => Spectral.js}       |  0
+ src/sequential-multi/{bu-gn.js => BuGn.js}       |  0
+ src/sequential-multi/{bu-pu.js => BuPu.js}       |  0
+ src/sequential-multi/{gn-bu.js => GnBu.js}       |  0
+ src/sequential-multi/{or-rd.js => OrRd.js}       |  0
+ src/sequential-multi/{pu-bu.js => PuBu.js}       |  0
+ src/sequential-multi/{pu-bu-gn.js => PuBuGn.js}  |  0
+ src/sequential-multi/{pu-rd.js => PuRd.js}       |  0
+ src/sequential-multi/{rd-pu.js => RdPu.js}       |  0
+ src/sequential-multi/{yl-gn.js => YlGn.js}       |  0
+ src/sequential-multi/{yl-gn-bu.js => YlGnBu.js}  |  0
+ src/sequential-multi/{yl-or-br.js => YlOrBr.js}  |  0
+ src/sequential-multi/{yl-or-rd.js => YlOrRd.js}  |  0
+ src/sequential-single/{blues.js => Blues.js}     |  0
+ src/sequential-single/{greens.js => Greens.js}   |  0
+ src/sequential-single/{greys.js => Greys.js}     |  0
+ src/sequential-single/{oranges.js => Oranges.js} |  0
+ src/sequential-single/{purples.js => Purples.js} |  0
+ src/sequential-single/{reds.js => Reds.js}       |  0
+ 36 files changed, 35 insertions(+), 35 deletions(-)
+
+☕0c24584🔪2016-06-06 12:46:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb1b25e🔪2016-06-06 12:31:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕15f5c47🔪2016-06-06 12:31:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 70 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 35 insertions(+), 35 deletions(-)
+
+☕cbd1381🔪2016-06-06 12:28:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1bd837🔪2016-06-06 12:27:43 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕39c188c🔪2016-06-06 12:27:28 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕de3553f🔪2016-06-06 12:27:13 -0700🔪Mike Bostock🔪Generate ordinal and sequential scales.🔪
+ README.md                        | 157 ++++++++++++++++++++-------------------
+ index.js                         |  70 ++++++++---------
+ package.json                     |   6 +-
+ src/categorical/accent.js        |  16 ++--
+ src/categorical/dark2.js         |  16 ++--
+ src/categorical/paired.js        |  20 ++---
+ src/categorical/pastel1.js       |  17 ++---
+ src/categorical/pastel2.js       |  16 ++--
+ src/categorical/set1.js          |  17 ++---
+ src/categorical/set2.js          |  17 ++---
+ src/categorical/set3.js          |  20 ++---
+ src/colors.js (new)              |   5 ++
+ src/diverging/br-b-g.js          |  14 +---
+ src/diverging/p-r-gn.js          |  14 +---
+ src/diverging/pi-y-g.js          |  14 +---
+ src/diverging/pu-or.js           |  14 +---
+ src/diverging/rd-bu.js           |  14 +---
+ src/diverging/rd-gy.js           |  14 +---
+ src/diverging/rd-yl-bu.js        |  14 +---
+ src/diverging/rd-yl-gn.js        |  14 +---
+ src/diverging/spectral.js        |  14 +---
+ src/ramp.js (new)                |  10 +++
+ src/rampClosed.js (new)          |   9 +++
+ src/sequential-multi/bu-gn.js    |  12 +--
+ src/sequential-multi/bu-pu.js    |  12 +--
+ src/sequential-multi/gn-bu.js    |  12 +--
+ src/sequential-multi/or-rd.js    |  12 +--
+ src/sequential-multi/pu-bu-gn.js |  12 +--
+ src/sequential-multi/pu-bu.js    |  12 +--
+ src/sequential-multi/pu-rd.js    |  12 +--
+ src/sequential-multi/rd-pu.js    |  12 +--
+ src/sequential-multi/yl-gn-bu.js |  12 +--
+ src/sequential-multi/yl-gn.js    |  12 +--
+ src/sequential-multi/yl-or-br.js |  12 +--
+ src/sequential-multi/yl-or-rd.js |  12 +--
+ src/sequential-single/blues.js   |  12 +--
+ src/sequential-single/greens.js  |  12 +--
+ src/sequential-single/greys.js   |  12 +--
+ src/sequential-single/oranges.js |  12 +--
+ src/sequential-single/purples.js |  12 +--
+ src/sequential-single/reds.js    |  12 +--
+ 41 files changed, 257 insertions(+), 481 deletions(-)
+
+☕bd0a7cb🔪2016-06-05 14:38:55 -0700🔪Mike Bostock🔪Fix image sizes.🔪
+ img/accent.png  | Bin 222 -> 222 bytes
+ img/dark2.png   | Bin 221 -> 221 bytes
+ img/paired.png  | Bin 248 -> 249 bytes
+ img/pastel1.png | Bin 222 -> 223 bytes
+ img/pastel2.png | Bin 221 -> 221 bytes
+ img/set1.png    | Bin 224 -> 226 bytes
+ img/set2.png    | Bin 224 -> 225 bytes
+ img/set3.png    | Bin 247 -> 248 bytes
+ 8 files changed, 0 insertions(+), 0 deletions(-)
+
+☕94c6316🔪2016-06-05 14:36:24 -0700🔪Mike Bostock🔪More images.🔪
+ README.md             |  16 ++++++++++++++++
+ img/accent.png (new)  | Bin 0 -> 222 bytes
+ img/dark2.png (new)   | Bin 0 -> 221 bytes
+ img/paired.png (new)  | Bin 0 -> 248 bytes
+ img/pastel1.png (new) | Bin 0 -> 222 bytes
+ img/pastel2.png (new) | Bin 0 -> 221 bytes
+ img/set1.png (new)    | Bin 0 -> 224 bytes
+ img/set2.png (new)    | Bin 0 -> 224 bytes
+ img/set3.png (new)    | Bin 0 -> 247 bytes
+ 9 files changed, 16 insertions(+)
+
+☕013da35🔪2016-06-05 14:28:59 -0700🔪Mike Bostock🔪More images.🔪
+ README.md              |  24 ++++++++++++++++++++++++
+ img/bu-gn.png (new)    | Bin 0 -> 370 bytes
+ img/bu-pu.png (new)    | Bin 0 -> 369 bytes
+ img/gn-bu.png (new)    | Bin 0 -> 364 bytes
+ img/or-rd.png (new)    | Bin 0 -> 331 bytes
+ img/pu-bu-gn.png (new) | Bin 0 -> 376 bytes
+ img/pu-bu.png (new)    | Bin 0 -> 365 bytes
+ img/pu-rd.png (new)    | Bin 0 -> 377 bytes
+ img/rd-pu.png (new)    | Bin 0 -> 315 bytes
+ img/yl-gn-bu.png (new) | Bin 0 -> 377 bytes
+ img/yl-gn.png (new)    | Bin 0 -> 372 bytes
+ img/yl-or-br.png (new) | Bin 0 -> 324 bytes
+ img/yl-or-rd.png (new) | Bin 0 -> 309 bytes
+ 13 files changed, 24 insertions(+)
+
+☕321e093🔪2016-06-05 14:25:07 -0700🔪Mike Bostock🔪More images.🔪
+ README.md             |  12 ++++++++++++
+ img/blues.png (new)   | Bin 0 -> 372 bytes
+ img/greens.png (new)  | Bin 0 -> 367 bytes
+ img/greys.png (new)   | Bin 0 -> 133 bytes
+ img/oranges.png (new) | Bin 0 -> 318 bytes
+ img/purples.png (new) | Bin 0 -> 335 bytes
+ img/reds.png (new)    | Bin 0 -> 336 bytes
+ 7 files changed, 12 insertions(+)
+
+☕50dc00d🔪2016-06-05 14:22:46 -0700🔪Mike Bostock🔪Add diverging images.🔪
+ README.md              |  18 ++++++++++++++++++
+ img/br-b-g.png (new)   | Bin 0 -> 424 bytes
+ img/p-r-gn.png (new)   | Bin 0 -> 415 bytes
+ img/pi-y-g.png (new)   | Bin 0 -> 426 bytes
+ img/pu-or.png (new)    | Bin 0 -> 399 bytes
+ img/rd-bu.png (new)    | Bin 0 -> 454 bytes
+ img/rd-gy.png (new)    | Bin 0 -> 348 bytes
+ img/rd-yl-bu.png (new) | Bin 0 -> 397 bytes
+ img/rd-yl-gn.png (new) | Bin 0 -> 422 bytes
+ img/spectral.png (new) | Bin 0 -> 439 bytes
+ 10 files changed, 18 insertions(+)
+
+☕6d00ca7🔪2016-06-04 11:07:20 -0700🔪Mike Bostock🔪Regroup.🔪
+ README.md                              | 126 ++++++++++++++++++---------------
+ index.js                               |  74 ++++++++++---------
+ src/{ => categorical}/accent.js        |   2 +-
+ src/{ => categorical}/dark2.js         |   2 +-
+ src/{ => categorical}/paired.js        |   2 +-
+ src/{ => categorical}/pastel1.js       |   2 +-
+ src/{ => categorical}/pastel2.js       |   2 +-
+ src/{ => categorical}/set1.js          |   2 +-
+ src/{ => categorical}/set2.js          |   2 +-
+ src/{ => categorical}/set3.js          |   2 +-
+ src/{ => diverging}/br-b-g.js          |   2 +-
+ src/{ => diverging}/p-r-gn.js          |   2 +-
+ src/{ => diverging}/pi-y-g.js          |   2 +-
+ src/{ => diverging}/pu-or.js           |   2 +-
+ src/{ => diverging}/rd-bu.js           |   2 +-
+ src/{ => diverging}/rd-gy.js           |   2 +-
+ src/{ => diverging}/rd-yl-bu.js        |   2 +-
+ src/{ => diverging}/rd-yl-gn.js        |   2 +-
+ src/{ => diverging}/spectral.js        |   2 +-
+ src/{ => sequential-multi}/bu-gn.js    |   2 +-
+ src/{ => sequential-multi}/bu-pu.js    |   2 +-
+ src/{ => sequential-multi}/gn-bu.js    |   2 +-
+ src/{ => sequential-multi}/or-rd.js    |   2 +-
+ src/{ => sequential-multi}/pu-bu-gn.js |   2 +-
+ src/{ => sequential-multi}/pu-bu.js    |   2 +-
+ src/{ => sequential-multi}/pu-rd.js    |   2 +-
+ src/{ => sequential-multi}/rd-pu.js    |   2 +-
+ src/{ => sequential-multi}/yl-gn-bu.js |   2 +-
+ src/{ => sequential-multi}/yl-gn.js    |   2 +-
+ src/{ => sequential-multi}/yl-or-br.js |   2 +-
+ src/{ => sequential-multi}/yl-or-rd.js |   2 +-
+ src/{ => sequential-single}/blues.js   |   2 +-
+ src/{ => sequential-single}/greens.js  |   2 +-
+ src/{ => sequential-single}/greys.js   |   2 +-
+ src/{ => sequential-single}/oranges.js |   2 +-
+ src/{ => sequential-single}/purples.js |   2 +-
+ src/{ => sequential-single}/reds.js    |   2 +-
+ 37 files changed, 141 insertions(+), 129 deletions(-)
+
+☕555e14d🔪2016-06-04 10:56:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕5fd2991🔪2016-06-04 10:55:28 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕64627da🔪2016-06-04 10:55:20 -0700🔪Mike Bostock🔪Prepare for initial release.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕56a61f2🔪2016-06-04 10:54:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b182e93🔪2016-06-04 10:53:34 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)                  |  14 ++++
+ .gitignore (new)                 |   5 ++
+ .npmignore (new)                 |   3 +
+ LICENSE (new)                    |  44 +++++++++++
+ README.md (new)                  | 160 +++++++++++++++++++++++++++++++++++++++
+ d3-scale-chromatic.project (new) |  13 ++++
+ index.js (new)                   |  36 +++++++++
+ package.json (new)               |  37 +++++++++
+ src/accent.js (new)              |  10 +++
+ src/blues.js (new)               |  11 +++
+ src/br-b-g.js (new)              |  13 ++++
+ src/bu-gn.js (new)               |  11 +++
+ src/bu-pu.js (new)               |  11 +++
+ src/dark2.js (new)               |  10 +++
+ src/gn-bu.js (new)               |  11 +++
+ src/greens.js (new)              |  11 +++
+ src/greys.js (new)               |  11 +++
+ src/or-rd.js (new)               |  11 +++
+ src/oranges.js (new)             |  11 +++
+ src/p-r-gn.js (new)              |  13 ++++
+ src/paired.js (new)              |  14 ++++
+ src/pastel1.js (new)             |  11 +++
+ src/pastel2.js (new)             |  10 +++
+ src/pi-y-g.js (new)              |  13 ++++
+ src/pu-bu-gn.js (new)            |  11 +++
+ src/pu-bu.js (new)               |  11 +++
+ src/pu-or.js (new)               |  13 ++++
+ src/pu-rd.js (new)               |  11 +++
+ src/purples.js (new)             |  11 +++
+ src/rd-bu.js (new)               |  13 ++++
+ src/rd-gy.js (new)               |  13 ++++
+ src/rd-pu.js (new)               |  11 +++
+ src/rd-yl-bu.js (new)            |  13 ++++
+ src/rd-yl-gn.js (new)            |  13 ++++
+ src/reds.js (new)                |  11 +++
+ src/scheme.js (new)              |  11 +++
+ src/set1.js (new)                |  11 +++
+ src/set2.js (new)                |  10 +++
+ src/set3.js (new)                |  14 ++++
+ src/spectral.js (new)            |  13 ++++
+ src/yl-gn-bu.js (new)            |  11 +++
+ src/yl-gn.js (new)               |  11 +++
+ src/yl-or-br.js (new)            |  11 +++
+ src/yl-or-rd.js (new)            |  11 +++
+ 44 files changed, 728 insertions(+)

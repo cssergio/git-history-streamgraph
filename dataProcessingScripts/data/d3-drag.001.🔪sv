@@ -1,0 +1,1029 @@
+☕1b88d8a🔪2021-06-09 09:00:53 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb28380🔪2021-06-09 17:56:45 +0200🔪Philippe Rivière🔪Adopt type=module (#80)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* browser rather than no-undef
+
+* use the "falls through" comment to make eslint's "no-fallthrough" rule happy
+
+* add eslint.json
+
+* remove Sublime project
+
+* related d3/d3#3502; extract copyrights from license
+
+* update dependencies
+
+* update homepage
+
+* stricter eslint
+
+* fix #78; non-passive event listeners
+
+* push on prepublishOnly
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    8 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   26 +-
+ d3-drag.sublime-project (gone)      |   17 -
+ package.json                        |   53 +-
+ rollup.config.js                    |   10 +-
+ src/drag.js                         |   10 +-
+ src/nodrag.js                       |    8 +-
+ src/noevent.js                      |    5 +
+ test/.eslintrc.json (new)           |   12 +
+ test/export-test.js (new)           |    8 +
+ yarn.lock                           | 1463 +++++++++++++++++++----------------
+ 14 files changed, 943 insertions(+), 765 deletions(-)
+
+☕25a0780🔪2020-08-23 22:36:51 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕99caba7🔪2020-08-23 22:36:10 +0200🔪Philippe Rivière🔪dependencies🔪
+ package.json |  7 ++-----
+ yarn.lock    | 14 +++++++-------
+ 2 files changed, 9 insertions(+), 12 deletions(-)
+
+☕28837ae🔪2020-07-24 17:10:12 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+☕2365889🔪2020-06-16 10:19:45 +0200🔪Philippe Rivière🔪d3 not only v4🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ed1898🔪2020-05-15 16:10:52 +0200🔪Philippe Rivière🔪format link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e799e7b🔪2020-05-13 16:36:22 +0200🔪Philippe Rivière🔪document d3-drag@2🔪
+ README.md | 73 ++++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 37 insertions(+), 36 deletions(-)
+
+☕5b2bcc1🔪2020-05-13 16:26:40 +0200🔪Philippe Rivière🔪prepare for d3-dispatch@2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕36bf379🔪2020-05-13 16:26:16 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/constant.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕ec80721🔪2019-11-24 08:16:19 -0800🔪Mike Bostock🔪Fix typo.🔪
+ src/drag.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f91e6bc🔪2019-11-23 17:31:18 -0800🔪Mike Bostock🔪Update d3-selection.🔪
+ package.json   |   2 +-
+ src/drag.js    | 109 +++++++++++++++++++++++++++++++++++----------------------
+ src/event.js   |  33 +++++++++++------
+ src/noevent.js |   6 ++--
+ yarn.lock      |   8 ++---
+ 5 files changed, 96 insertions(+), 62 deletions(-)
+
+☕652167e🔪2019-11-16 09:53:30 -0800🔪Mike Bostock🔪1.2.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8d0232🔪2019-09-27 11:29:53 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕34cb662🔪2019-11-02 08:23:38 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕aad04a1🔪2019-08-07 10:40:42 -0700🔪Mike Bostock🔪1.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f20bbe9🔪2019-08-07 10:39:41 -0700🔪Mike Bostock🔪Exact paths.🔪Related d3/d3#3265.
+
+ src/drag.js   | 8 ++++----
+ src/index.js  | 4 ++--
+ src/nodrag.js | 2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+☕d6e507a🔪2019-08-07 10:38:25 -0700🔪Mike Bostock🔪Update dependencies.🔪Standardize dependencies - related d3/d3#3337.
+Explicit files - related d3/d3#3335.
+
+ .npmignore (gone) |   4 -
+ package.json      |  10 +-
+ yarn.lock         | 881 ++++++++++++++++++++++++++++++++----------------------
+ 3 files changed, 526 insertions(+), 369 deletions(-)
+
+☕dcbd54e🔪2019-08-07 10:34:43 -0700🔪Mike Bostock🔪Fix #62 - ignore if ctrlKey.🔪
+ README.md   | 2 +-
+ src/drag.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕ee4db57🔪2019-08-05 12:19:21 -0700🔪Mike Bostock🔪Fix #47 - touchable if maxTouchPoints.🔪
+ README.md   | 2 +-
+ src/drag.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕9862ac8🔪2018-08-24 14:30:22 -0700🔪Mike Bostock🔪1.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b89e78🔪2018-08-24 14:30:20 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕a2b3d48🔪2018-08-24 14:02:08 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕629b139🔪2018-08-24 13:50:59 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 2 --
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 2 ++
+ 4 files changed, 10 insertions(+), 9 deletions(-)
+
+☕fdc14ac🔪2018-08-24 12:22:45 -0700🔪Mike Bostock🔪1.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6a15d0d🔪2018-08-24 12:22:42 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   12 -
+ .eslintrc.json (new)     |   16 +
+ .gitignore               |    2 +-
+ .npmignore               |    3 +-
+ d3-drag.sublime-project  |   16 +-
+ package-lock.json (gone) | 1019 ----------------------------------------------
+ package.json             |   17 +-
+ rollup.config.js         |   42 +-
+ yarn.lock (new)          |  943 ++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 1012 insertions(+), 1058 deletions(-)
+
+☕ec20d5e🔪2018-02-08 20:00:36 +0100🔪Herst🔪Fix typo in README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac20829🔪2017-10-03 10:06:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d5e9a1d🔪2017-10-03 10:04:56 -0700🔪Mike Bostock🔪1.2.1🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕fa12f44🔪2017-10-03 10:04:52 -0700🔪Mike Bostock🔪Greedy coercion.🔪
+ src/drag.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d80a8c8🔪2017-10-03 10:01:48 -0700🔪Mike Bostock🔪1.2.0🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕eeb2ea1🔪2017-10-03 10:01:40 -0700🔪Mike Bostock🔪Update Rollup.🔪
+ package.json     |  6 +++---
+ rollup.config.js | 16 ++++++++++++----
+ 2 files changed, 15 insertions(+), 7 deletions(-)
+
+☕136389b🔪2017-10-03 09:57:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕2d65b3c🔪2017-10-03 09:57:01 -0700🔪Mike Bostock🔪Fix source anchors.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕cc4aef5🔪2017-10-03 09:54:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕984f730🔪2017-10-03 09:49:45 -0700🔪Mike Bostock🔪Adopt standard pattern for touchable.🔪
+ src/drag.js | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕90ae641🔪2017-10-03 10:44:39 +0200🔪Nicolas Vanhoren🔪Readme improvements🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a19240c🔪2017-10-03 10:42:10 +0200🔪Nicolas Vanhoren🔪Modified the way touch event forcing is specified.🔪
+ README.md   | 10 +++++-----
+ src/drag.js | 12 ++++++++----
+ 2 files changed, 13 insertions(+), 9 deletions(-)
+
+☕4df010a🔪2017-09-27 09:13:35 +0200🔪Nicolas Vanhoren🔪Allowed options specification to force touch events register🔪
+ README.md   | 6 +++++-
+ src/drag.js | 5 +++--
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+☕fae97f6🔪2017-09-25 13:54:09 +0200🔪Herst🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕44af703🔪2017-07-12 13:44:22 -0700🔪Mike Bostock🔪1.1.1🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕58399e7🔪2017-07-12 13:44:17 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package-lock.json (new) | 1019 +++++++++++++++++++++++++++++++++++++++++++++++
+ package.json            |   10 +-
+ rollup.config.js (new)  |    6 +
+ 3 files changed, 1030 insertions(+), 5 deletions(-)
+
+☕3ca15e4🔪2017-07-12 08:52:32 -0700🔪Mike Bostock🔪Set touch-action: none.🔪
+ src/drag.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕870498d🔪2017-07-12 08:47:09 -0700🔪Mike Bostock🔪Only register touch listeners when supported.🔪This avoids a [Violation] warning in Chrome (#35).
+
+ src/drag.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕c4104ce🔪2017-05-11 09:12:24 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8884d69🔪2017-05-11 09:12:13 -0700🔪Mike Bostock🔪Update package-preamble.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fff4311🔪2017-05-11 09:09:17 -0700🔪Mike Bostock🔪Use distance threshold when suppressing click.🔪Fixes #28. Adds drag.clickDistance. Related d3/d3-zoom#65.
+
+ README.md   |  6 +++++-
+ src/drag.js | 16 ++++++++++++++--
+ 2 files changed, 19 insertions(+), 3 deletions(-)
+
+☕bb0af43🔪2017-03-10 10:09:48 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2c0cf3e🔪2017-03-10 10:09:38 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9791e5e🔪2017-02-28 09:27:47 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3b3b4bb🔪2017-02-28 09:27:44 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕78899cb🔪2017-01-04 08:34:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e90f632🔪2016-11-22 16:29:43 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕df9fca5🔪2016-11-22 16:29:34 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 3 +--
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+☕3b86cc9🔪2016-10-20 10:13:22 -0700🔪Mike Bostock🔪Link to Drag & Zoom example. Related d3/d3-zoom#66.🔪
+ README.md          |   4 ++++
+ img/dots.png (new) | Bin 0 -> 32622 bytes
+ 2 files changed, 4 insertions(+)
+
+☕a785278🔪2016-08-22 16:50:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2aba976🔪2016-08-11 12:36:50 +0300🔪Devinsuit🔪Add links to source🔪https://github.com/d3/d3/issues/2936
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕9db396b🔪2016-08-02 14:50:18 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c2ef481🔪2016-08-02 14:50:17 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕30dcedc🔪2016-06-24 11:06:53 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8cf3ec🔪2016-06-24 11:06:48 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 8 ++++----
+ package.json | 8 ++++----
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+☕930837e🔪2016-06-19 09:20:15 -0700🔪Mike Bostock🔪0.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕61d30c2🔪2016-06-19 09:20:05 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 4 ++--
+ package.json | 6 +++---
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕0bf5231🔪2016-06-14 09:23:47 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕83d437d🔪2016-06-07 20:57:05 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cdc231a🔪2016-06-07 20:56:58 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 10 +++++-----
+ index.js     |  1 -
+ package.json | 16 ++++++++--------
+ 3 files changed, 13 insertions(+), 14 deletions(-)
+
+☕cf747cc🔪2016-05-31 17:38:10 -0700🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c46a91b🔪2016-05-31 17:35:50 -0700🔪Mike Bostock🔪Only consume handled touch events.🔪
+ src/drag.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕b972464🔪2016-05-24 12:25:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ed85cd🔪2016-05-24 12:25:16 -0700🔪Mike Bostock🔪0.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8e14fcb🔪2016-05-24 12:24:04 -0700🔪Mike Bostock🔪Add event.target.🔪
+ README.md    | 1 +
+ src/drag.js  | 4 ++--
+ src/event.js | 3 ++-
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+☕23244ad🔪2016-05-24 08:43:56 -0700🔪Mike Bostock🔪0.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕19c05c1🔪2016-05-24 08:43:52 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕ca08fa8🔪2016-05-24 08:40:01 -0700🔪Mike Bostock🔪Fix #24 - remove drag.{x,y}.🔪
+ README.md   | 30 +++---------------------------
+ src/drag.js | 35 ++++++++---------------------------
+ 2 files changed, 11 insertions(+), 54 deletions(-)
+
+☕149cdb9🔪2016-05-23 17:29:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d8bdcf3🔪2016-05-23 16:55:14 -0700🔪Mike Bostock🔪Fix #23 - no optional start listener.🔪
+ README.md   | 10 ++--------
+ src/drag.js |  4 ++--
+ 2 files changed, 4 insertions(+), 10 deletions(-)
+
+☕5e5a953🔪2016-05-22 09:00:52 -0700🔪Mike Bostock🔪0.1.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕614326d🔪2016-05-22 09:00:42 -0700🔪Mike Bostock🔪Better fallback subject.🔪
+ README.md   | 4 ++--
+ src/drag.js | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕cddfe66🔪2016-05-22 09:00:23 -0700🔪Mike Bostock🔪Fix beforestart’s dx, dy and listeners.🔪
+ src/drag.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3fef1bd🔪2016-05-22 08:48:17 -0700🔪Mike Bostock🔪0.1.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4e4855f🔪2016-05-22 08:44:04 -0700🔪Mike Bostock🔪Fallback subject.🔪Reverts most of 8b25a53c826200fe643cd009fe9fd0ad8e99085b. Fixes #18.
+
+ README.md   | 4 ++--
+ src/drag.js | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕24e9583🔪2016-05-22 08:35:23 -0700🔪Mike Bostock🔪Fix #21 - expose dx and dy on drag event.🔪
+ README.md    |  2 ++
+ src/drag.js  | 14 +++++++-------
+ src/event.js |  4 +++-
+ 3 files changed, 12 insertions(+), 8 deletions(-)
+
+☕6e9063d🔪2016-05-21 22:07:30 -0700🔪Mike Bostock🔪Add click suppression to d3.dragEnable.🔪
+ README.md     |  4 ++--
+ src/drag.js   | 17 +++--------------
+ src/nodrag.js |  6 +++++-
+ 3 files changed, 10 insertions(+), 17 deletions(-)
+
+☕f7566be🔪2016-05-21 22:03:53 -0700🔪Mike Bostock🔪Fix #22 - add d3.dragDisable.🔪
+ README.md     |  8 ++++++++
+ index.js      |  1 +
+ src/drag.js   | 10 +++++-----
+ src/nodrag.js | 44 +++++++++++++++++++-------------------------
+ 4 files changed, 33 insertions(+), 30 deletions(-)
+
+☕639d217🔪2016-05-19 13:35:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6be0d7a🔪2016-05-19 13:35:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0b49647🔪2016-05-19 13:31:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕817efe9🔪2016-05-19 13:28:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕a97563a🔪2016-05-19 13:19:53 -0700🔪Mike Bostock🔪Combine default prevention logic.🔪
+ src/drag.js                    | 9 ++++-----
+ src/{noselect.js => nodrag.js} | 8 ++++----
+ 2 files changed, 8 insertions(+), 9 deletions(-)
+
+☕326c231🔪2016-05-18 22:21:40 -0700🔪Mike Bostock🔪0.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b39f5d9🔪2016-05-18 22:13:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 21 ++-------------------
+ 1 file changed, 2 insertions(+), 19 deletions(-)
+
+☕bd903f3🔪2016-05-18 22:01:38 -0700🔪Mike Bostock🔪Must test an element for onselectstart.🔪The "onselectstart" in window is always false.
+
+ src/noselect.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕471b091🔪2016-05-18 21:52:17 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/drag.js | 63 +++++++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 38 insertions(+), 25 deletions(-)
+
+☕b1d92b3🔪2016-05-18 21:38:02 -0700🔪Mike Bostock🔪Don’t preventDefault on touchend.🔪Preventing default on touchend would prevent click emulation.
+
+ README.md            |  4 ++--
+ src/cancel.js (gone) |  6 ------
+ src/drag.js          | 15 ++++++++++-----
+ src/noevent.js (new) | 10 ++++++++++
+ src/noselect.js      |  4 ++--
+ 5 files changed, 24 insertions(+), 15 deletions(-)
+
+☕a63f084🔪2016-05-18 18:00:25 -0700🔪Mike Bostock🔪Fix #20 - simpler default prevention.🔪
+ README.md              | 16 ++++++++--------
+ src/drag.js            | 43 +++++++++++++++++--------------------------
+ src/noclick.js (gone)  | 10 ----------
+ src/nodrag.js (gone)   | 10 ----------
+ src/noscroll.js (gone) |  5 -----
+ src/noselect.js        | 35 +++++++++++++++++++++--------------
+ 6 files changed, 46 insertions(+), 73 deletions(-)
+
+☕c79a3a8🔪2016-05-18 10:12:59 -0700🔪Mike Bostock🔪Update notes.🔪
+ README.md | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+☕34783cc🔪2016-05-18 09:53:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕108b55b🔪2016-05-18 18:36:05 +0200🔪Ramiro Gómez🔪Fixed link to D3 version 4 repo🔪The current link leads to a non-existing page (404).
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c19647🔪2016-05-18 09:31:18 -0700🔪Mike Bostock🔪Fix #16 - stop propagation on consumed events.🔪
+ README.md             | 37 +++++++++++++++++++------------------
+ src/cancel.js         |  6 ++----
+ src/drag.js           |  5 +++--
+ src/noscroll.js (new) |  5 +++++
+ 4 files changed, 29 insertions(+), 24 deletions(-)
+
+☕ed9d993🔪2016-05-18 09:13:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bdaa937🔪2016-05-18 09:08:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5fb9928🔪2016-05-18 09:07:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕bd4fc56🔪2016-05-18 09:03:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕117bb8b🔪2016-05-18 09:02:40 -0700🔪Mike Bostock🔪Add event table.🔪
+ README.md | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+☕d60a7b8🔪2016-05-14 21:22:54 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕f539431🔪2016-05-13 16:23:26 -0700🔪Mike Bostock🔪Ignore “ghost” mousedown after touchend.🔪Fixes #15. The icky part is that it can be 300+ ms after touchend!
+
+ src/drag.js | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+☕b2858f2🔪2016-05-13 11:27:58 -0700🔪Mike Bostock🔪Use capture on mousemove and mouseup.🔪This ensures that the drag behavior gets first dibs at these events during an
+active gesture. If you stop propagation on the source event during a drag event,
+other (non-capturing) event listeners will no longer receive the event.
+
+ src/drag.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fe0dba1🔪2016-05-11 16:43:29 -0700🔪Mike Bostock🔪0.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d7ecd48🔪2016-05-11 16:41:05 -0700🔪Mike Bostock🔪Fix #13 - report event.active.🔪
+ README.md    |  3 +++
+ src/drag.js  | 23 ++++++++++++-----------
+ src/event.js |  3 ++-
+ 3 files changed, 17 insertions(+), 12 deletions(-)
+
+☕750377f🔪2016-05-11 16:30:37 -0700🔪Mike Bostock🔪Do all work before emitting.🔪
+ .eslintrc   |  2 +-
+ src/drag.js | 35 +++++++++++++++++++----------------
+ 2 files changed, 20 insertions(+), 17 deletions(-)
+
+☕b37775d🔪2016-05-11 13:36:44 -0700🔪Mike Bostock🔪Switch to Canvas graph example.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1f284e0🔪2016-05-11 12:38:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕36e2dac🔪2016-05-11 12:37:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9ae58e4🔪2016-05-11 12:36:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕979b964🔪2016-05-11 12:36:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ce1edd🔪2016-05-11 12:36:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf8837f🔪2016-05-11 12:35:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕172153f🔪2016-05-11 12:33:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4b1237f🔪2016-05-11 12:32:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fa05699🔪2016-05-11 12:31:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕38a9a26🔪2016-05-11 12:28:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕01fb4d2🔪2016-05-11 12:25:33 -0700🔪Mike Bostock🔪Fix preview.🔪
+ img/canvas.png | Bin 18458 -> 19769 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕50fd2ba🔪2016-05-11 12:23:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md                   |  18 +++++++++++++++---
+ img/canvas.png (new)        | Bin 0 -> 18458 bytes
+ img/drawing.png (new)       | Bin 0 -> 18674 bytes
+ img/force-collide.png (new) | Bin 0 -> 68143 bytes
+ img/force-graph.png (new)   | Bin 0 -> 28784 bytes
+ img/voronoi.png (new)       | Bin 0 -> 38394 bytes
+ 6 files changed, 15 insertions(+), 3 deletions(-)
+
+☕2008627🔪2016-05-11 08:35:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕28eec0e🔪2016-05-11 08:34:24 -0700🔪Mike Bostock🔪0.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b25a53🔪2016-05-11 08:32:58 -0700🔪Mike Bostock🔪Simpler default subject.🔪Don’t fallback to the originating element if the datum is undefined. If you want
+to use the originating element as the subject, make it explicit.
+
+ README.md   | 28 +++++++++++++++++++++-------
+ src/drag.js |  2 +-
+ 2 files changed, 22 insertions(+), 8 deletions(-)
+
+☕ccfacd6🔪2016-05-10 16:57:20 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a603c7c🔪2016-05-10 16:57:18 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕9ed98d3🔪2016-05-10 16:54:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f2b3e0a🔪2016-05-10 16:53:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f6bfea0🔪2016-05-10 16:53:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e6eca1d🔪2016-05-10 16:53:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕834c75d🔪2016-05-10 16:52:36 -0700🔪Mike Bostock🔪Add description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕70ca7d8🔪2016-05-10 16:52:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8188301🔪2016-05-10 16:52:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕e23513f🔪2016-05-10 15:57:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕efe32d1🔪2016-05-10 15:57:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+☕3d4f2e8🔪2016-05-10 15:54:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+☕034b67f🔪2016-05-10 15:44:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕15a63bb🔪2016-05-10 15:43:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕98bb70a🔪2016-05-10 15:43:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2f59acb🔪2016-05-10 15:42:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕347f77f🔪2016-05-10 15:41:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕85671f2🔪2016-05-10 15:41:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b04b031🔪2016-05-10 15:40:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 40 ++++++++++++++++++++++++++++++----------
+ 1 file changed, 30 insertions(+), 10 deletions(-)
+
+☕bf272ec🔪2016-05-10 15:15:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++++++----------
+ 1 file changed, 18 insertions(+), 10 deletions(-)
+
+☕b02a467🔪2016-05-10 14:36:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕56df631🔪2016-05-10 14:36:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ab4ea0c🔪2016-05-10 14:36:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0b78730🔪2016-05-10 14:35:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0c7df53🔪2016-05-10 14:35:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕56e99f6🔪2016-05-10 14:27:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕711c173🔪2016-05-10 14:25:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c4a8b0🔪2016-05-10 14:25:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕df556ec🔪2016-05-10 14:24:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c209e8🔪2016-05-10 14:23:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2088e02🔪2016-05-10 14:23:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aedc747🔪2016-05-10 14:23:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ee6a693🔪2016-05-10 14:21:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 68 +++++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 40 insertions(+), 28 deletions(-)
+
+☕71b8233🔪2016-05-10 14:11:34 -0700🔪Mike Bostock🔪Restore drag.filter.🔪It’s convenient to have this separate from drag.subject being null, such that if
+you redefine drag.subject, you aren’t required to re-implement the default
+filter (to ignore right-clicks). Also, the filter is called once per initiating
+input event, while the subject is called once per starting pointer.
+
+ src/drag.js | 39 +++++++++++++++++++++++++--------------
+ 1 file changed, 25 insertions(+), 14 deletions(-)
+
+☕723787b🔪2016-05-10 13:41:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+
+☕a1ed39c🔪2016-05-10 13:33:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕e48ff63🔪2016-05-10 13:32:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05b90dd🔪2016-05-10 13:31:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b2d74d6🔪2016-05-10 13:30:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕727f449🔪2016-05-10 13:29:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 41 +++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 37 insertions(+), 4 deletions(-)
+
+☕eda6237🔪2016-05-10 11:11:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 83 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 82 insertions(+), 1 deletion(-)
+
+☕cc07cdb🔪2016-05-10 08:24:55 -0700🔪Mike Bostock🔪Restore optional start listener.🔪
+ src/drag.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕ec094cd🔪2016-05-09 14:53:56 -0700🔪Mike Bostock🔪Replace drag.filter with drag.subject.🔪This makes it easier to define what’s being dragged. Fixes #12.
+
+ src/drag.js  | 49 ++++++++++++++++++++++++-------------------------
+ src/event.js |  3 ++-
+ 2 files changed, 26 insertions(+), 26 deletions(-)
+
+☕fecdfc7🔪2016-05-09 10:38:47 -0700🔪Mike Bostock🔪Fix #1 - support -moz-user-select.🔪
+ src/nodrag.js   | 10 +++++-----
+ src/noselect.js | 21 +++++++++++++++++----
+ 2 files changed, 22 insertions(+), 9 deletions(-)
+
+☕240033f🔪2016-05-09 09:12:56 -0700🔪Mike Bostock🔪Stop propagation of canceled events.🔪Now you don’t need to check click.defaultPrevented. If you want to allow a click
+event, you instead remove the noclick listener on the drag behavior. Fixes #10.
+
+ src/cancel.js (new)     | 8 ++++++++
+ src/drag.js             | 6 +++---
+ src/event.js            | 4 ----
+ src/noclick.js          | 4 ++--
+ src/nodefault.js (gone) | 5 -----
+ src/nodrag.js           | 4 ++--
+ src/noselect.js         | 4 ++--
+ 7 files changed, 17 insertions(+), 18 deletions(-)
+
+☕b259c3f🔪2016-05-08 08:47:47 -0700🔪Mike Bostock🔪Extract default behavior suppressors.🔪
+ src/drag.js            | 32 ++++----------------------------
+ src/noclick.js (new)   | 10 ++++++++++
+ src/nodefault.js (new) |  5 +++++
+ src/nodrag.js (new)    | 10 ++++++++++
+ src/noselect.js (new)  | 10 ++++++++++
+ 5 files changed, 39 insertions(+), 28 deletions(-)
+
+☕4bd5941🔪2016-05-08 08:22:30 -0700🔪Mike Bostock🔪Assign yes{drag,select} on no{drag,select}.🔪
+ src/drag.js | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕762b965🔪2016-05-07 22:20:11 -0700🔪Mike Bostock🔪Consistent order.🔪
+ src/drag.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7b22720🔪2016-05-07 22:18:36 -0700🔪Mike Bostock🔪Slight optimizations.🔪
+ src/drag.js  | 38 ++++++++++++++++++--------------------
+ src/event.js |  4 ++++
+ 2 files changed, 22 insertions(+), 20 deletions(-)
+
+☕6027709🔪2016-05-07 18:36:44 -0700🔪Mike Bostock🔪One fewer closure.🔪
+ src/drag.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕55d1802🔪2016-05-07 18:29:44 -0700🔪Mike Bostock🔪Extract DragEvent class.🔪
+ src/drag.js        | 14 +-------------
+ src/event.js (new) | 12 ++++++++++++
+ 2 files changed, 13 insertions(+), 13 deletions(-)
+
+☕b4060ae🔪2016-05-07 18:28:46 -0700🔪Mike Bostock🔪Create a DragEvent class.🔪
+ src/drag.js | 40 +++++++++++++++++-----------------------
+ 1 file changed, 17 insertions(+), 23 deletions(-)
+
+☕1117165🔪2016-05-07 15:29:57 -0700🔪Mike Bostock🔪Clean-up before dispatching end.🔪
+ src/drag.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕fb5b4e5🔪2016-05-07 15:24:47 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/drag.js | 80 ++++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 42 insertions(+), 38 deletions(-)
+
+☕84606cb🔪2016-05-06 22:33:57 -0700🔪Mike Bostock🔪Set -webkit-tap-highlight-color.🔪
+ src/drag.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕9496742🔪2016-05-06 22:30:52 -0700🔪Mike Bostock🔪Rewrite with fewer closures.🔪Related #7.
+
+ src/drag.js | 143 +++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 74 insertions(+), 69 deletions(-)
+
+☕9312a3d🔪2016-05-06 16:22:11 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/drag.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕204caf4🔪2016-05-06 16:21:30 -0700🔪Mike Bostock🔪Update comment.🔪
+ src/drag.js | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕cb02527🔪2016-05-06 16:20:15 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/drag.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕7d796eb🔪2016-05-06 16:16:31 -0700🔪Mike Bostock🔪Fix #6 - extract default behavior suppression.🔪
+ src/drag.js | 41 +++++++++++++++++++++++++++++++----------
+ 1 file changed, 31 insertions(+), 10 deletions(-)
+
+☕bb793b6🔪2016-05-06 15:41:09 -0700🔪Mike Bostock🔪Convenience constructor.🔪
+ src/drag.js | 20 +++++++++++---------
+ 1 file changed, 11 insertions(+), 9 deletions(-)
+
+☕77de1b5🔪2016-05-06 15:39:18 -0700🔪Mike Bostock🔪Default {x,y}-accessors.🔪
+ src/drag.js | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+☕d8f7c82🔪2016-05-06 15:33:04 -0700🔪Mike Bostock🔪Rename drag{start,end} to {start,end}.🔪We don’t use the names “transitionstart” for the transition’s “start” event, so
+I don’t think it makes sense to use the “drag” prefix here.
+
+ src/drag.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕48792de🔪2016-05-06 14:42:53 -0700🔪Mike Bostock🔪Re-adopt d3-dispatch.🔪Also, use d3.customEvent for drag and dragend for consistency with dragstart.
+
+ README.md          |  1 +
+ package.json       |  1 +
+ src/drag.js        | 59 +++++++++++++++++++++++++++++++++---------------------
+ src/noop.js (gone) |  1 -
+ 4 files changed, 38 insertions(+), 24 deletions(-)
+
+☕0737a6a🔪2016-05-06 13:15:46 -0700🔪Mike Bostock🔪Fix event.{x,y} on dragstart.🔪
+ src/drag.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕31ec98c🔪2016-05-06 13:13:25 -0700🔪Mike Bostock🔪Only pass {x, y} to drag and dragend.🔪
+ src/drag.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1eb9676🔪2016-05-06 13:12:17 -0700🔪Mike Bostock🔪Slightly more readable.🔪
+ src/drag.js | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕916f19a🔪2016-05-06 13:06:46 -0700🔪Mike Bostock🔪Restore drag.{x,y}.🔪
+ src/drag.js | 25 ++++++++++++++++++++-----
+ 1 file changed, 20 insertions(+), 5 deletions(-)
+
+☕598a8c6🔪2016-05-06 13:00:55 -0700🔪Mike Bostock🔪Fix #4 - adopt d3.customEvent.🔪
+ package.json |  2 +-
+ src/drag.js  | 40 ++++++++++++++++++++++------------------
+ 2 files changed, 23 insertions(+), 19 deletions(-)
+
+☕09d0876🔪2016-05-06 11:05:26 -0700🔪Mike Bostock🔪Slightly cleaner separation of concerns.🔪
+ src/drag.js | 137 ++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 69 insertions(+), 68 deletions(-)
+
+☕42dddfc🔪2016-05-06 10:50:16 -0700🔪Mike Bostock🔪Use array.filter’s this.🔪
+ src/drag.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕ee82356🔪2016-05-06 10:47:03 -0700🔪Mike Bostock🔪Fix #3.🔪
+ src/drag.js       | 148 +++++++++++++++++++++++++-----------------------------
+ src/noop.js (new) |   1 +
+ 2 files changed, 70 insertions(+), 79 deletions(-)
+
+☕8277204🔪2016-05-06 10:10:13 -0700🔪Mike Bostock🔪Fix #2.🔪
+ README.md             |  1 -
+ package.json          |  1 -
+ src/constant.js (new) |  5 ++++
+ src/drag.js           | 78 ++++++++++++++++++++++++++++-----------------------
+ 4 files changed, 48 insertions(+), 37 deletions(-)
+
+☕dc9f9d4🔪2016-05-05 22:38:37 -0700🔪Mike Bostock🔪Tweak comment.🔪
+ src/drag.js | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+
+☕7e70ce1🔪2016-05-05 21:29:05 -0700🔪Mike Bostock🔪Add drag.filter.🔪This hook allows you to control which mousedown or touchstart events will
+trigger a drag. By default, the drag behavior now ignores mousedown on secondary
+buttons; these are likely intended for the native context menu.
+
+ src/drag.js | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+☕2a6bc9c🔪2016-05-05 16:36:30 -0700🔪Mike Bostock🔪Slightly safer.🔪
+ src/drag.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕594486d🔪2016-05-05 16:28:25 -0700🔪Mike Bostock🔪Tweak comment.🔪
+ src/drag.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6deb826🔪2016-05-05 16:27:48 -0700🔪Mike Bostock🔪Tweak comment.🔪
+ src/drag.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ad34c59🔪2016-05-05 16:24:46 -0700🔪Mike Bostock🔪Simplify slightly.🔪Now prevents default on mousemove as well as touchmove, but that should be okay.
+
+ src/drag.js | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+
+☕9a78328🔪2016-05-05 16:24:35 -0700🔪Mike Bostock🔪Support touch events.🔪
+ src/drag.js | 127 ++++++++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 84 insertions(+), 43 deletions(-)
+
+☕48e8653🔪2016-05-04 12:25:44 -0700🔪Mike Bostock🔪Allow d.{x,y} to be NaN initially.🔪
+ src/drag.js | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+
+☕94d38fc🔪2016-05-04 12:14:49 -0700🔪Mike Bostock🔪Dispatch events.🔪
+ README.md    |  1 +
+ package.json |  3 ++-
+ src/drag.js  | 83 +++++++++++++++++++++++++++++++++++-------------------------
+ 3 files changed, 51 insertions(+), 36 deletions(-)
+
+☕ee3cef4🔪2016-05-02 13:50:30 -0700🔪Mike Bostock🔪Mouse support.🔪
+ README.md         |  3 ++-
+ index.js          |  1 +
+ package.json      |  5 ++++-
+ src/drag.js (new) | 49 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 56 insertions(+), 2 deletions(-)
+
+☕abea752🔪2016-05-02 11:14:39 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕73ac0a3🔪2016-05-02 11:12:34 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)               | 13 +++++++++++++
+ .gitignore (new)              |  5 +++++
+ .npmignore (new)              |  3 +++
+ LICENSE (new)                 | 27 +++++++++++++++++++++++++++
+ README.md (new)               | 24 ++++++++++++++++++++++++
+ d3-drag.sublime-project (new) | 13 +++++++++++++
+ index.js (new)                |  1 +
+ package.json (new)            | 35 +++++++++++++++++++++++++++++++++++
+ 8 files changed, 121 insertions(+)

@@ -1,0 +1,628 @@
+☕b7a119d🔪2021-06-05 11:20:08 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dde98b8🔪2021-06-05 11:20:02 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕af35da3🔪2021-06-05 11:19:50 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕00ca097🔪2021-06-05 09:20:38 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dcd3612🔪2021-06-05 09:20:19 -0700🔪Mike Bostock🔪upgrade d3-polygon🔪
+ package.json | 2 +-
+ yarn.lock    | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕3053873🔪2021-06-05 09:18:27 -0700🔪Mike Bostock🔪Update README🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕b86a993🔪2021-06-05 18:17:05 +0200🔪Philippe Rivière🔪round tick values (#51)🔪(upgrade to https://github.com/d3/d3-array/commit/04cf783bd715cae89303173d50a28fda38c24a9b)
+ src/contours.js       | 11 ++++-------
+ test/contours-test.js | 16 ++++++++++++++++
+ 2 files changed, 20 insertions(+), 7 deletions(-)
+
+☕14e21c2🔪2021-06-05 18:14:17 +0200🔪Philippe Rivière🔪apply linear binning (#46)🔪* apply linear binning
+closes #8
+
+* a test for contourDensity & linear binning
+
+* style
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ package.json          |  1 +
+ src/density.js        | 16 ++++++++++++----
+ test/asserts.js (new) | 20 ++++++++++++++++++++
+ test/density-test.js  | 20 ++++++++++++++++++++
+ yarn.lock             |  5 +++++
+ 5 files changed, 58 insertions(+), 4 deletions(-)
+
+☕29d1447🔪2021-06-05 18:07:50 +0200🔪Philippe Rivière🔪Adopt type=module (#54)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* es6 rather than no-undef
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* cleaner imports; assert.throws
+
+* Update README
+
+* stricter eslint
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    4 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   25 +-
+ d3-contour.sublime-project (gone)   |   17 -
+ package.json                        |   49 +-
+ test/.eslintrc.json (new)           |   11 +
+ test/contours-test.js               |   69 +-
+ test/density-test.js                |   20 +-
+ yarn.lock                           | 1476 +++++++++++++++++++----------------
+ 11 files changed, 953 insertions(+), 806 deletions(-)
+
+☕e8ac2ed🔪2020-08-18 12:01:51 +0200🔪Philippe Rivière🔪links & references🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕a61daba🔪2020-08-18 11:13:53 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕8b837a9🔪2020-08-15 13:06:05 +0200🔪Philippe Rivière🔪newline🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕494a641🔪2020-08-15 13:04:42 +0200🔪Philippe Rivière🔪d3🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕854d2af🔪2020-08-15 13:04:10 +0200🔪Philippe Rivière🔪remove README dependency on d3-array🔪closes #50
+ README.md | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕a616e25🔪2020-07-27 11:27:04 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 7 +++++--
+ yarn.lock    | 8 ++++----
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+☕8a266ad🔪2020-07-10 17:27:09 +0200🔪Philippe Rivière🔪d3-array@1 - 2🔪
+ README.md    | 3 ++-
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕2ca807e🔪2020-07-10 17:19:27 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/constant.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕b24643a🔪2020-07-10 17:17:14 +0200🔪Philippe Rivière🔪test density.size() (doesn’t need to be an integer)🔪
+ test/density-test.js (new) | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+☕9dda134🔪2020-04-27 08:34:16 -0700🔪Mike Bostock🔪Fix size checks.🔪
+ src/contours.js       |  4 ++--
+ src/density.js        |  4 ++--
+ test/contours-test.js | 13 +++++++++++++
+ 3 files changed, 17 insertions(+), 4 deletions(-)
+
+☕ef815c4🔪2020-07-10 17:27:09 +0200🔪Philippe Rivière🔪d3-array@1 - 2🔪
+ README.md    | 3 ++-
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕3c65eb8🔪2020-07-10 17:19:27 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/constant.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕f47cd93🔪2020-07-10 17:17:14 +0200🔪Philippe Rivière🔪test density.size() (doesn’t need to be an integer)🔪
+ test/density-test.js (new) | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+☕4b41b05🔪2020-04-27 08:34:16 -0700🔪Mike Bostock🔪Fix size checks.🔪
+ src/contours.js       |  4 ++--
+ src/density.js        |  4 ++--
+ test/contours-test.js | 13 +++++++++++++
+ 3 files changed, 17 insertions(+), 4 deletions(-)
+
+☕152c013🔪2019-09-27 11:21:28 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕0606516🔪2019-08-09 19:16:38 -0700🔪Mike Bostock🔪Fix #31.🔪
+ test/contours-test.js | 7 -------
+ 1 file changed, 7 deletions(-)
+
+☕fc9d1cf🔪2019-08-09 17:44:33 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 876 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 519 insertions(+), 363 deletions(-)
+
+☕14ffbf9🔪2019-08-09 16:06:59 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕e4bd26f🔪2019-08-09 15:15:38 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/contours.js | 12 ++++++------
+ src/density.js  |  8 ++++----
+ src/index.js    |  4 ++--
+ 3 files changed, 12 insertions(+), 12 deletions(-)
+
+☕8a3ecb3🔪2019-03-05 21:36:25 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+☕02f0461🔪2018-08-24 14:24:34 -0700🔪Mike Bostock🔪1.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3b2ca1d🔪2018-08-24 14:24:32 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6972212🔪2018-08-24 14:02:15 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4049d76🔪2018-08-24 13:51:35 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 2 --
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 2 ++
+ 4 files changed, 10 insertions(+), 9 deletions(-)
+
+☕2e3fc2d🔪2018-08-24 12:05:02 -0700🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d95f92f🔪2018-08-24 12:05:00 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)           |  12 -
+ .eslintrc.json (new)       |  16 +
+ d3-contour.sublime-project |   4 +-
+ package.json               |  17 +-
+ rollup.config.js           |  42 +-
+ yarn.lock (new)            | 939 +++++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 997 insertions(+), 33 deletions(-)
+
+☕e497adb🔪2018-06-20 20:51:35 -0700🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f5c8407🔪2018-06-20 19:35:48 -0700🔪Jeffrey Heer🔪Coerce density x, y, weight to numbers.🔪
+ src/density.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f45027a🔪2018-06-20 15:59:52 -0700🔪Jeffrey Heer🔪Add density weight parameter.🔪
+ README.md      | 12 +++++++++++-
+ src/density.js | 14 ++++++++++++--
+ 2 files changed, 23 insertions(+), 3 deletions(-)
+
+☕3947589🔪2018-02-27 18:10:15 -0800🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕898fa38🔪2018-02-27 18:10:08 -0800🔪Mike Bostock🔪Move build to dist.🔪
+ .gitignore                 | 2 +-
+ .npmignore                 | 2 +-
+ d3-contour.sublime-project | 2 +-
+ package.json               | 8 ++++----
+ rollup.config.js           | 2 +-
+ 5 files changed, 8 insertions(+), 8 deletions(-)
+
+☕3dee44c🔪2018-02-27 17:50:09 -0800🔪Mike Bostock🔪Add contours.contour. Fixes #6.🔪
+ README.md             | 28 ++++++++++++++++----------
+ src/contours.js       | 56 ++++++++++++++++++++++++++-------------------------
+ test/contours-test.js | 28 ++++++++++++++++++++++++++
+ 3 files changed, 74 insertions(+), 38 deletions(-)
+
+☕f15508f🔪2017-12-08 13:06:33 -0800🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕184f60f🔪2017-12-08 13:04:19 -0800🔪Mike Bostock🔪Add img/ to .npmignore. Fixes #20.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕6923c4b🔪2017-11-05 13:44:21 -0800🔪Mike Bostock🔪Fix winding order of saddles.🔪
+ src/contours.js | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕f1c23dc🔪2017-11-05 13:40:47 -0800🔪Mike Bostock🔪Add build system.🔪
+ d3-contour.sublime-project | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕572a63a🔪2017-11-05 10:18:51 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json           |  4 ++--
+ rollup.config.js (new) | 14 ++++++++++++++
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+☕9f2b4e9🔪2017-06-24 07:57:30 -0700🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4bfea4e🔪2017-06-24 07:55:30 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    |  1 -
+ package.json | 10 +++++-----
+ 2 files changed, 5 insertions(+), 6 deletions(-)
+
+☕483988a🔪2017-06-24 07:49:11 -0700🔪Mike Bostock🔪Add tests for #12.🔪We were assigning all holes to the first exterior ring, rather than to the
+containing ring.
+
+ test/contours-test.js (new) | 187 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 187 insertions(+)
+
+☕24de826🔪2017-06-24 17:03:44 +0800🔪Li Dong🔪Fix wrong contains comparison🔪Function contains return -1 to indicate not-contain situation, so we
+need to compare if the return code is -1 or not.
+
+ src/contours.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2cf41dd🔪2017-04-11 15:09:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6b9daa8🔪2017-04-11 15:08:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a1a6d58🔪2017-04-11 15:08:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7c27802🔪2017-04-11 15:07:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7403dda🔪2017-04-11 15:04:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕91c8111🔪2017-04-11 15:04:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ce6802e🔪2017-04-11 15:03:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7093fc8🔪2017-04-11 15:03:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕0e54f06🔪2017-04-11 15:02:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕14da45b🔪2017-04-11 15:01:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕20a69ec🔪2017-04-10 12:46:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕027fa89🔪2017-04-10 12:31:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md              |   8 +++++---
+ img/diamonds.png (new) | Bin 0 -> 350303 bytes
+ img/faithful.png       | Bin 123830 -> 131028 bytes
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+☕e89c313🔪2017-04-10 12:22:00 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2fd7927🔪2017-04-10 12:21:18 -0700🔪Mike Bostock🔪Argh, ESLint.🔪
+ .eslintrc      | 1 +
+ src/density.js | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕5d5b241🔪2017-04-10 12:19:52 -0700🔪Mike Bostock🔪Add d3.contourDensity.🔪
+ README.md              |  58 +++++++++++++++++++++++
+ img/faithful.png (new) | Bin 0 -> 123830 bytes
+ index.js               |   1 +
+ src/blur.js (new)      |  43 +++++++++++++++++
+ src/density.js (new)   | 123 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 225 insertions(+)
+
+☕14d09a6🔪2017-04-07 16:30:06 -0700🔪Mike Bostock🔪Add clouds example.🔪
+ README.md            |   4 ++++
+ img/clouds.png (new) | Bin 0 -> 1415085 bytes
+ 2 files changed, 4 insertions(+)
+
+☕28160d8🔪2017-04-07 15:06:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08d5057🔪2017-04-07 15:05:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d28f48c🔪2017-04-07 15:05:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕635c40a🔪2017-04-07 15:04:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕4d19528🔪2017-04-07 15:04:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fde6936🔪2017-04-07 15:03:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a0e0382🔪2017-04-07 15:00:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕027223a🔪2017-04-07 15:00:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0865dce🔪2017-04-07 14:59:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕6395433🔪2017-04-07 14:53:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3f274da🔪2017-04-07 14:53:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕71f5130🔪2017-04-07 14:52:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e4ed430🔪2017-04-07 14:51:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b08967a🔪2017-04-07 14:51:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕714fb8c🔪2017-04-07 11:09:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b1f818a🔪2017-04-07 11:08:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a405888🔪2017-04-07 11:08:29 -0700🔪Mike Bostock🔪Add example.🔪
+ README.md                  |   4 +++-
+ img/reprojection.png (new) | Bin 0 -> 802587 bytes
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+☕2fad838🔪2017-04-07 09:04:39 -0700🔪Mike Bostock🔪Describe examples.🔪
+ README.md                 |  10 ++++++++++
+ img/temperature.png (new) | Bin 0 -> 351156 bytes
+ 2 files changed, 10 insertions(+)
+
+☕92fe6c0🔪2017-04-06 18:04:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕cb4051d🔪2017-04-06 18:03:04 -0700🔪Mike Bostock🔪Add example.🔪
+ README.md             |   2 +-
+ img/sin-cos.png (new) | Bin 0 -> 1001457 bytes
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+☕9496610🔪2017-04-06 14:15:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕c578a6c🔪2017-04-06 14:13:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a209c19🔪2017-04-06 14:12:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 +++++++++++++++++++++++++++-----
+ 1 file changed, 27 insertions(+), 5 deletions(-)
+
+☕6aa12b1🔪2017-04-06 13:54:28 -0700🔪Mike Bostock🔪Consistent size.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a88256d🔪2017-04-06 13:53:27 -0700🔪Mike Bostock🔪Another example.🔪
+ README.md                     |   2 ++
+ img/goldstein-price.png (new) | Bin 0 -> 328187 bytes
+ 2 files changed, 2 insertions(+)
+
+☕20eb35f🔪2017-04-06 13:37:24 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aabcf54🔪2017-04-06 13:37:16 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕2990e61🔪2017-04-06 13:16:10 -0700🔪Mike Bostock🔪Add example.🔪
+ README.md             |   4 +++-
+ img/volcano.gif (new) | Bin 0 -> 1648192 bytes
+ package.json          |   2 +-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+☕85cd144🔪2017-04-06 13:12:35 -0700🔪Mike Bostock🔪Better example. Change default size.🔪
+ README.md       | 24 ++++++++++++------------
+ src/contours.js |  6 +++---
+ 2 files changed, 15 insertions(+), 15 deletions(-)
+
+☕62be702🔪2017-04-06 13:03:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 46 +++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 35 insertions(+), 11 deletions(-)
+
+☕e9be83b🔪2017-04-06 12:44:01 -0700🔪Mike Bostock🔪More optimization.🔪
+ src/contours.js | 39 +++++++++++++++++++++++++++++++--------
+ 1 file changed, 31 insertions(+), 8 deletions(-)
+
+☕c665dca🔪2017-04-06 12:26:06 -0700🔪Mike Bostock🔪Optimize threshold testing.🔪
+ src/contours.js | 113 +++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 54 insertions(+), 59 deletions(-)
+
+☕5f0d324🔪2017-04-06 11:55:15 -0700🔪Mike Bostock🔪Allow smoothing to be disabled.🔪
+ src/ascending.js (new) |  3 +++
+ src/contours.js        | 17 +++++++++--------
+ src/noop.js (new)      |  1 +
+ 3 files changed, 13 insertions(+), 8 deletions(-)
+
+☕3ad7e5b🔪2017-04-06 10:44:14 -0700🔪Mike Bostock🔪Slightly simpler.🔪
+ src/contours.js | 17 ++++++++++-------
+ 1 file changed, 10 insertions(+), 7 deletions(-)
+
+☕5d486c6🔪2017-04-06 08:40:40 -0700🔪Mike Bostock🔪Add TODO.🔪
+ src/contours.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕bb6e8b8🔪2017-04-06 08:38:53 -0700🔪Mike Bostock🔪Simplify; only size, not extent.🔪Given that you have to prepare a gridded array of values to compute contours, it
+doesn’t seem that useful to generalize to an extent.
+
+ src/contours.js | 40 +++++++++++++++-------------------------
+ 1 file changed, 15 insertions(+), 25 deletions(-)
+
+☕fe274a8🔪2017-04-05 22:59:56 -0700🔪Mike Bostock🔪Delete old implementation.🔪
+ index.js              |  1 -
+ src/contour.js (gone) | 58 ---------------------------------------------------
+ 2 files changed, 59 deletions(-)
+
+☕31e9027🔪2017-04-05 22:57:17 -0700🔪Mike Bostock🔪Fix indexing.🔪
+ src/contours.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1c627d0🔪2017-04-05 21:02:09 -0700🔪Mike Bostock🔪Better default ticks.🔪
+ src/contours.js | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕b0b43d8🔪2017-04-05 20:53:34 -0700🔪Mike Bostock🔪Remove reverse cases.🔪These can’t happen now that I’ve fixed the winding order of segments!
+
+ src/contours.js | 41 -----------------------------------------
+ 1 file changed, 41 deletions(-)
+
+☕a30258e🔪2017-04-05 20:51:11 -0700🔪Mike Bostock🔪Fix winding and threshold order.🔪
+ src/contours.js | 46 +++++++++++++++++++++++++++-------------------
+ 1 file changed, 27 insertions(+), 19 deletions(-)
+
+☕9118cb3🔪2017-04-05 18:55:47 -0700🔪Mike Bostock🔪Fix winding order.🔪
+ src/area.js (new) |  5 ++++
+ src/contours.js   | 75 +++++++++++++++++++++++++++++--------------------------
+ 2 files changed, 45 insertions(+), 35 deletions(-)
+
+☕e576bfa🔪2017-04-05 16:49:49 -0700🔪Mike Bostock🔪Fix smoothing.🔪
+ src/contours.js | 37 +++++++++++++------------------------
+ 1 file changed, 13 insertions(+), 24 deletions(-)
+
+☕fa21f24🔪2017-04-05 16:36:34 -0700🔪Mike Bostock🔪Detect ring closure.🔪
+ src/contours.js | 41 ++++++++++++++++++++++++++++-------------
+ 1 file changed, 28 insertions(+), 13 deletions(-)
+
+☕b20b0c1🔪2017-04-05 15:44:36 -0700🔪Mike Bostock🔪Add note.🔪
+ src/contours.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7c3ee97🔪2017-04-05 15:21:29 -0700🔪Mike Bostock🔪A few comments.🔪
+ src/contours.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕48a140b🔪2017-04-05 15:19:46 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/contours.js | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+☕c118bbb🔪2017-04-05 15:18:33 -0700🔪Mike Bostock🔪Holes!🔪
+ src/contains.js (new) | 27 ++++++++++++++++++++++
+ src/contours.js       | 64 +++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 74 insertions(+), 17 deletions(-)
+
+☕8441e59🔪2017-04-05 13:22:39 -0700🔪Mike Bostock🔪More optimization.🔪
+ src/contours.js | 75 +++++++++++++++++++++++----------------------------------
+ 1 file changed, 30 insertions(+), 45 deletions(-)
+
+☕e27778b🔪2017-04-05 12:56:51 -0700🔪Mike Bostock🔪Smoothing!🔪
+ src/contours.js | 78 +++++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 51 insertions(+), 27 deletions(-)
+
+☕dd2945b🔪2017-04-05 12:28:00 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/contours.js | 47 +++++++++++++++++++++++++----------------------
+ 1 file changed, 25 insertions(+), 22 deletions(-)
+
+☕73498d3🔪2017-04-05 12:09:52 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/contours.js | 31 +++++++++++++++----------------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+☕5890dc8🔪2017-04-05 12:07:55 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/contours.js | 49 +++++++++++++++++++++++--------------------------
+ 1 file changed, 23 insertions(+), 26 deletions(-)
+
+☕5ebcb09🔪2017-04-05 12:02:12 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/contours.js | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+☕6b4792c🔪2017-04-05 11:58:36 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/contours.js | 30 ++++++++++++++++++------------
+ 1 file changed, 18 insertions(+), 12 deletions(-)
+
+☕5c2d108🔪2017-04-05 11:55:20 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/contours.js | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕559537e🔪2017-04-05 11:53:39 -0700🔪Mike Bostock🔪Simplify.🔪
+ src/contours.js | 14 ++++----------
+ 1 file changed, 4 insertions(+), 10 deletions(-)
+
+☕7342fb7🔪2017-04-05 11:51:01 -0700🔪Mike Bostock🔪Checkpoint d3.contours.🔪
+ src/contours.js | 146 +++++++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 140 insertions(+), 6 deletions(-)
+
+☕f1b9b92🔪2017-04-04 19:31:11 -0700🔪Mike Bostock🔪Checkpoint d3.contours.🔪
+ index.js              |  1 +
+ package.json          |  5 ++++-
+ src/array.js (new)    |  3 +++
+ src/constant.js (new) |  5 +++++
+ src/contour.js        | 32 +++++++++++++++---------------
+ src/contours.js (new) | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 84 insertions(+), 17 deletions(-)
+
+☕229a2ec🔪2017-04-04 17:43:39 -0700🔪Mike Bostock🔪Include all points in contour.🔪
+ src/contour.js | 46 ++++++++++++++++++++--------------------------
+ 1 file changed, 20 insertions(+), 26 deletions(-)
+
+☕d4a901a🔪2017-04-04 15:41:51 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕86f50fa🔪2017-04-04 15:41:11 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)                  | 12 ++++++++
+ .gitignore (new)                 |  5 ++++
+ .npmignore (new)                 |  3 ++
+ LICENSE (new)                    | 27 +++++++++++++++++
+ README.md (new)                  | 34 +++++++++++++++++++++
+ d3-contour.sublime-project (new) | 13 ++++++++
+ index.js (new)                   |  1 +
+ package.json (new)               | 37 +++++++++++++++++++++++
+ src/contour.js (new)             | 64 ++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 196 insertions(+)

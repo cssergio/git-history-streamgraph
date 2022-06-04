@@ -1,0 +1,882 @@
+☕ec2bce6🔪2021-06-09 17:04:04 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9741b14🔪2021-06-10 02:02:44 +0200🔪Philippe Rivière🔪create emit before we use it; make move accept an event. (#84)🔪* create emit before we use it; make move accept an event.
+
+This seems to:
+- fix #83
+- possibly fix https://github.com/d3/d3-zoom/issues/198
+- help with https://github.com/d3/d3-zoom/issues/222
+
+* update dependencies
+
+* brush.clear event
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md    |  4 ++--
+ src/brush.js | 26 +++++++++++++-------------
+ yarn.lock    | 32 ++++++++++++++++----------------
+ 3 files changed, 31 insertions(+), 31 deletions(-)
+
+☕6586462🔪2021-06-09 20:59:40 +0200🔪Philippe Rivière🔪Adopt type=module (#86)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* browser rather than no-undef
+
+* remove Sublime project
+
+* add eslint.json
+
+* update README
+
+* fix #51; extract copyrights from license
+
+* update dependencies
+
+* update dependencies
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    8 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   35 +-
+ d3-brush.sublime-project (gone)     |   17 -
+ package.json                        |   57 +-
+ rollup.config.js                    |   10 +-
+ test/.eslintrc.json (new)           |   12 +
+ test/export-test.js (new)           |    8 +
+ yarn.lock                           | 1532 +++++++++++++++++++----------------
+ 11 files changed, 966 insertions(+), 801 deletions(-)
+
+☕a9bd39e🔪2020-08-26 21:02:28 +0200🔪Philippe Rivière🔪v2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13642ce🔪2020-08-26 20:58:50 +0200🔪Philippe Rivière🔪v2.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4a349c2🔪2020-08-25 11:29:28 +0200🔪woutervh-🔪Update src/brush.js🔪Co-authored-by: Philippe Rivière <fil@rezo.net>
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d458012🔪2020-08-25 11:29:08 +0200🔪woutervh-🔪Update src/brush.js🔪Co-authored-by: Philippe Rivière <fil@rezo.net>
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0b63ae6🔪2020-08-25 11:29:00 +0200🔪woutervh-🔪Update src/event.js🔪Co-authored-by: Philippe Rivière <fil@rezo.net>
+ src/event.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0ee1091🔪2020-08-25 10:36:06 +0200🔪Philippe Rivière🔪missing sourceEvent in brush start🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕256b692🔪2020-08-24 11:46:18 +0200🔪Wouter van Heeswijk🔪Updated README to include mode value🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕19ca758🔪2020-08-23 23:13:53 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕940a910🔪2020-08-23 23:13:03 +0200🔪Philippe Rivière🔪d3 dependencies🔪
+ package.json | 10 ++++----
+ yarn.lock    | 75 +++++++++++++++++++++++++-----------------------------------
+ 2 files changed, 36 insertions(+), 49 deletions(-)
+
+☕3b5c882🔪2020-08-21 18:46:51 +0200🔪Wouter van Heeswijk🔪Send mode.name to BrushEvent instead of mode object🔪
+ src/brush.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕509bd25🔪2020-08-18 10:51:26 +0200🔪Wouter van Heeswijk🔪Remove mode where it doesn't exist🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3087061🔪2020-08-18 10:43:56 +0200🔪Wouter van Heeswijk🔪Pass along mode to BrushEvent🔪
+ src/brush.js | 28 ++++++++++++++--------------
+ src/event.js |  3 ++-
+ 2 files changed, 16 insertions(+), 15 deletions(-)
+
+☕9ed5460🔪2020-08-13 12:54:09 +0200🔪Philippe Rivière🔪v1.1.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕035f470🔪2020-07-24 18:16:36 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+
+☕4d5cfc0🔪2020-07-24 14:32:49 +0200🔪Philippe Rivière🔪remove brushEvent.on for now🔪Discussion reference:
+- https://github.com/d3/d3-brush/pull/71#discussion_r426090477
+- https://github.com/d3/d3-brush/pull/71#issuecomment-663018853
+
+ README.md    | 22 ----------------------
+ src/brush.js |  9 ++++-----
+ src/event.js |  5 -----
+ 3 files changed, 4 insertions(+), 32 deletions(-)
+
+☕b9a82d5🔪2020-07-24 14:22:18 +0200🔪Philippe Rivière🔪test transition vs selection🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c90f74🔪2020-07-02 15:43:30 +0200🔪Philippe Rivière🔪Each event in the gesture refreshes the sourceEvent field of the emitter's BrushEvent🔪
+ src/brush.js | 31 +++++++++++++++----------------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+☕77da571🔪2020-07-02 15:10:42 +0200🔪Philippe Rivière🔪prepare for https://github.com/d3/d3-selection/pull/248🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕578cb85🔪2020-07-02 14:58:26 +0200🔪Philippe Rivière🔪interrupt must be called before the new Emitter is created, otherwise the new gesture gets overridden this showed in the brush transition notebook https://observablehq.com/d/a5be418e6d408119 where interrupting the "brush.move" after a first gesture would not emit the proper sourceEvent in the subsequent brushend🔪
+ src/brush.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕9e87531🔪2020-05-22 17:25:50 +0200🔪Philippe Rivière🔪get datum and sourceEvent🔪
+ src/brush.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕d257be9🔪2020-05-20 14:52:04 +0200🔪Philippe Rivière🔪use the select(this).datum() API to retrieve the current datum ref.  https://github.com/d3/d3-brush/issues/56🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2cf062c🔪2020-05-20 14:48:31 +0200🔪Philippe Rivière🔪bind listeners with *event*.on()🔪Ref. https://github.com/d3/d3-brush/pull/71#discussion_r426090477 & https://github.com/d3/d3-drag/blob/master/README.md#event_on
+
+ README.md    | 22 ++++++++++++++++++++++
+ src/brush.js |  6 +++---
+ 2 files changed, 25 insertions(+), 3 deletions(-)
+
+☕9930fc1🔪2020-05-19 17:30:07 +0200🔪Philippe Rivière🔪multitouch🔪
+ src/brush.js | 63 ++++++++++++++++++++++++++++++++++++++++++------------------
+ 1 file changed, 44 insertions(+), 19 deletions(-)
+
+☕cc684b9🔪2020-05-19 11:27:51 +0200🔪Philippe Rivière🔪calling noevent for keyup🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7487377🔪2020-05-15 17:27:43 +0200🔪Philippe Rivière🔪move to d3-selection@2🔪
+ README.md      | 60 ++++++++++++++++++++++++++++++----------------------------
+ package.json   | 10 +++++-----
+ src/brush.js   | 53 ++++++++++++++++++++++++++++-----------------------
+ src/event.js   | 22 +++++++++++++++++----
+ src/noevent.js |  6 ++----
+ yarn.lock      | 33 ++++++++++++++++++++++++--------
+ 6 files changed, 110 insertions(+), 74 deletions(-)
+
+☕a6ee648🔪2020-05-15 15:15:24 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/constant.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕10ea210🔪2020-05-12 13:14:23 -0700🔪Mike Bostock🔪Only orphan mouse gestures.🔪This avoids orphaning a programmatic brush transition.
+
+ src/brush.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕a90fb9c🔪2019-11-02 08:23:28 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕b53b1ec🔪2019-11-20 07:29:40 -0800🔪Mike Bostock🔪1.1.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕af7b8fd🔪2019-11-20 07:29:06 -0800🔪Mike Bostock🔪Expose brush.touchable.🔪
+ src/brush.js | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕644f7d4🔪2019-11-16 12:58:06 -0800🔪Mike Bostock🔪1.1.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5383545🔪2019-11-16 12:57:51 -0800🔪Mike Bostock🔪Fix bogus argument to d3.dispatch.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9ea8a33🔪2019-08-20 20:59:00 -0700🔪Mike Bostock🔪1.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a514505🔪2019-08-20 20:58:37 -0700🔪Mike Bostock🔪Prepare for release.🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕32c4da1🔪2019-08-20 20:47:07 -0700🔪Mike Bostock🔪Fix #59 multitouch filter.🔪
+ package.json |  5 ++++-
+ src/brush.js | 16 +++++++++-------
+ 2 files changed, 13 insertions(+), 8 deletions(-)
+
+☕b1008b2🔪2019-08-20 20:37:12 -0700🔪Mike Bostock🔪Fix #58 handle order.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d1ea309🔪2019-08-09 17:46:48 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ yarn.lock | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕df98fd8🔪2019-08-09 16:07:42 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ 1 file changed, 4 deletions(-)
+
+☕2ceeb05🔪2019-08-07 10:44:52 -0700🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕acab1fc🔪2019-08-07 10:44:40 -0700🔪Mike Bostock🔪Fix #57 - ignore if ctrlKey.🔪
+ README.md    | 2 +-
+ src/brush.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕ee314e9🔪2019-08-05 15:23:12 -0700🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0366e97🔪2019-08-05 15:22:41 -0700🔪Mike Bostock🔪Fix #54 - better multitouch.🔪
+ src/brush.js | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+☕77c7537🔪2019-08-02 16:57:55 -0700🔪Mike Bostock🔪Fix click consumption on overlay.🔪
+ src/brush.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕6f1f0b9🔪2019-08-05 12:18:17 -0700🔪Mike Bostock🔪Fix #55 - touchable if maxTouchPoints.🔪
+ README.md    | 2 +-
+ src/brush.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕d960d6f🔪2019-08-02 16:36:51 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aca5286🔪2019-08-02 16:36:39 -0700🔪Mike Bostock🔪Remove tag.🔪
+ package.json | 3 ---
+ 1 file changed, 3 deletions(-)
+
+☕209ed2f🔪2019-08-02 16:30:41 -0700🔪Mike Bostock🔪Fix #18 - handle orphaned gestures.🔪
+ src/brush.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕a55f8f8🔪2019-08-02 16:18:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕109cb72🔪2019-08-02 16:15:33 -0700🔪Mike Bostock🔪Fix #20 - add brush.keyModifiers(boolean).🔪
+ src/brush.js | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+☕16ed405🔪2019-08-02 15:48:28 -0700🔪Mike Bostock🔪Fix #46 - Consider viewBox in default extent.🔪
+ README.md    | 8 ++++++--
+ src/brush.js | 4 ++++
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+☕360bc5b🔪2019-08-02 15:34:51 -0700🔪Mike Bostock🔪Fix #47 - emit brush event on parallel start.🔪
+ src/brush.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕763abdb🔪2019-08-02 15:31:42 -0700🔪Mike Bostock🔪Fix #48 - brush.clear.🔪
+ README.md    | 4 ++++
+ src/brush.js | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+☕61fea31🔪2019-08-02 15:18:18 -0700🔪Mike Bostock🔪Fix SPACE immediately after handle click.🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8912ce9🔪2019-08-02 15:05:54 -0700🔪Mike Bostock🔪1.1.0-rc.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5f028c6🔪2019-08-02 15:05:43 -0700🔪Mike Bostock🔪Fix logic inversion.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d5b958e🔪2019-08-02 14:19:33 -0700🔪Mike Bostock🔪1.1.0-rc.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕78134c5🔪2019-08-02 14:19:23 -0700🔪Mike Bostock🔪Fix typo.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2605bd2🔪2019-08-02 14:18:00 -0700🔪Mike Bostock🔪Fix #23 - don’t treat empty selection as null.🔪
+ src/brush.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕363ade2🔪2019-08-02 13:37:37 -0700🔪Mike Bostock🔪Fix #32 - more intuitive handle order.🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1a92033🔪2019-08-02 13:25:28 -0700🔪Mike Bostock🔪Fix #35 - coerce selection and extent.🔪
+ src/brush.js | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+
+☕67fa28e🔪2019-08-02 12:10:26 -0700🔪Mike Bostock🔪Explicit imports.🔪
+ README.md    | 4 +---
+ src/brush.js | 6 +++---
+ src/index.js | 2 +-
+ 3 files changed, 5 insertions(+), 7 deletions(-)
+
+☕1e1d35f🔪2019-08-02 11:59:18 -0700🔪Mike Bostock🔪1.1.0-rc.1🔪
+ package.json |  15 +-
+ yarn.lock    | 895 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 540 insertions(+), 370 deletions(-)
+
+☕a514da8🔪2019-08-02 11:52:49 -0700🔪Mike Bostock🔪Add brush.touchable; static touch listeners.🔪Register the touch listeners statically, and then route them to the appropriate
+closure by going through the bound emitter.
+
+ README.md    | 32 ++++++++++++++++++++++----------
+ src/brush.js | 28 ++++++++++++++++++++++------
+ 2 files changed, 44 insertions(+), 16 deletions(-)
+
+☕8aed2b3🔪2018-08-24 14:32:20 -0700🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕68fa74b🔪2018-08-24 14:32:18 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕9a8b655🔪2018-08-24 14:02:29 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a20869a🔪2018-08-24 13:52:50 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             | 9 +++++----
+ rollup.config.js         | 6 +++---
+ index.js => src/index.js | 2 +-
+ 3 files changed, 9 insertions(+), 8 deletions(-)
+
+☕88e9340🔪2018-08-24 12:26:21 -0700🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a28d385🔪2018-08-24 12:26:20 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   8 -
+ .eslintrc.json (new)     |  15 +
+ .gitignore               |   2 +-
+ .npmignore               |   3 +-
+ d3-brush.sublime-project |  16 +-
+ package.json             |  17 +-
+ rollup.config.js (new)   |  36 ++
+ yarn.lock (new)          | 979 +++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1051 insertions(+), 25 deletions(-)
+
+☕292ccc7🔪2017-10-17 12:48:03 -0700🔪Mike Bostock🔪Add click-to-recenter example.🔪
+ README.md              |   4 ++++
+ img/recenter.jpg (new) | Bin 0 -> 59597 bytes
+ 2 files changed, 4 insertions(+)
+
+☕c8fe9fa🔪2017-07-06 12:46:37 -0700🔪alexmacy🔪Fixing a typo in how the arguments were listed for brush.on()🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0544e13🔪2017-03-10 10:15:01 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e1f88d2🔪2017-03-10 10:14:51 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕e3db50c🔪2016-09-19 11:51:02 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d0080cb🔪2016-09-19 11:50:45 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 7 +------
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 8 deletions(-)
+
+☕6d5eb61🔪2016-09-19 11:23:51 -0700🔪Mike Bostock🔪Fix #15.🔪You can clear the brush selection programmatically during a brush gesture, so
+the code should not assume that the selection is defined.
+
+Also, you can set the brush selection programmatically during a start event (or
+via a timer), so the end event handler must observe the current selection rather
+than the selection captured at the gesture’s start.
+
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e8808e8🔪2016-09-02 18:53:14 -0700🔪Mike Bostock🔪Update README. Related #10.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕07289a4🔪2016-08-18 10:03:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕20d5d10🔪2016-08-18 10:00:39 -0700🔪Mike Bostock🔪Update README. Fix #13.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕767478d🔪2016-08-06 08:12:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fc4abb2🔪2016-08-06 17:18:09 +0300🔪Devinsuit🔪Add links to source code v.2🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕82c0333🔪2016-08-06 17:16:27 +0300🔪Devinsuit🔪Add links to source code🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕1a76ce6🔪2016-08-02 14:54:59 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b5ef152🔪2016-08-02 14:54:59 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕2b2a3fe🔪2016-06-25 08:14:34 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕11e8460🔪2016-06-25 08:13:48 -0700🔪Mike Bostock🔪Fix for brush added to root SVG element.🔪Related d3/d3-drag#36.
+
+ README.md    | 2 +-
+ src/brush.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕c840a8a🔪2016-06-24 11:13:17 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d31b1fe🔪2016-06-24 11:13:14 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 10 +++++-----
+ package.json | 10 +++++-----
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕71dfd49🔪2016-06-19 09:22:25 -0700🔪Mike Bostock🔪0.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9460b1d🔪2016-06-19 09:22:25 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 12 ++++++------
+ package.json | 10 +++++-----
+ 2 files changed, 11 insertions(+), 11 deletions(-)
+
+☕4eb9c15🔪2016-06-14 09:24:15 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕e12a08a🔪2016-06-10 10:03:22 -0700🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5521d44🔪2016-06-10 10:03:17 -0700🔪Mike Bostock🔪Fix typo.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d9d57e6🔪2016-06-10 09:56:45 -0700🔪Mike Bostock🔪0.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0d2e094🔪2016-06-10 09:54:16 -0700🔪Mike Bostock🔪Fix brush.move during a brush gesture.🔪The brush captures the selection at the start of a brush gesture. If the
+selection is set programatically by brush.move during a brush gesture, the
+captured reference can be different than the brush’s new selection! Now we
+always use the element’s current brush selection.
+
+In addition, the brush no longer modifies the selection in-place. If a caller
+keeps a reference to the brush selection, it will no longer be affected.
+
+ src/brush.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕4c85c88🔪2016-06-10 09:31:00 -0700🔪Mike Bostock🔪Update README.🔪
+ img/snapping.png | Bin 9174 -> 9177 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕b932476🔪2016-06-10 09:23:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fe19221🔪2016-06-10 09:22:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md              |   4 ++++
+ img/snapping.png (new) | Bin 0 -> 9174 bytes
+ 2 files changed, 4 insertions(+)
+
+☕7d5591b🔪2016-06-07 21:05:05 -0700🔪Mike Bostock🔪0.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d5b3561🔪2016-06-07 21:04:57 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 22 +++++++++++-----------
+ index.js     |  2 --
+ package.json | 22 +++++++++++-----------
+ 3 files changed, 22 insertions(+), 24 deletions(-)
+
+☕da52e8c🔪2016-06-03 16:17:17 -0700🔪Mike Bostock🔪Update mona-lisa.jpg.🔪
+ img/mona-lisa.jpg | Bin 116958 -> 116528 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕5d1700d🔪2016-06-03 10:15:46 -0700🔪Mike Bostock🔪0.1.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ebca466🔪2016-06-03 10:14:54 -0700🔪Mike Bostock🔪Tweak default selection appearance.🔪
+ README.md    | 2 +-
+ src/brush.js | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕27165ee🔪2016-06-03 10:08:03 -0700🔪Mike Bostock🔪0.1.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2ca10ce🔪2016-06-03 10:06:41 -0700🔪Mike Bostock🔪Add default white stroke to selection.🔪
+ README.md    | 2 +-
+ src/brush.js | 5 ++++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+☕fd21ec6🔪2016-06-03 09:58:30 -0700🔪Mike Bostock🔪Only allow SHIFT if both x & y are free.🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2f7b3bd🔪2016-06-03 09:57:22 -0700🔪Mike Bostock🔪Fix #1 - SHIFT to lock x- or y-movement.🔪
+ src/brush.js | 29 ++++++++++++++++++++++++++---
+ 1 file changed, 26 insertions(+), 3 deletions(-)
+
+☕ec8c71b🔪2016-06-02 17:36:43 -0700🔪Mike Bostock🔪0.1.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3477ada🔪2016-06-02 17:36:36 -0700🔪Mike Bostock🔪Fix brush.move, again.🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e460829🔪2016-06-02 17:31:35 -0700🔪Mike Bostock🔪0.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2127250🔪2016-06-02 17:31:31 -0700🔪Mike Bostock🔪Fix crash in brush.move.🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1a39ce1🔪2016-06-02 15:48:36 -0700🔪Mike Bostock🔪0.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕805c744🔪2016-06-02 15:48:31 -0700🔪Mike Bostock🔪Add missing import.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1299d6🔪2016-06-02 15:17:50 -0700🔪Mike Bostock🔪0.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b16ce34🔪2016-06-02 15:17:42 -0700🔪Mike Bostock🔪Add link to example.🔪
+ README.md               |   4 +++-
+ img/mona-lisa.jpg (new) | Bin 0 -> 116958 bytes
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+☕0417510🔪2016-06-02 13:03:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕bc5c432🔪2016-06-02 13:02:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕25af3b1🔪2016-06-02 13:01:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7fe1292🔪2016-06-02 13:00:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2c83b78🔪2016-06-02 13:00:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b612be6🔪2016-06-02 12:56:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕5cde5c6🔪2016-06-02 12:48:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md    | 20 ++++++++++----------
+ src/brush.js |  5 ++---
+ 2 files changed, 12 insertions(+), 13 deletions(-)
+
+☕fca65c9🔪2016-06-02 12:46:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8411835🔪2016-06-02 12:44:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕068e6de🔪2016-06-02 12:43:06 -0700🔪Mike Bostock🔪Add d3.brushSelection, and documentation.🔪
+ README.md    | 105 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ index.js     |   8 ++++-
+ src/brush.js |   6 ++++
+ 3 files changed, 118 insertions(+), 1 deletion(-)
+
+☕53de30d🔪2016-06-02 12:11:03 -0700🔪Mike Bostock🔪Add description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ae1c9c8🔪2016-06-02 11:35:04 -0700🔪Mike Bostock🔪Rename background to overlay.🔪
+ src/brush.js | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕f3cc032🔪2016-06-02 11:33:50 -0700🔪Mike Bostock🔪Fix #7 - Add brush.handleSize.🔪
+ src/brush.js | 47 ++++++++++++++++++++++++++---------------------
+ 1 file changed, 26 insertions(+), 21 deletions(-)
+
+☕223cce3🔪2016-06-02 11:30:27 -0700🔪Mike Bostock🔪Fix #6 - ignore right-click by default.🔪
+ src/brush.js | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+☕e4b4e46🔪2016-06-02 11:28:13 -0700🔪Mike Bostock🔪Fix #3 - touch input.🔪
+ src/brush.js | 46 ++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 32 insertions(+), 14 deletions(-)
+
+☕5618385🔪2016-06-02 10:23:38 -0700🔪Mike Bostock🔪Simplify the default extent.🔪The brush requires SVG, so there’s no need to generalize.
+
+ src/brush.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕d266720🔪2016-06-01 21:41:11 -0700🔪Mike Bostock🔪Remove dead code.🔪
+ src/brush.js | 6 ------
+ 1 file changed, 6 deletions(-)
+
+☕f8f22d2🔪2016-06-01 21:27:32 -0700🔪Mike Bostock🔪Consume handled events.🔪
+ src/brush.js         | 14 +++++++++-----
+ src/noevent.js (new) | 10 ++++++++++
+ 2 files changed, 19 insertions(+), 5 deletions(-)
+
+☕d2d3415🔪2016-06-01 21:02:54 -0700🔪Mike Bostock🔪Shorter.🔪
+ src/brush.js | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+
+☕2dc1fab🔪2016-06-01 21:01:19 -0700🔪Mike Bostock🔪Treat empty selection as null.🔪
+ src/brush.js | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+☕3011acb🔪2016-06-01 15:55:57 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d55100🔪2016-06-01 15:55:53 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕dcb08f6🔪2016-06-01 15:52:29 -0700🔪Mike Bostock🔪Avoid immediate end and restart on interrupt.🔪If a brush transition is interrupted by an input event, we don’t need to emit an
+end event for the interrupted transition: the subsequent input events can be
+considered part of the same gesture.
+
+ src/brush.js | 68 ++++++++++++++++++++++++++++++++++++++++++++----------------
+ 1 file changed, 50 insertions(+), 18 deletions(-)
+
+☕cd22be0🔪2016-06-01 13:06:09 -0700🔪Mike Bostock🔪Don’t interrupt subtransitions.🔪The brush transition only operates on the top-level element, so there’s no
+need to also interrupt transitions on descendants.
+
+ src/brush.js | 3 ---
+ 1 file changed, 3 deletions(-)
+
+☕fcd5630🔪2016-06-01 13:01:52 -0700🔪Mike Bostock🔪Fix #4 - brush transitions.🔪
+ README.md    |  2 +-
+ package.json |  3 ++-
+ src/brush.js | 58 ++++++++++++++++++++++++++++++++++++++++------------------
+ 3 files changed, 43 insertions(+), 20 deletions(-)
+
+☕135aa25🔪2016-06-01 12:38:35 -0700🔪Mike Bostock🔪Shorten🔪
+ src/brush.js | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+☕61f0fc9🔪2016-06-01 12:33:17 -0700🔪Mike Bostock🔪Rename.🔪
+ src/brush.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕fd343ea🔪2016-06-01 12:30:33 -0700🔪Mike Bostock🔪Fix #5 - one-dimensional brushing!🔪
+ index.js     |  2 +-
+ src/brush.js | 74 ++++++++++++++++++++++++++++++++++++++++++++++--------------
+ src/event.js |  4 ++--
+ 3 files changed, 60 insertions(+), 20 deletions(-)
+
+☕f5eb5dc🔪2016-06-01 12:30:14 -0700🔪Mike Bostock🔪Fix noop detection.🔪
+ src/brush.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕edf3c83🔪2016-06-01 11:10:41 -0700🔪Mike Bostock🔪Rename selected to selection.🔪
+ src/brush.js | 60 ++++++++++++++++++++++++++++++------------------------------
+ src/event.js |  2 +-
+ 2 files changed, 31 insertions(+), 31 deletions(-)
+
+☕25f5f6e🔪2016-06-01 11:07:35 -0700🔪Mike Bostock🔪Fix noop drag.🔪
+ src/brush.js | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+
+☕f1c9b3e🔪2016-06-01 11:05:44 -0700🔪Mike Bostock🔪Empty brush.🔪
+ src/brush.js | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+☕b161edf🔪2016-06-01 10:55:35 -0700🔪Mike Bostock🔪Always start new brush if meta.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b7a1de8🔪2016-06-01 10:51:14 -0700🔪Mike Bostock🔪Fix a bug.🔪
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8b23bc1🔪2016-06-01 10:06:09 -0700🔪Mike Bostock🔪Update cursor during brush.🔪
+ src/brush.js | 44 +++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 37 insertions(+), 7 deletions(-)
+
+☕96e4fc8🔪2016-06-01 09:53:19 -0700🔪Mike Bostock🔪Handle simultaneous alt and space.🔪
+ src/brush.js | 25 +++++++++++++++++++------
+ 1 file changed, 19 insertions(+), 6 deletions(-)
+
+☕8ded99d🔪2016-06-01 09:46:11 -0700🔪Mike Bostock🔪Restore alt to center.🔪
+ src/brush.js | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+☕b136d29🔪2016-06-01 09:36:39 -0700🔪Mike Bostock🔪Consistent order.🔪
+ src/brush.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕6c23c40🔪2016-06-01 09:31:20 -0700🔪Mike Bostock🔪Better handling of clamp and space.🔪
+ src/brush.js | 78 +++++++++++++++++++++++++++---------------------------------
+ 1 file changed, 35 insertions(+), 43 deletions(-)
+
+☕fde2c5d🔪2016-06-01 08:42:34 -0700🔪Mike Bostock🔪Handle ALT on mousedown.🔪
+ src/brush.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d66ccd🔪2016-06-01 06:44:00 -0700🔪Mike Bostock🔪One fewer closure.🔪
+ src/brush.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕d9f3961🔪2016-05-31 22:07:41 -0700🔪Mike Bostock🔪Much more concise.🔪
+ src/brush.js | 69 +++++++++++-------------------------------------------------
+ 1 file changed, 12 insertions(+), 57 deletions(-)
+
+☕18c897c🔪2016-05-31 21:56:30 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/brush.js | 199 ++++++++++++++++++++++++++---------------------------------
+ 1 file changed, 89 insertions(+), 110 deletions(-)
+
+☕fe2aa32🔪2016-05-31 21:33:26 -0700🔪Mike Bostock🔪Fix #2 - ALT to center.🔪
+ src/brush.js | 157 +++++++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 99 insertions(+), 58 deletions(-)
+
+☕d7f312f🔪2016-05-31 20:49:33 -0700🔪Mike Bostock🔪Shorter.🔪
+ src/brush.js | 74 +++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 38 insertions(+), 36 deletions(-)
+
+☕5fb5eda🔪2016-05-31 16:47:11 -0700🔪Mike Bostock🔪Better clamping.🔪
+ src/brush.js | 31 ++++++++++++++++++-------------
+ 1 file changed, 18 insertions(+), 13 deletions(-)
+
+☕122427f🔪2016-05-31 16:42:01 -0700🔪Mike Bostock🔪Clamp to extent, sort of.🔪
+ src/brush.js | 123 ++++++++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 72 insertions(+), 51 deletions(-)
+
+☕d7ab61b🔪2016-05-31 16:01:42 -0700🔪Mike Bostock🔪Better background brushing.🔪
+ src/brush.js | 21 ++++++++-------------
+ 1 file changed, 8 insertions(+), 13 deletions(-)
+
+☕e5e4a31🔪2016-05-31 15:57:06 -0700🔪Mike Bostock🔪Better hold-space.🔪
+ src/brush.js | 50 ++++++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 36 insertions(+), 14 deletions(-)
+
+☕8727106🔪2016-05-31 15:33:08 -0700🔪Mike Bostock🔪Cleaner but still wrong.🔪
+ src/brush.js | 122 ++++++++++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 91 insertions(+), 31 deletions(-)
+
+☕0926626🔪2016-05-31 14:40:00 -0700🔪Mike Bostock🔪Hold space to drag, sort of.🔪
+ src/brush.js | 62 ++++++++++++++++++++++++++++++++++++++++++------------------
+ 1 file changed, 44 insertions(+), 18 deletions(-)
+
+☕82a5abe🔪2016-05-31 14:12:24 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/brush.js | 154 ++++++++++++++++++++++++++++-------------------------------
+ src/event.js |   4 +-
+ 2 files changed, 76 insertions(+), 82 deletions(-)
+
+☕9952945🔪2016-05-31 13:38:34 -0700🔪Mike Bostock🔪Checkpoint key events.🔪
+ src/brush.js | 126 +++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 67 insertions(+), 59 deletions(-)
+
+☕464ac08🔪2016-05-31 13:22:12 -0700🔪Mike Bostock🔪Set cursor while brushing.🔪
+ src/brush.js | 115 ++++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 106 insertions(+), 9 deletions(-)
+
+☕732e98f🔪2016-05-31 13:02:04 -0700🔪Mike Bostock🔪Cleaner internal state.🔪Rather than use data (which can be messy, because maybe you’re apply the brush
+to a selection that already has data), use a technique like d3.local.
+
+ src/brush.js | 93 ++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 46 insertions(+), 47 deletions(-)
+
+☕b474e32🔪2016-05-31 11:54:30 -0700🔪Mike Bostock🔪Size the background appropriately.🔪
+ src/brush.js | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+☕52bdf98🔪2016-05-31 11:51:09 -0700🔪Mike Bostock🔪Cleaner redraw.🔪
+ src/brush.js | 70 +++++++++++++++++++++++++++++++++---------------------------
+ src/event.js |  4 ++--
+ 2 files changed, 40 insertions(+), 34 deletions(-)
+
+☕a952509🔪2016-05-26 16:45:44 -0700🔪Mike Bostock🔪Add brush.move.🔪
+ src/brush.js       | 71 ++++++++++++++++++++++++++++++++++++------------------
+ src/event.js (new) |  5 ++++
+ 2 files changed, 53 insertions(+), 23 deletions(-)
+
+☕ff8b149🔪2016-05-26 16:19:56 -0700🔪Mike Bostock🔪Prefer attributes to styles.🔪Also prefer fill: none to visibility: hidden.
+
+ src/brush.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕6f57f68🔪2016-05-26 16:18:04 -0700🔪Mike Bostock🔪Make the rect invisible.🔪You can put visible things inside the resize group.
+
+ src/brush.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5271254🔪2016-05-26 16:17:36 -0700🔪Mike Bostock🔪Render an empty brush.🔪
+ README.md             |   1 +
+ index.js              |   1 +
+ package.json          |   8 +-
+ src/brush.js          | 487 ++++++++------------------------------------------
+ src/constant.js (new) |   5 +
+ 5 files changed, 86 insertions(+), 416 deletions(-)
+
+☕bb65e41🔪2016-05-26 15:44:13 -0700🔪Mike Bostock🔪Copy from d3/d3.🔪
+ src/brush.js (new) | 429 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 429 insertions(+)
+
+☕bc55369🔪2016-05-18 09:54:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕591cc4d🔪2016-05-14 21:25:24 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕832c182🔪2016-05-02 11:21:48 -0700🔪Mike Bostock🔪Prepare for patch release.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d29779b🔪2016-05-02 11:21:33 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)                | 13 +++++++++++++
+ .gitignore (new)               |  5 +++++
+ .npmignore (new)               |  3 +++
+ LICENSE (new)                  | 27 +++++++++++++++++++++++++++
+ README.md (new)                | 31 +++++++++++++++++++++++++++++++
+ d3-brush.sublime-project (new) | 13 +++++++++++++
+ index.js (new)                 |  1 +
+ package.json (new)             | 38 ++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 131 insertions(+)

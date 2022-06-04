@@ -1,0 +1,2670 @@
+☕0c27527🔪2021-10-05 10:04:21 +0200🔪Philippe Rivière🔪yarn upgrade closes #251 supersedes #248🔪
+ yarn.lock | 334 +++++++++++++++++++++++++++++++++++---------------------------
+ 1 file changed, 190 insertions(+), 144 deletions(-)
+
+☕c8d5df6🔪2021-10-05 01:03:11 -0700🔪Jacob Rus🔪normalize angles in forwardRotationLambda (#244)🔪Currently forwardRotationLambda only normalizes output longitudes between [-3π, 3π]; outside that range longitudes are only adjusted by 2π, however far they are from 0. See https://github.com/d3/d3-geo/issues/242
+ src/rotation.js | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕3d84c86🔪2021-06-14 09:55:04 +0200🔪Philippe Rivière🔪main🔪
+ README.md | 188 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 94 insertions(+), 94 deletions(-)
+
+☕356d26f🔪2021-06-09 19:54:04 -0700🔪Mike Bostock🔪snapshot tests🔪
+ .gitignore                                    |   1 -
+ package.json                                  |   4 +-
+ test/compare-images (gone)                    |  47 ---------
+ test/render-us.js (gone)                      |  44 --------
+ test/render-world.js (gone)                   |  64 ------------
+ test/snapshot-test.js (new)                   |  51 ++++++++++
+ test/snapshots.js (new)                       | 139 ++++++++++++++++++++++++++
+ test/snapshots/albers.png (new)               | Bin 0 -> 107352 bytes
+ test/snapshots/albersUsa.png (new)            | Bin 0 -> 111261 bytes
+ test/snapshots/angleorient30.png (new)        | Bin 0 -> 42928 bytes
+ test/snapshots/azimuthalEqualArea.png (new)   | Bin 0 -> 83938 bytes
+ test/snapshots/azimuthalEquidistant.png (new) | Bin 0 -> 71970 bytes
+ test/snapshots/conicConformal.png (new)       | Bin 0 -> 92424 bytes
+ test/snapshots/conicEqualArea.png (new)       | Bin 0 -> 96918 bytes
+ test/snapshots/conicEquidistant.png (new)     | Bin 0 -> 95331 bytes
+ test/snapshots/equalEarth.png (new)           | Bin 0 -> 77855 bytes
+ test/snapshots/equirectangular.png (new)      | Bin 0 -> 41163 bytes
+ test/snapshots/gnomonic.png (new)             | Bin 0 -> 28303 bytes
+ test/snapshots/mercator.png (new)             | Bin 0 -> 35516 bytes
+ test/snapshots/naturalEarth1.png (new)        | Bin 0 -> 79971 bytes
+ test/snapshots/orthographic.png (new)         | Bin 0 -> 45637 bytes
+ test/snapshots/stereographic.png (new)        | Bin 0 -> 88211 bytes
+ test/snapshots/transverseMercator.png (new)   | Bin 0 -> 67121 bytes
+ yarn.lock                                     |  12 +++
+ 24 files changed, 205 insertions(+), 157 deletions(-)
+
+☕90e3b86🔪2021-06-09 19:15:13 -0700🔪Mike Bostock🔪push on prepublish🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e074bcc🔪2021-06-09 19:15:05 -0700🔪Mike Bostock🔪update dependencies🔪
+ package.json |   2 +-
+ yarn.lock    | 124 ++++++++++++++++++++++++++++-------------------------------
+ 2 files changed, 60 insertions(+), 66 deletions(-)
+
+☕74aa173🔪2021-06-05 11:17:34 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕53a51ba🔪2021-06-05 11:17:25 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ LICENSE          |  2 +-
+ rollup.config.js | 10 +++++++++-
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+☕22589b0🔪2021-06-05 11:14:47 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕62c6d09🔪2021-06-05 10:03:31 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1b961c8🔪2021-06-05 19:01:46 +0200🔪Philippe Rivière🔪Adopt type=module (#238)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* fix compare-image
+
+* obsolete render-reference
+
+* compute-scale
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* .mjs ↦ .js
+
+* Update README
+
+* stricter eslint
+
+* cleaner imports
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                                     |    5 -
+ .github/eslint.json (new)                          |   18 +
+ .github/workflows/node.js.yml (new)                |   30 +
+ LICENSE                                            |   40 +-
+ README.md                                          |   23 +-
+ d3-geo.sublime-project (gone)                      |   17 -
+ package.json                                       |   54 +-
+ src/polygonContains.js                             |    5 +-
+ test/.eslintrc.json (new)                          |   11 +
+ test/area-test.js                                  |  202 +--
+ test/asserts.js (new)                              |   42 +
+ test/bounds-test.js                                |  222 ++-
+ test/centroid-test.js                              |  221 ++-
+ test/circle-test.js                                |   43 +-
+ test/compare-images                                |    4 +-
+ test/{compute-scale => compute-scale.js}           |   25 +-
+ test/contains-test.js                              |  152 +-
+ test/distance-test.js                              |   19 +-
+ test/graticule-test.js                             |  214 ++-
+ test/inDelta.js (gone)                             |   26 -
+ test/interpolate-test.js                           |   22 +-
+ test/length-test.js                                |   55 +-
+ test/path/area-test.js                             |   23 +-
+ test/path/bounds-test.js                           |   24 +-
+ test/path/centroid-test.js                         |  141 +-
+ test/path/index-test.js                            |  124 +-
+ test/path/measure-test.js                          |   39 +-
+ test/path/string-test.js                           |   62 +-
+ test/path/test-context.js                          |   16 +-
+ test/pathEqual.js (gone)                           |   22 -
+ test/polygonContains-test.js                       |  361 ++--
+ test/projection/albersUsa-test.js                  |   24 +-
+ test/projection/angle-test.js                      |  106 +-
+ test/projection/{projectionEqual.js => asserts.js} |   16 +-
+ test/projection/azimuthal-test.js                  |   22 +-
+ test/projection/clipcircle-test.js                 |   16 +-
+ test/projection/equirectangular-test.js            |  123 +-
+ test/projection/fit-test.js                        |  362 ++---
+ test/projection/identity-test.js                   |   74 +-
+ test/projection/invert-test.js                     |   75 +-
+ test/projection/mercator-test.js                   |   65 +-
+ test/projection/reflect-test.js                    |   62 +-
+ test/projection/rotate-test.js                     |   13 +-
+ test/projection/stereographic-test.js              |   21 +-
+ test/projection/transverseMercator-test.js         |   65 +-
+ test/render-reference (gone)                       |   44 -
+ test/render-us (gone)                              |   47 -
+ test/render-us.js (new +x)                         |   44 +
+ test/render-world (gone)                           |   70 -
+ test/render-world.js (new +x)                      |   64 +
+ test/rotation-test.js                              |   58 +-
+ test/stream-test.js                                |  272 ++--
+ yarn.lock                                          | 1715 ++++++++++----------
+ 53 files changed, 2639 insertions(+), 2981 deletions(-)
+
+☕6144f76🔪2020-11-09 04:51:19 +0000🔪Martin🔪#221 Mislabelled rotation-test🔪
+ test/rotation-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕54f8890🔪2020-09-23 09:50:23 -0700🔪Mike Bostock🔪Fix d3-array dependency.🔪
+ package.json | 2 +-
+ yarn.lock    | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕98ce1a7🔪2020-08-31 15:14:48 +0800🔪Mr.B🔪Update: link steradians to wiki for more detail🔪Steradians is a difficult concept for novice, so I link this word to Wiki for more mathmatical explanation.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6afb144🔪2020-08-26 21:33:20 +0200🔪Philippe Rivière🔪v2.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4b0dc76🔪2020-08-26 21:31:23 +0200🔪Philippe Rivière🔪fix d3-array dependency🔪(needs d3.Adder from https://github.com/d3/d3-array/releases/tag/v2.5.0, but later versions are ok too)
+
+ package.json | 2 +-
+ yarn.lock    | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕c723115🔪2020-08-23 16:54:54 +0200🔪Philippe Rivière🔪d3 dependencies🔪
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕efc0f5f🔪2020-08-23 16:54:35 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕0c6d91a🔪2020-08-18 09:54:03 +0200🔪Philippe Rivière🔪more precision🔪related: #140
+
+ src/centroid.js | 12 ++++++------
+ src/math.js     |  1 +
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+☕2f59a1e🔪2020-07-30 11:57:19 +0200🔪Philippe Rivière🔪Use d3.Adder (fsum) for more precision in areas, centroids, polygonContains…🔪fixes #140 #141
+
+ src/adder.js (gone)    | 40 ----------------------------------------
+ src/area.js            | 12 +++++++-----
+ src/bounds.js          |  6 +++---
+ src/centroid.js        | 21 ++++++++++++---------
+ src/length.js          |  6 +++---
+ src/path/area.js       | 10 +++++-----
+ src/path/measure.js    |  6 +++---
+ src/polygonContains.js | 10 ++++------
+ yarn.lock              |  8 ++++----
+ 9 files changed, 41 insertions(+), 78 deletions(-)
+
+☕c1f9fd1🔪2020-07-30 11:45:39 +0200🔪Philippe Rivière🔪v2.0.0-rc.2🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕030b87f🔪2020-07-27 11:38:28 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕0cd1506🔪2020-07-27 11:37:57 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕7daa9d3🔪2020-07-10 18:46:45 +0200🔪Philippe Rivière🔪link to v2🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕324b893🔪2020-05-27 10:16:20 +0200🔪Philippe Rivière🔪use d3-array 1 - 2, deliberate ES6 syntax (rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)🔪
+ .eslintrc.json  |  8 +-------
+ package.json    |  3 +--
+ src/identity.js |  4 +---
+ yarn.lock       | 13 ++++---------
+ 4 files changed, 7 insertions(+), 21 deletions(-)
+
+☕0752561🔪2020-07-24 15:11:30 +0200🔪Philippe Rivière🔪simplify scaleTranslate🔪closes https://github.com/d3/d3-geo/pull/209 (thank you @martinfrances107!)
+
+ src/projection/index.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕1df9f48🔪2020-07-23 14:43:03 +0100🔪martin frances🔪Minor fix. Relabelled d3.geoRotation() unit test🔪
+ test/rotation-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕366823c🔪2020-07-08 17:25:37 +0200🔪Philippe Rivière🔪complement to https://github.com/d3/d3-geo/commit/7dc5ebc54cff60f47dcef65b9ff4e3a4fa7400fd closes https://github.com/d3/d3-geo/issues/203🔪
+ src/projection/azimuthal.js       | 2 +-
+ test/projection/azimuthal-test.js | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕9383f39🔪2020-07-02 23:43:03 +0200🔪Philippe Rivière🔪Add link to geo-albers-usa-territories🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕83b8487🔪2020-07-01 23:27:26 +0200🔪Philippe Rivière🔪compatibility with canvas 1-2 as in https://github.com/d3/d3-geo-polygon/pull/41🔪
+ package.json          |   2 +-
+ test/render-reference |   3 +
+ test/render-us        |   3 +
+ test/render-world     |   3 +
+ yarn.lock             | 374 ++++++++++++++++++++++++++++++++++++++++++++++++--
+ 5 files changed, 371 insertions(+), 14 deletions(-)
+
+☕7dc5ebc🔪2020-05-30 17:41:38 +0200🔪Philippe Rivière🔪the azimuthal projections should not crash on the antipode🔪azimuthalEqualArea was returning [Infinity, Infinity], resulting in an erroneous path (https://github.com/d3/d3-geo/issues/203)
+
+ src/projection/azimuthal.js             |  1 +
+ test/projection/azimuthal-test.js (new) | 17 +++++++++++++++++
+ 2 files changed, 18 insertions(+)
+
+☕7962fee🔪2020-05-27 10:01:01 +0200🔪Philippe Rivière🔪v1.12.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0d31cba🔪2020-05-25 15:53:38 +0800🔪Desmond Cheong Zhi Xi🔪Modify README update to ensure style consistency🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕09f836a🔪2020-05-25 14:54:41 +0800🔪Desmond Cheong Zhi Xi🔪Update README section on Projection api🔪Add a clarification in the README about using the center() method
+for Projections. Developers used to the WGS 84
+(https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84)
+reference system that's used by the GPS are likely to default to
+specifying latitude before longitude. This can lead to unexpected
+behaviours. I believe that making the longitude-first ordering
+explicit would reduce the occurence of errors.
+
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3064cb6🔪2020-05-03 21:59:26 +0200🔪Philippe Rivière🔪spurious requires🔪
+ test/projection/clipcircle-test.js | 3 ---
+ 1 file changed, 3 deletions(-)
+
+☕739e863🔪2020-05-03 21:59:13 +0200🔪Philippe Rivière🔪spurious else (since we returned)🔪
+ src/clip/rejoin.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed81279🔪2020-05-03 15:26:52 +0200🔪Philippe Rivière🔪Proper clipping of degenerate polygons: instead of adding epsilons at the "clipcircle" stage, we pass an explicit message in coordinate z that this point should not be mixed with the previous point, and add the epsilons later, at the "rejoin" stage. Closes #196 and https://github.com/vega/vega/issues/2572🔪Relevant notebooks:
+- https://observablehq.com/d/4175cc6263b949d1 (reproduces the original bug)
+- https://observablehq.com/d/32bce1e0b8e4f9a1 (fixes the bug with geoStitch)
+- https://observablehq.com/d/5380dd24622eca74 (reduced test case)
+- https://observablehq.com/d/495020ca139c39bd (images for the unit test in this commit)
+
+ src/clip/buffer.js                       |  4 ++--
+ src/clip/circle.js                       | 13 ++++---------
+ src/clip/rejoin.js                       | 16 +++++++++-------
+ test/projection/clipcircle-test.js (new) | 19 +++++++++++++++++++
+ 4 files changed, 34 insertions(+), 18 deletions(-)
+
+☕5e8712e🔪2020-04-18 22:01:42 +0200🔪Philippe Rivière🔪v1.12.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕736b3f5🔪2020-04-04 19:21:01 +0200🔪Philippe Rivière🔪fix conic equidistant inverse🔪
+ src/projection/conicEquidistant.js | 9 ++++++---
+ test/projection/invert-test.js     | 1 +
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+☕34e6244🔪2020-04-04 19:20:48 +0200🔪Philippe Rivière🔪fix conic conformal inverse🔪
+ src/projection/conicConformal.js | 9 ++++++---
+ test/projection/invert-test.js   | 1 +
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+☕22878e6🔪2020-04-04 18:38:36 +0200🔪Philippe Rivière🔪conicEqualArea inverse was wrong for some parallels🔪for example:
+d3.geoConicEqualArea().parallels([-35, -50]) or
+d3.geoConicEqualArea().parallels([35, 50])
+
+at [175, 0]
+
+(see https://observablehq.com/d/f087f9fe1c3ac997)
+
+ src/projection/conicEqualArea.js | 9 ++++++---
+ test/projection/invert-test.js   | 1 +
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+☕1ae663c🔪2020-03-09 22:28:23 -0500🔪Greg Stoll🔪Change link from shp2geo to new name shp2json🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d487d6🔪2020-01-02 21:54:23 +0100🔪Philippe Rivière🔪implement *identity*.angle()🔪
+ README.md                     |  2 +-
+ src/projection/identity.js    | 21 +++++++++++++++++++--
+ test/projection/angle-test.js | 10 ++++++++++
+ 3 files changed, 30 insertions(+), 3 deletions(-)
+
+☕0d6fb8d🔪2020-01-02 21:25:20 +0100🔪Philippe Rivière🔪Add projection.reflectX / reflectY to all projections.🔪
+ README.md                             | 18 ++++++++--------
+ src/projection/index.js               | 26 +++++++++++++++++------
+ test/projection/reflect-test.js (new) | 40 +++++++++++++++++++++++++++++++++++
+ 3 files changed, 68 insertions(+), 16 deletions(-)
+
+☕1f65bc6🔪2020-01-02 18:47:15 +0100🔪Philippe Rivière🔪simplify geoIdentity🔪for this very small price (a multiplication by 1) the projection is computed in a single place
+
+ src/projection/identity.js | 31 ++++++++++++++++---------------
+ 1 file changed, 16 insertions(+), 15 deletions(-)
+
+☕12206c2🔪2019-12-09 12:46:19 +0100🔪Philippe Rivière🔪test geoIdentity projection stream and clipExtent🔪
+ test/projection/identity-test.js | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+☕f6a7ddd🔪2019-12-07 17:21:29 +0100🔪Philippe Rivière🔪comply with reflectX and reflectY🔪
+ src/projection/identity.js       |  4 ++--
+ test/projection/identity-test.js | 14 +++++++++++++-
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+
+☕fe981df🔪2019-12-03 21:05:35 +0100🔪Philippe Rivière🔪simpler (https://github.com/d3/d3-geo/pull/183#pullrequestreview-326371351)🔪
+ src/projection/identity.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕8e5a501🔪2019-12-03 18:50:53 +0100🔪Philippe Rivière🔪d3.geoIdentity can be used as a function and has an inverse🔪solves https://github.com/d3/d3-geo/issues/182
+
+ src/projection/identity.js             | 74 ++++++++++++++++++----------------
+ test/projection/identity-test.js (new) | 23 +++++++++++
+ 2 files changed, 63 insertions(+), 34 deletions(-)
+
+☕9b5ef5f🔪2019-11-22 10:54:31 +0100🔪Luis Sevillano🔪Fix typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕42e1b85🔪2019-11-16 10:34:26 -0800🔪Mike Bostock🔪1.11.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2beb3b3🔪2019-11-16 10:33:34 -0800🔪Mike Bostock🔪Update eslint-utils.🔪
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕e9d7718🔪2019-11-12 08:03:38 +0100🔪Philippe Rivière🔪v1.11.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕efc8870🔪2019-11-12 08:02:27 +0100🔪Philippe Rivière🔪revert to d3-array@1 Ref. https://github.com/d3/d3-geo/commit/5052cd05f626a225b177db94b284c58b4402de27 & https://github.com/d3/d3-geo/issues/176🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8436905🔪2019-11-07 18:06:36 +0100🔪Philippe Rivière🔪v1.11.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕49bc977🔪2019-11-07 18:02:04 +0100🔪Philippe Rivière🔪upgrade deps🔪
+ yarn.lock | 429 ++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 204 insertions(+), 225 deletions(-)
+
+☕5052cd0🔪2019-09-29 14:33:13 +0200🔪Philippe Rivière🔪Relax d3-array dependency to 1-2 Ref. https://github.com/d3/d3-geo-projection/issues/177🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aabdf3d🔪2019-09-27 09:48:55 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕d10a651🔪2019-08-09 16:46:04 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json                               |   3 +-
+ test/polygonContains-test.js               | 524 ++++++++++++++---------------
+ test/projection/transverseMercator-test.js |   2 +
+ yarn.lock                                  |   5 +
+ 4 files changed, 268 insertions(+), 266 deletions(-)
+
+☕de716c5🔪2019-08-09 16:33:02 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ .eslintrc.json |   3 +-
+ package.json   |   6 +-
+ yarn.lock      | 893 +++++++++++++++++++++++++++++++++------------------------
+ 3 files changed, 530 insertions(+), 372 deletions(-)
+
+☕11c09dd🔪2019-08-09 16:04:03 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕a5558b8🔪2019-08-09 15:26:02 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/area.js                            |  8 ++--
+ src/bounds.js                          | 10 ++---
+ src/cartesian.js                       |  2 +-
+ src/centroid.js                        |  6 +--
+ src/circle.js                          |  8 ++--
+ src/clip/antimeridian.js               |  4 +-
+ src/clip/buffer.js                     |  2 +-
+ src/clip/circle.js                     | 10 ++---
+ src/clip/extent.js                     |  2 +-
+ src/clip/index.js                      |  8 ++--
+ src/clip/rectangle.js                  |  8 ++--
+ src/clip/rejoin.js                     |  2 +-
+ src/contains.js                        |  6 +--
+ src/distance.js                        |  2 +-
+ src/graticule.js                       |  2 +-
+ src/index.js                           | 68 +++++++++++++++++-----------------
+ src/interpolate.js                     |  2 +-
+ src/length.js                          |  8 ++--
+ src/path/area.js                       |  6 +--
+ src/path/bounds.js                     |  2 +-
+ src/path/centroid.js                   |  2 +-
+ src/path/context.js                    |  4 +-
+ src/path/index.js                      | 16 ++++----
+ src/path/measure.js                    |  6 +--
+ src/pointEqual.js                      |  2 +-
+ src/polygonContains.js                 |  6 +--
+ src/projection/albers.js               |  2 +-
+ src/projection/albersUsa.js            |  8 ++--
+ src/projection/azimuthal.js            |  2 +-
+ src/projection/azimuthalEqualArea.js   |  6 +--
+ src/projection/azimuthalEquidistant.js |  6 +--
+ src/projection/conic.js                |  4 +-
+ src/projection/conicConformal.js       |  6 +--
+ src/projection/conicEqualArea.js       |  6 +--
+ src/projection/conicEquidistant.js     |  6 +--
+ src/projection/cylindricalEqualArea.js |  2 +-
+ src/projection/equirectangular.js      |  2 +-
+ src/projection/fit.js                  |  4 +-
+ src/projection/gnomonic.js             |  6 +--
+ src/projection/identity.js             |  8 ++--
+ src/projection/index.js                | 20 +++++-----
+ src/projection/mercator.js             |  6 +--
+ src/projection/naturalEarth1.js        |  4 +-
+ src/projection/orthographic.js         |  6 +--
+ src/projection/resample.js             |  6 +--
+ src/projection/stereographic.js        |  6 +--
+ src/projection/transverseMercator.js   |  4 +-
+ src/rotation.js                        |  4 +-
+ 48 files changed, 163 insertions(+), 163 deletions(-)
+
+☕9e84242🔪2019-06-22 14:29:27 +0200🔪Philippe Rivière🔪no es6 in v1🔪
+ .eslintrc.json | 8 +++++++-
+ package.json   | 1 +
+ yarn.lock      | 5 +++++
+ 3 files changed, 13 insertions(+), 1 deletion(-)
+
+☕6cd78b7🔪2019-06-21 13:19:49 -0700🔪Mike Bostock🔪1.11.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5a326bc🔪2019-06-21 13:19:29 -0700🔪Mike Bostock🔪Remove ES2015 syntax. Fixes #166.🔪
+ src/contains.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8d50ee🔪2019-06-21 18:08:55 +0200🔪Philippe Rivière🔪v1.11.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕167fd4b🔪2019-06-21 17:53:56 +0200🔪Philippe Rivière🔪1.11.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2d63a17🔪2019-04-16 19:58:14 +0200🔪Philippe Rivière🔪d3.geoBounds({type:'Sphere'}) -- fix #163🔪
+ src/bounds.js       | 3 +++
+ test/bounds-test.js | 7 +++++++
+ 2 files changed, 10 insertions(+)
+
+☕7eafab0🔪2019-06-07 09:40:45 +0200🔪Philippe Rivière🔪d3.geoContains should wrap longitudes (fixes #164)🔪
+ src/polygonContains.js       | 15 +++++++++++----
+ test/polygonContains-test.js |  8 ++++++++
+ 2 files changed, 19 insertions(+), 4 deletions(-)
+
+☕65d30d2🔪2019-03-01 15:58:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fba05f7🔪2019-03-01 15:56:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9ac84ca🔪2019-03-01 15:54:54 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕51b91af🔪2019-01-31 22:21:03 +0100🔪Philippe Rivière🔪replace broken link to Carlos Furuti's website with archive.org🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a6cf8c🔪2019-01-25 12:30:06 +0100🔪Philippe Rivière🔪Optimize by not computing the same distance twice for each point.🔪In the tests, add points that do not belong to the line's coordinates, and some that do.
+
+A review of the formula based on https://beta.observablehq.com/d/39e5f445a82cbff8
+
+ src/contains.js       | 27 +++++++++++++++++----------
+ test/contains-test.js | 37 +++++++++++++++++++++++++++++--------
+ 2 files changed, 46 insertions(+), 18 deletions(-)
+
+☕c36f1dd🔪2019-01-15 10:03:34 +0100🔪Ondrej Zara🔪test and fix for #154🔪
+ src/contains.js       | 14 ++++++++++----
+ test/contains-test.js |  9 +++++++++
+ 2 files changed, 19 insertions(+), 4 deletions(-)
+
+☕32aa67e🔪2018-11-26 13:21:11 -0800🔪Mike Bostock🔪1.11.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d4a973d🔪2018-11-24 21:08:37 +0100🔪Philippe Rivière🔪documentation: prefer https🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕a12b749🔪2018-11-24 20:53:18 +0100🔪Philippe Rivière🔪v1.11.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4cff993🔪2018-09-07 08:55:05 +0200🔪Philippe Rivière🔪treat the case |lambda| > 3 pi fixes https://github.com/d3/d3-geo/issues/147🔪[-pi,pi] must be left unchanged
+
+add unit tests
+
+ src/rotation.js       |  4 ++--
+ test/rotation-test.js | 10 ++++++++++
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+☕b95307a🔪2018-08-24 14:27:11 -0700🔪Mike Bostock🔪1.11.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕74e3206🔪2018-08-24 14:27:09 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕7b7acf2🔪2018-08-24 14:01:46 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8d61f8🔪2018-08-24 13:49:20 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 34 ----------------------------------
+ package.json       |  9 +++++----
+ rollup.config.js   |  6 +++---
+ src/index.js (new) | 34 ++++++++++++++++++++++++++++++++++
+ 4 files changed, 42 insertions(+), 41 deletions(-)
+
+☕6dd12a6🔪2018-08-24 12:14:57 -0700🔪Mike Bostock🔪1.11.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b3321b0🔪2018-08-24 12:11:40 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)       |  13 -
+ .eslintrc.json (new)   |  16 +
+ d3-geo.sublime-project |   4 +-
+ package.json           |  17 +-
+ rollup.config.js       |  42 ++-
+ yarn.lock (new)        | 967 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 1025 insertions(+), 34 deletions(-)
+
+☕5922925🔪2018-08-21 17:49:05 +0200🔪Fil🔪require("world-atlas/world/50m.json")🔪
+ test/projection/fit-test.js | 2 +-
+ test/render-world           | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕13a77ed🔪2018-08-21 14:12:14 +0200🔪Fil🔪test image uses world-atlas🔪
+ img/equalEarth.png | Bin 77858 -> 77855 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕44b6d89🔪2018-08-21 13:13:03 +0200🔪Fil🔪use epsilon2 for equalEarth inverse (convergence in tests happens in 3 iterations)🔪
+ README.md                      |  1 -
+ src/projection/equalEarth.js   | 11 +++++------
+ test/projection/invert-test.js |  1 +
+ 3 files changed, 6 insertions(+), 7 deletions(-)
+
+☕7d1cf10🔪2018-08-20 23:39:27 +0200🔪Fil🔪The Equal-Earth projection, by Bojan Šavrič _et al._, 2018 based on https://beta.observablehq.com/@mbostock/equal-earth-projection🔪(alternative to https://github.com/d3/d3-geo-projection/pull/142)
+
+ README.md                          |  12 +++++++++++-
+ img/equalEarth.png (new)           | Bin 0 -> 77858 bytes
+ index.js                           |   1 +
+ src/projection/equalEarth.js (new) |  37 +++++++++++++++++++++++++++++++++++++
+ test/compare-images                |   1 +
+ 5 files changed, 50 insertions(+), 1 deletion(-)
+
+☕188e672🔪2018-08-21 14:10:14 +0200🔪Fil🔪use world-atlas rather than test/data/world-50m.json🔪allows to use the same images in d3 and d3-geo-projection
+https://github.com/d3/d3-geo/issues/145
+
+note that we can't do the same for the spherical us-10m.json (us-atlas's projection is baked in).
+
+ img/angleorient30.png           | Bin 43083 -> 42928 bytes
+ img/azimuthalEqualArea.png      | Bin 83938 -> 83938 bytes
+ img/azimuthalEquidistant.png    | Bin 71973 -> 71970 bytes
+ img/conicConformal.png          | Bin 92446 -> 92424 bytes
+ img/conicEqualArea.png          | Bin 96900 -> 96918 bytes
+ img/conicEquidistant.png        | Bin 95360 -> 95331 bytes
+ img/equirectangular.png         | Bin 41160 -> 41163 bytes
+ img/gnomonic.png                | Bin 28292 -> 28303 bytes
+ img/mercator.png                | Bin 35508 -> 35516 bytes
+ img/naturalEarth1.png           | Bin 79973 -> 79971 bytes
+ img/orthographic.png            | Bin 45643 -> 45637 bytes
+ img/stereographic.png           | Bin 88210 -> 88211 bytes
+ img/transverseMercator.png      | Bin 67124 -> 67121 bytes
+ package.json                    |   3 ++-
+ test/data/world-50m.json (gone) |   1 -
+ test/projection/fit-test.js     |  58 ++++++++++++++++++++--------------------
+ test/render-world               |   2 +-
+ 17 files changed, 32 insertions(+), 32 deletions(-)
+
+☕930cb31🔪2018-08-21 13:13:03 +0200🔪Fil🔪use epsilon2 for equalEarth inverse (convergence in tests happens in 3 iterations)🔪
+ README.md                      |  1 -
+ src/projection/equalEarth.js   | 11 +++++------
+ test/projection/invert-test.js |  1 +
+ 3 files changed, 6 insertions(+), 7 deletions(-)
+
+☕81feeaa🔪2018-08-20 23:39:27 +0200🔪Fil🔪The Equal-Earth projection, by Bojan Šavrič _et al._, 2018 based on https://beta.observablehq.com/@mbostock/equal-earth-projection🔪(alternative to https://github.com/d3/d3-geo-projection/pull/142)
+
+ README.md                          |  12 +++++++++++-
+ img/equalEarth.png (new)           | Bin 0 -> 77858 bytes
+ index.js                           |   1 +
+ src/projection/equalEarth.js (new) |  37 +++++++++++++++++++++++++++++++++++++
+ test/compare-images                |   1 +
+ 5 files changed, 50 insertions(+), 1 deletion(-)
+
+☕986d3ce🔪2018-03-14 10:16:38 -0700🔪Mike Bostock🔪1.10.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f5cdd6b🔪2018-03-14 10:15:00 -0700🔪Mike Bostock🔪Rename build to dist.🔪
+ .gitignore             |  2 +-
+ .npmignore             |  2 +-
+ d3-geo.sublime-project |  2 +-
+ package.json           | 10 +++++-----
+ rollup.config.js       |  2 +-
+ 5 files changed, 9 insertions(+), 9 deletions(-)
+
+☕738fbf8🔪2018-03-14 10:12:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕fa688aa🔪2018-03-14 10:09:33 -0700🔪Mike Bostock🔪Remove line numbers.🔪
+ README.md | 80 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 40 insertions(+), 40 deletions(-)
+
+☕fb61fb7🔪2018-03-14 10:07:01 -0700🔪Mike Bostock🔪Slight optimization.🔪
+ src/projection/index.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕84deab3🔪2018-03-14 10:02:16 -0700🔪Mike Bostock🔪Optimize; add tests.🔪
+ src/projection/index.js       | 14 +++++++----
+ test/projection/angle-test.js | 55 ++++++++++++++++++++++---------------------
+ 2 files changed, 38 insertions(+), 31 deletions(-)
+
+☕1c3bf3d🔪2018-03-14 09:36:53 -0700🔪Mike Bostock🔪Expand projection.angle tests.🔪
+ src/projection/index.js       |  2 +-
+ test/projection/angle-test.js | 62 ++++++++++++++++++++++++++++++++++---------
+ 2 files changed, 50 insertions(+), 14 deletions(-)
+
+☕cc26a41🔪2018-03-14 09:36:32 -0700🔪Mike Bostock🔪Add test build system.🔪
+ d3-geo.sublime-project | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕9e03bfe🔪2018-03-14 07:55:53 -0700🔪Mike Bostock🔪Almost fixed.🔪
+ src/projection/index.js | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕1d95c04🔪2018-03-14 07:49:05 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/projection/index.js | 93 ++++++++++++++++++++++---------------------------
+ 1 file changed, 41 insertions(+), 52 deletions(-)
+
+☕083a12c🔪2018-03-12 08:52:19 +0100🔪Philippe Rivière🔪planar rotation is conventionally anticlockwise ↶🔪
+ src/projection/index.js       | 2 +-
+ test/projection/angle-test.js | 2 +-
+ test/render-world             | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕04e13d9🔪2018-03-11 10:24:47 +0100🔪Philippe Rivière🔪match center() and translate()🔪
+ src/projection/index.js | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕fa5e230🔪2018-03-10 16:29:34 +0100🔪Philippe Rivière🔪test/compute-scale compatible with .angle()🔪
+ test/compute-scale | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d0610c9🔪2018-03-09 22:58:03 +0100🔪Philippe Rivière🔪recenter() becomes a more generic setTransform() taking into account (translate, scale, angle) if cos(angle) === 1 use a faster version test that the invert works too🔪
+ src/projection/index.js       | 69 +++++++++++++++++++++++++++----------------
+ test/projection/angle-test.js |  1 +
+ 2 files changed, 45 insertions(+), 25 deletions(-)
+
+☕0f0ac79🔪2018-03-09 21:29:28 +0100🔪Philippe Rivière🔪better wording🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5982c84🔪2018-03-09 10:34:20 -0800🔪Mike Bostock🔪More conservative test.🔪
+ src/polygonContains.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕036c307🔪2018-03-09 07:52:14 -0800🔪Mike Bostock🔪Optimize test.🔪
+ src/polygonContains.js | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕0dbb7a7🔪2018-03-09 15:45:20 +0100🔪Philippe Rivière🔪Make .angle() a first class method of projectionMutator🔪
+ README.md                           |   4 ++++
+ img/angleorient30.png (new)         | Bin 0 -> 43083 bytes
+ src/projection/index.js             |  20 ++++++++++++++++++--
+ test/compare-images                 |   1 +
+ test/projection/angle-test.js (new) |  18 ++++++++++++++++++
+ test/render-world                   |   9 ++++++++-
+ 6 files changed, 49 insertions(+), 3 deletions(-)
+
+☕aff9146🔪2018-03-02 23:09:02 +0100🔪Philippe Rivière🔪#105: fix contains(polygon,pole) when the polygon goes through the pole🔪Note that the choice to return 0 in this situation is arbitrary -- but if we set it to 1, cutting fails. A different approach based on 3D (cartesian) maths might help.
+
+(copy of 094034c3204d57e371422d12958d0ce27f94a420 which went to master instead of this feature branch)
+
+ src/polygonContains.js       |  2 ++
+ test/polygonContains-test.js | 23 +++++++++++++++++++++++
+ 2 files changed, 25 insertions(+)
+
+☕6c1c0d6🔪2018-03-02 22:53:36 +0100🔪Philippe Rivière🔪This reverts commit 094034c3204d57e371422d12958d0ce27f94a420.🔪(I accidentaly pushed this fix for #105 to master, PR coming instead)
+
+ src/polygonContains.js       |  2 --
+ test/polygonContains-test.js | 23 -----------------------
+ 2 files changed, 25 deletions(-)
+
+☕094034c🔪2018-03-02 21:52:40 +0100🔪Philippe Rivière🔪Fix contains(polygon,pole) when the polygon goes through the pole  (issue #105)🔪Note that the choice to return 0 in this situation is arbitrary -- but if we set it to 1, cutting fails. A different approach based on 3D (cartesian) maths might help.
+
+ src/polygonContains.js       |  2 ++
+ test/polygonContains-test.js | 23 +++++++++++++++++++++++
+ 2 files changed, 25 insertions(+)
+
+☕453f9b2🔪2017-12-08 13:14:56 -0800🔪Mike Bostock🔪1.9.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕49308f9🔪2017-12-08 13:14:42 -0800🔪Mike Bostock🔪Update rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ab6e129🔪2017-12-08 16:09:06 -0500🔪Yuri Astrakhan🔪remove img/ from npm🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕b630b18🔪2017-10-05 09:31:16 -0700🔪Mike Bostock🔪1.9.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1782cd1🔪2017-10-05 09:30:27 -0700🔪Mike Bostock🔪prepublishOnly, not prepare.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕01dfd54🔪2017-10-05 09:20:54 -0700🔪Mike Bostock🔪Don’t reuse fitExtent for fit{Width,Height}.🔪
+ src/projection/fit.js | 52 ++++++++++++++++++++++++++++-----------------------
+ 1 file changed, 29 insertions(+), 23 deletions(-)
+
+☕555f972🔪2017-10-05 12:55:33 -0300🔪Mike Fogel🔪Merge fit() into fitExtent()🔪
+ src/projection/fit.js | 12 ++++--------
+ 1 file changed, 4 insertions(+), 8 deletions(-)
+
+☕b6afa22🔪2017-10-05 10:54:17 -0400🔪Tom Wanzek🔪Clarify Wording for Clipping Function API🔪Closes #119
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕edfac30🔪2017-10-04 18:26:56 -0300🔪Mike Fogel🔪Add fitWidth & fitHeight tests with albersUSA🔪
+ test/projection/fit-test.js | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+☕88423e7🔪2017-10-03 09:02:58 -0300🔪Mike Fogel🔪Implementation and tests for fitWidth, fitHeight🔪
+ src/projection/fit.js       | 18 ++++++++++++------
+ test/projection/fit-test.js | 32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 44 insertions(+), 6 deletions(-)
+
+☕cddc4fd🔪2017-10-03 07:39:50 -0300🔪Mike Fogel🔪Add fitWidth & fitHeight as stub functions, docs🔪
+ README.md                   | 10 +++++++++-
+ src/projection/albersUsa.js | 10 +++++++++-
+ src/projection/fit.js       |  8 ++++++++
+ src/projection/identity.js  |  8 +++++++-
+ src/projection/index.js     | 10 +++++++++-
+ 5 files changed, 42 insertions(+), 4 deletions(-)
+
+☕cf65312🔪2017-09-30 13:56:54 -0700🔪Mike Bostock🔪1.8.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f3c8e9c🔪2017-09-30 13:56:34 -0700🔪Mike Bostock🔪Grr, confusing prepublish semantics.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕542c1a5🔪2017-09-30 13:54:16 -0700🔪Mike Bostock🔪1.8.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cad4239🔪2017-09-30 13:53:21 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json                                               |  5 +++--
+ rollup.config.js                                           | 13 ++++++-------
+ test/{polygon-contains-test.js => polygonContains-test.js} |  6 ++++--
+ 3 files changed, 13 insertions(+), 11 deletions(-)
+
+☕f2193e6🔪2017-09-18 17:28:15 -0700🔪Philippe Rivière🔪Documentation🔪
+ README.md | 24 +++++++++++++-----------
+ 1 file changed, 13 insertions(+), 11 deletions(-)
+
+☕2886624🔪2017-09-16 23:54:48 -0700🔪Philippe Rivière🔪rename clip/polygon to clip/rejoin, to avoid confusion with the forthcoming clipPolygon plugin🔪
+ src/clip/index.js                  | 4 ++--
+ src/clip/rectangle.js              | 4 ++--
+ src/clip/{polygon.js => rejoin.js} | 0
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+☕02b431e🔪2017-09-13 12:28:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0bd1c67🔪2017-09-13 12:27:36 -0700🔪Mike Bostock🔪Extract closure; move test.🔪
+ src/projection/index.js              | 20 ++++++++++----------
+ test/projection/rotate-test.js (new) | 21 +++++++++++++++++++++
+ test/rotation-test.js                | 29 +----------------------------
+ 3 files changed, 32 insertions(+), 38 deletions(-)
+
+☕b879d39🔪2017-09-13 12:15:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕544da8d🔪2017-09-13 12:12:55 -0700🔪Mike Bostock🔪Add projection.{pre,post}clip.🔪This allows arbitrary implementations of spherical clipping and pixel clipping
+to be specified on a projection. We’re still not achieving the generality of a
+composable projection pipeline, but at least we can plug in new implementations,
+such as the forthcoming spherical polygon clipping (#108).
+
+ README.md                   |  39 ++++++++++
+ index.js                    |   3 +
+ src/clip/circle.js          |   5 +-
+ src/clip/extent.js          | 171 +-------------------------------------------
+ src/clip/rectangle.js (new) | 168 +++++++++++++++++++++++++++++++++++++++++++
+ src/projection/identity.js  |  12 ++--
+ src/projection/index.js     |  14 +++-
+ 7 files changed, 234 insertions(+), 178 deletions(-)
+
+☕fb742a3🔪2017-09-13 06:46:10 -0700🔪Mike Bostock🔪1.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2588a0d🔪2017-09-13 06:45:08 -0700🔪Mike Bostock🔪Fix export of geoNaturalEarth1Raw.🔪
+ index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕772da8d🔪2017-09-13 14:07:37 +0200🔪mz🔪Modify index.js to comply with d3-geo-projection imports🔪
+ index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4e7758c🔪2017-09-13 13:56:22 +0200🔪mz🔪Fix typo in index.js file🔪
+ index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e1c3a41🔪2017-09-12 12:41:16 -0700🔪Mike Bostock🔪1.7.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1d26184🔪2017-09-12 12:40:00 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json           | 12 ++++++------
+ rollup.config.js (new) | 15 +++++++++++++++
+ 2 files changed, 21 insertions(+), 6 deletions(-)
+
+☕35b7c27🔪2017-09-12 12:30:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db1b7a9🔪2017-09-12 12:29:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++------------
+ 1 file changed, 8 insertions(+), 12 deletions(-)
+
+☕530080b🔪2017-09-12 12:24:27 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕6228736🔪2017-07-23 16:18:35 +0200🔪Philippe Rivière🔪something was missing :)🔪
+ src/projection/naturalEarth1.js (new) | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+☕c41e3a7🔪2017-07-22 21:56:16 +0200🔪Philippe Rivière🔪naturalEarth1 (#69)🔪
+ README.md                   |  14 +++++++++++++-
+ img/naturalEarth1.png (new) | Bin 0 -> 79973 bytes
+ index.js                    |   1 +
+ test/compare-images         |   1 +
+ 4 files changed, 15 insertions(+), 1 deletion(-)
+
+☕c1aee37🔪2017-05-16 07:25:04 -0700🔪Mike Bostock🔪1.6.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕65a483c🔪2017-05-16 07:25:00 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c316714🔪2017-05-16 07:24:22 -0700🔪Mike Bostock🔪Lazy circle for points.🔪
+ src/path/string.js       |  5 ++++-
+ test/path/string-test.js | 10 ++++++++++
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+☕917ba9a🔪2017-05-16 07:15:16 -0700🔪Mike Bostock🔪Fix tests.🔪Broken by 7e267055c72c6aeaa826d701c308b9eb1fe2acb1.
+
+ test/path/index-test.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕7e26705🔪2017-05-02 14:11:57 -0400🔪Tom Wanzek🔪[geoPath] * Harmonize the return type for geoPath rendering of svg path string with behavior of **d3-shape**. I.e. return string or null (fallback) when rendering to PathString.🔪
+ src/path/string.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕e161ea1🔪2017-04-07 21:13:17 -0400🔪Shaoliang Nie🔪Typo fix in README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕61a22c9🔪2017-04-07 17:33:34 -0400🔪Paul Dechov🔪Fix broken anchor reference🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕565b97d🔪2017-03-13 23:10:21 +0100🔪Fil🔪uncaught error on clipAngle() for a degenerate case, only on some browsers - fixes https://github.com/d3/d3-geo/issues/54🔪
+ src/clip/circle.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8aada60🔪2017-03-12 20:41:52 -0700🔪Mike Bostock🔪1.6.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4a9fb16🔪2017-03-12 16:32:57 -0700🔪Mike Bostock🔪Fix rotated Mercator automatic clip extent.🔪Fixes #89. Also fixes automatic clip extent for transverse Mercator, which was
+likewise busted when rotated, but also busted when intersecting with a user-
+specified clip extent.
+
+ src/projection/mercator.js                       | 18 ++++----
+ test/projection/mercator-test.js                 | 49 ++++++++++++++-------
+ test/projection/transverseMercator-test.js (new) | 56 ++++++++++++++++++++++++
+ 3 files changed, 100 insertions(+), 23 deletions(-)
+
+☕a515530🔪2017-03-10 10:01:25 -0800🔪Mike Bostock🔪1.6.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ebc87e4🔪2017-03-10 10:01:06 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fabdb8f🔪2017-03-10 18:54:48 +0100🔪Fil🔪add a test for https://bl.ocks.org/mbostock/493fed96de0ea8c26a97 https://github.com/d3/d3/pull/2169🔪
+ test/rotation-test.js | 28 +++++++++++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+
+☕3d6001f🔪2017-03-10 13:46:36 +0100🔪Fil🔪isolate the rotate transform from the clipAngle|clipAntimeridian see https://github.com/d3/d3-geo/issues/78 for intent🔪
+ src/clip/index.js       | 14 +++++---------
+ src/projection/index.js | 11 ++++++++++-
+ 2 files changed, 15 insertions(+), 10 deletions(-)
+
+☕ddc3336🔪2017-03-08 09:34:23 -0800🔪Mike Bostock🔪Improved compare-images script.🔪
+ test/compare-images | 30 ++++++++++++++++++++++++------
+ test/render-us      |  3 +--
+ test/render-world   |  3 +--
+ 3 files changed, 26 insertions(+), 10 deletions(-)
+
+☕20d2ce6🔪2017-03-06 10:40:52 -0800🔪Mike Bostock🔪Better transverse Mercator link.🔪
+ README.md | 46 +++++++++++++++++++++++-----------------------
+ 1 file changed, 23 insertions(+), 23 deletions(-)
+
+☕3492fee🔪2017-03-02 12:30:06 -0800🔪Mike Bostock🔪1.6.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕38d8b87🔪2017-03-02 12:15:55 -0800🔪Mike Bostock🔪Fix #55 - correct clip extent on recenter.🔪
+ src/projection/mercator.js       | 7 ++++++-
+ test/projection/mercator-test.js | 7 +++++++
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+
+☕20a2a97🔪2017-03-02 09:43:54 -0800🔪Mike Bostock🔪Shorter.🔪
+ src/projection/mercator.js | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕0c6a0d3🔪2017-03-02 09:36:26 -0800🔪Mike Bostock🔪Don’t leak intersected clip extent.🔪Also, we must recompute the intersection if the scale or translate changes.
+
+ src/projection/mercator.js             | 28 ++++++++++++++++------------
+ test/projection/mercator-test.js (new) | 32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 48 insertions(+), 12 deletions(-)
+
+☕3576c5a🔪2017-03-02 09:17:44 -0800🔪Mike Bostock🔪Clamp Mercator clip extent.🔪This prevents the projection from breaking if the clip extent is specified
+outside ±180° longitude. However, this implementation leaks the clamped clip
+extent; it can be seen on retrieval. This should be fixed.
+
+ src/projection/mercator.js | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕d143c7f🔪2017-02-28 10:01:31 -0800🔪Mike Bostock🔪1.6.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1748fb3🔪2017-02-28 09:59:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕5ed40d0🔪2017-02-28 09:54:52 -0800🔪Mike Bostock🔪Stricter handling of GeoJSON types.🔪
+ src/contains.js       | 118 ++++++++++++++++++++++++--------------------------
+ src/stream.js         |   4 +-
+ test/contains-test.js |  33 ++++++++------
+ 3 files changed, 77 insertions(+), 78 deletions(-)
+
+☕cd7ba62🔪2017-02-28 09:41:55 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f58725🔪2017-02-28 09:40:49 -0800🔪Mike Bostock🔪Clarify winding order convention.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕6a780ba🔪2017-02-25 19:49:17 +0100🔪Fil🔪useless ternary expr. (https://github.com/d3/d3-geo/pull/86#pullrequestreview-23862812)🔪
+ src/contains.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕2ac7805🔪2017-02-25 19:47:27 +0100🔪Fil🔪less explicit but shorter type conversion of polygonContains() to boolean (https://github.com/d3/d3-geo/pull/86#pullrequestreview-23862800)🔪
+ src/contains.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕775c649🔪2017-02-25 19:45:55 +0100🔪Fil🔪fix test style (https://github.com/d3/d3-geo/pull/86#pullrequestreview-23862685)🔪
+ test/contains-test.js | 62 +++++++++++++++++++++++++--------------------------
+ 1 file changed, 31 insertions(+), 31 deletions(-)
+
+☕2807f32🔪2017-02-24 23:31:01 +0100🔪Fil🔪{radians} from math🔪
+ src/contains.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1553d8d🔪2017-02-24 23:26:13 +0100🔪Fil🔪d3.geoContains(feature, point) fixes https://github.com/d3/d3-geo/issues/73 according to https://github.com/d3/d3/issues/2662#issuecomment-245330507🔪
+ README.md                   |   4 ++
+ index.js                    |   1 +
+ src/contains.js (new)       |  94 +++++++++++++++++++++++++++++++++++++
+ test/contains-test.js (new) | 110 ++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 209 insertions(+)
+
+☕a53cf05🔪2017-02-20 13:35:08 +0100🔪Fil🔪typo🔪
+ test/centroid-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6c816d3🔪2017-02-20 13:35:01 +0100🔪Fil🔪avoid computing the angle twice🔪
+ src/centroid.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕972acea🔪2017-02-20 13:23:09 +0100🔪Fil🔪add a test for the ny detailed feature🔪
+ test/centroid-test.js   | 6 ++++++
+ test/data/ny.json (new) | 1 +
+ 2 files changed, 7 insertions(+)
+
+☕a0dd8fc🔪2017-02-19 08:55:31 -0800🔪Mike Bostock🔪1.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4bec867🔪2017-02-19 08:54:17 -0800🔪Mike Bostock🔪Fix #84 - rename path.length to path.measure.🔪
+ README.md                                     | 20 +++++++++----------
+ src/path/index.js                             | 15 +++++---------
+ src/path/{length.js => measure.js}            |  0
+ test/path/{length-test.js => measure-test.js} | 28 +++++++++++++--------------
+ 4 files changed, 29 insertions(+), 34 deletions(-)
+
+☕9a036a6🔪2017-02-18 09:11:07 -0800🔪Mike Bostock🔪1.4.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4026b25🔪2017-02-18 12:15:52 +0100🔪Fil🔪`angle = acos(sqrt(A.B))` is numerically instable when vector A is very close to B change to `asin(norm(AxB))` solves https://github.com/d3/d3-geo/issues/81🔪
+ src/centroid.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2aa7b63🔪2017-02-18 12:12:20 +0100🔪Fil🔪this test is at the edge, and fails for no good reason if the result's longitude changes from 180 to -180; rotating it so that it is more robust🔪
+ test/centroid-test.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕9e9ccea🔪2017-02-09 10:56:24 -0800🔪Mike Bostock🔪1.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f030ce3🔪2017-02-09 10:56:20 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1754cf9🔪2017-02-09 10:48:18 -0800🔪Mike Bostock🔪Fix #80 - geoBounds of lines.🔪We should consider vertices in addition to inflection points.
+
+ src/bounds.js       |  4 +++-
+ test/bounds-test.js | 11 +++++++++++
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+☕586c231🔪2017-02-06 17:26:37 +0100🔪Martin Raifer🔪add reference to GeoJSON RFC7946🔪mention the different handling of polygon winding orders between d3 and rfc7946. Also, change one "Polygon" code-example to have the expected non-RFC7946 clockwise winding.
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕4f2231d🔪2017-02-01 10:37:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕ccde197🔪2017-02-01 10:36:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0944908🔪2017-02-01 10:33:50 -0800🔪Mike Bostock🔪Add path.length.🔪Fixes d3/d3#1556.
+Fixes d3/d3#1688.
+
+ README.md                      | 16 +++++++-----
+ src/path/index.js              | 11 ++++++++
+ src/path/length.js (new)       | 45 ++++++++++++++++++++++++++++++++
+ test/path/area-test.js         |  3 +--
+ test/path/length-test.js (new) | 58 ++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 125 insertions(+), 8 deletions(-)
+
+☕a527dbd🔪2017-01-19 14:29:04 -0800🔪Scott Murray🔪Fixed typo🔪Section on "Cylindrical projections" mentioned "Conic projections". This corrects that one word.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13c07f8🔪2016-12-13 16:08:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9eee95f🔪2016-11-16 09:41:17 -0800🔪Mike Bostock🔪1.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕974a9c4🔪2016-11-16 09:40:24 -0800🔪Mike Bostock🔪Update to topojson-client.🔪
+ package.json                | 2 +-
+ test/compute-scale          | 2 +-
+ test/projection/fit-test.js | 2 +-
+ test/render-reference       | 2 +-
+ test/render-us              | 2 +-
+ test/render-world           | 2 +-
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+
+☕8e6d0bf🔪2016-11-16 09:36:30 -0800🔪Mike Bostock🔪Coerce undefined to null.🔪Fixes #66.
+
+ src/path/index.js       | 4 ++--
+ test/path/index-test.js | 8 ++++----
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+☕0383632🔪2016-11-16 09:30:49 -0800🔪Mike Bostock🔪Add identity.reflect[XY].🔪Fixes d3/d3-geo#68.
+
+ README.md                  | 12 ++++++++++--
+ package.json               |  4 ++--
+ src/projection/identity.js | 18 ++++++++++++------
+ 3 files changed, 24 insertions(+), 10 deletions(-)
+
+☕18f02e3🔪2016-11-01 09:43:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3e3d160🔪2016-11-01 09:41:23 -0700🔪Mike Bostock🔪Inline raw projections in README.🔪
+ README.md | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+☕c2a3d36🔪2016-11-01 09:01:06 -0700🔪Mike Bostock🔪Test albersUsa.invert.🔪
+ test/projection/invert-test.js | 68 +++++++++++++++++++++++-------------------
+ 1 file changed, 37 insertions(+), 31 deletions(-)
+
+☕891a9cf🔪2016-10-27 11:41:19 -0700🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb36d9f🔪2016-10-27 11:40:46 -0700🔪Mike Bostock🔪Add missing export.🔪
+ index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d97517c🔪2016-10-27 10:51:51 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/projection/identity.js |  4 ++--
+ src/projection/index.js    |  4 ++--
+ src/projection/resample.js |  4 ++--
+ src/transform.js           | 18 +++++++++---------
+ 4 files changed, 15 insertions(+), 15 deletions(-)
+
+☕a7be01a🔪2016-10-27 10:30:17 -0700🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2c51b71🔪2016-10-27 10:28:48 -0700🔪Mike Bostock🔪Replace d3.geoClipExtent with d3.geoIdentity.🔪Implement d3.geoIdentity clipExtent.
+
+ README.md                   | 20 +-------------
+ index.js                    |  2 +-
+ src/projection/albersUsa.js |  8 ++++--
+ src/projection/fit.js       | 26 +++++++-----------
+ src/projection/identity.js  | 65 +++++++++++++++++++++++----------------------
+ src/projection/index.js     |  8 ++++--
+ src/transform.js            | 13 +++++----
+ 7 files changed, 62 insertions(+), 80 deletions(-)
+
+☕1674c25🔪2016-10-27 10:01:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3fe2322🔪2016-10-27 10:01:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ca98662🔪2016-10-27 10:01:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕a3a75ab🔪2016-10-27 09:59:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕8115ec0🔪2016-10-27 09:57:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕957c851🔪2016-10-27 09:51:26 -0700🔪Mike Bostock🔪Add d3.geoGraticule10.🔪Fixes #63.
+
+ README.md        | 10 ++++++++++
+ src/graticule.js |  6 +++++-
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+☕3422b9a🔪2016-10-27 09:44:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕03623bd🔪2016-10-27 09:32:36 -0700🔪Mike Bostock🔪Convenient d3.geoPath construction.🔪Fixes #62.
+
+ README.md               |  7 ++++---
+ src/path/index.js       |  6 ++----
+ test/path/index-test.js | 25 +++++++++++++++++++++++++
+ 3 files changed, 31 insertions(+), 7 deletions(-)
+
+☕9f12adc🔪2016-10-27 09:29:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕010e5b7🔪2016-10-27 09:28:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕95c4f9f🔪2016-10-27 09:28:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕ddd999c🔪2016-10-27 09:25:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕58744af🔪2016-10-27 09:24:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa8cf89🔪2016-10-27 09:23:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 96 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 48 insertions(+), 48 deletions(-)
+
+☕43be5ce🔪2016-10-27 09:20:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 323 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 162 insertions(+), 161 deletions(-)
+
+☕68a622b🔪2016-10-27 09:19:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕65221d0🔪2016-10-27 09:19:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕e6ce7fb🔪2016-10-27 09:17:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6498817🔪2016-10-27 09:16:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e612f03🔪2016-10-27 09:16:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕3f2f845🔪2016-10-27 09:14:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕e6cdd4e🔪2016-10-27 09:13:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fd7afdd🔪2016-10-27 09:12:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕07b95a1🔪2016-10-27 09:11:30 -0700🔪Mike Bostock🔪Reorganize README.🔪Related d3/d3-geo-projection#65.
+
+Also add d3.geoIdentity toString.
+
+ README.md                  | 199 +++++++++++++++++++++++++++------------------
+ src/projection/identity.js |   4 +
+ 2 files changed, 124 insertions(+), 79 deletions(-)
+
+☕a24bae8🔪2016-10-27 07:26:08 -0700🔪Mike Bostock🔪Add d3.geoIdentity.🔪Useful for rescaling projected geometry in conjunction with fit{Extent,Size}.
+
+ index.js                         |  1 +
+ src/projection/identity.js (new) | 41 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 42 insertions(+)
+
+☕9af93ff🔪2016-10-25 08:52:58 -0700🔪Mike Bostock🔪Document missing methods. Fixes #64.🔪
+ README.md                          |   6 +++++-
+ img/albersUsa-parameters.png (new) | Bin 0 -> 490482 bytes
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+☕5c57b93🔪2016-10-11 08:47:47 -0700🔪Mike Bostock🔪1.2.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕717ed0c🔪2016-10-03 13:32:49 -0700🔪Mike Bostock🔪Use cylindrical projection when appropriate.🔪
+ src/projection/conicEqualArea.js             | 14 +++++---------
+ src/projection/cylindricalEqualArea.js (new) | 15 +++++++++++++++
+ 2 files changed, 20 insertions(+), 9 deletions(-)
+
+☕d906e69🔪2016-10-03 12:10:13 +0200🔪Fil🔪add a decimal and negative - and reach 666 tests^^🔪
+ test/projection/invert-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6ceb537🔪2016-10-02 11:59:16 +0200🔪Fil🔪this case is now handled gracefully🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕965dc9d🔪2016-10-02 11:23:16 +0200🔪Fil🔪unnecessary pi🔪
+ test/projection/invert-test.js | 2 --
+ 1 file changed, 2 deletions(-)
+
+☕dd763c7🔪2016-10-02 11:06:46 +0200🔪Fil🔪Fixes conic projections where the apex is south, and the limit case where the apex is infinite (in other words, where the cone is a cylinder).🔪Fixes https://github.com/d3/d3/issues/2707
+
+Visual test case at http://bl.ocks.org/Fil/bdf4e2b18aff57b7c7b3411e3609e546
+
+ README.md                            |  4 ++--
+ src/projection/conicConformal.js     |  4 ++--
+ src/projection/conicEqualArea.js     | 15 ++++++++++----
+ src/projection/conicEquidistant.js   |  2 +-
+ test/projection/invert-test.js (new) | 40 ++++++++++++++++++++++++++++++++++++
+ 5 files changed, 56 insertions(+), 9 deletions(-)
+
+☕12c0a21🔪2016-09-20 13:10:28 -0700🔪Mike Bostock🔪1.2.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c635d6e🔪2016-09-20 13:10:21 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 2 +-
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕f17056b🔪2016-09-20 13:05:48 -0700🔪Mike Bostock🔪Fix #59 - clear cache stream on adjust.🔪We were forgetting to clear the cached stream when the scale, translate or
+precision changed. This could cause a subsequent call to projection.fitSize or
+projection.fitExtent to compute the incorrect bounds (because it ignored the
+scale of 150 and translate of [0,0] used to fit the projection).
+
+ src/projection/albersUsa.js | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕7c9f209🔪2016-08-20 09:03:34 -0700🔪Mike Bostock🔪1.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7dcfcad🔪2016-08-20 08:59:31 -0700🔪Mike Bostock🔪Fix string context on lineEnd.🔪Also add tests for drawing a point after a line.
+
+ src/path/string.js       |  6 ++----
+ test/path/index-test.js  | 22 ++++++++++++++++++++++
+ test/path/string-test.js | 13 +++++++++++++
+ 3 files changed, 37 insertions(+), 4 deletions(-)
+
+☕9275ba4🔪2016-08-20 08:37:22 -0700🔪Mike Bostock🔪Fix #58 - fewer closures.🔪Also add a test for d3.geoPath’s string output.
+
+ src/path/context.js            | 86 ++++++++++++++++++-------------------
+ src/path/string.js             | 96 ++++++++++++++++++++----------------------
+ test/path/string-test.js (new) | 82 ++++++++++++++++++++++++++++++++++++
+ test/pathEqual.js (new)        | 22 ++++++++++
+ 4 files changed, 190 insertions(+), 96 deletions(-)
+
+☕9a2df44🔪2016-08-15 21:22:49 -0700🔪Mike Bostock🔪No source link for interfaces.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6bec6fc🔪2016-08-15 11:26:58 -0700🔪Mike Bostock🔪1.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕17aa037🔪2016-08-15 11:26:43 -0700🔪Mike Bostock🔪Disable negate_iife.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕641772b🔪2016-08-15 11:16:04 -0700🔪Mike Bostock🔪Fix test.🔪
+ test/projection/stereographic-test.js | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕d2c14ec🔪2016-08-15 11:14:48 -0700🔪Mike Bostock🔪Add tests for d3.geoStereographic. Related #57.🔪
+ test/projection/stereographic-test.js (new) | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+☕e5f32d4🔪2016-08-15 20:09:59 +0200🔪Fil🔪fix stereographicRaw.invert🔪Simple test:
+```
+    var point = [ 360 * Math.random() - 180, 180 * Math.random() - 90 ],
+        stereo = d3.geoStereographic();
+    console.log(point + " = " + stereo.invert(stereo(point)));
+```
+ src/projection/stereographic.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7fc0682🔪2016-08-15 09:57:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0068167🔪2016-08-14 17:29:09 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 168 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 84 insertions(+), 84 deletions(-)
+
+☕d9e750e🔪2016-08-10 16:31:47 +0200🔪Thomas Preusse🔪Fix fitSize example🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8ce42e1🔪2016-08-06 15:24:45 -0600🔪Stefan Codrescu🔪Fixes link to TopoJSON🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d443d8c🔪2016-08-02 14:45:27 -0700🔪Mike Bostock🔪1.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6bf6e8e🔪2016-08-02 14:45:27 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕1427492🔪2016-08-02 14:08:50 -0700🔪Mike Bostock🔪1.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05b4cdb🔪2016-08-01 10:44:08 -0700🔪Mike Bostock🔪Don’t lazily initialize adders.🔪Fixes #51.
+
+ src/area.js            | 7 +++----
+ src/bounds.js          | 4 +---
+ src/length.js          | 5 ++---
+ src/polygonContains.js | 6 +++---
+ 4 files changed, 9 insertions(+), 13 deletions(-)
+
+☕a7add55🔪2016-07-29 15:30:31 -0700🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0e8d5db🔪2016-07-29 15:14:12 -0700🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ac4a958🔪2016-07-29 15:09:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕1afaa55🔪2016-07-15 22:38:09 -0400🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8d23e15🔪2016-07-15 22:34:38 -0400🔪Mike Bostock🔪Simpler precision when computing bounds, again.🔪Related #50.
+
+ README.md             | 22 +++++++---------------
+ src/projection/fit.js | 21 +++++++--------------
+ 2 files changed, 14 insertions(+), 29 deletions(-)
+
+☕081207c🔪2016-07-14 21:44:50 -0400🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db5388d🔪2016-07-14 21:42:35 -0400🔪Mike Bostock🔪Simpler precision when computing bounds.🔪
+ src/projection/fit.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕894c0f6🔪2016-07-14 21:35:22 -0400🔪Mike Bostock🔪Sort imports by file name.🔪
+ src/projection/albersUsa.js | 2 +-
+ src/projection/index.js     | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕0a3d139🔪2016-07-14 21:32:53 -0400🔪Mike Bostock🔪Sphere test for projection.fitExtent.🔪
+ test/projection/fit-test.js | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+☕04298a9🔪2016-07-14 21:30:30 -0400🔪Mike Bostock🔪Test formatting.🔪
+ test/projection/fit-test.js | 218 ++++++++++----------------------------------
+ 1 file changed, 50 insertions(+), 168 deletions(-)
+
+☕ae0986b🔪2016-07-14 18:28:15 -0400🔪Noah🔪Stray semicolon🔪
+ src/projection/fit.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕20393f6🔪2016-07-14 18:12:46 -0400🔪Noah🔪Restore original precision + precision test🔪
+ src/projection/fit.js       |  6 +++---
+ test/projection/fit-test.js | 27 +++++++++++++++++++++++++++
+ 2 files changed, 30 insertions(+), 3 deletions(-)
+
+☕2ca9e60🔪2016-07-14 16:41:09 -0400🔪Noah🔪Add back precision reset before bounds calc🔪
+ src/projection/fit.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕14f2ddc🔪2016-07-14 16:38:50 -0400🔪Noah🔪Style tweaks🔪
+ README.md             |  1 -
+ src/projection/fit.js | 14 ++++----------
+ 2 files changed, 4 insertions(+), 11 deletions(-)
+
+☕a01b920🔪2016-07-14 16:36:19 -0400🔪Noah🔪Style tweaks🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕d215f23🔪2016-07-14 13:51:42 -0400🔪Noah🔪Maintain precision/scale ratio🔪
+ src/projection/fit.js | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕df0865b🔪2016-07-14 13:52:29 -0400🔪Noah🔪doesn't matter for bounds calc🔪
+ src/projection/fit.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕43fcd2c🔪2016-07-14 13:51:42 -0400🔪Noah🔪Maintain precision/scale ratio🔪
+ src/projection/fit.js | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕f2715f3🔪2016-07-14 13:01:27 -0400🔪Noah🔪Coercing extent throughout🔪
+ src/projection/fit.js | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+
+☕466fd38🔪2016-07-14 12:34:55 -0400🔪Noah🔪Stray line🔪
+ test/projection/fit-test.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕c91469e🔪2016-07-14 12:16:39 -0400🔪Noah🔪Chaining test🔪
+ test/projection/fit-test.js | 38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+
+☕1220a80🔪2016-07-14 11:58:11 -0400🔪Noah🔪Saving clipExtent🔪
+ src/projection/fit.js | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+
+☕eb97193🔪2016-07-14 11:49:23 -0400🔪Noah🔪Add fitSize tests🔪
+ test/projection/fit-test.js | 60 +++++++++++++++++++++++++++++++--------------
+ 1 file changed, 42 insertions(+), 18 deletions(-)
+
+☕da6d01a🔪2016-07-14 11:40:28 -0400🔪Noah🔪Tweak language🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fdd5b27🔪2016-07-14 11:26:58 -0400🔪Noah🔪Switch to fitExtent, fitSize🔪
+ README.md                   | 30 ++++++++++++++++++++++--------
+ src/projection/albersUsa.js |  6 ++++--
+ src/projection/fit.js       | 38 +++++++++++++++++++++++++-------------
+ src/projection/index.js     |  6 ++++--
+ test/projection/fit-test.js | 36 ++++++++++++++++++------------------
+ 5 files changed, 73 insertions(+), 43 deletions(-)
+
+☕df00b65🔪2016-07-13 16:08:32 -0400🔪Noah🔪Added to README🔪
+ README.md | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+☕0969c2e🔪2016-07-13 15:46:31 -0400🔪Noah🔪Adding custom proj test🔪
+ test/projection/fit-test.js | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+☕34754f7🔪2016-07-13 15:25:10 -0400🔪Noah🔪Null geometry tests🔪
+ test/projection/fit-test.js | 93 +++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 78 insertions(+), 15 deletions(-)
+
+☕39bc9bf🔪2016-07-13 14:54:41 -0400🔪Noah🔪Updated tests🔪
+ test/projection/fit-test.js | 125 +++++++++++++++++++++++++-------------------
+ 1 file changed, 72 insertions(+), 53 deletions(-)
+
+☕a5bd95f🔪2016-07-13 14:32:47 -0400🔪Noah🔪Fixes🔪
+ src/projection/albersUsa.js | 2 +-
+ src/projection/fit.js       | 9 +++++----
+ src/projection/index.js     | 2 +-
+ 3 files changed, 7 insertions(+), 6 deletions(-)
+
+☕b6a9800🔪2016-07-13 14:32:47 -0400🔪Noah🔪Fixes🔪
+ src/projection/albersUsa.js | 2 +-
+ src/projection/fit.js       | 4 ++--
+ src/projection/index.js     | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+☕8be2279🔪2016-07-13 14:32:47 -0400🔪Noah🔪Fixes🔪
+ src/projection/albersUsa.js | 2 +-
+ src/projection/fit.js       | 4 ++--
+ src/projection/index.js     | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+☕2f23904🔪2016-07-13 14:32:47 -0400🔪Noah🔪{}🔪
+ src/projection/albersUsa.js | 2 +-
+ src/projection/index.js     | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕4d1b11b🔪2016-07-13 13:21:50 -0400🔪Noah🔪Adding to albersUsa🔪
+ src/projection/albersUsa.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕f935f32🔪2016-07-13 13:20:31 -0400🔪Noah🔪Separating out for composite projections🔪
+ src/projection/fit.js (new) | 24 ++++++++++++++++++++++++
+ src/projection/index.js     | 17 ++---------------
+ 2 files changed, 26 insertions(+), 15 deletions(-)
+
+☕504c8c2🔪2016-07-12 19:08:53 -0400🔪Noah🔪Basic tests🔪
+ test/projection/fit-test.js (new) | 152 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 152 insertions(+)
+
+☕43384a9🔪2016-07-12 14:35:53 -0400🔪Noah🔪Removing/renaming d3-array refs🔪
+ test/area-test.js   | 2 +-
+ test/bounds-test.js | 1 -
+ test/circle-test.js | 6 ++----
+ 3 files changed, 3 insertions(+), 6 deletions(-)
+
+☕92f7725🔪2016-07-12 14:23:20 -0400🔪Noah🔪Try to match style🔪
+ src/projection/index.js | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+
+☕0fea1ec🔪2016-07-12 14:12:42 -0400🔪Noah🔪Switching to .fit()🔪
+ src/projection/index.js | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+
+☕40ca4cb🔪2016-07-11 18:35:40 -0400🔪Noah🔪Default scale factor🔪
+ src/projection/index.js | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕ddd163b🔪2016-07-10 22:42:20 -0400🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9a195e9🔪2016-07-10 22:42:16 -0400🔪Mike Bostock🔪Update postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f14b988🔪2016-07-11 02:40:59 +0200🔪Christian Lagerkvist🔪Spelling of CavnasRenderingContext2D...🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7fbbfc0🔪2016-07-10 14:50:42 -0400🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕223b29d🔪2016-07-07 12:43:29 -0400🔪Mike Bostock🔪Update README.🔪
+ img/transverseMercator.png | Bin 67141 -> 67124 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕3feef7b🔪2016-07-07 12:42:11 -0400🔪Mike Bostock🔪Update README.🔪
+ img/conicConformal.png | Bin 91356 -> 92446 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕88489fa🔪2016-07-07 12:41:12 -0400🔪Mike Bostock🔪Use single default parallel for conic conformal.🔪
+ README.md                        | 2 +-
+ src/projection/conicConformal.js | 3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕e95c14e🔪2016-07-07 12:06:00 -0400🔪Mike Bostock🔪Fix #45 - better default scales.🔪
+ img/azimuthalEqualArea.png             | Bin 80049 -> 83938 bytes
+ img/azimuthalEquidistant.png           | Bin 68930 -> 71973 bytes
+ img/conicConformal.png                 | Bin 89856 -> 91356 bytes
+ img/conicEqualArea.png                 | Bin 93752 -> 96900 bytes
+ img/conicEquidistant.png               | Bin 92863 -> 95360 bytes
+ img/equirectangular.png                | Bin 36626 -> 41160 bytes
+ img/gnomonic.png                       | Bin 27360 -> 28292 bytes
+ img/orthographic.png                   | Bin 43797 -> 45643 bytes
+ img/stereographic.png                  | Bin 88321 -> 88210 bytes
+ img/transverseMercator.png             | Bin 65993 -> 67141 bytes
+ package.json                           |   1 +
+ src/projection/azimuthalEqualArea.js   |   2 +-
+ src/projection/azimuthalEquidistant.js |   4 +--
+ src/projection/conicConformal.js       |   3 ++-
+ src/projection/conicEqualArea.js       |   4 +--
+ src/projection/conicEquidistant.js     |   4 +--
+ src/projection/equirectangular.js      |   4 +--
+ src/projection/gnomonic.js             |   2 +-
+ src/projection/mercator.js             |   8 +++---
+ src/projection/orthographic.js         |   2 +-
+ src/projection/stereographic.js        |   2 +-
+ src/projection/transverseMercator.js   |   3 ++-
+ test/compute-scale (new +x)            |  47 +++++++++++++++++++++++++++++++++
+ test/render-us                         |   2 +-
+ test/render-world                      |  22 ++++++++++++---
+ 25 files changed, 89 insertions(+), 21 deletions(-)
+
+☕85162ed🔪2016-07-06 17:32:18 -0400🔪Noah🔪Adding contain function🔪
+ src/projection/index.js | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+☕16f901f🔪2016-07-04 10:25:38 -0400🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕3868735🔪2016-07-04 10:24:40 -0400🔪Mike Bostock🔪Update README.🔪
+ README.md | 50 +++++++++++++-------------------------------------
+ 1 file changed, 13 insertions(+), 37 deletions(-)
+
+☕e25d550🔪2016-06-30 14:26:32 -0700🔪Mike Bostock🔪Better error message.🔪
+ test/projection/projectionEqual.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cc588a9🔪2016-06-30 14:21:08 -0700🔪Mike Bostock🔪Add tests for d3.geoEquirectangular.🔪
+ test/projection/albersUsa-test.js             | 24 +++------
+ test/projection/equirectangular-test.js (new) | 76 +++++++++++++++++++++++++++
+ test/projection/projectionEqual.js (new)      | 34 ++++++++++++
+ 3 files changed, 117 insertions(+), 17 deletions(-)
+
+☕cdd7892🔪2016-06-30 07:36:05 -0700🔪Mike Bostock🔪Fix #44 - confusing comment.🔪
+ src/projection/albersUsa.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕970a2d6🔪2016-06-29 17:31:55 -0700🔪Mike Bostock🔪Create test/output.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7abfb2d🔪2016-06-29 17:31:17 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕508fc68🔪2016-06-29 17:28:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 54 ++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 34 insertions(+), 20 deletions(-)
+
+☕1fc70c0🔪2016-06-29 15:29:08 -0700🔪Mike Bostock🔪Fix #43. Expose raw projections.🔪
+ README.md                              | 66 +++++++++++++++++++++++++++++-----
+ index.js                               | 22 ++++++------
+ src/projection/azimuthal.js            |  2 +-
+ src/projection/azimuthalEqualArea.js   |  8 ++---
+ src/projection/azimuthalEquidistant.js |  8 ++---
+ src/projection/conicConformal.js       |  8 ++---
+ src/projection/conicEqualArea.js       |  4 +--
+ src/projection/conicEquidistant.js     |  8 ++---
+ src/projection/equirectangular.js      |  6 ++--
+ src/projection/gnomonic.js             |  6 ++--
+ src/projection/mercator.js             |  6 ++--
+ src/projection/orthographic.js         |  6 ++--
+ src/projection/stereographic.js        |  6 ++--
+ src/projection/transverseMercator.js   |  6 ++--
+ 14 files changed, 105 insertions(+), 57 deletions(-)
+
+☕e8907ee🔪2016-06-27 15:54:43 -0700🔪Mike Bostock🔪Include sphere in output.🔪
+ img/azimuthalEqualArea.png   | Bin 76834 -> 80049 bytes
+ img/azimuthalEquidistant.png | Bin 63615 -> 68930 bytes
+ img/conicConformal.png       | Bin 89875 -> 89856 bytes
+ img/conicEqualArea.png       | Bin 90837 -> 93752 bytes
+ img/conicEquidistant.png     | Bin 90852 -> 92863 bytes
+ img/equirectangular.png      | Bin 36556 -> 36626 bytes
+ img/gnomonic.png             | Bin 23837 -> 27360 bytes
+ img/orthographic.png         | Bin 43166 -> 43797 bytes
+ img/stereographic.png        | Bin 88064 -> 88321 bytes
+ img/transverseMercator.png   | Bin 65888 -> 65993 bytes
+ test/render-world            |   7 ++++++-
+ 11 files changed, 6 insertions(+), 1 deletion(-)
+
+☕a1b3417🔪2016-06-27 15:52:14 -0700🔪Mike Bostock🔪Move images.🔪
+ README.md                                     |  26 +++++++++++++-------------
+ {test/images => img}/albers.png               | Bin
+ {test/images => img}/albersUsa.png            | Bin
+ {test/images => img}/azimuthalEqualArea.png   | Bin
+ {test/images => img}/azimuthalEquidistant.png | Bin
+ {test/images => img}/conicConformal.png       | Bin
+ {test/images => img}/conicEqualArea.png       | Bin
+ {test/images => img}/conicEquidistant.png     | Bin
+ {test/images => img}/equirectangular.png      | Bin
+ {test/images => img}/gnomonic.png             | Bin
+ {test/images => img}/mercator.png             | Bin
+ {test/images => img}/orthographic.png         | Bin
+ {test/images => img}/stereographic.png        | Bin
+ {test/images => img}/transverseMercator.png   | Bin
+ test/compare-images                           |   8 ++++----
+ 15 files changed, 17 insertions(+), 17 deletions(-)
+
+☕b9f2300🔪2016-06-25 09:20:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 48 ++++++++++++++++++++++++------------------------
+ 1 file changed, 24 insertions(+), 24 deletions(-)
+
+☕356123f🔪2016-06-25 09:15:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++++++++----
+ 1 file changed, 16 insertions(+), 4 deletions(-)
+
+☕b181712🔪2016-06-25 09:13:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 66 ++++++++++++++++++++++++++++++---------------------------------
+ 1 file changed, 31 insertions(+), 35 deletions(-)
+
+☕d4253d5🔪2016-06-24 16:24:47 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7e676e7🔪2016-06-24 16:24:36 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕f643775🔪2016-06-24 16:22:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕011c32a🔪2016-06-24 16:22:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ffaa47e🔪2016-06-24 16:21:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aec65d7🔪2016-06-24 16:20:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8164042🔪2016-06-24 16:19:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5a285e3🔪2016-06-24 16:18:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 +++++++++++++++++---
+ 1 file changed, 17 insertions(+), 3 deletions(-)
+
+☕8eb0d87🔪2016-06-24 15:41:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 88 ++++++++++++++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 67 insertions(+), 21 deletions(-)
+
+☕2d6d831🔪2016-06-24 15:23:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 19 ++++++++++++++++---
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+
+☕7c73e72🔪2016-06-24 15:16:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 67 +++++++++++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 57 insertions(+), 10 deletions(-)
+
+☕2ac9f6e🔪2016-06-24 14:55:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8e6de2🔪2016-06-24 14:54:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕16f7304🔪2016-06-24 14:51:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dde560e🔪2016-06-24 14:49:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md               |  12 +++++++-----
+ img/graticule.png (new) | Bin 0 -> 69736 bytes
+ 2 files changed, 7 insertions(+), 5 deletions(-)
+
+☕6503d6b🔪2016-06-24 14:34:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕74aa0c5🔪2016-06-22 21:22:56 +0530🔪Curran Kelleher🔪Transforms -> Streams in API outline🔪To match the content.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ff8338e🔪2016-06-21 21:30:36 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b34009a🔪2016-06-21 21:29:54 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 6 +++---
+ package.json | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕793f005🔪2016-06-21 21:19:09 -0700🔪Mike Bostock🔪Let’s just stick with the word “stream”.🔪
+ README.md                   | 56 +++++++++++++++++++++--------------
+ src/area.js                 | 12 ++++----
+ src/bounds.js               | 32 ++++++++++----------
+ src/centroid.js             | 24 +++++++--------
+ src/circle.js               |  8 ++---
+ src/clip/antimeridian.js    | 56 +++++++++++++++++------------------
+ src/clip/circle.js          | 36 +++++++++++------------
+ src/clip/extent.js          | 72 ++++++++++++++++++++++-----------------------
+ src/clip/polygon.js         | 20 ++++++-------
+ src/length.js               | 12 ++++----
+ src/path/area.js            | 14 ++++-----
+ src/path/bounds.js          |  4 +--
+ src/path/centroid.js        | 24 +++++++--------
+ src/path/context.js         | 16 +++++-----
+ src/path/index.js           | 14 ++++-----
+ src/path/string.js          | 18 ++++++------
+ src/projection/albersUsa.js | 32 ++++++++++----------
+ src/projection/index.js     | 10 +++----
+ src/projection/resample.js  | 42 +++++++++++++-------------
+ src/stream.js               | 66 ++++++++++++++++++++---------------------
+ 20 files changed, 290 insertions(+), 278 deletions(-)
+
+☕72d4bf0🔪2016-06-21 21:00:33 -0700🔪Mike Bostock🔪Restore `this.stream`.🔪Reverts part of 01328c7e77349b9e9c4962b72ba96c4b372d421e for compatibility.
+
+ README.md                  |  2 +-
+ src/projection/index.js    |  2 +-
+ src/projection/resample.js |  2 +-
+ src/transform.js           | 16 ++++++++--------
+ 4 files changed, 11 insertions(+), 11 deletions(-)
+
+☕aaa4724🔪2016-06-21 16:43:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 138 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 134 insertions(+), 4 deletions(-)
+
+☕01328c7🔪2016-06-21 16:35:20 -0700🔪Mike Bostock🔪Transforms now implement projection.stream.🔪Also rename `this.stream` to `this.next` to avoid confusion.
+
+ README.md                  | 25 ++++++++++++++++++++++++-
+ src/projection/index.js    |  4 ++--
+ src/projection/resample.js | 31 +++++++++++++++----------------
+ src/transform.js           | 24 +++++++++++++++---------
+ 4 files changed, 56 insertions(+), 28 deletions(-)
+
+☕7c73089🔪2016-06-21 16:34:42 -0700🔪Mike Bostock🔪Rename “projectStream” to “projectionStream”. Rename “contextStream” to “contextSink”.🔪
+ src/path/index.js | 28 +++++++++++++---------------
+ 1 file changed, 13 insertions(+), 15 deletions(-)
+
+☕8540c1f🔪2016-06-21 16:23:38 -0700🔪Mike Bostock🔪Rename “stream” to “sink”.🔪
+ src/path/context.js | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕28e58e7🔪2016-06-20 10:28:30 -0700🔪Mike Bostock🔪Better default scale.🔪
+ src/projection/equirectangular.js |   3 ++-
+ test/images/equirectangular.png   | Bin 40598 -> 36556 bytes
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕bf71e64🔪2016-06-20 10:17:12 -0700🔪Mike Bostock🔪Move test output to test/output.🔪
+ .gitignore          | 1 +
+ test/compare-images | 8 ++++----
+ test/render-us      | 4 ++--
+ test/render-world   | 4 ++--
+ 4 files changed, 9 insertions(+), 8 deletions(-)
+
+☕8702444🔪2016-06-20 10:10:53 -0700🔪Mike Bostock🔪0.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7c34917🔪2016-06-20 10:08:52 -0700🔪Mike Bostock🔪Fix #39.🔪
+ src/projection/albersUsa.js             | 11 +++++++----
+ test/projection/albersUsa-test.js (new) | 25 +++++++++++++++++++++++++
+ 2 files changed, 32 insertions(+), 4 deletions(-)
+
+☕a0e3b8e🔪2016-06-20 09:24:32 -0700🔪Mike Bostock🔪Reduce default stereographic clip angle.🔪
+ src/projection/stereographic.js |   2 +-
+ test/images/stereographic.png   | Bin 87999 -> 88064 bytes
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+☕d3d9fc0🔪2016-06-19 14:19:34 -0700🔪Mike Bostock🔪Fix #34 - image-based tests.🔪
+ package.json                               |   2 +-
+ src/projection/conicEquidistant.js         |   4 +--
+ src/projection/gnomonic.js                 |   2 +-
+ test/compare-images (new +x)               |  26 +++++++++++++++++
+ test/data/us-10m.json (new)                |   1 +
+ test/images/albers.png (new)               | Bin 0 -> 107352 bytes
+ test/images/albersUsa.png (new)            | Bin 0 -> 111261 bytes
+ test/images/azimuthalEqualArea.png (new)   | Bin 0 -> 76834 bytes
+ test/images/azimuthalEquidistant.png (new) | Bin 0 -> 63615 bytes
+ test/images/conicConformal.png (new)       | Bin 0 -> 89875 bytes
+ test/images/conicEqualArea.png (new)       | Bin 0 -> 90837 bytes
+ test/images/conicEquidistant.png (new)     | Bin 0 -> 90852 bytes
+ test/images/equirectangular.png (new)      | Bin 0 -> 40598 bytes
+ test/images/gnomonic.png (new)             | Bin 0 -> 23837 bytes
+ test/images/mercator.png (new)             | Bin 0 -> 35508 bytes
+ test/images/stereographic.png (new)        | Bin 0 -> 87999 bytes
+ test/images/transverseMercator.png (new)   | Bin 0 -> 65888 bytes
+ test/render-reference                      |  25 +++++++++-------
+ test/render-us (new +x)                    |  45 +++++++++++++++++++++++++++++
+ test/{render-orthographic => render-world} |  12 +++++---
+ 20 files changed, 98 insertions(+), 19 deletions(-)
+
+☕a36f5ca🔪2016-06-19 09:42:38 -0700🔪Mike Bostock🔪0.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a13f18e🔪2016-06-19 08:58:29 -0700🔪Mike Bostock🔪Fix default precision.🔪I forgot that the projection precision is specified in area (square pixels), not
+angle (radians), since we use the Visvalingham metric. That also means we can’t
+use the projection precision for the generated clip circle.
+
+This commit introduces an image-based test to compare v4 and v3.
+
+ package.json                       |   2 ++
+ src/projection/index.js            |   8 ++++----
+ src/projection/resample.js         |   4 ++--
+ test/data/world-50m.json (new)     |   1 +
+ test/images/orthographic.png (new) | Bin 0 -> 43166 bytes
+ test/render-orthographic (new +x)  |  36 +++++++++++++++++++++++++++++++++++
+ test/render-reference (new +x)     |  38 +++++++++++++++++++++++++++++++++++++
+ 7 files changed, 83 insertions(+), 6 deletions(-)
+
+☕973961b🔪2016-06-18 22:11:20 -0700🔪Mike Bostock🔪Fix #38 - better defaults.🔪
+ src/projection/albers.js               | 7 ++++---
+ src/projection/azimuthalEqualArea.js   | 4 +++-
+ src/projection/azimuthalEquidistant.js | 6 ++++--
+ src/projection/conicEqualArea.js       | 4 +++-
+ src/projection/conicEquidistant.js     | 4 +++-
+ src/projection/gnomonic.js             | 4 +++-
+ src/projection/mercator.js             | 4 ++--
+ src/projection/orthographic.js         | 6 ++++--
+ src/projection/stereographic.js        | 4 +++-
+ 9 files changed, 29 insertions(+), 14 deletions(-)
+
+☕4a6d40a🔪2016-06-18 10:37:58 -0700🔪Mike Bostock🔪0.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d06cad2🔪2016-06-18 10:37:54 -0700🔪Mike Bostock🔪Prepare for patch release.🔪
+ README.md    | 2 +-
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕31d259d🔪2016-06-18 10:34:11 -0700🔪Mike Bostock🔪Add d3.geoAlbersUsa.🔪
+ index.js                          |  1 +
+ src/projection/albersUsa.js (new) | 85 +++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 86 insertions(+)
+
+☕43936c7🔪2016-06-18 10:16:26 -0700🔪Mike Bostock🔪Add d3.geoAlbers.🔪
+ index.js                       | 3 ++-
+ src/projection/albers.js (new) | 9 +++++++++
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+
+☕5260275🔪2016-06-18 10:11:39 -0700🔪Mike Bostock🔪Add d3.geoGnomonic.🔪
+ index.js                         |  1 +
+ src/projection/gnomonic.js (new) | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+)
+
+☕35bd566🔪2016-06-18 10:05:09 -0700🔪Mike Bostock🔪Add d3.geoConicEqualArea.🔪
+ index.js                               |  1 +
+ src/projection/conicEqualArea.js (new) | 25 +++++++++++++++++++++++++
+ 2 files changed, 26 insertions(+)
+
+☕b71096a🔪2016-06-18 09:59:52 -0700🔪Mike Bostock🔪Add d3.geoConicEquidistant.🔪
+ index.js                                 |  1 +
+ src/projection/conicEquidistant.js (new) | 27 +++++++++++++++++++++++++++
+ 2 files changed, 28 insertions(+)
+
+☕81340fd🔪2016-06-18 09:55:18 -0700🔪Mike Bostock🔪Add d3.geoConicConformal.🔪
+ index.js                               |  1 +
+ src/math.js                            |  2 ++
+ src/projection/conic.js (new)          | 15 +++++++++++++++
+ src/projection/conicConformal.js (new) | 33 +++++++++++++++++++++++++++++++++
+ src/projection/mercator.js             |  2 +-
+ 5 files changed, 52 insertions(+), 1 deletion(-)
+
+☕46aae36🔪2016-06-18 09:40:02 -0700🔪Mike Bostock🔪Add d3.geoAzimuthalEquidistant.🔪
+ index.js                                     |  1 +
+ src/projection/azimuthalEquidistant.js (new) | 15 +++++++++++++++
+ 2 files changed, 16 insertions(+)
+
+☕1bcebfc🔪2016-06-18 09:32:14 -0700🔪Mike Bostock🔪Add d3.geoAzimuthalEqualArea.🔪
+ index.js                                   |  1 +
+ src/projection/azimuthalEqualArea.js (new) | 15 +++++++++++++++
+ 2 files changed, 16 insertions(+)
+
+☕b774804🔪2016-06-18 09:22:37 -0700🔪Mike Bostock🔪Add d3.geoStereographic.🔪
+ index.js                              |  1 +
+ src/projection/stereographic.js (new) | 16 ++++++++++++++++
+ 2 files changed, 17 insertions(+)
+
+☕850554c🔪2016-06-18 09:09:56 -0700🔪Mike Bostock🔪Add d3.geoTransverseMercator.🔪
+ index.js                                   |  5 +++--
+ src/clip/extent.js                         |  3 ++-
+ src/projection/mercator.js                 |  4 ++--
+ src/projection/transverseMercator.js (new) | 26 ++++++++++++++++++++++++++
+ 4 files changed, 33 insertions(+), 5 deletions(-)
+
+☕220f3ac🔪2016-06-18 09:01:46 -0700🔪Mike Bostock🔪Automatic clipping for Mercator.🔪
+ src/clip/extent.js         |  7 +++----
+ src/projection/mercator.js | 32 ++++++++++++++++++++++++++++++--
+ 2 files changed, 33 insertions(+), 6 deletions(-)
+
+☕b121e32🔪2016-06-18 08:40:33 -0700🔪Mike Bostock🔪Use math.🔪
+ src/math.js                | 3 +++
+ src/projection/mercator.js | 6 +++---
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+☕d15b6a9🔪2016-06-18 12:19:20 +0530🔪Curran🔪Attempt to add mercator🔪
+ index.js                         |  1 +
+ src/projection/mercator.js (new) | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+)
+
+☕f2a7f48🔪2016-06-17 21:59:41 -0700🔪Mike Bostock🔪Add d3.geoClipExtent & projection.clipExtent.🔪
+ index.js                 |   1 +
+ src/clip/extent.js (new) | 187 +++++++++++++++++++++++++++++++++++++++++++++++
+ src/clip/line.js (new)   |  59 +++++++++++++++
+ src/projection/index.js  |  11 ++-
+ 4 files changed, 252 insertions(+), 6 deletions(-)
+
+☕ed0791e🔪2016-06-17 21:50:28 -0700🔪Mike Bostock🔪Variable-precision circle clipping.🔪Previously circle-clipping always used a fixed 6° precision for the clip circle.
+Now it inherits the projection’s precision.
+
+ src/circle.js              |   5 ++-
+ src/clip/circle.js         |   9 ++--
+ src/projection/index.js    |  61 ++++++++-----------------
+ src/projection/resample.js | 109 +++++++++++++++++++++------------------------
+ 4 files changed, 78 insertions(+), 106 deletions(-)
+
+☕d2a0a52🔪2016-06-17 20:39:56 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/clip/index.js | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕fe16b16🔪2016-06-17 20:34:21 -0700🔪Mike Bostock🔪Simplify.🔪
+ src/interpolate.js | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+
+☕acd872c🔪2016-06-17 20:28:37 -0700🔪Mike Bostock🔪Cleaner.🔪Note that sphericalEqual is also used to test planar equality!
+
+ src/bounds.js                                   |  3 +--
+ src/cartesian.js                                |  6 +++++-
+ src/circle.js                                   |  3 +--
+ src/{line-buffer.js => clip/buffer.js}          |  2 +-
+ src/clip/circle.js                              |  8 ++++----
+ src/clip/index.js                               | 12 ++++++------
+ src/clip/intersection.js (gone)                 |  8 --------
+ src/clip/polygon.js                             | 20 ++++++++++++++------
+ src/pointEqual.js (new)                         |  5 +++++
+ src/{polygon-contains.js => polygonContains.js} |  0
+ src/spherical.js (gone)                         |  9 ---------
+ 11 files changed, 37 insertions(+), 39 deletions(-)
+
+☕46bcd03🔪2016-06-17 20:14:18 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/clip/circle.js             |  8 ++++----
+ src/clip/intersection.js (new) |  8 ++++++++
+ src/clip/polygon.js            | 43 ++++++++++++++----------------------------
+ 3 files changed, 26 insertions(+), 33 deletions(-)
+
+☕0b55551🔪2016-06-17 12:27:05 -0700🔪Mike Bostock🔪Optimize d3.geoOrthographic.🔪
+ src/projection/azimuthal.js    | 13 ++++++-------
+ src/projection/orthographic.js | 10 +++++++---
+ 2 files changed, 13 insertions(+), 10 deletions(-)
+
+☕90d8c55🔪2016-06-17 12:19:19 -0700🔪Mike Bostock🔪Add d3.geoOrthographic, projection.clipAngle.🔪
+ index.js                             |   3 +-
+ src/circle.js                        |   2 +-
+ src/clip/circle.js (new)             | 182 +++++++++++++++++++++++++++++++++++
+ src/projection/azimuthal.js (new)    |  27 ++++++
+ src/projection/index.js              |  14 +--
+ src/projection/orthographic.js (new) |   9 ++
+ 6 files changed, 228 insertions(+), 9 deletions(-)
+
+☕68d62ff🔪2016-06-17 11:58:46 -0700🔪Mike Bostock🔪Fix #28 - expose d3.geoProjectionMutator.🔪
+ index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕889ad2f🔪2016-06-17 11:53:18 -0700🔪Mike Bostock🔪Tests for path.centroid.🔪
+ test/path/area-test.js           |   4 +-
+ test/path/bounds-test.js         |   4 +-
+ test/path/centroid-test.js (new) | 171 +++++++++++++++++++++++++++++++++++++++
+ test/path/index-test.js          |   4 +-
+ 4 files changed, 177 insertions(+), 6 deletions(-)
+
+☕b1ce968🔪2016-06-17 11:50:00 -0700🔪Mike Bostock🔪Tests for path.{area,bounds}.🔪
+ test/path/area-test.js (new)   | 36 ++++++++++++++++++++++++++++++++++++
+ test/path/bounds-test.js (new) | 36 ++++++++++++++++++++++++++++++++++++
+ 2 files changed, 72 insertions(+)
+
+☕a982950🔪2016-06-17 11:36:35 -0700🔪Mike Bostock🔪Initial tests for d3.geoPath.🔪
+ test/path/index-test.js (new)   | 176 ++++++++++++++++++++++++++++++++++++++++
+ test/path/test-context.js (new) |  10 +++
+ 2 files changed, 186 insertions(+)
+
+☕c3e78e5🔪2016-06-17 11:09:27 -0700🔪Mike Bostock🔪A little cleaner.🔪
+ src/polygon-contains.js | 60 ++++++++++++++++++++++---------------------------
+ 1 file changed, 27 insertions(+), 33 deletions(-)
+
+☕2eb8870🔪2016-06-17 11:05:19 -0700🔪Mike Bostock🔪Tests for point-in-polygon.🔪
+ test/polygon-contains-test.js (new) | 241 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 241 insertions(+)
+
+☕2d96e53🔪2016-06-17 10:15:43 -0700🔪Mike Bostock🔪Style.🔪
+ src/centroid.js | 75 ++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 34 insertions(+), 41 deletions(-)
+
+☕eb55042🔪2016-06-17 10:15:21 -0700🔪Mike Bostock🔪Style.🔪
+ src/length.js | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+☕3a49ab8🔪2016-06-17 10:08:35 -0700🔪Mike Bostock🔪Rename to avoid confusion.🔪
+ src/circle.js           | 4 ++--
+ src/projection/index.js | 4 ++--
+ src/rotation.js         | 5 ++---
+ 3 files changed, 6 insertions(+), 7 deletions(-)
+
+☕aea1d72🔪2016-06-17 10:08:14 -0700🔪Mike Bostock🔪Style.🔪
+ src/cartesian.js | 32 ++++++++------------------------
+ src/spherical.js |  5 +----
+ 2 files changed, 9 insertions(+), 28 deletions(-)
+
+☕c0bc0fb🔪2016-06-17 09:40:21 -0700🔪Mike Bostock🔪Organize files.🔪
+ index.js                                           |  6 +++---
+ src/{clip-antimeridian.js => clip/antimeridian.js} |  4 ++--
+ src/{clip.js => clip/index.js}                     |  8 ++++----
+ src/{clip-polygon.js => clip/polygon.js}           |  2 +-
+ src/{path-area.js => path/area.js}                 |  6 +++---
+ src/{path-bounds.js => path/bounds.js}             |  2 +-
+ src/{path-centroid.js => path/centroid.js}         |  2 +-
+ src/{path-context.js => path/context.js}           |  4 ++--
+ src/{path.js => path/index.js}                     | 14 +++++++-------
+ src/{path-string.js => path/string.js}             |  0
+ src/{ => projection}/equirectangular.js            |  2 +-
+ src/{projection.js => projection/index.js}         | 12 ++++++------
+ src/{ => projection}/resample.js                   |  6 +++---
+ 13 files changed, 34 insertions(+), 34 deletions(-)
+
+☕bdcd817🔪2016-06-16 21:07:09 -0700🔪Mike Bostock🔪Remove obsolete comment.🔪
+ src/path.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕48a3251🔪2016-06-16 20:57:32 -0700🔪Mike Bostock🔪Simpler caching of sinks.🔪
+ src/path.js       | 15 ++++-----------
+ src/projection.js | 12 +++++-------
+ 2 files changed, 9 insertions(+), 18 deletions(-)
+
+☕283d8e7🔪2016-06-16 16:50:50 -0700🔪Mike Bostock🔪Rename a few things.🔪Rename path-buffer to path-string.
+Rename clip-buffer to line-buffer.
+
+ src/clip.js                            |  6 ++--
+ src/{clip-buffer.js => line-buffer.js} |  0
+ src/path-buffer.js (gone)              | 59 --------------------------------
+ src/path-string.js (new)               | 62 ++++++++++++++++++++++++++++++++++
+ src/path.js                            |  4 +--
+ 5 files changed, 67 insertions(+), 64 deletions(-)
+
+☕501473f🔪2016-06-16 16:38:57 -0700🔪Mike Bostock🔪Add d3.geoProjection.🔪Related #27. I haven’t yet ported clipExtent or clipAngle.
+
+ README.md                      |   2 +-
+ index.js                       |   2 +
+ src/clip-antimeridian.js (new) |  92 ++++++++++++++++++++++++++++
+ src/clip-buffer.js (new)       |  24 ++++++++
+ src/clip-polygon.js (new)      | 108 +++++++++++++++++++++++++++++++++
+ src/clip.js (new)              | 135 +++++++++++++++++++++++++++++++++++++++++
+ src/equirectangular.js (new)   |  11 ++++
+ src/math.js                    |   1 +
+ src/polygon-contains.js (new)  |  74 ++++++++++++++++++++++
+ src/projection.js (new)        | 123 +++++++++++++++++++++++++++++++++++++
+ src/rotation.js                |   1 +
+ 11 files changed, 572 insertions(+), 1 deletion(-)
+
+☕35719a4🔪2016-06-16 15:27:20 -0700🔪Mike Bostock🔪Fix #29 - implement path.centroid.🔪
+ src/path-centroid.js (new) | 100 +++++++++++++++++++++++++++++++++++++++++++++
+ src/path.js                |  10 +++--
+ 2 files changed, 107 insertions(+), 3 deletions(-)
+
+☕db83a11🔪2016-06-16 15:16:02 -0700🔪Mike Bostock🔪Implement path.{area,bounds}.🔪Related #29.
+
+ src/path-area.js (new)   | 50 ++++++++++++++++++++++++++++++++++++++++++++++++
+ src/path-bounds.js (new) | 28 +++++++++++++++++++++++++++
+ src/path.js              | 14 ++++++++++++--
+ 3 files changed, 90 insertions(+), 2 deletions(-)
+
+☕fe09aed🔪2016-06-16 14:08:45 -0700🔪Mike Bostock🔪Fix #32 - add d3.geoTransform.🔪The new implementation is faster: rather than each method being implemented as a
+closure, it defines a factory method for creating transform instances.
+
+This also removes d3.geoPath’s fallback projection stream when path.projection
+is passed a function rather than something that exposes a stream method. If you
+want a projection that uses resampling, use d3.geoProjection.
+
+ index.js         |  1 +
+ src/path.js      | 10 +---------
+ src/resample.js  | 17 ++++++++---------
+ src/transform.js | 33 ++++++++++++++++++---------------
+ 4 files changed, 28 insertions(+), 33 deletions(-)
+
+☕a873752🔪2016-06-16 12:18:24 -0700🔪Mike Bostock🔪Add d3.geoPath.🔪Related #29.
+
+ index.js                  |   3 +-
+ src/identity.js (new)     |   3 ++
+ src/path-buffer.js (new)  |  59 +++++++++++++++++++++++++
+ src/path-context.js (new) |  49 +++++++++++++++++++++
+ src/path.js (new)         |  61 ++++++++++++++++++++++++++
+ src/resample.js (new)     | 109 ++++++++++++++++++++++++++++++++++++++++++++++
+ src/transform.js (new)    |  18 ++++++++
+ 7 files changed, 301 insertions(+), 1 deletion(-)
+
+☕24256a8🔪2016-06-16 11:18:00 -0700🔪Mike Bostock🔪Remove unused export.🔪
+ src/area.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a4babbd🔪2016-06-16 11:16:32 -0700🔪Mike Bostock🔪One fewer closure.🔪
+ src/length.js | 58 ++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 30 insertions(+), 28 deletions(-)
+
+☕0448492🔪2016-06-16 11:15:02 -0700🔪Mike Bostock🔪One fewer closure.🔪
+ src/area.js     |   4 +-
+ src/centroid.js | 138 ++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 72 insertions(+), 70 deletions(-)
+
+☕3ac0d4e🔪2016-06-16 11:09:28 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/bounds.js | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕e24c5f2🔪2016-06-16 11:03:46 -0700🔪Mike Bostock🔪One fewer closure.🔪
+ src/area.js | 69 ++++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 36 insertions(+), 33 deletions(-)
+
+☕7065e6c🔪2016-06-16 10:03:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕a92c0b2🔪2016-06-16 09:50:39 -0700🔪Mike Bostock🔪Checkpoint bounds.🔪
+ src/bounds.js (new) | 172 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 172 insertions(+)
+
+☕4771347🔪2016-06-16 09:45:18 -0700🔪Mike Bostock🔪Rename stream “listener” to “sink”.🔪
+ README.md          | 36 ++++++++++++++---------------
+ src/area.js        | 17 +++++++-------
+ src/centroid.js    | 24 ++++++++++----------
+ src/circle.js      |  8 +++----
+ src/interpolate.js |  2 +-
+ src/length.js      | 24 +++++++++++---------
+ src/stream.js      | 66 +++++++++++++++++++++++++++---------------------------
+ 7 files changed, 90 insertions(+), 87 deletions(-)
+
+☕13b03c7🔪2016-06-16 09:30:51 -0700🔪Mike Bostock🔪Use double-precision adder for area sum, too.🔪
+ src/area.js | 19 ++++++++++---------
+ src/math.js |  1 -
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕b801601🔪2016-06-16 12:30:34 -0400🔪Chris Uehlinger🔪Copy bounds documentation from d3 wiki🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e098ff8🔪2016-06-02 21:38:32 -0400🔪Chris Uehlinger🔪Expose area and areaRingSum from geoArea module🔪
+ src/area.js | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕2b0ef19🔪2016-06-02 21:38:50 -0400🔪Chris Uehlinger🔪Copy over bounds implementation from d3🔪
+ index.js            |   1 +
+ src/bounds.js (new) | 168 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 169 insertions(+)
+
+☕b71b478🔪2016-06-02 21:37:43 -0400🔪Chris Uehlinger🔪Copy over bounds tests from d3🔪
+ test/bounds-test.js (new) | 307 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 307 insertions(+)
+
+☕3360fcb🔪2016-06-16 09:19:55 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/adder.js | 6 +++++-
+ src/area.js  | 4 ++--
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+☕fdbb1e5🔪2016-06-16 09:18:48 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/area.js | 20 +++++++++++---------
+ 1 file changed, 11 insertions(+), 9 deletions(-)
+
+☕ba664a6🔪2016-06-16 09:17:19 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/centroid.js | 36 +++++++++++++++++-------------------
+ src/math.js     |  3 +++
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+
+☕a3ceb6e🔪2016-06-16 09:16:14 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/graticule.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕4a8f752🔪2016-06-16 09:15:50 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/adder.js | 29 +++++++++++++++--------------
+ 1 file changed, 15 insertions(+), 14 deletions(-)
+
+☕567fa77🔪2016-06-16 09:04:00 -0700🔪Mike Bostock🔪Move Adder to a separate file.🔪
+ LICENSE               | 21 +++++++++++++++++++++
+ src/adder.js (new)    | 35 +++++++++++++++++++++++++++++++++++
+ src/area.js           |  6 +++---
+ src/math.js           | 36 +-----------------------------------
+ test/area-test.js     |  3 +--
+ test/centroid-test.js |  2 +-
+ 6 files changed, 62 insertions(+), 41 deletions(-)
+
+☕d5e7b88🔪2016-06-14 09:24:49 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕7a0f599🔪2016-05-26 00:31:44 -0400🔪Chris Uehlinger🔪Copy over centroid documentation from d3 Wiki🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2ed7652🔪2016-06-12 21:41:03 -0400🔪Chris Uehlinger🔪Fix mistake in acos implementation🔪
+ src/math.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3a00bf3🔪2016-05-26 00:29:00 -0400🔪Chris Uehlinger🔪Copy over centroid implementation from d3🔪
+ index.js              |   1 +
+ src/centroid.js (new) | 148 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 149 insertions(+)
+
+☕bb0a01b🔪2016-05-26 01:16:54 -0400🔪Chris Uehlinger🔪Copy over area documentation from d3 Wiki🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0b0205b🔪2016-05-26 01:08:46 -0400🔪Chris Uehlinger🔪Copy over area implementation from d3🔪
+ index.js          |  1 +
+ src/area.js (new) | 68 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/math.js       | 35 ++++++++++++++++++++++++++++
+ 3 files changed, 104 insertions(+)
+
+☕1616477🔪2016-05-25 22:57:17 -0400🔪Chris Uehlinger🔪Copy over centroid tests from d3🔪
+ test/centroid-test.js (new) | 212 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 212 insertions(+)
+
+☕8bda749🔪2016-05-26 00:57:19 -0400🔪Chris Uehlinger🔪Copy over area tests from d3🔪
+ test/area-test.js (new) | 237 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 237 insertions(+)
+
+☕41fa671🔪2016-06-09 10:41:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b5fee75🔪2016-06-09 10:33:59 -0700🔪Mike Bostock🔪Fix #22 - dynamic radius and precision.🔪
+ README.md           | 24 ++++++++++++-----
+ src/circle.js       | 74 ++++++++++++++++++++++++++---------------------------
+ test/circle-test.js |  6 ++---
+ 3 files changed, 57 insertions(+), 47 deletions(-)
+
+☕867d99f🔪2016-06-07 21:08:27 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 18 +++++++++---------
+ 3 files changed, 12 insertions(+), 13 deletions(-)
+
+☕bc72798🔪2016-06-05 14:29:40 -0400🔪Chris Uehlinger🔪Copy over circle documentation from d3 wiki🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕ee367a3🔪2016-06-02 20:57:53 -0400🔪Chris Uehlinger🔪Copy over circle implementation from d3🔪
+ index.js               |  1 +
+ src/cartesian.js (new) | 47 +++++++++++++++++++++++++++++
+ src/circle.js (new)    | 81 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/math.js            |  3 ++
+ src/rotation.js        |  2 +-
+ src/spherical.js (new) | 10 +++++++
+ 6 files changed, 143 insertions(+), 1 deletion(-)
+
+☕833a5a6🔪2016-06-02 20:57:09 -0400🔪Chris Uehlinger🔪Copy over circle tests from d3🔪
+ test/circle-test.js (new) | 34 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+
+☕1fe3b4c🔪2016-06-07 15:23:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕f3f69d2🔪2016-06-07 15:16:35 -0700🔪Mike Bostock🔪Keep “rotation” as prefix.🔪
+ src/rotation.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕22a0155🔪2016-06-07 15:11:41 -0700🔪Mike Bostock🔪Extract Math symbols.🔪
+ src/interpolate.js | 36 ++++++++++++++++++------------------
+ src/length.js      | 22 +++++++++++-----------
+ src/math.js        | 20 +++++++++++++++++---
+ src/rotation.js    | 48 ++++++++++++++++++++++++------------------------
+ 4 files changed, 70 insertions(+), 56 deletions(-)
+
+☕de5991e🔪2016-06-07 14:54:11 -0700🔪Mike Bostock🔪Keep using test._assert.🔪
+ test/inDelta.js | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕27f723d🔪2016-06-06 22:03:29 -0400🔪Chris Uehlinger🔪Rewrite interpolate test to make use of inDelta for arrays🔪
+ test/interpolate-test.js | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕8092bce🔪2016-06-06 22:03:00 -0400🔪Chris Uehlinger🔪Rewrite inDelta to properly handle arrays🔪
+ test/inDelta.js | 22 ++++++++++++++++------
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+
+☕87ccf1a🔪2016-06-03 16:26:52 -0700🔪Mike Bostock🔪Better test names.🔪
+ test/graticule-test.js | 67 +++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 44 insertions(+), 23 deletions(-)
+
+☕7f7cc54🔪2016-06-03 16:24:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md    | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕eac82b3🔪2016-06-01 16:13:28 -0700🔪Mike Bostock🔪Style.🔪
+ test/distance-test.js    |  8 ++++----
+ test/interpolate-test.js | 10 +++++-----
+ test/length-test.js      | 34 +++++++++++++++++++++++-----------
+ test/stream-test.js      |  2 +-
+ 4 files changed, 33 insertions(+), 21 deletions(-)
+
+☕bcef5a3🔪2016-06-01 16:06:53 -0700🔪Mike Bostock🔪Use geoLength to implement geoDistance.🔪
+ src/distance.js | 18 +++++++-----------
+ src/length.js   |  4 ++--
+ 2 files changed, 9 insertions(+), 13 deletions(-)
+
+☕7cb85de🔪2016-05-26 17:22:42 -0400🔪Chris Uehlinger🔪Copy over interpolation documentation from d3 Wiki🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f87c3c9🔪2016-05-23 19:48:09 -0400🔪Chris Uehlinger🔪Copy over interpolation implementation from d3🔪
+ index.js                 |  1 +
+ src/interpolate.js (new) | 38 ++++++++++++++++++++++++++++++++++++++
+ src/math.js              |  4 ++++
+ 3 files changed, 43 insertions(+)
+
+☕9e62f70🔪2016-05-26 17:20:15 -0400🔪Chris Uehlinger🔪Styling tweaks🔪
+ src/distance.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕4e3fcea🔪2016-05-26 01:49:03 -0400🔪Chris Uehlinger🔪Copy over rotation documentation from d3 Wiki🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕ce200b8🔪2016-05-26 01:46:40 -0400🔪Chris Uehlinger🔪Copy over rotation implementation from d3🔪
+ index.js              |  1 +
+ src/compose.js (new)  | 12 ++++++++
+ src/rotation.js (new) | 77 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 90 insertions(+)
+
+☕3bb2635🔪2016-05-26 01:26:45 -0400🔪Chris Uehlinger🔪Copy over rotation tests from d3🔪
+ test/rotation-test.js (new) | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+
+☕30e245f🔪2016-05-25 22:25:35 -0400🔪Chris Uehlinger🔪Copy over graticule documentation from d3 Wiki🔪
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕3f8210c🔪2016-05-25 22:29:12 -0400🔪Chris Uehlinger🔪Rename extent and step methods🔪
+ src/graticule.js       | 20 +++++++--------
+ test/graticule-test.js | 70 +++++++++++++++++++++++++-------------------------
+ 2 files changed, 45 insertions(+), 45 deletions(-)
+
+☕9d25d59🔪2016-05-25 22:18:43 -0400🔪Chris Uehlinger🔪Copy over graticule implementation from d3🔪
+ index.js               |   1 +
+ src/graticule.js (new) | 100 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 101 insertions(+)
+
+☕f2df85d🔪2016-05-25 22:11:39 -0400🔪Chris Uehlinger🔪Copy over graticule tests from d3🔪
+ test/graticule-test.js (new) | 175 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 175 insertions(+)
+
+☕af1917d🔪2016-05-25 22:08:25 -0400🔪Chris Uehlinger🔪Add d3-array as a dependency🔪
+ package.json | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕aa02d71🔪2016-05-23 19:33:01 -0400🔪Chris Uehlinger🔪Copy over interpolation tests from d3🔪
+ test/interpolate-test.js (new) | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+☕b966fd0🔪2016-05-25 21:21:03 -0400🔪Chris Uehlinger🔪Copy over distance documentation from d3 Wiki🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a1f898f🔪2016-05-23 19:17:09 -0400🔪Chris Uehlinger🔪Copy over distance implementation from d3🔪
+ index.js              |  1 +
+ src/distance.js (new) | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+)
+
+☕eecfc7e🔪2016-05-23 19:08:18 -0400🔪Chris Uehlinger🔪Copy over distance tests from d3🔪
+ test/distance-test.js (new) | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+☕78b6d71🔪2016-05-26 13:01:39 -0700🔪Mike Bostock🔪Style improvements.🔪
+ src/length.js | 33 ++++++++++++++++++++-------------
+ 1 file changed, 20 insertions(+), 13 deletions(-)
+
+☕79e03fb🔪2016-05-26 00:39:18 -0400🔪Chris Uehlinger🔪Add delta argument to inDelta function🔪
+ test/inDelta.js | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕f54b175🔪2016-05-26 00:37:37 -0400🔪Chris Uehlinger🔪Remove blank line from README🔪
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕7fe9590🔪2016-05-26 00:37:24 -0400🔪Chris Uehlinger🔪Break out noop into its own file🔪
+ src/length.js           | 2 +-
+ src/noop.js (new)       | 1 +
+ src/utilities.js (gone) | 1 -
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+☕a4252bd🔪2016-05-26 00:34:40 -0400🔪Chris Uehlinger🔪Alphabetize exports🔪
+ index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a1842b8🔪2016-05-25 21:17:51 -0400🔪Chris Uehlinger🔪Add back the d3.geoLength docs🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e813bf5🔪2016-05-25 21:14:24 -0400🔪Chris Uehlinger🔪Copy inDelta implementation used in d3-shape🔪
+ test/inDelta.js     | 15 ++++++++++-----
+ test/length-test.js | 31 ++++++++++++++++---------------
+ 2 files changed, 26 insertions(+), 20 deletions(-)
+
+☕acdb4e4🔪2016-05-25 21:09:07 -0400🔪Chris Uehlinger🔪Break out noop into its own file🔪
+ src/length.js          | 3 +--
+ src/utilities.js (new) | 1 +
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕4396908🔪2016-05-25 21:08:13 -0400🔪Chris Uehlinger🔪Style tweaks🔪
+ .eslintrc     | 1 -
+ src/length.js | 2 +-
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+☕33eb2b7🔪2016-05-24 22:01:13 -0700🔪Mike Bostock🔪Scaffold API reference.🔪
+ README.md | 116 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 105 insertions(+), 11 deletions(-)
+
+☕336dc9a🔪2016-05-23 20:06:10 -0400🔪Chris Uehlinger🔪Fix bug in stream documentation🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕b29197e🔪2016-05-23 20:05:40 -0400🔪Chris Uehlinger🔪Copy over length documentation from d3🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕29ec7ac🔪2016-05-23 19:59:09 -0400🔪Chris Uehlinger🔪Style tweaks🔪
+ .eslintrc           |  1 +
+ index.js            |  2 +-
+ src/length.js       |  8 +++++---
+ src/math.js         |  2 +-
+ test/inDelta.js     |  2 +-
+ test/length-test.js | 44 ++++++++++++++++++++++----------------------
+ 6 files changed, 31 insertions(+), 28 deletions(-)
+
+☕78e108b🔪2016-05-23 18:34:45 -0400🔪Chris Uehlinger🔪Copy over length implementation from d3🔪
+ index.js            |  1 +
+ src/length.js (new) | 43 +++++++++++++++++++++++++++++++++++++++++++
+ src/math.js (new)   |  2 ++
+ test/inDelta.js     |  4 ++--
+ 4 files changed, 48 insertions(+), 2 deletions(-)
+
+☕86c8414🔪2016-05-23 18:20:55 -0400🔪Chris Uehlinger🔪Copy over length tests from d3🔪
+ test/inDelta.js (new)     |  5 +++++
+ test/length-test.js (new) | 48 +++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 53 insertions(+)
+
+☕c98346e🔪2016-05-23 16:42:29 -0700🔪Mike Bostock🔪Style tweaks.🔪
+ index.js            |   2 +-
+ src/stream.js       |  24 ++---
+ test/stream-test.js | 289 +++++++++++++++++++++++++---------------------------
+ 3 files changed, 151 insertions(+), 164 deletions(-)
+
+☕efc7b7d🔪2016-05-23 18:36:08 -0400🔪Chris Uehlinger🔪Clean up indentation and naming🔪
+ src/stream.js       |  58 ++++----
+ test/stream-test.js | 372 ++++++++++++++++++++++++++--------------------------
+ 2 files changed, 215 insertions(+), 215 deletions(-)
+
+☕5da030c🔪2016-05-23 17:41:23 -0400🔪Chris Uehlinger🔪Fix broken stream test🔪
+ test/stream-test.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6334797🔪2016-05-23 17:39:58 -0400🔪Chris Uehlinger🔪Fix linting error🔪
+ src/stream.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ab474ef🔪2016-05-11 23:39:13 -0400🔪Chris Uehlinger🔪Copy over stream documentation from d3🔪
+ README.md | 54 +++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 53 insertions(+), 1 deletion(-)
+
+☕d4f2100🔪2016-05-11 23:32:17 -0400🔪Chris Uehlinger🔪Copy over stream implementation from d3🔪
+ index.js            |  1 +
+ src/stream.js (new) | 69 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 70 insertions(+)
+
+☕9e6b74c🔪2016-05-11 23:31:58 -0400🔪Chris Uehlinger🔪Copy over geometry related tests from d3🔪
+ test/stream-test.js | 197 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 196 insertions(+), 1 deletion(-)
+
+☕1d90de5🔪2016-05-11 22:58:52 -0400🔪Chris Uehlinger🔪Copy over initial stream tests from d3🔪
+ test/stream-test.js (new) | 43 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 43 insertions(+)
+
+☕ab4e4cf🔪2016-05-18 09:53:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c05436b🔪2016-05-14 21:20:27 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕3617ab5🔪2016-05-02 11:27:33 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕49161cb🔪2016-05-02 11:27:19 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)              | 13 +++++++++++++
+ .gitignore (new)             |  5 +++++
+ .npmignore (new)             |  3 +++
+ LICENSE (new)                | 27 +++++++++++++++++++++++++++
+ README.md (new)              | 24 ++++++++++++++++++++++++
+ d3-geo.sublime-project (new) | 13 +++++++++++++
+ index.js (new)               |  1 +
+ package.json (new)           | 35 +++++++++++++++++++++++++++++++++++
+ 8 files changed, 121 insertions(+)

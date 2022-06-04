@@ -1,0 +1,254 @@
+☕20a0b61🔪2021-06-05 11:34:11 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8046c22🔪2021-06-05 11:34:08 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕f9c8451🔪2021-06-05 11:33:59 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕8a165f1🔪2021-06-04 10:33:08 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ccf792d🔪2021-06-04 19:32:39 +0200🔪Philippe Rivière🔪Adopt type=module (#43)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* format links to source
+
+* es6 and browser rather than no-undef
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* tweak eslintrc
+
+* typeof test
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    4 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   61 +-
+ d3-fetch.sublime-project (gone)     |   17 -
+ package.json                        |   49 +-
+ test/.eslintrc.json (new)           |   12 +
+ test/export-test.js (new)           |   16 +
+ yarn.lock                           | 1488 +++++++++++++++++++----------------
+ 10 files changed, 967 insertions(+), 768 deletions(-)
+
+☕15effa5🔪2020-08-23 17:53:34 +0200🔪Philippe Rivière🔪d3 dependency🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕fefbe0a🔪2020-08-23 17:52:16 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕3cf6386🔪2020-07-27 16:39:06 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕e037f21🔪2020-07-27 16:38:09 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕727dc29🔪2020-07-10 18:10:36 +0200🔪Philippe Rivière🔪link to v2🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3dc2b2c🔪2020-06-04 09:48:43 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/xml.js | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕2ea23c2🔪2020-06-03 08:36:47 -0700🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕321719b🔪2019-09-27 10:14:47 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕96e0576🔪2018-03-26 10:42:05 -0700🔪Mike Bostock🔪Return undefined.🔪
+ README.md   | 2 +-
+ src/json.js | 4 +---
+ 2 files changed, 2 insertions(+), 4 deletions(-)
+
+☕82e4a65🔪2018-03-25 12:36:29 +0200🔪Jeremy Stucki🔪Handle empty responses in `json`🔪
+ src/json.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕247a2b0🔪2019-08-09 17:38:03 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 885 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 522 insertions(+), 369 deletions(-)
+
+☕6cc595a🔪2019-08-09 16:04:49 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕271151b🔪2019-08-09 15:19:48 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/dsv.js   |  2 +-
+ src/index.js | 14 +++++++-------
+ src/xml.js   |  2 +-
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+
+☕00ca83f🔪2018-08-24 14:25:22 -0700🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕01203ab🔪2018-08-24 14:25:20 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2b983a0🔪2018-08-24 14:01:57 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕34e4c5e🔪2018-08-24 13:50:04 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 7 -------
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 7 +++++++
+ 4 files changed, 15 insertions(+), 14 deletions(-)
+
+☕bd14f9b🔪2018-08-24 12:06:39 -0700🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕755adf4🔪2018-08-24 12:06:37 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   5 -
+ .eslintrc.json (new)     |  15 +
+ .npmignore               |   1 +
+ d3-fetch.sublime-project |  16 +-
+ package.json             |  22 +-
+ rollup.config.js         |  42 ++-
+ yarn.lock (new)          | 951 +++++++++++++++++++++++++++++++++++++++++++++++
+ 7 files changed, 1020 insertions(+), 32 deletions(-)
+
+☕daaae61🔪2018-02-26 11:24:16 -0800🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕92545fc🔪2018-02-26 11:23:49 -0800🔪Mike Bostock🔪Add html, svg, xml.🔪Fixes #14.
+
+ README.md        | 12 ++++++++++++
+ index.js         |  1 +
+ src/xml.js (new) | 15 +++++++++++++++
+ 3 files changed, 28 insertions(+)
+
+☕d4bfe27🔪2018-01-29 08:54:41 -0500🔪David Bruant🔪Fixing typo in readme🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕90769c2🔪2018-01-28 19:09:59 -0800🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3edfc48🔪2018-01-28 19:09:35 -0800🔪Mike Bostock🔪Fix #7 - check response.ok.🔪
+ src/blob.js   | 1 +
+ src/buffer.js | 1 +
+ src/json.js   | 1 +
+ src/text.js   | 1 +
+ 4 files changed, 4 insertions(+)
+
+☕e8a6f07🔪2018-01-28 18:55:22 -0800🔪Mike Bostock🔪Update README. Related #6.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕1aa1f92🔪2018-01-28 09:51:40 -0800🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fda01a5🔪2018-01-28 09:51:32 -0800🔪Mike Bostock🔪Prepare for release.🔪
+ README.md    | 14 ++++++--------
+ package.json |  4 ++--
+ 2 files changed, 8 insertions(+), 10 deletions(-)
+
+☕3a4bd58🔪2018-01-28 09:44:04 -0800🔪Mike Bostock🔪Pass additional arguments to fetch.🔪Fixes #3. Also adds d3.dsv; fixes #4.
+
+ README.md         | 49 ++++++++++++++++++++++++-------------------------
+ index.js          |  3 +--
+ src/blob.js       |  4 ++--
+ src/buffer.js     |  4 ++--
+ src/csv.js (gone) |  8 --------
+ src/dsv.js (new)  | 22 ++++++++++++++++++++++
+ src/json.js       |  4 ++--
+ src/text.js       |  4 ++--
+ src/tsv.js (gone) |  8 --------
+ 9 files changed, 55 insertions(+), 51 deletions(-)
+
+☕fcc26ec🔪2018-01-28 09:35:16 -0800🔪Mike Bostock🔪Fix #5 - d3.image(input[, init]).🔪
+ README.md    | 10 ++++++++--
+ src/image.js |  6 +++---
+ 2 files changed, 11 insertions(+), 5 deletions(-)
+
+☕178849b🔪2017-11-28 14:06:36 -0800🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕58a92b0🔪2017-11-28 14:06:17 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ package.json           | 14 +++++++-------
+ rollup.config.js (new) | 14 ++++++++++++++
+ 2 files changed, 21 insertions(+), 7 deletions(-)
+
+☕5d30f1d🔪2017-11-28 14:01:51 -0800🔪Mike Bostock🔪Add blob, buffer.🔪
+ README.md           | 8 ++++++++
+ index.js            | 2 ++
+ src/blob.js (new)   | 7 +++++++
+ src/buffer.js (new) | 7 +++++++
+ 4 files changed, 24 insertions(+)
+
+☕c36c256🔪2017-11-28 14:01:32 -0800🔪Mike Bostock🔪Use response.json.🔪
+ src/json.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕b15effc🔪2016-10-24 14:44:35 -0700🔪Mike Bostock🔪0.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1bcffc3🔪2016-10-24 14:44:24 -0700🔪Mike Bostock🔪Add d3.image. Related d3/d3-request#11.🔪
+ README.md          | 4 ++++
+ index.js           | 3 ++-
+ src/image.js (new) | 9 +++++++++
+ 3 files changed, 15 insertions(+), 1 deletion(-)
+
+☕511a3ec🔪2016-10-22 08:26:03 -0700🔪Mike Bostock🔪Add source links.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕634bc85🔪2016-10-22 08:24:12 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b7f5e3f🔪2016-10-22 08:23:29 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)                |  5 +++
+ .gitignore (new)               |  5 +++
+ .npmignore (new)               |  3 ++
+ LICENSE (new)                  | 27 +++++++++++++++
+ README.md (new)                | 77 ++++++++++++++++++++++++++++++++++++++++++
+ d3-fetch.sublime-project (new) | 13 +++++++
+ index.js (new)                 |  4 +++
+ package.json (new)             | 40 ++++++++++++++++++++++
+ src/csv.js (new)               |  8 +++++
+ src/json.js (new)              |  7 ++++
+ src/text.js (new)              |  7 ++++
+ src/tsv.js (new)               |  8 +++++
+ 12 files changed, 204 insertions(+)

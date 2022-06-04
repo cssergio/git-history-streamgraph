@@ -1,0 +1,366 @@
+☕be52ab2🔪2021-06-05 11:39:40 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕65b2beb🔪2021-06-05 11:39:37 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕1090610🔪2021-06-05 11:39:28 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕cffec84🔪2021-06-03 21:08:45 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8050da0🔪2021-06-04 06:06:10 +0200🔪Philippe Rivière🔪Adopt type=module (#31)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* remove Sublime project
+
+* update dependencies
+
+* update dependencies
+
+* Update README
+
+* cleaner imports
+
+* add eslint.json
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    8 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   26 +-
+ d3-polygon.sublime-project (gone)   |   17 -
+ package.json                        |   45 +-
+ test/.eslintrc.json (new)           |   10 +
+ test/area-test.js                   |   48 +-
+ test/centroid-test.js               |   48 +-
+ test/contains-test.js               |   36 +-
+ test/hull-test.js                   |   39 +-
+ test/length-test.js                 |   28 +-
+ yarn.lock                           | 1463 +++++++++++++++++++----------------
+ 14 files changed, 998 insertions(+), 858 deletions(-)
+
+☕4bb4493🔪2020-08-19 10:36:22 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕f632238🔪2020-07-27 11:53:05 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕6bd5405🔪2020-07-10 21:27:31 +0200🔪Philippe Rivière🔪link to v2🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf977c2🔪2020-06-05 11:44:53 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/hull.js   | 8 ++++----
+ src/length.js | 2 +-
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕eff19e3🔪2020-05-14 02:02:20 +0200🔪Kay Plößer🔪fix test description🔪
+ test/centroid-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8a6d0e2🔪2019-11-16 10:57:39 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕553feb7🔪2019-11-16 10:57:23 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕0cd7431🔪2019-09-27 10:02:11 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕dd34373🔪2019-11-02 08:23:19 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕0c8929b🔪2019-08-09 16:24:44 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 875 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 518 insertions(+), 363 deletions(-)
+
+☕b3f6c76🔪2019-08-09 15:57:27 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕ff15f88🔪2019-08-09 15:33:45 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/hull.js  |  2 +-
+ src/index.js | 10 +++++-----
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+☕f07eca2🔪2019-01-15 18:50:46 +0400🔪David  Bumbeishvili🔪Remove dead link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0805786🔪2018-08-24 14:17:39 -0700🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7b3b77🔪2018-08-24 14:01:29 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕71edd6c🔪2018-08-24 13:47:41 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 5 -----
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 5 +++++
+ 4 files changed, 13 insertions(+), 12 deletions(-)
+
+☕6dcaee6🔪2018-08-24 13:47:31 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-polygon.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c8bfa7🔪2018-08-24 13:47:28 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕544d75c🔪2018-08-24 11:38:08 -0700🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4bb6ac0🔪2018-08-24 11:38:06 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)           |   8 -
+ .eslintrc.json (new)       |  15 +
+ .gitignore                 |   2 +-
+ .npmignore                 |   2 +-
+ d3-polygon.sublime-project |  16 +-
+ package.json               |  19 +-
+ rollup.config.js (new)     |  36 ++
+ test/area-test.js          |  14 +-
+ test/centroid-test.js      |  14 +-
+ yarn.lock (new)            | 935 +++++++++++++++++++++++++++++++++++++++++++++
+ 10 files changed, 1021 insertions(+), 40 deletions(-)
+
+☕1bfcdc8🔪2017-03-10 09:56:28 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕912094f🔪2017-03-10 09:56:20 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕4b8e293🔪2016-11-22 16:41:35 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕16e6f64🔪2016-11-22 16:41:28 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕fee5ef5🔪2016-08-13 22:22:29 +0530🔪AboorvaDevarajan🔪Added API reference links - README.md🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕769b126🔪2016-08-02 14:41:48 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕726f07f🔪2016-08-02 14:41:47 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕e742c1e🔪2016-06-14 14:27:57 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0c15ee4🔪2016-06-14 14:27:52 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕edbbbab🔪2016-06-14 09:22:47 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕90fa2c8🔪2016-06-07 17:33:43 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2ab210d🔪2016-06-07 17:33:29 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕c774b11🔪2016-05-18 09:52:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2f8b1d9🔪2016-05-14 21:17:20 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕a13b50b🔪2016-03-15 10:22:43 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕64bfe46🔪2016-03-14 13:11:53 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕a789333🔪2016-03-14 12:47:49 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕ee4be4a🔪2016-03-06 15:12:03 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3403067🔪2016-03-04 09:51:40 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕82969ba🔪2016-03-01 14:16:47 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕7ec84a3🔪2016-02-24 16:04:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕1700899🔪2016-02-21 16:31:21 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕82707af🔪2016-01-29 10:26:36 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕002fbaf🔪2016-01-20 17:35:30 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/area.js     |  2 +-
+ src/centroid.js |  2 +-
+ src/contains.js |  2 +-
+ src/cross.js    |  2 +-
+ src/hull.js     |  2 +-
+ src/length.js   |  2 +-
+ 8 files changed, 19 insertions(+), 7 deletions(-)
+
+☕47af8c9🔪2016-01-11 11:08:44 -0800🔪Mike Bostock🔪Export symbols with “polygon” prefix.🔪
+ README.md                       | 12 ++++++------
+ index.js                        | 10 +++++-----
+ package.json                    |  5 ++++-
+ src/{inside.js => contains.js}  |  0
+ src/{perimeter.js => length.js} |  0
+ test/area-test.js               | 24 ++++++++++++------------
+ test/centroid-test.js           | 24 ++++++++++++------------
+ test/contains-test.js (new)     | 28 ++++++++++++++++++++++++++++
+ test/hull-test.js               | 30 +++++++++++++++---------------
+ test/inside-test.js (gone)      | 28 ----------------------------
+ test/length-test.js (new)       | 24 ++++++++++++++++++++++++
+ test/perimeter-test.js (gone)   | 24 ------------------------
+ 12 files changed, 106 insertions(+), 103 deletions(-)
+
+☕7847f78🔪2015-12-18 14:51:52 -0800🔪Mike Bostock🔪Update the README.🔪
+ README.md    | 26 +++++++++++++-------------
+ package.json |  2 +-
+ 2 files changed, 14 insertions(+), 14 deletions(-)
+
+☕6f4b639🔪2015-12-08 10:39:45 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cba4d3f🔪2015-12-08 10:26:53 -0800🔪Mike Bostock🔪Fix #2 - add hull.🔪
+ README.md               |   6 ++++++
+ img/hull.png (new)      | Bin 0 -> 11243 bytes
+ index.js                |   1 +
+ src/cross.js (new)      |   7 +++++++
+ src/hull.js (new)       |  49 ++++++++++++++++++++++++++++++++++++++++++++++++
+ test/area-test.js       |  10 +++++-----
+ test/centroid-test.js   |  10 +++++-----
+ test/hull-test.js (new) |  33 ++++++++++++++++++++++++++++++++
+ test/inside-test.js     |   8 ++++----
+ test/perimeter-test.js  |   8 ++++----
+ 10 files changed, 114 insertions(+), 18 deletions(-)
+
+☕a1d2092🔪2015-12-08 10:02:07 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕79d342c🔪2015-12-08 09:53:06 -0800🔪Mike Bostock🔪Fix #5. Add inside(polygon, point).🔪
+ README.md                 |  4 ++++
+ index.js                  |  1 +
+ src/inside.js (new)       | 16 ++++++++++++++++
+ test/inside-test.js (new) | 28 ++++++++++++++++++++++++++++
+ 4 files changed, 49 insertions(+)
+
+☕a970bf7🔪2015-11-11 11:17:11 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕91abde0🔪2015-11-04 13:25:27 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+
+☕a8412a5🔪2015-11-03 23:34:14 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕06824a0🔪2015-07-07 14:55:26 -0700🔪Mike Bostock🔪Add perimeter.🔪
+ README.md                    |  4 ++++
+ index.js                     |  4 +++-
+ src/perimeter.js (new)       | 23 +++++++++++++++++++++++
+ test/perimeter-test.js (new) | 24 ++++++++++++++++++++++++
+ 4 files changed, 54 insertions(+), 1 deletion(-)
+
+☕c29fa5f🔪2015-07-06 20:42:10 -0700🔪Mike Bostock🔪Dumb.🔪
+ src/area.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕673c5af🔪2015-07-06 20:41:21 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b801b4d🔪2015-07-06 20:39:53 -0700🔪Mike Bostock🔪Remove optional polygon.centroid argument.🔪
+ README.md             | 14 +++++++++++---
+ src/centroid.js       | 13 +++++--------
+ test/centroid-test.js |  2 +-
+ 3 files changed, 17 insertions(+), 12 deletions(-)
+
+☕7b737c7🔪2015-07-06 18:07:53 -0700🔪Mike Bostock🔪Update description.🔪
+ package.json | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕6305273🔪2015-07-06 18:07:03 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                 |  5 +++++
+ .npmignore (new)                 |  3 +++
+ LICENSE (new)                    | 27 +++++++++++++++++++++++++++
+ README.md (new)                  | 15 +++++++++++++++
+ d3-polygon.sublime-project (new) | 13 +++++++++++++
+ index.js (new)                   |  7 +++++++
+ package.json (new)               | 35 +++++++++++++++++++++++++++++++++++
+ src/area.js (new)                | 15 +++++++++++++++
+ src/centroid.js (new)            | 23 +++++++++++++++++++++++
+ test/area-test.js (new)          | 37 +++++++++++++++++++++++++++++++++++++
+ test/centroid-test.js (new)      | 37 +++++++++++++++++++++++++++++++++++++
+ 11 files changed, 217 insertions(+)

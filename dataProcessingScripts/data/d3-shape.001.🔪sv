@@ -1,0 +1,2840 @@
+☕289b6ca🔪2022-01-07 10:11:00 -0800🔪Mike Bostock🔪Update README🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cf776d3🔪2022-01-07 09:29:22 -0800🔪Mike Bostock🔪3.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕893cbd2🔪2022-01-07 09:28:39 -0800🔪Mike Bostock🔪upgrade dependencies🔪
+ package.json     |   4 +-
+ test/pie-test.js |   1 +
+ yarn.lock        | 539 +++++++++++++++++++++++--------------------------------
+ 3 files changed, 226 insertions(+), 318 deletions(-)
+
+☕a761b8c🔪2022-01-07 09:26:23 -0800🔪Mike Bostock🔪Update README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3999c56🔪2022-01-07 18:21:38 +0100🔪Philippe Rivière🔪curve option for linkHorizontal and linkVertical (#177)🔪* curve option for linkHorizontal and linkVertical
+
+* if we're doing this, let's use d3.line
+
+* d3.link(curve) instead of link.curve(curve) (#190)
+
+* d3.link(curve) instead of link.curve(curve)
+
+* invoke curve directly
+
+* link.js
+
+* add link tests
+
+* more link tests
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md                | 288 ++++++++++++++++++++++++-----------------------
+ src/curve/bump.js        |  29 +++++
+ src/index.js             |   2 +-
+ src/link.js (new)        |  72 ++++++++++++
+ src/link/index.js (gone) |  84 --------------
+ test/link-test.js (new)  | 114 +++++++++++++++++++
+ 6 files changed, 363 insertions(+), 226 deletions(-)
+
+☕bfbfba5🔪2022-01-07 16:49:39 +0100🔪Philippe Rivière🔪clarify direction of the sector (#188)🔪* clarify that the direction of the sector depends on the sign of the angle span
+
+closes #187
+
+* version 2
+
+* Update README.md
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md        | 2 +-
+ test/arc-test.js | 5 +++++
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+☕1bf1f67🔪2022-01-07 07:47:02 -0800🔪Mike Bostock🔪preattentive symbols (#189)🔪* preattentive symbols
+
+Symbols with preattentive features aid pattern detection and reduce overlap.  This symbol set implements ideas of Cleveland, Wilkinson, and others, and has been tested for popularity and discriminability, and adjusted for approximately equal weight.
+
+Many products support up to a dozen different symbol sets.  This is analogous to multiple color schemes, such as Dr. Cindy Brewer's recently supported in d3.
+
+Not knowing d3's plans for symbol sets, I've only made a bare attempt at integrating these, but would be happy to continue this work along whatever lines are appropriate.
+
+* export new symbols
+
+* add tests for new symbols
+
+* PreTieR
+
+* Update README
+
+* Update README.md
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+
+* Update README.md
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+
+Co-authored-by: Heman Robinson <heman.robinson@gmail.com>
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+ README.md                     | 68 ++++++++++++++++++++++++++++++-------------
+ src/index.js                  |  8 ++++-
+ src/math.js                   | 22 +++++++-------
+ src/symbol.js                 | 31 ++++++++++++++++----
+ src/symbol/asterisk.js (new)  | 17 +++++++++++
+ src/symbol/circle.js          |  6 ++--
+ src/symbol/cross.js           |  6 ++--
+ src/symbol/diamond.js         | 12 ++++----
+ src/symbol/diamond2.js (new)  | 12 ++++++++
+ src/symbol/plus.js (new)      | 11 +++++++
+ src/symbol/square.js          |  8 +++--
+ src/symbol/square2.js (new)   | 12 ++++++++
+ src/symbol/star.js            | 26 ++++++++---------
+ src/symbol/triangle.js        |  8 +++--
+ src/symbol/triangle2.js (new) | 15 ++++++++++
+ src/symbol/wye.js             | 23 +++++++--------
+ src/symbol/x.js (new)         | 11 +++++++
+ test/symbol-test.js           | 38 +++++++++++++++++++++++-
+ test/symbols-test.js          | 22 ++++++++++++--
+ 19 files changed, 273 insertions(+), 83 deletions(-)
+
+☕67436be🔪2021-11-12 15:41:36 +0100🔪Philippe Rivière🔪link to updated notebook🔪https://observablehq.com/@d3/pie-settings illustrates corner radius, pad angle, and centroids.
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕005b0e4🔪2021-06-05 11:24:57 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕197f3d9🔪2021-06-05 11:24:51 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕248d13d🔪2021-06-05 11:24:42 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕1b47fcf🔪2021-06-04 12:28:53 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0aa3677🔪2021-06-04 21:28:10 +0200🔪Philippe Rivière🔪Adopt type=module (#179)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* es6 rather than no-undef
+
+* use the "falls through" comment to make eslint's "no-fallthrough" rule happy
+
+* remove Sublime project
+
+* add eslint.json
+
+* stricter eslint
+
+* cleaner imports
+
+* update dependencies
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |   7 +-
+ .github/eslint.json (new)           |  18 +
+ .github/workflows/node.js.yml (new) |  30 ++
+ LICENSE                             |  40 +-
+ README.md                           |  21 +-
+ d3-shape.sublime-project (gone)     |  17 -
+ package.json                        |  47 ++-
+ src/curve/basis.js                  |   4 +-
+ src/curve/basisOpen.js              |   2 +-
+ src/curve/bump.js                   |   2 +-
+ src/curve/cardinal.js               |   2 +-
+ src/curve/cardinalOpen.js           |   2 +-
+ src/curve/catmullRom.js             |   2 +-
+ src/curve/catmullRomOpen.js         |   2 +-
+ src/curve/linear.js                 |   2 +-
+ src/curve/step.js                   |   2 +-
+ test/.eslintrc.json (new)           |  11 +
+ test/arc-test.js                    | 525 +++++++++++------------
+ test/area-test.js                   | 397 +++++++++---------
+ test/areaRadial-test.js             | 144 +++----
+ test/asserts.js (new)               |  44 ++
+ test/curve/basis-test.js            |  33 +-
+ test/curve/basisClosed-test.js      |  24 +-
+ test/curve/basisOpen-test.js        |  41 +-
+ test/curve/bumpX-test.js            |  33 +-
+ test/curve/bumpY-test.js            |  33 +-
+ test/curve/bundle-test.js           |  25 +-
+ test/curve/cardinal-test.js         |  75 ++--
+ test/curve/cardinalClosed-test.js   |  75 ++--
+ test/curve/cardinalOpen-test.js     |  75 ++--
+ test/curve/catmullRom-test.js       |  82 ++--
+ test/curve/catmullRomClosed-test.js |  73 ++--
+ test/curve/catmullRomOpen-test.js   |  82 ++--
+ test/curve/linear-test.js           |  33 +-
+ test/curve/linearClosed-test.js     |  20 +-
+ test/curve/monotoneX-test.js        |  81 ++--
+ test/curve/monotoneY-test.js        |  81 ++--
+ test/curve/natural-test.js          |  37 +-
+ test/curve/step-test.js             |  33 +-
+ test/curve/stepAfter-test.js        |  33 +-
+ test/curve/stepBefore-test.js       |  33 +-
+ test/inDelta.js (gone)              |  10 -
+ test/line-test.js                   | 101 ++---
+ test/lineRadial-test.js             |  24 +-
+ test/offset/diverging-test.js       |  62 ++-
+ test/offset/expand-test.js          |  35 +-
+ test/offset/none-test.js            |  35 +-
+ test/offset/silhouette-test.js      |  35 +-
+ test/offset/wiggle-test.js          |  39 +-
+ test/order/appearance-test.js       |  14 +-
+ test/order/ascending-test.js        |  14 +-
+ test/order/descending-test.js       |  14 +-
+ test/order/insideOut-test.js        |  14 +-
+ test/order/none-test.js             |   9 +-
+ test/order/reverse-test.js          |   9 +-
+ test/pathEqual.js (gone)            |  22 -
+ test/pie-test.js                    | 202 +++++----
+ test/polygonContext.js              |  16 +-
+ test/stack-test.js                  | 142 +++----
+ test/symbol-test.js                 | 204 ++++-----
+ test/symbols-test.js                |  23 +-
+ yarn.lock                           | 808 ++++++++++++++++++++----------------
+ 62 files changed, 2015 insertions(+), 2140 deletions(-)
+
+☕54f0f11🔪2021-03-10 12:19:28 -0800🔪Mike Bostock🔪2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa5d785🔪2021-03-10 12:18:54 -0800🔪Mike Bostock🔪update dependencies🔪
+ package.json     |    6 +-
+ test/arc-test.js |    2 +-
+ test/pie-test.js |    2 +-
+ yarn.lock        | 1273 ++++++++++++++++++++++++++++--------------------------
+ 4 files changed, 667 insertions(+), 616 deletions(-)
+
+☕2cfd23a🔪2021-03-10 12:13:59 -0800🔪Mike Bostock🔪hide dir🔪
+ src/curve/bump.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕7e9895e🔪2021-03-10 12:12:20 -0800🔪Mike Bostock🔪format🔪
+ src/curve/bump.js | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕b9b1eb1🔪2021-03-10 12:11:10 -0800🔪Mike Bostock🔪adopt class, add tests🔪
+ src/curve/bump.js              | 49 ++++++++++++++++++++----------------------
+ test/curve/bumpX-test.js (new) | 22 +++++++++++++++++++
+ test/curve/bumpY-test.js (new) | 22 +++++++++++++++++++
+ 3 files changed, 67 insertions(+), 26 deletions(-)
+
+☕63da240🔪2021-03-08 14:34:16 +0100🔪Philippe Rivière🔪curveBumpX, curveBumpY🔪closes #152
+
+ README.md               |  12 ++++++++++++
+ img/bumpX.png (new)     | Bin 0 -> 5953 bytes
+ img/bumpY.png (new)     | Bin 0 -> 3647 bytes
+ src/curve/bump.js (new) |  50 ++++++++++++++++++++++++++++++++++++++++++++++++
+ src/index.js            |   1 +
+ 5 files changed, 63 insertions(+)
+
+☕022eeb4🔪2020-12-20 14:38:56 -0500🔪Curran Kelleher🔪Drop parens where appropriate.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕ba74394🔪2020-12-20 06:25:01 -0500🔪Curran Kelleher🔪ES6 in README code🔪
+ README.md | 79 ++++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 40 insertions(+), 39 deletions(-)
+
+☕471a55e🔪2020-08-19 18:57:12 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕f8f294f🔪2020-08-19 18:41:35 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+
+☕b490be6🔪2020-08-19 18:36:50 +0200🔪Philippe Rivière🔪documentation links🔪
+ README.md | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+☕696ae24🔪2020-08-19 18:36:39 +0200🔪Philippe Rivière🔪reactivate tests🔪
+ test/line-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2bbc6bc🔪2020-08-18 13:37:55 +0200🔪Philippe Rivière🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3683fb8🔪2020-07-27 11:56:52 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+☕d12c4f7🔪2020-07-27 11:55:26 +0200🔪Philippe Rivière🔪yarn.lock🔪
+ yarn.lock | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕d46aac5🔪2020-07-20 11:14:15 +0200🔪Philippe Rivière🔪shorthand notation symbol(type, size)🔪closes #155
+
+ README.md           | 4 ++--
+ src/symbol.js       | 8 ++++----
+ test/symbol-test.js | 8 ++++++++
+ 3 files changed, 14 insertions(+), 6 deletions(-)
+
+☕4501d87🔪2020-07-17 18:16:51 +0200🔪Philippe Rivière🔪document shorthand notation and ES6🔪
+ README.md | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕42c1493🔪2020-07-17 18:16:38 +0200🔪Philippe Rivière🔪d3.line(x,y) and d3.are(x,y0,y1) shorthand notations🔪fixes #159
+
+ README.md         |  8 ++++----
+ src/area.js       | 11 ++++++-----
+ src/line.js       |  9 +++++----
+ test/area-test.js | 11 +++++++++++
+ test/line-test.js |  9 +++++++++
+ 5 files changed, 35 insertions(+), 13 deletions(-)
+
+☕4364ddc🔪2020-07-10 21:57:45 +0200🔪Philippe Rivière🔪note about iterables🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕7651a1a🔪2020-07-10 21:57:38 +0200🔪Philippe Rivière🔪links to d3v6 versions🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕3672c01🔪2019-11-19 10:06:48 -0800🔪Mike Bostock🔪Test for pie(iterable).🔪
+ test/pie-test.js | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕061a6a5🔪2019-11-19 10:06:03 -0800🔪Mike Bostock🔪Allow pie, line, and area to take iterables.🔪
+ src/area.js  | 3 ++-
+ src/array.js | 6 ++++++
+ src/line.js  | 3 ++-
+ src/pie.js   | 3 ++-
+ src/stack.js | 3 ++-
+ 5 files changed, 14 insertions(+), 4 deletions(-)
+
+☕e3337dd🔪2019-11-19 10:02:31 -0800🔪Mike Bostock🔪Allow stack.order function to return an iterable.🔪
+ src/stack.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3c9bd9e🔪2019-11-19 09:57:05 -0800🔪Mike Bostock🔪Allow stack.keys function to return an iterable.🔪
+ src/stack.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕32221b2🔪2019-11-19 09:51:20 -0800🔪Mike Bostock🔪Rename.🔪
+ src/stack.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕5a4e792🔪2019-11-19 09:49:56 -0800🔪Mike Bostock🔪Accept iterable for stack.🔪
+ src/stack.js | 20 +++++++++++---------
+ 1 file changed, 11 insertions(+), 9 deletions(-)
+
+☕9d7c3c2🔪2019-11-19 09:37:17 -0800🔪Mike Bostock🔪Allow stack.{keys,order} to be iterable.🔪
+ src/stack.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕41e7255🔪2019-11-19 09:35:29 -0800🔪Mike Bostock🔪Fix README; stack.offset can’t be an array.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕246e232🔪2019-11-16 13:52:23 -0800🔪Mike Bostock🔪1.3.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf15db4🔪2019-11-16 13:39:21 -0800🔪Mike Bostock🔪Put zero values at zero.🔪
+ README.md                     |  2 +-
+ src/offset/diverging.js       |  4 ++--
+ test/offset/diverging-test.js | 19 +++++++++++++++++--
+ 3 files changed, 20 insertions(+), 5 deletions(-)
+
+☕394507c🔪2019-11-16 11:19:38 -0800🔪Mike Bostock🔪1.3.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕28184dd🔪2019-11-16 11:19:16 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕b9a4ce2🔪2019-11-16 11:18:53 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a848e24🔪2019-09-27 10:22:22 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕e20b224🔪2019-08-09 16:20:19 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 881 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 522 insertions(+), 365 deletions(-)
+
+☕6ad9d5f🔪2019-08-09 15:56:05 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕68720c7🔪2019-08-09 15:42:14 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/arc.js                    |  4 +-
+ src/area.js                   |  8 ++--
+ src/areaRadial.js             |  6 +--
+ src/curve/basisClosed.js      |  4 +-
+ src/curve/basisOpen.js        |  2 +-
+ src/curve/bundle.js           |  2 +-
+ src/curve/cardinalClosed.js   |  4 +-
+ src/curve/cardinalOpen.js     |  2 +-
+ src/curve/catmullRom.js       |  4 +-
+ src/curve/catmullRomClosed.js |  6 +--
+ src/curve/catmullRomOpen.js   |  4 +-
+ src/curve/linearClosed.js     |  2 +-
+ src/curve/radial.js           |  2 +-
+ src/index.js                  | 86 +++++++++++++++++++++----------------------
+ src/line.js                   |  6 +--
+ src/lineRadial.js             |  4 +-
+ src/link/index.js             |  8 ++--
+ src/offset/expand.js          |  2 +-
+ src/offset/silhouette.js      |  2 +-
+ src/offset/wiggle.js          |  2 +-
+ src/order/appearance.js       |  2 +-
+ src/order/ascending.js        |  2 +-
+ src/order/descending.js       |  2 +-
+ src/order/insideOut.js        |  4 +-
+ src/order/reverse.js          |  2 +-
+ src/pie.js                    |  8 ++--
+ src/stack.js                  |  8 ++--
+ src/symbol.js                 | 16 ++++----
+ src/symbol/circle.js          |  2 +-
+ src/symbol/star.js            |  2 +-
+ 30 files changed, 104 insertions(+), 104 deletions(-)
+
+☕637d803🔪2019-06-28 15:52:36 +0200🔪Philippe Rivière🔪update stacked area example img🔪
+ img/area-stacked.png | Bin 29057 -> 33184 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕2cdf5c0🔪2019-06-28 15:51:46 +0200🔪Philippe Rivière🔪link to examples🔪
+ README.md | 267 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 133 insertions(+), 134 deletions(-)
+
+☕f04ac19🔪2019-05-02 14:17:24 +0200🔪Philippe Rivière🔪typo🔪fixes #136
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0858269🔪2019-03-19 15:43:40 -0700🔪Mike Bostock🔪1.3.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕18faa43🔪2019-03-19 15:40:25 -0700🔪Mike Bostock🔪Add test for single-series diverging.🔪
+ test/offset/diverging-test.js | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+☕93e7e26🔪2018-01-29 11:03:16 -0800🔪Hannah Squier🔪change series length check from 1 to 0🔪
+ src/offset/diverging.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕acf52b9🔪2019-03-09 12:57:52 -0800🔪Mike Bostock🔪Copy edits.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕fdfff7b🔪2019-03-08 21:27:13 -0500🔪nathanhack🔪Update README.md🔪Readme clarification.
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ade42f9🔪2019-02-04 12:23:26 -0800🔪Mike Bostock🔪1.3.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b41c51e🔪2019-02-04 12:23:03 -0800🔪Mike Bostock🔪Fix #143 rendering glitch with rounded arcs.🔪
+ src/arc.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7eebe35🔪2019-01-27 19:55:41 +0000🔪Luca Bonavita🔪Fixed .alpha() anchors🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕115607b🔪2019-01-23 17:03:12 -0800🔪Mike Bostock🔪1.3.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a9a2b52🔪2019-01-23 17:03:02 -0800🔪Mike Bostock🔪Fix #126 stackOrderInsideOut.🔪
+ README.md                    |  2 +-
+ src/order/insideOut.js       |  4 ++--
+ test/order/insideOut-test.js | 30 +++++++++++++++---------------
+ 3 files changed, 18 insertions(+), 18 deletions(-)
+
+☕31f282b🔪2019-01-23 13:44:50 -0800🔪Mike Bostock🔪1.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0aff62f🔪2019-01-23 13:44:46 -0800🔪Mike Bostock🔪Fix tests.🔪
+ test/order/appearance-test.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕f2333be🔪2019-01-23 13:43:44 -0800🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕992fd6f🔪2019-01-23 13:43:44 -0800🔪Mike Bostock🔪Use maximum, not first, value.🔪
+ README.md               |  2 +-
+ src/order/appearance.js | 12 ++++++------
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+☕7ff780a🔪2019-01-23 13:22:58 -0800🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕50e115f🔪2019-01-23 13:20:37 -0800🔪Mike Bostock🔪Rewrite stackOrderAppearance.🔪
+ README.md                           |  4 ++++
+ src/index.js                        |  1 +
+ src/order/appearance.js             | 18 ++++++++++--------
+ test/order/appearance-test.js (new) | 20 ++++++++++++++++++++
+ 4 files changed, 35 insertions(+), 8 deletions(-)
+
+☕8b17156🔪2017-06-14 01:48:33 +0900🔪Isao Matsunami🔪Create appearance.js🔪New stackOrder, d3.stackOrderAppearance(), if you name it (I am not sure of my English)
+
+Returns a series order such that the earliest series (index where value > 0 for the first time) is at the bottom. Convenient to make streamgraph look like twisted cord for data entity appears one after another like boxoffice data.
+
+ src/order/appearance (gone)   | 10 ----------
+ src/order/appearance.js (new) | 10 ++++++++++
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕63d7507🔪2017-06-14 01:38:08 +0900🔪Isao Matsunami🔪Create appearance🔪
+ src/order/appearance (new) | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕5045b02🔪2019-01-23 13:11:26 -0800🔪Mike Bostock🔪1.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕52e069b🔪2019-01-23 10:50:16 -0800🔪Mike Bostock🔪Fix #119 arc glitch.🔪
+ src/arc.js | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕b8279d6🔪2018-08-24 14:29:32 -0700🔪Mike Bostock🔪1.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf6d703🔪2018-08-24 14:29:30 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕ebf30ad🔪2018-08-24 14:01:03 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f5068b5🔪2018-08-24 13:43:59 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 45 ---------------------------------------------
+ package.json       |  9 +++++----
+ rollup.config.js   |  6 +++---
+ src/index.js (new) | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 53 insertions(+), 52 deletions(-)
+
+☕be9eec1🔪2018-08-24 12:20:53 -0700🔪Mike Bostock🔪1.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕740b1da🔪2018-08-24 12:20:51 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   9 -
+ .eslintrc.json (new)     |  16 +
+ .gitignore               |   2 +-
+ .npmignore               |   2 +-
+ d3-shape.sublime-project |  16 +-
+ package.json             |  17 +-
+ rollup.config.js (new)   |  36 ++
+ yarn.lock (new)          | 943 +++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1015 insertions(+), 26 deletions(-)
+
+☕acb6053🔪2017-05-16 08:05:34 -0700🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕af4384e🔪2017-05-16 08:04:36 -0700🔪Mike Bostock🔪Add d3.pointRadial.🔪Rename d3.radialArea to d3.areaRadial.
+Rename d3.radialLine to d3.lineRadial.
+Fixes #104.
+
+ README.md                                       | 66 +++++++++++++------------
+ index.js                                        |  5 +-
+ src/{radialArea.js => areaRadial.js}            | 10 ++--
+ src/{radialLine.js => lineRadial.js}            |  4 +-
+ src/link/index.js                               | 10 ++--
+ src/{radialPoint.js => pointRadial.js}          |  0
+ test/{radialArea-test.js => areaRadial-test.js} | 20 ++++----
+ test/{radialLine-test.js => lineRadial-test.js} |  4 +-
+ 8 files changed, 62 insertions(+), 57 deletions(-)
+
+☕060e14d🔪2017-05-16 07:44:37 -0700🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕36f1dbb🔪2017-05-16 07:44:13 -0700🔪Mike Bostock🔪Rename to radialPoint.🔪
+ src/link/index.js        | 13 +++++--------
+ src/radialPoint.js (new) |  3 +++
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+☕c46ba8d🔪2017-05-16 07:43:01 -0700🔪Mike Bostock🔪Radians, not degrees.🔪
+ src/link/index.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕d0d2df2🔪2017-05-15 12:35:17 -0700🔪Mike Bostock🔪Link to example.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8946528🔪2017-05-12 17:46:44 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕faa57ad🔪2017-05-12 17:46:21 -0700🔪Mike Bostock🔪Update package-preamble.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0e3d6b1🔪2017-05-12 17:42:48 -0700🔪Mike Bostock🔪Shorter.🔪
+ README.md         | 20 ++++++------
+ src/link/index.js | 91 +++++++++++++++++++------------------------------------
+ 2 files changed, 41 insertions(+), 70 deletions(-)
+
+☕08c75ee🔪2017-05-12 17:34:08 -0700🔪Mike Bostock🔪Shorter.🔪
+ src/link/index.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕86f2a16🔪2017-05-12 17:33:03 -0700🔪Mike Bostock🔪Fix #27. Add d3.linkRadial.🔪
+ README.md         | 20 +++++++++++++++++++-
+ index.js          |  2 +-
+ src/link/index.js | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 3 files changed, 73 insertions(+), 4 deletions(-)
+
+☕6b0e426🔪2017-05-12 17:15:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕de80238🔪2017-05-12 17:14:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕922fb2d🔪2017-05-12 17:13:21 -0700🔪Mike Bostock🔪Add d3.link{Vertical,Horizontal}. Related #27.🔪
+ README.md               | 82 +++++++++++++++++++++++++++++++++++++++++++++++++
+ index.js                |  1 +
+ src/link/index.js (new) | 66 +++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 149 insertions(+)
+
+☕c2e7090🔪2017-05-12 16:38:05 -0700🔪Mike Bostock🔪Fix #89. Don’t publish img/ to npm.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕46ee6b0🔪2017-04-07 17:30:29 -0400🔪Paul Dechov🔪Fix paper author name typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6af2035🔪2017-04-03 11:46:15 -0400🔪pzl🔪small README typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a374058🔪2017-03-31 15:27:47 -0700🔪Anders Pitman🔪Update README.md🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕60c9b0a🔪2017-03-15 12:37:45 +0000🔪David Watkins🔪Correcting typo in symbol section🔪Refers to transforming arcs not symbols
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6977f96🔪2017-03-10 17:43:01 -0800🔪Mike Bostock🔪Add d3.stackOffsetDiverging.🔪This provides an easy way to stack negative values below zero. Fixes #96.
+
+ README.md                           |  4 +++
+ index.js                            |  1 +
+ src/offset/diverging.js (new)       | 14 ++++++++
+ src/offset/none.js                  |  4 +--
+ test/offset/diverging-test.js (new) | 64 +++++++++++++++++++++++++++++++++++++
+ test/offset/none-test.js            | 10 +++---
+ 6 files changed, 90 insertions(+), 7 deletions(-)
+
+☕0c34bc2🔪2017-03-10 10:25:47 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8641536🔪2017-03-10 10:25:39 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕86816b2🔪2017-02-28 09:11:21 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bca2192🔪2017-02-28 09:10:41 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b17d385🔪2017-01-24 09:45:45 -0800🔪Mike Bostock🔪Consolidate Math aliases.🔪
+ src/arc.js  | 66 +++++++++++++++++++++++++++++--------------------------------
+ src/math.js | 12 +++++++++++
+ 2 files changed, 43 insertions(+), 35 deletions(-)
+
+☕3f30a98🔪2017-01-24 16:35:46 +0000🔪Joseph Mansfield🔪Clamp acos when computing rounded corners🔪Due to floating point imprecision, computing the angle between two
+vectors with `theta = acos((a . b) / sqrt(|a||b|))` gives NaN when
+`(a . b) / sqrt(|a||b|)` is outside the domain of `acos`. We can
+use a clamped version of acos to avoid this, which clamps to
+[-1, 1].
+
+ src/arc.js  | 4 ++--
+ src/math.js | 4 ++++
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+☕9460444🔪2016-11-22 16:56:22 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c18af84🔪2016-11-22 16:56:14 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕f9fe11e🔪2016-10-30 13:31:08 +0800🔪xufanglu🔪fixed data format error🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕7effde4🔪2016-08-21 12:20:25 +0300🔪Devinsuit🔪Add links to source d3-shape.🔪
+ README.md | 222 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 111 insertions(+), 111 deletions(-)
+
+☕32ba638🔪2016-08-20 09:05:14 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ca050b9🔪2016-08-20 08:08:26 -0700🔪Mike Bostock🔪Fix #78 - arguments to this.point.🔪
+ src/curve/catmullRom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8248b81🔪2016-08-05 08:42:00 -0700🔪Mike Bostock🔪Update README. Fix #77.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕435cfe7🔪2016-08-02 14:30:53 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d58acbc🔪2016-08-02 14:30:52 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕06751d1🔪2016-07-29 15:53:32 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕698d7b4🔪2016-07-29 15:53:30 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f9de6fb🔪2016-07-29 09:50:42 +0100🔪Colin Eberhardt🔪docs: fixed broken links to named anchors🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c74a403🔪2016-06-24 10:51:30 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕64e91db🔪2016-06-24 10:51:21 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕8fa817c🔪2016-06-19 09:35:27 -0700🔪Mike Bostock🔪0.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e6b1edb🔪2016-06-19 09:35:24 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 2 +-
+ package.json | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕b625560🔪2016-06-14 09:22:08 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕001e109🔪2016-06-07 18:07:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕1caf4ea🔪2016-06-07 18:06:13 -0700🔪Mike Bostock🔪Fix #70 - document intent of d3.curveBundle.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕4925013🔪2016-06-07 17:59:43 -0700🔪Mike Bostock🔪0.7.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1fd8bc7🔪2016-06-07 17:59:34 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  8 ++++----
+ index.js     |  2 --
+ package.json | 16 ++++++++--------
+ 3 files changed, 12 insertions(+), 14 deletions(-)
+
+☕ca59f9c🔪2016-06-07 11:20:58 -0700🔪Mike Bostock🔪Add documentation.🔪
+ README.md | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+☕d330518🔪2016-06-07 11:20:19 -0700🔪Mike Bostock🔪Add methods for radial area-derived lines.🔪
+ src/curve/radial.js     |  6 ++++-
+ src/radialArea.js       | 18 +++++++++----
+ src/radialLine.js       | 14 +++++-----
+ test/radialArea-test.js | 68 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 94 insertions(+), 12 deletions(-)
+
+☕7f59d44🔪2016-06-07 10:51:06 -0700🔪Mike Bostock🔪Add tests for area-derived lines.🔪
+ test/area-test.js | 68 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 68 insertions(+)
+
+☕36184cb🔪2016-06-06 17:30:28 -0700🔪Mike Bostock🔪Fix #67 - derive lines from areas.🔪
+ src/area.js | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+☕f56e823🔪2016-05-24 15:42:10 -0700🔪Mike Bostock🔪0.6.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e3b1b0a🔪2016-05-21 13:34:47 -0700🔪Mike Bostock🔪Simpler symmetry for step curves.🔪We don’t need to check the ordering of x; we can simply reverse the behavior for
+the topline and baseline using the curve API.
+
+ README.md         |  4 ++--
+ src/curve/step.js | 10 +++-------
+ 2 files changed, 5 insertions(+), 9 deletions(-)
+
+☕90630a3🔪2016-05-18 09:51:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac076b9🔪2016-05-14 21:04:31 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕e64c7c2🔪2016-03-16 11:36:45 -0700🔪Mike Bostock🔪Fix strict equals.🔪
+ src/pie.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eee3949🔪2016-03-15 10:21:58 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕58fd58c🔪2016-03-14 13:09:59 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕beb0380🔪2016-03-14 12:36:16 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕3bcabc3🔪2016-03-07 20:06:45 -0800🔪Mike Bostock🔪0.6.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8baccd5🔪2016-03-07 20:06:06 -0800🔪Mike Bostock🔪Prepare for minor version.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕d5bd555🔪2016-03-07 20:04:53 -0800🔪Mike Bostock🔪Update example.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04f60b8🔪2016-03-07 19:52:12 -0800🔪Mike Bostock🔪Fix #62 - optimize radial curve.🔪
+ src/curve/radial.js               |  4 +---
+ test/curve/cardinal-test.js       |  4 ++--
+ test/curve/cardinalClosed-test.js |  4 ++--
+ test/curve/cardinalOpen-test.js   |  4 ++--
+ test/radialArea-test.js (new)     | 17 +++++++++++++++++
+ test/radialLine-test.js (new)     | 15 +++++++++++++++
+ 6 files changed, 39 insertions(+), 9 deletions(-)
+
+☕e3d4aa5🔪2016-03-07 19:44:34 -0800🔪Mike Bostock🔪Fix #61 - named curve parameters.🔪Before:
+
+    var line = d3.line().curve(d3.curveCardinal, 0.5);
+
+After:
+
+    var line = d3.line().curve(d3.curveCardinal.tension(0.5));
+
+ README.md                           | 64 +++++++++++++++++++++++++------------
+ src/area.js                         |  5 ++-
+ src/curve/basis.js                  |  2 +-
+ src/curve/bind.js (gone)            | 11 -------
+ src/curve/bundle.js                 | 21 ++++++++----
+ src/curve/cardinal.js               | 19 ++++++++---
+ src/curve/cardinalClosed.js         | 19 ++++++++---
+ src/curve/cardinalOpen.js           | 19 ++++++++---
+ src/curve/catmullRom.js             | 19 +++++++----
+ src/curve/catmullRomClosed.js       | 19 +++++++----
+ src/curve/catmullRomOpen.js         | 19 +++++++----
+ src/curve/radial.js                 |  4 +--
+ src/line.js                         |  5 ++-
+ src/radialArea.js                   |  2 +-
+ src/radialLine.js                   |  2 +-
+ test/area-test.js                   |  8 ++---
+ test/curve/bundle-test.js           | 15 +++++++--
+ test/curve/cardinal-test.js         | 30 +++++++++++++----
+ test/curve/cardinalClosed-test.js   | 42 ++++++++++++++++++++++--
+ test/curve/cardinalOpen-test.js     | 30 +++++++++++++----
+ test/curve/catmullRom-test.js       | 28 ++++++++++------
+ test/curve/catmullRomClosed-test.js | 24 ++++++++++----
+ test/curve/catmullRomOpen-test.js   | 24 +++++++++-----
+ test/line-test.js                   | 20 ------------
+ 24 files changed, 301 insertions(+), 150 deletions(-)
+
+☕d94c92b🔪2016-03-06 15:11:10 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ea85809🔪2016-03-04 09:49:59 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a3b1b23🔪2016-03-01 14:13:49 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 2 ++
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+☕fa5265e🔪2016-02-24 16:20:27 -0800🔪Mike Bostock🔪Update d3-polygon.🔪
+ package.json           | 2 +-
+ test/polygonContext.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕8f9d648🔪2016-02-24 15:57:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕daed2d4🔪2016-02-21 16:15:15 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ecb3c1d🔪2016-01-29 16:10:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e263527🔪2016-01-29 16:08:53 -0800🔪Mike Bostock🔪Clarify that symbol.type accepts a function.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕d61a279🔪2016-01-29 10:36:51 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕e237568🔪2016-01-28 10:46:15 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕cb15448🔪2016-01-28 10:15:03 -0800🔪Mike Bostock🔪Fix monotone bug with infinite slope.🔪If the change in X was zero, the sign of infinity was lost. Now we use the sign
+from the other side to compute the correct infinity.
+
+ src/curve/monotone.js        | 4 ++--
+ test/curve/monotoneX-test.js | 7 +++++++
+ test/curve/monotoneY-test.js | 7 +++++++
+ 3 files changed, 16 insertions(+), 2 deletions(-)
+
+☕510357d🔪2016-01-28 10:14:07 -0800🔪Mike Bostock🔪Fix #57 - replace curveMonotone with curveMonotone{X,Y}.🔪
+ README.md                                          |  20 +++++---
+ img/monotone.png (gone)                            | Bin 8711 -> 0 bytes
+ img/monotoneX.png (new)                            | Bin 0 -> 11801 bytes
+ img/monotoneY.png (new)                            | Bin 0 -> 6777 bytes
+ index.js                                           |   2 +-
+ src/curve/monotone.js                              |  31 ++++++++++--
+ test/curve/{monotone-test.js => monotoneX-test.js} |  20 ++++----
+ test/curve/monotoneY-test.js (new)                 |  53 +++++++++++++++++++++
+ 8 files changed, 104 insertions(+), 22 deletions(-)
+
+☕27130a9🔪2016-01-20 17:19:29 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new)               | 13 +++++++++++++
+ package.json                  |  2 +-
+ src/arc.js                    | 19 ++++++++++---------
+ src/area.js                   |  2 +-
+ src/constant.js               |  2 +-
+ src/curve/basis.js            |  4 ++--
+ src/curve/basisClosed.js      |  2 +-
+ src/curve/basisOpen.js        |  2 +-
+ src/curve/bind.js             |  2 +-
+ src/curve/bundle.js           |  2 +-
+ src/curve/cardinal.js         |  4 ++--
+ src/curve/cardinalClosed.js   |  2 +-
+ src/curve/cardinalOpen.js     |  2 +-
+ src/curve/catmullRom.js       |  4 ++--
+ src/curve/catmullRomClosed.js |  2 +-
+ src/curve/catmullRomOpen.js   |  2 +-
+ src/curve/linear.js           |  2 +-
+ src/curve/linearClosed.js     |  2 +-
+ src/curve/monotone.js         |  2 +-
+ src/curve/natural.js          |  2 +-
+ src/curve/radial.js           |  2 +-
+ src/curve/step.js             |  6 +++---
+ src/descending.js             |  2 +-
+ src/identity.js               |  2 +-
+ src/line.js                   |  2 +-
+ src/noop.js                   |  2 +-
+ src/offset/expand.js          |  8 ++++----
+ src/offset/none.js            |  2 +-
+ src/offset/silhouette.js      |  2 +-
+ src/offset/wiggle.js          |  2 +-
+ src/order/ascending.js        |  4 ++--
+ src/order/descending.js       |  2 +-
+ src/order/insideOut.js        |  2 +-
+ src/order/none.js             |  2 +-
+ src/order/reverse.js          |  2 +-
+ src/pie.js                    | 14 +++++++++-----
+ src/point.js                  |  4 ++--
+ src/radialArea.js             |  4 +---
+ src/radialLine.js             |  3 +--
+ src/stack.js                  | 11 ++++++-----
+ src/symbol.js                 |  2 +-
+ 41 files changed, 85 insertions(+), 69 deletions(-)
+
+☕a4be08f🔪2016-01-08 15:31:05 -0800🔪Mike Bostock🔪These are symbol types.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕845cb9b🔪2016-01-08 07:16:05 -0800🔪Mike Bostock🔪Tests for stack.{order,offset}(null).🔪
+ test/stack-test.js | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+☕9b17237🔪2016-01-08 16:38:00 +0800🔪Ivan Vanderbyl🔪Fix missing values for defaultOrder and offsetZero🔪
+ src/stack.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b855824🔪2016-01-07 15:45:58 -0800🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕51f3230🔪2016-01-07 15:45:08 -0800🔪Mike Bostock🔪Fix references.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕988a8b2🔪2016-01-07 15:26:45 -0800🔪Mike Bostock🔪Prefix symbols with “symbol”. Prefix curves with “curve”.🔪
+ README.md                           | 146 ++++++++++++++++++------------------
+ index.js                            |  62 +++++++--------
+ package.json                        |   4 +-
+ test/area-test.js                   |  12 +--
+ test/curve/basis-test.js            |   8 +-
+ test/curve/basisClosed-test.js      |   4 +-
+ test/curve/basisOpen-test.js        |   8 +-
+ test/curve/bundle-test.js           |  10 +--
+ test/curve/cardinal-test.js         |  28 +++----
+ test/curve/cardinalClosed-test.js   |  14 ++--
+ test/curve/cardinalOpen-test.js     |  28 +++----
+ test/curve/catmullRom-test.js       |  32 ++++----
+ test/curve/catmullRomClosed-test.js |  22 +++---
+ test/curve/catmullRomOpen-test.js   |  32 ++++----
+ test/curve/linear-test.js           |   8 +-
+ test/curve/linearClosed-test.js     |   4 +-
+ test/curve/monotone-test.js         |  20 ++---
+ test/curve/natural-test.js          |   8 +-
+ test/curve/step-test.js             |   8 +-
+ test/curve/stepAfter-test.js        |   8 +-
+ test/curve/stepBefore-test.js       |   8 +-
+ test/line-test.js                   |  12 +--
+ test/offset/expand-test.js          |  12 +--
+ test/offset/none-test.js            |  12 +--
+ test/offset/silhouette-test.js      |  12 +--
+ test/offset/wiggle-test.js          |  12 +--
+ test/order/ascending-test.js        |   8 +-
+ test/order/descending-test.js       |   8 +-
+ test/order/insideOut-test.js        |   8 +-
+ test/order/none-test.js             |   4 +-
+ test/order/reverse-test.js          |   4 +-
+ test/stack-test.js                  |  12 +--
+ test/symbol-test.js                 |  56 +++++++-------
+ test/symbols-test.js                |  14 ++--
+ 34 files changed, 324 insertions(+), 324 deletions(-)
+
+☕5eab4e6🔪2016-01-06 12:29:29 -0800🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ee09b79🔪2016-01-06 12:24:25 -0800🔪Mike Bostock🔪Document radialLine and radialArea.🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕3a562d0🔪2016-01-05 14:02:33 -0800🔪Mike Bostock🔪Fix anchor names.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕db4c6d2🔪2016-01-05 13:55:12 -0800🔪Mike Bostock🔪Update version number.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7e23644🔪2015-12-30 09:49:41 -0800🔪Mike Bostock🔪Canvas-based line example.🔪
+ README.md                    |   2 +-
+ img/line-gradient.png (gone) | Bin 48342 -> 0 bytes
+ img/line-multi.png (gone)    | Bin 60758 -> 0 bytes
+ img/line.png                 | Bin 23802 -> 14786 bytes
+ 4 files changed, 1 insertion(+), 1 deletion(-)
+
+☕315b76e🔪2015-12-30 09:08:35 -0800🔪Mike Bostock🔪Thicker corner circles.🔪
+ img/rounded-annular-sector.png  | Bin 27487 -> 23835 bytes
+ img/rounded-circular-sector.png | Bin 20849 -> 19064 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+☕9b86fc1🔪2015-12-30 09:04:58 -0800🔪Mike Bostock🔪Slightly cleaner example images.🔪
+ img/rounded-annular-sector.png  | Bin 30014 -> 27487 bytes
+ img/rounded-circular-sector.png | Bin 22539 -> 20849 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+☕e35ce22🔪2015-12-29 21:07:34 -0800🔪Mike Bostock🔪Ignore NaN in wiggle offset.🔪
+ src/offset/wiggle.js       | 14 +++++++++++---
+ test/offset/wiggle-test.js | 23 ++++++++++++++++++++++-
+ 2 files changed, 33 insertions(+), 4 deletions(-)
+
+☕fc59b86🔪2015-12-29 17:01:47 -0800🔪Mike Bostock🔪Ignore NaN values during stack generation.🔪
+ src/offset/expand.js           |  4 ++--
+ src/offset/none.js             |  2 +-
+ src/offset/silhouette.js       |  2 +-
+ src/order/ascending.js         |  8 +++-----
+ test/offset/expand-test.js     | 17 +++++++++++++++++
+ test/offset/none-test.js       | 17 +++++++++++++++++
+ test/offset/silhouette-test.js | 17 +++++++++++++++++
+ test/order/ascending-test.js   |  9 +++++++++
+ test/order/descending-test.js  |  9 +++++++++
+ test/order/insideOut-test.js   | 13 +++++++++++++
+ 10 files changed, 89 insertions(+), 9 deletions(-)
+
+☕188bfc2🔪2015-12-29 15:49:39 -0800🔪Mike Bostock🔪Link new examples.🔪
+ README.md                       |   2 +-
+ img/rounded-annular-sector.png  | Bin 36091 -> 30014 bytes
+ img/rounded-circular-sector.png | Bin 26431 -> 22539 bytes
+ 3 files changed, 1 insertion(+), 1 deletion(-)
+
+☕b3f7ff8🔪2015-12-29 15:34:48 -0800🔪Mike Bostock🔪Update images.🔪
+ img/padded-annular-sector.png  | Bin 25735 -> 18461 bytes
+ img/padded-circular-sector.png | Bin 25232 -> 21505 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+☕dfeb5a9🔪2015-12-29 15:33:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bdf79ac🔪2015-12-29 15:26:53 -0800🔪Mike Bostock🔪Update examples.🔪
+ img/centroid-annular-sector.png  | Bin 17985 -> 18702 bytes
+ img/centroid-circular-sector.png | Bin 15373 -> 17422 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+☕7158e63🔪2015-12-29 15:15:53 -0800🔪Mike Bostock🔪Update arc examples.🔪
+ README.md                        |   4 ++--
+ img/centroid-annular-sector.png  | Bin 25560 -> 17985 bytes
+ img/centroid-circular-sector.png | Bin 21518 -> 15373 bytes
+ img/donut.png                    | Bin 23169 -> 23796 bytes
+ img/pie.png                      | Bin 22951 -> 30949 bytes
+ 5 files changed, 2 insertions(+), 2 deletions(-)
+
+☕833f307🔪2015-12-29 13:03:56 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4859c5b🔪2015-12-29 13:03:02 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕e6a1382🔪2015-12-29 13:01:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7770765🔪2015-12-29 12:56:36 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fa13765🔪2015-12-29 12:54:53 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕dae93f4🔪2015-12-29 12:50:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕7db18ab🔪2015-12-29 12:49:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕74314ca🔪2015-12-29 12:47:02 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8e9c430🔪2015-12-29 12:46:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕68dceca🔪2015-12-29 12:45:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 136 ++++++++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 84 insertions(+), 52 deletions(-)
+
+☕76cebba🔪2015-12-29 12:01:40 -0800🔪Mike Bostock🔪Add tests for stack.🔪
+ test/offset/wiggle-test.js |   4 +-
+ test/stack-test.js (new)   | 125 +++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 127 insertions(+), 2 deletions(-)
+
+☕4250176🔪2015-12-29 11:07:36 -0800🔪Mike Bostock🔪Add tests for stack offsets.🔪
+ test/offset/expand-test.js (new)     | 32 +++++++++++++++++++++++++++++
+ test/offset/none-test.js (new)       | 32 +++++++++++++++++++++++++++++
+ test/offset/silhouette-test.js (new) | 32 +++++++++++++++++++++++++++++
+ test/offset/wiggle-test.js (new)     | 40 ++++++++++++++++++++++++++++++++++++
+ 4 files changed, 136 insertions(+)
+
+☕2d0c85e🔪2015-12-29 10:54:47 -0800🔪Mike Bostock🔪Add tests for stack orders.🔪
+ test/order/ascending-test.js (new)  | 11 +++++++++++
+ test/order/descending-test.js (new) | 11 +++++++++++
+ test/order/insideOut-test.js (new)  | 15 +++++++++++++++
+ test/order/none-test.js (new)       |  7 +++++++
+ test/order/reverse-test.js (new)    |  7 +++++++
+ 5 files changed, 51 insertions(+)
+
+☕7a1beae🔪2015-12-29 10:40:28 -0800🔪Mike Bostock🔪Extract slice.🔪
+ src/array.js (new) | 1 +
+ src/stack.js       | 5 +++--
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+☕ad60f59🔪2015-12-10 22:01:13 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕0f8e9cd🔪2015-12-10 21:57:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕39d4068🔪2015-12-10 21:56:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕31a38f4🔪2015-12-10 21:53:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 31 +++++++++++++++++++++++++------
+ 1 file changed, 25 insertions(+), 6 deletions(-)
+
+☕3394b01🔪2015-12-10 21:37:55 -0800🔪Mike Bostock🔪Empty keys by default.🔪I don’t think there’s any sensible default.
+
+ src/stack.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8c9cd68🔪2015-12-10 16:25:55 -0800🔪Mike Bostock🔪Checkpoint documentation.🔪
+ README.md                         |  86 ++++++++++++++++++++++++++++++++++++++
+ img/stacked-bar.png (new)         | Bin 0 -> 19655 bytes
+ img/stacked-stream.png (new)      | Bin 0 -> 41256 bytes
+ index.js                          |   4 +-
+ src/offset/expand.js              |   4 +-
+ src/offset/{zero.js => none.js}   |   0
+ src/offset/silhouette.js          |   4 +-
+ src/offset/wiggle.js              |   4 +-
+ src/order/ascending.js            |   4 +-
+ src/order/descending.js           |   4 +-
+ src/order/insideOut.js            |   4 +-
+ src/order/{default.js => none.js} |   0
+ src/order/reverse.js              |   4 +-
+ src/stack.js                      |  16 +++----
+ 14 files changed, 110 insertions(+), 24 deletions(-)
+
+☕b7e886a🔪2015-12-10 13:20:11 -0800🔪Mike Bostock🔪Remove x-accessor from stack layout!🔪It’s not needed, even for wiggle, because it cancels out. So we can stick with
+the simpler interface of a value accessor. This commit also adds an index
+property to the returned series.
+
+ src/offset/expand.js     |  4 ++--
+ src/offset/silhouette.js |  4 ++--
+ src/offset/wiggle.js     | 10 +++++-----
+ src/offset/zero.js       |  2 +-
+ src/order/ascending.js   |  2 +-
+ src/stack.js             | 30 +++++++++++-------------------
+ 6 files changed, 22 insertions(+), 30 deletions(-)
+
+☕1db3f5f🔪2015-12-10 12:12:44 -0800🔪Mike Bostock🔪More concise.🔪
+ src/offset/wiggle.js | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+☕07acfaa🔪2015-12-10 12:06:32 -0800🔪Mike Bostock🔪Add wiggle offset.🔪
+ index.js                   |  1 +
+ src/offset/wiggle.js (new) | 19 +++++++++++++++++++
+ 2 files changed, 20 insertions(+)
+
+☕c53b65d🔪2015-12-10 09:54:39 -0800🔪Mike Bostock🔪Add offsetExpand.🔪
+ index.js                   |  3 ++-
+ src/offset/expand.js (new) | 10 ++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕18e78c1🔪2015-12-10 09:48:53 -0800🔪Mike Bostock🔪Add stack.offset.🔪
+ index.js                       |  3 +++
+ src/offset/silhouette.js (new) | 10 ++++++++++
+ src/offset/zero.js (new)       |  9 +++++++++
+ src/stack.js                   | 20 +++++++++-----------
+ 4 files changed, 31 insertions(+), 11 deletions(-)
+
+☕f92a5bb🔪2015-12-10 09:11:37 -0800🔪Mike Bostock🔪Add stack.order.🔪
+ index.js                      |  7 ++++++-
+ src/order/ascending.js (new)  | 14 ++++++++++++++
+ src/order/default.js (new)    |  5 +++++
+ src/order/descending.js (new) |  5 +++++
+ src/order/insideOut.js (new)  | 27 +++++++++++++++++++++++++++
+ src/order/reverse.js (new)    |  5 +++++
+ src/stack.js                  | 38 ++++++++++++++++++++++++++------------
+ 7 files changed, 88 insertions(+), 13 deletions(-)
+
+☕81bb831🔪2015-12-10 08:29:31 -0800🔪Mike Bostock🔪Use the same arguments for x as dy.🔪
+ src/stack.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c8d8a00🔪2015-12-09 17:18:20 -0800🔪Mike Bostock🔪Pass layer as second argument to dy-accessor.🔪The layer will always be necessary to determine the context.
+
+ src/stack.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cb42f75🔪2015-12-09 15:09:10 -0800🔪Mike Bostock🔪Checkpoint stack.🔪
+ index.js           | 27 +++++++++++++++------------
+ src/stack.js (new) | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 66 insertions(+), 12 deletions(-)
+
+☕ef1dfa3🔪2015-12-29 10:44:32 -0800🔪Mike Bostock🔪Move curve tests into curve folder.🔪
+ test/{ => curve}/basis-test.js            | 4 ++--
+ test/{ => curve}/basisClosed-test.js      | 4 ++--
+ test/{ => curve}/basisOpen-test.js        | 4 ++--
+ test/{ => curve}/bundle-test.js           | 4 ++--
+ test/{ => curve}/cardinal-test.js         | 4 ++--
+ test/{ => curve}/cardinalClosed-test.js   | 4 ++--
+ test/{ => curve}/cardinalOpen-test.js     | 4 ++--
+ test/{ => curve}/catmullRom-test.js       | 4 ++--
+ test/{ => curve}/catmullRomClosed-test.js | 4 ++--
+ test/{ => curve}/catmullRomOpen-test.js   | 4 ++--
+ test/{ => curve}/linear-test.js           | 4 ++--
+ test/{ => curve}/linearClosed-test.js     | 4 ++--
+ test/{ => curve}/monotone-test.js         | 4 ++--
+ test/{ => curve}/natural-test.js          | 4 ++--
+ test/{ => curve}/step-test.js             | 4 ++--
+ test/{ => curve}/stepAfter-test.js        | 4 ++--
+ test/{ => curve}/stepBefore-test.js       | 4 ++--
+ 17 files changed, 34 insertions(+), 34 deletions(-)
+
+☕f50948b🔪2015-12-10 14:11:47 -0800🔪Mike Bostock🔪Expose index on pie arcs.🔪
+ README.md        |   1 +
+ src/pie.js       |   1 +
+ test/pie-test.js | 108 +++++++++++++++++++++++++++----------------------------
+ 3 files changed, 56 insertions(+), 54 deletions(-)
+
+☕efa4bd8🔪2015-12-10 10:18:36 -0800🔪Mike Bostock🔪Ensure stepBefore and stepAfter are symmetric.🔪If x is descending rather than ascending, stepBefore and stepAfter are reversed.
+
+ index.js                       |  4 +---
+ src/curve/step.js              | 30 ++++++++++++++++++++++++------
+ src/curve/stepAfter.js (gone)  | 37 -------------------------------------
+ src/curve/stepBefore.js (gone) | 37 -------------------------------------
+ test/stepAfter-test.js         |  4 ++--
+ test/stepBefore-test.js        |  4 ++--
+ 6 files changed, 29 insertions(+), 87 deletions(-)
+
+☕2d835f5🔪2015-12-18 10:32:25 -0800🔪Mike Bostock🔪Add dependency.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕29d883a🔪2015-12-18 10:23:35 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2851fa0🔪2015-12-18 10:20:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+
+☕9429ad8🔪2015-12-18 10:17:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 105 +++++++++++++++++++++++++++++++++++---------------------------
+ 1 file changed, 60 insertions(+), 45 deletions(-)
+
+☕160a2c1🔪2015-12-16 10:54:08 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕22fe18b🔪2015-12-16 10:35:52 -0800🔪Mike Bostock🔪Apply epsilon for more robust arcs.🔪Fixes mbostock/d3#2685.
+
+ src/arc.js              | 28 ++++++++++++++--------------
+ src/curve/catmullRom.js |  3 +--
+ src/math.js             |  1 +
+ 3 files changed, 16 insertions(+), 16 deletions(-)
+
+☕797eb9c🔪2015-12-16 09:27:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕8cba0c1🔪2015-12-08 11:35:58 -0800🔪Mike Bostock🔪The line generator doesn’t return objects.🔪
+ README.md | 8 --------
+ 1 file changed, 8 deletions(-)
+
+☕8c259ab🔪2015-12-08 09:05:42 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕02c4431🔪2015-12-08 08:40:53 -0800🔪Mike Bostock🔪Fix size of triangle.🔪Also add tests to verify symbol sizes.
+
+ img/triangle.png             | Bin 3738 -> 3787 bytes
+ package.json                 |   1 +
+ src/symbol/triangle.js       |   2 +-
+ test/inDelta.js (new)        |  10 ++++++++
+ test/polygonContext.js (new) |  12 ++++++++++
+ test/symbol-test.js          |  55 +++++++++++++++++++++++++++++++++++++++++--
+ 6 files changed, 77 insertions(+), 3 deletions(-)
+
+☕7691797🔪2015-12-07 22:17:55 -0800🔪Mike Bostock🔪Remove stroke from area-radial image.🔪
+ img/area-radial.png | Bin 19460 -> 10827 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕0c9674f🔪2015-12-07 22:14:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md            |   8 ++++++--
+ img/star.png (new)   | Bin 0 -> 4032 bytes
+ img/triangle.png     | Bin 3786 -> 3738 bytes
+ src/symbol.js        |   2 +-
+ test/symbols-test.js |   2 +-
+ 5 files changed, 8 insertions(+), 4 deletions(-)
+
+☕e2e5772🔪2015-12-07 22:11:43 -0800🔪Mike Bostock🔪Add star.🔪Also reposition triangle around its centroid.
+
+ index.js                 |  1 +
+ src/symbol.js            |  2 ++
+ src/symbol/star.js (new) | 24 ++++++++++++++++++++++++
+ src/symbol/triangle.js   |  9 ++++-----
+ test/symbol-test.js      | 16 +++++++++++++++-
+ test/symbols-test.js     |  1 +
+ 6 files changed, 47 insertions(+), 6 deletions(-)
+
+☕a17c98a🔪2015-12-07 21:15:33 -0800🔪Mike Bostock🔪Add wye.png.🔪
+ img/wye.png (new) | Bin 0 -> 3834 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕c35b230🔪2015-12-07 16:59:17 -0800🔪Mike Bostock🔪Add wye; remove triangleDown.🔪
+ README.md                            |  12 ++++++------
+ img/{triangleUp.png => triangle.png} | Bin
+ img/triangleDown.png (gone)          | Bin 3832 -> 0 bytes
+ index.js                             |   3 ++-
+ src/symbol.js                        |   7 ++++---
+ src/symbol/triangle.js               |  13 +------------
+ src/symbol/wye.js (new)              |  26 ++++++++++++++++++++++++++
+ test/symbol-test.js                  |  11 ++---------
+ test/symbols-test.js                 |   4 ++--
+ 9 files changed, 43 insertions(+), 33 deletions(-)
+
+☕ca6fd55🔪2015-12-04 13:30:51 -0800🔪Mike Bostock🔪Delete a word.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕218cee0🔪2015-12-04 13:28:29 -0800🔪Mike Bostock🔪Use the more conventional radial mapping.🔪The *x*- and *y*-values should be mapped to angle and radius, respectively.
+
+ README.md           | 36 ++++++++++++++++++------------------
+ src/curve/radial.js |  2 +-
+ src/radialArea.js   | 12 ++++++------
+ src/radialLine.js   |  4 ++--
+ 4 files changed, 27 insertions(+), 27 deletions(-)
+
+☕058675a🔪2015-12-04 13:23:07 -0800🔪Mike Bostock🔪Update radial area image.🔪
+ img/area-radial.png | Bin 13110 -> 19460 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕ce28e96🔪2015-12-04 13:22:12 -0800🔪Mike Bostock🔪Allow closed curves to be used with areas.🔪
+ README.md                     |  6 ++----
+ src/curve/basisClosed.js      |  3 +++
+ src/curve/cardinalClosed.js   |  3 +++
+ src/curve/catmullRomClosed.js |  3 +++
+ src/curve/linearClosed.js     |  4 ++++
+ src/descending.js (new)       |  3 +++
+ src/identity.js (new)         |  3 +++
+ src/noop.js (new)             |  1 +
+ src/pie.js                    | 10 ++--------
+ 9 files changed, 24 insertions(+), 12 deletions(-)
+
+☕e74736d🔪2015-12-04 13:12:23 -0800🔪Mike Bostock🔪Add radial images.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕82920d9🔪2015-12-04 13:11:42 -0800🔪Mike Bostock🔪Fix radialArea.{radius,angle}.🔪
+ README.md                 |  24 ++++++++++--------------
+ img/area-radial.png (new) | Bin 0 -> 13110 bytes
+ img/line-radial.png (new) | Bin 0 -> 13042 bytes
+ src/area.js               |   4 ++--
+ src/radialArea.js         |   1 -
+ src/radialLine.js         |   1 -
+ 6 files changed, 12 insertions(+), 18 deletions(-)
+
+☕021da45🔪2015-12-04 12:52:06 -0800🔪Mike Bostock🔪Add radial documentation.🔪
+ README.md | 68 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 68 insertions(+)
+
+☕0633d65🔪2015-12-04 11:12:49 -0800🔪Mike Bostock🔪Radial line and area.🔪Fixes #25. Fixes #26.
+
+ index.js                      |  1 +
+ src/area.js                   |  3 +--
+ src/curve/basis.js            |  8 +++-----
+ src/curve/basisClosed.js      |  8 +++-----
+ src/curve/basisOpen.js        |  8 +++-----
+ src/curve/bind.js             |  5 +++--
+ src/curve/bundle.js           | 12 +++++-------
+ src/curve/cardinal.js         |  8 +++-----
+ src/curve/cardinalClosed.js   |  8 +++-----
+ src/curve/cardinalOpen.js     |  8 +++-----
+ src/curve/catmullRom.js       | 12 +++++-------
+ src/curve/catmullRomClosed.js | 12 +++++-------
+ src/curve/catmullRomOpen.js   | 12 +++++-------
+ src/curve/linear.js           |  8 +++-----
+ src/curve/linearClosed.js     |  8 +++-----
+ src/curve/monotone.js         |  8 +++-----
+ src/curve/natural.js          |  8 +++-----
+ src/curve/radial.js (new)     | 36 ++++++++++++++++++++++++++++++++++++
+ src/curve/step.js             |  8 +++-----
+ src/curve/stepAfter.js        |  8 +++-----
+ src/curve/stepBefore.js       |  8 +++-----
+ src/line.js                   |  3 +--
+ src/radialArea.js (new)       | 24 ++++++++++++++++++++++++
+ src/radialLine.js             | 41 +++++++++--------------------------------
+ 24 files changed, 134 insertions(+), 131 deletions(-)
+
+☕b3cdcea🔪2015-12-04 10:18:18 -0800🔪Mike Bostock🔪Reuse line implementation for radialLine.🔪Also consolidate a few mathematical constants.
+
+ src/arc.js           | 11 ++++-----
+ src/math.js (new)    |  3 +++
+ src/pie.js           |  3 +--
+ src/radialLine.js    | 64 ++++++++++++++++------------------------------------
+ src/symbol/circle.js |  6 +++--
+ 5 files changed, 31 insertions(+), 56 deletions(-)
+
+☕c72a27c🔪2015-12-04 10:06:42 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ index.js                |  1 +
+ src/radialLine.js (new) | 68 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 69 insertions(+)
+
+☕98f7493🔪2015-12-02 21:17:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕841501e🔪2015-12-02 12:45:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 ++------------
+ 1 file changed, 2 insertions(+), 12 deletions(-)
+
+☕1d00d66🔪2015-12-02 12:31:56 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕110a367🔪2015-12-02 12:29:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕eebd7cd🔪2015-12-02 12:24:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕bf08734🔪2015-12-02 11:55:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a318157🔪2015-12-02 11:54:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕dd72b7b🔪2015-12-02 11:53:50 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e96d303🔪2015-12-02 11:52:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 50 ++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 30 insertions(+), 20 deletions(-)
+
+☕bdd6f71🔪2015-12-02 11:22:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕ac32bb0🔪2015-12-02 10:53:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d359202🔪2015-12-02 10:52:45 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕565587f🔪2015-12-02 10:46:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕aea7a0f🔪2015-12-02 10:34:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 62 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 31 insertions(+), 31 deletions(-)
+
+☕bd63ea2🔪2015-12-02 10:34:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 62 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 31 insertions(+), 31 deletions(-)
+
+☕7ab039b🔪2015-12-02 10:32:53 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 61 ++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 30 insertions(+), 31 deletions(-)
+
+☕243b32a🔪2015-12-02 10:22:44 -0800🔪Mike Bostock🔪Change default bundle β to 0.85.🔪
+ README.md           | 2 +-
+ src/curve/bundle.js | 4 ++--
+ test/bundle-test.js | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕4f9b183🔪2015-12-02 10:17:02 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2f96ec5🔪2015-12-02 09:52:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                  |  26 +++++++++++++++++++-------
+ img/circle.png (new)       | Bin 0 -> 3793 bytes
+ img/cross.png (new)        | Bin 0 -> 3405 bytes
+ img/diamond.png (new)      | Bin 0 -> 3876 bytes
+ img/square.png (new)       | Bin 0 -> 3337 bytes
+ img/triangleDown.png (new) | Bin 0 -> 3832 bytes
+ img/triangleUp.png (new)   | Bin 0 -> 3786 bytes
+ 7 files changed, 19 insertions(+), 7 deletions(-)
+
+☕2f65519🔪2015-12-02 09:40:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                     |  10 +++++-----
+ img/area-defined.png (new)    | Bin 0 -> 20175 bytes
+ img/area-difference.png (new) | Bin 0 -> 42566 bytes
+ img/area-stacked.png (new)    | Bin 0 -> 29057 bytes
+ img/area.png (new)            | Bin 0 -> 19884 bytes
+ img/donut.png (new)           | Bin 0 -> 23169 bytes
+ img/line-defined.png (new)    | Bin 0 -> 15976 bytes
+ img/line-gradient.png (new)   | Bin 0 -> 48342 bytes
+ img/line-multi.png (new)      | Bin 0 -> 60758 bytes
+ img/line.png (new)            | Bin 0 -> 23802 bytes
+ img/pie.png (new)             | Bin 0 -> 22951 bytes
+ 11 files changed, 5 insertions(+), 5 deletions(-)
+
+☕1666573🔪2015-12-02 09:33:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕74c7c60🔪2015-12-02 09:30:31 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕8f210ff🔪2015-12-02 09:10:09 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0207191🔪2015-12-02 09:09:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d463cf7🔪2015-12-02 08:51:33 -0800🔪Mike Bostock🔪Update README.🔪
+ img/centroid-annular-sector.png (new)  | Bin 0 -> 25560 bytes
+ img/centroid-circular-sector.png (new) | Bin 0 -> 21518 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+☕b2aeed7🔪2015-12-02 08:51:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕157ccde🔪2015-12-02 08:48:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                            |   6 +++++-
+ img/padded-annular-sector.png (new)  | Bin 0 -> 25735 bytes
+ img/padded-circular-sector.png (new) | Bin 0 -> 25232 bytes
+ img/rounded-annular-sector.png       | Bin 51982 -> 36091 bytes
+ img/rounded-circular-sector.png      | Bin 44026 -> 26431 bytes
+ 5 files changed, 5 insertions(+), 1 deletion(-)
+
+☕2e60043🔪2015-12-02 08:44:58 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md                             |   4 ++--
+ img/rounded-annular-sector.png (new)  | Bin 0 -> 51982 bytes
+ img/rounded-circular-sector.png (new) | Bin 0 -> 44026 bytes
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+☕c886ac5🔪2015-12-02 08:40:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕93b3b23🔪2015-12-02 08:36:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕083aa1a🔪2015-12-02 08:33:34 -0800🔪Mike Bostock🔪Self-host README images.🔪
+ README.md | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+☕c41b732🔪2015-12-02 08:32:54 -0800🔪Mike Bostock🔪Self-host README images.🔪
+ README.md | 40 +++++++++++++++++-----------------------
+ 1 file changed, 17 insertions(+), 23 deletions(-)
+
+☕f2f5e62🔪2015-12-02 08:31:52 -0800🔪Mike Bostock🔪Self-host README images.🔪
+ README.md                      |   2 +-
+ img/basis.png (new)            | Bin 0 -> 8255 bytes
+ img/basisClosed.png (new)      | Bin 0 -> 12580 bytes
+ img/basisOpen.png (new)        | Bin 0 -> 10575 bytes
+ img/bundle.png (new)           | Bin 0 -> 24595 bytes
+ img/cardinal.png (new)         | Bin 0 -> 23770 bytes
+ img/cardinalClosed.png (new)   | Bin 0 -> 33705 bytes
+ img/cardinalOpen.png (new)     | Bin 0 -> 23842 bytes
+ img/catmullRom.png (new)       | Bin 0 -> 24281 bytes
+ img/catmullRomClosed.png (new) | Bin 0 -> 38885 bytes
+ img/catmullRomOpen.png (new)   | Bin 0 -> 23488 bytes
+ img/linear.png (new)           | Bin 0 -> 7914 bytes
+ img/linearClosed.png (new)     | Bin 0 -> 10773 bytes
+ img/monotone.png (new)         | Bin 0 -> 8711 bytes
+ img/natural.png (new)          | Bin 0 -> 8866 bytes
+ img/step.png (new)             | Bin 0 -> 5819 bytes
+ img/stepAfter.png (new)        | Bin 0 -> 6308 bytes
+ img/stepBefore.png (new)       | Bin 0 -> 6454 bytes
+ 18 files changed, 1 insertion(+), 1 deletion(-)
+
+☕5f50da5🔪2015-12-01 21:26:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+
+☕595a5f9🔪2015-12-01 20:51:34 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕1f460b9🔪2015-12-01 20:50:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕58e3256🔪2015-12-01 17:23:41 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8d246a7🔪2015-12-01 17:22:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕804121d🔪2015-12-01 17:22:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb37a89🔪2015-12-01 17:19:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕884aef7🔪2015-12-01 17:19:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕5dbecb0🔪2015-12-01 17:13:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 95 +++++++++++++++++++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 77 insertions(+), 18 deletions(-)
+
+☕9d1561c🔪2015-12-01 14:24:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕511103d🔪2015-12-01 14:23:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0dbc749🔪2015-12-01 14:22:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 +++++++++-----------
+ 1 file changed, 9 insertions(+), 11 deletions(-)
+
+☕a008378🔪2015-12-01 13:58:15 -0800🔪Mike Bostock🔪Rename curveCurry to curveBind.🔪
+ src/area.js                     | 4 ++--
+ src/curve/{curry.js => bind.js} | 0
+ src/line.js                     | 4 ++--
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+☕5d4be25🔪2015-12-01 13:52:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 72 +++++++++++++++++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 63 insertions(+), 9 deletions(-)
+
+☕5ccab32🔪2015-12-01 12:53:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕8d7b730🔪2015-12-01 11:26:52 -0800🔪Mike Bostock🔪Don’t allow |endAngle - startAngle| > τ.🔪
+ src/pie.js       |  2 +-
+ test/pie-test.js | 21 +++++++++++++++++++++
+ 2 files changed, 22 insertions(+), 1 deletion(-)
+
+☕576a1ef🔪2015-12-01 10:00:21 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕25f89b0🔪2015-11-29 21:12:31 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕2ee1a75🔪2015-11-29 21:11:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕bb153d4🔪2015-11-29 21:10:36 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕ffb3124🔪2015-11-28 14:26:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bd883db🔪2015-11-28 14:24:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f79ae94🔪2015-11-28 14:24:31 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a333105🔪2015-11-28 14:24:13 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕2837f07🔪2015-11-28 14:17:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a99819a🔪2015-11-28 14:15:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 42 ++++++++++++++++++++++++++++++------------
+ 1 file changed, 30 insertions(+), 12 deletions(-)
+
+☕3eb15db🔪2015-11-28 14:01:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 +++++++++++++++++++++++++++-------
+ 1 file changed, 27 insertions(+), 7 deletions(-)
+
+☕6077e8b🔪2015-11-28 13:46:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ba9cdd1🔪2015-11-27 22:03:49 -0800🔪Mike Bostock🔪Tests for cubic monotone interpolation.🔪
+ src/curve/monotone.js       |  8 +++++---
+ test/monotone-test.js (new) | 49 +++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 54 insertions(+), 3 deletions(-)
+
+☕ed39d96🔪2015-11-27 21:14:38 -0800🔪Mike Bostock🔪Shorten one-sided slope definition.🔪
+ src/curve/monotone.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕63d3767🔪2015-11-27 21:06:56 -0800🔪Mike Bostock🔪Fixes for duplicate x-values.🔪If the one-sided slope is undefined, or if one of the two sides of a two-sided
+slope is undefined, use the other slope. If there are coincident points, assume
+the slope is zero.
+
+ src/curve/monotone.js | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕23b8303🔪2015-11-28 03:34:47 +0200🔪Joachim Viide🔪Choose 2nd order derivatives to vanish at monotone curve boundaries🔪Monotone curve slopes at boundary points are now chosen so that the
+second-order derivatives vanish. This method is given in the paper "A
+Simple Method for Monotonic Interpolation in One Dimension", section
+2.2.
+
+ src/curve/monotone.js | 21 +++++++++++++--------
+ 1 file changed, 13 insertions(+), 8 deletions(-)
+
+☕b036267🔪2015-11-26 13:24:57 -0800🔪Mike Bostock🔪Minor tweaks.🔪
+ README.md             |  4 ++++
+ src/curve/monotone.js | 21 +++++++++------------
+ 2 files changed, 13 insertions(+), 12 deletions(-)
+
+☕4d91fbf🔪2015-11-24 03:18:16 +0200🔪Joachim Viide🔪Buffer only the last two points of monotone curves🔪Instead of buffering all the input points before generating the spline
+we only need to keep track of the two latest points and the slope at
+the earlier of them.
+
+ src/curve/monotone.js | 112 +++++++++++++++++++++++---------------------------
+ 1 file changed, 52 insertions(+), 60 deletions(-)
+
+☕e4bb48a🔪2015-11-22 15:20:38 +0200🔪Joachim Viide🔪Implement Steffen-style monotone curve🔪Implement monotone curve based on the following paper: Steffen, M.
+1990. A Simple Method for Monotonic Interpolation in One Dimension.
+Astronomy and Astrophysics, Vol. 239, NO. NOV(II), P. 443, 1990.
+
+ index.js              |   1 +
+ src/curve/monotone.js | 139 ++++++++++++++++++++++++++------------------------
+ 2 files changed, 74 insertions(+), 66 deletions(-)
+
+☕5a21ab2🔪2015-11-27 15:50:22 -0800🔪Mike Bostock🔪Use a default alpha of 0.5 for Catmull–Rom.🔪Centripetal splines have some nice properties: curves do not form cusps or self-
+intersections within curve segments. And, since Catmull–Rom with α = 0 is
+equivalent to cardinal with tension = 0, curve(catmullRom) and curve(cardinal)
+were previously equivalent. Now curve(catmullRom) is different and better!
+
+ README.md                     |  4 ++--
+ src/curve/catmullRom.js       |  6 +++---
+ src/curve/catmullRomClosed.js |  6 +++---
+ src/curve/catmullRomOpen.js   |  6 +++---
+ test/catmullRom-test.js       | 12 ++++++------
+ test/catmullRomClosed-test.js | 14 ++++++++++++--
+ test/catmullRomOpen-test.js   |  8 ++++----
+ 7 files changed, 33 insertions(+), 23 deletions(-)
+
+☕2afdf0c🔪2015-11-27 15:24:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed90981🔪2015-11-27 15:23:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕611e54e🔪2015-11-27 15:20:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕97536cb🔪2015-11-27 15:17:31 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 29 ++++++++++++++++++++---------
+ 1 file changed, 20 insertions(+), 9 deletions(-)
+
+☕99719f1🔪2015-11-27 15:08:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5e81b2c🔪2015-11-27 15:08:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕65d831a🔪2015-11-27 15:06:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 ++++++++++++++++++++++++++++--
+ 1 file changed, 28 insertions(+), 2 deletions(-)
+
+☕7d00054🔪2015-11-27 14:57:55 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕1d7cda4🔪2015-11-27 14:54:53 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕ef1308a🔪2015-11-27 14:53:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕b3180c2🔪2015-11-27 14:46:15 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕5125537🔪2015-11-27 14:44:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+☕05a6e51🔪2015-11-27 14:38:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f5ab894🔪2015-11-27 14:38:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕272ce8e🔪2015-11-27 14:38:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cfd6c25🔪2015-11-27 14:37:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7bf3ad7🔪2015-11-27 14:34:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1758684🔪2015-11-27 14:32:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕c54e7a9🔪2015-11-27 11:15:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕bd598ed🔪2015-11-27 11:12:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 +++++++++++++++++++++++++++-----
+ 1 file changed, 27 insertions(+), 5 deletions(-)
+
+☕6011e78🔪2015-11-27 11:05:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕08da7a3🔪2015-11-27 11:01:33 -0800🔪Mike Bostock🔪Use “generator” rather than “shape”.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕56db714🔪2015-11-26 13:20:12 -0800🔪Mike Bostock🔪Add tests for arc.centroid.🔪
+ test/arc-test.js | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+☕704bfca🔪2015-11-25 21:50:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ba46341🔪2015-11-25 21:50:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕36575b1🔪2015-11-25 21:49:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2a300b5🔪2015-11-25 21:48:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cc3ef8e🔪2015-11-25 21:46:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f6e8fda🔪2015-11-25 21:44:08 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e4b38f4🔪2015-11-25 21:41:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕127bfbf🔪2015-11-25 21:40:12 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕562874b🔪2015-11-25 21:39:24 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕718e012🔪2015-11-25 21:37:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+
+☕a7db163🔪2015-11-25 21:32:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+
+☕f1cb58a🔪2015-11-25 21:32:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+☕483be6c🔪2015-11-25 21:31:15 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+☕6452302🔪2015-11-25 21:28:21 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0f672af🔪2015-11-25 21:27:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3aa9a82🔪2015-11-25 21:27:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++++++++----
+ 1 file changed, 16 insertions(+), 4 deletions(-)
+
+☕8a26c1d🔪2015-11-25 21:24:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+☕1e5fdb3🔪2015-11-25 21:18:36 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10e1f98🔪2015-11-25 21:15:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕431c209🔪2015-11-25 21:14:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0fe45a6🔪2015-11-25 21:13:41 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+
+☕7a54dc2🔪2015-11-25 20:59:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 22 +++++++++++++++++++---
+ 1 file changed, 19 insertions(+), 3 deletions(-)
+
+☕de14333🔪2015-11-25 20:51:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a23a915🔪2015-11-25 20:51:23 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8447b74🔪2015-11-25 20:51:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b29eff0🔪2015-11-25 20:49:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕d84407f🔪2015-11-25 20:22:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕97ff9bd🔪2015-11-25 20:21:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕9f146c5🔪2015-11-25 17:36:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f2cf539🔪2015-11-25 17:33:24 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕16c2c58🔪2015-11-25 17:22:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+☕8febdc1🔪2015-11-25 17:14:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d4063b3🔪2015-11-25 17:08:33 -0800🔪Mike Bostock🔪Images?🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕288f78f🔪2015-11-25 16:49:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕344982d🔪2015-11-25 16:49:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕0dc3c8c🔪2015-11-25 16:41:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕7869a90🔪2015-11-25 16:40:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d91f9e7🔪2015-11-25 16:40:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b2150ac🔪2015-11-25 16:39:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕39e1d4d🔪2015-11-25 16:37:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+
+☕732d1c8🔪2015-11-25 15:03:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕957cdc2🔪2015-11-25 15:02:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕5d45b98🔪2015-11-25 15:02:02 -0800🔪Mike Bostock🔪Add pies to API reference.🔪
+ README.md | 51 ++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 44 insertions(+), 7 deletions(-)
+
+☕c1c62e5🔪2015-11-25 14:58:22 -0800🔪Mike Bostock🔪Tests for pie layout.🔪
+ src/pie.js             |   2 +-
+ test/arc-test.js       |  22 +++---
+ test/area-test.js      |  14 ++--
+ test/line-test.js      |   6 +-
+ test/pie-test.js (new) | 188 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 210 insertions(+), 22 deletions(-)
+
+☕2599be7🔪2015-11-25 12:23:00 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ index.js         |  1 +
+ src/pie.js (new) | 81 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 82 insertions(+)
+
+☕060b162🔪2015-11-25 13:53:25 -0800🔪Mike Bostock🔪Fix #35 - context and arguments to accessors.🔪
+ src/arc.js          | 22 +++++++--------
+ src/area.js         |  6 ++---
+ src/line.js         |  4 +--
+ src/symbol.js       |  4 +--
+ test/arc-test.js    | 77 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ test/area-test.js   | 49 ++++++++++++++++++++++++++++++++++
+ test/line-test.js   | 21 +++++++++++++++
+ test/symbol-test.js | 14 ++++++++++
+ 8 files changed, 179 insertions(+), 18 deletions(-)
+
+☕5162898🔪2015-11-23 15:58:47 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕771daec🔪2015-11-23 15:35:39 -0800🔪Mike Bostock🔪Fix #33 - more tests for rounded, padded arcs.🔪
+ test/arc-test.js | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+☕4194459🔪2015-11-23 15:32:38 -0800🔪Mike Bostock🔪Tests for padded arcs.🔪Also, don’t render the inner arc when an annular sector is collapsed.
+
+ src/arc.js       | 15 +++++++--------
+ test/arc-test.js | 36 ++++++++++++++++++++++++++++++++++++
+ 2 files changed, 43 insertions(+), 8 deletions(-)
+
+☕f73a4cf🔪2015-11-23 15:02:32 -0800🔪Mike Bostock🔪Tests for large rounded corners.🔪
+ test/arc-test.js | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+
+☕eb5f39b🔪2015-11-23 14:53:23 -0800🔪Mike Bostock🔪Regroup tests by curve.🔪
+ index.js                                           |  20 +-
+ src/curve/{basis-closed.js => basisClosed.js}      |   0
+ src/curve/{basis-open.js => basisOpen.js}          |   0
+ .../{cardinal-closed.js => cardinalClosed.js}      |   0
+ src/curve/{cardinal-open.js => cardinalOpen.js}    |   0
+ src/curve/{catmull-rom.js => catmullRom.js}        |   0
+ .../{catmull-rom-closed.js => catmullRomClosed.js} |   4 +-
+ .../{catmull-rom-open.js => catmullRomOpen.js}     |   4 +-
+ src/curve/{linear-closed.js => linearClosed.js}    |   0
+ src/curve/{step-after.js => stepAfter.js}          |   0
+ src/curve/{step-before.js => stepBefore.js}        |   0
+ test/area-test.js                                  | 130 +-----------
+ test/basis-test.js (new)                           |  22 ++
+ test/basisClosed-test.js (new)                     |  15 ++
+ test/basisOpen-test.js (new)                       |  26 +++
+ test/bundle-test.js (new)                          |  12 ++
+ test/cardinal-test.js (new)                        |  40 ++++
+ test/cardinalClosed-test.js (new)                  |  22 ++
+ test/cardinalOpen-test.js (new)                    |  40 ++++
+ test/catmullRom-test.js (new)                      |  50 +++++
+ test/catmullRomClosed-test.js (new)                |  32 +++
+ test/catmullRomOpen-test.js (new)                  |  50 +++++
+ test/line-test.js                                  | 232 ---------------------
+ test/linear-test.js (new)                          |  22 ++
+ test/linearClosed-test.js (new)                    |  13 ++
+ test/natural-test.js (new)                         |  24 +++
+ test/step-test.js (new)                            |  22 ++
+ test/stepAfter-test.js (new)                       |  22 ++
+ test/stepBefore-test.js (new)                      |  22 ++
+ 29 files changed, 457 insertions(+), 367 deletions(-)
+
+☕37223f9🔪2015-11-22 20:26:55 -0800🔪Mike Bostock🔪Fix empty arc segments on rounded circular sectors.🔪And add many more tests!
+
+ src/arc.js       |  10 ++--
+ test/arc-test.js | 138 ++++++++++++++++++++++++++++---------------------------
+ 2 files changed, 76 insertions(+), 72 deletions(-)
+
+☕4ed74d6🔪2015-11-21 16:27:55 -0800🔪Mike Bostock🔪Start to test rounded corners.🔪
+ test/arc-test.js | 237 +++++++++++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 178 insertions(+), 59 deletions(-)
+
+☕14a37e3🔪2015-11-20 16:27:44 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/arc.js | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕e73b5a0🔪2015-11-20 16:07:42 -0800🔪Mike Bostock🔪Cleaner.🔪
+ src/arc.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕8c8592a🔪2015-11-20 15:59:29 -0800🔪Mike Bostock🔪Don’t try to draw tiny rounded corners.🔪
+ src/arc.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4cfc810🔪2015-11-20 15:59:19 -0800🔪Mike Bostock🔪Fix moveTo without rounded corners.🔪
+ src/arc.js | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕86d12cf🔪2015-11-20 15:41:56 -0800🔪Mike Bostock🔪Inner rounded corners!🔪
+ src/arc.js | 102 ++++++++++++++++++-------------------------------------------
+ 1 file changed, 30 insertions(+), 72 deletions(-)
+
+☕0733804🔪2015-11-20 15:27:34 -0800🔪Mike Bostock🔪Remove defunct comments.🔪
+ src/arc.js | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+
+☕1909bcd🔪2015-11-20 15:23:41 -0800🔪Mike Bostock🔪Cleaner.🔪
+ src/arc.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕2facb62🔪2015-11-20 15:17:19 -0800🔪Mike Bostock🔪Cleaner rounder corners.🔪
+ src/arc.js | 141 ++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 70 insertions(+), 71 deletions(-)
+
+☕0e9e733🔪2015-11-20 15:00:38 -0800🔪Mike Bostock🔪Rounded corners for the outer ring.🔪
+ src/arc.js | 267 +++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 125 insertions(+), 142 deletions(-)
+
+☕3d4fbfe🔪2015-11-20 11:50:43 -0800🔪Mike Bostock🔪Implement padAngle and padRadius.🔪
+ package.json        |  2 +-
+ src/arc.js          | 69 ++++++++++++++++++++++++++++++++++++++++-------------
+ test/symbol-test.js |  4 ++--
+ 3 files changed, 55 insertions(+), 20 deletions(-)
+
+☕49973e6🔪2015-11-20 10:41:03 -0800🔪Mike Bostock🔪Document arc API.🔪
+ README.md  | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/arc.js | 28 ++++++----------------------
+ 2 files changed, 63 insertions(+), 22 deletions(-)
+
+☕42e7d4b🔪2015-11-20 10:32:51 -0800🔪Mike Bostock🔪Better tests.🔪And fix an extraneous line when drawing circles.
+
+ src/arc.js       |  7 +++---
+ test/arc-test.js | 71 ++++++++++++++++++++++++++++++++++++++++++++------------
+ 2 files changed, 59 insertions(+), 19 deletions(-)
+
+☕c37973e🔪2015-11-19 20:18:15 -0800🔪Mike Bostock🔪Only moveTo inner ring for annuli.🔪
+ src/arc.js       |  4 +++-
+ test/arc-test.js | 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 71 insertions(+), 3 deletions(-)
+
+☕fa99346🔪2015-11-19 20:04:50 -0800🔪Mike Bostock🔪Fix innerRadius check.🔪
+ src/arc.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8273942🔪2015-11-19 20:01:02 -0800🔪Mike Bostock🔪Fix annulus rendering.🔪
+ src/arc.js       | 8 ++++++--
+ test/arc-test.js | 6 ++++++
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+☕debc71a🔪2015-11-19 19:57:20 -0800🔪Mike Bostock🔪Normalize paths for testing.🔪
+ src/arc.js              |  17 ++++--
+ test/arc-test.js (new)  |  10 ++++
+ test/area-test.js       |  80 +++++++++++++-------------
+ test/line-test.js       | 150 ++++++++++++++++++++++++------------------------
+ test/pathEqual.js (new) |  22 +++++++
+ test/symbol-test.js     |  42 +++++++-------
+ 6 files changed, 182 insertions(+), 139 deletions(-)
+
+☕eadb185🔪2015-11-19 16:29:31 -0800🔪Mike Bostock🔪Wedges.🔪
+ src/arc.js | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕4f6cd4e🔪2015-11-19 16:20:54 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ index.js         |  14 ++-
+ package.json     |   2 +-
+ src/arc.js (new) | 305 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 312 insertions(+), 9 deletions(-)
+
+☕c9e1982🔪2015-11-20 09:25:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10485c6🔪2015-11-20 09:23:27 -0800🔪Mike Bostock🔪Remove “curve” and “symbol” prefixes.🔪It’s not necessary to prefix these symbols because they will be scoped to the
+d3-shape module, and it’s convenient to have short names.
+
+ README.md                       |  58 +++++++--------
+ index.js                        |  44 ++++++------
+ src/symbol.js                   |   2 +-
+ test/area-test.js               |  86 +++++++++++-----------
+ test/line-test.js               | 154 ++++++++++++++++++++--------------------
+ test/symbol-test.js             |  22 +++---
+ test/symbolTypes-test.js (gone) |  14 ----
+ test/symbols-test.js (new)      |  14 ++++
+ 8 files changed, 197 insertions(+), 197 deletions(-)
+
+☕0065ead🔪2015-11-19 13:23:13 -0800🔪Mike Bostock🔪Include name for debugging.🔪
+ src/constant.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fd6f6b5🔪2015-11-19 12:50:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕335a728🔪2015-11-19 11:39:33 -0800🔪Mike Bostock🔪Rename “interpolate” to “curve” and add prefixes.🔪
+ README.md                                        |  82 ++++++------
+ index.js                                         |  44 ++++---
+ src/area.js                                      |  34 ++---
+ src/{interpolate => curve}/basis-closed.js       |   0
+ src/{interpolate => curve}/basis-open.js         |   0
+ src/{interpolate => curve}/basis.js              |   0
+ src/{interpolate => curve}/bundle.js             |   0
+ src/{interpolate => curve}/cardinal-closed.js    |   0
+ src/{interpolate => curve}/cardinal-open.js      |   0
+ src/{interpolate => curve}/cardinal.js           |   0
+ src/{interpolate => curve}/catmull-rom-closed.js |   0
+ src/{interpolate => curve}/catmull-rom-open.js   |   0
+ src/{interpolate => curve}/catmull-rom.js        |   0
+ src/{interpolate => curve}/curry.js              |   0
+ src/{interpolate => curve}/linear-closed.js      |   0
+ src/{interpolate => curve}/linear.js             |   0
+ src/{interpolate => curve}/monotone.js           |   0
+ src/{interpolate => curve}/natural.js            |   0
+ src/{interpolate => curve}/step-after.js         |   0
+ src/{interpolate => curve}/step-before.js        |   0
+ src/{interpolate => curve}/step.js               |   0
+ src/line.js                                      |  24 ++--
+ test/area-test.js                                |  86 ++++++-------
+ test/line-test.js                                | 156 +++++++++++------------
+ test/symbol-test.js                              |  22 ++--
+ test/symbolTypes-test.js                         |  12 +-
+ 26 files changed, 231 insertions(+), 229 deletions(-)
+
+☕90918cf🔪2015-11-19 11:18:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac66e91🔪2015-11-19 11:12:45 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+☕0cb2d5f🔪2015-11-19 11:01:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕64a2f32🔪2015-11-19 10:59:50 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8c20cbe🔪2015-11-19 10:58:35 -0800🔪Mike Bostock🔪Curry optional interpolation parameters.🔪
+ README.md                             | 36 ++++++++----------
+ src/area.js                           |  6 ++-
+ src/interpolate/bundle.js             |  8 ++--
+ src/interpolate/cardinal-closed.js    |  5 +--
+ src/interpolate/cardinal-open.js      |  5 +--
+ src/interpolate/cardinal.js           |  5 +--
+ src/interpolate/catmull-rom-closed.js |  8 ++--
+ src/interpolate/catmull-rom-open.js   |  8 ++--
+ src/interpolate/catmull-rom.js        |  8 ++--
+ src/interpolate/curry.js (new)        | 10 +++++
+ src/line.js                           |  4 +-
+ test/area-test.js                     | 32 +++++++---------
+ test/line-test.js                     | 69 ++++++++++++++++-------------------
+ 13 files changed, 100 insertions(+), 104 deletions(-)
+
+☕719ee79🔪2015-11-19 09:29:20 -0800🔪Mike Bostock🔪Shorter.🔪
+ src/interpolate/bundle.js             | 5 ++---
+ src/interpolate/cardinal-closed.js    | 7 ++-----
+ src/interpolate/cardinal-open.js      | 7 ++-----
+ src/interpolate/cardinal.js           | 7 ++-----
+ src/interpolate/catmull-rom-closed.js | 7 +++----
+ src/interpolate/catmull-rom-open.js   | 7 +++----
+ src/interpolate/catmull-rom.js        | 7 +++----
+ 7 files changed, 17 insertions(+), 30 deletions(-)
+
+☕b33245d🔪2015-11-19 09:23:57 -0800🔪Mike Bostock🔪Simpler default instantiation.🔪
+ src/interpolate/bundle.js             |   1 +
+ src/interpolate/cardinal-closed.js    |   1 +
+ src/interpolate/cardinal-open.js      |   1 +
+ src/interpolate/cardinal.js           |   3 +-
+ src/interpolate/catmull-rom-closed.js |   1 +
+ src/interpolate/catmull-rom-open.js   |   1 +
+ src/interpolate/catmull-rom.js        |   1 +
+ test/area-test.js                     |  40 +++++++++++-
+ test/line-test.js                     | 117 ++++++++++++++++++++++++----------
+ 9 files changed, 127 insertions(+), 39 deletions(-)
+
+☕7f1c1d4🔪2015-11-18 21:18:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕9bf40b4🔪2015-11-18 21:17:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 45 +++++++++++++++++++++++++++++++--------------
+ 1 file changed, 31 insertions(+), 14 deletions(-)
+
+☕722db72🔪2015-11-18 21:13:57 -0800🔪Mike Bostock🔪Symbolic line and area interpolation.🔪
+ README.md                   |  68 +++++++++++++++++++++++
+ index.js                    |  17 ++++++
+ src/area.js                 |  28 +---------
+ src/interpolate/cardinal.js |   2 +
+ src/line.js                 |  40 +-------------
+ test/area-test.js           |  45 +++++++--------
+ test/line-test.js           | 131 ++++++++++++++++++--------------------------
+ 7 files changed, 166 insertions(+), 165 deletions(-)
+
+☕b0f1f5b🔪2015-11-18 20:56:00 -0800🔪Mike Bostock🔪Inline constants.🔪
+ src/area.js     | 6 +++---
+ src/constant.js | 8 --------
+ src/line.js     | 4 ++--
+ 3 files changed, 5 insertions(+), 13 deletions(-)
+
+☕84e82f1🔪2015-11-18 20:54:46 -0800🔪Mike Bostock🔪Inline constants.🔪
+ src/symbol.js | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+
+☕5dd14d0🔪2015-11-18 20:51:51 -0800🔪Mike Bostock🔪Symbolic definition of symbol types.🔪Related #23.
+
+ index.js                 |  5 +++++
+ src/symbol.js            | 27 +++++++++------------------
+ src/symbol/circle.js     | 10 ++++++----
+ src/symbol/cross.js      | 32 +++++++++++++++++---------------
+ src/symbol/diamond.js    | 18 ++++++++++--------
+ src/symbol/square.js     | 10 ++++++----
+ src/symbol/triangle.js   | 32 ++++++++++++++++++--------------
+ test/symbol-test.js      | 28 +++++++++++-----------------
+ test/symbolTypes-test.js | 12 ++++++------
+ 9 files changed, 88 insertions(+), 86 deletions(-)
+
+☕be0c327🔪2015-11-18 13:11:33 -0800🔪Mike Bostock🔪Fix position of square symbol.🔪
+ src/symbol/square.js | 2 +-
+ test/symbol-test.js  | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕c7d1fd4🔪2015-11-18 12:47:32 -0800🔪Mike Bostock🔪Symbol tests.🔪
+ test/symbol-test.js            | 65 +++++++++++++++++++++++++++++++++++++++++-
+ test/symbolTypes-test.js (new) | 14 +++++++++
+ 2 files changed, 78 insertions(+), 1 deletion(-)
+
+☕cf6fa87🔪2015-11-18 12:33:40 -0800🔪Mike Bostock🔪Working symbols.🔪
+ src/symbol.js          |  1 +
+ src/symbol/circle.js   |  7 +++----
+ src/symbol/cross.js    | 26 +++++++++++++-------------
+ src/symbol/diamond.js  |  2 +-
+ src/symbol/square.js   |  2 +-
+ src/symbol/triangle.js |  4 ++--
+ 6 files changed, 21 insertions(+), 21 deletions(-)
+
+☕1ff2632🔪2015-11-18 12:10:26 -0800🔪Mike Bostock🔪Fix #8 - add symbol shape.🔪
+ README.md                    | 59 +++++++++++++++++++++++++++++++++-----------
+ index.js                     |  1 +
+ src/area.js                  | 40 +++++++++++++++---------------
+ src/line.js                  | 26 +++++++++----------
+ src/symbol.js (new)          | 59 ++++++++++++++++++++++++++++++++++++++++++++
+ src/symbol/circle.js (new)   |  6 +++++
+ src/symbol/cross.js (new)    | 16 ++++++++++++
+ src/symbol/diamond.js (new)  | 12 +++++++++
+ src/symbol/square.js (new)   |  5 ++++
+ src/symbol/triangle.js (new) | 19 ++++++++++++++
+ test/symbol-test.js (new)    | 11 +++++++++
+ 11 files changed, 207 insertions(+), 47 deletions(-)
+
+☕91ac1fd🔪2015-11-18 11:37:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2c28a48🔪2015-11-18 11:34:38 -0800🔪Mike Bostock🔪Fix #23 - always promote accessors. Fix #24 - a more explicit area.[xy]0 = area.[xy]1.🔪
+ src/area.js       | 47 ++++++++++++++++-------------------------------
+ src/line.js       | 19 ++++++++-----------
+ test/area-test.js | 45 ++++++++++++++++++++++++++++++++++++++++++---
+ test/line-test.js |  6 +++---
+ 4 files changed, 69 insertions(+), 48 deletions(-)
+
+☕048ba33🔪2015-11-18 11:01:38 -0800🔪Mike Bostock🔪Catmull–Rom area tests.🔪
+ test/area-test.js | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+☕83d86b3🔪2015-11-18 10:55:49 -0800🔪Mike Bostock🔪Wait for three points with open cubic Hermite splines.🔪Even though we know the location of the first output point after receiving two
+input points, we don’t know the first segment until we’ve received four input
+points. Rather than generate the first output point after receiving two points
+and doing nothing with upon receiving the third point, we now do nothing after
+receiving two points and generate the first output point upon receiving the
+third point.
+
+ src/interpolate/cardinal-open.js    |  6 +++---
+ src/interpolate/catmull-rom-open.js |  6 +++---
+ test/area-test.js                   | 10 ++++++++++
+ test/line-test.js                   |  6 +++---
+ 4 files changed, 19 insertions(+), 9 deletions(-)
+
+☕2e3e2b6🔪2015-11-18 10:28:45 -0800🔪Mike Bostock🔪Area basis-open test.🔪
+ test/area-test.js | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+☕ac28c4e🔪2015-11-18 10:21:32 -0800🔪Mike Bostock🔪More area interpolators.🔪
+ src/interpolate/basis-closed.js       | 12 ++++++------
+ src/interpolate/basis-open.js         | 21 ++++++++++++++-------
+ src/interpolate/cardinal-closed.js    | 12 ++++++------
+ src/interpolate/cardinal-open.js      | 24 ++++++++++++++----------
+ src/interpolate/catmull-rom-closed.js | 14 +++++++-------
+ src/interpolate/catmull-rom-open.js   | 26 +++++++++++++++-----------
+ src/interpolate/linear-closed.js      |  8 ++++----
+ 7 files changed, 66 insertions(+), 51 deletions(-)
+
+☕8c66fe9🔪2015-11-18 10:20:19 -0800🔪Mike Bostock🔪Don’t create empty area segments.🔪Interpolators should handle empty areas, but it’s trivial to avoid them.
+
+ src/area.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕288f376🔪2015-11-18 10:05:00 -0800🔪Mike Bostock🔪More area interpolators.🔪
+ src/interpolate/basis.js | 21 ++++++++++++++-------
+ test/area-test.js        |  9 +++++++++
+ 2 files changed, 23 insertions(+), 7 deletions(-)
+
+☕d5a9b7d🔪2015-11-18 10:03:02 -0800🔪Mike Bostock🔪More area interpolators.🔪
+ src/interpolate/cardinal.js    | 21 ++++++++++++++-------
+ src/interpolate/catmull-rom.js | 23 +++++++++++++++--------
+ src/interpolate/linear.js      |  8 ++------
+ src/interpolate/natural.js     | 12 ++++--------
+ src/interpolate/step-after.js  |  8 ++------
+ src/interpolate/step-before.js |  8 ++------
+ src/interpolate/step.js        | 13 +++----------
+ test/area-test.js              | 10 ++++++++++
+ 8 files changed, 52 insertions(+), 51 deletions(-)
+
+☕a8ca446🔪2015-11-18 09:52:24 -0800🔪Mike Bostock🔪More area interpolators.🔪
+ src/area.js                    |  7 ++-----
+ src/interpolate/linear.js      |  9 ++++++---
+ src/interpolate/natural.js     | 28 ++++++++++++++++++++--------
+ src/interpolate/step-after.js  | 21 ++++++++++++++++-----
+ src/interpolate/step-before.js | 21 ++++++++++++++++-----
+ src/interpolate/step.js        | 26 +++++++++++++++++++-------
+ test/area-test.js              | 37 +++++++++++++++++++++++++++++++++++++
+ 7 files changed, 116 insertions(+), 33 deletions(-)
+
+☕08c618d🔪2015-11-18 09:03:55 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕08dc1e2🔪2015-11-18 09:00:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+☕aa323b5🔪2015-11-18 08:51:47 -0800🔪Mike Bostock🔪Checkpoint documentation.🔪
+ README.md | 102 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 101 insertions(+), 1 deletion(-)
+
+☕cbabe58🔪2015-11-17 16:19:51 -0800🔪Mike Bostock🔪Clockwise areas.🔪
+ src/area.js       | 12 ++++++------
+ test/area-test.js |  8 ++++----
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕371a38b🔪2015-11-17 15:50:03 -0800🔪Mike Bostock🔪Fixes.🔪
+ src/area.js               |  2 +-
+ src/interpolate/linear.js |  7 ++++---
+ test/area-test.js         | 11 ++++++++++-
+ 3 files changed, 15 insertions(+), 5 deletions(-)
+
+☕dd75e04🔪2015-11-17 15:39:37 -0800🔪Mike Bostock🔪Shorter.🔪
+ src/interpolate/linear.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed9a72e🔪2015-11-17 15:24:33 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ index.js                  |   1 +
+ src/area.js (new)         | 135 ++++++++++++++++++++++++++++++++++++++++++++++
+ src/constant.js (new)     |  13 +++++
+ src/interpolate/linear.js |  17 ++++--
+ src/line.js               |  74 ++++++++++---------------
+ src/point.js (new)        |   7 +++
+ test/area-test.js (new)   |  14 +++++
+ 7 files changed, 209 insertions(+), 52 deletions(-)
+
+☕9b9ff03🔪2015-11-16 17:43:24 -0800🔪Mike Bostock🔪Rename “cubic” to “natural”.🔪Nearly all of these splines are cubic, so “natural” is more specific.
+
+ src/interpolate/{cubic.js => natural.js} | 10 +++++-----
+ src/line.js                              |  4 ++--
+ test/line-test.js                        | 10 ++++++++++
+ 3 files changed, 17 insertions(+), 7 deletions(-)
+
+☕1ec9a62🔪2015-11-16 17:38:55 -0800🔪Mike Bostock🔪Combine line segments when n = 2.🔪
+ src/interpolate/basis.js | 4 ++--
+ test/line-test.js        | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕923ac65🔪2015-11-16 17:23:43 -0800🔪Mike Bostock🔪Slightly shorter.🔪
+ src/interpolate/cardinal.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕abb1271🔪2015-11-16 17:15:57 -0800🔪Mike Bostock🔪Simplify.🔪
+ src/interpolate/cardinal.js | 25 ++-----------------------
+ 1 file changed, 2 insertions(+), 23 deletions(-)
+
+☕90da772🔪2015-11-16 17:02:19 -0800🔪Mike Bostock🔪Fix #20 - handle coincident points.🔪
+ src/interpolate/catmull-rom-closed.js |  4 +--
+ src/interpolate/catmull-rom-open.js   |  4 +--
+ src/interpolate/catmull-rom.js        | 67 ++++++++++++++---------------------
+ 3 files changed, 30 insertions(+), 45 deletions(-)
+
+☕ba5b6e7🔪2015-11-16 16:34:59 -0800🔪Mike Bostock🔪Consolidate duplicate code. Related #21.🔪
+ src/interpolate/cardinal-closed.js | 21 +++++++--------------
+ src/interpolate/cardinal-open.js   | 21 +++++++--------------
+ src/interpolate/cardinal.js        | 30 ++++++++++++++++--------------
+ 3 files changed, 30 insertions(+), 42 deletions(-)
+
+☕9833bc2🔪2015-11-16 16:28:45 -0800🔪Mike Bostock🔪Consolidate some duplicate code. Related #21.🔪
+ src/interpolate/basis.js              | 16 ++++++-------
+ src/interpolate/catmull-rom-closed.js | 28 ++++-------------------
+ src/interpolate/catmull-rom-open.js   | 28 ++++-------------------
+ src/interpolate/catmull-rom.js        | 42 +++++++++++++++--------------------
+ 4 files changed, 34 insertions(+), 80 deletions(-)
+
+☕59ec564🔪2015-11-16 16:03:28 -0800🔪Mike Bostock🔪Fix #19 - open and closed Catmull–Rom.🔪Also, use cardinal when alpha is zero, because it’s slightly faster.
+
+ src/interpolate/catmull-rom-closed.js (new) | 86 +++++++++++++++++++++++++++++
+ src/interpolate/catmull-rom-open.js (new)   | 73 ++++++++++++++++++++++++
+ src/interpolate/catmull-rom.js              |  7 ++-
+ src/line.js                                 |  4 ++
+ test/line-test.js                           | 60 ++++++++++++++++++++
+ 5 files changed, 228 insertions(+), 2 deletions(-)
+
+☕9364b14🔪2015-11-13 20:59:17 -0800🔪Mike Bostock🔪Fix #17 - add bundle interpolation.🔪
+ src/interpolate/bundle.js | 63 +++++++++++++++++++++++++++++++++--------------
+ src/line.js               |  2 ++
+ 2 files changed, 47 insertions(+), 18 deletions(-)
+
+☕fb1ec8f🔪2015-11-13 19:37:18 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕93fba29🔪2015-11-13 15:47:25 -0800🔪Mike Bostock🔪Fix #18 - Catmull–Rom spline interpolation!🔪
+ README.md                            |  4 +-
+ src/interpolate/catmull-rom.js (new) | 95 ++++++++++++++++++++++++++++++++++++
+ src/line.js                          |  2 +
+ 3 files changed, 99 insertions(+), 2 deletions(-)
+
+☕4a695bb🔪2015-11-13 15:05:25 -0800🔪Mike Bostock🔪Fix first and last segment of cardinal splines.🔪Repeat the Bézier segment control point, not the Cardinal control point.
+
+ src/interpolate/cardinal-closed.js |  2 +-
+ src/interpolate/cardinal.js        | 16 ++++++++++------
+ src/line.js                        |  8 ++++----
+ test/line-test.js                  | 12 ++++++------
+ 4 files changed, 21 insertions(+), 17 deletions(-)
+
+☕a100fd9🔪2015-11-13 13:46:41 -0800🔪Mike Bostock🔪Remove defunct tension accessor.🔪
+ src/line.js       | 8 --------
+ test/line-test.js | 1 -
+ 2 files changed, 9 deletions(-)
+
+☕e86f45e🔪2015-11-13 13:22:16 -0800🔪Mike Bostock🔪Note.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a8cae07🔪2015-11-13 13:20:03 -0800🔪Mike Bostock🔪Fix #14 - natural cubic spline interpolation.🔪
+ src/interpolate/cubic.js (new) | 59 ++++++++++++++++++++++++++++++++++++++++++
+ src/line.js                    |  2 ++
+ 2 files changed, 61 insertions(+)
+
+☕a56b4ef🔪2015-11-12 21:35:55 -0800🔪Mike Bostock🔪Remove unused fields.🔪
+ src/interpolate/cardinal-closed.js | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕2f9295f🔪2015-11-12 21:33:57 -0800🔪Mike Bostock🔪Fix #4 - cardinal-closed interpolation.🔪
+ src/interpolate/cardinal-closed.js (new) | 61 ++++++++++++++++++++++++++++++++
+ src/line.js                              |  2 ++
+ test/line-test.js                        | 10 ++++++
+ 3 files changed, 73 insertions(+)
+
+☕2f32c45🔪2015-11-12 21:14:10 -0800🔪Mike Bostock🔪Fix basis interpolation.🔪
+ src/interpolate/basis-closed.js | 42 +++++++++++++++++++++++++----------------
+ src/interpolate/basis-open.js   | 17 ++++++++++++-----
+ src/interpolate/basis.js        | 19 ++++++++++++-------
+ test/line-test.js               |  6 +++---
+ 4 files changed, 53 insertions(+), 31 deletions(-)
+
+☕443978e🔪2015-11-12 20:55:15 -0800🔪Mike Bostock🔪Fix #16 - tension is cardinal-specific.🔪
+ README.md                         |  2 +-
+ src/interpolate/basis-closed.js   |  8 ++++--
+ src/interpolate/basis-open.js     |  8 ++++--
+ src/interpolate/basis.js          |  8 ++++--
+ src/interpolate/cardinal-open.js  | 10 +++++--
+ src/interpolate/cardinal.js       | 10 +++++--
+ src/interpolate/hermite.js (gone) | 47 -------------------------------
+ src/interpolate/linear-closed.js  |  6 +++-
+ src/interpolate/linear.js         |  6 +++-
+ src/interpolate/step-after.js     |  6 +++-
+ src/interpolate/step-before.js    |  6 +++-
+ src/interpolate/step.js           |  8 ++++--
+ src/line.js                       | 40 +++++++++++++--------------
+ test/line-test.js                 | 58 +++++++++++++++++++++++++++------------
+ 14 files changed, 120 insertions(+), 103 deletions(-)
+
+☕9cdb143🔪2015-11-12 20:40:46 -0800🔪Mike Bostock🔪Fix cardinal interpolation.🔪The tension parameter was all wrong.
+
+ src/interpolate/cardinal-open.js | 39 +++++++++++++++++++++++++--------------
+ src/interpolate/cardinal.js      | 12 ++++++------
+ src/interpolate/step-after.js    |  2 +-
+ src/interpolate/step-before.js   |  2 +-
+ src/interpolate/step.js          |  2 +-
+ test/line-test.js                | 22 +++++++++++-----------
+ 6 files changed, 45 insertions(+), 34 deletions(-)
+
+☕1f22e1e🔪2015-11-12 17:13:27 -0800🔪Mike Bostock🔪Fix interpolation state.🔪
+ README.md                        |   2 +-
+ src/interpolate/cardinal.js      | 101 ++++++++++++++-------------------------
+ src/interpolate/linear-closed.js |  13 +++--
+ src/interpolate/linear.js        |  16 +++++--
+ src/interpolate/step-after.js    |  24 ++++++----
+ src/interpolate/step-before.js   |  24 ++++++----
+ src/interpolate/step.js          |  22 +++++----
+ src/line.js                      |   4 +-
+ test/line-test.js                |  42 ++++++++++------
+ 9 files changed, 133 insertions(+), 115 deletions(-)
+
+☕14ce083🔪2015-11-12 13:22:21 -0800🔪Mike Bostock🔪Update d3-path.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa73b76🔪2015-11-12 09:30:17 -0800🔪Mike Bostock🔪Configurable tension.🔪
+ README.md                        |  2 ++
+ src/interpolate/cardinal-open.js |  2 +-
+ src/interpolate/cardinal.js      |  2 +-
+ src/line.js                      | 22 +++++++-----
+ test/line-test.js                | 75 ++++++++++++++++++++++++++++++++--------
+ 5 files changed, 79 insertions(+), 24 deletions(-)
+
+☕8ada2a4🔪2015-11-12 09:12:42 -0800🔪Mike Bostock🔪Move things around a bit.🔪
+ src/interpolate/basis-closed.js (new)  |  37 +++++++++++
+ src/interpolate/basis-open.js (new)    |  23 +++++++
+ src/interpolate/basis.js               |  94 ++++++---------------------
+ src/interpolate/cardinal-open.js (new) |  31 +++++++++
+ src/interpolate/cardinal.js            | 114 +++++++++++++--------------------
+ src/interpolate/linear-closed.js (new) |  14 ++++
+ src/interpolate/linear.js              |  30 +++------
+ src/interpolate/step-after.js (new)    |  20 ++++++
+ src/interpolate/step-before.js (new)   |  20 ++++++
+ src/interpolate/step.js                |  82 ++++++------------------
+ src/line.js                            |  69 +++++++++++---------
+ test/line-test.js                      |   2 +-
+ 12 files changed, 279 insertions(+), 257 deletions(-)
+
+☕a40626a🔪2015-11-11 11:34:07 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕fdad0c3🔪2015-11-04 13:51:13 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕6d15e01🔪2015-11-03 23:53:09 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕7226ee9🔪2015-07-07 08:25:20 -0700🔪Mike Bostock🔪Open cardinal fixes.🔪
+ src/interpolate/cardinal.js |  4 +++-
+ test/line-test.js           | 20 ++++++++++++++++++++
+ 2 files changed, 23 insertions(+), 1 deletion(-)
+
+☕52a483b🔪2015-07-07 08:13:25 -0700🔪Mike Bostock🔪Fix basisClosed.lineEnd.🔪
+ src/interpolate/basis.js | 15 ++++++++++++---
+ test/line-test.js        |  4 ++--
+ 2 files changed, 14 insertions(+), 5 deletions(-)
+
+☕0d833be🔪2015-07-07 07:56:38 -0700🔪Mike Bostock🔪Consolidate basis code.🔪
+ src/interpolate/basis.js | 23 ++++++++++++++++++-----
+ test/line-test.js        |  2 +-
+ 2 files changed, 19 insertions(+), 6 deletions(-)
+
+☕5f91a4f🔪2015-07-07 07:36:35 -0700🔪Mike Bostock🔪Open cardinal spline interpolation.🔪
+ src/interpolate/cardinal.js | 30 ++++++++++++++++++++++++++++++
+ src/line.js                 |  4 ++--
+ 2 files changed, 32 insertions(+), 2 deletions(-)
+
+☕b256441🔪2015-07-06 22:55:48 -0700🔪Mike Bostock🔪Checkpoint cardinal spline interpolation.🔪
+ src/interpolate/cardinal.js | 109 ++++++++++++++++++++++++++++++--------------
+ src/line.js                 |   3 +-
+ 2 files changed, 78 insertions(+), 34 deletions(-)
+
+☕af2a798🔪2015-07-06 17:29:55 -0700🔪Mike Bostock🔪Slightly cleaner.🔪
+ src/line.js | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+
+☕df4167d🔪2015-07-06 17:14:01 -0700🔪Mike Bostock🔪Closed basis interpolation.🔪
+ src/interpolate/basis.js | 64 +++++++++++++++++++++++-------------------------
+ src/line.js              |  4 +--
+ test/line-test.js        | 11 +++++++++
+ 3 files changed, 43 insertions(+), 36 deletions(-)
+
+☕738d091🔪2015-07-06 15:43:40 -0700🔪Mike Bostock🔪Open basis interpolation.🔪
+ src/interpolate/basis.js | 80 ++++++++++++------------------------------------
+ src/line.js              |  4 +--
+ test/line-test.js        | 13 ++++++++
+ 3 files changed, 34 insertions(+), 63 deletions(-)
+
+☕733213c🔪2015-07-06 15:15:48 -0700🔪Mike Bostock🔪Basis interpolation.🔪
+ src/interpolate/basis.js               | 199 ++++++++++++++++++---------------
+ src/interpolate/linear.js              |  15 ++-
+ src/interpolate/linearClosed.js (gone) |  13 ---
+ src/interpolate/step.js                |  47 +++++++-
+ src/interpolate/stepAfter.js (gone)    |  23 ----
+ src/interpolate/stepBefore.js (gone)   |  23 ----
+ src/line.js                            |  44 ++++----
+ test/line-test.js                      |  10 ++
+ 8 files changed, 192 insertions(+), 182 deletions(-)
+
+☕b00d56c🔪2015-07-06 14:20:59 -0700🔪Mike Bostock🔪More tests.🔪
+ src/{interpolateBasis.js => interpolate/basis.js}  |  0
+ .../bundle.js}                                     |  0
+ .../cardinal.js}                                   |  0
+ .../hermite.js}                                    |  0
+ src/interpolate/linear.js (new)                    | 17 ++++++
+ src/interpolate/linearClosed.js (new)              | 13 +++++
+ .../monotone.js}                                   |  0
+ src/interpolate/step.js (new)                      | 29 ++++++++++
+ src/interpolate/stepAfter.js (new)                 | 23 ++++++++
+ src/interpolate/stepBefore.js (new)                | 23 ++++++++
+ src/interpolateLinear.js (gone)                    | 35 -------------
+ src/interpolateStep.js (gone)                      | 27 ----------
+ src/line.js                                        | 26 ++++-----
+ test/line-test.js                                  | 61 ++++++++++++++++++++++
+ 14 files changed, 180 insertions(+), 74 deletions(-)
+
+☕84f21a8🔪2015-07-06 12:20:11 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                 |   5 ++
+ .npmignore (new)                 |   3 ++
+ LICENSE (new)                    |  27 +++++++++++
+ README.md (new)                  |  15 ++++++
+ d3-shape.sublime-project (new)   |  13 +++++
+ index.js (new)                   |   5 ++
+ package.json (new)               |  36 ++++++++++++++
+ src/interpolateBasis.js (new)    |  98 +++++++++++++++++++++++++++++++++++++
+ src/interpolateBundle.js (new)   |  24 ++++++++++
+ src/interpolateCardinal.js (new) |  39 +++++++++++++++
+ src/interpolateHermite.js (new)  |  47 ++++++++++++++++++
+ src/interpolateLinear.js (new)   |  35 ++++++++++++++
+ src/interpolateMonotone.js (new) |  80 +++++++++++++++++++++++++++++++
+ src/interpolateStep.js (new)     |  27 +++++++++++
+ src/line.js (new)                | 101 +++++++++++++++++++++++++++++++++++++++
+ test/line-test.js (new)          |   6 +++
+ 16 files changed, 561 insertions(+)

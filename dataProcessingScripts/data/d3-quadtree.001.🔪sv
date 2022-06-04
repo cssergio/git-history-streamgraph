@@ -1,0 +1,1116 @@
+☕7224f73🔪2021-07-16 16:59:46 +0200🔪Philippe Rivière🔪accept iterables (#43)🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json      |  3 +++
+ README.md           |  6 +++---
+ src/add.js          | 18 +++++++-----------
+ test/addAll-test.js | 10 ++++++++++
+ 4 files changed, 23 insertions(+), 14 deletions(-)
+
+☕24d7ea8🔪2021-06-05 11:40:50 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9d50f73🔪2021-06-05 11:40:47 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕2ef0ecc🔪2021-06-05 11:40:39 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕bca1650🔪2021-06-04 15:42:14 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ff0af3🔪2021-06-05 00:41:50 +0200🔪Philippe Rivière🔪Adopt type=module (#40)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+TODO:
+- [ ] some tests break
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* Update README
+
+* fix tests; cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    8 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   70 +-
+ d3-quadtree.sublime-project (gone)  |   17 -
+ package.json                        |   45 +-
+ test/.eslintrc.json (new)           |   14 +
+ test/add-test.js                    |   82 +-
+ test/addAll-test.js                 |   56 +-
+ test/benchmark (gone)               |   39 -
+ test/benchmark.js (new +x)          |   37 +
+ test/copy-test.js                   |   72 +-
+ test/cover-test.js                  |  128 ++-
+ test/data-test.js                   |   20 +-
+ test/extent-test.js                 |   64 +-
+ test/find-test.js                   |   52 +-
+ test/quadtree-test.js               |   39 +-
+ test/remove-test.js                 |  165 ++--
+ test/size-test.js                   |   20 +-
+ test/visit-test.js                  |   60 +-
+ test/x-test.js                      |   39 +-
+ test/y-test.js                      |   39 +-
+ yarn.lock                           | 1464 +++++++++++++++++++----------------
+ 24 files changed, 1351 insertions(+), 1267 deletions(-)
+
+☕056f433🔪2020-10-25 15:10:55 +0100🔪Philippe Rivière🔪doc: v2🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ce45ba8🔪2020-08-23 16:34:50 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕5f83d1f🔪2020-07-27 11:07:36 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕ba5d353🔪2020-07-10 21:34:52 +0200🔪Philippe Rivière🔪link to v2🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7baf2d🔪2020-07-10 21:34:42 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/add.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6950ac8🔪2020-07-10 21:30:23 +0200🔪Philippe Rivière🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8df1b9e🔪2020-07-07 16:32:07 +0200🔪Philippe Rivière🔪aabb example to document visit🔪
+ README.md | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+☕702ea2c🔪2020-07-06 22:00:25 +0200🔪Philippe Rivière🔪crash test🔪
+ test/cover-test.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕f2133c7🔪2020-07-06 21:49:29 +0200🔪Philippe Rivière🔪prevent an infinite loop🔪The situation happens in force simulations when a point is horribly far (maybe because of a programming error, or because we set the wrong parameters on an experimental force). Then forceCollide calls quadtree(nodes, x,,y), which tries to cover by repeatedly doubling z=0. This ends up crashing the browser.
+
+ src/cover.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9804ee5🔪2019-11-16 11:02:55 -0800🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕414daff🔪2019-11-16 11:02:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕8ce70d9🔪2019-09-27 10:03:51 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕c9743a7🔪2019-11-02 08:23:32 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕c4e5a67🔪2019-08-09 16:24:18 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   8 +-
+ yarn.lock    | 882 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 523 insertions(+), 367 deletions(-)
+
+☕3c9d60f🔪2019-08-09 15:57:15 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕dca9e6d🔪2019-08-09 15:34:36 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/find.js       |  2 +-
+ src/index.js      |  2 +-
+ src/quadtree.js   | 24 ++++++++++++------------
+ src/visit.js      |  2 +-
+ src/visitAfter.js |  2 +-
+ 5 files changed, 16 insertions(+), 16 deletions(-)
+
+☕6a52a73🔪2019-02-09 20:32:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕6651c50🔪2019-02-09 20:28:17 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e879193🔪2019-02-09 20:27:55 -0800🔪Mike Bostock🔪Fix #21 - exclusive bound in quadtree.cover.🔪
+ src/add.js          |  5 ++---
+ src/cover.js        | 33 +++++++++------------------------
+ test/add-test.js    | 14 +++++++-------
+ test/addAll-test.js | 20 ++++++++++----------
+ test/copy-test.js   | 16 ++++++++--------
+ test/cover-test.js  | 32 ++++++++++++++++----------------
+ test/extent-test.js |  4 ++--
+ test/remove-test.js |  4 ++--
+ test/visit-test.js  | 10 +++++-----
+ 9 files changed, 61 insertions(+), 77 deletions(-)
+
+☕d70e7ce🔪2018-08-24 14:18:25 -0700🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f995fb🔪2018-08-24 14:18:23 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕fe6d361🔪2018-08-24 14:01:23 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕637146f🔪2018-08-24 13:47:17 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 1 -
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 1 +
+ 4 files changed, 9 insertions(+), 8 deletions(-)
+
+☕b74d06e🔪2018-08-24 13:47:02 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-quadtree.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕95982f1🔪2018-08-24 13:46:44 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕780aa30🔪2018-08-24 11:42:49 -0700🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c62ef03🔪2018-08-24 11:42:47 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)            |   9 -
+ .eslintrc.json (new)        |  17 +
+ .gitignore                  |   2 +-
+ .npmignore                  |   2 +-
+ d3-quadtree.sublime-project |  16 +-
+ package.json                |  19 +-
+ rollup.config.js (new)      |  36 ++
+ test/add-test.js            |  10 +-
+ test/quadtree-test.js       |   2 +-
+ test/remove-test.js         |   2 +
+ yarn.lock (new)             | 939 ++++++++++++++++++++++++++++++++++++++++++++
+ 11 files changed, 1021 insertions(+), 33 deletions(-)
+
+☕bd6a749🔪2018-07-28 12:08:40 +0200🔪denis🔪Add documentation for removeAll🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕084b437🔪2017-03-10 09:55:11 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕408c053🔪2017-03-10 09:54:59 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕a883742🔪2016-11-22 16:43:29 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ec9d2f🔪2016-11-22 16:43:21 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕6a99614🔪2016-10-09 15:12:26 -0700🔪Mike Bostock🔪Remove old examples.🔪
+ README.md | 4 ----
+ 1 file changed, 4 deletions(-)
+
+☕fe47f7f🔪2016-10-09 15:07:01 -0700🔪Mike Bostock🔪Add implied semicolon.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕20c4923🔪2016-08-15 11:04:14 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+☕5887025🔪2016-08-02 14:40:24 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕230a580🔪2016-08-02 14:40:24 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕50b7703🔪2016-06-15 11:44:10 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf67b9a🔪2016-06-15 11:44:01 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 6 +++---
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕4f780f7🔪2016-06-14 09:22:42 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕d4a6032🔪2016-06-07 21:41:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕3644940🔪2016-06-07 17:22:30 -0700🔪Mike Bostock🔪0.8.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕52ce6ba🔪2016-06-07 17:22:15 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 14 +++++++-------
+ 3 files changed, 10 insertions(+), 11 deletions(-)
+
+☕4da8539🔪2016-05-18 09:52:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf79834🔪2016-05-15 12:47:10 -0700🔪Mike Bostock🔪0.7.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b195931🔪2016-05-15 12:46:48 -0700🔪Mike Bostock🔪Optional search radius.🔪
+ README.md         |  4 ++--
+ src/find.js       | 19 ++++++++++++-------
+ test/find-test.js | 19 +++++++++++++++++++
+ 3 files changed, 33 insertions(+), 9 deletions(-)
+
+☕b21c20d🔪2016-05-14 21:16:53 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕6a7e811🔪2016-05-03 11:25:54 -0700🔪Mike Bostock🔪0.7.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕134f0f2🔪2016-05-03 11:25:52 -0700🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4b1a8c5🔪2016-04-23 10:05:51 -0700🔪Mike Bostock🔪Tiny optimization.🔪
+ src/cover.js | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕fa42ac0🔪2016-04-22 12:46:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dbaf47e🔪2016-04-22 12:45:01 -0700🔪Mike Bostock🔪0.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕96385b1🔪2016-04-22 12:44:19 -0700🔪Mike Bostock🔪Enforce integer extent.🔪This is necessary so that if the extent is subsequently doubled, the boundaries
+of the existing quadrants don’t change due to floating point error.
+
+ README.md           |  2 +-
+ src/cover.js        | 63 ++++++++++++++++++++++++-----------------------------
+ test/add-test.js    |  2 +-
+ test/cover-test.js  |  6 ++---
+ test/extent-test.js | 26 +++++++++++-----------
+ test/remove-test.js | 34 ++++++++++-------------------
+ test/visit-test.js  | 18 +++++++--------
+ test/x-test.js      |  4 ++--
+ test/y-test.js      |  4 ++--
+ 9 files changed, 71 insertions(+), 88 deletions(-)
+
+☕c5afe5d🔪2016-04-22 10:09:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1d810d5🔪2016-04-22 10:04:56 -0700🔪Mike Bostock🔪0.7.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04ae63c🔪2016-04-22 09:40:26 -0700🔪Mike Bostock🔪Fix #15 - convenience constructor.🔪
+ README.md             | 18 ++++++++++++++++--
+ src/quadtree.js       |  5 +++--
+ test/quadtree-test.js | 14 ++++++++++++++
+ 3 files changed, 33 insertions(+), 4 deletions(-)
+
+☕7528acc🔪2016-04-22 09:29:39 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕6ee803d🔪2016-04-22 09:28:31 -0700🔪Mike Bostock🔪Restore x- and y-accessors, bulk operations.🔪It’s a pain having to track points as keys to subsequently remove data from the
+quadtree; better to just use the data itself as the key.
+
+ README.md                  |  61 +++++++++++++------
+ src/add.js                 |  71 +++++++++++++++++-----
+ src/quadtree.js            |  22 +++----
+ src/remove.js              |   5 ++
+ src/x.js (new)             |   7 +++
+ src/y.js (new)             |   7 +++
+ test/add-test.js           |  81 +++++++++----------------
+ test/addAll-test.js (new)  |  38 ++++++++++++
+ test/benchmark             |   3 +-
+ test/copy-test.js          |  38 ++++++------
+ test/cover-test.js         |  43 ++++++-------
+ test/data-test.js (new)    |  17 ++++++
+ test/extent-test.js        |   4 +-
+ test/find-test.js          |  10 +--
+ test/points-test.js (gone) |  19 ------
+ test/quadtree-test.js      |   2 +-
+ test/remove-test.js        | 147 +++++++++++++++++++++++----------------------
+ test/size-test.js          |   6 +-
+ test/visit-test.js         |  24 +++-----
+ test/x-test.js (new)       |  31 ++++++++++
+ test/y-test.js (new)       |  31 ++++++++++
+ 21 files changed, 407 insertions(+), 260 deletions(-)
+
+☕6b6bc2a🔪2016-04-22 06:47:22 -0700🔪Mike Bostock🔪Slightly shorter.🔪
+ src/add.js | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+☕fb5d9e2🔪2016-04-22 06:34:34 -0700🔪Mike Bostock🔪Use data as the key.🔪This makes it a lot easier to remove a point afer adding it: you can use the
+same data you used to add the point originally, rather than needing to keep a
+reference to the point returned by quadtree.add. Now, quadtree.add and
+quadtree.remove return the quadtree to facilitate method chaining.
+
+ src/add.js           | 24 ++++++++++++++----------
+ src/data.js (new)    |  7 +++++++
+ src/find.js          |  6 +++---
+ src/points.js (gone) |  7 -------
+ src/quadtree.js      | 32 +++++++++++++++++++++-----------
+ src/remove.js        | 20 +++++++++++---------
+ test/benchmark       | 17 ++++++++++++++---
+ 7 files changed, 70 insertions(+), 43 deletions(-)
+
+☕a3a4928🔪2016-04-19 22:30:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕c829cae🔪2016-04-19 22:26:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+☕7cd1325🔪2016-04-19 22:23:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕d2ca807🔪2016-04-19 17:01:28 -0700🔪Mike Bostock🔪0.6.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕51da882🔪2016-04-19 17:01:25 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕68f5eea🔪2016-04-19 16:57:16 -0700🔪Mike Bostock🔪On second thought, use {x: x, y: y}.🔪It’s confusing to use arrays for both the internal nodes (of length 4) and the
+leaf nodes (of length 2). Also, it’s less confusing to assign the next property
+to an object than an array to form the linked list of coincident nodes.
+
+ README.md           | 10 +++++-----
+ src/add.js          | 13 ++++++-------
+ src/cover.js        |  2 +-
+ src/find.js         | 51 ++++++++++++++++++++++++++++-----------------------
+ src/points.js       |  2 +-
+ src/quadtree.js     |  8 ++++----
+ src/remove.js       | 10 +++++-----
+ src/size.js         |  2 +-
+ src/visit.js        |  2 +-
+ src/visitAfter.js   |  2 +-
+ test/add-test.js    | 14 +++++++-------
+ test/benchmark      |  2 +-
+ test/copy-test.js   | 10 +++++-----
+ test/cover-test.js  | 36 ++++++++++++++++++------------------
+ test/find-test.js   |  8 ++++----
+ test/points-test.js |  4 ++--
+ test/remove-test.js | 48 ++++++++++++++++++++++++------------------------
+ 17 files changed, 114 insertions(+), 110 deletions(-)
+
+☕44c8646🔪2016-04-19 16:30:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f97f8d🔪2016-04-19 16:27:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕dc9e104🔪2016-04-19 16:27:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d8c319b🔪2016-04-19 16:27:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕7ba05d5🔪2016-04-19 16:25:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕c968073🔪2016-04-19 16:22:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕475a6ce🔪2016-04-19 16:22:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕1b429a3🔪2016-04-19 16:12:57 -0700🔪Mike Bostock🔪On second thought, no accessors.🔪Instead, quadtree.add(x, y).
+
+ README.md              | 44 +++++------------------
+ src/add.js             | 19 +++++-----
+ src/constant.js (gone) |  5 ---
+ src/cover.js           |  2 +-
+ src/find.js            |  6 ++--
+ src/points.js          |  2 +-
+ src/quadtree.js        | 20 ++++-------
+ src/remove.js          | 10 +++---
+ src/size.js            |  2 +-
+ src/visit.js           |  2 +-
+ src/visitAfter.js      | 13 ++++---
+ src/x.js (gone)        |  9 -----
+ src/y.js (gone)        |  9 -----
+ test/add-test.js       | 40 ++++++++++-----------
+ test/benchmark         | 15 +++-----
+ test/copy-test.js      | 30 ++++++++--------
+ test/cover-test.js     | 42 +++++++++++-----------
+ test/extent-test.js    |  4 +--
+ test/find-test.js      | 10 +++---
+ test/points-test.js    | 12 +++----
+ test/remove-test.js    | 94 +++++++++++++++++++++++++-------------------------
+ test/size-test.js      |  8 ++---
+ test/visit-test.js     | 20 +++++------
+ 23 files changed, 180 insertions(+), 238 deletions(-)
+
+☕c4955ea🔪2016-04-19 15:41:48 -0700🔪Mike Bostock🔪Restore x- and y-accessors.🔪
+ README.md             |  58 ++++++++-------
+ src/add.js            |  33 +++------
+ src/constant.js (new) |   5 ++
+ src/cover.js          |   2 +-
+ src/extent.js         |   6 +-
+ src/find.js           |   8 +-
+ src/points.js         |   2 +-
+ src/quadtree.js       |  49 +++++++------
+ src/remove.js         |  20 ++---
+ src/size.js           |   2 +-
+ src/x.js (new)        |   9 +++
+ src/y.js (new)        |   9 +++
+ test/add-test.js      |  80 ++++++++------------
+ test/copy-test.js     |  74 +++++++------------
+ test/cover-test.js    |  43 ++++++-----
+ test/extent-test.js   |  41 ++++++++++-
+ test/find-test.js     |   8 +-
+ test/points-test.js   |  12 ++-
+ test/quadtree-test.js |  42 -----------
+ test/remove-test.js   | 199 ++++++++++++++++++++++----------------------------
+ test/size-test.js     |  12 ++-
+ test/visit-test.js    |  18 ++++-
+ 22 files changed, 354 insertions(+), 378 deletions(-)
+
+☕9523800🔪2016-04-19 12:52:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕3717b8d🔪2016-04-19 12:50:33 -0700🔪Mike Bostock🔪Update LICENSE year.🔪
+ LICENSE | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕453fc30🔪2016-04-19 12:44:06 -0700🔪Mike Bostock🔪0.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7c82e24🔪2016-04-19 12:43:59 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕ee12206🔪2016-04-19 12:43:25 -0700🔪Mike Bostock🔪Concise.🔪
+ README.md     | 3 +--
+ src/points.js | 3 +--
+ src/size.js   | 3 +--
+ 3 files changed, 3 insertions(+), 6 deletions(-)
+
+☕945475f🔪2016-04-19 12:42:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+☕acee1ef🔪2016-04-19 12:40:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9ae7667🔪2016-04-19 12:40:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e394dcc🔪2016-04-19 12:39:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕aba65b4🔪2016-04-19 12:38:35 -0700🔪Mike Bostock🔪Consolidate duplicate logic.🔪
+ src/cover.js          |  2 +-
+ src/quadtree.js       | 13 ++-----------
+ test/cover-test.js    |  5 +++++
+ test/quadtree-test.js | 21 ++++++++++++++++-----
+ 4 files changed, 24 insertions(+), 17 deletions(-)
+
+☕c584ef0🔪2016-04-19 12:23:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕2c4094b🔪2016-04-19 12:22:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕474b875🔪2016-04-19 12:22:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕875a814🔪2016-04-19 12:18:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6e4bdf0🔪2016-04-19 12:18:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4449140🔪2016-04-19 12:17:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9fa95ad🔪2016-04-19 12:17:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f16e8cc🔪2016-04-19 12:15:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c91f286🔪2016-04-19 12:14:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cc45694🔪2016-04-19 12:14:26 -0700🔪Mike Bostock🔪Fix #9 - update introduction.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0057ea9🔪2016-04-19 12:02:26 -0700🔪Mike Bostock🔪Big update.🔪Fix #14 - adds quadtree.points.
+Fix #13 - adds quadtree.size.
+Fix #12 - don’t expose public fields; add quadtree.root and quadtree.extent.
+Fix #11 - represent points as [x, y], not {x: x, y: y}.
+
+Adds quadtree.cover for expanding the quadtree without adding a new point.
+
+ README.md                 |  51 +++++++++-------
+ src/add.js                |  50 ++++++---------
+ src/cover.js (new)        |  59 ++++++++++++++++++
+ src/extent.js (new)       |   3 +
+ src/find.js               |  14 ++---
+ src/points.js (new)       |   8 +++
+ src/quadtree.js           |  54 ++++++++++------
+ src/remove.js             |  18 +++---
+ src/root.js (new)         |   3 +
+ src/size.js (new)         |   8 +++
+ src/visit.js              |   4 +-
+ src/visitAfter.js         |   2 +-
+ test/add-test.js          |  82 ++++++++++++-------------
+ test/benchmark            |   4 +-
+ test/copy-test.js         |  58 ++++++++----------
+ test/cover-test.js (new)  |  74 ++++++++++++++++++++++
+ test/extent-test.js (new) |  21 +++++++
+ test/find-test.js         |  10 +--
+ test/points-test.js (new) |  13 ++++
+ test/quadtree-test.js     |  80 ++++++++----------------
+ test/remove-test.js       | 152 +++++++++++++++++++++++-----------------------
+ test/size-test.js (new)   |  13 ++++
+ test/visit-test.js        |   8 +--
+ 23 files changed, 484 insertions(+), 305 deletions(-)
+
+☕8ec9f0b🔪2016-04-19 09:27:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d1c3fc8🔪2016-04-18 20:47:36 -0700🔪Mike Bostock🔪Undefined bounds if any bound is invalid.🔪
+ src/quadtree.js       |  3 ++-
+ test/quadtree-test.js | 22 ++++++++++++++++++++++
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+
+☕f3fc5cd🔪2016-04-18 18:01:25 -0700🔪Mike Bostock🔪Add quadtree.copy.🔪Also, when embiggening a quadtree, only wrap the existing quadtree if the root
+node is defined and not a leaf.
+
+ README.md               |  4 +++
+ src/add.js              | 14 +++++----
+ src/quadtree.js         | 29 +++++++++++++++++++
+ test/add-test.js        | 12 +++-----
+ test/copy-test.js (new) | 77 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 122 insertions(+), 14 deletions(-)
+
+☕a9b3905🔪2016-04-18 17:19:36 -0700🔪Mike Bostock🔪Make internal fields public.🔪
+ README.md             | 29 +++++++++++++------
+ src/add.js            | 20 ++++++-------
+ src/find.js           | 10 +++----
+ src/quadtree.js       |  6 ++--
+ src/remove.js         | 10 +++----
+ src/visit.js          |  4 +--
+ src/visitAfter.js     |  2 +-
+ test/add-test.js      | 30 +++++++++----------
+ test/quadtree-test.js | 40 +++++++++++++-------------
+ test/remove-test.js   | 80 +++++++++++++++++++++++++--------------------------
+ 10 files changed, 121 insertions(+), 110 deletions(-)
+
+☕a3c9444🔪2016-04-18 14:07:46 -0700🔪Mike Bostock🔪Don’t forget bounds on removal.🔪When adding points, only initialize the bounds if they were not previously set.
+
+ src/add.js            | 25 ++++++++++---------------
+ src/quadtree.js       |  2 +-
+ test/add-test.js      |  8 ++------
+ test/quadtree-test.js | 35 +++++++++++++++++++++++++----------
+ test/visit-test.js    |  4 ++--
+ 5 files changed, 40 insertions(+), 34 deletions(-)
+
+☕b3a198b🔪2016-04-18 13:32:12 -0700🔪Mike Bostock🔪Fix and test for previous commit.🔪
+ src/remove.js       |  2 +-
+ test/remove-test.js | 64 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 65 insertions(+), 1 deletion(-)
+
+☕ac13a24🔪2016-04-18 13:15:53 -0700🔪Mike Bostock🔪Fix #10 - remove superfluous nodes.🔪
+ .eslintrc           |  1 +
+ src/remove.js       | 30 ++++++++++++++++++++++++------
+ test/remove-test.js | 14 ++------------
+ 3 files changed, 27 insertions(+), 18 deletions(-)
+
+☕b14c0e8🔪2016-04-15 10:33:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕9f765f6🔪2016-04-15 10:21:02 -0700🔪Mike Bostock🔪0.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8f14364🔪2016-04-15 10:20:59 -0700🔪Mike Bostock🔪Prepare for minor version.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕10ab5bd🔪2016-04-15 10:15:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕56276ba🔪2016-04-15 10:13:11 -0700🔪Mike Bostock🔪On second thought, wrap points.🔪Assigning properties to the point objects (point.next) is a bit icky, and plus,
+the force simulation will want to assign additional state to the quadtree nodes
+for the Barnes–Hut approximation, so it should be helpful to have leaf nodes.
+
+ README.md             | 29 +++++++++++++++--------------
+ src/add.js            | 17 +++++++++--------
+ src/find.js           |  8 ++++----
+ src/quadtree.js       |  2 +-
+ src/remove.js         | 10 +++++-----
+ test/add-test.js      | 16 ++++++++--------
+ test/quadtree-test.js |  2 +-
+ test/remove-test.js   | 17 +++++++++--------
+ 8 files changed, 52 insertions(+), 49 deletions(-)
+
+☕8f29e03🔪2016-04-15 09:46:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c64bf7c🔪2016-04-15 09:45:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8f7e7b3🔪2016-04-15 09:42:43 -0700🔪Mike Bostock🔪Shorter.🔪
+ src/remove.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕f5a0a14🔪2016-04-15 09:41:53 -0700🔪Mike Bostock🔪Tests for removal.🔪
+ src/remove.js             |  15 +++----
+ test/remove-test.js (new) | 111 ++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 118 insertions(+), 8 deletions(-)
+
+☕93c6b37🔪2016-04-15 09:29:54 -0700🔪Mike Bostock🔪Clear old state.🔪
+ README.md  | 12 +++++++++++-
+ src/add.js |  3 +++
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+☕bdb2ff2🔪2016-04-15 09:26:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 26 ++++++++++++++------------
+ 1 file changed, 14 insertions(+), 12 deletions(-)
+
+☕fff1a0a🔪2016-04-15 09:24:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕16a7679🔪2016-04-15 09:24:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+☕9dec695🔪2016-04-15 09:20:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 84 +++++++++++++++------------------------------------------------
+ 1 file changed, 19 insertions(+), 65 deletions(-)
+
+☕dc92406🔪2016-04-15 09:06:31 -0700🔪Mike Bostock🔪Update benchmark.🔪
+ test/benchmark | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕269c1eb🔪2016-04-15 08:19:30 -0700🔪Mike Bostock🔪Restore tests.🔪
+ src/quadtree.js          |   1 +
+ test/add-test.js (new)   | 116 ++++++++++++++++++++++++
+ test/find-test.js (new)  |  15 ++++
+ test/quadtree-test.js    | 226 ++++++-----------------------------------------
+ test/visit-test.js (new) |  54 +++++++++++
+ 5 files changed, 214 insertions(+), 198 deletions(-)
+
+☕f1d50f0🔪2016-04-15 07:50:47 -0700🔪Mike Bostock🔪Revert eachBefore to visit.🔪The signature isn’t the same as d3-hierarchy, since the callback function can
+return true to avoid descending into child quadrants. So better to favor
+backwards-compatibility and make the distinction more obvious.
+
+ src/add.js                          |   6 +-
+ src/quadtree.js                     |   8 +-
+ src/{eachBefore.js => visit.js}     |   0
+ src/{eachAfter.js => visitAfter.js} |   0
+ test/quadtree-test.js               | 369 ++++++++++++++++++------------------
+ 5 files changed, 190 insertions(+), 193 deletions(-)
+
+☕29ca0eb🔪2016-04-15 07:46:00 -0700🔪Mike Bostock🔪Reduce API.🔪Rather than have both a quadtree generator and a quadtree, have a quadtree.
+Rather than wrapping points in leaf nodes, add points directly to the tree.
+
+ src/add.js             | 43 +++++++++++++---------------
+ src/constant.js (gone) |  5 ----
+ src/find.js            | 10 +++----
+ src/leaf.js (gone)     |  3 --
+ src/quadtree.js        | 78 ++++++++++++++------------------------------------
+ src/remove.js          |  2 +-
+ src/root.js (gone)     | 20 -------------
+ test/benchmark         |  8 ++----
+ 8 files changed, 50 insertions(+), 119 deletions(-)
+
+☕fc5dc93🔪2016-04-14 08:31:02 -0700🔪Mike Bostock🔪Fix #2 - add root.remove.🔪
+ src/add.js          | 37 +++++++++++++++++--------------------
+ src/remove.js (new) | 34 ++++++++++++++++++++++++++++++++++
+ src/root.js         |  2 ++
+ test/benchmark      | 44 ++++++++++++++++++++++++--------------------
+ 4 files changed, 77 insertions(+), 40 deletions(-)
+
+☕ceb581c🔪2016-04-11 10:22:22 -0700🔪Mike Bostock🔪Don’t create a new leaf when splitting.🔪We can instead move the existing leaf to the new position in the tree.
+
+ src/add.js | 31 +++++++++++++++----------------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+☕752f0df🔪2016-04-11 09:07:31 -0700🔪Mike Bostock🔪Add benchmark.🔪
+ test/benchmark (new +x) | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+☕b4e979b🔪2016-04-08 16:08:25 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7818324🔪2016-04-08 16:07:27 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 2 +-
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕f094ac4🔪2016-04-08 16:05:01 -0700🔪Mike Bostock🔪Fix #7 - restore root.find.🔪
+ src/eachAfter.js  |  10 ++---
+ src/eachBefore.js |  12 +++---
+ src/find.js       | 115 ++++++++++++++++++++++++++++--------------------------
+ src/root.js       |   4 +-
+ 4 files changed, 73 insertions(+), 68 deletions(-)
+
+☕bc69fa2🔪2016-04-08 15:35:58 -0700🔪Mike Bostock🔪Move code around.🔪
+ src/each.js (gone)      | 39 ---------------------------------------
+ src/eachAfter.js (new)  | 18 ++++++++++++++++++
+ src/eachBefore.js (new) | 16 ++++++++++++++++
+ src/quad.js (new)       |  7 +++++++
+ src/root.js             | 11 ++++++-----
+ 5 files changed, 47 insertions(+), 44 deletions(-)
+
+☕2be741b🔪2016-04-08 15:32:34 -0700🔪Mike Bostock🔪Simplify.🔪
+ src/add.js        | 17 +++++++----------
+ src/leaf.js (new) |  3 +++
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕2b67fd5🔪2016-04-08 15:29:42 -0700🔪Mike Bostock🔪Visit quadrants in-order.🔪
+ src/each.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕992585d🔪2016-04-08 15:27:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9d211ea🔪2016-04-08 15:26:28 -0700🔪Mike Bostock🔪Fix #4 - non-recursive post-order traversal.🔪
+ README.md   | 30 ++++++++++++++++--------------
+ src/each.js | 19 ++++++++++++++++++-
+ src/root.js |  9 +++++----
+ 3 files changed, 39 insertions(+), 19 deletions(-)
+
+☕6d29ba0🔪2016-04-08 14:12:47 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/add.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕5d707a5🔪2016-04-08 14:11:03 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/add.js | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+☕5c9a0a6🔪2016-04-08 14:06:47 -0700🔪Mike Bostock🔪Simplify logic.🔪The root of the quadtree has inclusive bounds.
+
+ README.md             |   2 +-
+ src/add.js            |  35 ++---
+ src/find.js           | 108 +++++++--------
+ src/quadtree.js       |   4 +-
+ test/quadtree-test.js | 365 ++++++++++++++++++++++++++------------------------
+ 5 files changed, 253 insertions(+), 261 deletions(-)
+
+☕039eb6b🔪2016-04-08 13:01:24 -0700🔪Mike Bostock🔪Restore quadtree.{size,extent}.🔪
+ README.md       |  8 +++++---
+ src/quadtree.js | 35 ++++++++++++++++++++++++++++++-----
+ 2 files changed, 35 insertions(+), 8 deletions(-)
+
+☕5556d54🔪2016-04-08 12:43:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d3c3561🔪2016-04-08 12:42:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 75 +++++++++++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 49 insertions(+), 26 deletions(-)
+
+☕728a9f8🔪2016-04-08 12:26:17 -0700🔪Mike Bostock🔪Remove depth checks.🔪This shouldn’t be necessary now that we check for coincidence. In the worst
+case, the depth should be proportional to the number of bits in IEEE 754.
+
+ src/add.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕4aa2f47🔪2016-04-08 12:23:52 -0700🔪Mike Bostock🔪Optimize.🔪
+ src/add.js      | 36 +++++++++++++++++-------------------
+ src/each.js     | 16 ++++++++--------
+ src/quadtree.js |  9 +++++++--
+ 3 files changed, 32 insertions(+), 29 deletions(-)
+
+☕ee166ca🔪2016-04-08 11:54:03 -0700🔪Mike Bostock🔪More concise.🔪
+ src/add.js | 37 +++++++++++++------------------------
+ 1 file changed, 13 insertions(+), 24 deletions(-)
+
+☕495d95c🔪2016-04-08 10:18:33 -0700🔪Mike Bostock🔪Return void.🔪
+ src/add.js | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+☕32bcba1🔪2016-04-08 10:15:14 -0700🔪Mike Bostock🔪Handle coincident nodes.🔪
+ src/add.js | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+
+☕8f8bbd6🔪2016-04-08 10:03:35 -0700🔪Mike Bostock🔪Bottom-up quadtree building.🔪Rather than requiring the extent of the quadtree to be specified beforehand,
+an existing quadtree can now be expanded by repeated doubling of its dimensions
+to contain the new point.
+
+ src/add.js (new)   | 105 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/each.js        |   3 +-
+ src/node.js (gone) |   7 ----
+ src/quadtree.js    |  77 ++-------------------------------------
+ src/root.js        |  25 +++++--------
+ 5 files changed, 119 insertions(+), 98 deletions(-)
+
+☕defbcb5🔪2016-04-07 17:59:47 -0700🔪Mike Bostock🔪Represent points as two-element arrays.🔪
+ src/point.js (gone) |  7 -------
+ src/quadtree.js     | 10 ++++++----
+ 2 files changed, 6 insertions(+), 11 deletions(-)
+
+☕e52d888🔪2016-04-07 16:55:31 -0700🔪Mike Bostock🔪Rewrite!🔪
+ README.md             |  15 +--
+ src/constant.js (new) |   5 +
+ src/each.js (new)     |  21 ++++
+ src/find.js (new)     |  55 ++++++++++
+ src/node.js (new)     |   7 ++
+ src/point.js (new)    |   7 ++
+ src/quadtree.js       | 280 +++++++++++++-------------------------------------
+ src/root.js (new)     |  23 +++++
+ test/quadtree-test.js |  14 +--
+ 9 files changed, 202 insertions(+), 225 deletions(-)
+
+☕9f2f5d3🔪2016-03-15 10:22:38 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d7a58a🔪2016-03-14 13:11:40 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕e2df271🔪2016-03-14 12:47:13 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕57730d3🔪2016-03-06 15:11:58 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕28fa169🔪2016-03-04 09:51:27 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕20fcaab🔪2016-03-01 14:16:26 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕b9589d7🔪2016-02-24 16:03:13 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕161d36e🔪2016-02-21 16:31:18 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕01d2d8a🔪2016-01-29 10:27:45 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕610c723🔪2016-01-20 17:34:18 -0800🔪Mike Bostock🔪Add .eslintrc.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕764e471🔪2016-01-20 17:25:39 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ package.json    | 2 +-
+ src/quadtree.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕c6b06c0🔪2016-01-14 16:39:56 -0800🔪Mike Bostock🔪Use node.data, not node.point.🔪This is more consistent with other D3 classes.
+
+ README.md             | 26 ++++++++++----------
+ package.json          |  2 +-
+ src/quadtree.js       | 67 +++++++++++++++++++++++++--------------------------
+ test/quadtree-test.js | 28 ++++++++++-----------
+ 4 files changed, 61 insertions(+), 62 deletions(-)
+
+☕de365d5🔪2016-01-11 11:14:46 -0800🔪Mike Bostock🔪Shorten documentation.🔪
+ README.md | 16 ++--------------
+ 1 file changed, 2 insertions(+), 14 deletions(-)
+
+☕3a86da7🔪2016-01-07 12:29:25 -0800🔪Mike Bostock🔪Update d3-array.🔪
+ package.json          | 4 ++--
+ test/quadtree-test.js | 6 +++---
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕b1b88a7🔪2015-12-18 14:57:09 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 10 ++++++++--
+ package.json |  4 ++--
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+
+☕d86b3c2🔪2015-11-11 11:19:23 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕5e4d902🔪2015-11-04 13:25:49 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕0c4a114🔪2015-11-03 23:37:43 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json    | 12 ++++++------
+ src/quadtree.js |  2 --
+ 2 files changed, 6 insertions(+), 8 deletions(-)
+
+☕8bcf7d8🔪2015-07-02 11:16:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕679a8a4🔪2015-07-02 10:57:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b3fe1b3🔪2015-07-02 10:57:36 -0700🔪Mike Bostock🔪Method-chaining for root.{add,visit}.🔪
+ README.md             |  6 ++++--
+ src/quadtree.js       |  2 ++
+ test/quadtree-test.js | 33 ++++++++++++++++++++++++++++++++-
+ 3 files changed, 38 insertions(+), 3 deletions(-)
+
+☕9e258da🔪2015-07-02 10:52:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fd7fcb9🔪2015-07-02 10:52:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕2d42477🔪2015-07-02 10:48:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4441af5🔪2015-07-02 10:48:13 -0700🔪Mike Bostock🔪Readability.🔪
+ src/quadtree.js | 71 ++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 35 insertions(+), 36 deletions(-)
+
+☕8b2d64a🔪2015-07-02 10:44:17 -0700🔪Mike Bostock🔪Use consistent naming.🔪
+ src/quadtree.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕58248fe🔪2015-07-02 10:43:40 -0700🔪Mike Bostock🔪Allow data to be empty.🔪
+ README.md             |  4 ++--
+ src/quadtree.js       |  2 ++
+ test/quadtree-test.js | 10 ++++++++++
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+
+☕2fcd221🔪2015-07-02 10:40:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bef822d🔪2015-07-02 10:40:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6121d6f🔪2015-07-02 10:40:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕72116d3🔪2015-07-02 10:39:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕68f1e91🔪2015-07-02 10:39:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08dd099🔪2015-07-02 10:37:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕d475161🔪2015-07-02 10:37:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕db15cd2🔪2015-07-02 10:34:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕222a6f6🔪2015-07-02 10:33:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f6e0a72🔪2015-07-02 10:33:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e683bf6🔪2015-07-02 10:32:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b9a64dd🔪2015-07-02 10:30:54 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                  |   5 +
+ .npmignore (new)                  |   3 +
+ LICENSE (new)                     |  27 +++++
+ README.md (new)                   |  87 ++++++++++++++
+ d3-quadtree.sublime-project (new) |  13 +++
+ index.js (new)                    |   5 +
+ package.json (new)                |  33 ++++++
+ src/quadtree.js (new)             | 236 ++++++++++++++++++++++++++++++++++++++
+ test/quadtree-test.js (new)       | 160 ++++++++++++++++++++++++++
+ 9 files changed, 569 insertions(+)

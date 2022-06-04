@@ -1,0 +1,550 @@
+☕904ddf2🔪2021-06-05 11:30:47 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf34724🔪2021-06-05 11:30:38 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕037d018🔪2021-06-04 16:57:51 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕19e7b43🔪2021-06-05 01:57:23 +0200🔪Philippe Rivière🔪Adopt type=module (#27)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* strictEqual, deepStrictEqual
+(@aulonm)
+
+* update README
+
+* add eslint.json
+
+* remove Sublime project
+
+* update dependencies
+
+* stricter eslint
+
+* cleaner imports
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    5 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   22 +-
+ d3-dispatch.sublime-project (gone)  |   17 -
+ package.json                        |   45 +-
+ test/.eslintrc.json (new)           |   10 +
+ test/dispatch-test.js               |  503 ++++++------
+ yarn.lock                           | 1455 +++++++++++++++++++----------------
+ 10 files changed, 1133 insertions(+), 1012 deletions(-)
+
+☕2ae606e🔪2020-08-23 15:22:20 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕b96099c🔪2020-07-24 15:33:10 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕25153cd🔪2020-06-03 13:21:26 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/dispatch.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e41e534🔪2020-06-03 13:18:53 +0200🔪Philippe Rivière🔪links🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕4f86821🔪2019-11-16 09:50:33 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f40ac7🔪2019-11-16 09:49:27 -0800🔪Mike Bostock🔪Disallow whitespace or periods.🔪
+ src/dispatch.js       | 2 +-
+ test/dispatch-test.js | 3 +++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+☕079f730🔪2019-09-27 07:47:41 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕e0512a2🔪2019-11-02 08:23:19 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕6e88065🔪2019-08-09 17:41:54 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ .eslintrc.json |   3 +-
+ package.json   |   6 +-
+ yarn.lock      | 875 +++++++++++++++++++++++++++++++++------------------------
+ 3 files changed, 520 insertions(+), 364 deletions(-)
+
+☕7254f97🔪2019-08-09 16:06:31 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕69637ae🔪2019-08-09 15:17:13 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13312ff🔪2018-08-24 14:13:22 -0700🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6286cd7🔪2018-08-24 14:02:12 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f06565e🔪2018-08-24 13:51:19 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 1 -
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 1 +
+ 4 files changed, 9 insertions(+), 8 deletions(-)
+
+☕243cd8a🔪2018-08-24 13:51:08 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-dispatch.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕26bfb6b🔪2018-08-24 13:51:07 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕73b8912🔪2018-08-24 11:20:46 -0700🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0c5fb58🔪2018-08-24 11:20:43 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)            |   8 -
+ .eslintrc.json (new)        |  15 +
+ .gitignore                  |   2 +-
+ .npmignore                  |   2 +-
+ d3-dispatch.sublime-project |  16 +-
+ package.json                |  19 +-
+ rollup.config.js (new)      |  36 ++
+ test/dispatch-test.js       |  11 +-
+ yarn.lock (new)             | 935 ++++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 1010 insertions(+), 34 deletions(-)
+
+☕12558bc🔪2017-03-10 10:11:05 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕be83677🔪2017-03-10 10:10:56 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕80b6d6f🔪2016-11-22 16:27:56 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕104849d🔪2016-11-22 16:27:41 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕77162f9🔪2016-11-03 10:01:15 +0530🔪Curran Kelleher🔪Remove outdated documentation🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕47ba100🔪2016-08-10 11:34:47 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕24d9a73🔪2016-08-02 14:51:14 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5814f19🔪2016-08-02 14:51:13 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕36c543e🔪2016-06-14 15:44:50 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9a36228🔪2016-06-14 15:44:45 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕0034731🔪2016-06-14 09:23:55 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕3359058🔪2016-06-07 16:49:11 -0700🔪Mike Bostock🔪0.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a911cc2🔪2016-06-07 16:48:48 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕c106015🔪2016-05-27 08:49:38 -0700🔪Mike Bostock🔪0.4.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕893b6f4🔪2016-05-27 08:45:26 -0700🔪Mike Bostock🔪Workaround Safari optimizer bug.🔪It appears that Safari optimizes away the arguments when they are passed to
+dispatch.apply; the fix is to inline dispatch.apply in dispatch.call. I was
+tempted to use slice.call(arguments, 2) here, and that works, but it also
+impedes any optimization as described here:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+
+I can’t know for sure whether this completely avoids the Safari bug, but it at
+least passes the test case here:
+
+http://bl.ocks.org/mbostock/3177dec030e92dfd6bf08c89bdef080a
+
+Thanks to @Hypercubed for the report.
+
+ src/dispatch.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕3080397🔪2016-05-18 09:54:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fd81d47🔪2016-05-14 21:23:19 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕fdcf6c3🔪2016-05-13 08:22:19 -0700🔪Mike Bostock🔪Fix #9 - provide error messages.🔪
+ src/dispatch.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕a32719e🔪2016-03-15 10:23:14 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕94da35c🔪2016-03-14 13:13:55 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕2a2dca6🔪2016-03-14 12:53:28 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕f3ce1d2🔪2016-03-06 15:12:39 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕99e278b🔪2016-03-04 09:52:58 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕01b9e4b🔪2016-03-02 21:56:26 -0800🔪Mike Bostock🔪0.4.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b2944af🔪2016-03-02 21:56:04 -0800🔪Mike Bostock🔪Fix #2 - validate callback is a function.🔪
+ src/dispatch.js       |  7 ++++---
+ test/dispatch-test.js | 13 +++++++++----
+ 2 files changed, 13 insertions(+), 7 deletions(-)
+
+☕9998aab🔪2016-03-01 14:19:46 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕819e369🔪2016-02-24 16:10:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕3cad735🔪2016-02-21 16:03:42 -0800🔪Mike Bostock🔪0.4.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b8d5520🔪2016-02-21 16:03:38 -0800🔪Mike Bostock🔪Fix #7 - prototype.constructor.🔪
+ src/dispatch.js       | 3 ++-
+ test/dispatch-test.js | 1 +
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+☕d80fdd7🔪2016-02-21 16:02:45 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f8792f8🔪2016-02-10 11:47:32 -0800🔪Mike Bostock🔪Fix “Bad value context for arguments value”.🔪See https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#32-leaking-arguments.
+
+ package.json    | 2 +-
+ src/dispatch.js | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕98d7796🔪2016-02-09 13:49:52 -0800🔪Mike Bostock🔪Slightly better tests.🔪
+ test/dispatch-test.js | 46 ++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 34 insertions(+), 12 deletions(-)
+
+☕8492279🔪2016-02-09 13:21:41 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 2 +-
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕81a637a🔪2016-02-09 13:19:17 -0800🔪Mike Bostock🔪Fix #5 - add dispatch.copy.🔪
+ README.md             |  4 ++++
+ src/dispatch.js       | 34 ++++++++++++++++++----------------
+ test/dispatch-test.js | 20 ++++++++++++++++++++
+ 3 files changed, 42 insertions(+), 16 deletions(-)
+
+☕fc0f5fb🔪2016-02-09 09:21:44 -0800🔪Mike Bostock🔪Fix #6 - allow multiple typenames.🔪
+ README.md             | 10 ++++----
+ src/dispatch.js       | 56 ++++++++++++++++++++++++++++++-------------
+ test/dispatch-test.js | 66 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 111 insertions(+), 21 deletions(-)
+
+☕9757355🔪2016-02-05 21:56:54 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d44dd43🔪2016-02-05 21:56:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8f5bde4🔪2016-02-05 21:56:08 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e339819🔪2016-02-05 21:55:30 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕90c6101🔪2016-02-05 21:45:18 -0800🔪Mike Bostock🔪Fix #4 - don’t expose dispatch.type.🔪
+ README.md             |  30 ++++++------
+ src/dispatch.js       |  85 +++++++++++++-------------------
+ test/dispatch-test.js | 131 +++++++++++++++++++++++++++++++++++++-------------
+ 3 files changed, 146 insertions(+), 100 deletions(-)
+
+☕d36d94b🔪2016-02-04 15:44:41 -0800🔪Mike Bostock🔪Fix #3 - rewrite without closures.🔪
+ README.md             |  14 ++++--
+ package.json          |   4 +-
+ src/dispatch.js       | 129 ++++++++++++++++++++++----------------------------
+ test/dispatch-test.js |  56 ++++++++++++----------
+ 4 files changed, 100 insertions(+), 103 deletions(-)
+
+☕c3abc7a🔪2016-01-29 10:18:14 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕c5fefc7🔪2016-01-20 17:41:24 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/dispatch.js |  6 +++---
+ 3 files changed, 16 insertions(+), 4 deletions(-)
+
+☕3210ef0🔪2016-01-07 15:42:30 -0800🔪Mike Bostock🔪Prefix with d3, not d3_dispatch.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕db2bd10🔪2016-01-05 10:06:14 -0800🔪Mike Bostock🔪Distinguish between “type” and “name”.🔪A type”is unqualfied, such as “start”, whereas a name may be qualified by a
+namespace, such as “start.foo”.
+
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕12cfbdd🔪2015-12-18 12:10:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 32 +++++++++++++++-----------------
+ package.json |  2 +-
+ 2 files changed, 16 insertions(+), 18 deletions(-)
+
+☕854f354🔪2015-11-11 17:47:06 -0800🔪Mike Bostock🔪Remove space.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕74adcfd🔪2015-11-11 10:54:48 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕e69ea37🔪2015-11-04 13:19:52 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕5756a31🔪2015-11-03 23:19:25 -0800🔪Mike Bostock🔪Fix main entry.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕70e563e🔪2015-11-03 23:17:09 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕d501751🔪2015-07-01 11:30:24 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a641f43🔪2015-06-16 14:57:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3f9f53b🔪2015-06-16 14:56:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕f6c61db🔪2015-06-16 14:56:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+
+☕6f1bb58🔪2015-06-16 14:55:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+
+☕b719d17🔪2015-06-16 13:56:40 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕94b1b14🔪2015-06-10 13:40:57 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                           | 2 +-
+ index.sublime-project => d3-dispatch.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕456c803🔪2015-06-07 21:32:18 -0700🔪Mike Bostock🔪Fix italics.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕d694fda🔪2015-06-06 22:20:51 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4cb3cb2🔪2015-06-06 20:09:18 -0700🔪Mike Bostock🔪Use named export.🔪
+ README.md             |  4 ++--
+ index.js              |  4 +++-
+ test/dispatch-test.js | 56 +++++++++++++++++++++++++--------------------------
+ 3 files changed, 33 insertions(+), 31 deletions(-)
+
+☕aadb6d9🔪2015-06-06 20:01:39 -0700🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 11 +++++------
+ package.json |  2 +-
+ 2 files changed, 6 insertions(+), 7 deletions(-)
+
+☕298a314🔪2015-06-06 19:58:19 -0700🔪Mike Bostock🔪Remove dispatch.once.🔪Eh, it’s okay, but I’m not sure you’re gonna need it.
+
+ README.md             |  6 +-----
+ src/dispatch.js       | 10 +---------
+ test/dispatch-test.js | 33 ---------------------------------
+ 3 files changed, 2 insertions(+), 47 deletions(-)
+
+☕bd76921🔪2015-06-06 17:40:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c6ff0b1🔪2015-06-06 17:34:13 -0700🔪Mike Bostock🔪Use basic objects rather than Map.🔪The keys are always strings, and they never conflict with object built-ins, so
+we don’t really need to use a proper Map here.
+
+ README.md             |  2 +-
+ package.json          |  2 +-
+ src/dispatch.js       | 38 +++++++++++++++++++-------------------
+ test/dispatch-test.js | 35 +++++++++++++++++++++++++++++++++++
+ 4 files changed, 56 insertions(+), 21 deletions(-)
+
+☕325848f🔪2015-06-06 15:41:29 -0700🔪Mike Bostock🔪Optimize.🔪
+ src/dispatch.js | 108 ++++++++++++++++++++++++++------------------------------
+ 1 file changed, 50 insertions(+), 58 deletions(-)
+
+☕b73f622🔪2015-06-06 15:10:47 -0700🔪Mike Bostock🔪Inline type.apply.🔪
+ src/dispatch.js | 31 +++++++++++++++----------------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+☕b1a5356🔪2015-06-06 15:03:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕872e7bc🔪2015-06-06 14:59:08 -0700🔪Mike Bostock🔪Implement dispatch.once. Fixes #1.🔪
+ README.md             |  6 +++++-
+ src/dispatch.js       | 52 ++++++++++++++++++++++++++++++++++++---------------
+ test/dispatch-test.js | 20 ++++++++++++++++++++
+ 3 files changed, 62 insertions(+), 16 deletions(-)
+
+☕328d40c🔪2015-06-06 14:22:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕0704c91🔪2015-06-06 14:21:34 -0700🔪Mike Bostock🔪Allow instanceof dispatch.🔪
+ src/dispatch.js       | 8 ++++++--
+ test/dispatch-test.js | 3 ++-
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+☕72170b6🔪2015-06-06 14:09:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bd72834🔪2015-06-06 14:06:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕18cc884🔪2015-06-06 14:06:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5af3ac2🔪2015-06-06 14:06:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕416079c🔪2015-06-06 14:04:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕05db4b2🔪2015-06-06 14:04:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 17 ++++-------------
+ 1 file changed, 4 insertions(+), 13 deletions(-)
+
+☕f97c652🔪2015-06-06 14:00:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕12f90b2🔪2015-06-06 14:00:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕aaad01e🔪2015-06-06 13:57:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 64 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 62 insertions(+), 2 deletions(-)
+
+☕e6bd326🔪2015-06-05 12:05:59 -0700🔪Mike Bostock🔪More tests.🔪
+ package.json          |   2 +-
+ test/dispatch-test.js | 125 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 124 insertions(+), 3 deletions(-)
+
+☕6c8a9c2🔪2015-06-05 11:52:46 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/dispatch.js | 60 ++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 29 insertions(+), 31 deletions(-)
+
+☕70cf02e🔪2015-06-05 11:46:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fa50df8🔪2015-06-05 11:44:06 -0700🔪Mike Bostock🔪Tweak description.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕2e1f374🔪2015-06-05 11:43:07 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)            |  5 +++
+ .npmignore (new)            |  3 ++
+ LICENSE (new)               | 27 ++++++++++++++
+ README.md (new)             |  5 +++
+ index.js (new)              |  3 ++
+ index.sublime-project (new) | 13 +++++++
+ package.json (new)          | 34 ++++++++++++++++++
+ src/dispatch.js (new)       | 86 +++++++++++++++++++++++++++++++++++++++++++++
+ test/dispatch-test.js (new) | 74 ++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 250 insertions(+)

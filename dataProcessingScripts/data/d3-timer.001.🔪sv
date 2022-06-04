@@ -1,0 +1,780 @@
+☕441e45b🔪2021-06-05 11:42:59 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db120a0🔪2021-06-05 11:42:57 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 36 ++++++++++++------------------------
+ 1 file changed, 12 insertions(+), 24 deletions(-)
+
+☕844ce3e🔪2021-06-05 11:42:48 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕cd4b6c9🔪2021-06-04 15:18:54 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕89fe1a0🔪2021-06-05 00:17:09 +0200🔪Philippe Rivière🔪Adopt type=module (#46)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* Update README
+
+* fix eslintrc
+
+* undefined context
+
+* fix tests; cleaner imports
+
+* relax test precision
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    5 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   20 +-
+ d3-timer.sublime-project (gone)     |   17 -
+ package.json                        |   45 +-
+ src/timer.js                        |    2 +-
+ test/.eslintrc.json (new)           |   14 +
+ test/asserts.js (new)               |    7 +
+ test/end.js (gone)                  |    7 -
+ test/inRange.js (gone)              |   10 -
+ test/interval-test.js               |   93 ++-
+ test/now-test.js                    |   30 +-
+ test/timeout-test.js                |   68 +-
+ test/timer-test.js                  |  548 ++++++-------
+ test/timerFlush-test.js             |   52 +-
+ yarn.lock                           | 1463 +++++++++++++++++++----------------
+ 18 files changed, 1320 insertions(+), 1149 deletions(-)
+
+☕f302fe9🔪2020-08-23 15:58:39 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕9b3bea0🔪2020-07-24 16:47:20 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕c4754f4🔪2020-07-10 22:17:19 +0200🔪Philippe Rivière🔪links to d3@6 versions🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕85496b3🔪2020-06-29 11:29:41 +0200🔪Philippe Rivière🔪When an interval is restarted, restart as an interval not a Timer. fixes #39 test https://observablehq.com/d/01143cce97603b60🔪
+ src/interval.js       | 16 ++++++++++------
+ test/interval-test.js | 14 ++++++++++++++
+ 2 files changed, 24 insertions(+), 6 deletions(-)
+
+☕42d391f🔪2020-06-05 18:13:51 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/timeout.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕84e909e🔪2019-11-16 11:28:32 -0800🔪Mike Bostock🔪1.0.10🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8596f21🔪2019-11-16 11:28:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕fa81fce🔪2019-09-27 10:29:18 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕b243a2a🔪2019-11-02 08:23:33 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕496c0c7🔪2019-08-09 16:15:36 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 875 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 518 insertions(+), 363 deletions(-)
+
+☕a2fb2a6🔪2019-08-09 15:54:06 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕47a2456🔪2019-08-09 15:45:59 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/index.js    | 6 +++---
+ src/interval.js | 2 +-
+ src/timeout.js  | 2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕318b185🔪2018-08-24 14:21:36 -0700🔪Mike Bostock🔪1.0.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕53e3638🔪2018-08-24 14:00:52 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a54bdc🔪2018-08-24 13:42:09 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ .npmignore               | 1 +
+ package.json             | 9 +++++----
+ rollup.config.js         | 6 +++---
+ index.js => src/index.js | 6 +++---
+ 4 files changed, 12 insertions(+), 10 deletions(-)
+
+☕d2dd1c2🔪2018-08-24 11:58:01 -0700🔪Mike Bostock🔪1.0.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3489d5d🔪2018-08-24 11:57:53 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   8 -
+ .eslintrc.json (new)     |  15 +
+ .gitignore               |   2 +-
+ .npmignore               |   2 +-
+ d3-timer.sublime-project |  16 +-
+ package.json             |  17 +-
+ rollup.config.js         |  39 +-
+ test/timer-test.js       |   1 -
+ yarn.lock (new)          | 935 +++++++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 1003 insertions(+), 32 deletions(-)
+
+☕59fc0ad🔪2017-09-03 09:32:01 -0700🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f88d970🔪2017-09-03 09:31:56 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json           | 8 ++++----
+ rollup.config.js (new) | 9 +++++++++
+ 2 files changed, 13 insertions(+), 4 deletions(-)
+
+☕367fad8🔪2017-09-03 09:27:41 -0700🔪Mike Bostock🔪Add comment regarding delay calculation.🔪In the common case, we assume that the clock has not advanced significantly
+since we woke when scheduing the next sleep timer. Since the clock can only move
+forward, we only need to check the clock if we actually schedule a timer, and
+not if we’ll use an animation frame.
+
+ src/timer.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕34391e4🔪2017-08-04 14:17:46 -0700🔪Mike Bostock🔪Fix #27 - inaccurate timeout delay.🔪If timers are expensive, then by the time we sleep, the current time may have
+advanced substantially from the `clockNow` computed on wake. Therefore we must
+recompute the current time before scheduling the timeout.
+
+ src/timer.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5264463🔪2017-06-05 08:05:52 -0700🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2af750d🔪2017-06-05 08:05:12 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕b4088af🔪2017-05-30 11:14:15 -0700🔪Mike Bostock🔪Test for window.requestAnimationFrame, again.🔪
+ src/timer.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a611336🔪2017-05-30 11:13:35 -0700🔪Mike Bostock🔪Test for window.requestAnimationFrame.🔪
+ src/timer.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eea979e🔪2017-05-30 08:47:01 +0200🔪Klimczak🔪Fix for Edge browser.🔪
+ src/timer.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕88c3828🔪2017-03-10 10:24:32 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8a119e0🔪2017-03-10 10:24:25 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8af4acd🔪2017-01-23 10:46:28 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c143d7b🔪2017-01-23 10:46:12 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕4672ece🔪2016-11-28 16:09:29 -0800🔪Mike Bostock🔪Record clock before sleeping.🔪Fixes #17. The poke interval was relying on the wake callback to record the
+last-seen clock time, clockLast. If no timers were run before sleeping (such as
+when no timers are run immediately on load, but timers are scheduled during a
+timeout), clockLast was still its initial value, zero. Now we set clockLast to
+clockNow before scheduling the poke interval, so that it detects skew relative
+to the time the poke interval was started.
+
+ src/timer.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕66a6ad8🔪2016-08-26 13:37:46 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e8ac3d2🔪2016-08-26 13:29:49 -0700🔪Mike Bostock🔪Don’t rely on requestAnimationFrame timestamp.🔪Instead, always call performance.now (or Date.now) to retrieve the current time.
+The performance cost of doing this is negligble since this happens at most once
+per animation frame, and it simplifies the logic, fixing #16.
+
+ src/timer.js | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕a365833🔪2016-08-13 15:11:01 +0200🔪Mehdi El Fadil🔪Add links to source🔪d3/d3#2936
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕2ab2360🔪2016-08-02 14:26:40 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕61109b9🔪2016-08-02 14:26:39 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕36715c6🔪2016-06-30 07:32:42 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3e798c2🔪2016-06-30 07:32:37 -0700🔪Mike Bostock🔪Prepare for patch release.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6ea3df4🔪2016-06-30 07:30:39 -0700🔪Mike Bostock🔪Fix for IE9. Fixes d3/d3-force#39.🔪
+ src/timer.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b61a47d🔪2016-06-14 15:21:35 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a902482🔪2016-06-14 15:21:25 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕139a0ea🔪2016-06-14 09:21:44 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕234ee16🔪2016-06-10 07:07:44 -0700🔪Mike Bostock🔪0.5.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a7716a2🔪2016-06-10 07:05:38 -0700🔪Mike Bostock🔪Fix d3/d3-force#34.🔪A removed timer wasn’t having its internal _next field cleared on removal, so on
+restart, the timer thought it was still in the queue.
+
+ src/timer.js       |  7 ++++---
+ test/timer-test.js | 10 ++++++++++
+ 2 files changed, 14 insertions(+), 3 deletions(-)
+
+☕f79d279🔪2016-06-07 17:20:07 -0700🔪Mike Bostock🔪0.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4f9b037🔪2016-06-07 17:19:55 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  4 ----
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 13 deletions(-)
+
+☕eec6acf🔪2016-05-18 09:51:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕32ca30f🔪2016-05-14 21:02:04 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕e543e03🔪2016-05-13 13:10:08 -0700🔪Mike Bostock🔪0.4.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2d9a09f🔪2016-05-13 13:09:59 -0700🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d26677e🔪2016-05-13 13:08:27 -0700🔪Mike Bostock🔪Fix incorrect now on iOS 8.🔪iOS 8 supports requestAnimationFrame, but doesn’t support performance.now, so it
+was seeing inconsistent timing. This commits changes the setFrame method to pass
+Date.now to the wake callback if performance.now isn’t available. Fixes #12.
+
+ src/timer.js | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕1aac936🔪2016-04-29 11:20:55 -0700🔪Mike Bostock🔪0.4.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f20fd65🔪2016-04-29 11:20:52 -0700🔪Mike Bostock🔪Fix infinite loop when restarting timer.🔪
+ src/timer.js       |  2 +-
+ test/timer-test.js | 12 ++++++++++++
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+
+☕b7e8164🔪2016-04-29 09:09:55 -0700🔪Mike Bostock🔪0.4.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕df063bb🔪2016-04-29 09:09:42 -0700🔪Mike Bostock🔪Fix infinite loop in restarting timer.🔪
+ src/timer.js       |  2 +-
+ test/timer-test.js | 11 +++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕1750e80🔪2016-03-15 10:21:38 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6476bf8🔪2016-03-14 13:08:59 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕72cee30🔪2016-03-14 12:34:03 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕e1dae15🔪2016-03-06 15:10:36 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕73a0bb8🔪2016-03-04 09:49:07 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8f61fbd🔪2016-03-01 14:11:35 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 4 ++++
+ package.json | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+☕5c12e4e🔪2016-02-24 16:18:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b9e4f88🔪2016-02-24 15:48:19 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d079b35🔪2016-02-24 15:47:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕74eb924🔪2016-02-21 16:07:43 -0800🔪Mike Bostock🔪0.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c703cae🔪2016-02-21 16:07:40 -0800🔪Mike Bostock🔪Fix #11 - prototype.constructor.🔪
+ src/timer.js       | 1 +
+ test/timer-test.js | 1 +
+ 2 files changed, 2 insertions(+)
+
+☕c67b19e🔪2016-02-21 16:07:06 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕87f79aa🔪2016-02-20 16:47:06 -0800🔪Mike Bostock🔪Slightly more readable.🔪
+ src/interval.js       | 9 +++++----
+ test/interval-test.js | 6 +++---
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+☕cd96ae5🔪2016-02-18 21:25:25 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b317561🔪2016-02-12 14:57:47 -0800🔪Mike Bostock🔪Fix #10 - add d3.{timeout,interval}.🔪
+ README.md                                   | 12 +++--
+ index.js                                    |  9 +++-
+ package.json                                |  2 +-
+ src/interval.js (new)                       | 12 +++++
+ src/timeout.js (new)                        | 11 +++++
+ src/timer.js                                |  8 +--
+ test/interval-test.js (new)                 | 76 +++++++++++++++++++++++++++++
+ test/{timerOnce-test.js => timeout-test.js} | 24 ++++-----
+ 8 files changed, 129 insertions(+), 25 deletions(-)
+
+☕2e0c0bc🔪2016-02-11 10:22:14 -0800🔪Mike Bostock🔪Comment regarding apparent vs. true time.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕da49992🔪2016-02-11 10:17:41 -0800🔪Mike Bostock🔪Freeze time in the background.🔪Rather than periodically flushing the timer queue in the background, freeze time
+such that timers remain blissfully unaware of their sleep when returning to the
+foreground. Fixes d3/d3-transition#29.
+
+ package.json |  2 +-
+ src/timer.js | 16 ++++++++--------
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+☕e6e92dc🔪2016-02-10 11:42:25 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2589f65🔪2016-02-10 11:39:10 -0800🔪Mike Bostock🔪Fix tests?🔪
+ test/timer-test.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b2eee5a🔪2016-02-10 11:38:22 -0800🔪Mike Bostock🔪Micro-optimize.🔪
+ src/timer.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d9dc87f🔪2016-02-10 10:57:04 -0800🔪Mike Bostock🔪Fix #6 - a slow poke for paused animations.🔪In some browsers, requestAnimationFrame is paused in background tabs. This can
+cause the page to hang when returned to the foreground, as when a huge queue of
+chained transitions (d3/d3-transition#29 mbostock/d3#2211) builds up. So we now
+wake up every five seconds to flush the queue.
+
+ src/timer.js | 20 +++++++++++++++++---
+ 1 file changed, 17 insertions(+), 3 deletions(-)
+
+☕c77ba9e🔪2016-02-10 10:28:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕32ef849🔪2016-02-10 10:28:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕735c8b3🔪2016-02-10 10:27:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕da42b6f🔪2016-02-10 10:26:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d8dc834🔪2016-02-10 10:23:25 -0800🔪Mike Bostock🔪Add d3.now().🔪This method returns the current high-resolution time, using performance.now
+where available. Furthermore, it is consistent during an animation frame or
+while handling event, ensuring that any scheduled timers (or transitions!) have
+consistent timing.
+
+Since the current time is now available by calling d3.now(), the timer callbacks
+no longer receive a second argument; they only receive the elapsed time.
+
+Fixes d3/d3-transition#18.
+
+ README.md               | 50 ++++++++++++++++++++-----------------------
+ index.js                |  1 +
+ package.json            |  4 ++--
+ src/timer.js            | 57 +++++++++++++++++++++++++++----------------------
+ test/now-test.js (new)  | 21 ++++++++++++++++++
+ test/timer-test.js      | 46 ++++++++++++++++++++++-----------------
+ test/timerFlush-test.js | 18 ++++++++--------
+ test/timerOnce-test.js  | 25 +++++++++++-----------
+ 8 files changed, 126 insertions(+), 96 deletions(-)
+
+☕fb43e7d🔪2016-02-09 15:51:19 -0800🔪Mike Bostock🔪Optimizations.🔪Private state on the timer object; avoid try-finally.
+
+ README.md          |  8 ++-----
+ package.json       |  4 ++--
+ src/timer.js       | 66 +++++++++++++++++++++++++++---------------------------
+ test/timer-test.js |  8 -------
+ 4 files changed, 37 insertions(+), 49 deletions(-)
+
+☕1e7ee4c🔪2016-02-02 09:07:06 -0800🔪Mike Bostock🔪Add timerOnce.🔪
+ README.md                     | 10 +++++---
+ index.js                      |  1 +
+ package.json                  |  2 +-
+ src/timer.js                  | 19 ++++++++++-----
+ test/end.js (new)             |  7 ++++++
+ test/timer-test.js            | 40 ++-----------------------------
+ test/timerFlush-test.js (new) | 32 +++++++++++++++++++++++++
+ test/timerOnce-test.js (new)  | 56 +++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 119 insertions(+), 48 deletions(-)
+
+☕9fbb307🔪2016-01-29 10:40:05 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕26bad50🔪2016-01-20 17:37:49 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/timer.js    |  4 ++--
+ 3 files changed, 15 insertions(+), 3 deletions(-)
+
+☕1eb907f🔪2016-01-07 15:52:32 -0800🔪Mike Bostock🔪Prefix with d3, not d3_timer.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕59a9ff5🔪2015-12-18 12:18:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 30 +++++++++++++-----------------
+ package.json |  2 +-
+ 2 files changed, 14 insertions(+), 18 deletions(-)
+
+☕948e56a🔪2015-11-11 11:32:31 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕28e629c🔪2015-11-05 13:26:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a6ec775🔪2015-11-05 13:26:13 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9ff2a50🔪2015-11-05 13:25:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8a98867🔪2015-11-05 13:25:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8d9ada1🔪2015-11-05 13:24:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4acbd4c🔪2015-11-05 13:24:34 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5d1a189🔪2015-11-05 13:23:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eff69c2🔪2015-11-05 13:22:45 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1262270🔪2015-11-05 13:22:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cb7126d🔪2015-11-05 13:22:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕194d789🔪2015-11-05 13:21:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 +++++++++++++++++++-----------
+ 1 file changed, 19 insertions(+), 11 deletions(-)
+
+☕732b433🔪2015-11-05 13:10:16 -0800🔪Mike Bostock🔪Verify that callback is a function.🔪
+ src/timer.js       |  1 +
+ test/timer-test.js | 35 ++++++++++++++++++++++++++++++++++-
+ 2 files changed, 35 insertions(+), 1 deletion(-)
+
+☕1fc8795🔪2015-11-05 10:48:11 -0800🔪Mike Bostock🔪Test this context.🔪
+ test/timer-test.js | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕b8b7464🔪2015-11-05 10:46:39 -0800🔪Mike Bostock🔪Better tests.🔪
+ test/timer-test.js | 330 ++++++++++++++++++++++++++++++++---------------------
+ 1 file changed, 201 insertions(+), 129 deletions(-)
+
+☕d4cd7dc🔪2015-11-05 07:33:42 -0800🔪Mike Bostock🔪Don’t use the timer as the context.🔪I think it’s better to encourage callers to retain a reference to the timer.
+This makes the mechanism for canceling a timer from inside its callback the same
+as from outside, rather than the former using `this.stop()`. (This also
+simplifies our implementation slightly.)
+
+ src/timer.js       |   6 +--
+ test/timer-test.js | 107 +++++++++++++++++++++++++++++------------------------
+ 2 files changed, 61 insertions(+), 52 deletions(-)
+
+☕3a6168e🔪2015-11-04 22:38:33 -0800🔪Mike Bostock🔪Better tests.🔪
+ src/timer.js       |   2 +-
+ test/timer-test.js | 221 +++++++++++++++++++++++++++++++++--------------------
+ 2 files changed, 140 insertions(+), 83 deletions(-)
+
+☕1f5b5b5🔪2015-11-04 21:27:11 -0800🔪Mike Bostock🔪Hide private fields; rename reset to restart.🔪Rather than storing the timer linked list on the timer objects, we now store a
+map of task-by-id and reference the task by timer.id. This is similar to how
+setTimeout and setInterval work (although we still provide a convenient timer
+object with methods rather than just a long identifier).
+
+The reset method has been renamed to restart, and you can now restart a timer
+that has been stopped. If the timer was stopped, this is equivalent to creating
+a new timer in that the task is put at the end of the queue.
+
+Also, fix instanceof timer.
+
+ src/timer.js | 54 +++++++++++++++++++++++++++++++-----------------------
+ 1 file changed, 31 insertions(+), 23 deletions(-)
+
+☕0bd5e69🔪2015-11-04 15:04:56 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+☕5e4aa07🔪2015-11-03 23:58:47 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕4b0d70a🔪2015-11-01 09:24:21 -0500🔪Mike Bostock🔪Simplify.🔪Rather than remove the timer from the queue synchronously, we clear its callback
+and remove it on the next tick. This means we can use a singly-linked list.
+
+ src/timer.js       | 57 +++++++++++++++++++++++++++---------------------------
+ test/timer-test.js |  2 +-
+ 2 files changed, 29 insertions(+), 30 deletions(-)
+
+☕19a9e19🔪2015-10-31 22:44:40 -0400🔪Mike Bostock🔪Add comment.🔪
+ src/timer.js       | 2 +-
+ test/timer-test.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕16f0ffd🔪2015-10-30 22:36:36 -0400🔪Mike Bostock🔪Timer, Stop!🔪Rather than stopping timers by having the callback return true, timer(…) now
+returns a timer object with a stop method. Thus, you can now stop a timer
+synchronously outside of its callback, rather than having to wait until the
+timer is next called back. You can also reset a timer (changing its start time
+or callback) externally, too. Fixes #5.
+
+This commit also wraps timer execution with a try-finally block, fixing #4.
+
+ index.js           |   2 -
+ src/timer.js       | 111 ++++++++++++++++++++++++-----------------------------
+ test/timer-test.js |  66 +++++++++++++++----------------
+ 3 files changed, 84 insertions(+), 95 deletions(-)
+
+☕3466bb5🔪2015-10-29 16:49:50 -0400🔪Mike Bostock🔪Tests for d7e22f06c68a3895b2f3b511ffdca31155509d43.🔪
+ test/timer-test.js | 24 ++++++++++++++++++++++--
+ 1 file changed, 22 insertions(+), 2 deletions(-)
+
+☕6811aa3🔪2015-10-29 09:23:02 -0400🔪Mike Bostock🔪Shorten.🔪
+ src/timer.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d7e22f0🔪2015-10-29 09:11:22 -0400🔪Mike Bostock🔪Fix #7 - don’t request frames during flush.🔪
+ src/timer.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f8a8b0f🔪2015-10-20 14:39:26 -0700🔪Mike Bostock🔪Remove requestAnimationFrame polyfill.🔪
+ package.json       |  6 +++---
+ src/timer.js       | 10 +++++++++-
+ test/timer-test.js | 15 +++++++--------
+ 3 files changed, 19 insertions(+), 12 deletions(-)
+
+☕daa1f04🔪2015-07-01 11:28:20 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ec7f4df🔪2015-06-16 14:51:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+
+☕09012d8🔪2015-06-16 14:03:59 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕9b977f3🔪2015-06-10 13:39:41 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                        | 2 +-
+ index.sublime-project => d3-timer.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕9fe4054🔪2015-06-09 11:43:21 -0700🔪Mike Bostock🔪Use a struct, not a class.🔪
+ src/timer.js | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+
+☕175fc60🔪2015-06-08 17:48:54 -0700🔪Mike Bostock🔪Tests for timerFlush(time).🔪
+ test/timer-test.js | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+☕c5492e9🔪2015-06-08 17:43:29 -0700🔪Mike Bostock🔪Test timer callback order.🔪
+ test/timer-test.js | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+☕d270103🔪2015-06-08 16:43:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2498ac6🔪2015-06-08 16:42:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9594f64🔪2015-06-08 16:42:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa97dfb🔪2015-06-08 16:40:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10cf061🔪2015-06-08 16:40:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕aa678b0🔪2015-06-08 16:39:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 35 ++++++++++++++++++++++++++++++++---
+ 1 file changed, 32 insertions(+), 3 deletions(-)
+
+☕379528d🔪2015-06-08 16:29:28 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1d0781a🔪2015-06-08 16:27:30 -0700🔪Mike Bostock🔪Rename test.🔪
+ test/timer-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b0d9ec🔪2015-06-08 16:26:51 -0700🔪Mike Bostock🔪Tests for setTimeout rescheduling.🔪
+ src/timer.js       |  7 ++-----
+ test/timer-test.js | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 49 insertions(+), 5 deletions(-)
+
+☕0e9ae48🔪2015-06-08 16:09:49 -0700🔪Mike Bostock🔪More precise setTimeout semantics.🔪Previously, we were sloppy about using requestAnimationFrame in some cases where
+the delay was long. Now we use setTimeout when appropriate.
+
+ README.md          | 10 ++++-----
+ src/timer.js       | 64 +++++++++++++++++++++++++++++-------------------------
+ test/timer-test.js | 32 +++++++++++++++++++++++++--
+ 3 files changed, 69 insertions(+), 37 deletions(-)
+
+☕00ee1fd🔪2015-06-08 11:17:43 -0700🔪Mike Bostock🔪Update description.🔪
+ package.json | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕8a2d758🔪2015-06-08 11:16:51 -0700🔪Mike Bostock🔪Test avoidance of duplicate requestAnimationFrame.🔪
+ test/timer-test.js | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+☕8f2e498🔪2015-06-08 11:00:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕49c7ca4🔪2015-06-08 10:59:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ee2b0c2🔪2015-06-08 10:58:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bee5790🔪2015-06-08 10:57:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ab1e309🔪2015-06-08 10:57:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕02677f0🔪2015-06-08 10:57:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕714edd5🔪2015-06-08 10:55:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕529147a🔪2015-06-08 10:54:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+☕f8d10ba🔪2015-06-08 10:44:48 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)            |   5 +++
+ .npmignore (new)            |   3 ++
+ LICENSE (new)               |  27 ++++++++++++
+ README.md (new)             |  13 ++++++
+ index.js (new)              |  11 +++++
+ index.sublime-project (new) |  13 ++++++
+ package.json (new)          |  35 +++++++++++++++
+ src/timer.js (new)          |  85 ++++++++++++++++++++++++++++++++++++
+ test/inRange.js (new)       |  10 +++++
+ test/timer-test.js (new)    | 104 ++++++++++++++++++++++++++++++++++++++++++++
+ 10 files changed, 306 insertions(+)

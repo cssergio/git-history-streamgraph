@@ -1,0 +1,1364 @@
+☕1bccd3f🔪2021-06-11 22:40:43 +0200🔪Philippe Rivière🔪document the d3.ZoomTransform constructor (#237)🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕debbe3d🔪2021-06-09 17:49:11 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3419879🔪2021-06-09 17:48:30 -0700🔪Mike Bostock🔪Expose ZoomTransform constructor. (#191)🔪
+ src/index.js           | 2 +-
+ test/transform-test.js | 3 +--
+ test/zoom-test.js      | 3 +--
+ 3 files changed, 3 insertions(+), 5 deletions(-)
+
+☕e2f0e73🔪2021-06-09 17:37:58 -0700🔪Mike Bostock🔪fix #235; currentTarget initialization🔪
+ src/zoom.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c774f9e🔪2021-06-10 02:35:37 +0200🔪Philippe Rivière🔪Adopt type=module (#234)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* all tests pass!
+
+thank you, @aulonm! (cf. https://github.com/d3/d3-selection/pull/281#pullrequestreview-647434598)
+
+* browser rather than no-undef
+
+* update dependencies
+
+* add eslint.json
+
+* remove Sublime project
+
+* extract copyrights from license
+
+* cleaner tests
+
+* update README
+
+* update homepage
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    8 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   34 +-
+ d3-zoom.sublime-project (gone)      |   17 -
+ package.json                        |   59 +-
+ rollup.config.js                    |   10 +-
+ test/.eslintrc.json (new)           |   12 +
+ test/jsdom.js                       |   26 +-
+ test/transform-test.js              |   66 +-
+ test/zoom-callback-test.js          |  115 +--
+ test/zoom-events-test.js            |   83 +-
+ test/zoom-test.js                   |  244 +++--
+ yarn.lock                           | 1917 ++++++++++++++++-------------------
+ 15 files changed, 1268 insertions(+), 1411 deletions(-)
+
+☕506ccf3🔪2021-06-01 18:40:02 +0200🔪Fidel Thomet🔪Docs: Update default value for zoom.filter🔪Commit ab4bc6481d3a0e58cd727bad57ee684b98e8e26b changed the default value for `zoom.filter`. This was not reflected in the documentation. This PR resolves that.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕84a5e7b🔪2020-11-02 08:54:08 -0800🔪unknown🔪adding passive flag to wheel zoom event listener to remove google's warning🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db169ea🔪2020-08-23 23:47:49 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8f81ee7🔪2020-08-23 23:47:09 +0200🔪Philippe Rivière🔪d3 dependencies🔪
+ package.json |  13 +++-----
+ yarn.lock    | 100 +++++++++++++++++++++++++++++------------------------------
+ 2 files changed, 55 insertions(+), 58 deletions(-)
+
+☕28bb791🔪2020-07-24 19:22:33 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json |  15 +++++----
+ yarn.lock    | 106 ++++++++++++++++++++++++++++-------------------------------
+ 2 files changed, 59 insertions(+), 62 deletions(-)
+
+☕87c6215🔪2020-07-24 18:45:24 +0200🔪Philippe Rivière🔪remove touch-action:none fixes #206 fixes #217🔪
+ src/zoom.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕96bd44b🔪2020-07-24 14:41:33 +0200🔪Philippe Rivière🔪remove zoomEvent.on for now🔪refs:
+- https://github.com/d3/d3-brush/pull/71#issuecomment-663018853
+- https://github.com/d3/d3-brush/pull/71/commits/4d5cfc03aa3372ffc1aaf7fb455ffa7328e52465
+
+ README.md    | 19 -------------------
+ src/event.js |  5 -----
+ src/zoom.js  |  8 +++-----
+ 3 files changed, 3 insertions(+), 29 deletions(-)
+
+☕3318746🔪2020-07-15 15:29:47 +0200🔪Philippe Rivière🔪introduces tapDistance (default 10 pixels)🔪fixes #180
+fixes #206
+
+ README.md   |  6 +++++-
+ src/zoom.js | 20 ++++++++++++++------
+ 2 files changed, 19 insertions(+), 7 deletions(-)
+
+☕5ee1a8d🔪2020-07-13 13:04:00 +0200🔪Philippe Rivière🔪x and y are scaled by t_k when calling t.translate(x,y)🔪fixes https://github.com/d3/d3-zoom/issues/192
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d2a5f1🔪2020-07-13 09:37:32 +0200🔪Philippe Rivière🔪pinch-to-zoom🔪fixes #204
+An unintended consequence is that wheel-zooming with the ctrlKey pressed goes 10x faster, but it's rather agreeable.
+
+ src/zoom.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕87781b6🔪2020-07-02 18:55:48 +0200🔪Philippe Rivière🔪d3🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c0fbb0f🔪2020-05-28 19:11:10 +0200🔪Philippe Rivière🔪dbltap results in a touchend event being passed to dblclicked🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0c6be96🔪2020-05-28 19:10:40 +0200🔪Philippe Rivière🔪accept subevents🔪
+ README.md   | 19 +++++++++++++++++++
+ src/zoom.js |  3 ++-
+ 2 files changed, 21 insertions(+), 1 deletion(-)
+
+☕82b6e36🔪2020-05-28 17:59:00 +0200🔪Philippe Rivière🔪in wheeled also, send args🔪
+ src/zoom.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b56cc7e🔪2020-05-28 16:41:08 +0200🔪Philippe Rivière🔪pass the current event to the gesture🔪
+ src/zoom.js              | 54 +++++++++++++++++++++++++++---------------------
+ test/zoom-events-test.js |  6 ++++--
+ 2 files changed, 34 insertions(+), 26 deletions(-)
+
+☕46eba7c🔪2020-05-26 17:30:43 +0200🔪Philippe Rivière🔪75 unit tests🔪
+ package.json                     |    1 +
+ test/jsdom.js (new)              |    5 +
+ test/zoom-callback-test.js (new) |   85 +++
+ test/zoom-events-test.js (new)   |   61 ++
+ test/zoom-test.js (new)          |  139 ++++
+ yarn.lock                        | 1393 +++++++++++++++++++++++++++-----------
+ 6 files changed, 1296 insertions(+), 388 deletions(-)
+
+☕d8edd39🔪2020-05-26 17:29:56 +0200🔪Philippe Rivière🔪links + a few reverts from my previous changes🔪
+ README.md | 72 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 36 insertions(+), 36 deletions(-)
+
+☕3ea5983🔪2020-05-25 19:08:56 +0200🔪Philippe Rivière🔪document filter🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ec0da7🔪2020-05-25 19:08:29 +0200🔪Philippe Rivière🔪Clarify which functions expect (event, …) and which expect (selection, …); and repair the calls that were mixed-up.🔪*event-based functions:*
+- Gesture (hence event = this.args[0])
+- filter
+- wheelDelta
+
+*selection-based functions:*
+- extent
+- transform
+- schedule
+- k,p (in scaleBy & scaleTo)
+- x,y (in translateBy)
+
+In addition, an event that triggers a transition (such as a zoom.dblclick) can be persisted throughout the transition as the zoomEvent.sourceEvent (fixes https://github.com/d3/d3-zoom/issues/202).
+
+ src/zoom.js | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕4aade48🔪2020-05-25 15:40:35 +0200🔪Philippe Rivière🔪null event when calling zoom.transform🔪so that zoom.extent(function(event, d) {}) receives *null, datum*
+
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕74308c9🔪2020-05-22 17:25:17 +0200🔪Philippe Rivière🔪get datum and sourceEvent🔪
+ src/zoom.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕da400b7🔪2020-05-22 17:25:04 +0200🔪Philippe Rivière🔪the zoom behavior has no subject🔪(was a leftover from when I copied event code from d3-drag)
+
+ src/event.js | 2 --
+ 1 file changed, 2 deletions(-)
+
+☕5b1aae7🔪2020-05-17 17:43:19 +0200🔪Philippe Rivière🔪pass the datum as second argument to on("zoom", function(event, d) => ...)🔪
+ README.md   | 12 ++++++------
+ src/zoom.js |  6 ++++--
+ 2 files changed, 10 insertions(+), 8 deletions(-)
+
+☕3156eb0🔪2020-05-14 12:33:43 +0200🔪Philippe Rivière🔪Update d3-selection🔪notes:
+- needs https://github.com/d3/d3-selection/tree/two-multitouch-pointers https://github.com/d3/d3-selection/commit/e84c95fa3129ea3047d2903b416209aaf0a97eff for dbltap to work
+- needs d3-drag@2 also
+
+ README.md      | 38 +++++++++++++++++-----------------
+ package.json   | 10 ++++-----
+ src/event.js   | 24 ++++++++++++++++++----
+ src/noevent.js |  6 ++----
+ src/zoom.js    | 64 ++++++++++++++++++++++++++++++++++------------------------
+ yarn.lock      | 33 ++++++++++++++++++++++--------
+ 6 files changed, 109 insertions(+), 66 deletions(-)
+
+☕0b879f6🔪2020-05-14 12:19:58 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/constant.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕c609de4🔪2020-04-03 16:52:41 -0700🔪Mike Bostock🔪Update examples.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕3c95789🔪2019-08-10 07:39:57 -0700🔪Mike Bostock🔪1.8.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕523ccff🔪2019-08-10 07:39:02 -0700🔪Mike Bostock🔪Fix filtering of multitouch gestures. #176🔪
+ src/zoom.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕7a4a0cc🔪2019-08-10 07:30:44 -0700🔪Mike Bostock🔪1.8.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕176ad73🔪2019-08-10 07:28:49 -0700🔪Mike Bostock🔪Revert "Use touches rather than changedTouches in touchstarted"🔪This reverts commit c4734c2deedb9b9661edf11cd0cb3d33ce89c039.
+
+ src/zoom.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4d4fbb9🔪2019-08-09 12:32:10 -0700🔪Mike Bostock🔪1.8.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕39e4974🔪2019-08-09 12:31:14 -0700🔪Mike Bostock🔪Revert f4c6c792a26a6293a3e43911f2117e28852329c2.🔪We want to continue to consume the wheel events, even if they didn’t have any
+effect, so that scrolling is prevented until there is a pause in wheeling.
+
+ src/zoom.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕8519899🔪2019-08-09 12:23:39 -0700🔪Mike Bostock🔪1.8.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f653ce4🔪2019-08-09 12:23:04 -0700🔪Mike Bostock🔪Remove line numbers.🔪
+ README.md | 58 +++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 29 insertions(+), 29 deletions(-)
+
+☕280450c🔪2019-08-09 12:04:48 -0700🔪Mike Bostock🔪Document zoomTransform’s inheritance.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fbd16ed🔪2019-08-09 11:02:43 -0700🔪Mike Bostock🔪Allow a reference point to be specified.🔪
+ README.md        | 16 ++++++++--------
+ src/transform.js |  3 ++-
+ src/zoom.js      | 26 +++++++++++++-------------
+ 3 files changed, 23 insertions(+), 22 deletions(-)
+
+☕6bf7b7c🔪2019-08-07 11:01:41 -0700🔪Mike Bostock🔪1.7.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ff441a🔪2019-08-07 10:59:55 -0700🔪Mike Bostock🔪Update dependencies.🔪Standardize dependencies - related d3/d3#3337.
+Adopt explicit files for publishing - related d3/d3#3335.
+Adopt exact paths for imports - related d3/d3#3265.
+
+ .npmignore (gone) |   4 -
+ README.md         |   2 +-
+ package.json      |  10 +-
+ src/index.js      |   4 +-
+ src/zoom.js       |   8 +-
+ yarn.lock         | 899 ++++++++++++++++++++++++++++++++----------------------
+ 6 files changed, 545 insertions(+), 382 deletions(-)
+
+☕fb45138🔪2019-08-07 10:55:35 -0700🔪Mike Bostock🔪Fold into gesture.taps.🔪
+ src/zoom.js | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕a284673🔪2016-12-16 19:18:17 +0900🔪Cameron Beccario🔪Fix #75 - define tap as [touchstart, touchend] and dbltap as two quick taps🔪
+ src/zoom.js | 27 +++++++++++++--------------
+ 1 file changed, 13 insertions(+), 14 deletions(-)
+
+☕295cb42🔪2019-08-07 10:46:56 -0700🔪Mike Bostock🔪Fix #181 - ignore control-click.🔪
+ README.md   | 2 +-
+ src/zoom.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕a0821c3🔪2019-08-05 16:16:32 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕30d47e0🔪2019-08-05 15:58:18 -0700🔪Mike Bostock🔪Adjust wheel normalization.🔪
+ src/zoom.js | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+
+☕f21cdfd🔪2018-09-28 18:32:58 +0200🔪Dakkaron🔪Normalize defaultWheelDelta🔪Normalized defaultWheelDelta so that it returns the same scaling speed in Chrome/FF/Edge. IE is still slightly different.
+ src/zoom.js | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+☕f4c6c79🔪2019-07-24 10:04:21 +0200🔪Herst🔪Emit end event after last zoom which had an effect🔪#158
+
+ src/zoom.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕b200bb2🔪2019-08-05 15:40:46 -0700🔪Mike Bostock🔪Fix #60 - handle orphaned gestures.🔪
+ src/zoom.js | 29 +++++++++++------------------
+ 1 file changed, 11 insertions(+), 18 deletions(-)
+
+☕a84dba2🔪2019-02-05 11:30:51 +0100🔪Tom Erik Støwer🔪Return if there is no active gesture🔪
+ src/zoom.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕c4734c2🔪2019-07-16 17:33:47 +0100🔪Robin Houston🔪Use touches rather than changedTouches in touchstarted🔪It seems that the behaviour of Chrome on Android differs from the
+behaviour of Safari on iOS in the following respect: when a multitouch
+event is initiated by touching two or more fingers to the screen
+near-simultaneously, iOS Safari will fire a single touchstart event
+that includes all the touches (as both event.touches and event.changedTouches)
+whereas Android Chrome will fire a sequence of touchstart events:
+
+- one with touches.length == 1 and changedTouches.length == 1
+- followed by one with touches.length == 2 and changedTouches.length == 1
+
+In other words, the behaviour on Android Chrome when the screen is
+touched with two fingers simultaneously is the same as the behaviour
+on iOS Safari when you touch it first with one finger and then a second.
+
+The change in PR #169 makes it possible to ignore single-touch gestures
+on iOS Safari, but this fails on Android Chrome because the first touch
+is never recorded. When the second touch is processed, the changedTouches
+array contains only the second touch.
+
+This commit changes the behaviour of the touchstarted handler to consider
+all the touches in the event, rather than just the new touches.
+
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕911807f🔪2019-08-05 12:17:08 -0700🔪Mike Bostock🔪Fix #162 - touchable if maxTouchPoints.🔪
+ README.md   | 2 +-
+ src/zoom.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕17d4032🔪2019-08-05 12:02:56 -0700🔪Mike Bostock🔪Fix #177 - consider viewBox for default extent.🔪
+ README.md   |  2 +-
+ src/zoom.js | 14 +++++++-------
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+☕6f8b119🔪2018-08-24 14:33:02 -0700🔪Mike Bostock🔪1.7.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0fc1cdf🔪2018-08-24 14:33:00 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕a51f97c🔪2018-08-24 14:00:31 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕34b31dd🔪2018-08-24 13:39:44 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             | 9 +++++----
+ rollup.config.js         | 6 +++---
+ index.js => src/index.js | 4 ++--
+ 3 files changed, 10 insertions(+), 9 deletions(-)
+
+☕d7e34a4🔪2018-08-24 12:27:54 -0700🔪Mike Bostock🔪1.7.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e09c2dd🔪2018-08-24 12:27:52 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)        |  11 -
+ .eslintrc.json (new)    |  15 +
+ .gitignore              |   2 +-
+ .npmignore              |   3 +-
+ d3-zoom.sublime-project |  16 +-
+ package.json            |  17 +-
+ rollup.config.js        |  42 ++-
+ yarn.lock (new)         | 979 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1047 insertions(+), 38 deletions(-)
+
+☕4d2f32a🔪2017-10-30 07:14:17 -0700🔪Mike Bostock🔪1.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3bd2bdd🔪2017-10-30 14:09:28 +0100🔪Herst🔪Fix recently introduced bug breaking touch🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b9e82b7🔪2017-10-25 10:26:32 -0700🔪Mike Bostock🔪1.7.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕31599cd🔪2017-10-25 10:23:57 -0700🔪Mike Bostock🔪Remove package-lock.json.🔪
+ package-lock.json (gone) | 1017 ----------------------------------------------
+ 1 file changed, 1017 deletions(-)
+
+☕6b9ae1b🔪2017-10-25 10:19:28 -0700🔪Mike Bostock🔪Fix default translateExtent.🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕929ff6f🔪2017-10-25 10:19:23 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1c3336e🔪2017-10-18 10:21:45 -0700🔪Mike Bostock🔪Add zoom.constrain. Fixes #118.🔪
+ README.md   | 19 +++++++++++++++++++
+ src/zoom.js | 57 +++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 48 insertions(+), 28 deletions(-)
+
+☕1d0b81d🔪2017-10-18 10:09:34 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕318cadc🔪2017-10-03 10:11:22 -0700🔪Mike Bostock🔪1.6.0🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕44146e2🔪2017-10-03 10:11:15 -0700🔪Mike Bostock🔪Update Rollup.🔪
+ package.json     |  6 +++---
+ rollup.config.js | 16 ++++++++++++----
+ 2 files changed, 15 insertions(+), 7 deletions(-)
+
+☕2a4e294🔪2017-10-03 10:09:58 -0700🔪Mike Bostock🔪Add zoom.touchable. Related d3/d3-drag#42.🔪
+ README.md   | 42 +++++++++++++++++++++++++++---------------
+ src/zoom.js |  7 ++++++-
+ 2 files changed, 33 insertions(+), 16 deletions(-)
+
+☕807f02c🔪2017-07-14 13:53:40 -0700🔪Mike Bostock🔪1.5.0🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕24b6978🔪2017-07-14 13:45:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕bfb68b1🔪2017-07-14 13:43:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d70582b🔪2017-07-14 11:30:28 -0700🔪Mike Bostock🔪Center specified point.🔪
+ README.md   |  2 +-
+ src/zoom.js | 11 +++++++----
+ 2 files changed, 8 insertions(+), 5 deletions(-)
+
+☕d797be4🔪2017-07-13 14:24:00 -0700🔪Mike Bostock🔪Add zoom.translateTo.🔪
+ README.md   | 4 ++++
+ src/zoom.js | 9 +++++++++
+ 2 files changed, 13 insertions(+)
+
+☕afb5631🔪2017-07-14 13:51:52 -0700🔪Mike Bostock🔪1.4.0🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕ec4859c🔪2017-07-14 13:51:40 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package-lock.json | 396 +++++++++++++++++++++++++-----------------------------
+ package.json      |   2 +-
+ 2 files changed, 183 insertions(+), 215 deletions(-)
+
+☕17712f7🔪2017-07-12 13:27:50 -0700🔪Mike Bostock🔪1.3.1🔪
+ package-lock.json | 2 +-
+ package.json      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕707f951🔪2017-07-12 13:27:19 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package-lock.json (new) | 1049 +++++++++++++++++++++++++++++++++++++++++++++++
+ package.json            |    8 +-
+ rollup.config.js (new)  |    6 +
+ 3 files changed, 1059 insertions(+), 4 deletions(-)
+
+☕26c7029🔪2017-07-12 13:19:35 -0700🔪Mike Bostock🔪Fix source links.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕f3e3a67🔪2017-07-12 08:54:11 -0700🔪Mike Bostock🔪Set touch-action: none.🔪
+ src/zoom.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕34c2657🔪2017-07-12 08:49:00 -0700🔪Mike Bostock🔪Only register touch listeners when supported.🔪This avoids a [Violation] warning in Chrome.
+
+Related #99 #103 d3/d3-drag#35.
+
+ src/zoom.js | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+☕5f23df9🔪2017-06-16 07:39:44 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕58d3886🔪2017-06-15 17:32:30 +0200🔪Philippe Rivière🔪document the need for transform-origin on HTML elts🔪alternatively, we could provide an example block
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕918392d🔪2017-05-30 11:04:44 -0700🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a504e0🔪2017-05-30 11:00:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕d4a426e🔪2017-05-30 10:59:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4b8258d🔪2017-05-30 10:58:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕fe76c32🔪2017-05-30 15:24:09 +0200🔪Ondrej Zara🔪fixed typos in README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕066a19b🔪2017-05-30 09:31:06 +0200🔪Ondrej Zara🔪implemented the zoom.wheelDelta function, added it to the documentation🔪
+ README.md   | 38 +++++++++++++++++++++++++-------------
+ src/zoom.js | 11 ++++++++++-
+ 2 files changed, 35 insertions(+), 14 deletions(-)
+
+☕7cb7a90🔪2017-05-11 08:56:57 -0700🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0bad9a3🔪2017-05-11 08:56:53 -0700🔪Mike Bostock🔪Update package-preamble.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c0692b7🔪2017-05-11 08:54:28 -0700🔪Mike Bostock🔪Document zoom.clickDistance.🔪
+ README.md | 30 +++++++++++++++++-------------
+ 1 file changed, 17 insertions(+), 13 deletions(-)
+
+☕c26a3f7🔪2017-05-11 08:43:21 -0700🔪Mike Bostock🔪Style tweaks.🔪
+ src/zoom.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕35cf9fe🔪2017-05-11 08:42:04 -0700🔪Mike Bostock🔪Style tweaks.🔪
+ src/zoom.js | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕82a3b25🔪2017-04-21 16:49:04 -0500🔪Christopher Eveland🔪Suggestions from @mbostock re small gestures🔪- Added a clickDistance property to zoom: The L2 distance between
+  the mousedown and mouseup must exceed this threshold at some point
+  during the gesture in order to set the moved flag.
+- Distances are in screen space rather than user space.
+- Contrary to @mbostock’s sample code, moving past the threshold and
+  then back to the stating point would keep the moved flag set.
+
+ src/zoom.js | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+
+☕3531fd5🔪2017-04-21 08:47:12 -0500🔪Christopher Eveland🔪Fix for phantom moves🔪Don’t allow mousemove events to trigger motion for a gesture unless
+the mouse has actually changed pointer position.
+
+ src/zoom.js | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+☕b88631e🔪2017-03-24 08:54:26 -0700🔪Mike Bostock🔪1.1.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕87a5714🔪2017-03-24 08:51:43 -0700🔪Mike Bostock🔪Fix primary touch location on touchend.🔪When a secondary touch ends, the primary touch position may be detached from its
+initial location since the zoom behavior does not allow rotation; it only allows
+panning and zooming. Thus we must recompute the location of the primary touch
+from its position and the current zoom transform. Fixes #90.
+
+ src/zoom.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕c49d18a🔪2017-03-20 08:42:42 -0700🔪Mike Bostock🔪Add Brush & Zoom example.🔪
+ README.md           |  10 +++++-----
+ img/brush.png (new) | Bin 0 -> 38496 bytes
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕bfb2961🔪2017-03-10 09:40:22 -0800🔪Mike Bostock🔪1.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕831a235🔪2017-03-10 09:40:05 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1adb0df🔪2017-02-28 09:04:16 -0800🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕98f3c40🔪2017-02-28 09:03:55 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕78563a8🔪2016-12-21 08:21:20 -0800🔪Mike Bostock🔪Update README. Related #80.🔪
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕ecf4b0e🔪2016-11-28 15:31:38 -0800🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f15de0c🔪2016-11-28 09:16:49 -0800🔪Mike Bostock🔪Fix #72 - handling of multi-touchstart.🔪
+ src/zoom.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕dfa1dc0🔪2016-11-22 17:21:34 -0800🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0b1a298🔪2016-11-22 16:59:39 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dee80c6🔪2016-11-22 16:59:30 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 3 +--
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+☕b5e60e7🔪2016-10-20 10:12:16 -0700🔪Mike Bostock🔪Link to Drag & Zoom example. Related #66.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕c6d77b4🔪2016-09-26 09:39:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cb68fac🔪2016-09-26 09:32:28 -0700🔪Mike Bostock🔪Clarify node argument. Related #59.🔪
+ README.md | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+☕5fdb2ca🔪2016-09-24 05:14:48 -0700🔪Mike Bostock🔪Fix links. Related #58.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕f034fe6🔪2016-09-24 05:13:24 -0700🔪Mike Bostock🔪Fix links. Related #58.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕5a19fb3🔪2016-09-12 08:40:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕54df536🔪2016-08-27 14:02:10 -0700🔪Mike Bostock🔪Fix #50.🔪
+ src/zoom.js | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+☕47a10e5🔪2016-08-27 11:31:14 -0700🔪Mike Bostock🔪Fix #49.🔪Rather than hard-coding the internal dblclicked handler, observe the current
+dblclick.zoom listener, such that if this listener is removed (or changed), the
+behavior of double-tap is the same as that of double-click. This means you can
+now easily disable double-click and double-tap zoom transitions.
+
+ README.md   |  8 ++++++++
+ src/zoom.js | 10 +++++++++-
+ 2 files changed, 17 insertions(+), 1 deletion(-)
+
+☕d3ff183🔪2016-08-27 10:57:26 -0700🔪Mike Bostock🔪Add zoom.interpolate. Fixes #54.🔪
+ README.md   | 6 +++++-
+ src/zoom.js | 7 ++++++-
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+☕9905238🔪2016-08-23 12:18:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c52ecb0🔪2016-08-23 12:16:25 -0700🔪Mike Bostock🔪Update README. Related #26.🔪
+ README.md | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+☕5cd302a🔪2016-08-18 10:03:13 -0700🔪Mike Bostock🔪Update README. Related d3/d3-brush#13.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕1ba39e7🔪2016-08-18 16:59:37 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 50 +++++++++++++++++++++++++-------------------------
+ 1 file changed, 25 insertions(+), 25 deletions(-)
+
+☕8b5020a🔪2016-08-17 12:57:56 -0400🔪Tom MacWright🔪Minor spelling fix: specifed -> specified🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08e21ed🔪2016-08-02 14:19:51 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕58326a7🔪2016-08-02 14:19:16 -0700🔪Mike Bostock🔪Add module field. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕fbcca48🔪2016-07-07 08:37:18 -0400🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a2240bc🔪2016-07-07 08:30:08 -0400🔪Mike Bostock🔪Don’t share state across elements.🔪The previous implementation assumed that there could only be one mouse or one
+wheel active concurrently. While this feels like a reasonable assumption, it was
+possible to break if the zoom behavior was applied to a parent and child element
+simultaneously, since these would appear as concurrent gestures. Now the state
+is isolated on the per-element gesture. Fixes #41.
+
+ src/zoom.js | 43 ++++++++++++++++++-------------------------
+ 1 file changed, 18 insertions(+), 25 deletions(-)
+
+☕28bfe0b🔪2016-07-03 18:15:55 +0300🔪Bogdan Chadkin🔪Add transform tests🔪
+ test/transform-test.js (new) | 64 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 64 insertions(+)
+
+☕c14bc8d🔪2016-06-25 08:08:49 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕88cf19c🔪2016-06-25 08:07:43 -0700🔪Mike Bostock🔪Fix default extent on Firefox, again.🔪We weren’t handling the case where `this` is the root SVG element.
+
+Fixes #36. Related #28.
+
+ README.md   | 11 +----------
+ src/zoom.js | 14 ++++++++++----
+ 2 files changed, 11 insertions(+), 14 deletions(-)
+
+☕8181d07🔪2016-06-24 11:11:06 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08f4c61🔪2016-06-24 11:10:57 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 10 +++++-----
+ package.json | 10 +++++-----
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕7ea69c4🔪2016-06-19 09:40:46 -0700🔪Mike Bostock🔪0.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕981d19d🔪2016-06-19 09:40:43 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 12 ++++++------
+ package.json | 12 ++++++------
+ 2 files changed, 12 insertions(+), 12 deletions(-)
+
+☕c6a0ca7🔪2016-06-14 09:20:20 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕f1c899c🔪2016-06-07 21:00:17 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕310e4a5🔪2016-06-07 20:59:37 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 22 +++++++++++-----------
+ index.js     |  1 -
+ package.json | 22 +++++++++++-----------
+ 3 files changed, 22 insertions(+), 23 deletions(-)
+
+☕ac4b3ba🔪2016-05-26 15:45:52 -0700🔪Mike Bostock🔪Oops.🔪
+ src/zoom.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8fa74ec🔪2016-05-26 11:53:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eef9a28🔪2016-05-26 11:51:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕22fe552🔪2016-05-26 11:50:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕a4fbc49🔪2016-05-26 11:48:25 -0700🔪Mike Bostock🔪Add examples.🔪
+ README.md                |  14 +++++++++++++-
+ img/axis.png (new)       | Bin 0 -> 140469 bytes
+ img/dots.png (new)       | Bin 0 -> 32622 bytes
+ img/transition.png (new) | Bin 0 -> 15798 bytes
+ 4 files changed, 13 insertions(+), 1 deletion(-)
+
+☕1c09bb7🔪2016-05-26 09:03:07 -0700🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a93eaa6🔪2016-05-26 09:02:11 -0700🔪Mike Bostock🔪Fix #28 - zero SVG extent in Firefox.🔪
+ README.md   | 6 ++++--
+ src/zoom.js | 6 ++++--
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+☕393de54🔪2016-05-25 22:16:28 -0700🔪Mike Bostock🔪Add note regarding rangeRound.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f22c378🔪2016-05-25 21:52:52 -0700🔪Mike Bostock🔪0.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cff5362🔪2016-05-25 21:34:09 -0700🔪Mike Bostock🔪Fix #26 - only ignore wheel if not wheeling.🔪
+ src/zoom.js | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+
+☕1ec21eb🔪2016-05-25 16:55:09 -0700🔪Mike Bostock🔪0.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕72f75d3🔪2016-05-25 16:55:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1d018b1🔪2016-05-25 16:54:43 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕8e3e2d6🔪2016-05-25 16:47:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕1db758f🔪2016-05-25 16:46:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 +++++++++---------------
+ 1 file changed, 9 insertions(+), 15 deletions(-)
+
+☕cda2291🔪2016-05-25 16:35:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+
+☕1636807🔪2016-05-25 16:29:46 -0700🔪Mike Bostock🔪Use the tween name “zoom”.🔪
+ README.md   | 2 +-
+ src/zoom.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕354461b🔪2016-05-25 16:28:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕b7d8b42🔪2016-05-25 16:17:51 -0700🔪Mike Bostock🔪Expose d3.zoomIdentity.🔪
+ README.md        | 14 +++++++++-----
+ index.js         |  2 +-
+ src/transform.js |  2 +-
+ 3 files changed, 11 insertions(+), 7 deletions(-)
+
+☕a2019c7🔪2016-05-25 16:13:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+
+☕3ba747d🔪2016-05-25 16:04:30 -0700🔪Mike Bostock🔪Fix concurrent mouse and wheel.🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c04df63🔪2016-05-25 15:58:04 -0700🔪Mike Bostock🔪Clear mouse state on end.🔪
+ src/zoom.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕f20d416🔪2016-05-25 15:56:41 -0700🔪Mike Bostock🔪Fix touch input.🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2fb30d5🔪2016-05-25 15:08:28 -0700🔪Mike Bostock🔪Better. Faster. Stronger.🔪
+ src/zoom.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c6108bd🔪2016-05-25 14:52:35 -0700🔪Mike Bostock🔪Fix wheel after mousemove.🔪If the mouse moves to a new point, we should immediately compute the new
+corresponding location. Also, there’s no reason to track separate points and
+locations for the mouse and the wheel, since we assume they correspond to the
+same input device.
+
+ src/zoom.js | 31 +++++++++++++++----------------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+☕9b040f6🔪2016-05-25 14:14:00 -0700🔪Mike Bostock🔪Add zoom.translateExtent.🔪The translate extent, unlike the scale extent, isn’t a simple constraint on t_x
+and t_y; instead, it is the extent of the viewable world. The zoom behavior can
+then limit the transform such that the extent of the view (zoom.extent) is
+always within the extent of the world.
+
+This also replaces zoom.size with zoom.extent so that you can tell the zoom
+behavior the extent of the viewport, rather than assuming the top-left corner is
+always at [0, 0].
+
+Fixes #25. Related d3/d3#1084 d3/d3#1299.
+
+ README.md   | 14 +++++++++-----
+ src/zoom.js | 56 +++++++++++++++++++++++++++++++++++++++-----------------
+ 2 files changed, 48 insertions(+), 22 deletions(-)
+
+☕6802c16🔪2016-05-25 11:47:23 -0700🔪Mike Bostock🔪Avoid duplicate transforms.🔪
+ src/zoom.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕72d1b14🔪2016-05-25 11:42:06 -0700🔪Mike Bostock🔪Don’t enforce scale extent on zoom.transform.🔪Restoring the scale to an allowed value requires defining how to change the
+translation accordingly. Previously, we preserved the view center (as defined by
+zoom.size), which is consistent with zoom.scale{By,To}, but feels somewhat
+arbtirary and complicated. Seems simpler to do nothing.
+
+ README.md   |  2 +-
+ src/zoom.js | 13 -------------
+ 2 files changed, 1 insertion(+), 14 deletions(-)
+
+☕2fb4a9f🔪2016-05-24 15:52:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c3c7a68🔪2016-05-24 15:52:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6e458e5🔪2016-05-24 15:39:28 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2e07ef2🔪2016-05-24 15:39:24 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕13af3fe🔪2016-05-24 13:58:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb79c25🔪2016-05-24 13:58:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕547196b🔪2016-05-24 13:44:09 -0700🔪Mike Bostock🔪Immutability!🔪
+ README.md        | 4 ++--
+ src/transform.js | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕d8646cb🔪2016-05-24 12:23:09 -0700🔪Mike Bostock🔪Add event.target.🔪
+ README.md    | 1 +
+ src/event.js | 3 ++-
+ src/zoom.js  | 2 +-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+☕664af8f🔪2016-05-24 12:18:29 -0700🔪Mike Bostock🔪Consolidate logic.🔪
+ src/zoom.js | 29 ++++++++++++++---------------
+ 1 file changed, 14 insertions(+), 15 deletions(-)
+
+☕434cf2f🔪2016-05-24 11:19:38 -0700🔪Mike Bostock🔪Fix #26 - ignore wheel outside scale extent.🔪
+ README.md   |  4 ++--
+ src/zoom.js | 15 +++++++++------
+ 2 files changed, 11 insertions(+), 8 deletions(-)
+
+☕7b7c4e5🔪2016-05-24 11:07:38 -0700🔪Mike Bostock🔪Shorten🔪
+ src/zoom.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕eaca184🔪2016-05-24 09:22:52 -0700🔪Mike Bostock🔪Remove zoom.center.🔪The problem is that it’s too vague or specific a concept. Does it apply just to
+wheeling, or also to double clicks? Does it affect zoom transitions and clamping
+by the scale extent?
+
+Originally this feature was conceived of letting you zoom in and out, but not
+translate. But it doesn’t work well for this, because it doesn’t work for touch,
+and because you still have to unregister the dblclick and mousedown listeners. I
+need to design a more general replacement for this, such as a hook for
+constraining the zoom transform arbitrarily.
+
+ README.md   |  6 +-----
+ src/zoom.js | 15 +++++----------
+ 2 files changed, 6 insertions(+), 15 deletions(-)
+
+☕d735a51🔪2016-05-24 08:58:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕129a07f🔪2016-05-24 08:58:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ea01077🔪2016-05-24 08:57:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕a116a77🔪2016-05-24 08:56:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md        | 28 ++++++++++++++++++++++++----
+ src/transform.js |  4 ++--
+ 2 files changed, 26 insertions(+), 6 deletions(-)
+
+☕37ad5af🔪2016-05-24 08:49:01 -0700🔪Mike Bostock🔪Update d3-drag.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕cbd7903🔪2016-05-24 07:29:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕44b0066🔪2016-05-24 07:28:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕a534daf🔪2016-05-24 07:23:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cbec7e5🔪2016-05-24 07:22:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕708efeb🔪2016-05-24 07:22:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14b78c6🔪2016-05-24 07:22:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e7e1f4b🔪2016-05-24 07:19:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕5efae5c🔪2016-05-24 07:16:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0ea11b6🔪2016-05-24 07:15:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1c3f925🔪2016-05-24 07:14:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a713b1b🔪2016-05-24 07:13:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕7a7f85a🔪2016-05-24 07:04:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md        | 41 +++++++++++++++++++++++++++++++++--------
+ src/transform.js |  2 +-
+ 2 files changed, 34 insertions(+), 9 deletions(-)
+
+☕55c88e3🔪2016-05-24 06:55:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕03ba68b🔪2016-05-24 06:55:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+☕e1a7890🔪2016-05-23 17:30:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕5c62eae🔪2016-05-23 17:30:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 45 ++++++++++++++++++++++++++++++++++++---------
+ 1 file changed, 36 insertions(+), 9 deletions(-)
+
+☕3aa2dd5🔪2016-05-23 17:18:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa67f57🔪2016-05-23 17:17:59 -0700🔪Mike Bostock🔪Scaffold documentation.🔪
+ README.md | 120 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 120 insertions(+)
+
+☕0317fdb🔪2016-05-23 14:53:14 -0700🔪Mike Bostock🔪Fix #23 - helpers for deriving scales.🔪
+ src/transform.js | 26 ++++++++++++++++++++++----
+ 1 file changed, 22 insertions(+), 4 deletions(-)
+
+☕26e2177🔪2016-05-23 13:31:33 -0700🔪Mike Bostock🔪Expose the transform on the event.🔪
+ src/event.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕b72e4cb🔪2016-05-23 10:53:25 -0700🔪Mike Bostock🔪Center only applies to wheel.🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f49ab11🔪2016-05-23 10:48:04 -0700🔪Mike Bostock🔪Fix #17 - double-tap to zoom-in.🔪Also fixes a bug where the end event wasn’t emitted because we were erroneously
+not considering secondary touches as part of the same gesture.
+
+ src/zoom.js | 17 +++++++++++++----
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+
+☕0bf49e8🔪2016-05-23 10:47:36 -0700🔪Mike Bostock🔪Prevent default on dblclick.🔪
+ src/zoom.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕4e4b83c🔪2016-05-23 10:24:58 -0700🔪Mike Bostock🔪Fix #22 - ignore emulated mouse after touchend.🔪
+ src/zoom.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕128f9e2🔪2016-05-23 10:22:00 -0700🔪Mike Bostock🔪Fix #13 - touch input.🔪
+ src/zoom.js | 81 ++++++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 64 insertions(+), 17 deletions(-)
+
+☕65c20f8🔪2016-05-22 09:09:38 -0700🔪Mike Bostock🔪Fix #21 - adopt d3.drag{Disable,Enable}.🔪
+ README.md            |  1 +
+ package.json         |  3 ++-
+ src/nodrag.js (gone) | 30 ------------------------------
+ src/zoom.js          |  9 +++++----
+ 4 files changed, 8 insertions(+), 35 deletions(-)
+
+☕823d4f5🔪2016-05-20 14:13:22 -0700🔪Mike Bostock🔪Update d3-interpolate.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕e6815f5🔪2016-05-19 21:40:34 -0700🔪Mike Bostock🔪Emit events on zero-duration dblclick.🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕58c977b🔪2016-05-19 21:24:44 -0700🔪Mike Bostock🔪Interrupt on mousedown.🔪
+ src/zoom.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕9d2b7b5🔪2016-05-19 21:23:31 -0700🔪Mike Bostock🔪Slightly cleaner.🔪
+ src/zoom.js | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+☕a2ed49e🔪2016-05-19 17:58:04 -0700🔪Mike Bostock🔪Handle concurrent wheel and pan.🔪
+ src/zoom.js | 45 +++++++++++++++++++++++++++++++--------------
+ 1 file changed, 31 insertions(+), 14 deletions(-)
+
+☕96846c4🔪2016-05-19 17:44:37 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ src/nodrag.js (new)  |  30 +++++++++
+ src/noevent.js (new) |  10 +++
+ src/zoom.js          | 169 +++++++++++++++++++++++++++------------------------
+ 3 files changed, 129 insertions(+), 80 deletions(-)
+
+☕75be3e9🔪2016-05-19 13:40:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕c52d78f🔪2016-05-19 13:39:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕47d8cc8🔪2016-05-19 13:37:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 42 ++++++++++++++++++++++--------------------
+ 1 file changed, 22 insertions(+), 20 deletions(-)
+
+☕f7fb9d7🔪2016-05-18 16:07:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕768fe5b🔪2016-05-18 16:06:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕11585b6🔪2016-05-18 16:04:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+☕4f2632f🔪2016-05-18 15:55:37 -0700🔪Mike Bostock🔪Remove obsolete TODO.🔪
+ src/zoom.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕51fee28🔪2016-05-18 15:55:06 -0700🔪Mike Bostock🔪Fix #2 - stop propagation on consumed events.🔪
+ src/zoom.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕137da0d🔪2016-05-18 15:49:13 -0700🔪Mike Bostock🔪Add zoom.translateBy.🔪
+ src/zoom.js | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+☕357761f🔪2016-05-18 14:55:23 -0700🔪Mike Bostock🔪0.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕81f0544🔪2016-05-18 14:42:30 -0700🔪Mike Bostock🔪Fix initialization of element.__zoom.🔪We shouldn’t clobber the existing transform if present. And we should initialize
+the identity transform before starting a transition, if not present.
+
+ src/zoom.js | 22 ++++++++++------------
+ 1 file changed, 10 insertions(+), 12 deletions(-)
+
+☕39c5734🔪2016-05-18 10:53:02 -0700🔪Mike Bostock🔪Fix #14 - enforce scaleExtent on zoom.transform.🔪
+ src/zoom.js | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+☕d85e464🔪2016-05-18 09:43:17 -0700🔪Mike Bostock🔪Fix link to D3 4.0.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕505cb31🔪2016-05-17 22:26:24 -0700🔪Mike Bostock🔪Remove redundant TODO.🔪
+ src/zoom.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕fc05896🔪2016-05-17 21:52:58 -0700🔪Mike Bostock🔪Implement transform.toString.🔪
+ src/transform.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕3de9018🔪2016-05-17 21:44:10 -0700🔪Mike Bostock🔪Rename “view” to “transform”.🔪I think this better describes what it is, and affords some similarity with the
+Canvas 2D transform (albeit limited to scale and translate).
+
+ index.js               |  3 +-
+ src/event.js           |  4 +--
+ src/transform.js (new) | 29 ++++++++++++++++++
+ src/view.js (gone)     | 32 -------------------
+ src/zoom.js            | 83 +++++++++++++++++++++++++-------------------------
+ 5 files changed, 74 insertions(+), 77 deletions(-)
+
+☕36ec2b3🔪2016-05-17 17:33:46 -0700🔪Mike Bostock🔪Enforce scaleExtent on wheel and dblclick.🔪
+ src/zoom.js | 15 +++++----------
+ 1 file changed, 5 insertions(+), 10 deletions(-)
+
+☕3fed426🔪2016-05-17 17:24:04 -0700🔪Mike Bostock🔪Add zoom.scaleTo.🔪Related #11.
+
+ src/view.js |  5 ++++-
+ src/zoom.js | 28 +++++++++++++++++-----------
+ 2 files changed, 21 insertions(+), 12 deletions(-)
+
+☕944b562🔪2016-05-17 17:23:40 -0700🔪Mike Bostock🔪d3.zoomView returns identity if node is null.🔪This is useful for deriving views from scratch.
+
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕96d8f60🔪2016-05-17 17:06:20 -0700🔪Mike Bostock🔪Prettier.🔪
+ src/zoom.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕3dd76c9🔪2016-05-17 15:42:32 -0700🔪Mike Bostock🔪Don’t overload zoom(selection).🔪Let’s have zoom.view(selection, view) as the way to set the view. We might also
+want a few helper methods to derive views, such as zoom.scaleBy.
+
+ src/zoom.js | 41 ++++++++++++++++++++++++++++-------------
+ 1 file changed, 28 insertions(+), 13 deletions(-)
+
+☕c1108f4🔪2016-05-17 15:00:56 -0700🔪Mike Bostock🔪Fix #10 - handle concurrent transitions.🔪
+ src/zoom.js | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+☕afe4d37🔪2016-05-17 14:53:24 -0700🔪Mike Bostock🔪Handle concurrent wheel and drag.🔪
+ src/zoom.js | 45 ++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 34 insertions(+), 11 deletions(-)
+
+☕70c066d🔪2016-05-17 13:55:46 -0700🔪Mike Bostock🔪More TODOs.🔪
+ src/zoom.js | 17 +++++++++++++----
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+
+☕b6426d7🔪2016-05-17 13:49:27 -0700🔪Mike Bostock🔪Fix indentation.🔪
+ src/zoom.js | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕c522740🔪2016-05-17 13:47:22 -0700🔪Mike Bostock🔪Emit zoom events when setting zoom.🔪There’s no longer a need for a separate zoom.event method which does this
+because setting the view programmatically is distinguished by the presence of
+the new view.
+
+ src/zoom.js | 52 +++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 37 insertions(+), 15 deletions(-)
+
+☕1a7eb23🔪2016-05-17 13:47:07 -0700🔪Mike Bostock🔪Favor explicit on dblclick.🔪
+ src/zoom.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕d4b7b95🔪2016-05-17 13:20:44 -0700🔪Mike Bostock🔪Fix #9 - infer size automatically.🔪Rather than assume a size of 960×500, we now guess based on the DOM.
+
+ src/zoom.js | 48 ++++++++++++++++++++++++------------------------
+ 1 file changed, 24 insertions(+), 24 deletions(-)
+
+☕fa3f44a🔪2016-05-17 12:14:25 -0700🔪Mike Bostock🔪Add TODO.🔪
+ src/zoom.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕c207dae🔪2016-05-17 11:49:52 -0700🔪Mike Bostock🔪Expanded view API.🔪This makes it easier to control the zoom view programmatically.
+
+ index.js          |  2 +-
+ src/event.js      |  4 +--
+ src/view.js (new) | 29 +++++++++++++++++++
+ src/zoom.js       | 83 ++++++++++++++++++++++---------------------------------
+ 4 files changed, 65 insertions(+), 53 deletions(-)
+
+☕3d9569e🔪2016-05-17 10:28:01 -0700🔪Mike Bostock🔪Fix transition.call(zoom.view, …).🔪
+ src/zoom.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7d9d43🔪2016-05-17 10:24:10 -0700🔪Mike Bostock🔪Fix #7 - add zoom.filter.🔪
+ src/constant.js (new) |  5 +++++
+ src/zoom.js           | 31 +++++++++++++++++++------------
+ 2 files changed, 24 insertions(+), 12 deletions(-)
+
+☕31d895f🔪2016-05-17 10:15:39 -0700🔪Mike Bostock🔪Fix #3 - per-element state.🔪This implements option 6.
+
+ src/event.js       |   4 +--
+ src/view.js (gone) |  21 -----------
+ src/zoom.js        | 102 ++++++++++++++++++++++++++++++++---------------------
+ 3 files changed, 63 insertions(+), 64 deletions(-)
+
+☕7a52d12🔪2016-05-16 15:15:49 -0700🔪Mike Bostock🔪Formatting.🔪
+ src/zoom.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕4a3f648🔪2016-05-16 15:14:18 -0700🔪Mike Bostock🔪Don’t set target view on dblclick.🔪Also ensure that the current view is set exactly when the transition ends.
+Otherwise, we could get a scale of 1.0000000000000002, which would behave badly
+on the next zoom-out.
+
+ src/zoom.js | 46 ++++++++++++++++++++++++++--------------------
+ 1 file changed, 26 insertions(+), 20 deletions(-)
+
+☕815aab3🔪2016-05-16 15:00:04 -0700🔪Mike Bostock🔪Distinguish “target” and “current” views.🔪The target view represents the programmatically-set view; the current view
+represents the active element’s view as displayed, as determined by the last
+application of the zoom behavior and subsequently modified through interaction.
+
+The target view is NOT updated through interaction. This is because the zoom
+behavior may be applied to multiple elements, and the current view of each
+element may differ; it is only set programmatically.
+
+Related #3.
+
+ src/event.js      |  6 ++---
+ src/view.js (new) | 21 +++++++++++++++++
+ src/zoom.js       | 69 +++++++++++++++++++++----------------------------------
+ 3 files changed, 50 insertions(+), 46 deletions(-)
+
+☕e592e54🔪2016-05-16 14:21:33 -0700🔪Mike Bostock🔪Transitions!🔪
+ README.md    |   5 +++
+ package.json |   6 ++--
+ src/zoom.js  | 106 ++++++++++++++++++++++++++++++++++++++++-------------------
+ 3 files changed, 82 insertions(+), 35 deletions(-)
+
+☕939f38b🔪2016-05-16 10:22:32 -0700🔪Mike Bostock🔪Add zoom.center.🔪
+ src/zoom.js | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+
+☕1e80eae🔪2016-05-16 09:53:45 -0700🔪Mike Bostock🔪Emit custom events.🔪
+ src/event.js (new) |  5 +++++
+ src/zoom.js        | 24 ++++++++++++------------
+ 2 files changed, 17 insertions(+), 12 deletions(-)
+
+☕03c321f🔪2016-05-16 09:47:36 -0700🔪Mike Bostock🔪Add zoom.scaleExtent.🔪
+ src/zoom.js | 27 +++++++++++++++++++--------
+ 1 file changed, 19 insertions(+), 8 deletions(-)
+
+☕403cf83🔪2016-05-16 09:40:05 -0700🔪Mike Bostock🔪Support concurrent zoom gestures.🔪We no longer dispatch additional start and end events when wheeling and dragging
+simultaneously.
+
+ src/zoom.js | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+
+☕90e0d4b🔪2016-05-16 09:39:06 -0700🔪Mike Bostock🔪Ignore wheel events without deltaY.🔪These typically correspond to horizontal scrolling, and should be allowed.
+
+ src/zoom.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕867ec92🔪2016-05-16 09:33:33 -0700🔪Mike Bostock🔪Fix for simultaneous wheel & drag.🔪Update the current mouse point when dragging.
+
+ src/zoom.js | 22 ++++++++++++----------
+ 1 file changed, 12 insertions(+), 10 deletions(-)
+
+☕4c895ba🔪2016-05-16 09:22:59 -0700🔪Mike Bostock🔪Mouse zooming.🔪
+ src/zoom.js | 74 +++++++++++++++++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 57 insertions(+), 17 deletions(-)
+
+☕4b9eec6🔪2016-05-14 15:39:38 -0700🔪Mike Bostock🔪Update to ESLint 2. Related d3/d3-scale#59.🔪
+ .eslintrc    | 5 ++---
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕34f71ac🔪2016-05-14 15:29:54 -0700🔪Mike Bostock🔪Wheel timer.🔪
+ src/zoom.js | 46 ++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 32 insertions(+), 14 deletions(-)
+
+☕db9bff0🔪2016-05-13 14:12:58 -0700🔪Mike Bostock🔪Scaffold wheel events.🔪
+ src/zoom.js | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕019968c🔪2016-05-13 10:34:16 -0700🔪Mike Bostock🔪Scaffold event listeners.🔪
+ README.md         |  2 ++
+ index.js          |  1 +
+ package.json      |  6 +++++-
+ src/zoom.js (new) | 50 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 58 insertions(+), 1 deletion(-)
+
+☕7ac9c4e🔪2016-05-02 11:15:19 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04346b6🔪2016-05-02 11:15:04 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)               | 13 +++++++++++++
+ .gitignore (new)              |  5 +++++
+ .npmignore (new)              |  3 +++
+ LICENSE (new)                 | 27 +++++++++++++++++++++++++++
+ README.md (new)               | 24 ++++++++++++++++++++++++
+ d3-zoom.sublime-project (new) | 13 +++++++++++++
+ index.js (new)                |  1 +
+ package.json (new)            | 35 +++++++++++++++++++++++++++++++++++
+ 8 files changed, 121 insertions(+)

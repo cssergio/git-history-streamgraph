@@ -1,0 +1,2211 @@
+☕08806c6🔪2021-12-04 08:58:25 -0800🔪Mike Bostock🔪3.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕190a2c2🔪2021-12-04 08:57:16 -0800🔪Mike Bostock🔪upgrade dependencies🔪
+ package.json               |   4 +-
+ test/format-type-s-test.js |   4 +-
+ yarn.lock                  | 527 +++++++++++++++++++--------------------------
+ 3 files changed, 221 insertions(+), 314 deletions(-)
+
+☕b8cdc5e🔪2021-12-04 08:52:23 -0800🔪Mike Bostock🔪fix #116; document type c as character data🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b3fb47e🔪2021-12-04 19:48:01 +0300🔪Mikhail Akimov🔪Russian Ruble sign (#120)🔪
+ locale/ru-RU.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2e5a4c6🔪2021-12-04 17:45:01 +0100🔪Philippe Rivière🔪export locales (#118)🔪the import syntax becomes:
+> import localeCh from "d3-format/locale/de-CH";
+
+(same as https://github.com/d3/d3-time-format/pull/99)
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕bba8f0e🔪2021-06-05 11:35:16 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0206fdd🔪2021-06-05 11:35:14 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 42 +++++++++++++++---------------------------
+ 1 file changed, 15 insertions(+), 27 deletions(-)
+
+☕96ee49b🔪2021-06-05 11:35:05 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕c7cb33b🔪2021-06-03 20:54:27 -0700🔪Mike Bostock🔪remove Sublime project🔪
+ d3-format.sublime-project (gone) | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+☕b9cacd1🔪2021-06-03 19:42:19 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 126 +++++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 67 insertions(+), 59 deletions(-)
+
+☕ff87892🔪2021-04-26 20:57:26 +0200🔪Philippe Rivière🔪normalize the order of the fields in package.json🔪
+ package.json | 34 +++++++++++++++++-----------------
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+
+☕aa3dab4🔪2021-04-24 16:20:36 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e96365d🔪2021-04-24 16:20:20 -0700🔪Mike Bostock🔪ISC🔪
+ LICENSE      | 36 +++++++++++-------------------------
+ package.json |  2 +-
+ 2 files changed, 12 insertions(+), 26 deletions(-)
+
+☕f128396🔪2021-04-24 16:17:41 -0700🔪Mike Bostock🔪Update README🔪
+ README.md | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+
+☕6e2eda0🔪2021-04-24 15:23:13 -0700🔪Mike Bostock🔪update dependencies🔪
+ README.md |  2 +-
+ yarn.lock | 73 +++++++++------------------------------------------------------
+ 2 files changed, 11 insertions(+), 64 deletions(-)
+
+☕591328a🔪2021-04-24 15:21:45 -0700🔪Mike Bostock🔪3.0.0-rc.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕553144f🔪2021-04-24 15:21:32 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 92 ++++++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 50 insertions(+), 42 deletions(-)
+
+☕d5523ac🔪2021-04-24 15:15:15 -0700🔪Mike Bostock🔪add exports🔪
+ package.json | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕13b9f05🔪2021-04-24 14:49:52 -0700🔪Mike Bostock🔪no more zip🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fc09698🔪2021-04-24 11:49:19 -0700🔪Mike Bostock🔪3.0.0-rc.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5260604🔪2021-04-24 20:43:43 +0200🔪dkrat7🔪Add sl-SI locale (#113)🔪Locale for Slovenian language.
+ locale/sl-SI.json (new) | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕bbdeb34🔪2021-04-24 19:43:34 +0100🔪João Palmeiro🔪Add pt-PT locale file (#108)🔪
+ locale/pt-PT.json (new) | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕50c56cb🔪2021-04-24 20:43:25 +0200🔪Henrik Hansen🔪danish locale (#106)🔪
+ locale/da-DK.json (new) | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕aa6cb29🔪2021-04-24 11:40:28 -0700🔪Mike Bostock🔪Adopt type = module. (#112)🔪* type: module
+
+* restore unminified bundle
+
+* restore module entry; allow node >= 12
+
+* eslint src test
+ .eslintrc.json                      |    8 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |    2 +-
+ package.json                        |   17 +-
+ test/.eslintrc.json (new)           |   10 +
+ test/arabicLocale-test.js           |  171 ++----
+ test/defaultLocale-test.js          |   59 +-
+ test/format-test.js                 |   51 +-
+ test/format-trim-test.js            |  156 +++--
+ test/format-type-%-test.js          |   50 +-
+ test/format-type-b-test.js          |   14 +-
+ test/format-type-c-test.js          |   20 +-
+ test/format-type-d-test.js          |  447 +++++++-------
+ test/format-type-e-test.js          |   46 +-
+ test/format-type-f-test.js          |   90 ++-
+ test/format-type-g-test.js          |   50 +-
+ test/format-type-n-test.js          |   50 +-
+ test/format-type-none-test.js       |  105 ++--
+ test/format-type-o-test.js          |   14 +-
+ test/format-type-p-test.js          |   48 +-
+ test/format-type-r-test.js          |   70 ++-
+ test/format-type-s-test.js          |  278 ++++-----
+ test/format-type-x-test.js          |  102 ++--
+ test/formatPrefix-test.js           |   32 +-
+ test/formatSpecifier-test.js        |  154 +++--
+ test/inDelta.js (gone)              |   10 -
+ test/locale-test.js                 |  143 +++--
+ test/precisionFixed-test.js         |   19 +-
+ test/precisionPrefix-test.js        |   52 +-
+ test/precisionRound-test.js         |   15 +-
+ yarn.lock                           | 1155 +++++++++++++++++++----------------
+ 32 files changed, 1733 insertions(+), 1753 deletions(-)
+
+☕ebd043f🔪2020-08-20 09:07:28 -0700🔪Mike Bostock🔪2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ad3b81🔪2020-08-20 09:07:08 -0700🔪Mike Bostock🔪Prepare for v2.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕78361ab🔪2020-08-20 09:06:08 -0700🔪Mike Bostock🔪Deliberate ES6 syntax.🔪
+ src/formatTypes.js | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕39f4194🔪2020-08-19 16:12:46 -0700🔪Mike Bostock🔪Default to minus, not hyphen-minus.🔪
+ README.md                     |  2 +-
+ src/defaultLocale.js          |  4 +---
+ src/locale.js                 |  2 +-
+ test/arabicLocale-test.js     |  2 +-
+ test/format-trim-test.js      | 16 +++++++--------
+ test/format-type-%-test.js    |  8 ++++----
+ test/format-type-d-test.js    | 48 +++++++++++++++++++++----------------------
+ test/format-type-e-test.js    | 12 +++++------
+ test/format-type-f-test.js    | 10 ++++-----
+ test/format-type-g-test.js    |  8 ++++----
+ test/format-type-n-test.js    | 10 ++++-----
+ test/format-type-none-test.js |  8 ++++----
+ test/format-type-p-test.js    | 16 +++++++--------
+ test/format-type-r-test.js    |  4 ++--
+ test/format-type-s-test.js    | 42 ++++++++++++++++++-------------------
+ test/format-type-x-test.js    | 10 ++++-----
+ test/formatPrefix-test.js     |  2 +-
+ test/locale-test.js           | 22 ++++++++++----------
+ 18 files changed, 112 insertions(+), 114 deletions(-)
+
+☕c7a8573🔪2020-08-20 08:54:00 -0700🔪Mike Bostock🔪1.4.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7033d66🔪2020-08-19 16:00:50 -0700🔪Mike Bostock🔪Use number.toLocaleString for large numbers.🔪
+ src/exponent.js            |  4 ++--
+ src/formatDecimal.js       | 10 ++++++++--
+ src/formatPrefixAuto.js    |  6 +++---
+ src/formatRounded.js       |  4 ++--
+ src/formatTypes.js         |  3 ++-
+ test/format-type-d-test.js | 22 ++++++++++++----------
+ 6 files changed, 29 insertions(+), 20 deletions(-)
+
+☕76ce0fa🔪2020-08-20 08:44:37 -0700🔪Mike Bostock🔪Update depdendencies.🔪
+ package.json        |    9 +-
+ test/locale-test.js |   38 +-
+ yarn.lock           | 1150 +++++++++++++++++++++++++++------------------------
+ 3 files changed, 619 insertions(+), 578 deletions(-)
+
+☕e60aab4🔪2020-04-01 12:22:39 -0700🔪Mike Bostock🔪1.4.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d504d0🔪2020-04-01 11:40:58 -0700🔪Mike Bostock🔪Delete blank line.🔪
+ src/locale.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕228409f🔪2020-04-01 11:36:43 -0700🔪Mike Bostock🔪Fix #92 - sign of near-zero negative values.🔪
+ src/locale.js              | 8 +++++---
+ test/format-type-e-test.js | 5 +++++
+ test/format-type-f-test.js | 8 ++++++++
+ 3 files changed, 18 insertions(+), 3 deletions(-)
+
+☕79cf3ca🔪2019-12-29 08:43:31 -0800🔪Mike Bostock🔪1.4.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d1cb50🔪2019-12-20 14:55:55 -0800🔪Mike Bostock🔪Setting the default locale is a side effect.🔪
+ package.json | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕dd7d0af🔪2019-12-29 08:35:30 -0800🔪Mike Bostock🔪Better tests.🔪
+ test/format-trim-test.js | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+
+☕73413b9🔪2019-12-29 08:31:46 -0800🔪Mike Bostock🔪Fix trimming of exponent.🔪
+ src/formatTrim.js        |  2 +-
+ test/format-trim-test.js | 11 +++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕6ef92e8🔪2019-11-16 10:18:04 -0800🔪Mike Bostock🔪1.4.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6265c15🔪2019-11-16 10:17:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕8f14eca🔪2019-09-27 08:19:37 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4cfc63d🔪2019-11-02 08:23:34 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕0fc9958🔪2019-09-05 10:27:19 -0700🔪Mike Bostock🔪1.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a72ecc6🔪2019-09-05 10:27:13 -0700🔪Mike Bostock🔪Include locales when publishing.🔪
+ package.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕9cafd04🔪2019-09-05 10:23:50 -0700🔪Mike Bostock🔪1.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8aa7682🔪2019-08-12 12:14:42 +0100🔪Gavin Sykes🔪Create en-IE.json🔪
+ locale/en-IE.json (new) | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕c98302c🔪2019-08-12 10:53:19 +0200🔪Sylvain Lesage🔪feat: add es-BO locale (Bolivia)🔪
+ locale/es-BO.json (new) | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+☕e7c5e03🔪2019-09-05 09:20:27 -0700🔪Mike Bostock🔪Strict coercion for locales.🔪
+ src/locale.js       | 26 ++++++++++++++------------
+ test/locale-test.js |  4 ++--
+ 2 files changed, 16 insertions(+), 14 deletions(-)
+
+☕6522f86🔪2019-09-05 09:06:12 -0700🔪Mike Bostock🔪Fix #47 - localize NaN.🔪
+ README.md           | 1 +
+ src/locale.js       | 7 ++++---
+ test/locale-test.js | 7 +++++++
+ 3 files changed, 12 insertions(+), 3 deletions(-)
+
+☕30043a7🔪2019-09-05 08:51:56 -0700🔪Mike Bostock🔪Fix #65 - expose FormatSpecifier.🔪
+ README.md                    | 21 ++++++++++++++++++++-
+ src/formatSpecifier.js       | 43 +++++++++++++++++++++++++++----------------
+ src/index.js                 |  2 +-
+ test/formatSpecifier-test.js | 41 +++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 89 insertions(+), 18 deletions(-)
+
+☕6ecd702🔪2019-09-05 08:35:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕024b628🔪2019-09-05 08:34:19 -0700🔪Mike Bostock🔪Add tests for localized percent and minus signs.🔪
+ test/locale-test.js | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+☕dd09548🔪2019-09-05 07:31:59 -0700🔪Mike Bostock🔪Add missing semicolon.🔪
+ src/locale.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ef58652🔪2019-09-05 08:47:36 +0200🔪benib🔪use minus instead of minusSign as the probperty name for the minus character🔪
+ src/defaultLocale.js | 2 +-
+ src/locale.js        | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕d865cec🔪2019-09-04 18:58:39 +0200🔪benib🔪allow minus sign to be configured in locale🔪
+ src/defaultLocale.js | 3 ++-
+ src/locale.js        | 6 ++++--
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+☕814f860🔪2019-08-09 16:46:33 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 876 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 519 insertions(+), 363 deletions(-)
+
+☕7175775🔪2019-08-09 16:04:23 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕c880b6c🔪2019-08-09 15:22:04 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/defaultLocale.js    |  2 +-
+ src/exponent.js         |  2 +-
+ src/formatPrefixAuto.js |  2 +-
+ src/formatRounded.js    |  2 +-
+ src/formatTypes.js      |  4 ++--
+ src/index.js            | 12 ++++++------
+ src/locale.js           | 16 ++++++++--------
+ src/precisionFixed.js   |  2 +-
+ src/precisionPrefix.js  |  2 +-
+ src/precisionRound.js   |  2 +-
+ 10 files changed, 23 insertions(+), 23 deletions(-)
+
+☕bbb6b1a🔪2019-07-12 12:36:37 +0200🔪Henrik Feldt🔪Update sv-SE.json🔪
+ locale/sv-SE.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f0232d0🔪2018-08-24 14:15:36 -0700🔪Mike Bostock🔪1.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ae262e8🔪2018-08-24 14:01:50 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a83bced🔪2018-08-24 13:49:37 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 6 ------
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 6 ++++++
+ 4 files changed, 14 insertions(+), 13 deletions(-)
+
+☕a865618🔪2018-08-24 13:49:31 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-format.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7591bb4🔪2018-08-24 13:49:28 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4beb081🔪2018-08-24 11:30:06 -0700🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕79ac510🔪2018-08-24 11:30:03 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)           |  12 -
+ .eslintrc.json (new)       |  15 +
+ .gitignore                 |   2 +-
+ .npmignore                 |   2 +-
+ d3-format.sublime-project  |   4 +-
+ package.json               |  19 +-
+ rollup.config.js (new)     |  36 ++
+ src/formatSpecifier.js     |   2 +-
+ test/format-type-%-test.js |   8 +-
+ test/format-type-s-test.js | 130 +++----
+ yarn.lock (new)            | 939 +++++++++++++++++++++++++++++++++++++++++++++
+ 11 files changed, 1073 insertions(+), 96 deletions(-)
+
+☕7ac39c3🔪2018-05-09 07:36:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕22e7e1f🔪2018-05-09 07:33:30 -0700🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕27b0ef6🔪2018-05-08 10:24:10 -0700🔪Mike Bostock🔪Match order.🔪
+ src/locale.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕805f3ef🔪2018-05-08 10:22:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕acf9392🔪2018-05-08 10:21:48 -0700🔪Mike Bostock🔪Consolidate default type handling.🔪
+ README.md                     |  3 +--
+ src/formatPrecision.js (gone) |  3 ---
+ src/formatSpecifier.js        | 45 +++++++++++--------------------------------
+ src/formatTypes.js            |  4 +---
+ src/locale.js                 | 15 ++++++++++++---
+ test/format-test.js           | 12 ++++++++++++
+ test/formatSpecifier-test.js  | 24 ++++++++---------------
+ 7 files changed, 45 insertions(+), 61 deletions(-)
+
+☕eab3f0b🔪2018-05-08 09:42:12 -0700🔪Mike Bostock🔪Avoid double-trim in default case.🔪
+ src/formatDefault.js (gone)  | 5 -----
+ src/formatPrecision.js (new) | 3 +++
+ src/formatTypes.js           | 6 +++---
+ src/locale.js                | 2 +-
+ 4 files changed, 7 insertions(+), 9 deletions(-)
+
+☕da79171🔪2018-05-08 09:40:01 -0700🔪Mike Bostock🔪Tiny optimization.🔪
+ src/formatTrim.js | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+
+☕5571b2e🔪2018-05-08 09:39:46 -0700🔪Mike Bostock🔪Add build rule.🔪
+ d3-format.sublime-project | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕d9bdcab🔪2018-05-08 09:24:35 -0700🔪Mike Bostock🔪Update comment.🔪
+ src/formatTrim.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7f20021🔪2018-05-08 09:24:13 -0700🔪Mike Bostock🔪Update comment.🔪
+ src/formatSpecifier.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ef68f9🔪2018-05-08 09:22:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕133a1da🔪2018-05-08 09:19:15 -0700🔪Mike Bostock🔪Rename trim to formatTrim.🔪
+ src/formatDefault.js           | 4 ++--
+ src/{trim.js => formatTrim.js} | 3 +--
+ src/locale.js                  | 7 +++----
+ 3 files changed, 6 insertions(+), 8 deletions(-)
+
+☕1b9d505🔪2018-05-07 17:33:56 -0700🔪vasco🔪Add tilde to format specifier🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b2ad48a🔪2018-05-07 17:32:35 -0700🔪vasco🔪Change syntax of trim option to use ~ character🔪
+ README.md                    | 16 +++++++---------
+ src/formatSpecifier.js       | 12 ++++++------
+ test/format-trim-test.js     | 18 +++++++++---------
+ test/formatSpecifier-test.js |  4 ++--
+ 4 files changed, 24 insertions(+), 26 deletions(-)
+
+☕32245d5🔪2018-05-07 14:53:41 -0700🔪vasco🔪Add docs for the trim insignificant zeros (t) format option🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕4e4e59b🔪2018-05-07 14:48:08 -0700🔪vasco🔪Add test cases related to trim (t) option🔪
+ test/format-trim-test.js (new) | 74 ++++++++++++++++++++++++++++++++++++++++++
+ test/formatSpecifier-test.js   |  3 ++
+ 2 files changed, 77 insertions(+)
+
+☕474251a🔪2018-05-07 14:46:35 -0700🔪vasco🔪Add option to trim insignificant zeroes (t) to format specifier🔪
+ src/formatDefault.js   | 15 +++------------
+ src/formatSpecifier.js |  9 ++++++---
+ src/locale.js          |  8 +++++++-
+ src/trim.js (new)      | 17 +++++++++++++++++
+ 4 files changed, 33 insertions(+), 16 deletions(-)
+
+☕b6e3ea1🔪2018-04-05 16:44:04 -0400🔪Joe Murphy🔪Minor fix in code sample🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6fd6d74🔪2018-01-09 09:31:11 -0800🔪Mike Bostock🔪1.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f2bc8a7🔪2018-01-09 09:30:20 -0800🔪Mike Bostock🔪Fix #53 - currency suffix after SI prefix.🔪
+ src/locale.js       | 2 +-
+ test/locale-test.js | 5 +++++
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+☕6485888🔪2017-11-21 16:25:14 -0500🔪Mike Bostock🔪1.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8f86103🔪2017-11-18 11:26:35 +0100🔪Victor Noël🔪In France, thousands separator is a no-break space🔪Closes #50
+
+ locale/fr-FR.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f9fbdeb🔪2017-04-10 13:12:07 -0700🔪Mike Bostock🔪Zero is considered positive. Related #46.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕b1e9676🔪2017-04-03 11:45:24 -0700🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕16482ca🔪2017-04-03 11:41:56 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6fde9ad🔪2017-04-03 12:14:55 +0200🔪David Nowinsky🔪percentage > percent and add it to README🔪
+ README.md                  | 1 +
+ locale/fr-FR.json          | 2 +-
+ src/locale.js              | 4 ++--
+ test/defaultLocale-test.js | 4 ++--
+ 4 files changed, 6 insertions(+), 5 deletions(-)
+
+☕d7b0a87🔪2017-03-31 13:13:53 +0200🔪David Nowinsky🔪Allow percentage symbol customization per locale🔪
+ locale/fr-FR.json          | 3 ++-
+ src/locale.js              | 5 +++--
+ test/defaultLocale-test.js | 4 +++-
+ 3 files changed, 8 insertions(+), 4 deletions(-)
+
+☕aad3a09🔪2017-03-10 10:02:45 -0800🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2fe8288🔪2017-03-10 10:02:33 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c442b5a🔪2017-02-28 11:06:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕a0c5eb7🔪2017-02-28 11:05:17 -0800🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5253c18🔪2017-02-28 11:05:12 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕e8d46dc🔪2017-02-28 10:55:42 -0800🔪Mike Bostock🔪Reorganize.🔪
+ src/formatNumerals.js (new) |  7 +++++++
+ src/identity.js (new)       |  3 +++
+ src/locale.js               | 14 ++------------
+ 3 files changed, 12 insertions(+), 12 deletions(-)
+
+☕112fdce🔪2017-02-28 10:55:28 -0800🔪Mike Bostock🔪Fix locale-test.🔪
+ test/locale-test.js | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕28e6d1d🔪2017-02-28 10:51:05 -0800🔪Mike Bostock🔪Fix #42 - round-to-zero test.🔪
+ src/locale.js                 | 23 ++++-------------------
+ test/format-type-f-test.js    |  9 +++++++--
+ test/format-type-none-test.js | 10 ++++++++++
+ 3 files changed, 21 insertions(+), 21 deletions(-)
+
+☕96305e2🔪2017-02-19 16:08:58 +0200🔪Ashamandi🔪Add arabic locale test🔪
+ locale/ar-AE.json               |   2 +-
+ locale/ar-BH.json               |   2 +-
+ locale/ar-DJ.json               |   2 +-
+ locale/ar-DZ.json               |   2 +-
+ locale/ar-EG.json               |   2 +-
+ locale/ar-EH.json               |   2 +-
+ locale/ar-ER.json               |   2 +-
+ locale/ar-IL.json               |   2 +-
+ locale/ar-IQ.json               |   2 +-
+ locale/ar-JO.json               |   2 +-
+ locale/ar-KM.json               |   2 +-
+ locale/ar-KW.json               |   2 +-
+ locale/ar-LB.json               |   2 +-
+ locale/ar-LY.json               |   2 +-
+ locale/ar-MA.json               |   2 +-
+ locale/ar-MR.json               |   2 +-
+ locale/ar-OM.json               |   2 +-
+ locale/ar-PS.json               |   2 +-
+ locale/ar-QA.json               |   2 +-
+ locale/ar-SA.json               |   2 +-
+ locale/ar-SD.json               |   2 +-
+ locale/ar-SO.json               |   2 +-
+ locale/ar-SS.json               |   2 +-
+ locale/ar-SY.json               |   2 +-
+ locale/ar-TD.json               |   2 +-
+ locale/ar-TN.json               |   2 +-
+ locale/ar-YE.json               |   2 +-
+ test/arabicLocale-test.js (new) | 164 ++++++++++++++++++++++++++++++++++++++++
+ 28 files changed, 191 insertions(+), 27 deletions(-)
+
+☕f0302de🔪2017-02-16 13:51:03 -0800🔪Mike Bostock🔪Fix numerals when align is specified.🔪
+ src/locale.js | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕b64f583🔪2017-02-16 13:48:39 -0800🔪Mike Bostock🔪Extract formatNumerals closure.🔪
+ src/locale.js | 29 ++++++++++++++---------------
+ 1 file changed, 14 insertions(+), 15 deletions(-)
+
+☕5731e3c🔪2017-02-16 08:17:59 +0200🔪Ashamandi🔪fix merge confilict🔪
+ locale/ar-AE.json | 4 ----
+ 1 file changed, 4 deletions(-)
+
+☕9e5c441🔪2017-02-15 14:38:48 +0200🔪Ashamandi🔪remove spaces🔪
+ src/locale.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕53cb100🔪2017-02-15 14:33:02 +0200🔪Ashamandi🔪add numeralReplacer function to locale file🔪
+ src/locale.js | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+
+☕40911b1🔪2017-02-15 14:31:16 +0200🔪Ashamandi🔪add numerals to arabic locale files🔪
+ locale/ar-001.JSON (gone)         | 6 ------
+ locale/ar-001.json (new)          | 7 +++++++
+ locale/ar-AE.JSON (gone)          | 6 ------
+ locale/ar-AE.json (new)           | 7 +++++++
+ locale/ar-BH.JSON (gone)          | 6 ------
+ locale/ar-BH.json (new)           | 7 +++++++
+ locale/ar-DJ.JSON (gone)          | 6 ------
+ locale/ar-DJ.json (new)           | 7 +++++++
+ locale/{ar-DZ.JSON => ar-DZ.json} | 2 +-
+ locale/ar-EG.JSON (gone)          | 6 ------
+ locale/ar-EG.json (new)           | 7 +++++++
+ locale/{ar-EH.JSON => ar-EH.json} | 2 +-
+ locale/ar-ER.JSON (gone)          | 6 ------
+ locale/ar-ER.json (new)           | 7 +++++++
+ locale/ar-IL.JSON (gone)          | 6 ------
+ locale/ar-IL.json (new)           | 7 +++++++
+ locale/ar-IQ.JSON (gone)          | 6 ------
+ locale/ar-IQ.json (new)           | 7 +++++++
+ locale/ar-JO.JSON (gone)          | 6 ------
+ locale/ar-JO.json (new)           | 7 +++++++
+ locale/ar-KM.JSON (gone)          | 6 ------
+ locale/ar-KM.json (new)           | 7 +++++++
+ locale/ar-KW.JSON (gone)          | 6 ------
+ locale/ar-KW.json (new)           | 7 +++++++
+ locale/ar-LB.JSON (gone)          | 6 ------
+ locale/ar-LB.json (new)           | 7 +++++++
+ locale/{ar-LY.JSON => ar-LY.json} | 2 +-
+ locale/{ar-MA.JSON => ar-MA.json} | 2 +-
+ locale/ar-MR.JSON (gone)          | 6 ------
+ locale/ar-MR.json (new)           | 7 +++++++
+ locale/ar-OM.JSON (gone)          | 6 ------
+ locale/ar-OM.json (new)           | 7 +++++++
+ locale/ar-PS.JSON (gone)          | 6 ------
+ locale/ar-PS.json (new)           | 7 +++++++
+ locale/ar-QA.JSON (gone)          | 6 ------
+ locale/ar-QA.json (new)           | 7 +++++++
+ locale/ar-SA.JSON (gone)          | 6 ------
+ locale/ar-SA.json (new)           | 7 +++++++
+ locale/ar-SD.JSON (gone)          | 6 ------
+ locale/ar-SD.json (new)           | 7 +++++++
+ locale/ar-SO.JSON (gone)          | 6 ------
+ locale/ar-SO.json (new)           | 7 +++++++
+ locale/ar-SS.JSON (gone)          | 6 ------
+ locale/ar-SS.json (new)           | 7 +++++++
+ locale/ar-SY.JSON (gone)          | 6 ------
+ locale/ar-SY.json (new)           | 7 +++++++
+ locale/ar-TD.JSON (gone)          | 6 ------
+ locale/ar-TD.json (new)           | 7 +++++++
+ locale/{ar-TN.JSON => ar-TN.json} | 2 +-
+ locale/ar-YE.JSON (gone)          | 6 ------
+ locale/ar-YE.json (new)           | 7 +++++++
+ 51 files changed, 166 insertions(+), 143 deletions(-)
+
+☕b7e1c02🔪2017-02-08 09:35:53 -0800🔪Mike Bostock🔪Fix file extension.🔪
+ locale/{ar-001.JSON => ar-001.json} | 0
+ locale/{ar-AE.JSON => ar-AE.json}   | 0
+ locale/{ar-BH.JSON => ar-BH.json}   | 0
+ locale/{ar-DJ.JSON => ar-DJ.json}   | 0
+ locale/{ar-DZ.JSON => ar-DZ.json}   | 0
+ locale/{ar-EG.JSON => ar-EG.json}   | 0
+ locale/{ar-EH.JSON => ar-EH.json}   | 0
+ locale/{ar-ER.JSON => ar-ER.json}   | 0
+ locale/{ar-IL.JSON => ar-IL.json}   | 0
+ locale/{ar-IQ.JSON => ar-IQ.json}   | 0
+ locale/{ar-JO.JSON => ar-JO.json}   | 0
+ locale/{ar-KM.JSON => ar-KM.json}   | 0
+ locale/{ar-KW.JSON => ar-KW.json}   | 0
+ locale/{ar-LB.JSON => ar-LB.json}   | 0
+ locale/{ar-LY.JSON => ar-LY.json}   | 0
+ locale/{ar-MA.JSON => ar-MA.json}   | 0
+ locale/{ar-MR.JSON => ar-MR.json}   | 0
+ locale/{ar-OM.JSON => ar-OM.json}   | 0
+ locale/{ar-PS.JSON => ar-PS.json}   | 0
+ locale/{ar-QA.JSON => ar-QA.json}   | 0
+ locale/{ar-SA.JSON => ar-SA.json}   | 0
+ locale/{ar-SD.JSON => ar-SD.json}   | 0
+ locale/{ar-SO.JSON => ar-SO.json}   | 0
+ locale/{ar-SS.JSON => ar-SS.json}   | 0
+ locale/{ar-SY.JSON => ar-SY.json}   | 0
+ locale/{ar-TD.JSON => ar-TD.json}   | 0
+ locale/{ar-TN.JSON => ar-TN.json}   | 0
+ locale/{ar-YE.JSON => ar-YE.json}   | 0
+ 28 files changed, 0 insertions(+), 0 deletions(-)
+
+☕63ed00b🔪2017-02-06 18:20:06 +0200🔪Ashamandi🔪adding style🔪
+ locale/ar-001.JSON | 2 +-
+ locale/ar-AE.JSON  | 2 +-
+ locale/ar-BH.JSON  | 2 +-
+ locale/ar-DJ.JSON  | 2 +-
+ locale/ar-DZ.JSON  | 2 +-
+ locale/ar-EH.JSON  | 2 +-
+ locale/ar-ER.JSON  | 2 +-
+ locale/ar-IL.JSON  | 2 +-
+ locale/ar-IQ.JSON  | 2 +-
+ locale/ar-JO.JSON  | 2 +-
+ locale/ar-KM.JSON  | 2 +-
+ locale/ar-KW.JSON  | 2 +-
+ locale/ar-LB.JSON  | 2 +-
+ locale/ar-LY.JSON  | 2 +-
+ locale/ar-MA.JSON  | 2 +-
+ locale/ar-MR.JSON  | 2 +-
+ locale/ar-OM.JSON  | 2 +-
+ locale/ar-PS.JSON  | 2 +-
+ locale/ar-QA.JSON  | 2 +-
+ locale/ar-SA.JSON  | 2 +-
+ locale/ar-SD.JSON  | 2 +-
+ locale/ar-SO.JSON  | 2 +-
+ locale/ar-SS.JSON  | 2 +-
+ locale/ar-SY.JSON  | 2 +-
+ locale/ar-TD.JSON  | 2 +-
+ locale/ar-TN.JSON  | 2 +-
+ locale/ar-YE.JSON  | 2 +-
+ 27 files changed, 27 insertions(+), 27 deletions(-)
+
+☕87dbadb🔪2017-02-06 18:05:08 +0200🔪Ashamandi🔪add Arabic Locales files🔪
+ locale/ar-001.JSON (new) | 6 ++++++
+ locale/ar-AE.JSON (new)  | 6 ++++++
+ locale/ar-BH.JSON (new)  | 6 ++++++
+ locale/ar-DJ.JSON (new)  | 6 ++++++
+ locale/ar-DZ.JSON (new)  | 6 ++++++
+ locale/ar-EG.JSON (new)  | 6 ++++++
+ locale/ar-EH.JSON (new)  | 6 ++++++
+ locale/ar-ER.JSON (new)  | 6 ++++++
+ locale/ar-IL.JSON (new)  | 6 ++++++
+ locale/ar-IQ.JSON (new)  | 6 ++++++
+ locale/ar-JO.JSON (new)  | 6 ++++++
+ locale/ar-KM.JSON (new)  | 6 ++++++
+ locale/ar-KW.JSON (new)  | 6 ++++++
+ locale/ar-LB.JSON (new)  | 6 ++++++
+ locale/ar-LY.JSON (new)  | 6 ++++++
+ locale/ar-MA.JSON (new)  | 6 ++++++
+ locale/ar-MR.JSON (new)  | 6 ++++++
+ locale/ar-OM.JSON (new)  | 6 ++++++
+ locale/ar-PS.JSON (new)  | 6 ++++++
+ locale/ar-QA.JSON (new)  | 6 ++++++
+ locale/ar-SA.JSON (new)  | 6 ++++++
+ locale/ar-SD.JSON (new)  | 6 ++++++
+ locale/ar-SO.JSON (new)  | 6 ++++++
+ locale/ar-SS.JSON (new)  | 6 ++++++
+ locale/ar-SY.JSON (new)  | 6 ++++++
+ locale/ar-TD.JSON (new)  | 6 ++++++
+ locale/ar-TN.JSON (new)  | 6 ++++++
+ locale/ar-YE.JSON (new)  | 6 ++++++
+ 28 files changed, 168 insertions(+)
+
+☕cef5928🔪2017-02-07 07:46:32 -0800🔪Mike Bostock🔪Add localization example.🔪
+ README.md | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+☕2ac42dc🔪2017-02-06 18:20:06 +0200🔪Ashamandi🔪adding style🔪
+ locale/ar-001.JSON | 2 +-
+ locale/ar-AE.JSON  | 2 +-
+ locale/ar-BH.JSON  | 2 +-
+ locale/ar-DJ.JSON  | 2 +-
+ locale/ar-DZ.JSON  | 2 +-
+ locale/ar-EH.JSON  | 2 +-
+ locale/ar-ER.JSON  | 2 +-
+ locale/ar-IL.JSON  | 2 +-
+ locale/ar-IQ.JSON  | 2 +-
+ locale/ar-JO.JSON  | 2 +-
+ locale/ar-KM.JSON  | 2 +-
+ locale/ar-KW.JSON  | 2 +-
+ locale/ar-LB.JSON  | 2 +-
+ locale/ar-LY.JSON  | 2 +-
+ locale/ar-MA.JSON  | 2 +-
+ locale/ar-MR.JSON  | 2 +-
+ locale/ar-OM.JSON  | 2 +-
+ locale/ar-PS.JSON  | 2 +-
+ locale/ar-QA.JSON  | 2 +-
+ locale/ar-SA.JSON  | 2 +-
+ locale/ar-SD.JSON  | 2 +-
+ locale/ar-SO.JSON  | 2 +-
+ locale/ar-SS.JSON  | 2 +-
+ locale/ar-SY.JSON  | 2 +-
+ locale/ar-TD.JSON  | 2 +-
+ locale/ar-TN.JSON  | 2 +-
+ locale/ar-YE.JSON  | 2 +-
+ 27 files changed, 27 insertions(+), 27 deletions(-)
+
+☕d773f6e🔪2017-02-06 18:05:08 +0200🔪Ashamandi🔪add Arabic Locales files🔪
+ locale/ar-001.JSON (new) | 6 ++++++
+ locale/ar-AE.JSON (new)  | 6 ++++++
+ locale/ar-BH.JSON (new)  | 6 ++++++
+ locale/ar-DJ.JSON (new)  | 6 ++++++
+ locale/ar-DZ.JSON (new)  | 6 ++++++
+ locale/ar-EG.JSON (new)  | 6 ++++++
+ locale/ar-EH.JSON (new)  | 6 ++++++
+ locale/ar-ER.JSON (new)  | 6 ++++++
+ locale/ar-IL.JSON (new)  | 6 ++++++
+ locale/ar-IQ.JSON (new)  | 6 ++++++
+ locale/ar-JO.JSON (new)  | 6 ++++++
+ locale/ar-KM.JSON (new)  | 6 ++++++
+ locale/ar-KW.JSON (new)  | 6 ++++++
+ locale/ar-LB.JSON (new)  | 6 ++++++
+ locale/ar-LY.JSON (new)  | 6 ++++++
+ locale/ar-MA.JSON (new)  | 6 ++++++
+ locale/ar-MR.JSON (new)  | 6 ++++++
+ locale/ar-OM.JSON (new)  | 6 ++++++
+ locale/ar-PS.JSON (new)  | 6 ++++++
+ locale/ar-QA.JSON (new)  | 6 ++++++
+ locale/ar-SA.JSON (new)  | 6 ++++++
+ locale/ar-SD.JSON (new)  | 6 ++++++
+ locale/ar-SO.JSON (new)  | 6 ++++++
+ locale/ar-SS.JSON (new)  | 6 ++++++
+ locale/ar-SY.JSON (new)  | 6 ++++++
+ locale/ar-TD.JSON (new)  | 6 ++++++
+ locale/ar-TN.JSON (new)  | 6 ++++++
+ locale/ar-YE.JSON (new)  | 6 ++++++
+ 28 files changed, 168 insertions(+)
+
+☕05c8ddb🔪2017-01-31 09:53:30 -0800🔪Mike Bostock🔪Add @curran’s tests.🔪
+ test/locale-test.js | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+☕db3cbfb🔪2017-01-31 08:51:57 -0800🔪Mike Bostock🔪Fix #21. Add en-IN.🔪
+ locale/en-IN.json (new) | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕ae85342🔪2016-11-14 10:12:43 -0800🔪Mike Bostock🔪Fix instanceof d3.formatSpecifier.🔪Fixes d3/d3#3023.
+
+ src/formatSpecifier.js       | 4 +++-
+ test/formatSpecifier-test.js | 6 ++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+☕9e51d35🔪2016-08-13 20:18:00 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕44ed4cf🔪2016-08-02 14:46:32 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9e53ff2🔪2016-08-02 14:46:32 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕9faaa18🔪2016-07-29 15:46:56 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d122a34🔪2016-07-29 15:46:52 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e959f49🔪2016-07-14 15:38:36 -0400🔪Mike Bostock🔪Don’t escape ₴.🔪
+ locale/uk-UA.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6178d46🔪2016-07-14 15:27:06 -0400🔪Mike Bostock🔪Add uk-UA locale. Related d3/d3#2693.🔪
+ locale/uk-UA.json (new) | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕f162235🔪2016-06-24 10:40:26 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2a9bf97🔪2016-06-24 10:40:09 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕5c6d907🔪2016-06-23 22:20:02 -0700🔪Mike Bostock🔪Grouping test; related #21.🔪
+ test/locale-test.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕9780e67🔪2016-06-22 15:08:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕63a2c84🔪2016-06-22 15:06:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕edb73d0🔪2016-06-22 15:05:09 -0700🔪Mike Bostock🔪Add d3.formatDefaultLocale.🔪
+ README.md                        | 10 ++++++---
+ index.js                         |  3 ++-
+ src/defaultLocale.js (new)       | 19 ++++++++++++++++
+ src/locale.js                    | 12 +---------
+ test/defaultLocale-test.js (new) | 48 ++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 77 insertions(+), 15 deletions(-)
+
+☕0b88f01🔪2016-06-22 14:51:37 -0700🔪Mike Bostock🔪Tests for locale validity. Related #22.🔪
+ package.json        |  1 +
+ test/locale-test.js | 52 ++++++++++++++++++++++++++++++++++++++++------------
+ 2 files changed, 41 insertions(+), 12 deletions(-)
+
+☕eb7d322🔪2016-06-21 13:11:34 +0100🔪Rahul Powar🔪Replaced \x with \u sequence in JSON locale data🔪
+ locale/ca-ES.json | 2 +-
+ locale/cs-CZ.json | 4 ++--
+ locale/de-CH.json | 2 +-
+ locale/de-DE.json | 2 +-
+ locale/es-ES.json | 2 +-
+ locale/fi-FI.json | 4 ++--
+ locale/fr-CA.json | 2 +-
+ locale/fr-FR.json | 2 +-
+ locale/hu-HU.json | 4 ++--
+ locale/mk-MK.json | 2 +-
+ locale/nl-NL.json | 2 +-
+ locale/ru-RU.json | 4 ++--
+ locale/sv-SE.json | 2 +-
+ 13 files changed, 17 insertions(+), 17 deletions(-)
+
+☕b5e0b15🔪2016-06-14 09:23:21 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕b69b57a🔪2016-06-07 17:09:09 -0700🔪Mike Bostock🔪0.6.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6fe8282🔪2016-06-07 17:08:25 -0700🔪Mike Bostock🔪Fix #22 - publish locales as JSON data.🔪
+ README.md                      | 100 +----------------------------------------
+ index.js                       |  29 +-----------
+ locale/ca-ES.json (new)        |   6 +++
+ locale/cs-CZ.json (new)        |   6 +++
+ locale/de-CH.json (new)        |   6 +++
+ locale/de-DE.json (new)        |   6 +++
+ locale/en-CA.json (new)        |   6 +++
+ locale/en-GB.json (new)        |   6 +++
+ locale/en-US.json (new)        |   6 +++
+ locale/es-ES.json (new)        |   6 +++
+ locale/es-MX.json (new)        |   6 +++
+ locale/fi-FI.json (new)        |   6 +++
+ locale/fr-CA.json (new)        |   6 +++
+ locale/fr-FR.json (new)        |   6 +++
+ locale/he-IL.json (new)        |   6 +++
+ locale/hu-HU.json (new)        |   6 +++
+ locale/it-IT.json (new)        |   6 +++
+ locale/ja-JP.json (new)        |   6 +++
+ locale/ko-KR.json (new)        |   6 +++
+ locale/mk-MK.json (new)        |   6 +++
+ locale/nl-NL.json (new)        |   6 +++
+ locale/pl-PL.json (new)        |   6 +++
+ locale/pt-BR.json (new)        |   6 +++
+ locale/ru-RU.json (new)        |   6 +++
+ locale/sv-SE.json (new)        |   6 +++
+ locale/zh-CN.json (new)        |   6 +++
+ src/locale.js                  |  12 ++++-
+ src/locale/ca-ES.js (gone)     |   8 ----
+ src/locale/cs-CZ.js (gone)     |   8 ----
+ src/locale/de-CH.js (gone)     |   8 ----
+ src/locale/de-DE.js (gone)     |   8 ----
+ src/locale/en-CA.js (gone)     |   8 ----
+ src/locale/en-GB.js (gone)     |   8 ----
+ src/locale/en-US.js (gone)     |   8 ----
+ src/locale/es-ES.js (gone)     |   8 ----
+ src/locale/es-MX.js (gone)     |   8 ----
+ src/locale/fi-FI.js (gone)     |   8 ----
+ src/locale/fr-CA.js (gone)     |   8 ----
+ src/locale/fr-FR.js (gone)     |   8 ----
+ src/locale/he-IL.js (gone)     |   8 ----
+ src/locale/hu-HU.js (gone)     |   8 ----
+ src/locale/it-IT.js (gone)     |   8 ----
+ src/locale/ja-JP.js (gone)     |   8 ----
+ src/locale/ko-KR.js (gone)     |   8 ----
+ src/locale/mk-MK.js (gone)     |   8 ----
+ src/locale/nl-NL.js (gone)     |   8 ----
+ src/locale/pl-PL.js (gone)     |   8 ----
+ src/locale/pt-BR.js (gone)     |   8 ----
+ src/locale/ru-RU.js (gone)     |   8 ----
+ src/locale/sv-SE.js (gone)     |   8 ----
+ src/locale/zh-CN.js (gone)     |   8 ----
+ test/localeEnUs-test.js (gone) |   8 ----
+ test/localeEsMx-test.js (gone) |   8 ----
+ test/localeFrFr-test.js (gone) |   8 ----
+ 54 files changed, 158 insertions(+), 343 deletions(-)
+
+☕6ed10f4🔪2016-06-07 17:00:02 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕fc33324🔪2016-05-18 09:53:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f9c42c9🔪2016-05-14 21:20:59 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕5a3ae47🔪2016-03-24 14:27:29 -0700🔪Mike Bostock🔪Fix formatting.🔪
+ src/locale/es-MX.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕5c35edc🔪2016-03-24 14:26:12 -0700🔪Mike Bostock🔪Add d3.formatEsMx.🔪
+ README.md | 4 ++++
+ index.js  | 1 +
+ 2 files changed, 5 insertions(+)
+
+☕27448fc🔪2016-03-15 10:22:57 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d5956ef🔪2016-03-14 13:13:14 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕44c643d🔪2016-03-14 12:50:18 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕b96e21b🔪2016-03-11 22:46:38 -0600🔪Víctor Adrián🔪Adds es-MX locale.🔪
+ src/locale/es-MX.js (new)     | 8 ++++++++
+ test/localeEsMx-test.js (new) | 8 ++++++++
+ 2 files changed, 16 insertions(+)
+
+☕adcdaa7🔪2016-03-06 15:12:22 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3331288🔪2016-03-04 09:52:20 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a4fb8cb🔪2016-03-01 14:18:36 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕ee4f9cd🔪2016-02-24 16:07:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕fdb0a63🔪2016-02-21 16:31:38 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c08c4e🔪2016-01-29 10:21:34 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕0ed771a🔪2016-01-20 17:48:25 -0800🔪Mike Bostock🔪Add .eslintrc.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕b677dae🔪2016-01-20 17:47:13 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ package.json            |  2 +-
+ src/exponent.js         |  2 +-
+ src/formatDecimal.js    |  2 +-
+ src/formatDefault.js    |  2 +-
+ src/formatGroup.js      |  2 +-
+ src/formatPrefixAuto.js |  2 +-
+ src/formatRounded.js    |  2 +-
+ src/formatSpecifier.js  |  2 +-
+ src/locale.js           | 11 ++++++-----
+ src/locale/cs-CZ.js     |  2 +-
+ src/precisionFixed.js   |  2 +-
+ src/precisionPrefix.js  |  3 +--
+ src/precisionRound.js   |  2 +-
+ 13 files changed, 18 insertions(+), 18 deletions(-)
+
+☕e92f3fb🔪2016-01-07 13:50:48 -0800🔪Mike Bostock🔪Fix #17 - implement format.toString.🔪
+ src/locale.js       | 14 ++++++++++----
+ test/format-test.js |  5 +++++
+ 2 files changed, 15 insertions(+), 4 deletions(-)
+
+☕61a5e8a🔪2016-01-07 13:48:20 -0800🔪Mike Bostock🔪Prefix exported symbols with “format”.🔪
+ README.md                  | 124 ++++++++++++++++++++++-----------------------
+ index.js                   |  48 +++++++++---------
+ package.json               |   2 +-
+ test/format-type-c-test.js |   2 +-
+ test/locale-test.js        |  30 +++++------
+ test/localeEnUs-test.js    |   4 +-
+ test/localeFrFr-test.js    |   4 +-
+ 7 files changed, 107 insertions(+), 107 deletions(-)
+
+☕c7eb9a6🔪2015-12-29 09:24:14 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5380ce9🔪2015-12-29 09:24:06 -0800🔪Mike Bostock🔪Expose Czech locale.🔪
+ README.md | 4 ++++
+ index.js  | 1 +
+ 2 files changed, 5 insertions(+)
+
+☕982ee06🔪2015-12-29 09:21:44 -0800🔪Mike Bostock🔪Fix boundary condition in precisionRound.🔪
+ src/precisionRound.js             |  3 ++-
+ test/precisionRound-test.js (new) | 10 ++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕763e0f1🔪2015-12-26 01:10:28 +0100🔪Jan Zak🔪Add cs-cz locale🔪
+ src/locale/cs-CZ.js (new) | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕facdbff🔪2015-12-18 13:38:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 125 +++++++++++++++++++++++++++++++----------------------------
+ package.json |   2 +-
+ 2 files changed, 66 insertions(+), 61 deletions(-)
+
+☕b44b49c🔪2015-11-30 09:34:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕23f5670🔪2015-11-30 09:33:38 -0800🔪Mike Bostock🔪Fix #15 - Use symbols, not strings.🔪
+ README.md                        | 160 +++++++++++++++++++++++++++------------
+ index.js                         |  87 +++++++--------------
+ package.json                     |   5 +-
+ src/locale/ca-ES.js              |   6 +-
+ src/locale/de-CH.js              |   6 +-
+ src/locale/de-DE.js              |   6 +-
+ src/locale/en-CA.js              |   6 +-
+ src/locale/en-GB.js              |   6 +-
+ src/locale/en-US.js              |   6 +-
+ src/locale/es-ES.js              |   6 +-
+ src/locale/fi-FI.js              |   6 +-
+ src/locale/fr-CA.js              |   6 +-
+ src/locale/fr-FR.js              |   6 +-
+ src/locale/he-IL.js              |   6 +-
+ src/locale/hu-HU.js              |   6 +-
+ src/locale/it-IT.js              |   6 +-
+ src/locale/ja-JP.js              |   6 +-
+ src/locale/ko-KR.js              |   6 +-
+ src/locale/mk-MK.js              |   6 +-
+ src/locale/nl-NL.js              |   6 +-
+ src/locale/pl-PL.js              |   6 +-
+ src/locale/pt-BR.js              |   6 +-
+ src/locale/ru-RU.js              |   6 +-
+ src/locale/sv-SE.js              |   6 +-
+ src/locale/zh-CN.js              |   6 +-
+ test/format-type-c-test.js       |   2 +-
+ test/locale-test.js              |  32 ++++++++
+ test/localeEnUs-test.js (new)    |   8 ++
+ test/localeFormat-test.js (gone) |  49 ------------
+ test/localeFrFr-test.js (new)    |   8 ++
+ 30 files changed, 279 insertions(+), 204 deletions(-)
+
+☕772cc98🔪2015-11-11 11:07:31 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕b562283🔪2015-11-06 12:36:07 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕31842a1🔪2015-11-06 12:34:39 -0800🔪Mike Bostock🔪More negative zero tests.🔪
+ test/format-type-x-test.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕74f1cd9🔪2015-11-06 12:28:00 -0800🔪Mike Bostock🔪Fix #14 - format negative zero as zero.🔪Negative zero is a construct of IEEE 754 floating point, not a mathematical
+concept that (most) humans should care about. And since you may see tick values
+that are very small negative numbers due to limited precision, such as -8e-17,
+it’s helpful to format these as zero (“0.00”), not negative zero (“-0.00”).
+
+ src/locale.js              | 15 +++++++++++++++
+ test/format-type-d-test.js |  5 +++--
+ test/format-type-e-test.js |  6 ++++++
+ test/format-type-f-test.js |  5 +++--
+ test/format-type-x-test.js | 10 ++++++++++
+ 5 files changed, 37 insertions(+), 4 deletions(-)
+
+☕34d08b8🔪2015-11-04 13:23:27 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 15 ++++-----------
+ 1 file changed, 4 insertions(+), 11 deletions(-)
+
+☕7af9af2🔪2015-11-03 23:24:39 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕939cddb🔪2015-10-25 20:12:46 -0700🔪Mike Bostock🔪Add hu-HU locale.🔪
+ README.md                 | 1 +
+ index.js                  | 2 ++
+ src/locale/hu-HU.js (new) | 6 ++++++
+ 3 files changed, 9 insertions(+)
+
+☕8f36a39🔪2015-10-23 10:50:21 -0700🔪Mike Bostock🔪Fix crash formatting Number.MIN_VALUE.🔪
+ src/formatPrefixAuto.js | 2 +-
+ test/format-test.js     | 6 ++++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+☕530dc10🔪2015-10-21 11:54:08 -0700🔪Mike Bostock🔪Add de-CH locale.🔪
+ README.md                 | 1 +
+ index.js                  | 2 ++
+ src/locale/de-CH.js (new) | 6 ++++++
+ 3 files changed, 9 insertions(+)
+
+☕8532b27🔪2015-10-21 11:41:52 -0700🔪Mike Bostock🔪Add ko-KR locale.🔪
+ README.md                 | 1 +
+ index.js                  | 2 ++
+ src/locale/ko-KR.js (new) | 6 ++++++
+ 3 files changed, 9 insertions(+)
+
+☕db72f60🔪2015-10-21 10:50:33 -0700🔪Mike Bostock🔪Fix capitalization.🔪
+ index.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7f9c3f1🔪2015-10-21 10:48:43 -0700🔪Mike Bostock🔪Add sv-SE locale.🔪
+ README.md                 | 1 +
+ index.js                  | 2 ++
+ src/locale/sv-SE.js (new) | 6 ++++++
+ 3 files changed, 9 insertions(+)
+
+☕37d3970🔪2015-10-14 21:47:43 -0700🔪Mike Bostock🔪Remove Map polyfill. Fixes #9.🔪
+ index.js     | 43 ++++++++++++++++++++++---------------------
+ package.json |  4 ++--
+ 2 files changed, 24 insertions(+), 23 deletions(-)
+
+☕0599908🔪2015-09-18 23:20:15 +0900🔪Yuichi Yazaki🔪add Japanese description.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕3f17d7c🔪2015-09-12 10:07:35 +0900🔪Yuichi Yazaki🔪Corrected decimal value.🔪
+ src/locale/ja-JP.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e4f9f40🔪2015-09-11 09:30:14 -0700🔪Mike Bostock🔪Include ja-JP locale.🔪
+ index.js            |  2 ++
+ src/locale/ja-JP.js | 10 ++--------
+ 2 files changed, 4 insertions(+), 8 deletions(-)
+
+☕56a37ed🔪2015-09-11 14:12:48 +0900🔪Yuichi Yazaki🔪add Japan locale file.🔪
+ src/locale/ja-JP.js (new) | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕524a620🔪2015-07-30 10:48:38 -0700🔪Mike Bostock🔪Include all built-in locales by default.🔪Fixes #8. Now you only need a custom build to optimize file size, rather than to
+add functionality.
+
+ README.md                          | 48 ++++++++++++++++-----------------
+ index.js                           | 54 ++++++++++++++++++++++++++++++++++----
+ package.json                       |  4 +--
+ src/{localeFormat.js => locale.js} |  0
+ src/locale/ca-ES.js                |  6 ++---
+ src/locale/de-DE.js                |  6 ++---
+ src/locale/en-CA.js                |  6 ++---
+ src/locale/en-GB.js                |  6 ++---
+ src/locale/en-US.js                |  6 ++---
+ src/locale/es-ES.js                |  6 ++---
+ src/locale/fi-FI.js                |  6 ++---
+ src/locale/fr-CA.js                |  6 ++---
+ src/locale/fr-FR.js                |  6 ++---
+ src/locale/he-IL.js                |  6 ++---
+ src/locale/it-IT.js                |  6 ++---
+ src/locale/mk-MK.js                |  6 ++---
+ src/locale/nl-NL.js                |  6 ++---
+ src/locale/pl-PL.js                |  6 ++---
+ src/locale/pt-BR.js                |  6 ++---
+ src/locale/ru-RU.js                |  6 ++---
+ src/locale/zh-CN.js                |  6 ++---
+ test/locale-test.js (new)          |  0
+ test/localeFormat-test.js          | 17 ++++++++++++
+ 23 files changed, 126 insertions(+), 99 deletions(-)
+
+☕c31306b🔪2015-07-01 11:30:00 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕535797b🔪2015-06-29 20:02:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕788b6c5🔪2015-06-25 11:55:09 -0700🔪Mike Bostock🔪Fix for toExponential(undefined) ↬ @msjgriffiths.🔪
+ package.json         | 2 +-
+ src/formatDecimal.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕dd696e7🔪2015-06-22 16:13:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d0c3def🔪2015-06-19 15:07:00 -0700🔪Mike Bostock🔪Fix tests.🔪
+ test/format-type-d-test.js | 11 +++--------
+ test/format-type-x-test.js | 11 ++++++-----
+ 2 files changed, 9 insertions(+), 13 deletions(-)
+
+☕d00a840🔪2015-06-19 15:04:35 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕89aa10f🔪2015-06-19 15:02:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕649f78e🔪2015-06-19 15:00:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕e247671🔪2015-06-19 14:34:37 -0700🔪Mike Bostock🔪Type 'c' is now for character data.🔪Also, rather than the weird behavior where integer types return the empty string
+for non-integers, just round the input to an integer.
+
+ README.md                  | 16 ++++++-------
+ src/formatTypes.js         | 12 +++++-----
+ src/localeFormat.js        | 56 +++++++++++++++++++++++++---------------------
+ test/format-type-c-test.js |  7 ++++--
+ 4 files changed, 49 insertions(+), 42 deletions(-)
+
+☕db138f0🔪2015-06-19 14:20:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕301c65c🔪2015-06-19 14:19:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13c358d🔪2015-06-19 14:19:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕816e4b0🔪2015-06-18 10:30:23 -0700🔪Mike Bostock🔪Clamp precision and width.🔪
+ src/formatSpecifier.js       |  4 ++--
+ test/formatSpecifier-test.js | 12 ++++++++++++
+ 2 files changed, 14 insertions(+), 2 deletions(-)
+
+☕5171af9🔪2015-06-18 08:32:33 -0700🔪Mike Bostock🔪More precise integer grouping.🔪
+ src/localeFormat.js        | 18 +++++++-----------
+ test/format-type-e-test.js |  5 +++++
+ test/format-type-f-test.js |  5 +++++
+ 3 files changed, 17 insertions(+), 11 deletions(-)
+
+☕e49b6cf🔪2015-06-17 07:42:02 -0700🔪Mike Bostock🔪Parentheses for negative values. Related #5.🔪
+ README.md                     |  1 +
+ src/formatSpecifier.js        |  2 +-
+ src/localeFormat.js           |  5 +++--
+ test/format-type-none-test.js | 12 ++++++++++++
+ 4 files changed, 17 insertions(+), 3 deletions(-)
+
+☕1e30118🔪2015-06-16 13:21:22 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 5 ++---
+ 2 files changed, 4 insertions(+), 5 deletions(-)
+
+☕0164f47🔪2015-06-15 14:42:28 -0700🔪Mike Bostock🔪Long-form trimming.🔪
+ src/formatDefault.js          | 13 ++++++++++++-
+ test/format-type-none-test.js |  4 ++++
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+
+☕9866ff2🔪2015-06-15 14:17:56 -0700🔪Mike Bostock🔪Better tests for trimming.🔪
+ test/format-type-none-test.js | 17 +++++++++++++----
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+
+☕01c7e27🔪2015-06-15 14:11:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕8f2ec9a🔪2015-06-15 14:10:40 -0700🔪Mike Bostock🔪Move locale definitions to subfolder.🔪
+ index.js                                 | 2 +-
+ src/{format-ca-ES.js => locale/ca-ES.js} | 2 +-
+ src/{format-de-DE.js => locale/de-DE.js} | 2 +-
+ src/{format-en-US.js => locale/en-CA.js} | 2 +-
+ src/{format-en-GB.js => locale/en-GB.js} | 2 +-
+ src/{format-en-CA.js => locale/en-US.js} | 2 +-
+ src/{format-es-ES.js => locale/es-ES.js} | 2 +-
+ src/{format-fi-FI.js => locale/fi-FI.js} | 2 +-
+ src/{format-fr-CA.js => locale/fr-CA.js} | 2 +-
+ src/{format-fr-FR.js => locale/fr-FR.js} | 2 +-
+ src/{format-he-IL.js => locale/he-IL.js} | 2 +-
+ src/{format-it-IT.js => locale/it-IT.js} | 2 +-
+ src/{format-mk-MK.js => locale/mk-MK.js} | 2 +-
+ src/{format-nl-NL.js => locale/nl-NL.js} | 2 +-
+ src/{format-pl-PL.js => locale/pl-PL.js} | 2 +-
+ src/{format-pt-BR.js => locale/pt-BR.js} | 2 +-
+ src/{format-ru-RU.js => locale/ru-RU.js} | 2 +-
+ src/{format-zh-CN.js => locale/zh-CN.js} | 2 +-
+ 18 files changed, 18 insertions(+), 18 deletions(-)
+
+☕cb6d1e7🔪2015-06-15 14:07:58 -0700🔪Mike Bostock🔪Fix comment.🔪
+ src/formatDecimal.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕77b546d🔪2015-06-15 12:48:16 -0700🔪Mike Bostock🔪Fix for formatDecimal when p is undefined.🔪
+ src/formatDecimal.js              |  2 +-
+ test/precisionFixed-test.js (new) | 12 ++++++++++++
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+
+☕2b0ecbf🔪2015-06-15 16:33:30 -0300🔪Hernán Eche🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fe9be36🔪2015-06-15 12:07:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕4e7ec18🔪2015-06-15 12:04:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕861481d🔪2015-06-15 12:01:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕23a580b🔪2015-06-15 12:01:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3585ff9🔪2015-06-15 12:00:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5bf54b4🔪2015-06-15 12:00:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7e98a5a🔪2015-06-15 12:00:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕45d9c34🔪2015-06-15 11:58:37 -0700🔪Mike Bostock🔪Copy-pasta error.🔪
+ LICENSE | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕9662493🔪2015-06-15 11:56:04 -0700🔪Mike Bostock🔪Add release script.🔪
+ package.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕78055da🔪2015-06-15 11:49:44 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e9cdb73🔪2015-06-15 11:46:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕76cb304🔪2015-06-15 11:45:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+☕d63c35a🔪2015-06-15 11:35:45 -0700🔪Mike Bostock🔪Test invalid format detection.🔪
+ test/format-test.js          | 7 +++++++
+ test/formatSpecifier-test.js | 7 +++++++
+ 2 files changed, 14 insertions(+)
+
+☕61fe9a4🔪2015-06-15 11:30:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕35a9e5c🔪2015-06-15 11:29:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕428fd5b🔪2015-06-15 11:28:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d9913e7🔪2015-06-15 11:25:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕4d325f1🔪2015-06-15 11:17:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e41143f🔪2015-06-15 11:15:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dd9c08e🔪2015-06-15 11:07:58 -0700🔪Mike Bostock🔪Fix rounding error with values less than 1y.🔪
+ src/formatAutoPrefix.js (gone)        | 21 ------------------
+ src/formatPrefixAuto.js (new)         | 16 ++++++++++++++
+ src/formatRounded.js                  | 12 ++++-------
+ src/formatRoundedPercentage.js (gone) | 15 -------------
+ src/formatTypes.js                    |  7 +++---
+ src/localeFormat.js                   |  2 +-
+ test/format-type-s-test.js            | 40 +++++++++++++++++------------------
+ 7 files changed, 44 insertions(+), 69 deletions(-)
+
+☕c83ad05🔪2015-06-15 10:17:24 -0700🔪Mike Bostock🔪Remove fudge factor when computing exponent.🔪
+ src/btod.js (gone)                 | 15 -------------
+ src/exponent.js                    |  6 +++--
+ src/formatAutoPrefix.js            | 20 +++++++++--------
+ src/formatDecimal.js (new)         | 14 ++++++++++++
+ src/formatRounded.js               | 18 ++++++++-------
+ src/formatRoundedPercentage.js     | 18 ++++++++-------
+ src/precisionPrefix.js             |  2 +-
+ test/precisionPrefix-test.js (new) | 46 ++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 96 insertions(+), 43 deletions(-)
+
+☕0087f90🔪2015-06-15 08:41:25 -0700🔪Mike Bostock🔪Fix rounding error.🔪
+ src/exponent.js (new)   | 3 +++
+ src/formatAutoPrefix.js | 8 ++------
+ src/localeFormat.js     | 7 ++++---
+ src/precisionFixed.js   | 4 +++-
+ src/precisionPrefix.js  | 4 ++--
+ src/precisionRound.js   | 4 +++-
+ 6 files changed, 17 insertions(+), 13 deletions(-)
+
+☕d61e79b🔪2015-06-15 07:37:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa08452🔪2015-06-14 20:53:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3457167🔪2015-06-14 20:52:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕ec665ec🔪2015-06-14 20:51:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1979ccc🔪2015-06-14 20:50:12 -0700🔪Mike Bostock🔪Add precisionPrefix. Fixes #3.🔪
+ README.md                    | 16 ++++++++++++++--
+ index.js                     |  2 ++
+ src/formatAutoPrefix.js      |  4 ++++
+ src/localeFormat.js          |  8 ++++----
+ src/precisionPrefix.js (new) |  6 ++++++
+ 5 files changed, 30 insertions(+), 6 deletions(-)
+
+☕fd775ba🔪2015-06-14 20:33:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8a8ff3d🔪2015-06-14 20:32:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f511ea8🔪2015-06-14 20:30:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8096fb1🔪2015-06-14 20:30:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a398d92🔪2015-06-14 17:56:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d27de25🔪2015-06-14 17:56:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac9324c🔪2015-06-14 17:49:55 -0700🔪Mike Bostock🔪formatPrefix takes a value, not a prefix.🔪
+ README.md                 |  8 ++++----
+ src/localeFormat.js       |  7 ++++---
+ test/formatPrefix-test.js | 21 +++++++++++++--------
+ 3 files changed, 21 insertions(+), 15 deletions(-)
+
+☕66dfb00🔪2015-06-14 17:29:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ef06d4c🔪2015-06-14 17:28:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕98eaa66🔪2015-06-14 17:27:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2970fc1🔪2015-06-14 17:26:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕f842755🔪2015-06-14 17:26:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕529dd99🔪2015-06-14 17:25:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cd10adb🔪2015-06-14 17:25:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4396355🔪2015-06-14 17:24:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb26bcb🔪2015-06-14 17:21:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 50 ++++++++++++++++++++++++++++++++------------------
+ 1 file changed, 32 insertions(+), 18 deletions(-)
+
+☕437d246🔪2015-06-14 17:06:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕79e1595🔪2015-06-14 17:06:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕06d626b🔪2015-06-14 17:04:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1fc02de🔪2015-06-14 17:04:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7ce0a3e🔪2015-06-14 17:03:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕83df572🔪2015-06-14 16:59:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 49 ++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 42 insertions(+), 7 deletions(-)
+
+☕d866060🔪2015-06-14 16:02:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕40fd9ec🔪2015-06-14 16:00:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d572744🔪2015-06-14 15:57:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕081ed43🔪2015-06-14 15:56:53 -0700🔪Mike Bostock🔪Sort.🔪
+ index.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕1bb418e🔪2015-06-14 15:56:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕49847b3🔪2015-06-14 15:54:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕dd9bc4d🔪2015-06-14 15:45:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2c9ac7a🔪2015-06-14 15:44:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9102bc0🔪2015-06-14 15:43:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9a9a95a🔪2015-06-14 15:41:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕cd34e81🔪2015-06-14 15:39:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7c8bd33🔪2015-06-14 15:38:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕6ae2ea5🔪2015-06-14 15:35:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+
+☕7d38c1a🔪2015-06-14 15:31:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕41c0745🔪2015-06-14 15:30:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕20ec3fb🔪2015-06-14 15:28:12 -0700🔪Mike Bostock🔪Add precision{Fixed,Round}.🔪
+ README.md                   | 89 ++++++++++++++++++++++-----------------------
+ index.js                    |  6 ++-
+ src/precisionFixed.js (new) |  3 ++
+ src/precisionRound.js (new) |  3 ++
+ 4 files changed, 54 insertions(+), 47 deletions(-)
+
+☕d0dc246🔪2015-06-14 14:32:39 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ README.md              | 43 +++++++++++++++++++++++++++++++++++++++++++
+ index.js               |  2 ++
+ src/formatSpecifier.js |  6 ++++--
+ 3 files changed, 49 insertions(+), 2 deletions(-)
+
+☕3bcdbbf🔪2015-06-14 11:50:49 -0700🔪Mike Bostock🔪Test constructed format.🔪
+ test/formatSpecifier-test.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕f1653e6🔪2015-06-14 11:48:47 -0700🔪Mike Bostock🔪Add tests for formatSpecifier.🔪
+ src/formatSpecifier.js             |  2 +-
+ test/formatSpecifier-test.js (new) | 51 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 52 insertions(+), 1 deletion(-)
+
+☕8d5232a🔪2015-06-14 11:37:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕3952200🔪2015-06-14 11:37:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4733772🔪2015-06-14 11:37:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕995ea84🔪2015-06-14 11:36:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4991ba9🔪2015-06-14 11:35:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕411dccf🔪2015-06-14 11:34:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c113e77🔪2015-06-14 11:33:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕80d0655🔪2015-06-14 11:33:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9b4d745🔪2015-06-14 11:32:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕27c0dd7🔪2015-06-14 11:32:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 44 ++++++++++++++++++++++----------------------
+ 1 file changed, 22 insertions(+), 22 deletions(-)
+
+☕d9c00fc🔪2015-06-14 11:29:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 54 +++++++++++++++++++++++++++---------------------------
+ 1 file changed, 27 insertions(+), 27 deletions(-)
+
+☕16f4020🔪2015-06-14 11:26:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕63c8749🔪2015-06-14 11:24:17 -0700🔪Mike Bostock🔪Say “decimal”, not “fixed point”.🔪It’s misleading to describe it as “fixed point” when the precision specifies the
+number of significant digits, since the decimal point will be in a different
+place depending on the magnitude of the number being formatted.
+
+ README.md                     | 10 +++++-----
+ test/format-type-none-test.js | 12 +++++++++++-
+ 2 files changed, 16 insertions(+), 6 deletions(-)
+
+☕41f614d🔪2015-06-14 11:13:46 -0700🔪Mike Bostock🔪Don’t default precision when parsing.🔪Also, don’t repeat myself when validating the format type.
+
+ src/formatDefault.js (new) |  3 +++
+ src/formatSpecifier.js     |  9 +++------
+ src/formatTypes.js (new)   | 21 +++++++++++++++++++++
+ src/localeFormat.js        | 33 +++++++--------------------------
+ 4 files changed, 34 insertions(+), 32 deletions(-)
+
+☕82e373e🔪2015-06-14 10:57:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5423f29🔪2015-06-14 10:56:59 -0700🔪Mike Bostock🔪Add formatSpecifier.🔪
+ README.md                           |  27 ++
+ index.js                            |   2 +
+ src/formatSpecifier.js (new)        |  55 ++++
+ src/localeFormat.js                 |  72 ++--
+ test/format-test.js                 | 631 ------------------------------------
+ test/format-type-%-test.js (new)    |  35 ++
+ test/format-type-b-test.js (new)    |  12 +
+ test/format-type-c-test.js (new)    |  12 +
+ test/format-type-d-test.js (new)    | 236 ++++++++++++++
+ test/format-type-e-test.js (new)    |  17 +
+ test/format-type-f-test.js (new)    |  46 +++
+ test/format-type-g-test.js (new)    |  30 ++
+ test/format-type-n-test.js (new)    |  30 ++
+ test/format-type-none-test.js (new) |  25 ++
+ test/format-type-o-test.js (new)    |  12 +
+ test/format-type-p-test.js (new)    |  29 ++
+ test/format-type-r-test.js (new)    |  40 +++
+ test/format-type-s-test.js (new)    | 159 +++++++++
+ test/format-type-x-test.js (new)    |  68 ++++
+ 19 files changed, 864 insertions(+), 674 deletions(-)
+
+☕5db403a🔪2015-06-14 10:21:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕8cf0686🔪2015-06-14 10:15:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕28192c1🔪2015-06-14 10:14:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6d2f134🔪2015-06-14 10:14:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕986aa08🔪2015-06-14 10:11:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕30faca2🔪2015-06-13 23:38:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕681b9e4🔪2015-06-13 23:37:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1c9ecfb🔪2015-06-13 23:33:12 -0700🔪Mike Bostock🔪Default precision to 12 for the default type.🔪
+ README.md           | 2 +-
+ src/localeFormat.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕cdbfad2🔪2015-06-13 23:30:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2343880🔪2015-06-13 23:28:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕54ef39a🔪2015-06-13 23:27:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8115993🔪2015-06-13 23:27:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕9c4c9ff🔪2015-06-13 23:22:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5ac5d9f🔪2015-06-13 23:22:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕8589787🔪2015-06-13 23:13:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕e20b1a6🔪2015-06-13 23:10:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕ea38464🔪2015-06-13 23:08:20 -0700🔪Mike Bostock🔪Trim insignificant zeros.🔪
+ README.md                   | 11 ++++++-----
+ src/formatDefault.js (gone) |  3 ---
+ src/localeFormat.js         |  5 ++---
+ test/format-test.js         | 11 +++++++++++
+ 4 files changed, 19 insertions(+), 11 deletions(-)
+
+☕a8a1520🔪2015-06-13 22:41:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+
+☕8a04677🔪2015-06-13 22:41:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕016214f🔪2015-06-13 22:40:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a9566cb🔪2015-06-13 22:39:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cc9f6e3🔪2015-06-13 22:39:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cd85fb9🔪2015-06-13 22:38:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕09c31f0🔪2015-06-13 22:37:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕01ecd49🔪2015-06-13 22:36:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05b0e04🔪2015-06-13 22:34:36 -0700🔪Mike Bostock🔪Default precision is now 6.🔪Also, fix for SI-prefix with very large and very small numbers.
+
+ src/btod.js               |   2 +-
+ src/formatAutoPrefix.js   |   7 ++-
+ src/localeFormat.js       |   9 ++-
+ test/format-test.js       | 154 ++++++++++++++++++++++++++--------------------
+ test/formatPrefix-test.js |   5 ++
+ 5 files changed, 105 insertions(+), 72 deletions(-)
+
+☕c965cf5🔪2015-06-13 21:44:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕92d3cad🔪2015-06-13 21:42:41 -0700🔪Mike Bostock🔪Update test.🔪
+ test/formatPrefix-test.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕c2e0401🔪2015-06-13 21:42:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕57bb9b6🔪2015-06-13 21:41:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c4ddd2🔪2015-06-13 21:41:08 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 +++++++++++++++++-----------------
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+
+☕9c14e39🔪2015-06-13 21:39:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 +++++++++++++++++-----------------
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+
+☕f02f39a🔪2015-06-13 21:38:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕dd17a0b🔪2015-06-13 21:38:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕1237aa5🔪2015-06-13 21:36:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕336a252🔪2015-06-13 21:35:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1592ffb🔪2015-06-13 21:35:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9eca83f🔪2015-06-13 21:34:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕36c7bd8🔪2015-06-13 21:32:51 -0700🔪Mike Bostock🔪New formatPrefix.🔪
+ README.md                                    |  60 +++++++------
+ index.js                                     |  12 ++-
+ src/{formatSystem.js => formatAutoPrefix.js} |   6 +-
+ src/formatPrefix.js (gone)                   |  19 ----
+ src/localeFormat.js                          |  46 ++++++----
+ src/round.js (gone)                          |   5 --
+ test/format-test.js                          |   2 +-
+ test/formatPrefix-test.js                    | 126 ++-------------------------
+ test/localeFormat-test.js                    |  20 ++---
+ test/round-test.js (gone)                    |  73 ----------------
+ 10 files changed, 89 insertions(+), 280 deletions(-)
+
+☕7d6a479🔪2015-06-13 20:15:03 -0700🔪Mike Bostock🔪Test substitute fill character.🔪
+ src/localeFormat.js |  2 +-
+ test/format-test.js | 13 +++++++++++++
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+☕b515953🔪2015-06-13 16:18:44 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/btod.js | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕f159e99🔪2015-06-13 16:10:08 -0700🔪Mike Bostock🔪Use slice instead of substring.🔪
+ src/localeFormat.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕67d3deb🔪2015-06-13 16:09:13 -0700🔪Mike Bostock🔪Minor optimization.🔪
+ src/localeFormat.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c602e3f🔪2015-06-13 16:06:16 -0700🔪Mike Bostock🔪Verify that format type c doesn’t localize.🔪
+ test/format-test.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕a2dd4ad🔪2015-06-13 16:03:15 -0700🔪Mike Bostock🔪Cleaner handling of invalid format types.🔪
+ src/localeFormat.js | 27 ++++++++++++++++-----------
+ 1 file changed, 16 insertions(+), 11 deletions(-)
+
+☕449b263🔪2015-06-13 15:57:09 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 42 +++++++++++++++++++++---------------------
+ 1 file changed, 21 insertions(+), 21 deletions(-)
+
+☕fc74185🔪2015-06-13 15:52:11 -0700🔪Mike Bostock🔪Simplify.🔪
+ src/localeFormat.js |  2 +-
+ test/format-test.js | 13 +++++++++++++
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+☕2aa0c80🔪2015-06-13 15:44:47 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c508673🔪2015-06-13 15:44:29 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕85d4582🔪2015-06-13 15:42:10 -0700🔪Mike Bostock🔪Fix off-by-one in center align.🔪
+ src/localeFormat.js | 2 +-
+ test/format-test.js | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕45f0875🔪2015-06-13 15:23:53 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕82a7c60🔪2015-06-13 15:19:52 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕0c0b223🔪2015-06-13 15:18:34 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+☕04ed4bf🔪2015-06-13 15:17:43 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕412f30a🔪2015-06-13 15:16:51 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e89f56b🔪2015-06-13 15:16:25 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕651c727🔪2015-06-13 15:13:44 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/localeFormat.js | 23 +++++++++++------------
+ 1 file changed, 11 insertions(+), 12 deletions(-)
+
+☕0061474🔪2015-06-13 14:36:06 -0700🔪Mike Bostock🔪Better comments.🔪
+ src/localeFormat.js | 65 ++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 34 insertions(+), 31 deletions(-)
+
+☕4a1d996🔪2015-06-13 14:20:58 -0700🔪Mike Bostock🔪Slightly cleaner.🔪
+ src/localeFormat.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕25e04b8🔪2015-06-13 14:15:25 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ src/formatDefault.js (new)           |   3 +
+ src/formatGroup.js (new)             |  18 ++++
+ src/formatRounded.js (new)           |  13 +++
+ src/formatRoundedPercentage.js (new) |  13 +++
+ src/formatSystem.js (new)            |  16 ++++
+ src/localeFormat.js                  | 156 +++++++++++------------------------
+ test/format-test.js                  |  21 +++++
+ 7 files changed, 131 insertions(+), 109 deletions(-)
+
+☕851ea75🔪2015-06-13 12:38:54 -0700🔪Mike Bostock🔪Delete dead code.🔪
+ src/localeFormat.js | 21 ---------------------
+ 1 file changed, 21 deletions(-)
+
+☕6ddf56c🔪2015-06-12 23:33:21 -0700🔪Mike Bostock🔪Partial fix for formatPrefix.🔪
+ README.md                     |  4 ----
+ index.js                      |  2 --
+ src/btod.js (new)             | 15 ++++++++++++++
+ src/formatPrecision.js (gone) |  3 ---
+ src/formatPrefix.js           | 17 ++++++++-------
+ src/localeFormat.js           | 18 ++--------------
+ test/formatPrefix-test.js     | 48 +++++++++++++++++++++----------------------
+ 7 files changed, 49 insertions(+), 58 deletions(-)
+
+☕fa64bbb🔪2015-06-12 23:21:09 -0700🔪Mike Bostock🔪Better rounding.🔪Rather than trying to roll our own dragon, we now piggy-back on the built-in
+number.toExponential to determine the significant digits of a given number.
+
+ src/localeFormat.js               | 103 ++++++++++++++++++++++++++++++--------
+ src/toEngineering.js (gone)       |  22 --------
+ src/toFixedPercentage.js (gone)   |  42 ----------------
+ src/toRounded.js (gone)           |  17 -------
+ src/toRoundedPercentage.js (gone) |  21 --------
+ test/format-test.js               |  20 +++++---
+ 6 files changed, 96 insertions(+), 129 deletions(-)
+
+☕b0b9113🔪2015-06-12 22:06:26 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ src/localeFormat.js              | 69 ++++++++++++++--------------------------
+ src/toEngineering.js (new)       | 22 +++++++++++++
+ src/toFixedPercentage.js (new)   | 42 ++++++++++++++++++++++++
+ src/toRounded.js (new)           | 17 ++++++++++
+ src/toRoundedPercentage.js (new) | 21 ++++++++++++
+ test/format-test.js              | 24 +++++++++++++-
+ 6 files changed, 149 insertions(+), 46 deletions(-)
+
+☕5ed29af🔪2015-06-12 18:05:43 -0700🔪Mike Bostock🔪Checkpoint better precision.🔪
+ src/formatPrefix.js |  4 ++--
+ src/localeFormat.js | 25 +++++++++++++++++++++----
+ test/format-test.js |  1 +
+ 3 files changed, 24 insertions(+), 6 deletions(-)
+
+☕3195f5e🔪2015-06-12 15:35:30 -0700🔪Mike Bostock🔪Rename formatLocale to localeFormat.🔪Also fix a bug where the suffix wasn’t considered when computing fill.
+
+ README.md                                | 46 ++++++++++++++++----------------
+ index.js                                 |  4 +--
+ package.json                             |  2 +-
+ src/format-ca-ES.js                      |  4 +--
+ src/format-de-DE.js                      |  4 +--
+ src/format-en-CA.js                      |  4 +--
+ src/format-en-GB.js                      |  4 +--
+ src/format-en-US.js                      |  4 +--
+ src/format-es-ES.js                      |  4 +--
+ src/format-fi-FI.js                      |  4 +--
+ src/format-fr-CA.js                      |  4 +--
+ src/format-fr-FR.js                      |  4 +--
+ src/format-he-IL.js                      |  4 +--
+ src/format-it-IT.js                      |  4 +--
+ src/format-mk-MK.js                      |  4 +--
+ src/format-nl-NL.js                      |  4 +--
+ src/format-pl-PL.js                      |  4 +--
+ src/format-pt-BR.js                      |  4 +--
+ src/format-ru-RU.js                      |  4 +--
+ src/format-zh-CN.js                      |  4 +--
+ src/{formatLocale.js => localeFormat.js} |  2 +-
+ test/format-test.js                      |  7 +++++
+ test/localeFormat-test.js (new)          | 32 ++++++++++++++++++++++
+ 23 files changed, 100 insertions(+), 61 deletions(-)
+
+☕256a5ea🔪2015-06-12 13:23:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6ed262f🔪2015-06-12 13:22:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕afd89fb🔪2015-06-12 13:22:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d732a7🔪2015-06-12 13:21:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+
+☕2aab46d🔪2015-06-12 13:20:53 -0700🔪Mike Bostock🔪Fix link.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕13b3dfa🔪2015-06-12 13:20:15 -0700🔪Mike Bostock🔪Fix links.🔪
+ README.md | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+☕91b27b4🔪2015-06-12 13:19:18 -0700🔪Mike Bostock🔪Add locales.🔪
+ README.md                 |  61 ++++++++++++++++-
+ index.js                  |   4 +-
+ src/format-ca-ES.js (new) |   8 +++
+ src/format-de-DE.js (new) |   8 +++
+ src/format-en-CA.js (new) |   8 +++
+ src/format-en-GB.js (new) |   8 +++
+ src/format-en-US.js (new) |   8 +++
+ src/format-es-ES.js (new) |   8 +++
+ src/format-fi-FI.js (new) |   8 +++
+ src/format-fr-CA.js (new) |   8 +++
+ src/format-fr-FR.js (new) |   8 +++
+ src/format-he-IL.js (new) |   8 +++
+ src/format-it-IT.js (new) |   8 +++
+ src/format-mk-MK.js (new) |   8 +++
+ src/format-nl-NL.js (new) |   8 +++
+ src/format-pl-PL.js (new) |   8 +++
+ src/format-pt-BR.js (new) |   8 +++
+ src/format-ru-RU.js (new) |   8 +++
+ src/format-zh-CN.js (new) |   8 +++
+ src/format.js (gone)      | 166 ----------------------------------------------
+ src/formatLocale.js (new) | 162 ++++++++++++++++++++++++++++++++++++++++++++
+ 21 files changed, 359 insertions(+), 170 deletions(-)
+
+☕1048dfc🔪2015-06-11 21:46:19 -0700🔪Mike Bostock🔪Add tests for format.🔪
+ test/format-test.js (new) | 523 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 523 insertions(+)
+
+☕79a49de🔪2015-06-11 21:38:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕ef64432🔪2015-06-11 21:37:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2664913🔪2015-06-11 21:36:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕780d620🔪2015-06-11 21:35:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f02951c🔪2015-06-11 21:34:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0cdbda1🔪2015-06-11 21:34:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+☕c746fbc🔪2015-06-11 21:31:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕9c81473🔪2015-06-11 21:30:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2fe3e54🔪2015-06-11 21:29:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕49aee8f🔪2015-06-11 21:28:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08f3e50🔪2015-06-11 21:28:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 56 ++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 28 insertions(+), 28 deletions(-)
+
+☕a9bc9f5🔪2015-06-11 21:26:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕2aa004c🔪2015-06-11 21:24:42 -0700🔪Mike Bostock🔪Update description.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕dacab59🔪2015-06-11 21:23:23 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                |   5 ++
+ .npmignore (new)                |   3 +
+ LICENSE (new)                   |  28 +++++++
+ README.md (new)                 | 102 ++++++++++++++++++++++++
+ d3-format.sublime-project (new) |  13 ++++
+ index.js (new)                  |  11 +++
+ package.json (new)              |  32 ++++++++
+ src/format.js (new)             | 166 ++++++++++++++++++++++++++++++++++++++++
+ src/formatPrecision.js (new)    |   3 +
+ src/formatPrefix.js (new)       |  20 +++++
+ src/round.js (new)              |   5 ++
+ test/formatPrefix-test.js (new) | 127 ++++++++++++++++++++++++++++++
+ test/inDelta.js (new)           |  10 +++
+ test/round-test.js (new)        |  73 ++++++++++++++++++
+ 14 files changed, 598 insertions(+)

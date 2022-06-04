@@ -1,0 +1,1307 @@
+☕958249d🔪2022-05-19 17:12:45 +0200🔪Philippe Rivière🔪document color.formatHex8 (#104)🔪* document color.formatHex8 following #103
+* main
+ README.md | 42 +++++++++++++++++++++++-------------------
+ 1 file changed, 23 insertions(+), 19 deletions(-)
+
+☕7a1573e🔪2022-03-28 15:46:25 -0700🔪Mike Bostock🔪3.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕75c19c4🔪2022-03-28 15:45:23 -0700🔪Mike Bostock🔪update LICENSE🔪
+ LICENSE | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ef94e01🔪2022-03-28 15:45:15 -0700🔪Mike Bostock🔪update dependencies🔪
+ package.json |   4 +-
+ yarn.lock    | 605 +++++++++++++++++++++++------------------------------------
+ 2 files changed, 239 insertions(+), 370 deletions(-)
+
+☕5e9f757🔪2022-03-28 15:42:43 -0700🔪Mike Bostock🔪method shorthand🔪
+ src/color.js     | 26 +++++++++++++-------------
+ src/cubehelix.js |  6 +++---
+ src/lab.js       | 12 ++++++------
+ 3 files changed, 22 insertions(+), 22 deletions(-)
+
+☕e4bc34e🔪2022-03-28 13:58:38 -0700🔪Mike Bostock🔪formatHex8 (#103)🔪* formatHex8
+
+* adopt template literals
+ src/color.js     | 24 +++++++++++++++++-------
+ test/rgb-test.js |  7 +++++++
+ 2 files changed, 24 insertions(+), 7 deletions(-)
+
+☕ac660c6🔪2022-03-28 11:04:17 -0700🔪Mike Bostock🔪{rgb,hsl}.clamp() (#102)🔪* {rgb,hsl}.clamp()
+
+* Update README
+ README.md        |  8 ++++++++
+ src/color.js     | 45 ++++++++++++++++++++++++++++-----------------
+ test/hsl-test.js | 12 ++++++++++++
+ test/rgb-test.js | 10 ++++++++++
+ 4 files changed, 58 insertions(+), 17 deletions(-)
+
+☕70e3a04🔪2022-03-28 10:30:51 -0700🔪Mike Bostock🔪clamp HSL format (#101)🔪
+ src/color.js     | 12 ++++++++----
+ test/hsl-test.js |  7 +++++++
+ 2 files changed, 15 insertions(+), 4 deletions(-)
+
+☕994d8fd🔪2022-03-28 09:08:43 -0700🔪Mike Bostock🔪avoid backtracking (#100)🔪
+ src/color.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7d61bbe🔪2021-06-05 11:22:11 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕93bc4ff🔪2021-06-05 11:22:03 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕611e1c3🔪2021-06-04 16:14:53 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c2be7e🔪2021-06-05 01:14:11 +0200🔪Philippe Rivière🔪Adopt type=module (#90)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* cleaner
+
+* update README
+
+* strictEqual, deepStrictEqual
+(@aulonm)
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* Update README
+
+* fix assert message
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    5 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   22 +-
+ d3-color.sublime-project (gone)     |   17 -
+ package.json                        |   45 +-
+ test/.eslintrc.json (new)           |   13 +
+ test/asserts.js (new)               |   46 ++
+ test/color-test.js                  |  248 +++---
+ test/cubehelix-test.js              |   13 +-
+ test/gray-test.js                   |   17 +-
+ test/hcl-test.js                    |  327 ++++----
+ test/hclEqual.js (gone)             |   15 -
+ test/hsl-test.js                    |  487 ++++++------
+ test/hslEqual.js (gone)             |   15 -
+ test/lab-test.js                    |  265 +++----
+ test/labEqual.js (gone)             |   15 -
+ test/lch-test.js                    |   26 +-
+ test/rgb-test.js                    |  434 +++++------
+ test/rgbEqual.js (gone)             |   28 -
+ yarn.lock                           | 1455 +++++++++++++++++++----------------
+ 22 files changed, 1767 insertions(+), 1814 deletions(-)
+
+☕017a463🔪2020-08-19 23:53:35 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕0ecd740🔪2020-07-24 15:56:51 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕fd23843🔪2020-06-30 14:15:36 +0200🔪Philippe Rivière🔪document extensions🔪closes https://github.com/d3/d3-hsv/issues/2 and https://github.com/d3/d3-color/issues/48
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕d86e36b🔪2020-06-02 16:45:29 +0200🔪Philippe Rivière🔪link to https://d3js.org/d3-color.v2.min.js🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c1b93f1🔪2020-06-02 16:21:34 +0200🔪Philippe Rivière🔪normalize "degrees" and "radians" for deg2rad conversions🔪
+ src/cubehelix.js | 6 +++---
+ src/lab.js       | 6 +++---
+ src/math.js      | 4 ++--
+ 3 files changed, 8 insertions(+), 8 deletions(-)
+
+☕693572b🔪2020-06-02 16:17:14 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/lab.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e87dc62🔪2020-04-20 10:39:53 -0700🔪Mike Bostock🔪1.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f176ff1🔪2020-04-20 10:36:25 -0700🔪Mike Bostock🔪Fix hexadecimal transparent colors.🔪
+ src/color.js       | 4 ++--
+ test/color-test.js | 7 +++++++
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+☕df60378🔪2020-03-09 17:54:46 -0700🔪Mike Bostock🔪Add link to d3-hsluv.🔪
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕acf4da1🔪2019-11-02 08:23:37 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕0b12fa0🔪2019-09-25 13:27:25 -0700🔪Mike Bostock🔪1.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d0a60ee🔪2019-09-25 13:27:10 -0700🔪Mike Bostock🔪Add sideEffects: false. Related d3/d3#3131.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕fd380cd🔪2019-09-25 13:25:22 -0700🔪Mike Bostock🔪Consolidate code.🔪
+ src/color.js       | 20 +++++++-------------
+ test/color-test.js |  5 +++++
+ 2 files changed, 12 insertions(+), 13 deletions(-)
+
+☕6d5e89c🔪2019-09-19 08:38:18 -0700🔪Tim Slatcher🔪fix test name🔪
+ test/color-test.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕39f06c9🔪2019-09-19 08:37:35 -0700🔪Tim Slatcher🔪clean up🔪
+ src/color.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕69f8382🔪2019-09-19 08:33:04 -0700🔪Tim Slatcher🔪Update README.md🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕7a4982b🔪2019-09-19 08:23:20 -0700🔪Tim Slatcher🔪Add support for 4 and 8 digit hex codes🔪
+ src/color.js       | 11 ++++++++++-
+ test/color-test.js | 11 ++++++++++-
+ 2 files changed, 20 insertions(+), 2 deletions(-)
+
+☕bff4aa3🔪2019-08-22 10:13:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1a9e612🔪2019-08-22 10:06:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕81c3a55🔪2019-08-22 10:05:05 -0700🔪Mike Bostock🔪Update README. Fix #66.🔪
+ README.md | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+
+☕48bccfb🔪2019-08-09 15:14:47 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/color.js     | 2 +-
+ src/cubehelix.js | 6 +++---
+ src/index.js     | 6 +++---
+ src/lab.js       | 6 +++---
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+
+☕237b755🔪2019-08-07 16:55:35 +0530🔪Curran Kelleher🔪Fix #62🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕329b01b🔪2019-08-01 17:17:11 -0700🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fcf6e2b🔪2019-08-01 17:16:26 -0700🔪Mike Bostock🔪Standardize dependencies.🔪
+ yarn.lock | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕c36018c🔪2019-08-01 17:11:54 -0700🔪Mike Bostock🔪Add color.copy. Fixes #32.🔪
+ README.md        |  8 ++++++++
+ src/color.js     |  3 +++
+ test/hsl-test.js | 10 ++++++++++
+ test/rgb-test.js | 10 ++++++++++
+ 4 files changed, 31 insertions(+)
+
+☕8319c01🔪2019-08-01 16:49:24 -0700🔪Mike Bostock🔪Deprecate color.hex.🔪
+ README.md    | 4 ----
+ src/color.js | 4 ++--
+ 2 files changed, 2 insertions(+), 6 deletions(-)
+
+☕80fe2fb🔪2019-08-01 11:30:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+☕7d9850b🔪2019-08-01 11:24:03 -0700🔪Mike Bostock🔪Add color formatting methods.🔪
+ src/color.js     | 59 ++++++++++++++++++++++++++++++++++++++++----------------
+ test/hsl-test.js | 24 +++++++++++++++++++++++
+ test/rgb-test.js | 30 ++++++++++++++++++++++++++++
+ 3 files changed, 96 insertions(+), 17 deletions(-)
+
+☕b192dbe🔪2019-08-01 10:24:11 -0700🔪Mike Bostock🔪Explicit files; update dependencies.🔪
+ .npmignore (gone) |   4 -
+ package.json      |  10 +-
+ src/color.js      |   2 +-
+ yarn.lock         | 879 ++++++++++++++++++++++++++++++++----------------------
+ 4 files changed, 525 insertions(+), 370 deletions(-)
+
+☕8366f76🔪2019-06-27 21:30:51 -0700🔪Mike Bostock🔪1.2.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f25d348🔪2019-06-27 21:30:48 -0700🔪Mike Bostock🔪Revert chroma clamping.🔪
+ src/lab.js       | 23 ++---------------------
+ test/hcl-test.js |  6 ------
+ 2 files changed, 2 insertions(+), 27 deletions(-)
+
+☕f6a0f24🔪2019-06-27 19:47:15 -0700🔪Mike Bostock🔪1.2.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕78a252f🔪2019-06-27 19:47:11 -0700🔪Mike Bostock🔪Account for rounding.🔪
+ README.md        | 2 +-
+ src/color.js     | 6 +++---
+ test/hcl-test.js | 8 +++++++-
+ 3 files changed, 11 insertions(+), 5 deletions(-)
+
+☕a142845🔪2019-06-27 13:04:36 -0700🔪Mike Bostock🔪1.2.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1f8efbb🔪2019-06-27 13:01:42 -0700🔪Mike Bostock🔪Clamp chroma in hcl.toString.🔪
+ src/lab.js       | 39 ++++++++++++++++++++++++++++++---------
+ test/hcl-test.js | 18 ++++++++++++------
+ 2 files changed, 42 insertions(+), 15 deletions(-)
+
+☕43f5ab6🔪2019-06-26 11:17:29 -0700🔪Mike Bostock🔪1.2.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7235b98🔪2019-06-26 11:17:25 -0700🔪Mike Bostock🔪Oops, only black is special.🔪
+ src/lab.js       |  2 +-
+ test/hcl-test.js | 12 ++++++------
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+☕59ac546🔪2019-06-26 11:02:55 -0700🔪Mike Bostock🔪1.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf55c4b🔪2019-06-26 11:02:07 -0700🔪Mike Bostock🔪Chroma is undefined for black and white.🔪
+ src/lab.js       |  2 +-
+ test/hcl-test.js | 24 +++++++++++++++---------
+ 2 files changed, 16 insertions(+), 10 deletions(-)
+
+☕f666cf0🔪2018-08-24 14:12:23 -0700🔪Mike Bostock🔪1.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3a3c0f5🔪2018-08-24 14:02:19 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1eb3b6b🔪2018-08-24 13:51:52 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 3 ---
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 3 +++
+ 4 files changed, 11 insertions(+), 10 deletions(-)
+
+☕ae4b0c6🔪2018-08-24 13:51:45 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-color.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕97a10a4🔪2018-08-24 13:51:43 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕79d994f🔪2018-08-24 11:15:27 -0700🔪Mike Bostock🔪1.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6a7b563🔪2018-08-24 11:15:24 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .gitignore               |  2 +-
+ .npmignore               |  2 +-
+ d3-color.sublime-project |  2 +-
+ package.json             |  8 ++++----
+ rollup.config.js         |  7 ++++---
+ test/cubehelix-test.js   |  1 -
+ test/hcl-test.js         |  1 -
+ test/hsl-test.js         |  1 -
+ test/lab-test.js         |  1 -
+ test/rgb-test.js         |  1 -
+ yarn.lock                | 12 ++++++------
+ 11 files changed, 17 insertions(+), 21 deletions(-)
+
+☕eeeea9d🔪2018-08-24 10:27:25 -0700🔪Mike Bostock🔪1.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a417680🔪2018-08-24 10:27:12 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |  12 -
+ .eslintrc.json (new)     |  15 +
+ d3-color.sublime-project |   4 +-
+ package.json             |  15 +-
+ rollup.config.js (new)   |  35 ++
+ yarn.lock (new)          | 935 +++++++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 994 insertions(+), 22 deletions(-)
+
+☕d5258a5🔪2018-05-07 10:25:07 -0700🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕31ff15a🔪2018-05-06 16:48:12 -0700🔪Mike Bostock🔪Add color.hex. Fixes #38.🔪
+ README.md          |  6 +++++-
+ src/color.js       | 11 +++++++++++
+ test/color-test.js |  5 +++++
+ 3 files changed, 21 insertions(+), 1 deletion(-)
+
+☕8c37e32🔪2018-04-17 10:51:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c93b3aa🔪2018-04-17 10:50:27 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d8ed36🔪2018-04-17 10:47:07 -0700🔪Mike Bostock🔪Fix #44.🔪
+ README.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+☕31a6fe7🔪2018-04-17 10:45:44 -0700🔪Mike Bostock🔪Fix #24.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕331187b🔪2018-04-17 10:38:44 -0700🔪Mike Bostock🔪Add d3.gray.🔪
+ README.md               |  4 ++++
+ index.js                |  2 +-
+ src/lab.js              |  4 ++++
+ test/gray-test.js (new) | 12 ++++++++++++
+ 4 files changed, 21 insertions(+), 1 deletion(-)
+
+☕bf3fde6🔪2018-04-17 10:31:41 -0700🔪Mike Bostock🔪Add d3.lch alias.🔪
+ README.md              | 26 ++++++++++++++++----------
+ index.js               |  2 +-
+ src/lab.js             |  4 ++++
+ test/lch-test.js (new) | 19 +++++++++++++++++++
+ 4 files changed, 40 insertions(+), 11 deletions(-)
+
+☕e8b55a8🔪2018-04-17 10:28:39 -0700🔪Mike Bostock🔪Add build system.🔪
+ d3-color.sublime-project | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+☕9d84999🔪2018-04-17 08:21:06 -0700🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8feef9c🔪2018-04-17 08:14:21 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/lab.js | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕6e45079🔪2018-04-06 14:36:38 -0700🔪Mike Bostock🔪Remove tap-spec.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕a81863e🔪2018-04-06 14:35:49 -0700🔪Mike Bostock🔪More precise Xn.🔪
+ src/lab.js       | 19 ++++++++-----------
+ test/hcl-test.js | 42 +++++++++++++++++++++---------------------
+ test/lab-test.js | 42 +++++++++++++++++++++---------------------
+ 3 files changed, 50 insertions(+), 53 deletions(-)
+
+☕8e639e1🔪2018-04-04 09:55:46 -0700🔪Mike Bostock🔪Optimize slightly.🔪
+ src/lab.js | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕3c078c9🔪2018-04-04 09:54:55 -0700🔪Mike Bostock🔪Optimize slightly.🔪
+ src/lab.js | 18 +++++++-----------
+ 1 file changed, 7 insertions(+), 11 deletions(-)
+
+☕759f30c🔪2018-04-04 09:50:56 -0700🔪Mike Bostock🔪Define achromatic behavior.🔪
+ src/lab.js       |  7 +++++--
+ test/hcl-test.js | 23 +++++++++++++----------
+ 2 files changed, 18 insertions(+), 12 deletions(-)
+
+☕9ac7573🔪2018-04-03 09:38:08 +0300🔪Dan Burzo🔪Updated HCL/LAB tests🔪
+ test/hcl-test.js | 50 +++++++++++++++++++++++++-------------------------
+ test/lab-test.js | 46 +++++++++++++++++++++++-----------------------
+ 2 files changed, 48 insertions(+), 48 deletions(-)
+
+☕0077f9d🔪2018-04-03 09:06:32 +0300🔪Dan Burzo🔪Put back t * t * t instead of math.pow🔪
+ src/lab.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0f18cac🔪2018-04-03 09:04:01 +0300🔪Dan Burzo🔪Merged matrices for RGB <-> XYZ conversion (#1)🔪Merged matrices for linear RGB <-> XYZ D50 conversion, using the matrices from Lindbloom. Updated D50 to its correct value (rather than the one defined in the ICC spec).
+
+ src/lab.js | 62 +++++++++++++++++++++++---------------------------------------
+ 1 file changed, 23 insertions(+), 39 deletions(-)
+
+☕ca41c9c🔪2018-04-01 21:00:55 +0300🔪Dan Burzo🔪Apply chromatic adaptation between D50 and D65 standard referents🔪
+ package.json |  3 ++-
+ src/lab.js   | 66 ++++++++++++++++++++++++++++++++++++++++--------------------
+ 2 files changed, 46 insertions(+), 23 deletions(-)
+
+☕3806fc5🔪2017-11-22 18:25:57 +0100🔪Mehdi El Fadil🔪corrected HCL hyperlink🔪was pointing to Lab color space wiki page instead of HCL.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8880bbc🔪2017-03-10 10:12:22 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d5f2bf🔪2017-03-10 10:12:14 -0800🔪Mike Bostock🔪Update Rollup, UglifyJS.🔪
+ package.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕c6c62bd🔪2016-11-08 10:43:52 -0800🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕426d7db🔪2016-11-08 10:41:25 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 4 +---
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 5 deletions(-)
+
+☕96947ed🔪2016-11-08 10:37:31 -0800🔪Mike Bostock🔪Fix for more unusual number formats.🔪According to the CSS Values specification:
+
+> a number is either an integer, or zero or more decimal digits followed by a
+> dot (.) followed by one or more decimal digits and optionally an exponent
+> composed of "e" or "E" and an integer… the first character of a number may be
+> immediately preceded by - or + to indicate the number’s sign.
+
+https://drafts.csswg.org/css-values-3/#numbers
+
+Fixes #31.
+
+ src/color.js       | 17 ++++++++++-------
+ test/color-test.js | 17 ++++++++++++++++-
+ 2 files changed, 26 insertions(+), 8 deletions(-)
+
+☕61b7a01🔪2016-10-12 16:22:54 -0400🔪Vijith Assar🔪documentation🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e66358b🔪2016-08-10 18:19:44 +0300🔪Devinsuit🔪Add links to source v3🔪
+ README.md | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+☕e7acd31🔪2016-08-10 11:38:47 +0300🔪Devinsuit🔪Add links to source v2🔪
+ README.md | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+☕6536f82🔪2016-08-10 11:30:17 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 44 ++++++++++++++++++++++----------------------
+ 1 file changed, 22 insertions(+), 22 deletions(-)
+
+☕1e4224d🔪2016-08-02 14:53:01 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕40fc524🔪2016-08-02 14:53:00 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕691480c🔪2016-06-14 15:41:04 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕40f4f1c🔪2016-06-14 15:40:49 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕9bea03e🔪2016-06-14 09:24:01 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕7d79f97🔪2016-06-07 16:26:50 -0700🔪Mike Bostock🔪0.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e82548a🔪2016-06-07 16:23:59 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕64ab23d🔪2016-05-18 09:54:35 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1f2db89🔪2016-05-14 21:23:45 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕1bd8cce🔪2016-03-15 10:23:21 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕411604b🔪2016-03-14 13:14:11 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕73b58c0🔪2016-03-14 12:54:02 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕40e5593🔪2016-03-06 15:12:45 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a06e12c🔪2016-03-04 09:53:12 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5ffde57🔪2016-03-01 14:20:06 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕026507b🔪2016-02-24 16:10:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕f80d2ba🔪2016-02-21 16:00:38 -0800🔪Mike Bostock🔪0.4.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕df3952a🔪2016-02-21 16:00:04 -0800🔪Mike Bostock🔪Fix #25 - prototype.constructor.🔪
+ src/color.js                 | 123 +++++++++++++++++++++----------------------
+ src/cubehelix.js             |  49 +++++++++--------
+ src/define.js (new)          |  10 ++++
+ src/lab.js                   |  71 ++++++++++++-------------
+ test/cubehelix-test.js (new) |  10 ++++
+ test/hcl-test.js             |   1 +
+ test/hsl-test.js             |   1 +
+ test/lab-test.js             |   1 +
+ test/rgb-test.js             |   1 +
+ 9 files changed, 141 insertions(+), 126 deletions(-)
+
+☕963aba1🔪2016-02-21 15:31:51 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5cfe466🔪2016-02-02 21:14:04 -0800🔪Mike Bostock🔪Implicit parsing of undefined channels.🔪CSS has no way of expressing an unset channel, and so for example “transparent”
+is defined arbitrarily as rgba(0, 0, 0, 0). This module, in contrast, uses NaN
+channels to distinguish a channel that is unset. Therefore when parsing CSS
+color specifiers, we must record the unset channels (such as the hue being
+undefined when the color is black).
+
+ README.md          |   2 +-
+ package.json       |   2 +-
+ src/color.js       | 117 ++++++++++++++++++++++++++---------------------------
+ src/cubehelix.js   |  37 ++++++++---------
+ src/lab.js         |  76 +++++++++++++---------------------
+ test/color-test.js |  12 +++---
+ test/hcl-test.js   |   2 +-
+ test/hsl-test.js   |  24 ++++++++++-
+ test/lab-test.js   |   2 +-
+ test/rgb-test.js   |   8 +++-
+ 10 files changed, 143 insertions(+), 139 deletions(-)
+
+☕c7af844🔪2016-02-02 16:17:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕07735d5🔪2016-02-02 16:17:10 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+☕ac1389d🔪2016-02-02 16:16:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 42 +++++++++++++++++++++++++-----------------
+ 1 file changed, 25 insertions(+), 17 deletions(-)
+
+☕c99eb7f🔪2016-02-02 16:10:34 -0800🔪Mike Bostock🔪More tests, and fix two bugs!🔪
+ src/color.js       |   2 +-
+ src/lab.js         |   4 +-
+ test/color-test.js |  34 +++++++++++++++++
+ test/hcl-test.js   |  90 +++++++++++++++++++++++++++----------------
+ test/hsl-test.js   | 110 +++++++++++++++++++++++++++++++++++------------------
+ test/lab-test.js   | 104 ++++++++++++++++++++++++++++++++------------------
+ test/rgb-test.js   | 103 ++++++++++++++++++++++++++++++++-----------------
+ 7 files changed, 301 insertions(+), 146 deletions(-)
+
+☕266f714🔪2016-02-02 15:35:42 -0800🔪Mike Bostock🔪Initial opacity tests.🔪
+ .eslintrc          |   2 +
+ package.json       |   2 +-
+ src/color.js       |   2 +-
+ test/color-test.js |  62 ++++++++++++-------------
+ test/hcl-test.js   | 108 +++++++++++++++++++++---------------------
+ test/hclEqual.js   |   9 ++--
+ test/hsl-test.js   | 134 ++++++++++++++++++++++++++---------------------------
+ test/hslEqual.js   |   9 ++--
+ test/lab-test.js   |  78 +++++++++++++++----------------
+ test/labEqual.js   |   9 ++--
+ test/rgb-test.js   |  83 +++++++++++++++++----------------
+ test/rgbEqual.js   |  18 +++----
+ 12 files changed, 263 insertions(+), 253 deletions(-)
+
+☕747acbf🔪2016-02-02 15:08:16 -0800🔪Mike Bostock🔪Fix #14 - parse rgba and hsla.🔪All color spaces now have an “opacity” channel in [0,1]. This is primarily
+useful because computed styles often have an alpha component, such as the
+default transparent background. Soon, d3-interpolate will be able to interpolate
+such RGBA colors automatically!
+
+This commit also standardizes the serialization of colors according to the CSS
+Object Model specification, which says to use rgb(R, G, B) when alpha is 1 and
+rgba(R, G, B, A) otherwise. This is slightly more verbose than hexadecimal, but
+means rgb and rgba colors can be formatted similarly.
+
+ src/color.js     | 66 ++++++++++++++++++++++++++++++++++----------------------
+ src/cubehelix.js | 16 ++++++++------
+ src/lab.js       | 26 ++++++++++++++--------
+ test/hcl-test.js | 34 ++++++++++++++---------------
+ test/hsl-test.js | 30 +++++++++++++-------------
+ test/lab-test.js | 24 ++++++++++-----------
+ test/rgb-test.js | 30 +++++++++++++-------------
+ 7 files changed, 126 insertions(+), 100 deletions(-)
+
+☕aca8471🔪2016-01-29 10:16:56 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕06a91d0🔪2016-01-20 17:45:08 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new)  | 12 ++++++++++++
+ package.json     |  2 +-
+ src/color.js     | 12 ++++++------
+ src/cubehelix.js |  4 ++--
+ src/lab.js       | 20 ++++++++++----------
+ 5 files changed, 31 insertions(+), 19 deletions(-)
+
+☕90511e0🔪2016-01-07 15:40:03 -0800🔪Mike Bostock🔪Prefix with d3, not d3_color.🔪
+ README.md | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕549f017🔪2016-01-04 21:23:04 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕77ab1c8🔪2016-01-04 14:16:43 -0800🔪Mike Bostock🔪Consolidate interdependent files.🔪There’s a circular relationship between the generic color parser and the rgb and
+hsl constructors: the color parser instantiates an rgb or hsl color with the
+parsed channel values, and the rgb and hsl constructors (when called with a
+single argument) applies the color parser to first create an RGB color.
+
+There’s also a circular relationship between the Lab and HCL color spaces, since
+the latter is a cylindrical transformation of the former.
+
+Some module loaders (notably Babel; see #22) apparently cannot handle circular
+dependencies between files. So now the files are merged.
+
+ index.js          |   7 +-
+ src/color.js      | 189 ++++++++++++++++++++++++++++++++++++++++++++++--------
+ src/cubehelix.js  |  13 ++--
+ src/hcl.js (gone) |  42 ------------
+ src/hsl.js (gone) |  82 -----------------------
+ src/lab.js        |  55 +++++++++++++---
+ src/math.js (new) |   2 +
+ src/rgb.js (gone) |  57 ----------------
+ 8 files changed, 216 insertions(+), 231 deletions(-)
+
+☕e80621c🔪2015-12-18 12:22:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 60 ++++++++++++++++++++++++++----------------------------------
+ package.json |  2 +-
+ 2 files changed, 27 insertions(+), 35 deletions(-)
+
+☕c497753🔪2015-11-25 11:50:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6169a38🔪2015-11-25 11:41:39 -0800🔪Mike Bostock🔪Fix rounding and clamping in rgb.toString.🔪
+ package.json     |  2 +-
+ src/rgb.js       |  4 ++--
+ test/rgb-test.js | 14 ++++++++++++++
+ 3 files changed, 17 insertions(+), 3 deletions(-)
+
+☕4dcaa3c🔪2015-11-25 11:33:29 -0800🔪Mike Bostock🔪Move interpolation methods to d3-interpolate.🔪
+ README.md                                   | 68 ------------------------
+ index.js                                    | 12 -----
+ package.json                                |  2 +-
+ src/deltaHue.js (gone)                      |  6 ---
+ src/interpolateCubehelixGamma.js (gone)     | 21 --------
+ src/interpolateCubehelixGammaLong.js (gone) | 20 -------
+ src/interpolateHcl.js (gone)                | 19 -------
+ src/interpolateHclLong.js (gone)            | 18 -------
+ src/interpolateHsl.js (gone)                | 19 -------
+ src/interpolateHslLong.js (gone)            | 18 -------
+ src/interpolateLab.js (gone)                | 18 -------
+ src/interpolateRgb.js (gone)                | 15 ------
+ src/rgb.js                                  | 13 +++--
+ test/interpolateHcl-test.js (gone)          | 82 -----------------------------
+ test/interpolateHclLong-test.js (gone)      | 49 -----------------
+ test/interpolateHsl-test.js (gone)          | 49 -----------------
+ test/interpolateHslLong-test.js (gone)      | 49 -----------------
+ test/interpolateLab-test.js (gone)          | 14 -----
+ test/interpolateRgb-test.js (gone)          | 14 -----
+ 19 files changed, 7 insertions(+), 499 deletions(-)
+
+☕15beb75🔪2015-11-25 10:52:08 -0800🔪Mike Bostock🔪Use leading zero.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6f7db72🔪2015-11-11 17:47:35 -0800🔪Mike Bostock🔪Remove space.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cd7ef4d🔪2015-11-11 10:53:07 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕b5302dd🔪2015-11-04 14:57:22 -0800🔪Mike Bostock🔪Re-export doesn’t expose a local binding.🔪Related rollup/rollup#270.
+
+ index.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕ee60743🔪2015-11-04 13:19:16 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 45 ++++++++++++++-------------------------------
+ 1 file changed, 14 insertions(+), 31 deletions(-)
+
+☕f5acf7d🔪2015-11-03 23:15:06 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕710e5a7🔪2015-10-17 20:10:47 -0700🔪Mike Bostock🔪100% is 255, not 254.99999999999997.🔪
+ package.json       | 2 +-
+ src/color.js       | 4 ++--
+ test/color-test.js | 1 +
+ 3 files changed, 4 insertions(+), 3 deletions(-)
+
+☕6f0cfb0🔪2015-10-17 09:14:18 -0600🔪Tim Schaub🔪Use just the default exports🔪
+ index.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕37a1c77🔪2015-09-15 09:12:57 -0700🔪Mike Bostock🔪Remove Map polyfill. Fixes #15 #16.🔪
+ package.json |   4 +-
+ src/color.js | 301 ++++++++++++++++++++++++++++++-----------------------------
+ 2 files changed, 153 insertions(+), 152 deletions(-)
+
+☕3767ff9🔪2015-07-15 12:51:06 -0700🔪Mike Bostock🔪Fix prototype initialization.🔪
+ index.js         | 8 --------
+ package.json     | 4 ++--
+ src/color.js     | 4 ++--
+ src/cubehelix.js | 4 ++--
+ src/hcl.js       | 4 ++--
+ src/hsl.js       | 4 ++--
+ src/lab.js       | 4 ++--
+ src/rgb.js       | 4 ++--
+ 8 files changed, 14 insertions(+), 22 deletions(-)
+
+☕eb8b568🔪2015-07-14 22:31:30 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕592c927🔪2015-07-14 22:29:37 -0700🔪Mike Bostock🔪Don’t force RGB channels to be integers.🔪Rounding to integers is required to display colors, but not to represent them.
+Not rounding greedily avoids quantization when converting between color spaces.
+
+ README.md        |  4 ++--
+ src/rgb.js       | 15 ++++++---------
+ test/hcl-test.js |  2 +-
+ test/hsl-test.js |  2 +-
+ test/lab-test.js |  2 +-
+ test/rgb-test.js |  4 ++--
+ test/rgbEqual.js | 16 ++++++++++++++--
+ 7 files changed, 27 insertions(+), 18 deletions(-)
+
+☕fc4d49a🔪2015-07-14 21:58:44 -0700🔪Mike Bostock🔪Remove validation comment.🔪
+ README.md | 2 --
+ 1 file changed, 2 deletions(-)
+
+☕b71f939🔪2015-07-14 21:55:18 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕134f18c🔪2015-07-14 21:54:53 -0700🔪Mike Bostock🔪Document color.displayable.🔪
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕57061d3🔪2015-07-14 21:50:43 -0700🔪Mike Bostock🔪A couple more tests.🔪
+ test/hsl-test.js | 3 +++
+ test/rgb-test.js | 3 +++
+ 2 files changed, 6 insertions(+)
+
+☕8aabf1d🔪2015-07-14 21:46:13 -0700🔪Mike Bostock🔪Rename inGamut to displayable.🔪
+ src/color.js     |  4 ++--
+ src/hsl.js       |  2 +-
+ src/rgb.js       |  2 +-
+ test/hsl-test.js | 12 ++++++------
+ test/rgb-test.js | 16 ++++++++--------
+ 5 files changed, 18 insertions(+), 18 deletions(-)
+
+☕a76c02b🔪2015-07-14 21:21:17 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ src/color.js       |  3 +++
+ src/hsl.js         |  9 +++++++--
+ src/rgb.js         | 18 ++++++++++++------
+ test/color-test.js |  4 ++--
+ test/hsl-test.js   | 19 ++++++++++++++-----
+ test/rgb-test.js   | 21 ++++++++++++++++-----
+ 6 files changed, 54 insertions(+), 20 deletions(-)
+
+☕53f1f78🔪2015-07-14 14:19:58 -0700🔪Mike Bostock🔪Simplify.🔪
+ src/hsl.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕163a8a2🔪2015-07-13 11:10:23 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕040398c🔪2015-07-13 11:08:40 -0700🔪Mike Bostock🔪Configurable gamma for Cubehelix interpolation.🔪Fixes #5.
+
+ README.md                                  | 14 +++++++++++++-
+ index.js                                   | 11 +++++++----
+ src/interpolateCubehelix.js (gone)         | 19 -------------------
+ src/interpolateCubehelixGamma.js (new)     | 21 +++++++++++++++++++++
+ src/interpolateCubehelixGammaLong.js (new) | 20 ++++++++++++++++++++
+ src/interpolateCubehelixLong.js (gone)     | 18 ------------------
+ 6 files changed, 61 insertions(+), 42 deletions(-)
+
+☕c76e41e🔪2015-07-13 10:26:18 -0700🔪Mike Bostock🔪Fix comment.🔪
+ src/cubehelix.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf1c123🔪2015-07-13 10:19:25 -0700🔪Mike Bostock🔪Slight optimization of deltaHue.🔪
+ src/deltaHue.js             |  8 +++++---
+ test/interpolateHcl-test.js | 35 ++++++++++++++++++++++++++++++++++-
+ 2 files changed, 39 insertions(+), 4 deletions(-)
+
+☕9272f4a🔪2015-07-11 13:41:39 -0700🔪Mike Bostock🔪Remove gamma.🔪
+ src/cubehelix.js | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+☕56bdf2b🔪2015-07-01 11:30:32 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4225153🔪2015-06-16 14:37:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 ++++++++++++++++++++++++++++--
+ 1 file changed, 28 insertions(+), 2 deletions(-)
+
+☕e885d26🔪2015-06-16 14:27:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05b4b0d🔪2015-06-16 14:27:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕739577b🔪2015-06-16 14:25:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a800595🔪2015-06-16 14:24:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 41 ++++++++++++++++++++++++++---------------
+ 1 file changed, 26 insertions(+), 15 deletions(-)
+
+☕ac750a6🔪2015-06-16 13:31:17 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕386549c🔪2015-06-10 14:06:12 -0700🔪Mike Bostock🔪color(format) returns null when invalid.🔪This way, we can easily determine whether the format is valid. Note that you can
+still use rgb(format) (and other color space constructors) to create a color,
+even when the format is invalid, though the channel values are NaN.
+
+ README.md          |   2 +-
+ package.json       |   2 +-
+ src/color.js       | 314 +++++++++++++++++++++++++++--------------------------
+ src/hsl.js         |  38 ++++---
+ src/rgb.js         |  12 +-
+ test/color-test.js |  29 +++--
+ 6 files changed, 208 insertions(+), 189 deletions(-)
+
+☕f01fbff🔪2015-06-10 13:40:49 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                        | 2 +-
+ index.sublime-project => d3-color.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕f591b98🔪2015-06-07 21:35:35 -0700🔪Mike Bostock🔪Add long interpolators to changes list.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕91030b3🔪2015-06-07 21:25:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 +++++++---------------------------
+ 1 file changed, 7 insertions(+), 27 deletions(-)
+
+☕ad27cd5🔪2015-06-07 21:23:46 -0700🔪Mike Bostock🔪Add links to color pickers.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕081079a🔪2015-06-07 21:12:16 -0700🔪Mike Bostock🔪Add more ramps. Related #9.🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕3a77a0d🔪2015-06-07 21:02:59 -0700🔪Mike Bostock🔪Add some ramps. Fixes #9.🔪
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕5c26067🔪2015-06-07 13:55:19 +0300🔪Dmitriy Semyushkin🔪Fix RGB values range🔪Looks like a typo, RGB is validated for [0,255]:
+https://github.com/d3/d3-color/blob/master/src/rgb.js#L18
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕66c95d0🔪2015-06-06 22:09:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10e92ce🔪2015-06-06 22:09:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e646c9d🔪2015-06-06 22:08:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕12ffd84🔪2015-06-06 22:07:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕b29e5a8🔪2015-06-06 22:06:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕666cccc🔪2015-06-06 22:05:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c32c9d7🔪2015-06-06 22:05:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕49e06f0🔪2015-06-06 22:03:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0932292🔪2015-06-06 22:02:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md    | 26 ++++++++++++++++++++++++--
+ package.json |  7 ++++---
+ 2 files changed, 28 insertions(+), 5 deletions(-)
+
+☕8defac4🔪2015-06-06 21:59:21 -0700🔪Mike Bostock🔪Use short hue interpolation by default.🔪
+ index.js                                |  4 ++--
+ src/interpolateCubehelix.js             | 11 +++++------
+ src/interpolateCubehelixLong.js (new)   | 18 ++++++++++++++++++
+ src/interpolateCubehelixShort.js (gone) | 21 ---------------------
+ 4 files changed, 25 insertions(+), 29 deletions(-)
+
+☕0ca2c13🔪2015-06-06 11:41:06 +0100🔪Jason Davies🔪Remove unused conditional branch.🔪The range of Math.atan2 is ±π, thus the range of h is [-300°, 60°].
+
+ src/cubehelix.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fc7657a🔪2015-06-05 22:37:52 -0700🔪Mike Bostock🔪Add missing imports.🔪
+ src/cubehelix.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕365d7bf🔪2015-06-05 22:35:25 -0700🔪Mike Bostock🔪Missing semicolons.🔪
+ src/interpolateCubehelix.js      | 2 +-
+ src/interpolateCubehelixShort.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕433389a🔪2015-06-05 21:51:15 -0700🔪Mike Bostock🔪Add interpolateCubehelixShort.🔪Like interpolateCubehelix, but uses shortest-path hue interpolation.
+
+ index.js                               |  4 +++-
+ src/interpolateCubehelixShort.js (new) | 21 +++++++++++++++++++++
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+
+☕c10beb5🔪2015-06-05 21:41:29 -0700🔪Mike Bostock🔪Offset hue by 120°.🔪This makes Cubehelix closer to HSL.
+
+ src/cubehelix.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕3110a72🔪2015-06-05 21:23:23 -0700🔪Mike Bostock🔪Cubehelix colorspace!🔪RGB-to-Cubehelix conversion courtesy of @jasondavies.
+
+ index.js                          |  7 ++++-
+ src/cubehelix.js (new)            | 63 +++++++++++++++++++++++++++++++++++++++
+ src/interpolateCubehelix.js (new) | 20 +++++++++++++
+ 3 files changed, 89 insertions(+), 1 deletion(-)
+
+☕62bd4a7🔪2015-06-06 21:56:40 -0700🔪Mike Bostock🔪Fix description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕25f8654🔪2015-06-06 21:55:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fa8fef5🔪2015-06-06 21:54:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕72476ca🔪2015-06-06 21:51:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+☕c2cb9ae🔪2015-06-06 21:49:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 34 +++++++++++++++-------------------
+ 1 file changed, 15 insertions(+), 19 deletions(-)
+
+☕64b5cc0🔪2015-06-06 21:46:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 100 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 99 insertions(+), 1 deletion(-)
+
+☕1ad1e98🔪2015-06-06 21:17:43 -0700🔪Mike Bostock🔪Add long hue interpolation methods.🔪
+ index.js                              |  6 ++++-
+ src/deltaHue.js (new)                 |  4 +++
+ src/interpolateHcl.js                 | 12 ++++-----
+ src/interpolateHclLong.js (new)       | 18 +++++++++++++
+ src/interpolateHsl.js                 | 12 ++++-----
+ src/interpolateHslLong.js (new)       | 18 +++++++++++++
+ test/interpolateHcl-test.js           | 14 +++++-----
+ test/interpolateHclLong-test.js (new) | 49 +++++++++++++++++++++++++++++++++++
+ test/interpolateHsl-test.js           | 12 ++++-----
+ test/interpolateHslLong-test.js (new) | 49 +++++++++++++++++++++++++++++++++++
+ 10 files changed, 166 insertions(+), 28 deletions(-)
+
+☕b96f553🔪2015-06-06 20:35:32 -0700🔪Mike Bostock🔪Allow hue to be outside [0°,360°). Related #4.🔪
+ README.md          | 2 +-
+ src/hcl.js         | 3 ++-
+ src/hsl.js         | 2 +-
+ test/color-test.js | 2 +-
+ test/hcl-test.js   | 8 ++++----
+ test/hsl-test.js   | 8 ++++----
+ 6 files changed, 13 insertions(+), 12 deletions(-)
+
+☕35bb216🔪2015-06-06 20:23:41 -0700🔪Mike Bostock🔪Add missing semicolons.🔪
+ src/interpolateHcl.js | 2 +-
+ src/interpolateHsl.js | 2 +-
+ src/interpolateLab.js | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕994d9a3🔪2015-06-06 20:23:26 -0700🔪Mike Bostock🔪brighter, not lighter.🔪
+ src/hsl.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕55c38c3🔪2015-06-06 16:47:56 -0400🔪Rich Harris🔪import darker/lighter from rgb to hsl🔪
+ src/hsl.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7628ef3🔪2015-06-04 17:59:14 -0700🔪Mike Bostock🔪Include ES6 Map polyfill in default build.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f31e117🔪2015-06-04 08:14:25 -0700🔪Mike Bostock🔪Don’t clamp luminance. Fixes #2.🔪
+ src/hcl.js       |  2 +-
+ src/lab.js       |  2 +-
+ test/hcl-test.js | 14 ++++++++------
+ test/lab-test.js |  6 +++---
+ 4 files changed, 13 insertions(+), 11 deletions(-)
+
+☕9211d6c🔪2015-06-03 17:08:14 -0700🔪Mike Bostock🔪Test shortest-path hue interpolation.🔪
+ src/hsl.js                  |  6 +++---
+ src/interpolateHcl.js       |  2 --
+ src/interpolateHsl.js       |  2 --
+ test/hcl-test.js            |  2 +-
+ test/hsl-test.js            |  2 +-
+ test/interpolateHcl-test.js | 11 +++++++++++
+ test/interpolateHsl-test.js | 11 +++++++++++
+ test/lab-test.js            |  2 +-
+ test/rgb-test.js            |  2 +-
+ 9 files changed, 29 insertions(+), 11 deletions(-)
+
+☕0924761🔪2015-06-03 15:02:44 -0700🔪Mike Bostock🔪Include UMD in build.🔪
+ LICENSE      | 39 ++++-----------------------------------
+ package.json | 26 +++++++++++++++++++++-----
+ 2 files changed, 25 insertions(+), 40 deletions(-)
+
+☕909f2c3🔪2015-06-03 12:55:01 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/color.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b4d81d2🔪2015-06-03 12:45:33 -0700🔪Mike Bostock🔪Shorten.🔪
+ src/color.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5aa3a37🔪2015-06-03 12:40:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md    | 8 ++++----
+ package.json | 2 +-
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕26d0871🔪2015-06-03 12:38:46 -0700🔪Mike Bostock🔪Test roundtrip to HCL with black.🔪
+ test/lab-test.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕bf6a06b🔪2015-06-03 12:35:50 -0700🔪Mike Bostock🔪Add interpolation tests.🔪
+ test/interpolateHcl-test.js (new) | 38 ++++++++++++++++++++++++++++++++++++++
+ test/interpolateHsl-test.js (new) | 38 ++++++++++++++++++++++++++++++++++++++
+ test/interpolateLab-test.js (new) | 14 ++++++++++++++
+ test/interpolateRgb-test.js (new) | 14 ++++++++++++++
+ 4 files changed, 104 insertions(+)
+
+☕ea29198🔪2015-06-03 12:34:41 -0700🔪Mike Bostock🔪Actually, revert last change.🔪It’s inconsistent to special-case black, especially when RGB grays have hue and
+chroma in HSL colorspace!
+
+ README.md        |  2 ++
+ src/hcl.js       |  8 ++------
+ src/lab.js       |  7 +++----
+ test/hcl-test.js | 26 +++++++++++++++++++-------
+ 4 files changed, 26 insertions(+), 17 deletions(-)
+
+☕6eb8174🔪2015-06-03 11:59:23 -0700🔪Mike Bostock🔪Chroma and hue are undefined if luminance is zero.🔪
+ src/hcl.js       | 8 ++++++--
+ test/hcl-test.js | 8 ++++++++
+ 2 files changed, 14 insertions(+), 2 deletions(-)
+
+☕cfae727🔪2015-06-03 11:34:53 -0700🔪Mike Bostock🔪Tests for HCL.🔪
+ test/hcl-test.js       | 197 ++++++++++++++++++++++++++++++++++++++++++-------
+ test/hclEqual.js (new) |  14 ++++
+ 2 files changed, 183 insertions(+), 28 deletions(-)
+
+☕b9a1f97🔪2015-06-03 11:18:20 -0700🔪Mike Bostock🔪Lab tests.🔪
+ src/lab.js             |   4 +-
+ test/lab-test.js       | 186 +++++++++++++++++++++++++++++++++++++++++--------
+ test/labEqual.js (new) |  14 ++++
+ 3 files changed, 174 insertions(+), 30 deletions(-)
+
+☕c6749b5🔪2015-06-03 11:17:44 -0700🔪Mike Bostock🔪Verify s and l reflection, too.🔪Also fix one test description.
+
+ test/hsl-test.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕57cf95b🔪2015-06-03 10:55:47 -0700🔪Mike Bostock🔪Clarify test description.🔪
+ test/hsl-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c38efc9🔪2015-06-03 10:53:34 -0700🔪Mike Bostock🔪More tests!🔪
+ src/color.js           |   6 +-
+ src/hsl.js             |  13 +--
+ test/color-test.js     | 147 ++++++++++++----------------
+ test/hsl-test.js       | 255 +++++++++++++++++++++++++++++++++++++++----------
+ test/hslEqual.js (new) |  14 +++
+ test/rgb-test.js       |  79 ++-------------
+ test/rgbEqual.js (new) |  14 +++
+ 7 files changed, 311 insertions(+), 217 deletions(-)
+
+☕bb94f54🔪2015-06-03 09:30:45 -0700🔪Mike Bostock🔪Test that conversion to RGB uses color.rgb.🔪
+ src/rgb.js       | 3 ++-
+ test/rgb-test.js | 9 +++++++++
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+
+☕fbe827a🔪2015-06-03 09:25:48 -0700🔪Mike Bostock🔪More comprehensive RGB tests.🔪
+ src/rgb.js       |   3 +
+ test/rgb-test.js | 218 ++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 2 files changed, 202 insertions(+), 19 deletions(-)
+
+☕3561794🔪2015-06-02 23:11:57 -0700🔪Mike Bostock🔪Avoid roundtrip to RGB when parsing HSL.🔪
+ src/hsl.js       | 9 +++++++--
+ test/hsl-test.js | 9 +++++++++
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+☕3e2ba78🔪2015-06-02 23:06:12 -0700🔪Mike Bostock🔪Wrap-around hue during interpolation.🔪
+ src/interpolateHcl.js | 4 +++-
+ src/interpolateHsl.js | 4 +++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+☕5afd8a3🔪2015-06-02 22:47:55 -0700🔪Mike Bostock🔪Fix instanceof checks.🔪
+ src/hcl.js | 6 +++---
+ src/hsl.js | 4 ++--
+ src/lab.js | 8 ++++----
+ src/rgb.js | 2 +-
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+
+☕1069ef2🔪2015-06-02 22:44:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕18736ca🔪2015-06-02 22:39:52 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕61b7048🔪2015-06-02 22:32:47 -0700🔪Mike Bostock🔪Fix instanceof color.🔪Unfortunately, because of the circular dependency between color, rgb and hsl,
+we have to be very careful about how we copy the prototype object.
+
+ index.js              | 17 ++++++++++++-----
+ src/color.js          | 18 +++++++++---------
+ src/hcl.js            | 22 ++++++++++------------
+ src/hsl.js            | 36 +++++++++++++++++-------------------
+ src/interpolateHcl.js |  2 +-
+ src/interpolateHsl.js |  2 +-
+ src/lab.js            | 22 ++++++++++------------
+ src/rgb.js            | 26 ++++++++++++++------------
+ test/rgb-test.js      | 12 +++++++-----
+ 9 files changed, 81 insertions(+), 76 deletions(-)
+
+☕b001c5d🔪2015-06-02 21:40:55 -0700🔪Mike Bostock🔪Checkpoint implementation.🔪Standardize how colorspaces are implemented by relying on color.rgb to convert
+back to RGB, and instanceof checks in constructors.
+
+ src/color.js          | 310 ++++++++++++++++++++++++++------------------------
+ src/hcl.js            |  47 +++++---
+ src/hsl.js            |  91 +++++++++------
+ src/interpolateHcl.js |   1 -
+ src/interpolateHsl.js |   1 -
+ src/interpolateLab.js |   1 -
+ src/lab.js            |  75 ++++++++----
+ src/rgb.js            |  39 ++++---
+ test/color-test.js    |  58 ++++++----
+ test/rgb-test.js      |  12 +-
+ 10 files changed, 359 insertions(+), 276 deletions(-)
+
+☕28a63ff🔪2015-06-02 16:13:38 -0700🔪Mike Bostock🔪Add HCL (Lch) color.🔪
+ index.js                    |  8 +++++++-
+ src/hcl.js (new)            | 32 ++++++++++++++++++++++++++++++++
+ src/interpolateHcl.js (new) | 22 ++++++++++++++++++++++
+ src/lab.js                  |  5 +++--
+ test/hcl-test.js (new)      | 43 +++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 107 insertions(+), 3 deletions(-)
+
+☕b9d87e2🔪2015-06-02 16:02:58 -0700🔪Mike Bostock🔪Checkpoint RGB to Lab conversion.🔪
+ src/lab.js | 40 ++++++++++++++++++++++++++--------------
+ 1 file changed, 26 insertions(+), 14 deletions(-)
+
+☕1eb8328🔪2015-06-02 15:45:16 -0700🔪Mike Bostock🔪Add Lab color.🔪
+ index.js                    |  2 ++
+ src/interpolateLab.js (new) | 19 +++++++++++++++++
+ src/lab.js (new)            | 51 +++++++++++++++++++++++++++++++++++++++++++++
+ test/lab-test.js (new)      | 43 ++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 115 insertions(+)
+
+☕307b978🔪2015-06-02 11:20:50 -0700🔪Mike Bostock🔪Add interpolate{Rgb,Hsl}.🔪
+ index.js                    |  6 +++++-
+ src/interpolateHsl.js (new) | 22 ++++++++++++++++++++++
+ src/interpolateRgb.js (new) | 15 +++++++++++++++
+ src/rgb.js                  | 13 ++++++++-----
+ 4 files changed, 50 insertions(+), 6 deletions(-)
+
+☕0e80f88🔪2015-06-02 11:14:06 -0700🔪Mike Bostock🔪More tests.🔪
+ test/hsl-test.js (new) | 66 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ test/rgb-test.js (new) | 57 +++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 123 insertions(+)
+
+☕1877b35🔪2015-06-02 10:52:34 -0700🔪Mike Bostock🔪More tests.🔪
+ src/color.js       |  8 ++++----
+ test/color-test.js | 12 ++++++------
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+☕e199047🔪2015-06-02 10:46:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕0aec886🔪2015-06-02 10:37:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+☕84e98a5🔪2015-06-02 10:27:05 -0700🔪Mike Bostock🔪Tests.🔪
+ index.js                 |   9 +++
+ package.json             |   2 +-
+ src/color.js             | 162 +++++++++++++++++++++++++++++++++++++++++++++--
+ src/hsl.js               |   6 +-
+ src/rgb.js               |   4 +-
+ test/color-test.js (new) | 116 +++++++++++++++++++++++++++++++++
+ 6 files changed, 289 insertions(+), 10 deletions(-)
+
+☕404caef🔪2015-06-02 09:48:44 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)            |  5 ++++
+ .npmignore (new)            |  3 +++
+ LICENSE (new)               | 58 +++++++++++++++++++++++++++++++++++++++++++++
+ README.md (new)             |  3 +++
+ index.js (new)              |  0
+ index.sublime-project (new) | 13 ++++++++++
+ package.json (new)          | 21 ++++++++++++++++
+ src/color.js (new)          | 14 +++++++++++
+ src/hsl.js (new)            | 46 +++++++++++++++++++++++++++++++++++
+ src/rgb.js (new)            | 35 +++++++++++++++++++++++++++
+ 10 files changed, 198 insertions(+)

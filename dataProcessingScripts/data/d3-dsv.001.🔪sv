@@ -1,0 +1,937 @@
+☕6d96d6c🔪2022-01-11 18:14:21 -0500🔪Seemant Kulleen🔪remove redundant word (#89)🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3446779🔪2021-06-05 11:32:02 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a4656af🔪2021-06-05 11:31:57 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 36 ++++++++++++------------------------
+ 1 file changed, 12 insertions(+), 24 deletions(-)
+
+☕e3a1fc7🔪2021-06-05 11:31:48 -0700🔪Mike Bostock🔪related d3/d3#3502; extract copyrights from LICENSE🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕9f22ae7🔪2021-06-04 10:23:25 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a3bb50a🔪2021-06-04 19:22:17 +0200🔪Philippe Rivière🔪Adopt type=module (#81)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* update dependencies
+
+* bin/*.js
+
+* Update README
+
+* cleaner imports
+
+* remove Sublime project
+
+* add eslint.json
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    5 -
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   34 +-
+ bin/dsv2dsv (gone)                  |   32 -
+ bin/dsv2dsv.js (new +x)             |   35 +
+ bin/dsv2json (gone)                 |   37 -
+ bin/dsv2json.js (new +x)            |   38 +
+ bin/json2dsv (gone)                 |   33 -
+ bin/json2dsv.js (new +x)            |   36 +
+ d3-dsv.sublime-project (gone)       |   17 -
+ package.json                        |   75 +-
+ test/.eslintrc.json (new)           |   13 +
+ test/autoType-test.js               |  142 ++--
+ test/csv-test.js                    |  401 ++++------
+ test/dsv-test.js                    |  211 +++--
+ test/table.js                       |    4 +-
+ test/tsv-test.js                    |  218 +++---
+ yarn.lock                           | 1474 +++++++++++++++++++----------------
+ 20 files changed, 1475 insertions(+), 1418 deletions(-)
+
+☕aba1cce🔪2020-12-02 21:01:53 +0100🔪Philippe Rivière🔪link to d3.dsv🔪Note: the French version of Excel exports in the `d3.dsv(";", …)` format.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c625118🔪2020-08-23 17:28:30 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕113bfa2🔪2020-08-19 13:56:27 +0200🔪Philippe Rivière🔪test numeric column names (#77)🔪
+ test/tsv-test.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕e467c7b🔪2020-07-27 11:13:10 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕a9d2b8b🔪2020-06-09 17:04:40 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/autoType.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2891300🔪2020-07-10 17:53:20 +0200🔪Tom🔪Add a CSP warning for csvParse, tsvParse, parse (#67)🔪* Add a CSP warning for csvParse, tsvParse, parse
+
+Fix #66 
+
+Because when coming from the D3 API documentation (https://github.com/d3/d3/blob/master/API.md#delimiter-separated-values-d3-dsv) the "Content Security Policy" warning could be missed.
+
+* Update according to review
+
+* delete the warning (in favor of the note).
+
+* position csp note
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕8ab1ab8🔪2020-06-08 16:37:02 +0200🔪Philippe Rivière🔪clarify what happens if column names are not unique.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕dbb17a5🔪2020-06-03 13:32:58 +0200🔪Philippe Rivière🔪rename option --auto-type🔪
+ README.md    | 2 +-
+ bin/dsv2json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕29e9fe4🔪2020-02-12 13:53:03 -0500🔪Jonathan Allard🔪dsv2json: Add '-a/--autotype' flag to use d3.autoType🔪
+ README.md    | 5 +++++
+ bin/dsv2json | 6 +++++-
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+☕65a1c10🔪2019-11-19 14:30:29 +0000🔪Luca Bonavita🔪README: fix titles for json2*sv (#62)🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3b9ef61🔪2019-11-16 09:40:45 -0800🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7484ce5🔪2019-11-02 08:23:35 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕437da9a🔪2019-08-01 17:36:59 -0700🔪Ryan Murphy🔪Add support for dsv.parseRow and dsv.parseValue🔪
+ README.md        | 24 ++++++++++++++++++++++++
+ src/csv.js       |  2 ++
+ src/dsv.js       |  4 +++-
+ src/index.js     |  4 ++--
+ src/tsv.js       |  2 ++
+ test/csv-test.js |  5 +++++
+ test/dsv-test.js |  5 +++++
+ test/tsv-test.js |  5 +++++
+ 8 files changed, 48 insertions(+), 3 deletions(-)
+
+☕81a9a8f🔪2019-09-27 07:52:25 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕196885e🔪2019-11-16 09:30:10 -0800🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8099db5🔪2019-09-25 03:13:18 -0700🔪Tom MacWright🔪Remove beta from observablehq.com link (#59)🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕acb985e🔪2019-08-09 17:40:08 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 881 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 520 insertions(+), 367 deletions(-)
+
+☕2688a73🔪2019-08-09 16:06:00 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 5 +++++
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕c960568🔪2019-08-09 15:18:06 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/csv.js   | 2 +-
+ src/index.js | 8 ++++----
+ src/tsv.js   | 2 +-
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+☕4972600🔪2019-07-22 13:42:39 -0700🔪Philippe Rivière🔪Incorrect decoding of local dates in Safari. (#53)🔪instead of treating `new Date("2018-04-25T11:00")` as a local date, Safari parses it as a UTC date and returns it with the tz difference added. This fix detects the situation by checking TWO local dates (one in winter, one in summer) which should return hour 0, and if one of them is not 0 it's the Safari bug.
+
+In that case, and if the date string that is passed is local (no "Z"), and has a time ("T"), we switch to the "2019/09/02 11:00" format, which Safari handles correctly.
+
+ src/autoType.js | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+☕525627a🔪2019-07-21 16:15:35 +0200🔪Philippe Rivière🔪Return empty string for missing columns, instead of undefined🔪Reverses one test, so technically we can say that it breaks the API. However README is silent about this situation, so I don't know.
+
+Fixes https://github.com/d3/d3-dsv/issues/48
+
+ src/dsv.js       | 2 +-
+ test/csv-test.js | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕9da4f5f🔪2019-07-21 18:12:04 +0200🔪Philippe Rivière🔪tested in California🔪ref: https://github.com/d3/d3-dsv/pull/52#issuecomment-513566207
+
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ff2d09f🔪2019-03-06 12:01:13 -0800🔪Mike Bostock🔪Fix typo, add reference.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕6c0c578🔪2019-03-06 11:56:16 -0800🔪Tom MacWright🔪Mention d3.autoType in discussion of row conversion functions🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕3c1f1a7🔪2019-02-07 17:00:40 -0800🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕55c861a🔪2019-02-07 16:57:58 -0800🔪Mike Bostock🔪Fix test.🔪
+ test/csv-test.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕369bfb1🔪2019-02-07 16:56:34 -0800🔪Mike Bostock🔪Format.🔪
+ src/dsv.js | 19 ++++---------------
+ 1 file changed, 4 insertions(+), 15 deletions(-)
+
+☕1a0867a🔪2019-02-07 16:54:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c0ccf01🔪2019-02-07 16:54:14 -0800🔪Mike Bostock🔪Fix #44 - more concise date formatting.🔪
+ README.md        |  2 +-
+ src/dsv.js       | 37 ++++++++++++++++++++++++++++++++++++-
+ test/csv-test.js |  3 ++-
+ 3 files changed, 39 insertions(+), 3 deletions(-)
+
+☕609717b🔪2019-02-07 15:39:50 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕a213e95🔪2019-02-07 12:11:33 -0800🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bd0a42a🔪2019-02-07 12:05:32 -0800🔪Mike Bostock🔪Add dsv.formatBody. Fixes #34.🔪
+ README.md        | 38 +++++++++++++++++++++++++-------------
+ src/csv.js       |  1 +
+ src/dsv.js       | 18 ++++++++++++++----
+ src/index.js     |  4 ++--
+ src/tsv.js       |  1 +
+ test/csv-test.js | 10 ++++++++++
+ 6 files changed, 53 insertions(+), 19 deletions(-)
+
+☕218d1a1🔪2019-02-07 11:57:43 -0800🔪Mike Bostock🔪Test date formatting in formatRows.🔪
+ test/csv-test.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕c945f78🔪2019-02-07 11:53:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d5cd7f7🔪2019-02-07 11:51:27 -0800🔪Mike Bostock🔪Fewer special cases.🔪
+ README.md             |  6 +++---
+ src/autoType.js       |  6 +++---
+ test/autoType-test.js | 22 +++++++++-------------
+ 3 files changed, 15 insertions(+), 19 deletions(-)
+
+☕4b468bf🔪2019-02-07 11:47:12 -0800🔪Mike Bostock🔪Remove special treatment for null and undefined.🔪
+ README.md             |  3 +--
+ src/autoType.js       |  3 +--
+ test/autoType-test.js | 10 ----------
+ 3 files changed, 2 insertions(+), 14 deletions(-)
+
+☕d342133🔪2019-02-07 11:44:54 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dc55b7c🔪2019-02-07 11:42:43 -0800🔪Mike Bostock🔪Support extended years.🔪
+ README.md             | 2 +-
+ src/autoType.js       | 2 +-
+ src/dsv.js            | 2 +-
+ test/autoType-test.js | 6 ++++++
+ 4 files changed, 9 insertions(+), 3 deletions(-)
+
+☕39ab39b🔪2019-02-07 11:34:12 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7c51587🔪2019-02-07 11:32:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ae86d06🔪2019-02-07 11:32:08 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ae96c0🔪2019-02-07 11:31:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕a3f01dd🔪2019-02-07 11:29:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5a51519🔪2019-02-07 11:29:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕057a3ec🔪2019-02-07 11:23:21 -0800🔪Mike Bostock🔪Update README. Fixes #39.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕30be739🔪2019-02-07 11:18:07 -0800🔪Mike Bostock🔪Format dates as ISO 8601. Fixes #41.🔪
+ src/dsv.js       | 9 +++++----
+ test/csv-test.js | 5 +++++
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+
+☕c6b02ea🔪2019-02-07 11:11:33 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/autoType.js | 26 ++++++++++----------------
+ 1 file changed, 10 insertions(+), 16 deletions(-)
+
+☕736c785🔪2019-02-07 11:09:16 -0800🔪Mike Bostock🔪Treat empty as null, not undefined, for consistent with format.🔪
+ README.md             | 4 ++--
+ src/autoType.js       | 6 +++---
+ test/autoType-test.js | 5 +++--
+ 3 files changed, 8 insertions(+), 7 deletions(-)
+
+☕08f383d🔪2019-02-07 11:07:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕43742e9🔪2019-02-07 11:07:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕355f2fb🔪2019-02-07 11:04:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5897a22🔪2019-02-07 11:03:41 -0800🔪Mike Bostock🔪Teak.🔪
+ README.md       | 2 +-
+ src/autoType.js | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕b1f3c0d🔪2019-02-07 11:02:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕4d378a8🔪2019-02-07 11:01:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b095207🔪2019-02-07 11:01:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c84f67b🔪2019-02-07 10:51:52 -0800🔪Mike Bostock🔪Add d3.autoType. Fixes #6.🔪
+ README.md                   |  37 +++++++++++++++
+ src/autoType.js (new)       |  21 +++++++++
+ src/index.js                |   1 +
+ test/autoType-test.js (new) | 111 ++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 170 insertions(+)
+
+☕7d107d3🔪2018-10-06 19:42:48 -0300🔪Lucas Gabriel Schneider🔪Update README.md🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2effdc8🔪2018-08-24 14:14:11 -0700🔪Mike Bostock🔪1.0.10🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕28d5a76🔪2018-08-24 14:02:03 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9e5fbbe🔪2018-08-24 13:50:42 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             | 9 +++++----
+ rollup.config.js         | 6 +++---
+ index.js => src/index.js | 6 +++---
+ 3 files changed, 11 insertions(+), 10 deletions(-)
+
+☕a332f36🔪2018-08-24 13:50:36 -0700🔪Mike Bostock🔪Update .sublime-project.🔪
+ d3-dsv.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a0f692e🔪2018-08-24 13:50:34 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕dee77c3🔪2018-08-24 11:23:38 -0700🔪Mike Bostock🔪1.0.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕411fefb🔪2018-08-24 11:23:35 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)       |  11 -
+ .eslintrc.json (new)   |  15 +
+ .gitignore             |   2 +-
+ .npmignore             |   2 +-
+ d3-dsv.sublime-project |  16 +-
+ package.json           |  21 +-
+ rollup.config.js       |  39 +-
+ test/csv-test.js       |   2 +-
+ yarn.lock (new)        | 947 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 1018 insertions(+), 37 deletions(-)
+
+☕19d9715🔪2017-11-21 16:21:40 -0500🔪Mike Bostock🔪1.0.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5887e65🔪2017-11-03 17:54:39 -0400🔪Tom Wanzek🔪Changed from initialization to fallback.🔪
+ src/dsv.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕55cb3af🔪2017-11-03 16:31:18 -0400🔪Tom Wanzek🔪Initialize column property to empty array * Closes #31.🔪
+ src/dsv.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2213197🔪2017-09-01 06:46:45 -0700🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8725d72🔪2017-09-01 06:46:16 -0700🔪Mike Bostock🔪Add rollup.config.🔪
+ package.json           | 2 +-
+ rollup.config.js (new) | 9 +++++++++
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+☕91ce351🔪2017-09-01 15:29:33 +0530🔪curran🔪Fix #29 - Set Rollup's options.extend to true.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕93e2920🔪2017-08-31 22:50:29 -0700🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ad89faa🔪2017-08-31 22:48:48 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 10 +++++-----
+ src/dsv.js   |  2 +-
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+☕4a7565a🔪2017-08-31 22:30:30 -0700🔪Mike Bostock🔪Fix parsing when last field is empty.🔪We were parsing `1,2,` as ["1", "2"] instead of ["1", "2", ""].
+
+ src/dsv.js       | 83 ++++++++++++++++++++++++++------------------------------
+ test/csv-test.js | 28 +++++++++++++++++--
+ 2 files changed, 63 insertions(+), 48 deletions(-)
+
+☕8bb91c7🔪2017-08-31 17:31:22 -0700🔪Mike Bostock🔪Add tests for some edge cases.🔪
+ test/csv-test.js | 99 +++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 98 insertions(+), 1 deletion(-)
+
+☕fc5a64b🔪2017-05-17 10:45:28 -0700🔪Mike Bostock🔪Update README.md.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕de9a52f🔪2017-05-17 18:10:16 +0100🔪Robin Houston🔪Add a note about Byte-Order Marks and Node.js🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕fbc48ff🔪2017-03-10 10:08:25 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕59ff58c🔪2017-03-10 10:08:14 -0800🔪Mike Bostock🔪Update ESLint, UglifyJS.🔪
+ .eslintrc    | 3 +--
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+☕c7dfb50🔪2017-02-28 16:30:55 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ea8bf1a🔪2017-02-28 16:30:51 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4958d7e🔪2017-01-10 12:43:09 +0100🔪Jakub Sedlacek🔪escape values containing windows newline🔪When value contains \r without \n it should be escaped. Otherwise the
+CSV is broken in some programs (like excel).
+
+ src/dsv.js       | 2 +-
+ test/csv-test.js | 5 +++++
+ test/dsv-test.js | 5 +++++
+ test/tsv-test.js | 5 +++++
+ 4 files changed, 16 insertions(+), 1 deletion(-)
+
+☕6b1a507🔪2017-02-28 16:22:51 -0800🔪Mike Bostock🔪Test against csv-spectrum. We pass, yay!🔪
+ package.json     |  1 +
+ test/csv-test.js | 15 ++++++++++++++-
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+☕04b21c4🔪2016-09-09 15:42:37 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a94d37f🔪2016-09-09 15:41:19 -0700🔪Mike Bostock🔪More generic tools.🔪
+ README.md                   | 176 +++++++++++++++++++++++++++++++++++++++++---
+ bin/{csv2tsv => dsv2dsv}    |  12 ++-
+ bin/{csv2json => dsv2json}  |   9 ++-
+ bin/{tsv2json => json2dsv}  |  17 +++--
+ bin/tsv2csv (gone)          |  22 ------
+ package.json                |  13 +++-
+ test/data/sample2.csv (new) |   3 +
+ test/data/sample2.tsv (new) |   3 +
+ 8 files changed, 211 insertions(+), 44 deletions(-)
+
+☕0cccfcc🔪2016-09-08 20:52:50 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b1ccf01🔪2016-09-08 20:52:19 -0700🔪Mike Bostock🔪Fix #19. Newline-delimited JSON output.🔪
+ README.md    |  2 ++
+ bin/csv2json | 18 ++++++++++++++++--
+ bin/csv2tsv  | 14 ++++++++++++--
+ bin/tsv2csv  | 14 ++++++++++++--
+ bin/tsv2json | 18 ++++++++++++++++--
+ package.json |  2 ++
+ 6 files changed, 60 insertions(+), 8 deletions(-)
+
+☕9e06edb🔪2016-08-11 12:45:50 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕3e5bc06🔪2016-08-02 14:49:21 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aabbb08🔪2016-08-02 14:49:21 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕1b96c60🔪2016-06-14 15:48:30 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0000ea8🔪2016-06-14 15:48:18 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕226ee6f🔪2016-06-14 09:23:39 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕a9a9ed1🔪2016-06-07 16:52:36 -0700🔪Mike Bostock🔪0.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1fe389d🔪2016-06-07 16:52:28 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕5cceab6🔪2016-05-18 09:53:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕48fcca3🔪2016-05-14 21:22:28 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 9 +++++----
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+☕cc76e5b🔪2016-04-05 09:08:44 -0700🔪Mike Bostock🔪Clarify row accessor API.🔪
+ README.md | 18 +++++++++++-------
+ 1 file changed, 11 insertions(+), 7 deletions(-)
+
+☕b202ebb🔪2016-03-22 13:36:53 -0700🔪Mike Bostock🔪0.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕82d1e97🔪2016-03-22 13:36:43 -0700🔪Mike Bostock🔪Coerce non-nullsy values to strings.🔪
+ src/dsv.js       |  4 +++-
+ test/csv-test.js | 12 ++++++++++++
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+☕ccb0d8a🔪2016-03-15 10:23:07 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ecc0c2f🔪2016-03-14 13:13:42 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕60a0158🔪2016-03-14 12:51:35 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕1a1f1e8🔪2016-03-14 11:49:23 -0700🔪Mike Bostock🔪0.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8a4b0dc🔪2016-03-14 11:49:21 -0700🔪Mike Bostock🔪Relax rw dependency range.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b5f892b🔪2016-03-06 15:12:33 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f0586eb🔪2016-03-04 09:52:45 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8d70f48🔪2016-03-01 14:19:27 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕3476bc2🔪2016-02-24 16:09:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕a584d53🔪2016-02-22 20:11:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7f6892🔪2016-02-22 20:11:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕312f08c🔪2016-02-22 20:07:31 -0800🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a9d731🔪2016-02-22 20:05:39 -0800🔪Mike Bostock🔪Fix #15 - rename d3.dsv to d3.dsvFormat.🔪
+ README.md        | 20 ++++++++++----------
+ index.js         |  2 +-
+ package.json     |  2 +-
+ test/dsv-test.js |  2 +-
+ 4 files changed, 13 insertions(+), 13 deletions(-)
+
+☕8558abd🔪2016-02-21 16:31:44 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf8a444🔪2016-02-04 11:34:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+☕b1c3ac6🔪2016-02-04 11:32:01 -0800🔪Mike Bostock🔪Fix #14 - rename methods.🔪The following methods have been renamed:
+
+    d3.csv.parse ↦ d3.csvParse
+    d3.csv.parseRows ↦ d3.csvParseRows
+    d3.csv.format ↦ d3.csvFormat
+    d3.csv.formatRows ↦ d3.csvFormatRows
+    d3.tsv.parse ↦ d3.tsvParse
+    d3.tsv.parseRows ↦ d3.tsvParseRows
+    d3.tsv.format ↦ d3.tsvFormat
+    d3.tsv.formatRows ↦ d3.tsvFormatRows
+
+This frees up d3.csv and d3.tsv for the corresponding d3-request methods.
+
+ README.md          |  68 +++++++++++++++------
+ bin/csv2json       |  11 ++--
+ bin/csv2tsv        |  11 ++--
+ bin/tsv2csv        |  11 ++--
+ bin/tsv2json       |  11 ++--
+ index.js           |   7 +--
+ lib/read.js (gone) |  17 ------
+ package.json       |   7 ++-
+ src/csv.js (new)   |   8 +++
+ src/dsv.js         |  33 +++++-----
+ src/tsv.js (new)   |   8 +++
+ test/csv-test.js   | 173 ++++++++++++++++++++++++++---------------------------
+ test/tsv-test.js   | 163 ++++++++++++++++++++++++-------------------------
+ 13 files changed, 276 insertions(+), 252 deletions(-)
+
+☕2d4cf8f🔪2016-01-29 10:19:29 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕38bd2f1🔪2016-01-20 17:30:30 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/dsv.js      |  9 +++++----
+ 3 files changed, 18 insertions(+), 5 deletions(-)
+
+☕8ead809🔪2016-01-12 14:10:26 -0800🔪Mike Bostock🔪Relax optional arguments.🔪Related mbostock/d3#2710.
+
+ src/dsv.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕db4efe2🔪2016-01-07 15:41:47 -0800🔪Mike Bostock🔪Fix d3-request links.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b34357d🔪2016-01-07 15:41:12 -0800🔪Mike Bostock🔪Prefix with d3, not d3_dsv.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕46a0763🔪2016-01-07 15:40:36 -0800🔪Mike Bostock🔪Prefix with d3, not d3_dsv.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕3eda87e🔪2015-12-18 10:38:56 -0800🔪Mike Bostock🔪Improve the README.🔪
+ README.md    | 42 +++++++++++++++++++++++++-----------------
+ package.json |  2 +-
+ 2 files changed, 26 insertions(+), 18 deletions(-)
+
+☕b0b4612🔪2015-12-09 13:59:03 -0800🔪Mike Bostock🔪Pass column names to row conversion function.🔪
+ README.md        | 16 ++++++++--------
+ package.json     |  2 +-
+ src/dsv.js       |  8 ++++----
+ test/dsv-test.js |  6 +++---
+ 4 files changed, 16 insertions(+), 16 deletions(-)
+
+☕922bb3b🔪2015-11-25 10:49:37 -0800🔪Mike Bostock🔪Clarify limitation on delimiters.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb4e9aa🔪2015-11-25 10:02:35 -0800🔪Mike Bostock🔪Fix #12 - dsv.format now takes an optional array of column names.🔪
+ README.md        | 10 ++++++++--
+ package.json     |  2 +-
+ src/dsv.js       | 37 +++++++++++++++++++++----------------
+ test/csv-test.js |  8 ++++++++
+ test/dsv-test.js |  8 ++++++++
+ test/tsv-test.js |  8 ++++++++
+ 6 files changed, 54 insertions(+), 19 deletions(-)
+
+☕7453de8🔪2015-11-25 09:46:10 -0800🔪Mike Bostock🔪Document columns.🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕27f1a9a🔪2015-11-25 09:42:04 -0800🔪Mike Bostock🔪Optimize dsv.parse by not creating a closure for each row.🔪
+ src/dsv.js | 23 ++++++++++++++++-------
+ 1 file changed, 16 insertions(+), 7 deletions(-)
+
+☕f86421c🔪2015-11-25 09:32:22 -0800🔪Mike Bostock🔪Fix #13 - dsv.parse now exposes the column names.🔪
+ src/dsv.js          |  6 ++++--
+ test/csv-test.js    | 47 ++++++++++++++++++++++++++++-------------------
+ test/dsv-test.js    | 37 +++++++++++++++++++------------------
+ test/table.js (new) |  4 ++++
+ test/tsv-test.js    | 37 +++++++++++++++++++------------------
+ 5 files changed, 74 insertions(+), 57 deletions(-)
+
+☕5691ef7🔪2015-11-24 11:47:18 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+☕f712316🔪2015-11-24 11:45:54 -0800🔪Mike Bostock🔪Fix code.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕1f6b6b9🔪2015-11-24 11:43:52 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+☕0f8977f🔪2015-11-24 11:41:43 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+☕5640334🔪2015-11-11 11:04:53 -0800🔪Mike Bostock🔪Fix instanceof dsv.🔪
+ package.json     |  2 +-
+ src/dsv.js       | 35 ++++++++++++++++++-----------------
+ test/csv-test.js |  5 +++++
+ test/tsv-test.js |  5 +++++
+ 4 files changed, 29 insertions(+), 18 deletions(-)
+
+☕d381fac🔪2015-11-11 10:56:20 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕0114a70🔪2015-11-10 14:33:58 -0800🔪Mike Bostock🔪Fix import.🔪
+ index.js     | 3 ++-
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕bceb4f1🔪2015-11-04 13:21:45 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 13 +++----------
+ 1 file changed, 3 insertions(+), 10 deletions(-)
+
+☕8f3ab34🔪2015-11-03 23:21:02 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕4dc4034🔪2015-07-01 11:30:15 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4956552🔪2015-06-16 14:50:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+☕2a4d726🔪2015-06-16 14:47:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕4345222🔪2015-06-16 14:06:55 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕c4c102f🔪2015-06-10 12:00:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕d4e160a🔪2015-06-10 11:59:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f790c61🔪2015-06-10 11:57:21 -0700🔪Mike Bostock🔪Update description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕53b64ca🔪2015-06-10 11:49:20 -0700🔪Mike Bostock🔪Rename “convert” to “row” to match d3-xhr.🔪
+ test/csv-test.js | 40 ++++++++++++++++++++--------------------
+ test/dsv-test.js | 40 ++++++++++++++++++++--------------------
+ test/tsv-test.js | 40 ++++++++++++++++++++--------------------
+ 3 files changed, 60 insertions(+), 60 deletions(-)
+
+☕c672ae8🔪2015-06-10 11:43:17 -0700🔪Mike Bostock🔪Rename “convert” to “row” to match d3-xhr.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕2c390a6🔪2015-06-10 11:12:07 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ff736e4🔪2015-06-10 10:34:22 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                      | 2 +-
+ index.sublime-project => d3-dsv.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕6e069b7🔪2015-06-10 09:49:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕0fc3d08🔪2015-06-10 09:44:46 -0700🔪Mike Bostock🔪Rename “accessor” to “converter”.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕1c924b0🔪2015-06-10 07:54:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 21 +--------------------
+ 1 file changed, 1 insertion(+), 20 deletions(-)
+
+☕16eca14🔪2015-06-10 07:49:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 19 +++++++++++++++----
+ 1 file changed, 15 insertions(+), 4 deletions(-)
+
+☕2a54181🔪2015-06-10 07:45:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f585d75🔪2015-06-09 22:28:35 -0700🔪Mike Bostock🔪Update README. Fixes #7.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕661da57🔪2015-06-09 22:27:19 -0700🔪Mike Bostock🔪Update README. Fixes #7.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7fba970🔪2015-06-09 22:26:26 -0700🔪Mike Bostock🔪Update README. Fixes #7.🔪
+ README.md | 102 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 97 insertions(+), 5 deletions(-)
+
+☕e11b1be🔪2015-06-09 22:13:18 -0700🔪Mike Bostock🔪Remove rw dependency.🔪
+ bin/csv2json      | 11 ++++++++---
+ bin/csv2tsv       | 11 ++++++++---
+ bin/tsv2csv       | 11 ++++++++---
+ bin/tsv2json      | 11 ++++++++---
+ lib/read.js (new) | 17 +++++++++++++++++
+ package.json      |  5 +----
+ 6 files changed, 50 insertions(+), 16 deletions(-)
+
+☕f6ae7c7🔪2015-06-05 12:15:06 -0700🔪Mike Bostock🔪Add tsv2csv, csv2json, and tsv2json.🔪Also, adopt rw to allow these binaries to read from stdin by default.
+
+ bin/csv2json (new +x) |  6 ++++++
+ bin/csv2tsv           |  4 ++--
+ bin/tsv2csv (new +x)  |  6 ++++++
+ bin/tsv2json (new +x) |  6 ++++++
+ package.json          | 10 ++++++++--
+ 5 files changed, 28 insertions(+), 4 deletions(-)
+
+☕ebf3152🔪2015-06-05 10:21:37 -0700🔪Mike Bostock🔪Add tests for custom delimiter.🔪
+ README.md                  |  12 +++-
+ index.js                   |  11 ++-
+ package.json               |   2 +-
+ test/data/sample.psv (new) |   2 +
+ test/dsv-test.js (new)     | 171 +++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 192 insertions(+), 6 deletions(-)
+
+☕043b782🔪2015-06-05 10:14:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md    | 18 ++++++++++--------
+ package.json |  2 +-
+ 2 files changed, 11 insertions(+), 9 deletions(-)
+
+☕4a4e8d4🔪2015-06-05 10:12:31 -0700🔪Mike Bostock🔪Add sublime project.🔪
+ index.sublime-project (new) | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+☕9194aad🔪2015-06-05 10:10:53 -0700🔪Mike Bostock🔪Ensmarten apostrophe.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9ea70da🔪2015-06-05 09:28:32 -0700🔪Mike Bostock🔪Adopt ES6 modules.🔪
+ .gitignore (new)     |   5 +
+ .npmignore (new)     |   3 +
+ LICENSE              |  21 +--
+ Makefile (gone)      |  21 ---
+ README.md            |  13 +-
+ dsv.min.js (gone)    |   1 -
+ index.js             |   6 +-
+ package (gone)       |  36 -----
+ package.json         |  35 ++---
+ dsv.js => src/dsv.js |  43 +++---
+ test/csv-test.js     | 364 ++++++++++++++++++++++++---------------------------
+ test/tsv-test.js     | 346 ++++++++++++++++++++++++------------------------
+ 12 files changed, 405 insertions(+), 489 deletions(-)
+
+☕9078826🔪2014-11-19 14:03:37 -0800🔪Mike Bostock🔪Update.🔪
+ dsv.js       | 10 +++++-----
+ dsv.min.js   |  2 +-
+ package.json |  2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+☕641ec66🔪2013-09-11 11:05:56 -0400🔪Tom MacWright🔪Add browserify transform for indirect requires of dsv. Fixes #3🔪See https://github.com/substack/brfs/issues/8 for background
+
+ package      | 3 +++
+ package.json | 5 +++++
+ 2 files changed, 8 insertions(+)
+
+☕99f5ace🔪2013-08-11 19:23:24 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 24 +++++++++++++++++++++++-
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+
+☕98d8708🔪2013-05-13 10:40:35 -0700🔪Mike Bostock🔪Add csv2tsv.🔪
+ bin/csv2tsv (new +x) | 6 ++++++
+ dsv.js               | 2 +-
+ dsv.min.js           | 2 +-
+ package              | 3 +++
+ package.json         | 5 ++++-
+ 5 files changed, 15 insertions(+), 3 deletions(-)
+
+☕c892052🔪2013-04-28 22:06:02 -0700🔪Dan Dascalescu🔪Link to usage in README🔪...so it gets mirrored on npmjs.org
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕656f5ac🔪2013-03-08 09:42:16 -0800🔪Mike Bostock🔪Initial commit.🔪
+ LICENSE (new)              |  26 ++++++
+ Makefile (new)             |  21 +++++
+ README.md (new)            |   3 +
+ dsv.js (new)               | 116 +++++++++++++++++++++++++++
+ dsv.min.js (new)           |   1 +
+ index.js (new)             |   3 +
+ package (new +x)           |  30 +++++++
+ package.json (new)         |  26 ++++++
+ test/csv-test.js (new)     | 195 +++++++++++++++++++++++++++++++++++++++++++++
+ test/data/sample.csv (new) |   2 +
+ test/data/sample.tsv (new) |   2 +
+ test/tsv-test.js (new)     | 177 ++++++++++++++++++++++++++++++++++++++++
+ 12 files changed, 602 insertions(+)

@@ -1,0 +1,731 @@
+☕64372b1🔪2021-06-08 20:35:30 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕71298ac🔪2021-06-09 05:34:21 +0200🔪Philippe Rivière🔪axis.tickValues accepts an iterable (#77)🔪* axis.tickValues accepts an iterable
+
+* Array.from
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md           | 2 +-
+ src/array.js (gone) | 1 -
+ src/axis.js         | 7 +++----
+ test/.eslintrc.json | 1 +
+ test/axis-test.js   | 5 +++++
+ 5 files changed, 10 insertions(+), 6 deletions(-)
+
+☕8c091c1🔪2021-06-09 05:29:56 +0200🔪Philippe Rivière🔪Adopt type=module (#78)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* browser instead of no-undef
+
+* remove Sublime project
+
+* add eslint.json
+
+* fix #51; extract copyrights from license
+
+* update dependencies
+
+* update README
+
+* update homepage
+
+* push on prepublishOnly
+
+* cleaner imports
+
+* snapshot tests
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                                     |    8 +-
+ .github/eslint.json (new)                          |   18 +
+ .github/workflows/node.js.yml (new)                |   30 +
+ LICENSE                                            |   40 +-
+ README.md                                          |   18 +-
+ d3-axis.sublime-project (gone)                     |   17 -
+ package.json                                       |   48 +-
+ rollup.config.js                                   |   10 +-
+ test/.eslintrc.json (new)                          |   12 +
+ test/axis-left-500.html (gone)                     |   50 -
+ test/axis-left.html (gone)                         |   50 -
+ test/axis-test.js                                  |  118 +-
+ test/jsdom.js (new)                                |   19 +
+ test/snapshot-test.js (new)                        |   39 +
+ test/snapshots.js (new)                            |   15 +
+ test/snapshots/axisLeftScaleLinear.html (new)      |   39 +
+ .../axisLeftScaleLinearNonNumericRange.html (new)  |   39 +
+ yarn.lock                                          | 1339 +++++++++-----------
+ 18 files changed, 954 insertions(+), 955 deletions(-)
+
+☕4fc4f2b🔪2021-03-10 11:54:56 -0800🔪Mike Bostock🔪2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕475de16🔪2021-03-10 11:54:40 -0800🔪Mike Bostock🔪Update README🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕18ae698🔪2021-03-10 11:52:22 -0800🔪Mike Bostock🔪upgrade dependencies🔪
+ package.json |    8 +-
+ yarn.lock    | 1716 ++++++++++++++++++++++++++++++----------------------------
+ 2 files changed, 907 insertions(+), 817 deletions(-)
+
+☕c78aab5🔪2021-03-10 11:48:16 -0800🔪Mike Bostock🔪adopt arrow🔪
+ src/axis.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕d9cab26🔪2021-02-23 12:03:15 -0800🔪Mike Bostock🔪Update src/axis.js🔪Co-authored-by: Philippe Rivière <fil@rezo.net>
+ src/axis.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8769f6d🔪2021-02-21 10:53:18 -0800🔪Mike Bostock🔪axis.offset🔪
+ src/axis.js | 29 +++++++++++++++++------------
+ 1 file changed, 17 insertions(+), 12 deletions(-)
+
+☕829873d🔪2020-10-29 09:22:39 +0100🔪llorenspujol🔪Fixes orient comparison to be always strict equal.🔪
+ src/axis.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a9b688e🔪2020-08-24 00:52:44 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d27c1fc🔪2020-08-24 00:52:00 +0200🔪Philippe Rivière🔪D3 dependencies🔪
+ package.json |  5 +---
+ yarn.lock    | 74 ++++++++++++++++++++++++++++++------------------------------
+ 2 files changed, 38 insertions(+), 41 deletions(-)
+
+☕a9f680e🔪2020-07-27 16:33:23 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕ae3ffbc🔪2020-06-23 15:58:13 +0200🔪Philippe Rivière🔪d3js link🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1d5951b🔪2020-06-02 15:50:04 +0200🔪Philippe Rivière🔪use d3-selection 1 - 2, deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ package.json | 2 +-
+ src/axis.js  | 4 +---
+ yarn.lock    | 8 ++++----
+ 3 files changed, 6 insertions(+), 8 deletions(-)
+
+☕d753c86🔪2020-06-17 12:53:06 -0400🔪Yuri🔪Add a pointer from from axis.ticks to scale.ticks🔪This supersedes a previous PR (now closed) where I used inconsistent markdown formatting.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕5f45ff8🔪2020-06-02 15:43:11 +0200🔪Philippe Rivière🔪update links🔪
+ README.md | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕a7837c4🔪2019-09-27 11:22:57 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕15e56eb🔪2019-08-09 17:48:51 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   10 +-
+ yarn.lock    | 1250 +++++++++++++++++++++++++++++++++++-----------------------
+ 2 files changed, 751 insertions(+), 509 deletions(-)
+
+☕a98e92b🔪2019-08-09 16:08:05 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕022b37c🔪2019-08-09 15:12:50 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/axis.js  | 4 ++--
+ src/index.js | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕da24fba🔪2018-08-24 14:10:17 -0700🔪Mike Bostock🔪1.0.12🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a635aac🔪2018-08-24 14:10:15 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 48 ++++++++++++++++++++++++------------------------
+ 1 file changed, 24 insertions(+), 24 deletions(-)
+
+☕3d32da6🔪2018-08-24 14:02:33 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1269f59🔪2018-08-24 13:53:12 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             | 9 +++++----
+ rollup.config.js         | 6 +++---
+ index.js => src/index.js | 2 +-
+ 3 files changed, 9 insertions(+), 8 deletions(-)
+
+☕e1f837d🔪2018-08-24 13:52:59 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕f6cb74b🔪2018-08-24 12:52:56 -0700🔪Mike Bostock🔪Fix folder_exclude_patterns.🔪
+ d3-axis.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e51c3ca🔪2018-08-24 11:04:58 -0700🔪Mike Bostock🔪1.0.11🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7127f40🔪2018-08-24 11:04:54 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .gitignore       |  2 +-
+ .npmignore       |  2 +-
+ package.json     |  8 ++++----
+ rollup.config.js |  7 ++++---
+ yarn.lock        | 12 ++++++------
+ 5 files changed, 16 insertions(+), 15 deletions(-)
+
+☕384845e🔪2018-08-24 10:10:15 -0700🔪Mike Bostock🔪1.0.10🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ba45b0🔪2018-08-24 10:09:22 -0700🔪Mike Bostock🔪Fix #32.🔪
+ src/axis.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7d19f73🔪2018-08-24 10:06:09 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc.json   |  4 +++-
+ package.json     |  3 +--
+ rollup.config.js | 45 +++++++++++++++++++-------------------
+ yarn.lock        | 66 +++++++++++++++++++++++---------------------------------
+ 4 files changed, 54 insertions(+), 64 deletions(-)
+
+☕760080e🔪2018-08-20 13:52:20 -0700🔪Mike Bostock🔪1.0.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3a9eced🔪2018-08-20 13:48:38 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json |   2 +-
+ yarn.lock    | 130 +++++++++++++++++++++++------------------------------------
+ 2 files changed, 51 insertions(+), 81 deletions(-)
+
+☕5896a42🔪2018-08-16 12:07:49 -0700🔪Mike Bostock🔪Fix copyright notice.🔪
+ rollup.config.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕7be6a1b🔪2018-08-16 12:07:11 -0700🔪Mike Bostock🔪Fix unminified build.🔪
+ rollup.config.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕bb809ff🔪2018-08-16 11:41:21 -0700🔪Mike Bostock🔪Adopt currentColor. Fixes #49.🔪
+ .eslintrc (gone)        |    8 -
+ .eslintrc.json (new)    |   13 +
+ README.md               |   26 +-
+ d3-axis.sublime-project |   16 +-
+ package.json            |   16 +-
+ rollup.config.js (new)  |   34 ++
+ src/axis.js             |    6 +-
+ test/axis-left-500.html |   46 +-
+ test/axis-left.html     |   46 +-
+ yarn.lock (new)         | 1474 +++++++++++++++++++++++++++++++++++++++++++++++
+ 10 files changed, 1601 insertions(+), 84 deletions(-)
+
+☕a329626🔪2017-06-07 19:19:17 -0700🔪Mike Bostock🔪1.0.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2ee44b4🔪2017-06-07 19:19:05 -0700🔪Mike Bostock🔪Add rendering tests.🔪
+ package.json                  |  6 ++++--
+ test/axis-left-500.html (new) | 50 +++++++++++++++++++++++++++++++++++++++++++
+ test/axis-left.html (new)     | 50 +++++++++++++++++++++++++++++++++++++++++++
+ test/axis-test.js             | 46 ++++++++++++++++++++++++++++-----------
+ 4 files changed, 138 insertions(+), 14 deletions(-)
+
+☕8e59287🔪2017-06-07 14:51:40 -0700🔪Mike Bostock🔪Coerce scale output to numbers.🔪Fixes d3/d3-scale#107.
+
+ src/axis.js | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+☕52f3de2🔪2017-05-15 11:32:01 -0700🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d6bc84🔪2017-05-15 11:28:17 -0700🔪Mike Bostock🔪Update output example.🔪
+ README.md | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕4ac20e6🔪2017-04-15 17:12:17 -0700🔪Mike Bostock🔪Fix tick offset for point scales.🔪Point scales have a bandwidth of zero.
+
+ src/axis.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕95e3f54🔪2017-04-15 16:57:06 -0700🔪Mike Bostock🔪Fix tick position for ordinal scales.🔪We need to account for the 0.5px offset when centering.
+
+ src/axis.js | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+
+☕1dba85a🔪2017-04-04 12:34:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕731bfbf🔪2017-04-04 12:31:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+☕739cf34🔪2017-04-04 12:29:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2575daf🔪2017-04-04 12:28:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕42d0fda🔪2017-04-04 12:28:07 -0700🔪Mike Bostock🔪Fix #35.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕06929e6🔪2017-03-10 10:16:12 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕91ca051🔪2017-03-10 10:16:03 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1fa86f3🔪2017-02-28 08:55:43 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a1401e🔪2017-02-28 08:55:40 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6a90fb1🔪2017-01-27 09:13:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕2d76383🔪2017-01-27 09:12:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕045f9de🔪2017-01-27 09:11:46 -0800🔪Mike Bostock🔪Fix image.🔪
+ img/custom.png | Bin 23175 -> 11629 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕4d3ddf8🔪2017-01-27 09:10:33 -0800🔪Mike Bostock🔪Fix image link.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d35b934🔪2017-01-27 09:10:05 -0800🔪Mike Bostock🔪Add images.🔪
+ img/custom.png (new) | Bin 0 -> 23175 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕d35c55d🔪2017-01-27 09:09:51 -0800🔪Mike Bostock🔪Link to custom axis example. Related #9.🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕5d8dc12🔪2017-01-27 19:36:26 +0530🔪curran🔪Factor out transform to axis constructor🔪
+ src/axis.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕410e44e🔪2017-01-25 13:24:08 +0530🔪curran🔪Factor out x, y, and k to axis constructor🔪
+ src/axis.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕05e55d6🔪2017-01-24 09:23:53 -0800🔪Mike Bostock🔪Fix #24.🔪If an axis transition interrupts an earlier axis transition, the new transition
+will see the exiting ticks for the old transition. If the axis is ordinal, the
+position of these ticks may be undefined for both the old and new scale, which
+would result in an invalid transform such as `translate(NaN,0)`.
+
+If the new scale’s position for an exiting tick is undefined (as is always the
+case with ordinal scales), rather than falling back to the old scale (which may
+also be undefined), we simply use the tick’s current transform so that it fades
+out in-place.
+
+ src/axis.js | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+☕a478904🔪2016-11-22 16:22:05 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9846767🔪2016-11-22 16:22:01 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 6 +-----
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+☕30b2fa9🔪2016-08-05 15:57:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕39d3ec0🔪2016-08-05 15:56:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕ab5f8f5🔪2016-08-05 15:55:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕8205661🔪2016-08-05 15:54:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕089f26d🔪2016-08-05 22:16:14 +0300🔪Devinsuit🔪Add links to source code🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕7454613🔪2016-08-02 14:56:01 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕47e7eae🔪2016-08-02 14:56:01 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕4624b5b🔪2016-08-02 14:06:41 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6233885🔪2016-08-02 14:05:38 -0700🔪Mike Bostock🔪Use leading zero.🔪
+ README.md   | 12 ++++++------
+ src/axis.js |  2 +-
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+☕8759a93🔪2016-08-02 14:02:37 -0700🔪Mike Bostock🔪Fix crisp edges when bandwidth is odd.🔪
+ src/axis.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕5a12463🔪2016-07-29 15:39:15 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b558f51🔪2016-07-29 15:38:54 -0700🔪Mike Bostock🔪Update postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ab3b31f🔪2016-07-01 12:58:40 -0700🔪Mike Bostock🔪Update README. Fix #15.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕52ffd30🔪2016-06-29 14:17:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕0b89269🔪2016-06-29 14:16:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕87bd505🔪2016-06-29 14:16:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ad1c89b🔪2016-06-29 14:15:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕153b237🔪2016-06-29 14:13:15 -0700🔪Mike Bostock🔪Update README. Fixes d3/d3#2872.🔪
+ README.md | 31 ++++++++++++++++++++++++++++---
+ 1 file changed, 28 insertions(+), 3 deletions(-)
+
+☕72de1ba🔪2016-06-24 11:05:11 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕12088de🔪2016-06-24 11:05:01 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 6 +++---
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕10003b8🔪2016-06-14 09:24:21 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕510368f🔪2016-06-10 09:09:16 -0700🔪Mike Bostock🔪0.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2454851🔪2016-06-10 09:08:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b981c85🔪2016-06-10 09:08:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 20 --------------------
+ 1 file changed, 20 deletions(-)
+
+☕cad16f0🔪2016-06-10 09:07:32 -0700🔪Mike Bostock🔪Document the axis structure.🔪
+ README.md   | 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/axis.js |  4 ++--
+ 2 files changed, 54 insertions(+), 2 deletions(-)
+
+☕3bc475d🔪2016-06-07 20:50:56 -0700🔪Mike Bostock🔪0.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14ab816🔪2016-06-07 20:50:48 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 19 +++----------------
+ index.js     |  4 ----
+ package.json | 18 +++++++-----------
+ 3 files changed, 10 insertions(+), 31 deletions(-)
+
+☕476a77b🔪2016-06-03 08:49:35 -0700🔪Mike Bostock🔪Fix #13 - update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕905af10🔪2016-05-31 10:20:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8d3d939🔪2016-05-31 10:18:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕3118a02🔪2016-05-31 07:09:53 -0700🔪Mike Bostock🔪One fewer closure.🔪
+ src/axis.js | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕e1d90ce🔪2016-05-31 07:05:59 -0700🔪Mike Bostock🔪Assume fixed orientation.🔪
+ src/axis.js | 19 +++++++++++--------
+ 1 file changed, 11 insertions(+), 8 deletions(-)
+
+☕dfa2dc0🔪2016-05-31 06:48:37 -0700🔪Mike Bostock🔪Add missing semicolon.🔪
+ src/axis.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕74ac0a3🔪2016-05-25 16:57:22 -0700🔪Mike Bostock🔪0.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ced588c🔪2016-05-25 09:30:55 -0700🔪Mike Bostock🔪Rendering improvements!🔪Offset the axis by a half-pixel so that single-pixel lines exactly cover whole
+pixels when the tick position is an integer. This obviates the need for the
+crispEdges shape-rendering style when used in conjunction with scale.rangeRound,
+and improves the default appearance even without, as long as the axis origin is
+at integer coordinates. This is especially noticeable in Safari, where crisp
+rendering of single-pixel lines often results in two-pixel lines! Fixes #8.
+
+Use presentation attributes rather than styles to apply the default appearance.
+This makes it easier to override the styles using CSS, since any CSS rules will
+take precedence of the presentation attributes. Fixes d3/d3#2102.
+
+Extend the default appearance with additional presentation attributes: the
+default font is now 10px sans-serif; the domain path and tick lines are now
+stroked rather than filled. Fixes #7. Since these are attributes and not styles,
+you can easily override the default appearance using CSS. (You can also use
+post-selection, as always, to modify the axis.)
+
+This commit also cleans up the axis rendering logic and fixes the transition of
+entering ticks: they were previously transitioning in from a tick size of zero,
+in addition to fading in. Now they just fade in.
+
+ src/axis.js | 89 +++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 51 insertions(+), 38 deletions(-)
+
+☕6b2a012🔪2016-05-18 09:54:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac16dda🔪2016-05-14 21:25:55 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕1773faf🔪2016-04-29 13:59:39 -0700🔪Mike Bostock🔪0.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ebb2c20🔪2016-04-29 13:59:06 -0700🔪Mike Bostock🔪Fix #6 - upgrade to d3-scale 0.7.🔪
+ README.md    | 10 +++++++++-
+ package.json |  4 ++--
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+
+☕e892f90🔪2016-03-15 10:23:30 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕633721b🔪2016-03-14 13:14:39 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕1f457bc🔪2016-03-14 12:55:09 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕d3c0186🔪2016-03-06 15:12:56 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕587dc83🔪2016-03-04 09:53:37 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b9bc713🔪2016-03-01 14:20:45 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 4 ++++
+ package.json | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+☕9320fc5🔪2016-02-24 16:16:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f791c11🔪2016-02-24 16:15:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5cdff34🔪2016-02-24 16:14:49 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕ad3e917🔪2016-02-22 15:40:48 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 2 +-
+ package.json | 4 ++--
+ src/axis.js  | 5 ++---
+ 3 files changed, 5 insertions(+), 6 deletions(-)
+
+☕de37ad7🔪2016-02-22 15:37:38 -0800🔪Mike Bostock🔪Document transition support.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2ca4ff8🔪2016-02-22 15:36:22 -0800🔪Mike Bostock🔪 Update dependencies.🔪
+ README.md    | 6 +++---
+ package.json | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕de5af78🔪2016-02-21 23:07:20 -0800🔪Mike Bostock🔪Tweak order.🔪
+ src/axis.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5f786c1🔪2016-02-21 23:06:14 -0800🔪Mike Bostock🔪Transition opacity.🔪
+ src/axis.js | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+☕329495e🔪2016-02-21 22:51:13 -0800🔪Mike Bostock🔪Fix #1 - transitions.🔪
+ README.md    |   4 ++
+ package.json |   3 +-
+ src/axis.js  | 138 +++++++++++++++++++++++++++++++----------------------------
+ 3 files changed, 78 insertions(+), 67 deletions(-)
+
+☕1b3881f🔪2016-02-21 16:32:17 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕33f6b57🔪2016-02-18 15:17:51 -0800🔪Mike Bostock🔪Update d3-color.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕48d5d2e🔪2016-02-02 09:38:14 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕441ffea🔪2016-01-29 10:10:44 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕1361185🔪2016-01-20 17:26:15 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/axis.js     |  8 ++++----
+ src/identity.js |  2 +-
+ 4 files changed, 18 insertions(+), 6 deletions(-)
+
+☕ec11d31🔪2016-01-14 15:58:55 -0800🔪Mike Bostock🔪Update d3-selection dependency.🔪Also simplify the axis implementation slightly. We don’t yet support
+transitions, so the code was more complicated than it needed to be. Some of that
+complexity will undoubtedly return when we restore transition support, but it
+seems better to start with it as simple as possible.
+
+ README.md    |   4 +-
+ package.json |   4 +-
+ src/axis.js  | 137 ++++++++++++++++++++++++++++++-----------------------------
+ 3 files changed, 73 insertions(+), 72 deletions(-)
+
+☕86c09f8🔪2016-01-12 09:52:10 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dad29cd🔪2016-01-12 09:51:33 -0800🔪Mike Bostock🔪No default scale.🔪
+ README.md         | 19 +++++++++----------
+ package.json      |  2 +-
+ src/axis.js       | 22 ++++++++++------------
+ test/axis-test.js | 23 ++++++++++++-----------
+ 4 files changed, 32 insertions(+), 34 deletions(-)
+
+☕28af0b4🔪2016-01-08 15:25:47 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕056e585🔪2016-01-08 15:25:21 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕47f37bd🔪2016-01-08 15:25:04 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕f292675🔪2016-01-08 15:24:47 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕bb69736🔪2016-01-08 15:22:39 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 56 ++++++++++++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 42 insertions(+), 14 deletions(-)
+
+☕2b2467d🔪2016-01-08 15:01:01 -0800🔪Mike Bostock🔪Remove axis.orient.🔪Instead, construct the axis directly with the given orientation.
+
+This change has several motivations. First, you can’t transition between
+orientations, so a mutable orientation makes a false implication. Second, you
+should always set an orientation explicitly; relying on the default bottom
+orientation made code less clear. Third, symbols for setting orientation are
+verbose (axis.orient(axisOrientLeft)) compared to strings (axis.orient("left")),
+and especially compared to a dedicated constructor (axisLeft).
+
+Orientation symbols had little value anyway, given that you couldn’t specify a
+custom orientation, or save code by eliminating unused orientations.
+
+ README.md         | 42 +++++++++++++++---------------------------
+ index.js          | 18 ++++--------------
+ package.json      |  2 +-
+ src/axis.js       | 43 ++++++++++++++++++++++++-------------------
+ test/axis-test.js | 33 +++++++++------------------------
+ 5 files changed, 53 insertions(+), 85 deletions(-)
+
+☕0144f12🔪2016-01-08 14:01:14 -0800🔪Mike Bostock🔪Fix tick entering.🔪
+ package.json | 2 +-
+ src/axis.js  | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕aec1567🔪2016-01-08 12:16:51 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b7b4bfd🔪2016-01-08 12:12:22 -0800🔪Mike Bostock🔪Use the empty array, not null.🔪
+ src/axis.js       |  6 +++---
+ test/axis-test.js | 10 +++++++++-
+ 2 files changed, 12 insertions(+), 4 deletions(-)
+
+☕19d8b72🔪2016-01-08 12:08:40 -0800🔪Mike Bostock🔪Add axis.tickArguments.🔪
+ README.md         | 16 +++++++++++++++-
+ src/axis.js       |  8 ++++++--
+ test/axis-test.js | 16 +++++++++++-----
+ 3 files changed, 32 insertions(+), 8 deletions(-)
+
+☕42e820b🔪2016-01-08 12:02:54 -0800🔪Mike Bostock🔪Use __axis__, not __chart__.🔪
+ src/axis.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0bb24ad🔪2016-01-08 11:56:03 -0800🔪Mike Bostock🔪Delete.🔪
+ src/orient.js (gone) | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕861162b🔪2016-01-08 11:53:48 -0800🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)              |   5 ++
+ .npmignore (new)              |   3 +
+ LICENSE (new)                 |  27 ++++++++
+ README.md (new)               |  88 ++++++++++++++++++++++++++
+ d3-axis.sublime-project (new) |  13 ++++
+ index.js (new)                |  16 +++++
+ package.json (new)            |  38 ++++++++++++
+ src/array.js (new)            |   1 +
+ src/axis.js (new)             | 141 ++++++++++++++++++++++++++++++++++++++++++
+ src/identity.js (new)         |   3 +
+ src/orient.js (new)           |   0
+ test/axis-test.js (new)       |  71 +++++++++++++++++++++
+ 12 files changed, 406 insertions(+)

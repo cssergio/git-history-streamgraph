@@ -1,0 +1,1351 @@
+☕3e9b59b🔪2022-02-21 14:20:13 -0700🔪KentR🔪Change "due on" to "due to" (#54)🔪I suspect this is the preferred text, and it is consistent with the rest of the doc.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08cdaa6🔪2021-06-05 11:07:08 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ee72b8a🔪2021-06-05 11:05:00 -0700🔪Mike Bostock🔪fix #51; extract copyrights from license🔪
+ rollup.config.js | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕4447d01🔪2021-06-05 19:58:57 +0200🔪Philippe Rivière🔪Adopt type=module (#50)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* update README
+
+* remove Sublime project
+
+* add eslint.json
+
+* update dependencies
+
+* Update README
+
+* cleaner imports
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |   8 -
+ .github/eslint.json (new)           |  18 +
+ .github/workflows/node.js.yml (new) |  30 ++
+ LICENSE                             |  40 +-
+ README.md                           |  20 +-
+ d3-time.sublime-project (gone)      |  17 -
+ package.json                        |  45 +-
+ test/.eslintrc.json (new)           |  10 +
+ test/date.js                        |  12 +-
+ test/day-test.js                    | 353 ++++++++--------
+ test/friday-test.js                 |  58 ++-
+ test/hour-test.js                   | 247 ++++++-----
+ test/interval-test.js               | 129 +++---
+ test/millisecond-test.js            |  17 +-
+ test/minute-test.js                 | 145 +++----
+ test/monday-test.js                 |  69 ++--
+ test/month-test.js                  | 388 ++++++++----------
+ test/multiYear-test.js              |  60 ++-
+ test/saturday-test.js               |  58 ++-
+ test/second-test.js                 | 150 +++----
+ test/sunday-test.js                 | 216 +++++-----
+ test/test-time-zones                |  76 ++--
+ test/thursday-test.js               |  58 ++-
+ test/ticks-test.js                  | 317 +++++++-------
+ test/tuesday-test.js                |  58 ++-
+ test/utcDay-test.js                 | 232 +++++------
+ test/utcFriday-test.js              |  58 ++-
+ test/utcHour-test.js                | 188 ++++-----
+ test/utcMillisecond-test.js         |   9 +-
+ test/utcMinute-test.js              | 132 +++---
+ test/utcMonday-test.js              |  69 ++--
+ test/utcMonth-test.js               | 293 ++++++-------
+ test/utcMultiYear-test.js           |  60 ++-
+ test/utcSaturday-test.js            |  58 ++-
+ test/utcSecond-test.js              | 137 +++----
+ test/utcSunday-test.js              | 216 +++++-----
+ test/utcThursday-test.js            |  58 ++-
+ test/utcTicks-test.js               | 312 +++++++-------
+ test/utcTuesday-test.js             |  58 ++-
+ test/utcWednesday-test.js           |  58 ++-
+ test/utcWeek-test.js                | 172 ++++----
+ test/utcYear-test.js                | 118 +++---
+ test/wednesday-test.js              |  58 ++-
+ test/week-test.js                   | 172 ++++----
+ test/year-test.js                   | 118 +++---
+ yarn.lock                           | 794 +++++++++++++++++++-----------------
+ 46 files changed, 2795 insertions(+), 3174 deletions(-)
+
+☕c7f6212🔪2021-06-02 15:16:11 +0200🔪Martín González🔪Fix typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕85b6c07🔪2021-04-14 18:37:04 -0700🔪Ryan Rabello🔪Fixed spelling (#49)🔪Thanks for maintaining d3! If you you'd like me to include anything else let me know.
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6324ee4🔪2021-04-09 19:02:45 -0700🔪Mike Bostock🔪2.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a452fd9🔪2021-04-09 19:02:40 -0700🔪Mike Bostock🔪fix crash on invalid range🔪
+ README.md          | 2 +-
+ src/ticks.js       | 2 +-
+ test/ticks-test.js | 5 +++++
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+
+☕dd8c900🔪2021-04-09 18:40:28 -0700🔪Mike Bostock🔪2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0b41d9d🔪2021-04-09 18:35:51 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0b230ec🔪2021-04-09 18:35:29 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕af65217🔪2021-04-09 18:34:24 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕24982e2🔪2021-04-09 18:33:58 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5574061🔪2021-04-09 18:33:21 -0700🔪Mike Bostock🔪update README🔪
+ README.md | 44 ++++++++++++++------------------------------
+ 1 file changed, 14 insertions(+), 30 deletions(-)
+
+☕ec2c026🔪2021-04-09 18:27:12 -0700🔪Mike Bostock🔪update dependencies🔪
+ package.json |    6 +-
+ yarn.lock    | 1309 +++++++++++++++++++++++++++++++---------------------------
+ 2 files changed, 699 insertions(+), 616 deletions(-)
+
+☕18622cc🔪2021-04-09 18:24:46 -0700🔪Mike Bostock🔪Add ticks and tickInterval. (#47)🔪* add ticks, tickInterval
+
+* document timeTicks
+
+* reuse existing durations
+
+* more strict
+
+* relax dependency range
+
+* stricter interval type
+
+* remove defunct comment
+
+* remove defunct branch
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+ README.md                   |  51 ++++++++++
+ package.json                |   3 +
+ src/duration.js             |  12 ++-
+ src/index.js                |   7 ++
+ src/ticks.js (new)          |  64 ++++++++++++
+ test/ticks-test.js (new)    | 238 ++++++++++++++++++++++++++++++++++++++++++++
+ test/utcTicks-test.js (new) | 238 ++++++++++++++++++++++++++++++++++++++++++++
+ yarn.lock                   |  12 +++
+ 8 files changed, 620 insertions(+), 5 deletions(-)
+
+☕d6cdbb8🔪2020-08-13 14:49:12 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕f21dd9f🔪2020-07-31 22:13:17 +1000🔪Gilmore Davidson🔪Fix typo in offset tests🔪
+ test/day-test.js      | 2 +-
+ test/month-test.js    | 2 +-
+ test/utcMonth-test.js | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕5a57f01🔪2020-07-27 09:22:43 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕2a22114🔪2020-06-09 18:49:59 +0200🔪Philippe Rivière🔪update README.md🔪
+ README.md | 132 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 66 insertions(+), 66 deletions(-)
+
+☕7511541🔪2020-06-09 18:46:29 +0200🔪Philippe Rivière🔪"try in your browser" url🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fafc286🔪2020-06-09 18:44:28 +0200🔪Philippe Rivière🔪deliberate ES6 syntax🔪(rationale: don't let people install @2 in a build system that will not alert them that we have moved to ES6, only to cause trouble with a later release.)
+
+ src/day.js | 15 ++++++---------
+ 1 file changed, 6 insertions(+), 9 deletions(-)
+
+☕356a391🔪2020-06-09 18:40:53 +0200🔪Philippe Rivière🔪d3 4.0 => d3🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3fd6cf4🔪2019-11-02 08:23:40 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕2acf4dd🔪2019-09-25 12:56:04 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕09114f5🔪2019-09-25 12:55:37 -0700🔪Mike Bostock🔪Allow shorthand for current intervals.🔪
+ README.md             |  8 ++++++--
+ src/interval.js       |  6 ++++--
+ test/day-test.js      | 11 +++++++++--
+ test/interval-test.js | 11 +++++++++--
+ 4 files changed, 28 insertions(+), 8 deletions(-)
+
+☕443835c🔪2019-09-25 12:48:27 -0700🔪Mike Bostock🔪Add sideEffects: false. Related d3/d3#3131.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕cfa798c🔪2019-08-09 16:18:07 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 875 +++++++++++++++++++++++++++++++++++------------------------
+ 2 files changed, 518 insertions(+), 363 deletions(-)
+
+☕8d5f139🔪2019-08-09 15:55:00 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕25e6d6c🔪2019-08-09 15:43:52 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/day.js         |  4 ++--
+ src/hour.js        |  4 ++--
+ src/index.js       | 30 +++++++++++++++---------------
+ src/millisecond.js |  2 +-
+ src/minute.js      |  4 ++--
+ src/month.js       |  2 +-
+ src/second.js      |  4 ++--
+ src/utcDay.js      |  4 ++--
+ src/utcHour.js     |  4 ++--
+ src/utcMinute.js   |  4 ++--
+ src/utcMonth.js    |  2 +-
+ src/utcWeek.js     |  4 ++--
+ src/utcYear.js     |  2 +-
+ src/week.js        |  4 ++--
+ src/year.js        |  2 +-
+ 15 files changed, 38 insertions(+), 38 deletions(-)
+
+☕66cd414🔪2019-02-04 16:05:03 -0800🔪Mike Bostock🔪1.0.11🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3576d62🔪2019-02-04 15:19:30 -0800🔪Mike Bostock🔪Simplify intervals.🔪
+ src/hour.js   | 6 ++----
+ src/minute.js | 4 ++--
+ src/second.js | 2 +-
+ 3 files changed, 5 insertions(+), 7 deletions(-)
+
+☕d8b70e8🔪2018-08-24 14:20:53 -0700🔪Mike Bostock🔪1.0.10🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕22a38f0🔪2018-08-24 14:00:57 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3b47276🔪2018-08-24 13:42:58 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ package.json             |  9 +++++----
+ rollup.config.js         |  6 +++---
+ index.js => src/index.js | 30 +++++++++++++++---------------
+ 3 files changed, 23 insertions(+), 22 deletions(-)
+
+☕4b39748🔪2018-08-24 13:42:27 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕0286fa5🔪2018-08-24 11:56:19 -0700🔪Mike Bostock🔪1.0.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf2e600🔪2018-08-24 11:56:17 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)        |   5 -
+ .eslintrc.json (new)    |  15 +
+ .gitignore              |   2 +-
+ .npmignore              |   2 +-
+ d3-time.sublime-project |  16 +-
+ package.json            |  19 +-
+ rollup.config.js (new)  |  36 ++
+ yarn.lock (new)         | 935 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1007 insertions(+), 23 deletions(-)
+
+☕b898f28🔪2018-01-09 13:53:28 +0100🔪Patrick Luehne🔪Fix typo in documentation🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf67db8🔪2017-11-21 16:46:37 -0500🔪Mike Bostock🔪1.0.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b84d80🔪2017-07-31 19:19:25 -0300🔪Mike Bostock🔪Protect against infinite loop in interval.range.🔪Fixes #25.
+
+ src/interval.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕036a281🔪2017-06-14 15:08:18 -0700🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6548da6🔪2017-06-14 15:07:56 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    |  4 ----
+ package.json | 10 +++++-----
+ 2 files changed, 5 insertions(+), 9 deletions(-)
+
+☕c1df3ab🔪2017-06-14 15:04:31 -0700🔪Mike Bostock🔪Fix #24 - handle negative step offset.🔪The prior implementation of interval.filter assumed that the step passed to
+interval.offset was positive.
+
+ src/interval.js       |  8 +++++++-
+ test/interval-test.js | 26 ++++++++++++++++++++++++++
+ 2 files changed, 33 insertions(+), 1 deletion(-)
+
+☕bde94d8🔪2017-03-10 09:46:08 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e55d1a1🔪2017-03-10 09:45:59 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6caf5cd🔪2017-02-28 09:06:09 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2be7a1b🔪2017-02-28 09:05:53 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕42f5400🔪2017-02-13 16:41:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 58 +++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 29 insertions(+), 29 deletions(-)
+
+☕d691777🔪2017-02-13 16:37:53 -0800🔪Mike Bostock🔪Update README. Related #21.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8aa53e1🔪2016-09-22 09:41:31 -0700🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10f96ad🔪2016-09-22 09:41:24 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b3320c3🔪2016-09-22 09:37:38 -0700🔪Mike Bostock🔪Fix d3/d3-scale#78.🔪Avoid an infinite loop in interval.every(…).range given invalid dates.
+
+ src/interval.js       | 4 ++--
+ test/interval-test.js | 5 +++++
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+☕5772932🔪2016-09-12 16:22:15 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8af0ac2🔪2016-09-12 16:11:45 -0700🔪Mike Bostock🔪Workaround for rollup/rollup#931.🔪
+ .eslintrc       | 5 +----
+ package.json    | 4 ++--
+ src/interval.js | 2 +-
+ 3 files changed, 4 insertions(+), 7 deletions(-)
+
+☕11d5f98🔪2016-08-20 18:14:50 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 128 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 64 insertions(+), 64 deletions(-)
+
+☕8dff825🔪2016-08-02 14:29:29 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4be73e4🔪2016-08-02 14:29:28 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕ede1dbc🔪2016-07-29 15:57:53 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ae83fd🔪2016-07-29 15:57:49 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕06427f4🔪2016-07-11 16:18:38 +0200🔪Piet Jaspers🔪Fix typo in #timeDay🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ba8e4df🔪2016-06-14 15:55:08 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cc8437e🔪2016-06-14 15:55:00 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ LICENSE      | 2 +-
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕54be6f7🔪2016-06-14 09:21:58 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕2f3ff72🔪2016-06-13 10:40:50 -0700🔪Mike Bostock🔪0.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a31e238🔪2016-06-13 10:39:44 -0700🔪Mike Bostock🔪Optimize {timeYear,utcYear}.every.🔪Related d3/d3-scale#65.
+
+ src/utcYear.js                  | 11 ++++++++++
+ src/year.js                     | 11 ++++++++++
+ test/multiYear-test.js (new)    | 46 +++++++++++++++++++++++++++++++++++++++++
+ test/utcMultiYear-test.js (new) | 46 +++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 114 insertions(+)
+
+☕f85315a🔪2016-06-13 09:43:21 -0700🔪Mike Bostock🔪Set bigger field first.🔪It probably doesn’t make a difference, but I’d guess that in some really obscure
+cases, changing the date might affect the hour, so it’s better to set the date
+first and then the hour.
+
+ src/month.js    | 2 +-
+ src/utcMonth.js | 2 +-
+ src/utcWeek.js  | 2 +-
+ src/utcYear.js  | 2 +-
+ src/week.js     | 2 +-
+ src/year.js     | 2 +-
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+
+☕3e0fddb🔪2016-06-08 14:30:34 -0700🔪Mike Bostock🔪0.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d45c290🔪2016-06-08 13:37:26 -0700🔪Mike Bostock🔪Move code out of index.🔪
+ index.js           | 161 ++++++++++++++++++++++++++++++-----------------------
+ src/day.js         |   9 ++-
+ src/duration.js    |  10 ++--
+ src/hour.js        |  17 +++---
+ src/millisecond.js |   1 +
+ src/minute.js      |  13 +++--
+ src/month.js       |   5 +-
+ src/second.js      |  13 +++--
+ src/utcDay.js      |   9 ++-
+ src/utcHour.js     |  11 ++--
+ src/utcMinute.js   |  11 ++--
+ src/utcMonth.js    |   5 +-
+ src/utcWeek.js     |  13 ++++-
+ src/utcYear.js     |   5 +-
+ src/week.js        |  13 ++++-
+ src/year.js        |   5 +-
+ 16 files changed, 186 insertions(+), 115 deletions(-)
+
+☕fcae796🔪2016-06-07 17:16:31 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0a0e775🔪2016-06-07 17:16:18 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕bdfba3b🔪2016-06-07 10:24:42 -0700🔪Mike Bostock🔪0.2.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕52719b9🔪2016-06-07 10:23:52 -0700🔪Mike Bostock🔪Fix #11 - get timezone tests working.🔪Seems like TZ=UTC+03:15 is no longer supported, but the others work.
+
+ test/test-time-zones | 76 ++++++++++++++++++++++++++--------------------------
+ 1 file changed, 38 insertions(+), 38 deletions(-)
+
+☕8940649🔪2016-06-07 09:59:36 -0700🔪Mike Bostock🔪Fix #12 - remove duplicate export.🔪
+ index.js | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕914e7b4🔪2016-05-18 09:51:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6def6bf🔪2016-05-14 21:03:39 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕edfff22🔪2016-03-15 10:21:50 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bd7585f🔪2016-03-14 13:09:42 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕2a620a6🔪2016-03-14 12:35:35 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕a6da8f3🔪2016-03-06 15:11:03 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8bec501🔪2016-03-04 09:49:34 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c1c742b🔪2016-03-01 14:13:18 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕7cf24e9🔪2016-02-29 21:19:20 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕35cfebb🔪2016-02-29 15:55:03 -0800🔪Mike Bostock🔪Clarify default field function.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7f1c646🔪2016-02-29 15:37:16 -0800🔪Mike Bostock🔪0.2.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d9abb1d🔪2016-02-29 15:32:47 -0800🔪Mike Bostock🔪Fix when daylight saving begins at midnight.🔪Floor after offset because the previous day may be missing midnight.
+
+ src/interval.js      | 20 ++++++++------------
+ test/month-test.js   |  3 +++
+ test/test-time-zones | 53 +++++++++++++++++++++++++++++++++++++---------------
+ 3 files changed, 49 insertions(+), 27 deletions(-)
+
+☕bb6665b🔪2016-02-29 14:44:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕685c2d9🔪2016-02-29 14:42:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕30103d8🔪2016-02-29 14:41:34 -0800🔪Mike Bostock🔪More examples in README.🔪
+ README.md | 46 +++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 43 insertions(+), 3 deletions(-)
+
+☕e306f39🔪2016-02-24 15:56:29 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕7d2343f🔪2016-02-23 21:33:22 -0800🔪Mike Bostock🔪0.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕256d1b5🔪2016-02-23 21:32:54 -0800🔪Mike Bostock🔪Fix #2, again. And add tests!🔪
+ src/interval.js      | 2 +-
+ test/test-time-zones | 3 +++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+☕36b6fb0🔪2016-02-23 21:21:29 -0800🔪Mike Bostock🔪0.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕46472de🔪2016-02-23 21:20:53 -0800🔪Mike Bostock🔪Port remaining tests.🔪Also fix a bug in d3.timeMonth.range where the start month could be skipped.
+
+ src/interval.js        |   4 +-
+ test/day-test.js       |   6 ++
+ test/hour-test.js      | 134 ++++++++++++++++++++++++++++++
+ test/interval-test.js  |   5 ++
+ test/minute-test.js    |  96 ++++++++++++++++++++++
+ test/month-test.js     | 126 ++++++++++++++++++++++++++++
+ test/second-test.js    | 101 +++++++++++++++++++++++
+ test/test-time-zones   |  18 ++--
+ test/utcHour-test.js   | 135 ++++++++++++++++++++++++++++++
+ test/utcMinute-test.js |  96 ++++++++++++++++++++++
+ test/utcMonth-test.js  | 218 +++++++++++++++++++++++++++++++++++++++++++++++++
+ test/utcSecond-test.js | 101 +++++++++++++++++++++++
+ test/utcWeek-test.js   | 127 ++++++++++++++++++++++++++++
+ test/utcYear-test.js   |  88 ++++++++++++++++++++
+ test/week-test.js      | 127 ++++++++++++++++++++++++++++
+ test/year-test.js      |  88 ++++++++++++++++++++
+ 16 files changed, 1462 insertions(+), 8 deletions(-)
+
+☕162f13a🔪2016-02-23 19:40:29 -0800🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕efac855🔪2016-02-23 19:38:13 -0800🔪Mike Bostock🔪Fix #10 - infinite loop in d3.timeHour.range.🔪In Chrome and V8, date.setMinutes(0, 0, 0) loses an hour at the start of
+daylight savings, rather than rounding down to the start of the current hour:
+
+    var date = new Date(1478419200000); // Sun Nov 06 2016 01:00:00 GMT-0700 (PDT)
+    date.setTime(+date + 1 * 36e5); // Sun Nov 06 2016 01:00:00 GMT-0800 (PST)
+    date.setMinutes(0, 0, 0); // Sun Nov 06 2016 01:00:00 GMT-0700 (PDT)
+
+Rather than rely on setMinutes, the hour, minute and second local time intervals
+now round manually while observing the timezone offset.
+
+ index.js                      |  4 ++--
+ package.json                  |  2 +-
+ src/day.js                    |  3 ++-
+ src/duration.js (new)         |  5 +++++
+ src/hour.js                   |  9 ++++++---
+ src/minute.js                 |  7 ++++---
+ src/second.js                 |  9 +++++----
+ src/utcDay.js                 |  3 ++-
+ src/utcHour.js                |  5 +++--
+ src/utcMinute.js              |  5 +++--
+ src/utcSecond.js (gone)       | 11 -----------
+ src/utcWeek.js                |  3 ++-
+ src/week.js                   |  3 ++-
+ test/hour-test.js             | 10 ++++++++++
+ test/minute-test.js           | 10 ++++++++++
+ test/second-test.js           | 10 ++++++++++
+ test/test-time-zones (new +x) | 18 ++++++++++++++++++
+ 17 files changed, 85 insertions(+), 32 deletions(-)
+
+☕9d289ee🔪2016-02-21 16:30:46 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3f8d941🔪2016-01-29 10:37:53 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕30fa175🔪2016-01-20 17:23:22 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new) | 12 ++++++++++++
+ package.json    |  2 +-
+ src/interval.js |  2 +-
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+
+☕3d3e714🔪2016-01-07 14:08:31 -0800🔪Mike Bostock🔪Prefix exported symbols with “time”.🔪
+ README.md                   | 186 +++++++++++++++++-----------------
+ index.js                    |  64 ++++++------
+ package.json                |   2 +-
+ test/day-test.js            | 236 ++++++++++++++++++++++----------------------
+ test/friday-test.js         |  48 ++++-----
+ test/hour-test.js           |   6 +-
+ test/interval-test.js       |  44 ++++-----
+ test/millisecond-test.js    |  10 +-
+ test/minute-test.js         |   6 +-
+ test/monday-test.js         |  52 +++++-----
+ test/month-test.js          | 170 +++++++++++++++----------------
+ test/saturday-test.js       |  48 ++++-----
+ test/second-test.js         |   6 +-
+ test/sunday-test.js         | 140 +++++++++++++-------------
+ test/thursday-test.js       |  48 ++++-----
+ test/tuesday-test.js        |  48 ++++-----
+ test/utcMillisecond-test.js |   4 +-
+ test/wednesday-test.js      |  48 ++++-----
+ test/week-test.js           |   8 +-
+ test/year-test.js           |   4 +-
+ 20 files changed, 589 insertions(+), 589 deletions(-)
+
+☕986f646🔪2015-12-18 14:29:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cab18a7🔪2015-12-18 14:28:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕3a2b2d9🔪2015-12-18 14:23:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 164 ++++++++++++++++++++++++++++-------------------------------
+ package.json |   2 +-
+ 2 files changed, 80 insertions(+), 86 deletions(-)
+
+☕6c7791d🔪2015-11-30 12:13:04 -0800🔪Mike Bostock🔪Add interval.every.🔪
+ README.md                         | 14 ++++++++++----
+ package.json                      |  2 +-
+ src/day.js                        |  2 ++
+ src/hour.js                       |  2 ++
+ src/interval.js                   | 23 +++++++++++++++++------
+ src/millisecond.js                | 18 +++++++++++++++++-
+ src/minute.js                     |  2 ++
+ src/month.js                      |  2 ++
+ src/second.js                     |  2 ++
+ src/utcDay.js                     |  2 ++
+ src/utcHour.js                    |  2 ++
+ src/utcMinute.js                  |  2 ++
+ src/utcMonth.js                   |  2 ++
+ src/utcSecond.js                  |  2 ++
+ src/utcYear.js                    |  2 ++
+ src/year.js                       |  2 ++
+ test/day-test.js                  |  7 +++++++
+ test/hour-test.js (new)           |  9 +++++++++
+ test/interval-test.js             | 18 ++++++++++++++++++
+ test/millisecond-test.js (new)    | 11 +++++++++++
+ test/minute-test.js (new)         |  9 +++++++++
+ test/month-test.js                |  5 +++++
+ test/second-test.js (new)         |  9 +++++++++
+ test/utcDay-test.js               |  7 +++++++
+ test/utcHour-test.js (new)        |  9 +++++++++
+ test/utcMillisecond-test.js (new) |  7 +++++++
+ test/utcMinute-test.js (new)      |  9 +++++++++
+ test/utcMonth-test.js (new)       |  8 ++++++++
+ test/utcSecond-test.js (new)      |  9 +++++++++
+ test/utcWeek-test.js              |  8 +++++++-
+ test/utcYear-test.js (new)        |  8 ++++++++
+ test/week-test.js                 |  8 +++++++-
+ test/year-test.js (new)           |  8 ++++++++
+ 33 files changed, 216 insertions(+), 14 deletions(-)
+
+☕9d5e262🔪2015-11-11 11:28:30 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕af0b9c2🔪2015-11-06 15:58:49 -0800🔪Mike Bostock🔪Clarify what happens if step isn’t an integer.🔪Related mbostock/d3#2611.
+
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5f0bb59🔪2015-11-04 13:53:54 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5baa55e🔪2015-11-03 23:54:36 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕e7c6ef5🔪2015-07-09 18:49:55 -0700🔪Mike Bostock🔪Document millisecond interval.🔪
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕e294921🔪2015-07-09 18:45:31 -0700🔪Mike Bostock🔪Add millisecond interval.🔪Related mbostock/d3#2490.
+
+ index.js                 | 5 +++++
+ src/millisecond.js (new) | 9 +++++++++
+ 2 files changed, 14 insertions(+)
+
+☕fb8ffcb🔪2015-07-06 09:47:42 -0700🔪Mike Bostock🔪Allow custom intervals. Fixes #6.🔪
+ README.md                   | 10 ++++++++
+ index.js                    |  2 ++
+ package.json                |  2 +-
+ src/day.js                  |  4 +--
+ src/hour.js                 |  4 +--
+ src/minute.js               |  4 +--
+ src/month.js                |  4 +--
+ src/second.js               |  4 +--
+ src/utcDay.js               |  4 +--
+ src/utcHour.js              |  4 +--
+ src/utcMinute.js            |  4 +--
+ src/utcMonth.js             |  4 +--
+ src/utcSecond.js            |  4 +--
+ src/utcWeek.js              |  4 +--
+ src/utcYear.js              |  4 +--
+ src/week.js                 |  4 +--
+ src/year.js                 |  4 +--
+ test/interval-test.js (new) | 60 +++++++++++++++++++++++++++++++++++++++++++++
+ 18 files changed, 101 insertions(+), 29 deletions(-)
+
+☕0b9ea7a🔪2015-07-01 12:57:38 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bf364c1🔪2015-07-01 11:28:46 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac32a41🔪2015-06-30 23:10:11 -0700🔪Mike Bostock🔪Set description.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9472f1f🔪2015-06-30 22:46:11 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b4c170c🔪2015-06-30 22:44:25 -0700🔪Mike Bostock🔪Optimize interval.count. Fixes #5.🔪
+ src/interval.js | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕d2a1d11🔪2015-06-30 21:17:16 -0700🔪Mike Bostock🔪Fix test.date.🔪
+ test/date.js | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕fcb34f9🔪2015-06-30 21:07:35 -0700🔪Mike Bostock🔪Use test.deepEqual for arrays of date.🔪
+ test/day-test.js       | 54 +++++++++++++++++++++++-----------------------
+ test/monday-test.js    | 10 ++++-----
+ test/month-test.js     | 42 ++++++++++++++++++------------------
+ test/sunday-test.js    | 58 +++++++++++++++++++++++++-------------------------
+ test/utcMonday-test.js | 10 ++++-----
+ test/utcSunday-test.js | 58 +++++++++++++++++++++++++-------------------------
+ 6 files changed, 116 insertions(+), 116 deletions(-)
+
+☕e39fb42🔪2015-06-30 20:59:02 -0700🔪Mike Bostock🔪Use deepEqual, not dateEqual.🔪
+ test/dateEqual.js (gone)  |  10 ----
+ test/day-test.js          | 138 +++++++++++++++++++++++-----------------------
+ test/friday-test.js       |  14 ++---
+ test/monday-test.js       |  20 +++----
+ test/month-test.js        | 128 +++++++++++++++++++++---------------------
+ test/saturday-test.js     |  14 ++---
+ test/sunday-test.js       | 102 +++++++++++++++++-----------------
+ test/thursday-test.js     |  14 ++---
+ test/tuesday-test.js      |  14 ++---
+ test/utcDay-test.js       |  74 ++++++++++++-------------
+ test/utcFriday-test.js    |  14 ++---
+ test/utcMonday-test.js    |  20 +++----
+ test/utcSaturday-test.js  |  14 ++---
+ test/utcSunday-test.js    | 102 +++++++++++++++++-----------------
+ test/utcThursday-test.js  |  14 ++---
+ test/utcTuesday-test.js   |  14 ++---
+ test/utcWednesday-test.js |  14 ++---
+ test/wednesday-test.js    |  14 ++---
+ 18 files changed, 345 insertions(+), 389 deletions(-)
+
+☕859c524🔪2015-06-30 10:47:09 -0700🔪Mike Bostock🔪Avoid infinite loop for invalid step.🔪
+ src/interval.js  | 2 +-
+ test/day-test.js | 8 ++++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+☕470b859🔪2015-06-29 12:53:03 -0700🔪Mike Bostock🔪Floor after offset. Fixes #2.🔪
+ src/interval.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4bf4c16🔪2015-06-28 13:11:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b787598🔪2015-06-28 13:11:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e56ec5e🔪2015-06-28 13:10:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a26ece2🔪2015-06-28 13:05:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1aed7c8🔪2015-06-28 13:04:43 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕0498cd8🔪2015-06-28 13:03:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕54e8237🔪2015-06-28 13:03:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕540c272🔪2015-06-28 13:01:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕e303e69🔪2015-06-28 12:56:56 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕103de24🔪2015-06-28 10:26:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b0f6b0c🔪2015-06-28 10:24:12 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a012bfb🔪2015-06-28 10:23:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0e5c1af🔪2015-06-28 10:23:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2ab27cd🔪2015-06-28 10:23:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f967644🔪2015-06-28 10:22:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cdb7320🔪2015-06-28 10:21:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕618b492🔪2015-06-28 10:21:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+☕c6c4b48🔪2015-06-28 10:16:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕2b7904d🔪2015-06-28 10:13:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕ae0b428🔪2015-06-28 10:11:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a92e602🔪2015-06-28 10:11:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕3e2d7bd🔪2015-06-28 10:10:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+☕9bf4f96🔪2015-06-28 09:58:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕ce02741🔪2015-06-28 09:53:29 -0700🔪Mike Bostock🔪Documentation.🔪
+ README.md                 | 41 ++++++++++++++++++++++++++++++++++-------
+ test/day-test.js          | 10 +++++-----
+ test/friday-test.js       |  2 +-
+ test/monday-test.js       |  2 +-
+ test/month-test.js        |  6 +++---
+ test/saturday-test.js     |  2 +-
+ test/sunday-test.js       |  6 +++---
+ test/thursday-test.js     |  2 +-
+ test/tuesday-test.js      |  2 +-
+ test/utcDay-test.js       |  6 +++---
+ test/utcFriday-test.js    |  2 +-
+ test/utcMonday-test.js    |  2 +-
+ test/utcSaturday-test.js  |  2 +-
+ test/utcSunday-test.js    |  6 +++---
+ test/utcThursday-test.js  |  2 +-
+ test/utcTuesday-test.js   |  2 +-
+ test/utcWednesday-test.js |  2 +-
+ test/wednesday-test.js    |  2 +-
+ 18 files changed, 63 insertions(+), 36 deletions(-)
+
+☕d491e11🔪2015-06-27 23:29:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1da590d🔪2015-06-27 23:18:17 -0700🔪Mike Bostock🔪Rename tests to match documentation.🔪
+ test/day-test.js       | 10 +++++-----
+ test/month-test.js     | 10 +++++-----
+ test/sunday-test.js    | 10 +++++-----
+ test/utcDay-test.js    | 10 +++++-----
+ test/utcSunday-test.js | 10 +++++-----
+ 5 files changed, 25 insertions(+), 25 deletions(-)
+
+☕15fdf2e🔪2015-06-27 23:15:07 -0700🔪Mike Bostock🔪Order semantically.🔪
+ index.js | 59 ++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 30 insertions(+), 29 deletions(-)
+
+☕9e62f85🔪2015-06-27 23:09:13 -0700🔪Mike Bostock🔪Centralize count floor.🔪Assuming floori and count are implemented correctly, this floor should actually
+be unnecessary. But it seems like a reasonable precaution.
+
+ src/day.js      | 2 +-
+ src/interval.js | 2 +-
+ src/week.js     | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕805a00f🔪2015-06-27 22:54:48 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕63689b8🔪2015-06-27 22:54:20 -0700🔪Mike Bostock🔪Count is not defined on filtered intervals.🔪
+ src/interval.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5460624🔪2015-06-27 22:48:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8ca25e6🔪2015-06-27 22:48:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4cd920b🔪2015-06-27 22:47:37 -0700🔪Mike Bostock🔪Generic interval.count.🔪
+ README.md                              | 79 ++++++++++------------------------
+ index.js                               | 22 ----------
+ src/day.js                             |  2 +
+ src/dayOfYear.js (gone)                |  6 ---
+ src/hour.js                            |  2 +
+ src/interval.js                        |  9 +++-
+ src/minute.js                          |  2 +
+ src/month.js                           |  2 +
+ src/second.js                          |  2 +
+ src/utcDay.js                          |  2 +
+ src/utcDayOfYear.js (gone)             |  5 ---
+ src/utcHour.js                         |  2 +
+ src/utcMinute.js                       |  2 +
+ src/utcMonth.js                        |  2 +
+ src/utcSecond.js                       |  2 +
+ src/utcWeek.js                         |  2 +
+ src/utcWeekOfYear.js (gone)            | 17 --------
+ src/utcYear.js                         |  2 +
+ src/week.js                            |  2 +
+ src/weekOfYear.js (gone)               | 17 --------
+ src/year.js                            |  2 +
+ test/day-test.js                       | 44 +++++++++++++++++--
+ test/dayOfYear-test.js (gone)          | 51 ----------------------
+ test/friday-test.js                    | 39 ++++++++++++++++-
+ test/fridayOfYear-test.js (gone)       | 44 -------------------
+ test/monday-test.js                    | 40 ++++++++++++++++-
+ test/mondayOfYear-test.js (gone)       | 43 ------------------
+ test/month-test.js                     | 16 +++++--
+ test/saturday-test.js                  | 39 ++++++++++++++++-
+ test/saturdayOfYear-test.js (gone)     | 44 -------------------
+ test/sunday-test.js                    | 50 ++++++++++++++++++---
+ test/sundayOfYear-test.js (gone)       | 43 ------------------
+ test/thursday-test.js                  | 38 +++++++++++++++-
+ test/thursdayOfYear-test.js (gone)     | 43 ------------------
+ test/tuesday-test.js                   | 38 +++++++++++++++-
+ test/tuesdayOfYear-test.js (gone)      | 43 ------------------
+ test/utcDay-test.js                    | 40 ++++++++++++++++-
+ test/utcDayOfYear-test.js (gone)       | 51 ----------------------
+ test/utcFriday-test.js                 | 39 ++++++++++++++++-
+ test/utcFridayOfYear-test.js (gone)    | 44 -------------------
+ test/utcMonday-test.js                 | 40 ++++++++++++++++-
+ test/utcMondayOfYear-test.js (gone)    | 43 ------------------
+ test/utcSaturday-test.js               | 39 ++++++++++++++++-
+ test/utcSaturdayOfYear-test.js (gone)  | 44 -------------------
+ test/utcSunday-test.js                 | 50 ++++++++++++++++++---
+ test/utcSundayOfYear-test.js (gone)    | 43 ------------------
+ test/utcThursday-test.js               | 38 +++++++++++++++-
+ test/utcThursdayOfYear-test.js (gone)  | 43 ------------------
+ test/utcTuesday-test.js                | 38 +++++++++++++++-
+ test/utcTuesdayOfYear-test.js (gone)   | 43 ------------------
+ test/utcWednesday-test.js              | 38 +++++++++++++++-
+ test/utcWednesdayOfYear-test.js (gone) | 43 ------------------
+ test/utcWeekOfYear-test.js (gone)      |  7 ---
+ test/wednesday-test.js                 | 38 +++++++++++++++-
+ test/wednesdayOfYear-test.js (gone)    | 43 ------------------
+ test/weekOfYear-test.js (gone)         |  7 ---
+ 56 files changed, 686 insertions(+), 883 deletions(-)
+
+☕4ec2c8a🔪2015-06-27 12:42:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f41f968🔪2015-06-27 11:51:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2d6be91🔪2015-06-27 11:50:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 28 ++++++++++++++--------------
+ 1 file changed, 14 insertions(+), 14 deletions(-)
+
+☕d199f63🔪2015-06-27 11:49:54 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+☕3ff5c3c🔪2015-06-27 11:23:09 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 41 +++++++++++++++++++++++++++++++----------
+ 1 file changed, 31 insertions(+), 10 deletions(-)
+
+☕d6cb41e🔪2015-06-27 11:21:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕44f3704🔪2015-06-27 11:20:18 -0700🔪Mike Bostock🔪Document aliases.🔪
+ README.md | 115 ++++++++++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 98 insertions(+), 17 deletions(-)
+
+☕fb73480🔪2015-06-27 11:14:03 -0700🔪Mike Bostock🔪Add range aliases.🔪
+ index.js                  | 30 ++++++++++++++++++
+ src/interval.js           | 78 ++++++++++++++++++++++++++---------------------
+ test/day-test.js          | 10 ++++++
+ test/friday-test.js       |  5 +++
+ test/monday-test.js       |  5 +++
+ test/month-test.js        |  5 +++
+ test/saturday-test.js     |  5 +++
+ test/sunday-test.js       |  5 +++
+ test/thursday-test.js     |  5 +++
+ test/tuesday-test.js      |  5 +++
+ test/utcDay-test.js       |  5 +++
+ test/utcFriday-test.js    |  5 +++
+ test/utcMonday-test.js    |  5 +++
+ test/utcSaturday-test.js  |  5 +++
+ test/utcSunday-test.js    |  5 +++
+ test/utcThursday-test.js  |  5 +++
+ test/utcTuesday-test.js   |  5 +++
+ test/utcWednesday-test.js |  5 +++
+ test/wednesday-test.js    |  5 +++
+ 19 files changed, 163 insertions(+), 35 deletions(-)
+
+☕7cc51dc🔪2015-06-26 22:53:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕141a018🔪2015-06-26 22:48:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+☕ad708c4🔪2015-06-26 22:46:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e837a98🔪2015-06-26 22:44:28 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕43c9c8a🔪2015-06-26 22:43:51 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕d35b310🔪2015-06-26 22:41:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕8098c44🔪2015-06-26 22:40:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕508a55b🔪2015-06-26 22:39:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 89 ++++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 45 insertions(+), 44 deletions(-)
+
+☕1ec6fb3🔪2015-06-26 22:32:50 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10a9a4f🔪2015-06-26 22:32:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕94febc6🔪2015-06-26 22:31:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕8629fa7🔪2015-06-26 22:31:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕88cc476🔪2015-06-26 22:30:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4fb0902🔪2015-06-26 22:29:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 45 ++++++++++++++-------------------------------
+ 1 file changed, 14 insertions(+), 31 deletions(-)
+
+☕5989c05🔪2015-06-26 22:28:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕90e5c36🔪2015-06-26 22:28:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕97165d0🔪2015-06-26 22:27:15 -0700🔪Mike Bostock🔪Initial documentation.🔪
+ README.md | 131 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 131 insertions(+)
+
+☕f18aec0🔪2015-06-26 21:09:21 -0700🔪Mike Bostock🔪More range tests.🔪
+ test/monday-test.js    |  9 ++++++++
+ test/sunday-test.js    |  2 +-
+ test/utcMonday-test.js |  9 ++++++++
+ test/utcSunday-test.js | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 75 insertions(+), 1 deletion(-)
+
+☕b1f09e0🔪2015-06-26 21:07:15 -0700🔪Mike Bostock🔪Tests for sunday.range.🔪
+ test/sunday-test.js | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+☕14f8c15🔪2015-06-26 21:06:25 -0700🔪Mike Bostock🔪Tests for sunday.range.🔪
+ test/sunday-test.js | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 47 insertions(+)
+
+☕9e39f42🔪2015-06-26 21:03:11 -0700🔪Mike Bostock🔪Fix range step.🔪
+ src/interval.js          |   3 +-
+ test/day-test.js         |  28 ++++++---
+ test/month-test.js (new) | 159 +++++++++++++++++++++++++++++++++++++++++++++++
+ test/sunday-test.js      |   8 +--
+ test/utcDay-test.js      |  12 ++--
+ test/utcSunday-test.js   |   8 +--
+ 6 files changed, 194 insertions(+), 24 deletions(-)
+
+☕ea7a7f0🔪2015-06-26 20:43:12 -0700🔪Mike Bostock🔪Consolidate DST tests.🔪
+ test/day-test.js       | 14 +++-----------
+ test/sunday-test.js    | 12 ++----------
+ test/utcDay-test.js    | 12 ++----------
+ test/utcSunday-test.js | 12 ++----------
+ 4 files changed, 9 insertions(+), 41 deletions(-)
+
+☕78fe878🔪2015-06-26 20:36:11 -0700🔪Mike Bostock🔪Inline day floor.🔪
+ src/day.js      | 6 ++----
+ src/month.js    | 3 +--
+ src/utcDay.js   | 6 ++----
+ src/utcMonth.js | 3 +--
+ src/utcWeek.js  | 3 +--
+ src/utcYear.js  | 3 +--
+ src/week.js     | 3 +--
+ src/year.js     | 3 +--
+ 8 files changed, 10 insertions(+), 20 deletions(-)
+
+☕1ee9c6c🔪2015-06-26 20:34:23 -0700🔪Mike Bostock🔪Don’t export unused floor functions.🔪
+ src/hour.js      |  6 ++----
+ src/minute.js    |  6 ++----
+ src/month.js     | 10 ++++------
+ src/second.js    |  6 ++----
+ src/utcHour.js   |  6 ++----
+ src/utcMinute.js |  6 ++----
+ src/utcMonth.js  | 10 ++++------
+ src/utcSecond.js |  6 ++----
+ src/utcWeek.js   |  4 ++--
+ src/utcYear.js   | 10 ++++------
+ src/week.js      |  4 ++--
+ src/year.js      | 10 ++++------
+ 12 files changed, 32 insertions(+), 52 deletions(-)
+
+☕968567f🔪2015-06-26 20:05:57 -0700🔪Mike Bostock🔪Add interval.filter.🔪
+ src/interval.js | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+☕f9f30ba🔪2015-06-26 20:05:38 -0700🔪Mike Bostock🔪Fix month.offset.🔪
+ src/month.js    | 2 +-
+ src/utcMonth.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕66a13c5🔪2015-06-26 19:59:52 -0700🔪Mike Bostock🔪Add step to interval.range.🔪
+ index.js        | 6 +++---
+ src/interval.js | 9 +++++----
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+☕5d6f55c🔪2015-06-26 13:27:25 -0700🔪Mike Bostock🔪Add tests for weekOfYear variants.🔪
+ test/fridayOfYear-test.js (new)       | 44 +++++++++++++++++++++++++++++++++++
+ test/mondayOfYear-test.js (new)       | 43 ++++++++++++++++++++++++++++++++++
+ test/saturdayOfYear-test.js (new)     | 44 +++++++++++++++++++++++++++++++++++
+ test/sundayOfYear-test.js (new)       | 43 ++++++++++++++++++++++++++++++++++
+ test/thursdayOfYear-test.js (new)     | 43 ++++++++++++++++++++++++++++++++++
+ test/tuesdayOfYear-test.js (new)      | 43 ++++++++++++++++++++++++++++++++++
+ test/utcFridayOfYear-test.js (new)    | 44 +++++++++++++++++++++++++++++++++++
+ test/utcMondayOfYear-test.js (new)    | 43 ++++++++++++++++++++++++++++++++++
+ test/utcSaturdayOfYear-test.js (new)  | 44 +++++++++++++++++++++++++++++++++++
+ test/utcSundayOfYear-test.js (new)    | 43 ++++++++++++++++++++++++++++++++++
+ test/utcThursdayOfYear-test.js (new)  | 43 ++++++++++++++++++++++++++++++++++
+ test/utcTuesdayOfYear-test.js (new)   | 43 ++++++++++++++++++++++++++++++++++
+ test/utcWednesdayOfYear-test.js (new) | 43 ++++++++++++++++++++++++++++++++++
+ test/utcWeekOfYear-test.js (new)      |  7 ++++++
+ test/wednesdayOfYear-test.js (new)    | 43 ++++++++++++++++++++++++++++++++++
+ test/weekOfYear-test.js (new)         |  7 ++++++
+ 16 files changed, 620 insertions(+)
+
+☕33c5d7a🔪2015-06-26 10:54:18 -0700🔪Mike Bostock🔪Add utcWeekOfYear.🔪
+ index.js                   |  9 +++++++++
+ src/utcWeekOfYear.js (new) | 17 +++++++++++++++++
+ 2 files changed, 26 insertions(+)
+
+☕e58e737🔪2015-06-26 10:46:39 -0700🔪Mike Bostock🔪Add weekOfYear methods.🔪
+ index.js                |  9 +++++++++
+ src/weekOfYear.js (new) | 17 +++++++++++++++++
+ 2 files changed, 26 insertions(+)
+
+☕1fe59b1🔪2015-06-26 10:13:13 -0700🔪Mike Bostock🔪More weekday tests.🔪
+ test/friday-test.js (new)       | 15 +++++++++++++++
+ test/monday-test.js (new)       | 15 +++++++++++++++
+ test/saturday-test.js (new)     | 15 +++++++++++++++
+ test/thursday-test.js (new)     | 15 +++++++++++++++
+ test/tuesday-test.js (new)      | 15 +++++++++++++++
+ test/utcFriday-test.js (new)    | 15 +++++++++++++++
+ test/utcMonday-test.js (new)    | 15 +++++++++++++++
+ test/utcSaturday-test.js (new)  | 15 +++++++++++++++
+ test/utcThursday-test.js (new)  | 15 +++++++++++++++
+ test/utcTuesday-test.js (new)   | 15 +++++++++++++++
+ test/utcWednesday-test.js (new) | 15 +++++++++++++++
+ test/wednesday-test.js (new)    | 15 +++++++++++++++
+ 12 files changed, 180 insertions(+)
+
+☕0d131d4🔪2015-06-26 10:04:39 -0700🔪Mike Bostock🔪Rename to utcSunday.🔪
+ test/utcSunday-test.js (new) | 88 ++++++++++++++++++++++++++++++++++++++++++++
+ test/utcWeek-test.js         | 87 ++-----------------------------------------
+ 2 files changed, 91 insertions(+), 84 deletions(-)
+
+☕d5e020c🔪2015-06-26 08:49:18 -0700🔪Mike Bostock🔪Add weekday methods.🔪
+ index.js                  | 18 ++++++++--
+ src/utcWeek.js            | 23 +++++++++----
+ src/week.js               | 23 +++++++++----
+ test/sunday-test.js (new) | 88 +++++++++++++++++++++++++++++++++++++++++++++++
+ test/week-test.js         | 87 ++--------------------------------------------
+ 5 files changed, 139 insertions(+), 100 deletions(-)
+
+☕768f617🔪2015-06-26 08:35:38 -0700🔪Mike Bostock🔪Add dayOfYear methods.🔪
+ index.js                        | 14 +++++++----
+ src/dayOfYear.js (new)          |  6 +++++
+ src/utcDayOfYear.js (new)       |  5 ++++
+ test/dayOfYear-test.js (new)    | 51 +++++++++++++++++++++++++++++++++++++++++
+ test/utcDayOfYear-test.js (new) | 51 +++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 122 insertions(+), 5 deletions(-)
+
+☕8cbd49c🔪2015-06-26 08:07:40 -0700🔪Mike Bostock🔪Centralize floor.🔪
+ src/day.js       |  2 +-
+ src/hour.js      |  2 +-
+ src/interval.js  | 10 +++++-----
+ src/minute.js    |  2 +-
+ src/month.js     |  2 +-
+ src/second.js    |  2 +-
+ src/utcDay.js    |  2 +-
+ src/utcHour.js   |  2 +-
+ src/utcMinute.js |  2 +-
+ src/utcMonth.js  |  2 +-
+ src/utcSecond.js |  2 +-
+ src/utcWeek.js   |  2 +-
+ src/utcYear.js   |  2 +-
+ src/week.js      |  2 +-
+ src/year.js      |  2 +-
+ 15 files changed, 19 insertions(+), 19 deletions(-)
+
+☕84a9460🔪2015-06-25 11:33:03 -0700🔪Mike Bostock🔪Add interval.range and day.range tests.🔪
+ src/interval.js      |  9 +++++++++
+ test/day-test.js     | 46 +++++++++++++++++++++++++++++++++++++++++++++-
+ test/utcDay-test.js  |  2 +-
+ test/utcWeek-test.js |  2 +-
+ test/week-test.js    |  2 +-
+ 5 files changed, 57 insertions(+), 4 deletions(-)
+
+☕6d994a9🔪2015-06-24 16:17:34 -0700🔪Mike Bostock🔪Add tests for week and utcWeek.🔪
+ test/utcWeek-test.js (new) | 88 ++++++++++++++++++++++++++++++++++++++++++++++
+ test/week-test.js (new)    | 88 ++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 176 insertions(+)
+
+☕4c895b1🔪2015-06-24 16:11:21 -0700🔪Mike Bostock🔪Add UTC intervals and utcDay test.🔪
+ index.js                  | 16 +++++++-
+ src/hour.js               |  2 +-
+ src/minute.js             |  2 +-
+ src/second.js             |  2 +-
+ src/utcDay.js (new)       |  9 +++++
+ src/utcHour.js (new)      |  9 +++++
+ src/utcMinute.js (new)    |  9 +++++
+ src/utcMonth.js (new)     | 11 ++++++
+ src/utcSecond.js (new)    |  9 +++++
+ src/utcWeek.js (new)      | 11 ++++++
+ src/utcYear.js (new)      | 11 ++++++
+ test/utcDay-test.js (new) | 95 +++++++++++++++++++++++++++++++++++++++++++++++
+ 12 files changed, 182 insertions(+), 4 deletions(-)
+
+☕f5a9f67🔪2015-06-24 15:44:47 -0700🔪Mike Bostock🔪Add interval.offset and day tests.🔪
+ package.json            |   2 +-
+ src/interval.js         |   3 ++
+ test/date.js (new)      |  31 ++++++++++++
+ test/dateEqual.js (new) |  10 ++++
+ test/day-test.js (new)  | 128 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 173 insertions(+), 1 deletion(-)
+
+☕8f0dbd1🔪2015-06-24 11:15:50 -0700🔪Mike Bostock🔪Add interval.round.🔪
+ src/interval.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+☕14002c8🔪2015-06-24 11:08:47 -0700🔪Mike Bostock🔪Rename to d3-time.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d0f409b🔪2015-06-24 11:08:19 -0700🔪Mike Bostock🔪Rename to d3-time.🔪
+ d3-time-interval.sublime-project => d3-time.sublime-project |  0
+ package.json                                                | 13 +++++++------
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+☕2d40a44🔪2015-06-24 11:06:12 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                       |  5 +++++
+ .npmignore (new)                       |  3 +++
+ LICENSE (new)                          | 27 +++++++++++++++++++++++++++
+ README.md (new)                        | 15 +++++++++++++++
+ d3-time-interval.sublime-project (new) | 13 +++++++++++++
+ index.js (new)                         | 17 +++++++++++++++++
+ package.json (new)                     | 33 +++++++++++++++++++++++++++++++++
+ src/day.js (new)                       |  9 +++++++++
+ src/hour.js (new)                      |  9 +++++++++
+ src/interval.js (new)                  | 10 ++++++++++
+ src/minute.js (new)                    |  9 +++++++++
+ src/month.js (new)                     | 11 +++++++++++
+ src/second.js (new)                    |  9 +++++++++
+ src/week.js (new)                      | 11 +++++++++++
+ src/year.js (new)                      | 11 +++++++++++
+ 15 files changed, 192 insertions(+)

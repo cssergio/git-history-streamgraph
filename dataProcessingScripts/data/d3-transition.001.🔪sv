@@ -1,0 +1,2015 @@
+☕c1f17d9🔪2021-06-11 17:00:00 -0400🔪Curran Kelleher🔪Use const instead of var in README (#118)🔪Co-authored-by: Philippe Rivière <fil@rezo.net>
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f998abc🔪2021-06-09 16:51:51 -0700🔪Mike Bostock🔪fix external🔪
+ rollup.config.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c4c94c4🔪2021-06-09 16:50:21 -0700🔪Mike Bostock🔪3.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7a42c6🔪2021-06-09 16:50:17 -0700🔪Mike Bostock🔪update dependencies🔪
+ yarn.lock | 48 ++++++++++++++++++++++++------------------------
+ 1 file changed, 24 insertions(+), 24 deletions(-)
+
+☕cb1fc2d🔪2021-06-09 16:49:44 -0700🔪Mike Bostock🔪push on prepublishOnly🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕5caa287🔪2021-06-09 16:48:40 -0700🔪Mike Bostock🔪fix d3-selection peerDependency🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕98e84f0🔪2021-06-07 16:57:05 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa44264🔪2021-06-07 16:55:49 -0700🔪Mike Bostock🔪Update README🔪
+ README.md | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+☕692f025🔪2021-06-07 16:53:13 -0700🔪Mike Bostock🔪fix #121; add transition.selectChild[ren]🔪
+ src/transition/index.js                      |  2 ++
+ test/transition/selectChild-test.js (new)    | 20 ++++++++++++++++++++
+ test/transition/selectChildren-test.js (new) | 20 ++++++++++++++++++++
+ 3 files changed, 42 insertions(+)
+
+☕1ac7984🔪2021-06-07 16:48:18 -0700🔪Mike Bostock🔪Precise sideEffects. (#115)🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕d1a518c🔪2021-06-08 01:47:13 +0200🔪Philippe Rivière🔪Adopt type=module (#123)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+**TESTS NOT WORKING**
+
+* fix LICENSE
+
+* Update README
+
+* remove Sublime project
+
+* add eslint.json
+
+* related d3/d3#3502; extract copyrights from LICENSE
+
+* update dependencies
+
+* remove duplicate .eslintrc
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                       |    4 +-
+ .github/eslint.json (new)            |   18 +
+ .github/workflows/node.js.yml (new)  |   30 +
+ LICENSE                              |   71 +-
+ README.md                            |   34 +-
+ d3-transition.sublime-project (gone) |   17 -
+ package.json                         |   63 +-
+ rollup.config.js                     |   10 +-
+ test/.eslintrc (gone)                |   15 -
+ test/.eslintrc.json (new)            |   13 +
+ test/active-test.js                  |  178 ++-
+ test/error-test.js                   |  138 +--
+ test/interrupt-test.js               |   48 +-
+ test/jsdom.js                        |   19 +-
+ test/selection/interrupt-test.js     |  500 ++++----
+ test/selection/transition-test.js    |  232 ++--
+ test/transition/attr-test.js         |  550 ++++-----
+ test/transition/attrTween-test.js    |  200 ++--
+ test/transition/call-test.js         |   12 +-
+ test/transition/delay-test.js        |  113 +-
+ test/transition/duration-test.js     |  113 +-
+ test/transition/each-test.js         |   28 +-
+ test/transition/ease-test.js         |  112 +-
+ test/transition/easeVarying-test.js  |   58 +-
+ test/transition/empty-test.js        |   11 +-
+ test/transition/filter-test.js       |   52 +-
+ test/transition/index-test.js        |  103 +-
+ test/transition/merge-test.js        |   48 +-
+ test/transition/node-test.js         |   12 +-
+ test/transition/nodes-test.js        |   12 +-
+ test/transition/on-test.js           |  213 ++--
+ test/transition/remove-test.js       |   64 +-
+ test/transition/select-test.js       |   68 +-
+ test/transition/selectAll-test.js    |   68 +-
+ test/transition/selection-test.js    |   25 +-
+ test/transition/size-test.js         |   22 +-
+ test/transition/state.js (gone)      |    7 -
+ test/transition/style-test.js        |  434 ++++---
+ test/transition/styleTween-test.js   |  212 ++--
+ test/transition/text-test.js         |   92 +-
+ test/transition/textTween-test.js    |   59 +-
+ test/transition/transition-test.js   |   39 +-
+ test/transition/tween-test.js        |  250 ++--
+ yarn.lock                            | 2106 ++++++++++++++++------------------
+ 44 files changed, 3005 insertions(+), 3468 deletions(-)
+
+☕a71a58d🔪2021-03-29 00:53:33 +0900🔪inokawa🔪Fix typo in README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕40d5865🔪2020-08-23 22:04:23 +0200🔪Philippe Rivière🔪d3 dependencies🔪
+ yarn.lock | 39 +++++++++++++++++----------------------
+ 1 file changed, 17 insertions(+), 22 deletions(-)
+
+☕2fa17ff🔪2020-08-23 22:04:06 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 19 ++++++++-----------
+ 1 file changed, 8 insertions(+), 11 deletions(-)
+
+☕df65078🔪2020-08-05 10:19:28 +0200🔪Philippe Rivière🔪v2.0.0-rc.6🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1fe858c🔪2020-07-31 08:28:35 +0200🔪Philippe Rivière🔪v2.0.0-rc.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6635117🔪2020-07-31 08:26:54 +0200🔪Philippe Rivière🔪test transition.each🔪
+ test/transition/each-test.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+☕9485837🔪2020-07-31 08:21:33 +0200🔪Philippe Rivière🔪revert 91990a1e5959c107319a4b59bfcc8f203f2a944b🔪
+ src/transition/end.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕46027fa🔪2020-07-30 16:32:10 -0700🔪Mike Bostock🔪Test transition.size.🔪
+ test/transition/size-test.js | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕ca5ae84🔪2020-07-30 16:28:05 -0700🔪Mike Bostock🔪Symbol.iterator🔪
+ src/transition/index.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕91990a1🔪2020-07-30 13:41:30 +0200🔪Philippe Rivière🔪fix crash on transition.size() fixes https://github.com/d3/d3-transition/issues/112🔪
+ src/transition/end.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕956f0ae🔪2020-07-24 17:01:15 +0200🔪Philippe Rivière🔪v2.0.0-rc.3🔪
+ package.json | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕f49b6dd🔪2020-07-23 13:51:56 +0200🔪Philippe Rivière🔪v2.0.0-rc.2🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2f03929🔪2020-07-23 13:49:18 +0200🔪Philippe Rivière🔪v2.0.0-rc.1🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6fa3c5c🔪2020-07-23 13:32:18 +0200🔪Philippe Rivière🔪v2.0.0-rc1🔪
+ package.json | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+☕70abf61🔪2020-07-23 11:24:04 +0200🔪Philippe Rivière🔪links🔪
+ README.md | 88 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 44 insertions(+), 44 deletions(-)
+
+☕87fb996🔪2020-07-09 16:54:20 +0200🔪Philippe Rivière🔪inline this._id🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/transition/easeVarying.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕a5eed4d🔪2020-07-09 15:30:43 +0200🔪Philippe Rivière🔪transition.easeVarying(factory)🔪closes #107
+(with a nod to #109)
+
+ README.md                                 |  4 +++
+ src/transition/easeVarying.js (new)       | 15 +++++++++++
+ src/transition/index.js                   |  2 ++
+ test/transition/easeVarying-test.js (new) | 43 +++++++++++++++++++++++++++++++
+ 4 files changed, 64 insertions(+)
+
+☕11d2a95🔪2020-07-08 18:01:31 +0200🔪Philippe Rivière🔪size === 0🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/transition/end.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b1a793e🔪2020-07-08 16:03:59 +0200🔪Philippe Rivière🔪document group argument closes #44🔪
+ README.md | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+☕baaf0dd🔪2020-07-08 15:50:10 +0200🔪Philippe Rivière🔪resolve transition.end() immediately when the selection is empty fixes #105🔪
+ src/transition/end.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+☕5e7e124🔪2019-11-18 08:53:11 -0800🔪Mike Bostock🔪1.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cbaaa77🔪2019-11-18 08:53:03 -0800🔪Mike Bostock🔪Set sideEffects: true.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕91b71d2🔪2019-11-17 14:47:09 -0800🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa626f9🔪2019-11-17 14:46:56 -0800🔪Mike Bostock🔪Propagate this to interpolators.🔪
+ src/transition/attrTween.js        | 4 ++--
+ src/transition/styleTween.js       | 2 +-
+ src/transition/textTween.js        | 2 +-
+ test/transition/attrTween-test.js  | 2 +-
+ test/transition/styleTween-test.js | 2 +-
+ 5 files changed, 6 insertions(+), 6 deletions(-)
+
+☕652a7f6🔪2019-11-16 22:30:59 -0800🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac4e423🔪2019-11-16 22:25:37 -0800🔪Mike Bostock🔪Add transition.textTween.🔪
+ README.md                               | 16 +++++++++++++-
+ src/transition/index.js                 |  2 ++
+ src/transition/textTween.js (new)       | 24 +++++++++++++++++++++
+ test/transition/textTween-test.js (new) | 38 +++++++++++++++++++++++++++++++++
+ 4 files changed, 79 insertions(+), 1 deletion(-)
+
+☕495efc2🔪2019-11-16 22:07:05 -0800🔪Mike Bostock🔪Squelch Rollup warning.🔪
+ rollup.config.js | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕5d90ebd🔪2019-07-30 08:10:57 -0700🔪Mike Bostock🔪Related d3/d3#3265.🔪
+ src/active.js                |  4 ++--
+ src/index.js                 |  8 ++++----
+ src/interrupt.js             |  2 +-
+ src/selection/index.js       |  4 ++--
+ src/selection/interrupt.js   |  2 +-
+ src/selection/transition.js  |  4 ++--
+ src/transition/attr.js       |  4 ++--
+ src/transition/delay.js      |  2 +-
+ src/transition/duration.js   |  2 +-
+ src/transition/ease.js       |  2 +-
+ src/transition/end.js        |  2 +-
+ src/transition/filter.js     |  2 +-
+ src/transition/index.js      | 36 ++++++++++++++++++------------------
+ src/transition/merge.js      |  2 +-
+ src/transition/on.js         |  2 +-
+ src/transition/select.js     |  4 ++--
+ src/transition/selectAll.js  |  4 ++--
+ src/transition/style.js      |  6 +++---
+ src/transition/text.js       |  2 +-
+ src/transition/transition.js |  4 ++--
+ src/transition/tween.js      |  2 +-
+ 21 files changed, 50 insertions(+), 50 deletions(-)
+
+☕8889f4d🔪2019-11-16 11:35:17 -0800🔪Mike Bostock🔪1.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6c1c79b🔪2019-11-16 11:32:56 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .npmignore (gone) |   4 -
+ package.json      |  15 +-
+ yarn.lock         | 879 +++++++++++++++++++++++++++++++++++++-----------------
+ 3 files changed, 620 insertions(+), 278 deletions(-)
+
+☕f96cc24🔪2019-11-02 08:23:30 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.3.1 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.3.1 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.3.1...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕be33c53🔪2019-08-09 16:13:26 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+☕6793e9e🔪2019-08-09 15:51:49 -0700🔪Mike Bostock🔪Use explicit files when publishing. d3/d3#3335🔪
+ .npmignore (gone) | 4 ----
+ 1 file changed, 4 deletions(-)
+
+☕7083cb6🔪2019-07-30 08:10:57 -0700🔪Mike Bostock🔪Related d3/d3#3265.🔪
+ src/active.js                |  4 ++--
+ src/index.js                 |  8 ++++----
+ src/interrupt.js             |  2 +-
+ src/selection/index.js       |  4 ++--
+ src/selection/interrupt.js   |  2 +-
+ src/selection/transition.js  |  4 ++--
+ src/transition/attr.js       |  4 ++--
+ src/transition/delay.js      |  2 +-
+ src/transition/duration.js   |  2 +-
+ src/transition/ease.js       |  2 +-
+ src/transition/end.js        |  2 +-
+ src/transition/filter.js     |  2 +-
+ src/transition/index.js      | 36 ++++++++++++++++++------------------
+ src/transition/merge.js      |  2 +-
+ src/transition/on.js         |  2 +-
+ src/transition/select.js     |  4 ++--
+ src/transition/selectAll.js  |  4 ++--
+ src/transition/style.js      |  6 +++---
+ src/transition/text.js       |  2 +-
+ src/transition/transition.js |  4 ++--
+ src/transition/tween.js      |  2 +-
+ 21 files changed, 50 insertions(+), 50 deletions(-)
+
+☕6d3591d🔪2019-07-30 08:04:05 -0700🔪Mike Bostock🔪Fix #59.🔪
+ rollup.config.js                  |  2 +-
+ src/selection/transition.js       |  2 +-
+ test/selection/transition-test.js | 21 +++++++++++++++++++++
+ test/transition/delay-test.js     |  2 --
+ test/transition/duration-test.js  |  2 --
+ test/transition/ease-test.js      |  2 --
+ test/transition/merge-test.js     |  5 +++--
+ 7 files changed, 26 insertions(+), 10 deletions(-)
+
+☕7da8ef2🔪2019-07-30 07:54:35 -0700🔪Mike Bostock🔪Update dependencies. Fixes #92.🔪
+ package.json |  27 +-
+ yarn.lock    | 879 +++++++++++++++++++++++++++++++++++++++++------------------
+ 2 files changed, 629 insertions(+), 277 deletions(-)
+
+☕4b0d77c🔪2019-01-24 17:32:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕a447cef🔪2019-01-24 17:11:02 -0800🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c972b7c🔪2019-01-24 17:10:55 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d66e0c3🔪2019-01-24 17:10:02 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 658 ++++++++++++++++++++++++++------------------------------------
+ 1 file changed, 279 insertions(+), 379 deletions(-)
+
+☕7285f51🔪2019-01-24 16:35:35 -0800🔪Mike Bostock🔪Use anonymous listeners.🔪
+ src/transition/end.js | 25 +++++++++++++++++++++----
+ 1 file changed, 21 insertions(+), 4 deletions(-)
+
+☕e7494d7🔪2018-02-28 10:45:15 -0800🔪Mike Bostock🔪Add transition.end. Fixes #77.🔪
+ src/transition/end.js (new) | 9 +++++++++
+ src/transition/index.js     | 4 +++-
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕d6024da🔪2018-02-28 10:21:51 -0800🔪Mike Bostock🔪Cancel events.🔪Like interrupt, except when a transition is cancelled before it starts. This is
+necessary for transition promises (#77) since we will need to reject promises on
+cancelled transitions.
+
+ README.md                  | 1 +
+ src/interrupt.js           | 2 +-
+ src/transition/schedule.js | 8 +++-----
+ 3 files changed, 5 insertions(+), 6 deletions(-)
+
+☕5a939e1🔪2019-01-24 16:07:52 -0800🔪Mike Bostock🔪Various improvements.🔪Interpolators are now reused across elements with transition.{attr,style},
+improving performance. This is possible because transitions now invoke tween
+functions with this as the current node (like most other functions).
+
+Fix #49 by removing styles at the end of transitions where appropriate.
+
+Fix #89 by removing event listeners where appropriate.
+
+ README.md                     |  6 +++---
+ src/transition/attrTween.js   | 28 ++++++++++++++++++++--------
+ src/transition/schedule.js    |  4 ++--
+ src/transition/style.js       | 34 +++++++++++++++++++++++++++-------
+ src/transition/styleTween.js  | 14 ++++++++++----
+ test/transition/attr-test.js  |  4 ++--
+ test/transition/style-test.js | 28 ++++++++++++++++++++++++++--
+ test/transition/tween-test.js |  2 +-
+ 8 files changed, 91 insertions(+), 29 deletions(-)
+
+☕35cb09a🔪2019-01-24 13:20:20 -0800🔪Mike Bostock🔪Remove errant console.log.🔪
+ src/transition/style.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕fa94c9f🔪2019-01-24 13:11:50 -0800🔪Mike Bostock🔪String coercion and comparison fixes.🔪Fixes #88. Fixes #87.
+
+ src/transition/attr.js        | 54 +++++++++++++++-------------
+ src/transition/style.js       | 45 +++++++++++++-----------
+ test/transition/attr-test.js  | 82 +++++++++++++++++++++++++++++++++++++++++++
+ test/transition/style-test.js | 52 +++++++++++++++++++++++++++
+ 4 files changed, 187 insertions(+), 46 deletions(-)
+
+☕2a44471🔪2018-08-24 14:31:19 -0700🔪Mike Bostock🔪1.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c675d04🔪2018-08-24 14:31:17 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕a3ed1e3🔪2018-08-24 14:00:47 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2ad7833🔪2018-08-24 13:41:40 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 4 ----
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 4 ++++
+ 4 files changed, 12 insertions(+), 11 deletions(-)
+
+☕60f680e🔪2018-08-24 12:24:34 -0700🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b798a7c🔪2018-08-24 12:24:32 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)              |    8 -
+ .eslintrc.json (new)          |   15 +
+ .npmignore                    |    1 +
+ d3-transition.sublime-project |   16 +-
+ package.json                  |   19 +-
+ rollup.config.js              |   42 +-
+ test/transition/index-test.js |    1 -
+ yarn.lock (new)               | 1411 +++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1478 insertions(+), 35 deletions(-)
+
+☕6001cdb🔪2018-02-28 10:13:24 -0800🔪Mike Bostock🔪Update dependencies. Move build to dist.🔪
+ .gitignore                    |  2 +-
+ .npmignore                    |  2 +-
+ d3-transition.sublime-project |  2 +-
+ package.json                  | 18 +++++++++---------
+ rollup.config.js (new)        | 14 ++++++++++++++
+ 5 files changed, 26 insertions(+), 12 deletions(-)
+
+☕f093576🔪2017-11-21 16:51:31 -0500🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d894452🔪2017-07-07 09:39:01 -0700🔪Mike Bostock🔪Document error messages.🔪Related #71.
+
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕e62e442🔪2017-07-07 09:33:34 -0700🔪Mike Bostock🔪Distinct error messages.🔪As an alternative to #71, give these errors distinct messages depending on the
+causing condition.
+
+ src/transition/schedule.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕328cc9a🔪2017-05-15 11:08:56 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8c3f41c🔪2017-05-15 10:44:14 -0700🔪Mike Bostock🔪Update JSDOM.🔪
+ package.json                       |  2 +-
+ test/active-test.js                | 14 ++++++-------
+ test/error-test.js                 | 14 ++++++-------
+ test/interrupt-test.js             |  6 +++---
+ test/jsdom.js (new)                |  5 +++++
+ test/selection/interrupt-test.js   | 40 +++++++++++++++++++-------------------
+ test/selection/transition-test.js  | 22 ++++++++++-----------
+ test/transition/attr-test.js       | 32 +++++++++++++++---------------
+ test/transition/attrTween-test.js  | 22 ++++++++++-----------
+ test/transition/delay-test.js      | 14 ++++++-------
+ test/transition/duration-test.js   | 14 ++++++-------
+ test/transition/ease-test.js       | 14 ++++++-------
+ test/transition/filter-test.js     |  6 +++---
+ test/transition/index-test.js      | 14 ++++++-------
+ test/transition/merge-test.js      |  6 +++---
+ test/transition/on-test.js         | 24 +++++++++++------------
+ test/transition/remove-test.js     |  6 +++---
+ test/transition/select-test.js     |  6 +++---
+ test/transition/selectAll-test.js  |  6 +++---
+ test/transition/selection-test.js  |  4 ++--
+ test/transition/style-test.js      | 24 +++++++++++------------
+ test/transition/styleTween-test.js | 22 ++++++++++-----------
+ test/transition/text-test.js       | 10 +++++-----
+ test/transition/transition-test.js |  4 ++--
+ test/transition/tween-test.js      | 24 +++++++++++------------
+ 25 files changed, 180 insertions(+), 175 deletions(-)
+
+☕7273522🔪2017-05-15 10:41:12 -0700🔪Mike Bostock🔪Update package-preamble.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6e37366🔪2017-05-15 10:39:12 -0700🔪Mike Bostock🔪Update d3-selection dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f3415d8🔪2017-03-08 10:34:36 -0800🔪Mike Bostock🔪Use inline style value, if present.🔪Rather than always starting from the computed style value, transition.style now
+favors the inline value, if present, and only falls back to the computed value
+if an inline value is not present.
+
+By not computing the style value in the common case where an inline style is
+present, this is faster, but more importantly it is more predictable since a
+computed value can be surprisingly different from an inline value, such as when
+the inline value is specified as a percentage.
+
+Related d3/d3-selection#120. Fixes #47.
+
+ README.md               |  4 ++--
+ src/transition/style.js | 14 ++++++--------
+ 2 files changed, 8 insertions(+), 10 deletions(-)
+
+☕9ef6562🔪2017-04-20 09:52:46 -0700🔪Mike Bostock🔪Update README; fix #70.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕9760930🔪2017-03-10 09:42:31 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10193d7🔪2017-03-10 09:42:25 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b1a597🔪2017-03-08 09:53:49 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a3a9d43🔪2017-03-08 09:51:20 -0800🔪Steve Hall🔪Coerce value to string for comparison (#67)🔪getAttribute will always return a string.  It looks like this was in there a few commits back and was over written (?).  Not sure on the syntax, but just wanted to point it out.
+
+* move coerce to string to function call
+
+* coerce value to string for style constants
+
+* use double quotes to match style
+
+* Use double quotes to match style
+
+ src/transition/attr.js  | 2 +-
+ src/transition/style.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕f671708🔪2016-10-20 10:48:30 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eebf331🔪2016-10-20 10:48:25 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 7 +------
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 8 deletions(-)
+
+☕714b2fd🔪2016-10-14 13:43:20 -0700🔪Mike Bostock🔪Report interrupt on running transitions.🔪This code was written when STARTED was the only active state for transitions,
+but now there is both STARTED and RUNNING.
+
+Fixes d3/d3-brush#21.
+
+ src/interrupt.js           |  4 ++--
+ test/transition/on-test.js | 18 +++++++++++++++++-
+ 2 files changed, 19 insertions(+), 3 deletions(-)
+
+☕3d5e0df🔪2016-10-08 16:47:44 -0700🔪Mike Bostock🔪Update README. Related #59.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕f2e6c95🔪2016-09-01 10:42:41 -0700🔪Mike Bostock🔪Fix #56. Document treatment of null.🔪
+ README.md | 18 +++++++++++-------
+ 1 file changed, 11 insertions(+), 7 deletions(-)
+
+☕92751cd🔪2016-08-26 14:02:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕192b6d8🔪2016-08-26 13:53:42 -0700🔪Mike Bostock🔪Slightly stricter test.🔪
+ test/selection/interrupt-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕43c7e6a🔪2016-08-26 13:51:01 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f40b8d5🔪2016-08-26 13:48:26 -0700🔪Mike Bostock🔪Fix comment typo.🔪
+ src/transition/schedule.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c1ca4d7🔪2016-08-24 22:54:12 -0700🔪Mike Bostock🔪Stop immediately after last tick, if possible.🔪Rather than defer stop to the end of the current frame, we now stop the
+transition immediately after its last tick, as before. If a tween or an end
+event listener throws an error, the transition will (eventually) be cleaned up
+on a following tick.
+
+ src/transition/schedule.js | 10 ++++--
+ test/active-test.js        |  8 ++---
+ test/error-test.js (new)   | 89 ++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 100 insertions(+), 7 deletions(-)
+
+☕c066c7c🔪2016-08-24 22:26:48 -0700🔪Mike Bostock🔪Protect against errors.🔪If a transition throws an error on start, we no longer repeatedly restart the
+transition at every frame. Instead, we silently terminate the transition on the
+next frame. If a transition throws an error on end, we no longer run the
+transition forever at t=1. Instead, we silently terminate the transition at the
+end of the current frame (or a subsequent frame, if an error is thrown by
+another timer).
+
+Fixes #48 #55.
+
+ src/transition/schedule.js       | 28 ++++++++++++++++------------
+ test/active-test.js              |  8 ++++----
+ test/selection/interrupt-test.js | 16 +++++++++-------
+ test/transition/on-test.js       |  2 +-
+ 4 files changed, 30 insertions(+), 24 deletions(-)
+
+☕a464ffd🔪2016-08-22 16:37:20 -0700🔪Mike Bostock🔪Better test for #54.🔪
+ test/transition/transition-test.js (new) | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+☕1170d27🔪2016-08-22 16:30:56 -0700🔪Mike Bostock🔪Fix #54.🔪If multiple transitions (of the same name) are starting on the same element
+during the same frame, allow the preceeding transition to tick once (and
+possibly end naturally) before starting the following transition.
+
+ src/transition/schedule.js         | 15 ++++++++++----
+ test/selection/interrupt-test.js   | 41 +++++++++++++++++++-------------------
+ test/transition/attrTween-test.js  |  5 +++--
+ test/transition/ease-test.js       |  7 ++++---
+ test/transition/on-test.js         |  9 +++++----
+ test/transition/state.js (new)     |  7 +++++++
+ test/transition/styleTween-test.js |  5 +++--
+ test/transition/tween-test.js      |  5 +++--
+ 8 files changed, 57 insertions(+), 37 deletions(-)
+
+☕1cfcbff🔪2016-08-18 14:28:42 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c6f97fe🔪2016-08-19 00:22:45 +0300🔪Devinsuit🔪Remove trailing whitespace🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ab0dddc🔪2016-08-19 00:20:07 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 46 +++++++++++++++++++++++-----------------------
+ 1 file changed, 23 insertions(+), 23 deletions(-)
+
+☕d24c845🔪2016-08-02 14:25:15 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c145f76🔪2016-08-02 14:25:14 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕b29d9e7🔪2016-06-24 11:02:30 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3c7edf1🔪2016-06-24 11:02:22 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 6 +++---
+ package.json | 6 +++---
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+☕33417f8🔪2016-06-23 16:49:59 -0700🔪Mike Bostock🔪Change transition.filter to not preserve index.🔪Related d3/d3-selection@f1c87ca14824cd42c6528cfef9e2c679ed7a1caf.
+
+ src/transition/filter.js       | 4 ++--
+ test/transition/filter-test.js | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕d3944e9🔪2016-06-19 09:37:55 -0700🔪Mike Bostock🔪0.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕01bdf61🔪2016-06-19 09:37:49 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    | 12 ++++++------
+ package.json | 14 +++++++-------
+ 2 files changed, 13 insertions(+), 13 deletions(-)
+
+☕b00743c🔪2016-06-14 09:21:25 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕6a3ef11🔪2016-06-07 20:43:16 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕83b3930🔪2016-06-07 20:43:09 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 18 +++++++++---------
+ index.js     |  1 -
+ package.json | 24 ++++++++++++------------
+ 3 files changed, 21 insertions(+), 22 deletions(-)
+
+☕ff47928🔪2016-06-05 17:04:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+☕cf2b2d2🔪2016-05-20 14:14:33 -0700🔪Mike Bostock🔪0.2.10🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a47c0a3🔪2016-05-20 14:14:30 -0700🔪Mike Bostock🔪Update d3-interpolate.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕5999002🔪2016-05-18 09:51:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9b0e33f🔪2016-05-16 14:32:10 -0700🔪Mike Bostock🔪0.2.9🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5939ad0🔪2016-05-16 14:31:46 -0700🔪Mike Bostock🔪Add d3.interrupt.🔪Useful for interrupting individual nodes without creating a selection.
+
+ README.md                    |  4 ++++
+ index.js                     |  1 +
+ src/interrupt.js (new)       | 24 ++++++++++++++++++++++++
+ src/selection/interrupt.js   | 22 ++--------------------
+ test/interrupt-test.js (new) | 29 +++++++++++++++++++++++++++++
+ 5 files changed, 60 insertions(+), 20 deletions(-)
+
+☕856f1ac🔪2016-05-14 21:28:54 -0700🔪Mike Bostock🔪Update JSDOM.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fea1782🔪2016-05-14 21:01:23 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕7275313🔪2016-05-04 11:48:00 -0700🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f6e1c1f🔪2016-03-15 10:21:32 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1f4d550🔪2016-03-14 13:08:40 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕f39ca24🔪2016-03-14 12:32:50 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕030c362🔪2016-03-06 14:59:02 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕54933f7🔪2016-03-06 14:56:47 -0800🔪Mike Bostock🔪0.2.8🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e19a215🔪2016-03-06 14:55:06 -0800🔪Mike Bostock🔪Fix #40 - inherit timing from nearest ancestor.🔪
+ README.md                         |  2 +-
+ src/selection/transition.js       | 16 +++++++++++++---
+ test/selection/transition-test.js | 37 +++++++++++++++++++++++--------------
+ 3 files changed, 37 insertions(+), 18 deletions(-)
+
+☕5fd4bd7🔪2016-03-04 09:48:35 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b6bf5bc🔪2016-03-02 22:06:30 -0800🔪Mike Bostock🔪Don’t treat falsey as nully.🔪
+ src/transition/attrTween.js  | 2 +-
+ src/transition/styleTween.js | 2 +-
+ src/transition/tween.js      | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕f91c4b6🔪2016-03-02 22:03:16 -0800🔪Mike Bostock🔪0.2.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕79c8c0c🔪2016-03-02 22:01:42 -0800🔪Mike Bostock🔪Fix transition.on(typename, null).🔪Also, tests for transition.remove. #20
+
+ src/transition/on.js                 |  1 -
+ test/transition/attrTween-test.js    |  2 +-
+ test/transition/ease-test.js         |  4 +--
+ test/transition/merge-test.js        |  2 +-
+ test/transition/on-test.js           | 29 ++++++++++++++++++---
+ test/transition/remove-test.js (new) | 49 ++++++++++++++++++++++++++++++++++++
+ test/transition/styleTween-test.js   |  2 +-
+ test/transition/tween-test.js        |  2 +-
+ 8 files changed, 81 insertions(+), 10 deletions(-)
+
+☕516bb56🔪2016-03-02 21:44:37 -0800🔪Mike Bostock🔪Tests for transition.text. #20🔪
+ test/transition/text-test.js (new) | 65 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 65 insertions(+)
+
+☕5f3bc2e🔪2016-03-02 21:22:51 -0800🔪Mike Bostock🔪Tests for transition.style. #20🔪
+ test/transition/style-test.js (new) | 163 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 163 insertions(+)
+
+☕edf8519🔪2016-03-02 17:55:03 -0800🔪Mike Bostock🔪All tweens to be removed. Fixes #39.🔪Also add tests for transition.attr. #20
+
+ README.md                          |   6 +-
+ src/transition/attrTween.js        |   5 +-
+ src/transition/styleTween.js       |   8 +-
+ src/transition/tween.js            |  28 ++++-
+ test/transition/attr-test.js (new) | 221 +++++++++++++++++++++++++++++++++++++
+ test/transition/attrTween-test.js  |  26 ++++-
+ test/transition/styleTween-test.js |  16 ++-
+ test/transition/tween-test.js      |  40 ++++++-
+ 8 files changed, 330 insertions(+), 20 deletions(-)
+
+☕abd1ccd🔪2016-03-02 15:06:00 -0800🔪Mike Bostock🔪0.2.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4346c58🔪2016-03-02 14:54:34 -0800🔪Mike Bostock🔪Tests for copy-on-write.🔪
+ test/transition/on-test.js    | 22 ++++++++++++++++++++++
+ test/transition/tween-test.js | 22 ++++++++++++++++++++++
+ 2 files changed, 44 insertions(+)
+
+☕4078403🔪2016-03-02 14:45:54 -0800🔪Mike Bostock🔪Tests for transition.tween. #20🔪
+ test/transition/attrTween-test.js  | 11 ++++-
+ test/transition/styleTween-test.js | 11 ++++-
+ test/transition/tween-test.js      | 90 ++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 110 insertions(+), 2 deletions(-)
+
+☕bc99c7c🔪2016-03-02 14:30:34 -0800🔪Mike Bostock🔪Tests for transition.{attr,style}Tween. #20🔪
+ .eslintrc                          |   1 -
+ src/transition/styleTween.js       |   2 +-
+ test/.eslintrc (new)               |  15 ++++++
+ test/transition/attrTween-test.js  |  98 ++++++++++++++++++++++++++++++++++
+ test/transition/styleTween-test.js | 104 ++++++++++++++++++++++++++++++++++++-
+ 5 files changed, 217 insertions(+), 3 deletions(-)
+
+☕92abf1c🔪2016-03-02 13:54:47 -0800🔪Mike Bostock🔪Tests for transition.on. #20🔪
+ test/transition/on-test.js | 65 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 65 insertions(+)
+
+☕557d7bb🔪2016-03-02 13:28:53 -0800🔪Mike Bostock🔪Tests for transition.merge. #20🔪
+ README.md                           |  8 ++++----
+ src/transition/merge.js             |  5 +++--
+ test/transition/merge-test.js (new) | 29 +++++++++++++++++++++++++++++
+ 3 files changed, 36 insertions(+), 6 deletions(-)
+
+☕302ec54🔪2016-03-02 13:09:17 -0800🔪Mike Bostock🔪Tests for transition.filter. #20🔪
+ .eslintrc                            |  1 +
+ test/transition/filter-test.js (new) | 32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 33 insertions(+)
+
+☕d8a70fa🔪2016-03-02 13:04:56 -0800🔪Mike Bostock🔪Tests for transition.select[All]. #20🔪
+ test/transition/attrTween-test.js       |  6 ++---
+ test/transition/ease-test.js            | 11 ++++----
+ test/transition/index-test.js           | 48 ++++++++++++++++++---------------
+ test/transition/on-test.js              |  6 ++---
+ test/transition/select-test.js (new)    | 40 +++++++++++++++++++++++++++
+ test/transition/selectAll-test.js (new) | 40 +++++++++++++++++++++++++++
+ test/transition/selection-test.js       |  6 ++---
+ test/transition/styleTween-test.js      |  6 ++---
+ test/transition/tween-test.js           |  6 ++---
+ 9 files changed, 126 insertions(+), 43 deletions(-)
+
+☕7c5c6f4🔪2016-03-02 12:33:54 -0800🔪Mike Bostock🔪Tests for transition.ease. #20🔪
+ test/transition/ease-test.js | 66 ++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 64 insertions(+), 2 deletions(-)
+
+☕71a8e3e🔪2016-03-02 12:17:26 -0800🔪Mike Bostock🔪Tests for transition.{delay,duration}. #20🔪Also treat a NaN duration as zero.
+
+ src/transition/schedule.js             |  2 +-
+ test/transition/delay-test.js (new)    | 78 ++++++++++++++++++++++++++++++++++
+ test/transition/duration-test.js (new) | 78 ++++++++++++++++++++++++++++++++++
+ 3 files changed, 157 insertions(+), 1 deletion(-)
+
+☕5cc24c3🔪2016-03-02 12:01:22 -0800🔪Mike Bostock🔪Tests for selection methods. #20🔪
+ test/transition/call-test.js (new)  | 8 ++++++++
+ test/transition/each-test.js (new)  | 8 ++++++++
+ test/transition/empty-test.js (new) | 8 ++++++++
+ test/transition/node-test.js (new)  | 8 ++++++++
+ test/transition/nodes-test.js (new) | 8 ++++++++
+ test/transition/size-test.js (new)  | 8 ++++++++
+ 6 files changed, 48 insertions(+)
+
+☕cdf1c2a🔪2016-03-02 11:58:05 -0800🔪Mike Bostock🔪Tests for d3.transition. #20🔪
+ test/transition/index-test.js | 46 +++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 44 insertions(+), 2 deletions(-)
+
+☕1dcc93a🔪2016-03-02 10:51:11 -0800🔪Mike Bostock🔪Tests for d3.active. #20🔪
+ test/active-test.js (new) | 156 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 156 insertions(+)
+
+☕8123b32🔪2016-03-02 10:33:12 -0800🔪Mike Bostock🔪Tests for selection.transition. #20🔪
+ test/selection/interrupt-test.js  |  13 +++++
+ test/selection/transition-test.js | 114 +++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 125 insertions(+), 2 deletions(-)
+
+☕ffdf9ea🔪2016-03-02 10:13:46 -0800🔪Mike Bostock🔪Test re-entrant interrupt.🔪
+ test/selection/interrupt-test.js | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+☕5592c9d🔪2016-03-02 10:07:44 -0800🔪Mike Bostock🔪Fix two bugs in selection.interrupt.🔪If a transition is interrupted during its start event, it should stop; if it is
+interrupted during its final frame, no end event should be dispatched. #20
+
+ src/transition/schedule.js       |  16 ++-
+ test/selection/interrupt-test.js | 272 ++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 280 insertions(+), 8 deletions(-)
+
+☕56d18c0🔪2016-03-01 16:53:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕daa4670🔪2016-03-01 16:35:53 -0800🔪Mike Bostock🔪Combine vars.🔪
+ src/selection/interrupt.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕c833aeb🔪2016-03-01 16:28:12 -0800🔪Mike Bostock🔪Fix #38 - any other transition should cancel remove.🔪To faciliate inspection of transitions regardless of name, all transitions are
+now stored in a single hash on node.__transition. This also makes looking up the
+transition schedule simpler: you just need the id, and you don’t need to scan an
+array of pending transitions.
+
+ README.md                    |   8 ++--
+ src/active.js                |  20 ++++++--
+ src/selection/interrupt.js   |  35 +++++++-------
+ src/selection/transition.js  |  13 +++---
+ src/transition/delay.js      |  15 +++---
+ src/transition/duration.js   |  15 +++---
+ src/transition/ease.js       |  11 ++---
+ src/transition/filter.js     |   2 +-
+ src/transition/index.js      |   8 +---
+ src/transition/merge.js      |   2 +-
+ src/transition/on.js         |  11 ++---
+ src/transition/remove.js     |   7 +--
+ src/transition/schedule.js   | 108 +++++++++++++++++++++----------------------
+ src/transition/select.js     |   6 +--
+ src/transition/selectAll.js  |   8 ++--
+ src/transition/transition.js |   8 ++--
+ src/transition/tween.js      |  18 ++++----
+ 17 files changed, 147 insertions(+), 148 deletions(-)
+
+☕6a8e5d0🔪2016-03-01 14:08:51 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕23ecf96🔪2016-02-29 21:46:53 -0800🔪Mike Bostock🔪Consistent formatting.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕e1ff7b8🔪2016-02-29 17:19:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕21b4431🔪2016-02-29 16:58:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 --
+ 1 file changed, 2 deletions(-)
+
+☕dd2be49🔪2016-02-29 16:56:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕9b115c9🔪2016-02-29 16:52:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 40 ++++++++++++++++++++++++++++++++--------
+ 1 file changed, 32 insertions(+), 8 deletions(-)
+
+☕3592b9d🔪2016-02-29 16:38:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4aa2b00🔪2016-02-29 16:38:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 23 ++++++++++++++++++-----
+ 1 file changed, 18 insertions(+), 5 deletions(-)
+
+☕c8f305c🔪2016-02-29 16:14:52 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕a6f7dee🔪2016-02-29 12:57:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4e96080🔪2016-02-29 12:55:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕4c85e52🔪2016-02-29 12:53:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 46 +++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 41 insertions(+), 5 deletions(-)
+
+☕78a64e6🔪2016-02-29 12:49:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 40 ++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 38 insertions(+), 2 deletions(-)
+
+☕eab558b🔪2016-02-29 12:23:54 -0800🔪Mike Bostock🔪A specialized interpolator.🔪The target value for transition.{attr,style} should always be a number, a color
+or a string; therefore, we can use a specialized interpolator that is more
+efficient than d3.interpolator.
+
+This commit also removes coercion of the target attribute or style value to a
+string; that’s not done in selection.{attr,style}, so it should be necessary
+here, and it’s more efficient if we can optimize numeric target values, too.
+
+ package.json                        |  3 ++-
+ src/transition/attr.js              |  5 +++--
+ src/transition/interpolate.js (new) | 10 ++++++++++
+ src/transition/style.js             |  5 +++--
+ src/transition/tween.js             |  4 ++--
+ 5 files changed, 20 insertions(+), 7 deletions(-)
+
+☕61d10b2🔪2016-02-29 11:40:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3b01dc0🔪2016-02-29 11:40:19 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0aeb950🔪2016-02-29 11:39:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c078ac4🔪2016-02-29 11:39:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f4903ab🔪2016-02-29 11:38:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cd36e06🔪2016-02-29 11:37:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a7e0c8🔪2016-02-29 11:37:18 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 37 +++++++++++++++++--------------------
+ 1 file changed, 17 insertions(+), 20 deletions(-)
+
+☕61845e5🔪2016-02-29 11:31:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ec65b1b🔪2016-02-29 11:31:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6727e18🔪2016-02-29 11:30:55 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d4b99dc🔪2016-02-29 11:30:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕a6e22fc🔪2016-02-29 11:28:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d39119f🔪2016-02-29 10:37:24 -0800🔪Mike Bostock🔪Fix #14 - document transition phases.🔪
+ README.md | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+
+☕428c82d🔪2016-02-28 09:35:26 -0800🔪Mike Bostock🔪0.2.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c79a075🔪2016-02-28 09:35:24 -0800🔪Mike Bostock🔪Update d3-interpolate.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕cc05957🔪2016-02-26 15:28:34 -0800🔪Mike Bostock🔪0.2.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ffc461🔪2016-02-26 15:26:00 -0800🔪Mike Bostock🔪Allow some listener changes after init.🔪You’re not allowed to modify start event listeners after the transition is
+scheduled, so as to avoid changes during a start event (due to changes being
+copy-on-write). However, you should still be allowed to change the OTHER event
+listeners (interrupt and end) before the transition starts; in particular,
+transition.remove should be allowed during a start event!
+
+ src/transition/on.js | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+☕16cd5c0🔪2016-02-26 13:42:39 -0800🔪Mike Bostock🔪0.2.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕25f7557🔪2016-02-26 13:41:24 -0800🔪Mike Bostock🔪Add CSS transform interpolation!🔪Now that d3/d3-interpolate#6 is fixed, transition.attr always applies SVG
+transform interpolation on “transform” attributes, and transition.style always
+applies CSS transform interpolate on “transform” styles.
+
+ README.md               |  2 +-
+ package.json            |  2 +-
+ src/transition/attr.js  | 29 +++++++++++------------------
+ src/transition/style.js | 15 ++++++++-------
+ 4 files changed, 21 insertions(+), 27 deletions(-)
+
+☕13ad711🔪2016-02-26 10:33:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕d0292ed🔪2016-02-26 10:27:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1670a6e🔪2016-02-26 10:25:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb07770🔪2016-02-26 10:25:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f763d9a🔪2016-02-26 10:18:24 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕24b2120🔪2016-02-26 10:14:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7b97b7b🔪2016-02-26 10:14:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕5610d15🔪2016-02-26 10:14:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕179eafa🔪2016-02-26 10:13:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bc7fe60🔪2016-02-26 10:12:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 ++++++--------
+ 1 file changed, 6 insertions(+), 8 deletions(-)
+
+☕0ca1aca🔪2016-02-26 10:09:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 26 ++++++++++++++++++++++++--
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+
+☕add4657🔪2016-02-26 10:00:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕96349a4🔪2016-02-25 17:56:21 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6f1d887🔪2016-02-25 17:55:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕4642616🔪2016-02-25 17:55:36 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+☕6600bf3🔪2016-02-25 17:50:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+☕911eb8a🔪2016-02-25 17:49:12 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+
+☕ef524bd🔪2016-02-25 17:46:09 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕163d513🔪2016-02-25 17:45:45 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕112500b🔪2016-02-25 17:45:12 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d7fc841🔪2016-02-25 17:44:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+☕5e9e304🔪2016-02-25 17:44:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ce6d3d1🔪2016-02-25 17:43:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕a24a2f2🔪2016-02-25 17:43:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+☕70b273a🔪2016-02-25 17:41:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+☕9b4fafd🔪2016-02-25 17:35:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e757338🔪2016-02-25 17:35:34 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕ff704ca🔪2016-02-25 17:35:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1922d2d🔪2016-02-25 17:33:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕933073d🔪2016-02-25 17:33:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+☕265904f🔪2016-02-25 17:31:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5ce33b2🔪2016-02-25 17:28:05 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f617ccc🔪2016-02-25 17:26:57 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cb1894c🔪2016-02-25 17:25:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 19 ++++++++++++++++---
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+
+☕f3f8521🔪2016-02-25 17:18:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c884209🔪2016-02-25 17:17:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a1420cd🔪2016-02-25 14:56:59 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+☕6984fdb🔪2016-02-25 14:48:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 21 ++-------------------
+ 1 file changed, 2 insertions(+), 19 deletions(-)
+
+☕eb9e861🔪2016-02-25 14:46:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8d1ffe1🔪2016-02-25 14:45:56 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕5081a43🔪2016-02-25 14:43:07 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 37 +++++++++++++++++++++++++++++++++----
+ 1 file changed, 33 insertions(+), 4 deletions(-)
+
+☕f6f3d21🔪2016-02-25 14:09:01 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕6be3129🔪2016-02-25 14:08:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕75f13d6🔪2016-02-25 14:07:35 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕0bc78f9🔪2016-02-24 15:46:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+☕04d39f7🔪2016-02-23 21:36:35 -0800🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕404df72🔪2016-02-23 09:38:53 -0800🔪Mike Bostock🔪Singularize.🔪
+ src/transition/schedule.js | 22 +++++++++++-----------
+ src/transition/tween.js    | 32 ++++++++++++++++----------------
+ 2 files changed, 27 insertions(+), 27 deletions(-)
+
+☕b2230df🔪2016-02-23 08:50:32 -0800🔪Mike Bostock🔪Fix #37 - synchronous evaluation.🔪We can’t wait until the tweens are initialized in transition.{attr,style,text};
+we must compute the target value synchronously. The resulting value is stored in
+a map on the transition schedule so that tweens can still be efficiently copied
+on write and shared across instances.
+
+ src/transition/attr.js  | 22 +++++++++++-----------
+ src/transition/style.js | 12 ++++++------
+ src/transition/text.js  | 15 ++++++++-------
+ src/transition/tween.js | 14 ++++++++++++++
+ 4 files changed, 39 insertions(+), 24 deletions(-)
+
+☕56655da🔪2016-02-22 20:52:39 -0800🔪Mike Bostock🔪0.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c6eba76🔪2016-02-22 20:52:35 -0800🔪Mike Bostock🔪Fix transition.selectAll.🔪
+ src/transition/selectAll.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f57cfb6🔪2016-02-22 15:33:45 -0800🔪Mike Bostock🔪Add transition.merge to README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕55f20bb🔪2016-02-22 15:31:04 -0800🔪Mike Bostock🔪0.2.0🔪
+ README.md    | 2 +-
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕7653705🔪2016-02-22 15:30:16 -0800🔪Mike Bostock🔪Fix #36 - transition.merge. Fix #35 - preserve index in transition.filter.🔪
+ package.json                  |  2 +-
+ src/transition/filter.js      |  4 ++--
+ src/transition/index.js       |  2 ++
+ src/transition/merge.js (new) | 18 ++++++++++++++++++
+ 4 files changed, 23 insertions(+), 3 deletions(-)
+
+☕8377a3c🔪2016-02-21 16:42:12 -0800🔪Mike Bostock🔪Fix #33 - add transition.selection.🔪
+ README.md                               |  4 ++++
+ package.json                            |  2 +-
+ src/transition/index.js                 |  2 ++
+ src/transition/selection.js (new)       |  7 +++++++
+ test/transition/selection-test.js (new) | 16 ++++++++++++++++
+ 5 files changed, 30 insertions(+), 1 deletion(-)
+
+☕ba090c2🔪2016-02-21 16:10:38 -0800🔪Mike Bostock🔪0.1.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ac148b5🔪2016-02-21 16:10:33 -0800🔪Mike Bostock🔪Fix #34 - prototype.constructor.🔪
+ src/transition/index.js       | 1 +
+ test/transition/index-test.js | 1 +
+ 2 files changed, 2 insertions(+)
+
+☕7fb4a4c🔪2016-02-21 16:09:09 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕96c5035🔪2016-02-12 14:59:13 -0800🔪Mike Bostock🔪Update d3-timer.🔪
+ README.md                  | 2 +-
+ package.json               | 4 ++--
+ src/transition/schedule.js | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕4d6f3a6🔪2016-02-12 13:49:40 -0800🔪Mike Bostock🔪Fix transition.remove.🔪
+ package.json             | 2 +-
+ src/transition/remove.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕45c28c4🔪2016-02-11 15:01:59 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 2 +-
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕8d50fed🔪2016-02-11 14:56:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕9f3d099🔪2016-02-11 14:56:14 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕095dfcb🔪2016-02-11 14:52:40 -0800🔪Mike Bostock🔪Remove TODO’s. Fixes #23.🔪
+ src/transition/schedule.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕488e4dd🔪2016-02-11 14:50:33 -0800🔪Mike Bostock🔪Add d3.active. Fixes #15.🔪
+ src/active.js (new) | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+☕0f50582🔪2016-02-11 14:40:22 -0800🔪Mike Bostock🔪Add d3.active. Fixes #15.🔪
+ README.md | 12 +++++++++++-
+ index.js  |  1 +
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕91d6d51🔪2016-02-11 14:28:27 -0800🔪Mike Bostock🔪Add selection.transition(transition).🔪Fixes #21.
+
+ src/selection/transition.js | 21 +++++++++++++++++----
+ src/transition/index.js     |  6 ++----
+ 2 files changed, 19 insertions(+), 8 deletions(-)
+
+☕cf42062🔪2016-02-11 09:38:03 -0800🔪Mike Bostock🔪Avoid copy during selection.transition.🔪Since selection groups are now copy-on-write (d3/d3-selection#58), there’s no
+need to make a copy when deriving the transition from a selection!
+
+ package.json                | 2 +-
+ src/selection/transition.js | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+☕154e417🔪2016-02-10 20:53:53 -0800🔪Mike Bostock🔪Fix #26 - more type checking.🔪
+ src/transition/attrTween.js              |  1 +
+ src/transition/ease.js                   |  2 +-
+ src/transition/on.js                     |  4 ++--
+ src/transition/styleTween.js             |  1 +
+ src/transition/tween.js                  |  4 ++--
+ test/transition/attrTween-test.js (new)  | 12 ++++++++++++
+ test/transition/ease-test.js (new)       | 12 ++++++++++++
+ test/transition/on-test.js (new)         | 12 ++++++++++++
+ test/transition/styleTween-test.js (new) | 12 ++++++++++++
+ test/transition/tween-test.js (new)      | 12 ++++++++++++
+ 10 files changed, 67 insertions(+), 5 deletions(-)
+
+☕feed95a🔪2016-02-10 11:53:08 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b0c13fc🔪2016-02-10 11:52:32 -0800🔪Mike Bostock🔪Update d3-timer.🔪
+ README.md                   |  2 +-
+ package.json                |  2 +-
+ src/selection/transition.js |  3 ++-
+ src/transition/schedule.js  | 14 +++++++-------
+ 4 files changed, 11 insertions(+), 10 deletions(-)
+
+☕76e2301🔪2016-02-10 08:49:22 -0800🔪Mike Bostock🔪Set reference time to end of previous transition.🔪This seems more logic than inheriting the delay. Also it means you can now set a
+delay on a chained transition and it will do what you expect.
+
+ src/transition/transition.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4e98282🔪2016-02-09 16:02:39 -0800🔪Mike Bostock🔪Fix interpolator reuse.🔪
+ src/transition/attr.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c5381e0🔪2016-02-09 15:59:34 -0800🔪Mike Bostock🔪Update d3-timer.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fcece56🔪2016-02-09 14:37:41 -0800🔪Mike Bostock🔪Fix interpolator reuse.🔪
+ src/transition/attr.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6a41701🔪2016-02-09 14:17:16 -0800🔪Mike Bostock🔪Reuse previous interpolator, when possible.🔪
+ src/transition/attr.js | 30 +++++++++++++++++++++++++-----
+ 1 file changed, 25 insertions(+), 5 deletions(-)
+
+☕121ca07🔪2016-02-09 14:06:35 -0800🔪Mike Bostock🔪Reuse previous interpolator, when possible.🔪
+ src/transition/style.js | 28 ++++++++++++++++++++++------
+ 1 file changed, 22 insertions(+), 6 deletions(-)
+
+☕0c4be5b🔪2016-02-09 13:56:56 -0800🔪Mike Bostock🔪Throw error if transition has ended.🔪
+ src/transition/on.js | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+
+☕48d06e4🔪2016-02-09 13:51:02 -0800🔪Mike Bostock🔪Copy-on-write!🔪If the next node in a transition shares state with the previous node, as is
+often the case due to transition method applying to the entire selection, then
+we can reuse the state rather than creating separate state for each node.
+
+This commit also starts to enforce restrictions on when transition state can be
+modified; transition state should only be modified before the transition starts,
+or in the case of delay or event listeners, before the transition is scheduled!
+
+Related #24 #25 #27 #28.
+
+ README.md                    |  2 +-
+ package.json                 |  2 +-
+ src/selection/interrupt.js   |  2 +-
+ src/transition/delay.js      |  8 ++---
+ src/transition/duration.js   |  8 ++---
+ src/transition/ease.js       |  6 ++--
+ src/transition/on.js         | 21 ++++++++-----
+ src/transition/schedule.js   | 72 +++++++++++++++++++++++++++++---------------
+ src/transition/select.js     |  4 +--
+ src/transition/selectAll.js  |  6 ++--
+ src/transition/transition.js | 12 ++++----
+ src/transition/tween.js      | 36 ++++++++++++++--------
+ 12 files changed, 111 insertions(+), 68 deletions(-)
+
+☕3abad40🔪2016-02-09 11:23:54 -0800🔪Mike Bostock🔪Named closure.🔪
+ src/transition/schedule.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕49b2e70🔪2016-02-05 14:47:15 -0800🔪Mike Bostock🔪Dispatch events before destroying state.🔪
+ src/selection/interrupt.js | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+☕ca33a3c🔪2016-02-05 14:15:00 -0800🔪Mike Bostock🔪Dispatch events before destroying state.🔪This way, event handlers can still inspect the state of the interrupted or ended
+transition. This is particularly necessary for chaining a transition during the
+end event.
+
+ src/transition/schedule.js | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+
+☕14a0dab🔪2016-02-05 14:12:25 -0800🔪Mike Bostock🔪Adopt d3.window from d3-selection.🔪
+ package.json              | 2 +-
+ src/defaultView.js (gone) | 7 -------
+ src/transition/style.js   | 8 ++++----
+ 3 files changed, 5 insertions(+), 12 deletions(-)
+
+☕d26a026🔪2016-02-05 13:30:13 -0800🔪Mike Bostock🔪Shorter names.🔪
+ src/selection/transition.js  |  4 +--
+ src/transition/delay.js      |  8 ++---
+ src/transition/duration.js   |  8 ++---
+ src/transition/ease.js       |  6 ++--
+ src/transition/on.js         | 14 ++++----
+ src/transition/schedule.js   | 80 ++++++++++++++++++++++----------------------
+ src/transition/select.js     |  4 +--
+ src/transition/selectAll.js  |  6 ++--
+ src/transition/transition.js | 14 ++++----
+ src/transition/tween.js      |  8 ++---
+ 10 files changed, 76 insertions(+), 76 deletions(-)
+
+☕89b820f🔪2016-02-05 13:29:22 -0800🔪Mike Bostock🔪Coerce constant values to strings.🔪
+ src/transition/attr.js  | 4 ++--
+ src/transition/style.js | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕6715fd9🔪2016-02-04 17:49:00 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2924010🔪2016-02-04 17:48:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕495d876🔪2016-02-04 17:47:46 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕110f115🔪2016-02-04 17:46:48 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f4e6f8d🔪2016-02-04 17:46:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d00e1b3🔪2016-02-04 17:45:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕20dc18d🔪2016-02-04 17:45:02 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aed4a56🔪2016-02-04 17:43:53 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕99efb20🔪2016-02-04 17:43:31 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 125 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ package.json |   2 +-
+ 2 files changed, 124 insertions(+), 3 deletions(-)
+
+☕be9bcc2🔪2016-02-04 17:17:27 -0800🔪Mike Bostock🔪Add selection.interrupt.🔪
+ src/selection/interrupt.js | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+
+☕e289390🔪2016-02-04 17:11:45 -0800🔪Mike Bostock🔪Delete null style on end.🔪
+ src/transition/style.js | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+
+☕45ab416🔪2016-02-04 17:00:24 -0800🔪Mike Bostock🔪Add transition.remove.🔪
+ src/transition/index.js        |  3 ++-
+ src/transition/remove.js (new) | 10 ++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕c5d68c5🔪2016-02-04 16:52:14 -0800🔪Mike Bostock🔪Add transition.on.🔪
+ README.md                  |  4 ++--
+ package.json               |  3 ++-
+ src/transition/index.js    |  3 ++-
+ src/transition/on.js (new) | 22 ++++++++++++++++++++++
+ src/transition/schedule.js | 34 ++++++++++++++++++++++------------
+ 5 files changed, 50 insertions(+), 16 deletions(-)
+
+☕417d557🔪2016-02-04 14:06:05 -0800🔪Mike Bostock🔪Add transition.transition.🔪
+ src/selection/transition.js        |  6 ++----
+ src/transition/ease.js             |  1 +
+ src/transition/index.js            | 11 +++++++++--
+ src/transition/transition.js (new) | 24 ++++++++++++++++++++++++
+ 4 files changed, 36 insertions(+), 6 deletions(-)
+
+☕a517bde🔪2016-02-04 10:03:53 -0800🔪Mike Bostock🔪Update d3-ease.🔪
+ README.md                   |  2 +-
+ package.json                |  2 +-
+ src/transition/delay.js     |  4 ++--
+ src/transition/duration.js  |  4 ++--
+ src/transition/ease.js      | 14 +++-----------
+ src/transition/schedule.js  |  2 +-
+ src/transition/select.js    |  4 ++--
+ src/transition/selectAll.js |  4 ++--
+ src/transition/tween.js     |  8 +++++---
+ 9 files changed, 19 insertions(+), 25 deletions(-)
+
+☕23760d9🔪2016-02-03 15:51:25 -0800🔪Mike Bostock🔪Add transition.text.🔪
+ src/transition/index.js      |  3 ++-
+ src/transition/text.js (new) | 19 +++++++++++++++++++
+ 2 files changed, 21 insertions(+), 1 deletion(-)
+
+☕aa51d51🔪2016-02-03 15:45:12 -0800🔪Mike Bostock🔪Fix d3.transition.🔪
+ src/transition/index.js | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕cb45ca6🔪2016-02-03 15:33:54 -0800🔪Mike Bostock🔪Handle null tweens.🔪
+ src/transition/attrTween.js  | 2 +-
+ src/transition/schedule.js   | 5 +++--
+ src/transition/styleTween.js | 2 +-
+ src/transition/tween.js      | 4 ++--
+ 4 files changed, 7 insertions(+), 6 deletions(-)
+
+☕e9a41ac🔪2016-02-03 15:25:58 -0800🔪Mike Bostock🔪Transform interpolation!🔪
+ src/transition/attr.js | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+
+☕409298b🔪2016-02-03 14:57:48 -0800🔪Mike Bostock🔪Adopt ESLint for tests.🔪
+ .eslintrc                        | 1 +
+ package.json                     | 2 +-
+ test/selection/interrupt-test.js | 3 +--
+ test/transition/index-test.js    | 4 ++--
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+☕00328f9🔪2016-02-03 14:54:07 -0800🔪Mike Bostock🔪Implement {style,attr} using {style,attr}Tween.🔪
+ src/transition/attr.js  | 38 +++++++++++++++-----------------------
+ src/transition/style.js | 37 ++++++++++++++++---------------------
+ 2 files changed, 31 insertions(+), 44 deletions(-)
+
+☕101f693🔪2016-02-03 14:37:31 -0800🔪Mike Bostock🔪Disallow transition.{style,attr} getters.🔪There’s no good way to distinguish between whether the corresponding tween’s
+end value is null or whether there is no corresponding tween. I mean, you could
+return null for the former and undefined for the latter, but that seems unsafe.
+Better to require the use of transition.{style,attr}Tween or transition.tween to
+inspect the transition, and transition.{style,attr} be convenience functions.
+
+ src/transition/attr.js       |  1 -
+ src/transition/attrTween.js  |  5 +++--
+ src/transition/schedule.js   |  2 ++
+ src/transition/style.js      | 10 ++++------
+ src/transition/styleTween.js |  5 +++--
+ 5 files changed, 12 insertions(+), 11 deletions(-)
+
+☕0a6e9c5🔪2016-02-03 14:22:48 -0800🔪Mike Bostock🔪Add {attr,style}Tween.🔪
+ src/defaultView.js (new)           |  7 +++++++
+ src/transition/attrTween.js (new)  | 31 +++++++++++++++++++++++++++++++
+ src/transition/index.js            |  6 ++++--
+ src/transition/style.js            |  9 +--------
+ src/transition/styleTween.js (new) | 16 ++++++++++++++++
+ 5 files changed, 59 insertions(+), 10 deletions(-)
+
+☕f07a377🔪2016-02-03 13:12:10 -0800🔪Mike Bostock🔪The tween context should be null.🔪
+ src/transition/schedule.js | 21 +++++++++++----------
+ 1 file changed, 11 insertions(+), 10 deletions(-)
+
+☕29b4efd🔪2016-02-03 11:58:26 -0800🔪Mike Bostock🔪Fix transition.tween to return the value.🔪
+ src/transition/tween.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕15b0c34🔪2016-02-03 10:00:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md    | 22 ++++++++++++++++++++++
+ package.json |  3 ++-
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+
+☕99bb0c0🔪2016-02-03 09:57:48 -0800🔪Mike Bostock🔪Remove logging.🔪
+ src/transition/schedule.js | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+☕4e4f929🔪2016-02-03 09:56:48 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e5e71aa🔪2016-02-02 21:28:52 -0800🔪Mike Bostock🔪Add transition.style.🔪
+ src/transition/index.js       |  3 ++-
+ src/transition/style.js (new) | 48 +++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 50 insertions(+), 1 deletion(-)
+
+☕239b4d5🔪2016-02-02 10:15:17 -0800🔪Mike Bostock🔪Improve transition.attr.🔪Support namespaced attributes. Short-circuit when the start and end values are
+equal. Remove the attribute when the end value is null.
+
+ src/transition/attr.js | 67 +++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 50 insertions(+), 17 deletions(-)
+
+☕8caf471🔪2016-02-02 09:48:39 -0800🔪Mike Bostock🔪First light.🔪
+ package.json                 |  7 +++--
+ src/transition/attr.js (new) | 32 +++++++++++++++++++
+ src/transition/index.js      |  3 +-
+ src/transition/schedule.js   | 75 ++++++++++++++++++++++----------------------
+ 4 files changed, 76 insertions(+), 41 deletions(-)
+
+☕8b36ef8🔪2016-02-01 16:10:38 -0800🔪Mike Bostock🔪Add transition.tween.🔪
+ src/transition/index.js       |  3 ++-
+ src/transition/schedule.js    | 51 +++++++++++++++++++++++++++++++++----------
+ src/transition/tween.js (new) | 31 ++++++++++++++++++++++++++
+ 3 files changed, 73 insertions(+), 12 deletions(-)
+
+☕1d693aa🔪2016-02-01 15:08:48 -0800🔪Mike Bostock🔪Explicit transition creation.🔪
+ package.json                |  2 +-
+ src/selection/transition.js | 19 ++++++++++++++-----
+ src/transition/filter.js    | 18 ++++++++++++++----
+ src/transition/index.js     |  7 +++----
+ src/transition/select.js    | 20 ++++++++++++--------
+ src/transition/selectAll.js | 22 +++++++++++++++-------
+ 6 files changed, 59 insertions(+), 29 deletions(-)
+
+☕9d54a72🔪2016-02-01 14:06:23 -0800🔪Mike Bostock🔪Rename _nodes to _groups.🔪Related d3/d3-selection#57.
+
+ package.json                | 2 +-
+ src/selection/transition.js | 2 +-
+ src/transition/filter.js    | 2 +-
+ src/transition/index.js     | 4 ++--
+ src/transition/select.js    | 2 +-
+ src/transition/selectAll.js | 2 +-
+ 6 files changed, 7 insertions(+), 7 deletions(-)
+
+☕dc27c12🔪2016-02-01 11:50:54 -0800🔪Mike Bostock🔪Adopt easing interface.🔪
+ package.json               |  2 +-
+ src/transition/ease.js     | 28 ++++++++++++++++++++++------
+ src/transition/schedule.js |  5 ++++-
+ 3 files changed, 27 insertions(+), 8 deletions(-)
+
+☕85cf56f🔪2016-01-29 15:39:32 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ src/selection/transition.js      |  6 ++--
+ src/transition/delay.js (new)    | 24 +++++++++++++
+ src/transition/duration.js (new) | 24 +++++++++++++
+ src/transition/filter.js         |  2 +-
+ src/transition/index.js          |  8 +++--
+ src/transition/schedule.js       | 76 +++++++++++++++++++++++-----------------
+ src/transition/select.js         |  4 +--
+ src/transition/selectAll.js      |  6 ++--
+ 8 files changed, 106 insertions(+), 44 deletions(-)
+
+☕94818c9🔪2016-01-29 14:15:43 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ src/selection/transition.js |  6 ++---
+ src/transition/schedule.js  | 60 +++++++++++++++++++++++++++++++++++----------
+ src/transition/select.js    |  4 +--
+ src/transition/selectAll.js |  6 ++---
+ 4 files changed, 55 insertions(+), 21 deletions(-)
+
+☕39eb200🔪2016-01-29 12:34:42 -0800🔪Mike Bostock🔪Comment.🔪
+ src/transition/index.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕fb60e33🔪2016-01-29 10:05:38 -0800🔪Mike Bostock🔪Restore anonymous AMD.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕92084a4🔪2016-01-29 10:04:59 -0800🔪Mike Bostock🔪Rename lock to schedule.🔪
+ src/selection/transition.js      |  4 ++--
+ src/transition/index.js          |  5 ++++-
+ src/transition/lock.js (gone)    | 33 ---------------------------------
+ src/transition/schedule.js (new) | 29 +++++++++++++++++++++++++++++
+ src/transition/select.js         |  2 +-
+ src/transition/selectAll.js      |  2 +-
+ 6 files changed, 37 insertions(+), 38 deletions(-)
+
+☕414d239🔪2016-01-28 20:47:39 -0800🔪Mike Bostock🔪Move namekey to lock.🔪
+ src/selection/transition.js | 4 ++--
+ src/transition/index.js     | 5 +----
+ src/transition/lock.js      | 4 ++++
+ 3 files changed, 7 insertions(+), 6 deletions(-)
+
+☕db31c7b🔪2016-01-28 20:46:30 -0800🔪Mike Bostock🔪Initialize transitions.🔪
+ .eslintrc                         |  3 ++
+ src/selection/transition.js       | 11 ++++++--
+ src/transition/filter.js (new)    |  6 ++++
+ src/transition/index.js           | 58 +++++++++------------------------------
+ src/transition/lock.js (new)      | 29 ++++++++++++++++++++
+ src/transition/select.js (new)    | 18 ++++++++++++
+ src/transition/selectAll.js (new) | 18 ++++++++++++
+ 7 files changed, 96 insertions(+), 47 deletions(-)
+
+☕452c3fc🔪2016-01-28 16:25:25 -0800🔪Mike Bostock🔪Comments.🔪
+ src/transition/index.js | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+
+☕7abae7d🔪2016-01-28 15:56:24 -0800🔪Mike Bostock🔪Rename for clarity.🔪
+ src/transition/index.js | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕05dbfa1🔪2016-01-28 15:55:19 -0800🔪Mike Bostock🔪Implement transition.{filter,select,selectAll}.🔪
+ package.json            |  4 ++--
+ src/transition/index.js | 35 ++++++++++++++++++++++++++++-------
+ 2 files changed, 30 insertions(+), 9 deletions(-)
+
+☕e062734🔪2016-01-28 15:01:18 -0800🔪Mike Bostock🔪Placeholder tests.🔪
+ test/selection/interrupt-test.js (new)  | 11 +++++++++++
+ test/selection/transition-test.js (new) | 12 ++++++++++++
+ 2 files changed, 23 insertions(+)
+
+☕bf7c511🔪2016-01-28 14:57:19 -0800🔪Mike Bostock🔪Update.🔪
+ index.js                                           | 10 +----
+ package.json                                       |  6 +--
+ src/selection-transition.js (gone)                 |  5 ---
+ src/selection/index.js (new)                       |  6 +++
+ .../interrupt.js}                                  |  0
+ src/selection/transition.js (new)                  |  5 +++
+ src/transition.js (gone)                           | 45 -------------------
+ src/{transition-ease.js => transition/ease.js}     |  0
+ src/transition/index.js (new)                      | 50 ++++++++++++++++++++++
+ test/transition-test.js (gone)                     | 16 -------
+ test/transition/index-test.js (new)                | 37 ++++++++++++++++
+ 11 files changed, 103 insertions(+), 77 deletions(-)
+
+☕ca503f5🔪2016-01-28 11:18:51 -0800🔪Mike Bostock🔪Adopt ESLint.🔪
+ .eslintrc (new)             | 9 +++++++++
+ package.json                | 2 +-
+ src/selection-interrupt.js  | 4 ++--
+ src/selection-transition.js | 2 +-
+ src/transition-ease.js      | 8 ++++----
+ src/transition.js           | 4 ++--
+ 6 files changed, 19 insertions(+), 10 deletions(-)
+
+☕f038f2d🔪2015-11-11 11:46:45 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕64c032b🔪2015-11-04 15:09:14 -0800🔪Mike Bostock🔪Concise exports.🔪
+ index.js          | 11 +++++++----
+ src/transition.js | 11 ++---------
+ 2 files changed, 9 insertions(+), 13 deletions(-)
+
+☕1eb3941🔪2015-11-04 00:02:32 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ d3.js (gone)            | 41 -----------------------------------------
+ package.json            | 20 +++++++++++---------
+ test/transition-test.js |  8 ++++----
+ 3 files changed, 15 insertions(+), 54 deletions(-)
+
+☕46bbcd6🔪2015-10-25 13:36:04 -0700🔪Mike Bostock🔪Checkpoint selection.interrupt.🔪
+ index.js                                                 |  4 ----
+ src/selection-interrupt.js (new)                         |  5 +++++
+ src/{selection_transition.js => selection-transition.js} |  0
+ src/{transition_ease.js => transition-ease.js}           |  0
+ src/transition.js                                        | 12 +++++++++---
+ 5 files changed, 14 insertions(+), 7 deletions(-)
+
+☕3897094🔪2015-07-01 11:28:11 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕350b9ac🔪2015-06-16 13:59:55 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕62cbdcb🔪2015-06-10 13:40:36 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                             | 2 +-
+ index.sublime-project => d3-transition.sublime-project | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕4f3bbfd🔪2015-06-08 11:20:20 -0700🔪Mike Bostock🔪Extract d3-timer.🔪
+ README.md              |  4 ---
+ d3.js                  |  7 ++++-
+ index.js               |  3 --
+ package.json           |  3 +-
+ src/timer.js (gone)    | 76 --------------------------------------------------
+ src/transition.js      |  2 +-
+ src/transition_ease.js |  2 +-
+ 7 files changed, 10 insertions(+), 87 deletions(-)
+
+☕c838240🔪2015-06-04 17:54:40 -0700🔪Mike Bostock🔪Update package.json.🔪
+ package.json | 19 ++++++++++++++++---
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+
+☕9f2c3f0🔪2015-06-02 09:56:13 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ src/selection_transition.js |  4 ++--
+ src/transition.js           | 34 +++++++++++++++++++++++++++++++---
+ 2 files changed, 33 insertions(+), 5 deletions(-)
+
+☕a8b9a73🔪2015-06-01 17:47:58 -0700🔪Mike Bostock🔪Prune published package.🔪
+ .npmignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕446b3db🔪2015-06-01 17:37:13 -0700🔪Mike Bostock🔪Fix sublime project.🔪
+ index.sublime-project | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ff96a1🔪2015-06-01 17:36:30 -0700🔪Mike Bostock🔪Move easing to d3-ease.🔪
+ .gitignore                    |   2 +-
+ .npmignore (new)              |   1 +
+ README.md                     |   8 -
+ test/d3.js => d3.js           |   6 +-
+ index.js                      |   2 -
+ package.json                  |  12 +-
+ src/ease.js (gone)            | 206 --------------
+ src/transition.js             |   4 +-
+ src/transition_ease.js (new)  |   8 +
+ test/ease-test.js (gone)      | 626 ------------------------------------------
+ test/require-test.js (gone)   |  21 --
+ test/transition-test.js (new) |  16 ++
+ 12 files changed, 38 insertions(+), 874 deletions(-)
+
+☕a15898a🔪2015-05-31 20:27:33 -0700🔪Mike Bostock🔪Add test for elastic’s p parameter.🔪
+ test/ease-test.js | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+☕0cc8ce8🔪2015-05-31 10:15:19 -0700🔪Mike Bostock🔪Fix transition export.🔪
+ src/selection_transition.js |  2 +-
+ src/transition.js           | 15 ++++++++++++---
+ 2 files changed, 13 insertions(+), 4 deletions(-)
+
+☕97b12fd🔪2015-05-30 19:24:17 -0700🔪Mike Bostock🔪Use requestAnimationFrame polyfill.🔪
+ package.json |  4 ++--
+ src/timer.js | 13 +++----------
+ 2 files changed, 5 insertions(+), 12 deletions(-)
+
+☕0d982cc🔪2015-05-30 19:11:59 -0700🔪Mike Bostock🔪Add d3.{timer,timerFlush}.🔪
+ README.md          |  2 ++
+ index.js           |  3 ++
+ src/timer.js (new) | 83 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ test/d3.js         |  4 +++
+ 4 files changed, 92 insertions(+)
+
+☕1d60bac🔪2015-05-30 08:26:16 -0700🔪Mike Bostock🔪Add note regarding clamping.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕f60b45d🔪2015-05-30 08:18:05 -0700🔪Mike Bostock🔪A few fixes.🔪Use default values if specified easing parameters are not numeric.
+Optimize elastic easing.
+Fix poly-in-out easing and enable tests.
+
+ src/ease.js       |  50 +++++++++-----------
+ test/ease-test.js | 134 +++++++++++++++++++++++++++---------------------------
+ 2 files changed, 88 insertions(+), 96 deletions(-)
+
+☕b99f3db🔪2015-05-29 23:25:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+☕b1f39f1🔪2015-05-29 23:14:01 -0700🔪Mike Bostock🔪Slight optimization.🔪
+ src/ease.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a155007🔪2015-05-29 23:10:10 -0700🔪Mike Bostock🔪Reimplement easing functions.🔪The -out and -in-out variations are not always exact mirrors of the -in easing
+functions, at least in the case of elastic and back. But also it’s faster to
+have inlined variations than to use closures.
+
+ src/ease.js       | 238 +++++++++++++++++++++++++++++++++---------------------
+ test/ease-test.js | 210 ++++++++++++++++++++++++++---------------------
+ 2 files changed, 262 insertions(+), 186 deletions(-)
+
+☕58e90c5🔪2015-05-29 20:52:10 -0700🔪Mike Bostock🔪Add Penner LICENSE.🔪
+ LICENSE | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+☕211b7ce🔪2015-05-29 17:34:36 -0700🔪Mike Bostock🔪Test string coercion.🔪
+ test/ease-test.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+☕17d5062🔪2015-05-29 17:30:03 -0700🔪Mike Bostock🔪Cache all simple easing functions.🔪
+ src/ease.js | 26 ++++++++++++++++----------
+ 1 file changed, 16 insertions(+), 10 deletions(-)
+
+☕2e496e8🔪2015-05-29 17:16:39 -0700🔪Mike Bostock🔪Easing fixes.🔪Fixes #3 - no internal clamping.
+Fixes #2 - no more out-in mode.
+Fixes #1 - invert elastic and bounce.
+
+ src/ease.js       |  62 ++++----
+ test/ease-test.js | 429 ++++++++++++++++++++++--------------------------------
+ 2 files changed, 202 insertions(+), 289 deletions(-)
+
+☕ab3205e🔪2015-05-29 15:19:50 -0700🔪Mike Bostock🔪Tests for ease("bounce").🔪
+ test/ease-test.js | 89 ++++++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 85 insertions(+), 4 deletions(-)
+
+☕53c0d6f🔪2015-05-29 15:18:38 -0700🔪Mike Bostock🔪Tests for ease("circle").🔪
+ test/ease-test.js | 81 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 81 insertions(+)
+
+☕abb5b98🔪2015-05-29 15:17:34 -0700🔪Mike Bostock🔪Tests for ease("exp").🔪
+ test/ease-test.js | 162 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 162 insertions(+)
+
+☕c04d543🔪2015-05-29 15:05:46 -0700🔪Mike Bostock🔪Describe tests a bit better.🔪
+ test/ease-test.js | 140 +++++++++++++++++++++++++++---------------------------
+ 1 file changed, 70 insertions(+), 70 deletions(-)
+
+☕aef4e29🔪2015-05-29 14:30:53 -0700🔪Mike Bostock🔪Tests for ease("poly").🔪
+ test/ease-test.js | 120 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 120 insertions(+)
+
+☕1becb32🔪2015-05-29 14:21:56 -0700🔪Mike Bostock🔪Restore old d3.ease API.🔪
+ README.md         |   4 +-
+ src/ease.js       | 202 ++++++++++++++++++------------------
+ test/ease-test.js | 304 ++++++++++++++++++++++++++++--------------------------
+ 3 files changed, 258 insertions(+), 252 deletions(-)
+
+☕80490a2🔪2015-05-29 09:55:16 -0700🔪Mike Bostock🔪Expunge generated files!🔪
+ .gitignore                       |   2 +
+ Makefile (gone)                  |  23 -----
+ dist/d3-transition.js (gone)     | 197 ---------------------------------------
+ dist/d3-transition.min.js (gone) |   1 -
+ index.js                         |   4 +-
+ package.json                     |  14 +--
+ test/d3.js (new)                 |  34 +++++++
+ test/ease-test.js                |   4 +-
+ test/require-test.js             |  30 ++----
+ 9 files changed, 54 insertions(+), 255 deletions(-)
+
+☕29f72f5🔪2015-05-28 21:44:56 -0700🔪Mike Bostock🔪Remove global.🔪
+ index.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕bb6bce9🔪2015-05-28 13:02:37 -0700🔪Mike Bostock🔪Extract bounce constants.🔪
+ dist/d3-transition.js     | 19 +++++++++++++++----
+ dist/d3-transition.min.js |  2 +-
+ src/ease.js               | 19 +++++++++++++++----
+ 3 files changed, 31 insertions(+), 9 deletions(-)
+
+☕7d45ce1🔪2015-05-28 12:39:56 -0700🔪Mike Bostock🔪More easing functions.🔪
+ dist/d3-transition.js     | 80 ++++++++++++++++++++++++++++++++++++++---------
+ dist/d3-transition.min.js |  2 +-
+ src/ease.js               | 80 ++++++++++++++++++++++++++++++++++++++---------
+ 3 files changed, 131 insertions(+), 31 deletions(-)
+
+☕8cfd83d🔪2015-05-28 12:29:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕fba0005🔪2015-05-28 12:23:23 -0700🔪Mike Bostock🔪Expose d3.ease.{in,out,inOut,outIn}.🔪
+ dist/d3-transition.js     | 26 ++++++++++++++++++++++++++
+ dist/d3-transition.min.js |  2 +-
+ src/ease.js               | 26 ++++++++++++++++++++++++++
+ test/ease-test.js         | 32 ++++++--------------------------
+ 4 files changed, 59 insertions(+), 27 deletions(-)
+
+☕c2acc85🔪2015-05-28 11:54:07 -0700🔪Mike Bostock🔪Add easing tests.🔪
+ test/ease-test.js (new) | 223 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 223 insertions(+)
+
+☕fe754b1🔪2015-05-28 11:03:06 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .gitignore (new)                  |   3 ++
+ LICENSE (new)                     |  26 +++++++++
+ Makefile (new)                    |  23 ++++++++
+ README.md (new)                   |   3 ++
+ dist/d3-transition.js (new)       | 110 ++++++++++++++++++++++++++++++++++++++
+ dist/d3-transition.min.js (new)   |   1 +
+ index.js (new)                    |  10 ++++
+ index.sublime-project (new)       |  13 +++++
+ package.json (new)                |  20 +++++++
+ src/ease.js (new)                 |  83 ++++++++++++++++++++++++++++
+ src/selection_transition.js (new) |   5 ++
+ src/transition.js (new)           |   7 +++
+ test/require-test.js (new)        |  37 +++++++++++++
+ 13 files changed, 341 insertions(+)

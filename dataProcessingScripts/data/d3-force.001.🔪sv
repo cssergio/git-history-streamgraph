@@ -1,0 +1,1339 @@
+☕475ec96🔪2021-06-11 17:01:40 -0400🔪Curran Kelleher🔪Let and Const in README (#183)🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕156712c🔪2021-06-05 12:10:58 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8aed9d4🔪2021-06-05 21:09:51 +0200🔪Philippe Rivière🔪Adopt type=module (#192)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* es6 rather than no-undef
+
+* remove Sublime project
+
+* add eslint.json
+
+* related d3/d3#3502; extract copyrights from LICENSE
+
+* update dependencies
+
+* stricter eslint
+
+* cleaner imports
+
+* Update README
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                      |    4 +-
+ .github/eslint.json (new)           |   18 +
+ .github/workflows/node.js.yml (new) |   30 +
+ LICENSE                             |   40 +-
+ README.md                           |   24 +-
+ d3-force.sublime-project (gone)     |   17 -
+ package.json                        |   57 +-
+ rollup.config.js                    |   10 +-
+ test/.eslintrc.json (new)           |   11 +
+ test/asserts.js (new)               |   15 +
+ test/center-test.js                 |   33 +-
+ test/collide-test.js                |   67 +-
+ test/find-test.js                   |   31 +-
+ test/nodeEqual.js (gone)            |   23 -
+ test/simulation-test.js             |   25 +-
+ test/x-test.js                      |  101 ++-
+ yarn.lock                           | 1481 +++++++++++++++++++----------------
+ 17 files changed, 1060 insertions(+), 927 deletions(-)
+
+☕8c4d113🔪2020-09-01 16:15:49 +0200🔪Philippe Rivière🔪links🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕3261305🔪2020-08-25 15:23:50 +0200🔪Philippe Rivière🔪link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f9d0a7d🔪2020-08-25 15:17:21 +0200🔪Philippe Rivière🔪links (cherry-picked from https://github.com/d3/d3-force/pull/174)🔪
+ README.md | 102 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 51 insertions(+), 51 deletions(-)
+
+☕c62a930🔪2020-08-25 15:11:31 +0200🔪Philippe Rivière🔪link to forcecenter-strength example🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6e42fc0🔪2020-08-25 15:11:17 +0200🔪Philippe Rivière🔪versions @2🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕1eabfd0🔪2020-08-24 00:45:00 +0200🔪Philippe Rivière🔪v2.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ed62b98🔪2020-08-23 16:44:12 +0200🔪Philippe Rivière🔪upgrade d3 dependencies🔪
+ package.json |  6 +++---
+ yarn.lock    | 24 ++++++++++++------------
+ 2 files changed, 15 insertions(+), 15 deletions(-)
+
+☕cf30f35🔪2020-08-19 09:29:13 +0200🔪Philippe Rivière🔪v2.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕127cbb7🔪2020-08-15 13:30:10 +0200🔪Philippe Rivière🔪test that forceCollide jiggles in a reproducible way🔪
+ test/collide-test.js | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+☕d0b28de🔪2020-08-15 13:29:55 +0200🔪Philippe Rivière🔪test randomSource in simulation🔪
+ test/simulation-test.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1e3db41🔪2020-08-12 14:57:16 -0700🔪Mike Bostock🔪Add deterministic LCG.🔪
+ README.md         | 2 +-
+ src/lcg.js (new)  | 9 +++++++++
+ src/simulation.js | 3 ++-
+ 3 files changed, 12 insertions(+), 2 deletions(-)
+
+☕92b8ce3🔪2020-08-12 14:42:03 -0700🔪Mike Bostock🔪README🔪
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕ad96d04🔪2020-08-12 14:41:45 -0700🔪Mike Bostock🔪Re-initialize forces when random source changes.🔪
+ src/simulation.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕523a02d🔪2020-08-12 14:35:44 -0700🔪Mike Bostock🔪Add simulation.randomSource.🔪
+ src/collide.js    | 10 ++++++----
+ src/jiggle.js     |  4 ++--
+ src/link.js       | 10 ++++++----
+ src/manyBody.js   | 14 ++++++++------
+ src/simulation.js |  9 +++++++--
+ 5 files changed, 29 insertions(+), 18 deletions(-)
+
+☕f02c557🔪2020-07-08 14:05:05 +0200🔪Philippe Rivière🔪a few tests for #17🔪
+ test/center-test.js (new)     | 27 ++++++++++++++
+ test/collide-test.js (new)    | 48 +++++++++++++++++++++++++
+ test/find-test.js (new)       | 24 +++++++++++++
+ test/nodeEqual.js (new)       | 23 ++++++++++++
+ test/simulation-test.js (new) | 21 +++++++++++
+ test/x-test.js (new)          | 84 +++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 227 insertions(+)
+
+☕c46be8d🔪2020-08-12 14:16:18 -0700🔪Mike Bostock🔪Add center.strength.🔪Fixes #81.
+
+ README.md     | 10 +++++++---
+ src/center.js |  8 ++++++--
+ 2 files changed, 13 insertions(+), 5 deletions(-)
+
+☕88e57e2🔪2020-07-10 18:28:34 +0200🔪Philippe Rivière🔪link to phyllotaxis notebook (#159)🔪(& no need to specify "around the origin" since we can scale & translate after init, as demonstrated in https://observablehq.com/@d3/force-layout-phyllotaxis )
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕23ccfe0🔪2020-07-10 18:18:50 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects (#145)🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕051f8d3🔪2020-07-10 21:47:40 +0530🔪Joel Louzado🔪docs(README.md): Add definition for `alpha` (#139)🔪* docs(README.md): Add definition for `alpha`
+
+- Alpha didn't have a meaningful definition and assumed people already knew what it was.
+- Also added link to Simulation-Restart to reference the idea presented there of "reheating" the simulation
+
+fix: https://github.com/d3/d3-force/pull/139#issuecomment-655488430
+
+Co-authored-by: Philippe Rivière <fil@rezo.net>
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕194dba9🔪2020-06-25 16:28:00 +0200🔪Philippe Rivière🔪default strength for collide is 1🔪fixes https://github.com/d3/d3-force/issues/127
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕27df152🔪2019-09-25 10:53:41 -0700🔪Tom MacWright🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕595eb55🔪2019-09-24 15:40:50 -0700🔪Tom MacWright🔪Remove beta from ObservableHQ link🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f1265c🔪2019-08-09 17:37:45 -0700🔪Mike Bostock🔪Standardize dependencies. d3/d3#3337🔪
+ package.json |   6 +-
+ yarn.lock    | 499 +++++++++++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 384 insertions(+), 121 deletions(-)
+
+☕6bbdaeb🔪2019-08-09 15:20:33 -0700🔪Mike Bostock🔪Use exact paths in imports. d3/d3#3265🔪
+ src/index.js | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕8d979ea🔪2019-07-24 14:53:37 -0700🔪Mike Bostock🔪Update link.js🔪
+ src/link.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d6dc0c1🔪2019-07-24 14:36:22 -0700🔪Micah Stubbs🔪indicate node is missing in missing node error🔪this avoids the difficult to debug message "missing: undefined" that appears when a nodeId is undefined.
+ src/link.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a97670b🔪2019-03-14 09:06:28 -0700🔪Mike Bostock🔪2.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c064c7🔪2019-03-14 09:06:10 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 583 ++++++++++++++++++++++++++------------------------------------
+ 1 file changed, 239 insertions(+), 344 deletions(-)
+
+☕dd4a288🔪2019-03-14 09:05:41 -0700🔪Mike Bostock🔪Fix #135.🔪
+ src/simulation.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0cc60d2🔪2018-12-16 09:47:39 -0800🔪Mike Bostock🔪2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e36c11🔪2018-12-16 09:47:29 -0800🔪Mike Bostock🔪Explicit files.🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕455c0ba🔪2018-12-16 09:46:17 -0800🔪Mike Bostock🔪Prepare for v2.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕9c403f7🔪2018-12-15 20:45:29 +0100🔪Philippe Rivière🔪Add .5 to the radius for a nicer density around the origin See https://beta.observablehq.com/@fil/phyllotaxis-explained🔪
+ src/simulation.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕00268dd🔪2018-11-13 07:27:48 -0800🔪Mike Bostock🔪Favor proper imports.🔪
+ src/collide.js  | 4 ++--
+ src/link.js     | 4 ++--
+ src/manyBody.js | 6 +++---
+ src/radial.js   | 2 +-
+ src/x.js        | 2 +-
+ src/y.js        | 2 +-
+ 6 files changed, 10 insertions(+), 10 deletions(-)
+
+☕8d2a751🔪2018-11-13 07:23:30 -0800🔪Mike Bostock🔪Fix nodeById initialization.🔪
+ src/link.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0062ebb🔪2018-11-10 22:04:52 -0800🔪Mike Bostock🔪Adopt Map.🔪
+ README.md         | 1 -
+ package.json      | 1 -
+ src/link.js       | 3 +--
+ src/simulation.js | 9 ++++-----
+ yarn.lock         | 4 ----
+ 5 files changed, 5 insertions(+), 13 deletions(-)
+
+☕ec2f423🔪2018-11-10 20:09:57 -0800🔪vasco🔪Fix #111. Add iterations to tick method.🔪
+ README.md         | 32 +++++++++++++++++---------------
+ src/simulation.js | 28 +++++++++++++++++-----------
+ 2 files changed, 34 insertions(+), 26 deletions(-)
+
+☕b383200🔪2018-10-10 20:46:46 -0700🔪vasco🔪Fix #123 Initialize fixed nodes from f* attributes🔪
+ src/simulation.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕83d4653🔪2018-08-24 14:26:09 -0700🔪Mike Bostock🔪1.1.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6d7e24b🔪2018-08-24 14:26:07 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕ed010ef🔪2018-08-24 14:01:54 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b104062🔪2018-08-24 13:49:50 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 8 --------
+ package.json       | 9 +++++----
+ rollup.config.js   | 6 +++---
+ src/index.js (new) | 8 ++++++++
+ 4 files changed, 16 insertions(+), 15 deletions(-)
+
+☕56a9e6f🔪2018-08-24 12:08:22 -0700🔪Mike Bostock🔪1.1.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a5105d8🔪2018-08-24 12:08:21 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)         |   8 -
+ .eslintrc.json (new)     |  15 +
+ .gitignore               |   2 +-
+ .npmignore               |   3 +-
+ d3-force.sublime-project |  16 +-
+ package.json             |  17 +-
+ rollup.config.js         |  42 ++-
+ yarn.lock (new)          | 951 +++++++++++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 1019 insertions(+), 35 deletions(-)
+
+☕84d0335🔪2017-09-30 08:42:09 -0700🔪Mike Bostock🔪Add forceRadial example.🔪
+ README.md            |   2 ++
+ img/radial.png (new) | Bin 0 -> 49120 bytes
+ 2 files changed, 2 insertions(+)
+
+☕0c2f3f4🔪2017-09-30 08:35:58 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1450d0🔪2017-09-30 08:35:06 -0700🔪Mike Bostock🔪1.0.7🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b5ab277🔪2017-09-30 08:34:55 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json           | 12 ++++++------
+ rollup.config.js (new) | 14 ++++++++++++++
+ 2 files changed, 20 insertions(+), 6 deletions(-)
+
+☕b20fa13🔪2017-09-23 11:06:56 -0700🔪Mike Bostock🔪Fix #103. Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5718530🔪2017-09-23 11:02:17 -0700🔪Mike Bostock🔪Rename local var.🔪
+ src/manyBody.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕cea22c8🔪2017-09-21 22:16:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕40bd984🔪2017-09-21 22:15:37 -0700🔪Mike Bostock🔪Add d3.forceRadial.🔪
+ README.md           | 34 +++++++++++++++++++++++++++++++-
+ index.js            |  1 +
+ src/radial.js (new) | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 91 insertions(+), 1 deletion(-)
+
+☕258b35d🔪2017-06-23 00:35:55 -0700🔪Vasco Asturiano🔪Correct weighted average in barnes-hut coordinates🔪
+ src/manyBody.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕c7d165a🔪2017-04-14 22:27:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕2eaf0f0🔪2017-03-05 15:32:46 +0100🔪Alexey Velikiy🔪Add force removing note🔪
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+☕95aa9b1🔪2017-03-10 10:05:18 -0800🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7b052fa🔪2017-03-10 10:05:09 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9968e37🔪2017-02-28 09:29:39 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕16b5e37🔪2017-02-28 09:29:30 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕13af598🔪2017-01-21 09:52:14 -0800🔪Mike Bostock🔪Link to examples.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕18a155d🔪2016-11-22 16:32:11 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕08d3c61🔪2016-11-09 15:11:14 -0800🔪Mike Bostock🔪Update README; related #72.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕87b80af🔪2016-11-09 15:09:25 -0800🔪Mike Bostock🔪Fix #72 for d3.forceLink.🔪
+ src/link.js | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+
+☕a3288c7🔪2016-11-09 16:50:20 -0600🔪Ethan Jewett🔪Fix #72 for d3.forceManyBody🔪
+ src/manyBody.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕dfc521a🔪2016-11-09 16:40:22 -0600🔪Ethan Jewett🔪Fix #72 for d3.forceCollide🔪
+ src/collide.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕af88310🔪2016-10-07 09:16:09 -0700🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3a603b2🔪2016-10-07 09:15:55 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 7 +------
+ package.json | 6 +++---
+ 2 files changed, 4 insertions(+), 9 deletions(-)
+
+☕6994c92🔪2016-10-06 14:59:36 -0700🔪Mike Bostock🔪Better error for missing nodes.🔪Fixes d3/d3#3003.
+
+ src/link.js | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+☕19d0e8e🔪2016-10-07 09:18:50 -0500🔪Steve Haroz🔪reinitialize radii after collide.radius() (#63)🔪
+ src/collide.js | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+
+☕2687577🔪2016-09-27 09:19:14 -0700🔪Mike Bostock🔪Fix #61.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕045d542🔪2016-09-24 08:14:33 -0700🔪Mike Bostock🔪Fix #60.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕50899c9🔪2016-09-18 16:55:15 +1200🔪Nathaniel Watson🔪Fix typo in readme🔪"beeswam" -> "beeswarm"
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕92c8776🔪2016-08-16 12:10:52 -0700🔪Mike Bostock🔪Clarify re-initialization. Related #53.🔪The text wasn’t clear here: it could be interpreted to mean when x.x (for
+example) is called in getter mode, but re-initialization only happens when the
+method is called in setter mode.
+
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕27053a9🔪2016-08-13 19:59:30 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 78 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 39 insertions(+), 39 deletions(-)
+
+☕e3c94a1🔪2016-08-02 14:47:15 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3da261a🔪2016-08-02 14:47:14 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕be633be🔪2016-07-29 15:45:19 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕80927e0🔪2016-07-29 15:45:15 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8b6cffa🔪2016-07-28 08:42:30 -0700🔪Mike Bostock🔪Update README. Related #38.🔪
+ README.md | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕af1d2b8🔪2016-07-26 16:31:54 -0400🔪Mike Bostock🔪Update README. Fix #47.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕e9a4a28🔪2016-06-30 12:23:02 -0700🔪Mike Bostock🔪Update README. Related d3/d3#2881.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b6d4dfe🔪2016-06-24 10:43:18 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕29ad3e1🔪2016-06-24 10:43:11 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕c69a91a🔪2016-06-20 15:26:49 -0700🔪Mike Bostock🔪Add phyllotaxis image.🔪
+ img/phyllotaxis.png (new) | Bin 0 -> 32622 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕3c00395🔪2016-06-20 14:02:30 -0700🔪Mike Bostock🔪Rename drag to velocity decay.🔪
+ README.md         |  6 +++---
+ src/simulation.js | 10 +++++-----
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+☕44c7390🔪2016-06-20 13:50:42 -0700🔪Mike Bostock🔪Simplify node-fixing API.🔪Rather than storing separate state for the nodes’ fixed positions, just use the
+fx and fy properties on the nodes themselves. This is more similar to the 3.x
+API which used node.fixed (and node.px, node.py to store the previous position).
+This eliminates the need to expose additional APIs for getting, setting,
+clearing and iterating over the fixed positions.
+
+Fixes #35.
+
+ README.md         | 21 ++++++++-------------
+ src/simulation.js | 29 +++++------------------------
+ 2 files changed, 13 insertions(+), 37 deletions(-)
+
+☕145250d🔪2016-06-19 09:25:07 -0700🔪Mike Bostock🔪0.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕88aa802🔪2016-06-19 09:25:07 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ README.md    |  8 ++++----
+ package.json | 10 +++++-----
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+☕11a3c6f🔪2016-06-14 09:23:27 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕2942439🔪2016-06-07 20:53:52 -0700🔪Mike Bostock🔪0.7.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕31f6027🔪2016-06-07 20:53:45 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    | 14 +++++++-------
+ index.js     |  1 -
+ package.json | 20 ++++++++++----------
+ 3 files changed, 17 insertions(+), 18 deletions(-)
+
+☕04c525a🔪2016-06-07 12:33:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0e28745🔪2016-06-07 12:29:24 -0700🔪Jeffrey Heer🔪Add unfixAll method.🔪
+ README.md         | 4 ++++
+ src/simulation.js | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+☕68a4cdb🔪2016-05-20 14:22:20 -0700🔪Mike Bostock🔪0.6.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3cbde60🔪2016-05-20 14:22:11 -0700🔪Mike Bostock🔪Update d3-collection to 0.2.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕2495c0b🔪2016-05-19 13:05:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕b264ebc🔪2016-05-18 09:53:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕80d1520🔪2016-05-14 21:21:29 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕5b800d1🔪2016-05-13 11:14:06 -0700🔪Mike Bostock🔪0.6.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e19a24e🔪2016-05-13 11:13:36 -0700🔪Mike Bostock🔪Link to interactive graph.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f5a9ae2🔪2016-05-13 11:09:22 -0700🔪Mike Bostock🔪If target position is NaN, do nothing.🔪
+ src/x.js | 3 +--
+ src/y.js | 3 +--
+ 2 files changed, 2 insertions(+), 4 deletions(-)
+
+☕7f0201b🔪2016-05-12 15:54:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕61ac684🔪2016-05-12 15:52:32 -0700🔪Mike Bostock🔪Add simulation.find. Fixes #31.🔪
+ src/simulation.js | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+☕80ea690🔪2016-05-12 15:30:55 -0700🔪Mike Bostock🔪Document the expected number of ticks.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b6c842b🔪2016-05-12 13:17:56 -0700🔪Mike Bostock🔪0.6.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕06584d3🔪2016-05-12 13:17:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕e6ac233🔪2016-05-12 12:15:05 -0700🔪Mike Bostock🔪Better default link strength.🔪Use the minimum connectedness of the source or target, not the average.
+
+ src/link.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ab792d2🔪2016-05-12 09:26:17 -0700🔪Mike Bostock🔪Better link strength normalization.🔪Related #30. Rather than normalize the total force applied per node, have the
+default link strength be inversely proportional to the number of links for the
+source and the target. This way, if the source or target is heavily connected,
+the strength of the link is reduced. However, we still bias the application of
+the link such that the less-connected of the two nodes is moved more.
+
+ src/link.js | 23 ++++++++++++++++-------
+ 1 file changed, 16 insertions(+), 7 deletions(-)
+
+☕28bacad🔪2016-05-12 09:25:48 -0700🔪Mike Bostock🔪Reduce default strength.🔪
+ src/manyBody.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8db7cbd🔪2016-05-11 19:34:49 -0700🔪Mike Bostock🔪Fix #30 - normalize link force per node.🔪
+ src/link.js | 19 +++++++------------
+ 1 file changed, 7 insertions(+), 12 deletions(-)
+
+☕0ae4a1b🔪2016-05-10 11:02:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f3116b🔪2016-05-10 10:56:22 -0700🔪Mike Bostock🔪0.6.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕093d16d🔪2016-05-10 10:56:19 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕8c86ea7🔪2016-05-10 10:41:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4d36b90🔪2016-05-10 10:21:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕41044c8🔪2016-05-10 10:20:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕92a4965🔪2016-05-10 10:20:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d486875🔪2016-05-10 10:20:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕275f4b2🔪2016-05-10 10:19:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕f70a40f🔪2016-05-10 10:15:17 -0700🔪Mike Bostock🔪Default to the node’s current position.🔪Nice!
+
+ README.md         | 4 ++--
+ src/simulation.js | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕add1373🔪2016-05-10 10:08:25 -0700🔪Mike Bostock🔪Replace d3.forceFix with simulation.{fix,unfix}.🔪This feels a bit cleaner since you don’t need to track the name of the fixing
+force externally. It also enforces that fixing happens after the application of
+any forces.
+
+ README.md         | 26 +++++++++++---------------
+ index.js          |  1 -
+ src/fix.js (gone) | 18 ------------------
+ src/simulation.js | 19 ++++++++++++++++++-
+ 4 files changed, 29 insertions(+), 35 deletions(-)
+
+☕a4153e7🔪2016-05-10 09:49:20 -0700🔪Mike Bostock🔪Add d3.forceFix. Fixes #27.🔪
+ README.md        | 18 +++++++++++++++---
+ index.js         |  1 +
+ src/fix.js (new) | 18 ++++++++++++++++++
+ 3 files changed, 34 insertions(+), 3 deletions(-)
+
+☕453e316🔪2016-05-09 14:03:40 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕56cb602🔪2016-05-09 14:02:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕feb593f🔪2016-05-09 13:59:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f218ca2🔪2016-05-09 13:59:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d767dcf🔪2016-05-09 13:58:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 30 ++++++++++++++++--------------
+ 1 file changed, 16 insertions(+), 14 deletions(-)
+
+☕8a2c859🔪2016-05-09 13:41:33 -0700🔪Mike Bostock🔪Add simulation.alphaTarget.🔪This lets you set the “desired” alpha for the simulation, and have the
+simulation smoothly interpolate towards the desired value. By default, the
+target value is zero, such that the simulation cools. However, by setting it to
+a non-zero value, such as during a drag interaction, you can also use it to have
+the simulation heat. Fixes #26.
+
+This commit also changes simulation.restart so that it no longer resets the
+alpha to one, and changes the meaning of simulation.alphaDecay. The new default
+alphaDecay now cause the simulation to end after 300 ticks, instead of 345.
+
+ src/simulation.js | 48 ++++++++++++++++++++++++++----------------------
+ 1 file changed, 26 insertions(+), 22 deletions(-)
+
+☕85b0b09🔪2016-05-04 08:40:17 -0700🔪Mike Bostock🔪Minor optimization.🔪Don’t test the bounding box on leaf nodes; test the circles.
+
+ src/collide.js | 34 ++++++++++++++++++----------------
+ 1 file changed, 18 insertions(+), 16 deletions(-)
+
+☕f15a5ad🔪2016-05-04 07:32:18 -0700🔪Mike Bostock🔪Process collisions serially.🔪It’s tempting to do them independently (in parallel), but this makes convergence
+much slower. We’re now moving nodes while they’re in the quadtree, which means
+we could miss a few collisions; but since the tree is rebuilt on each iteration
+that should probably be fine.
+
+This reverts part of 95354e8470e946ae445a45fd78a4166107d470ea, though it retains
+the area-biased resolution and the performance improvements.
+
+ src/collide.js | 29 ++++++++++-------------------
+ 1 file changed, 10 insertions(+), 19 deletions(-)
+
+☕4cec183🔪2016-05-04 07:31:42 -0700🔪Mike Bostock🔪Style.🔪
+ src/simulation.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ca3aecc🔪2016-05-03 22:29:50 -0700🔪Mike Bostock🔪Tiny optimization.🔪
+ src/collide.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕563481b🔪2016-05-03 16:15:55 -0700🔪Mike Bostock🔪Tiny optimization.🔪
+ src/collide.js | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+
+☕95354e8🔪2016-05-03 16:07:44 -0700🔪Mike Bostock🔪Improve collision detection.🔪Fix #25. We now resolve collisions for all nodes independently, rather than
+moving one node at a time. And since we’re not mutating the quadtree while
+resolving, the quadtree can now store the maximum radius for each quadrant,
+accelerating search! We can also optimize resolution a little bit since now
+resolutions are always symmetric.
+
+Collision resolutions are now biased so that the acceleration is inversely
+proportional to the circle’s area, such that larger circles (which are more
+likely to overlap many small circles) are more stable.
+
+Also: only jiggle if two circles are overlapping.
+
+ src/collide.js | 81 ++++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 48 insertions(+), 33 deletions(-)
+
+☕a55cff0🔪2016-05-02 15:43:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕2cab3ad🔪2016-05-02 15:26:25 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a2a01c5🔪2016-05-02 15:25:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ee7362🔪2016-04-29 14:13:04 -0700🔪Mike Bostock🔪Update beeswarm.🔪
+ img/beeswarm.png | Bin 14537 -> 14540 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+☕eed421a🔪2016-04-29 11:09:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕57c49b5🔪2016-04-29 11:08:36 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3f72340🔪2016-04-29 11:08:13 -0700🔪Mike Bostock🔪Add Beeswarm example.🔪
+ README.md              |   4 ++--
+ img/beeswarm.png (new) | Bin 0 -> 14537 bytes
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕1789648🔪2016-04-29 10:46:54 -0700🔪Mike Bostock🔪0.5.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d62e947🔪2016-04-29 10:46:51 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕15d5bb7🔪2016-04-29 10:27:08 -0700🔪Mike Bostock🔪Separate dimensions for coincidence test.🔪Fixes #23. This doesn’t catch all degenerate configurations, such as when x = y,
+but it at least handles a common case for geometric constraints. As an added
+bonus, this commit avoids extraneous jiggling in the many-body force when
+visiting testing the target node’s quadtree cell.
+
+ src/collide.js      |  9 +++++----
+ src/jiggle.js (new) |  3 +++
+ src/link.js         | 14 +++++++-------
+ src/manyBody.js     | 23 ++++++++++++-----------
+ src/math.js (gone)  |  2 --
+ src/simulation.js   |  3 +--
+ 6 files changed, 28 insertions(+), 26 deletions(-)
+
+☕a1ee534🔪2016-04-29 09:40:12 -0700🔪Mike Bostock🔪Separate d3.forcePosition into d3.force{X,Y}.🔪
+ README.md                 | 32 +++++++++++++++++++++++++-------
+ index.js                  |  3 ++-
+ src/x.js (new)            | 42 ++++++++++++++++++++++++++++++++++++++++++
+ src/{position.js => y.js} | 17 +++--------------
+ 4 files changed, 72 insertions(+), 22 deletions(-)
+
+☕cf287b8🔪2016-04-29 09:33:17 -0700🔪Mike Bostock🔪Fix exact coincidence with d3.forceCollide.🔪
+ src/collide.js    | 3 ++-
+ src/link.js       | 3 +--
+ src/manyBody.js   | 3 +--
+ src/math.js (new) | 2 ++
+ src/simulation.js | 3 ++-
+ 5 files changed, 8 insertions(+), 6 deletions(-)
+
+☕75284e0🔪2016-04-28 15:24:32 -0700🔪Mike Bostock🔪0.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3add8cb🔪2016-04-28 15:24:29 -0700🔪Mike Bostock🔪Fix initialization bug.🔪
+ src/link.js | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+☕d56fba3🔪2016-04-28 15:18:58 -0700🔪Mike Bostock🔪0.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e12cb5c🔪2016-04-28 15:18:56 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕86ed498🔪2016-04-28 15:17:49 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕853d4c3🔪2016-04-28 15:17:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9ee87d7🔪2016-04-28 15:17:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7bfbbcf🔪2016-04-28 15:17:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕629f223🔪2016-04-28 15:16:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d078bba🔪2016-04-28 15:14:32 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md             |  14 +++++++++++++-
+ img/collide.png (new) | Bin 0 -> 128480 bytes
+ img/graph.png (new)   | Bin 0 -> 27190 bytes
+ img/lattice.png (new) | Bin 0 -> 59312 bytes
+ img/tree.png (new)    | Bin 0 -> 55366 bytes
+ 5 files changed, 13 insertions(+), 1 deletion(-)
+
+☕ff9bb57🔪2016-04-28 14:57:22 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2a9de56🔪2016-04-28 14:57:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8d845ac🔪2016-04-28 14:56:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 64 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 58 insertions(+), 6 deletions(-)
+
+☕83851d8🔪2016-04-28 14:55:18 -0700🔪Mike Bostock🔪Optimize link force initialization.🔪We don’t need to re-index nodes and links when the strength or distance changes.
+
+ src/link.js | 21 ++++++++++++++-------
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+
+☕4782776🔪2016-04-28 14:33:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕292d12d🔪2016-04-28 14:30:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 84 +++++++++++++++++++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 69 insertions(+), 15 deletions(-)
+
+☕914ef48🔪2016-04-28 11:27:01 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 29 ++++-------------------------
+ 1 file changed, 4 insertions(+), 25 deletions(-)
+
+☕e448cf8🔪2016-04-28 11:26:51 -0700🔪Mike Bostock🔪Remove d3.forceBox and d3.forceContain.🔪
+ index.js              |  1 -
+ src/box.js (gone)     | 27 ------------------------
+ src/contain.js (gone) | 57 ---------------------------------------------------
+ 3 files changed, 85 deletions(-)
+
+☕5c6cb8d🔪2016-04-28 11:26:30 -0700🔪Mike Bostock🔪Add d3.forceBox.🔪
+ src/box.js (new) | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+☕2cbc3d2🔪2016-04-28 10:14:30 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 38 ++++++++++++++++++++++----------------
+ 1 file changed, 22 insertions(+), 16 deletions(-)
+
+☕117c787🔪2016-04-27 21:50:27 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fca02cf🔪2016-04-27 17:52:58 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dfb0430🔪2016-04-27 17:36:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5c6d4f5🔪2016-04-27 16:59:13 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e0e32e🔪2016-04-27 16:57:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0194697🔪2016-04-27 16:57:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c28977d🔪2016-04-27 16:55:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6d9446c🔪2016-04-27 16:55:03 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4021c94🔪2016-04-27 16:54:26 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕26e9ff0🔪2016-04-27 16:52:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 +++++++++++++++++++-----
+ 1 file changed, 19 insertions(+), 5 deletions(-)
+
+☕eca9a02🔪2016-04-27 16:35:41 -0700🔪Mike Bostock🔪Increase the default alphaMin.🔪
+ README.md         | 8 ++++++--
+ src/simulation.js | 2 +-
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+☕0f88799🔪2016-04-27 16:22:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕647fd80🔪2016-04-27 16:21:31 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7080b87🔪2016-04-27 16:20:53 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕6d4ae37🔪2016-04-27 16:18:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 +++++++++++++++++++-----
+ 1 file changed, 19 insertions(+), 5 deletions(-)
+
+☕bb632ea🔪2016-04-27 15:31:41 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕c22de8e🔪2016-04-27 15:18:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕a51360b🔪2016-04-27 12:02:18 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕324062b🔪2016-04-27 11:24:27 -0700🔪Mike Bostock🔪0.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c735b72🔪2016-04-27 11:24:25 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕5d321b2🔪2016-04-27 11:20:21 -0700🔪Mike Bostock🔪Allow iterative constraint application.🔪Adds {forceCollide,forceLink}.iterations, which defaults to one.
+
+ src/collide.js | 23 +++++++++++++++--------
+ src/link.js    | 33 ++++++++++++++++++++-------------
+ 2 files changed, 35 insertions(+), 21 deletions(-)
+
+☕19e2a7a🔪2016-04-27 11:20:10 -0700🔪Mike Bostock🔪Reduce default drag.🔪
+ src/simulation.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕93e0397🔪2016-04-27 11:03:13 -0700🔪Mike Bostock🔪Improve stability of collision & links.🔪We need to look into the future!
+
+ src/collide.js | 29 +++++++++++++++++++----------
+ src/link.js    |  4 ++--
+ 2 files changed, 21 insertions(+), 12 deletions(-)
+
+☕2f7cd4a🔪2016-04-27 09:52:33 -0700🔪Mike Bostock🔪Rename simulation.start to simulation.restart.🔪This is more consistent with timer.restart, and more appropriate given that the
+simulation now starts automatically.
+
+ README.md         | 2 +-
+ src/simulation.js | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕b7014b9🔪2016-04-27 09:50:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕b88b656🔪2016-04-27 09:36:52 -0700🔪Mike Bostock🔪0.2.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕831ad55🔪2016-04-27 09:13:04 -0700🔪Mike Bostock🔪Fix #20 - simulation.tick now returns boolean.🔪This changes simulation.tick to always advance the simulation one step,
+regardless of the current value of alpha and alphaMin. If alpha is less than
+alphaMin after this step, simulation.tick returns true, indicating that the
+simulation can be safely ended.
+
+Furthermore, simulation.tick no longer dispatches a tick event; the tick event
+is only dispatched by the simulation’s internal timer. This is now consistent
+with simulation.stop, which likewise does not dispatch an end event; the end
+event is only dispatched when the simulation’s internal timer stops.
+
+ src/simulation.js | 23 +++++++++++++----------
+ 1 file changed, 13 insertions(+), 10 deletions(-)
+
+☕6850fb6🔪2016-04-26 17:39:44 -0700🔪Mike Bostock🔪0.2.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aa410cf🔪2016-04-26 17:37:00 -0700🔪Mike Bostock🔪Deterministic initialization!🔪Rather than initialize the node positions randomly, use a phyllotaxis. This is
+just as good, and means the resulting behavior will be deterministic as long as
+no nodes are exactly coincident.
+
+ src/manyBody.js   | 16 +++++++++-------
+ src/simulation.js | 15 +++++++++++----
+ 2 files changed, 20 insertions(+), 11 deletions(-)
+
+☕ec754db🔪2016-04-26 11:51:52 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕36ddf9e🔪2016-04-26 11:50:55 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 37 +++++++++++++++++++++++++++++--------
+ 1 file changed, 29 insertions(+), 8 deletions(-)
+
+☕92a8a78🔪2016-04-26 11:26:02 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 176 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 176 insertions(+)
+
+☕48f24e0🔪2016-04-26 09:43:39 -0700🔪Mike Bostock🔪0.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕72d265c🔪2016-04-26 09:43:30 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕e88cd9e🔪2016-04-26 09:34:32 -0700🔪Mike Bostock🔪Rename for clarity.🔪
+ src/simulation.js | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕e532b18🔪2016-04-26 09:18:51 -0700🔪Mike Bostock🔪Fix #18 - allow manual ticking.🔪Calling simulation.stop no longer resets the alpha, so a subsequent call to
+simulation.start now resumes the simulation, and you can call simulation.tick to
+run the simulation manually.
+
+This commit also removes the start event. There’s not much of a point to the
+start event since it’s impossible to listen for it in the normal case: the event
+is dispatched during the construction of the simulation before any listeners can
+be registered. Even in other cases, the simulation is always restarted manually,
+so you could always notify a listener manually at the same time. Furthermore,
+supporting a start event would require us to track whether the timer is running,
+so it’s simpler to just leave it out. (And lastly, eliminating the start event
+avoids some confusion about the relationship between simulation.stop and the end
+event, which are unrelated!)
+
+Lastly, simplify the recalculation of the current iteration when changing the
+alpha decay rate constant.
+
+ src/simulation.js | 38 ++++++++++++++++----------------------
+ 1 file changed, 16 insertions(+), 22 deletions(-)
+
+☕3810e0f🔪2016-04-25 21:47:24 -0700🔪Mike Bostock🔪Pass nodes to force.initialize.🔪
+ src/center.js     | 4 ++--
+ src/collide.js    | 6 +++---
+ src/contain.js    | 4 ++--
+ src/link.js       | 5 +++--
+ src/manyBody.js   | 3 ++-
+ src/position.js   | 4 ++--
+ src/simulation.js | 2 +-
+ 7 files changed, 15 insertions(+), 13 deletions(-)
+
+☕b330311🔪2016-04-25 17:04:51 -0700🔪Mike Bostock🔪Default empty nodes and links.🔪
+ src/link.js       | 2 ++
+ src/simulation.js | 4 +++-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+☕48836d0🔪2016-04-25 14:00:54 -0700🔪Mike Bostock🔪Pass radius to d3.forceCollide constructor.🔪
+ src/collide.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕84e41d3🔪2016-04-25 10:54:00 -0700🔪Mike Bostock🔪0.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕39454e6🔪2016-04-25 10:53:56 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕d0acda9🔪2016-04-25 10:42:19 -0700🔪Mike Bostock🔪Fix #15 - rename friction to drag.🔪
+ src/simulation.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕2764683🔪2016-04-25 09:42:22 -0700🔪Mike Bostock🔪Fix position initialization.🔪
+ src/position.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b35af74🔪2016-04-25 09:40:59 -0700🔪Mike Bostock🔪Rename for consistency.🔪
+ src/manyBody.js | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+☕2dcf98c🔪2016-04-25 09:38:39 -0700🔪Mike Bostock🔪Add a tiny bit of blending to collision.🔪This greatly improves stability.
+
+ src/collide.js | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+☕a6dcf0c🔪2016-04-23 14:24:37 -0700🔪Mike Bostock🔪Improve stability of collision detection.🔪
+ src/collide.js    | 39 ++++++++++++++-------------------------
+ src/manyBody.js   |  9 +--------
+ src/simulation.js |  8 ++++++++
+ 3 files changed, 23 insertions(+), 33 deletions(-)
+
+☕53fb14f🔪2016-04-23 10:24:15 -0700🔪Mike Bostock🔪Add d3.forceContain.🔪
+ index.js             |  1 +
+ src/contain.js (new) | 57 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 58 insertions(+)
+
+☕ffa61d6🔪2016-04-23 09:48:58 -0700🔪Mike Bostock🔪0.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6ad4bc2🔪2016-04-23 09:48:31 -0700🔪Mike Bostock🔪More stable collision detection.🔪
+ src/collide.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕d1aff9a🔪2016-04-23 09:35:39 -0700🔪Mike Bostock🔪Don’t require nodes on creation.🔪
+ src/simulation.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b4896d5🔪2016-04-23 09:37:09 -0700🔪Mike Bostock🔪Fix the many-body force.🔪Mutating the tree deletes the accumulated charges!
+
+ src/manyBody.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕0f68d72🔪2016-04-23 08:43:59 -0700🔪Mike Bostock🔪Reset link force when links change.🔪
+ src/link.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕15728e3🔪2016-04-22 16:08:25 -0700🔪Mike Bostock🔪0.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕95cd502🔪2016-04-22 16:08:22 -0700🔪Mike Bostock🔪Fix typo.🔪
+ src/center.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7830f54🔪2016-04-22 15:56:00 -0700🔪Mike Bostock🔪0.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0744d26🔪2016-04-22 15:35:56 -0700🔪Mike Bostock🔪Fix #12 - make position configurable.🔪
+ src/center.js   | 24 ++++++++++++++++--------
+ src/position.js | 43 +++++++++++++++++++++++++++++++++++--------
+ 2 files changed, 51 insertions(+), 16 deletions(-)
+
+☕74bfd62🔪2016-04-22 13:04:57 -0700🔪Mike Bostock🔪Better collision detection.🔪By looking into the future, we can better avoid collisions.
+
+Also remove duplicate initialization of node positions.
+
+ src/collide.js    | 53 ++++++++++++++++++++++++++++++++---------------------
+ src/manyBody.js   |  9 ++++++++-
+ src/position.js   |  7 -------
+ src/simulation.js |  8 --------
+ 4 files changed, 40 insertions(+), 37 deletions(-)
+
+☕9944ad1🔪2016-04-22 10:04:24 -0700🔪Mike Bostock🔪Fix for zero alphaDecay.🔪
+ src/simulation.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8c2113f🔪2016-04-22 09:55:12 -0700🔪Mike Bostock🔪Fix manyBody force.🔪
+ src/collide.js  | 19 ++++++++++++-------
+ src/manyBody.js | 34 ++++++++++++++++++----------------
+ 2 files changed, 30 insertions(+), 23 deletions(-)
+
+☕d6f45ff🔪2016-04-22 09:45:03 -0700🔪Mike Bostock🔪Update to d3-quadtree 0.7.🔪
+ README.md         |  2 +-
+ package.json      |  2 +-
+ src/collide.js    | 41 +++++++++++++++++++-----------------
+ src/manyBody.js   | 21 +++++++++----------
+ src/simulation.js | 63 ++++++++++++++++++-------------------------------------
+ 5 files changed, 54 insertions(+), 75 deletions(-)
+
+☕dfe79d5🔪2016-04-21 17:49:52 -0700🔪Mike Bostock🔪Add collision force.🔪
+ index.js             |  1 +
+ src/collide.js (new) | 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/manyBody.js      |  1 +
+ 3 files changed, 56 insertions(+)
+
+☕b5ad5d5🔪2016-04-21 15:52:14 -0700🔪Mike Bostock🔪Air it out a bit.🔪
+ src/simulation.js | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+☕19324ef🔪2016-04-21 13:44:52 -0700🔪Mike Bostock🔪Don’t rely on this.🔪
+ src/center.js     | 4 ++--
+ src/link.js       | 4 ++--
+ src/manyBody.js   | 9 +++++----
+ src/position.js   | 8 ++------
+ src/simulation.js | 4 ++--
+ 5 files changed, 13 insertions(+), 16 deletions(-)
+
+☕f628880🔪2016-04-21 13:27:10 -0700🔪Mike Bostock🔪Allow forces to share the quadtree.🔪
+ src/manyBody.js   |  5 +----
+ src/simulation.js | 22 +++++++++++++++++++++-
+ 2 files changed, 22 insertions(+), 5 deletions(-)
+
+☕377713e🔪2016-04-20 17:52:10 -0700🔪Mike Bostock🔪Increase default theta.🔪
+ src/manyBody.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5b46023🔪2016-04-20 15:31:37 -0700🔪Mike Bostock🔪Rename charge to strength.🔪
+ src/manyBody.js | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕c30fc95🔪2016-04-20 15:26:53 -0700🔪Mike Bostock🔪Modify position, not velocity.🔪We don’t want re-centering to apply momentum.
+
+ src/center.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕321784c🔪2016-04-20 15:24:49 -0700🔪Mike Bostock🔪Fix #13 - initialize positions and velocities.🔪
+ src/center.js     |  3 +++
+ src/simulation.js | 18 +++++++++++-------
+ 2 files changed, 14 insertions(+), 7 deletions(-)
+
+☕32724da🔪2016-04-20 15:12:04 -0700🔪Mike Bostock🔪Add d3.forceCenter.🔪
+ index.js            |  1 +
+ src/center.js (new) | 25 +++++++++++++++++++++++++
+ 2 files changed, 26 insertions(+)
+
+☕900d9e1🔪2016-04-20 13:37:41 -0700🔪Mike Bostock🔪Fix #1 - allow linking by string identifier.🔪
+ src/link.js | 28 +++++++++++++++++++---------
+ 1 file changed, 19 insertions(+), 9 deletions(-)
+
+☕44aabfa🔪2016-04-20 12:53:35 -0700🔪Mike Bostock🔪Allow simulation.force(name, null).🔪
+ src/simulation.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕166bda8🔪2016-04-20 12:38:01 -0700🔪Mike Bostock🔪Initialize link.index, too.🔪
+ src/link.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕541ef54🔪2016-04-20 12:33:10 -0700🔪Mike Bostock🔪Allow numeric source and target identifiers.🔪
+ src/link.js | 36 ++++++++++++++++++++++++++++++------
+ 1 file changed, 30 insertions(+), 6 deletions(-)
+
+☕46eb555🔪2016-04-20 10:39:32 -0700🔪Mike Bostock🔪Per-link strength and distance.🔪
+ src/link.js | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+
+☕71510f3🔪2016-04-20 09:53:56 -0700🔪Mike Bostock🔪Make force.nodes optional.🔪
+ src/simulation.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fd9b003🔪2016-04-20 09:52:14 -0700🔪Mike Bostock🔪Handle coincident nodes.🔪
+ src/manyBody.js | 69 +++++++++++++++++++++++++++++++++------------------------
+ src/position.js |  4 ++--
+ 2 files changed, 42 insertions(+), 31 deletions(-)
+
+☕9392d4e🔪2016-04-19 17:18:35 -0700🔪Mike Bostock🔪Update d3-quadtree.🔪
+ package.json    |  2 +-
+ src/manyBody.js | 59 +++++++++++++++++++++------------------------------------
+ 2 files changed, 23 insertions(+), 38 deletions(-)
+
+☕3d449cd🔪2016-04-16 08:00:59 -0700🔪Mike Bostock🔪Remove unused var.🔪
+ src/manyBody.js | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕5a3d213🔪2016-04-11 11:03:07 -0700🔪Mike Bostock🔪Handle coincident nodes.🔪
+ src/manyBody.js | 45 ++++++++++++++++++++++++++++++---------------
+ src/position.js |  4 ++--
+ 2 files changed, 32 insertions(+), 17 deletions(-)
+
+☕7ae3bbc🔪2016-04-11 10:36:35 -0700🔪Mike Bostock🔪Fix #10 - non-recursive many-body force.🔪
+ src/manyBody.js | 51 +++++++++++++++++++++++++--------------------------
+ 1 file changed, 25 insertions(+), 26 deletions(-)
+
+☕1fe10b4🔪2016-04-08 15:07:00 -0700🔪Mike Bostock🔪Variable charge forces.🔪
+ src/link.js     |  1 +
+ src/manyBody.js | 47 +++++++++++++++++++++++++++++------------------
+ src/position.js |  1 +
+ 3 files changed, 31 insertions(+), 18 deletions(-)
+
+☕f08062f🔪2016-04-08 08:32:24 -0700🔪Mike Bostock🔪Assign node.index in d3.forceSimulation.🔪Also get ready for d3-quadtree 0.3 and per-node forces.
+
+ package.json          |  2 +-
+ src/constant.js (new) |  5 +++++
+ src/link.js           | 17 ++++-------------
+ src/manyBody.js       | 40 +++++++++++++++++++++-------------------
+ src/simulation.js     | 10 +++++++++-
+ 5 files changed, 40 insertions(+), 34 deletions(-)
+
+☕13fd5ee🔪2016-04-07 13:13:16 -0700🔪Mike Bostock🔪Remove dead code.🔪
+ src/manyBody.js | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+☕a72896d🔪2016-04-07 11:55:45 -0700🔪Mike Bostock🔪Preserve alpha when setting alphaDecay.🔪
+ src/simulation.js | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕0c881ea🔪2016-04-07 11:42:17 -0700🔪Mike Bostock🔪Cleaner.🔪
+ src/link.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕bbaa4d6🔪2016-04-07 11:32:34 -0700🔪Mike Bostock🔪Improvements.🔪Fix #7 - forces are now mutable, so it’s easier to change their settings and
+they behave more like other configurable objects in D3 (though less like curves,
+easing functions and interpolators).
+
+Fix #9 - forces now have a dedicated interface rather than just being beforetick
+listeners. This allows forces to be re-initialized when the nodes change.
+
+Fix #10 - d3.forcePosition now initializes node positions and velocities.
+
+ README.md         |  1 +
+ package.json      |  3 ++-
+ src/link.js       | 49 +++++++++++++++++++++++++------------------------
+ src/manyBody.js   | 20 ++++++++++----------
+ src/position.js   | 34 +++++++++++++++++++++-------------
+ src/simulation.js | 54 ++++++++++++++++++++++++++++++++++--------------------
+ 6 files changed, 93 insertions(+), 68 deletions(-)
+
+☕c7380c1🔪2016-04-06 13:51:59 -0700🔪Mike Bostock🔪Compute link bias.🔪
+ src/link.js       | 48 ++++++++++++++++++++++++++++++++----------------
+ src/manyBody.js   |  2 +-
+ src/position.js   |  2 +-
+ src/simulation.js | 30 +++++++++++++++---------------
+ 4 files changed, 49 insertions(+), 33 deletions(-)
+
+☕2bebbfb🔪2016-04-06 13:21:23 -0700🔪Mike Bostock🔪Checkpoint many-body forces.🔪
+ README.md              |  1 -
+ index.js               |  2 +-
+ package.json           |  5 ++-
+ src/friction.js (gone) | 16 ---------
+ src/link.js            | 17 +++++----
+ src/manyBody.js (new)  | 98 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/position.js        | 20 ++++++-----
+ src/simulation.js      | 67 +++++++++++++++-------------------
+ 8 files changed, 152 insertions(+), 74 deletions(-)
+
+☕17111cc🔪2016-04-05 13:53:44 -0700🔪Mike Bostock🔪0.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕45776e9🔪2016-04-05 13:53:42 -0700🔪Mike Bostock🔪Prepare for patch version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bc24b67🔪2016-04-05 13:50:36 -0700🔪Mike Bostock🔪Initial commit.🔪
+ .eslintrc (new)                | 13 ++++++++
+ .gitignore (new)               |  5 +++
+ .npmignore (new)               |  3 ++
+ LICENSE (new)                  | 27 +++++++++++++++
+ README.md (new)                | 26 +++++++++++++++
+ d3-force.sublime-project (new) | 13 ++++++++
+ index.js (new)                 |  5 +++
+ package.json (new)             | 44 ++++++++++++++++++++++++
+ src/friction.js (new)          | 16 +++++++++
+ src/link.js (new)              | 37 ++++++++++++++++++++
+ src/position.js (new)          | 24 +++++++++++++
+ src/simulation.js (new)        | 76 ++++++++++++++++++++++++++++++++++++++++++
+ 12 files changed, 289 insertions(+)

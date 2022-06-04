@@ -1,0 +1,3282 @@
+☕91245ee🔪2021-06-07 10:40:43 -0700🔪Mike Bostock🔪3.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2bf0fda🔪2021-06-07 10:38:41 -0700🔪Mike Bostock🔪update README; add test; remove obsolete instanceof🔪
+ README.md                    |  2 +-
+ src/selection/merge.js       |  1 -
+ test/selection/merge-test.js | 17 +++++++++++++++++
+ 3 files changed, 18 insertions(+), 2 deletions(-)
+
+☕690dd20🔪2021-06-07 19:31:17 +0200🔪Philippe Rivière🔪remove all children (#276)🔪* remove all children
+
+fixes #275
+
+* more defensive copy selectAll
+
+* comment array
+
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/array.js                    | 12 ++++++++----
+ src/selectAll.js                |  2 +-
+ src/selection/data.js           | 15 +++++++++++++--
+ src/selection/selectAll.js      |  3 +--
+ src/selection/selectChildren.js |  2 +-
+ test/selection/remove-test.js   | 10 +++++++++-
+ 6 files changed, 33 insertions(+), 11 deletions(-)
+
+☕54a3acf🔪2021-06-07 19:26:43 +0200🔪Philippe Rivière🔪Adopt type=module (#281)🔪* Adopt type=module
+
+follow changes in d3-format:
+* type=module
+* add exports
+* remove zip
+* license: ISC
+* update dependencies
+
+* Update test/jsdom.js
+
+Co-authored-by: Aulon Mujaj <aulon.mujaj@gmail.com>
+
+* Update test/select-test.js
+
+Co-authored-by: Aulon Mujaj <aulon.mujaj@gmail.com>
+
+* Update test/select-test.js
+
+Co-authored-by: Aulon Mujaj <aulon.mujaj@gmail.com>
+
+* some dom
+
+* remove Sublime project
+
+* add eslint.json
+
+* related d3/d3#3502; extract copyrights from LICENSE
+
+* update dependencies
+
+* Update README
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* cleaner imports; fix tests
+
+* update dependencies
+
+* tweak equality test
+
+Co-authored-by: Aulon Mujaj <aulon.mujaj@gmail.com>
+Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ .eslintrc.json                        |    4 +-
+ .github/eslint.json (new)             |   18 +
+ .github/workflows/node.js.yml (new)   |   30 +
+ LICENSE                               |   39 +-
+ README.md                             |   16 +-
+ d3-selection.sublime-project (gone)   |   17 -
+ package.json                          |   47 +-
+ rollup.config.js                      |   10 +-
+ test/.eslintrc.json (new)             |   16 +
+ test/asserts.js (new)                 |   53 +
+ test/create-test.js                   |   38 +-
+ test/creator-test.js                  |   28 +-
+ test/jsdom.js                         |   19 +-
+ test/matcher-test.js                  |   20 +-
+ test/namespace-test.js                |   53 +-
+ test/namespaces-test.js               |    9 +-
+ test/pointer-test.js                  |   93 +-
+ test/select-test.js                   |   60 +-
+ test/selectAll-test.js                |   89 +-
+ test/selection/append-test.js         |  237 ++--
+ test/selection/attr-test.js           |  166 +--
+ test/selection/call-test.js           |   34 +-
+ test/selection/classed-test.js        |  209 ++--
+ test/selection/data-test.js           |  467 ++++----
+ test/selection/datum-test.js          |   82 +-
+ test/selection/dispatch-test.js       |  114 +-
+ test/selection/each-test.js           |   38 +-
+ test/selection/empty-test.js          |   22 +-
+ test/selection/enter-test.js          |  149 +--
+ test/selection/exit-test.js           |   58 +-
+ test/selection/filter-test.js         |  113 +-
+ test/selection/html-test.js           |   82 +-
+ test/selection/index-test.js          |   42 +-
+ test/selection/insert-test.js         |   77 +-
+ test/selection/iterator-test.js       |   36 +-
+ test/selection/join-test.js           |   44 +-
+ test/selection/merge-test.js          |   87 +-
+ test/selection/node-test.js           |   45 +-
+ test/selection/nodes-test.js          |   36 +-
+ test/selection/on-test.js             |  322 +++---
+ test/selection/order-test.js          |   38 +-
+ test/selection/property-test.js       |   82 +-
+ test/selection/remove-test.js         |   54 +-
+ test/selection/select-test.js         |  143 +--
+ test/selection/selectAll-test.js      |  131 +--
+ test/selection/selectChildren-test.js |   99 +-
+ test/selection/size-test.js           |   30 +-
+ test/selection/sort-test.js           |  143 ++-
+ test/selection/style-test.js          |  164 ++-
+ test/selection/text-test.js           |   82 +-
+ test/selector-test.js                 |   30 +-
+ test/selectorAll-test.js              |   49 +-
+ test/window-test.js                   |   24 +-
+ yarn.lock                             | 2058 ++++++++++++++++-----------------
+ 54 files changed, 2909 insertions(+), 3337 deletions(-)
+
+☕c04c9bc🔪2021-05-25 17:47:12 -0400🔪Curran🔪Add documentation for returning transitions from enter and update.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bb4da56🔪2021-05-25 17:29:40 -0400🔪Curran🔪Add tests for allowing callbacks to return a transition.🔪
+ test/selection/join-test.js | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+☕a7ab8a2🔪2021-05-25 17:17:18 -0400🔪Curran Kelleher🔪Add export defailt🔪
+ src/selection/join.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e0b61ec🔪2021-05-25 15:52:27 -0400🔪Curran Kelleher🔪Bring back update logic as it is in fact required.🔪
+ src/selection/join.js | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕e47584c🔪2021-05-25 14:22:45 -0400🔪Curran Kelleher🔪Revert update logic as it is handled by .merge.🔪
+ src/selection/join.js | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕f2ee26e🔪2021-05-25 14:15:32 -0400🔪Curran Kelleher🔪Update src/selection/merge.js🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/selection/merge.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d63fccd🔪2021-05-25 14:10:40 -0400🔪Curran Kelleher🔪Guarantee that selection.join returns a selection.🔪
+ src/selection/join.js | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+☕3284abe🔪2021-05-25 13:09:29 -0400🔪Curran Kelleher🔪Update src/selection/merge.js🔪
+ src/selection/merge.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4928158🔪2021-05-25 12:21:53 -0400🔪Curran Kelleher🔪Alternative solution for #257🔪
+ src/selection/join.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1e6edde🔪2021-05-25 12:16:52 -0400🔪Curran Kelleher🔪Update src/selection/merge.js🔪Co-authored-by: Philippe Rivière <fil@rezo.net>
+ src/selection/merge.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕daa339b🔪2021-05-24 13:09:37 -0400🔪Curran Kelleher🔪Implement selection.merge(transition) Closes #257🔪
+ src/selection/merge.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕736a322🔪2020-09-21 23:03:57 +0200🔪Philippe Rivière🔪example for selection.data🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2bfd965🔪2020-09-06 10:11:02 +0200🔪Hugo Elhaj-Lahsen🔪Fix symbol.iterator formatting🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fcbb9cb🔪2020-08-23 10:40:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 16 ++++------------
+ 1 file changed, 4 insertions(+), 12 deletions(-)
+
+☕860c1bb🔪2020-08-23 18:59:23 +0200🔪Philippe Rivière🔪v2.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ab4a51d🔪2020-08-12 09:56:46 -0700🔪Mike Bostock🔪2.0.0-rc.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕04e9e75🔪2020-04-25 12:43:55 -0700🔪Mike Bostock🔪Add selection.selectChild[ren].🔪
+ README.md                                   |  8 ++++
+ src/matcher.js                              |  7 ++++
+ src/selection/index.js                      |  4 ++
+ src/selection/selectChild.js (new)          | 18 ++++++++
+ src/selection/selectChildren.js (new)       | 18 ++++++++
+ test/selection/selectChildren-test.js (new) | 65 +++++++++++++++++++++++++++++
+ 6 files changed, 120 insertions(+)
+
+☕248aeba🔪2020-08-05 22:48:25 +0200🔪Philippe Rivière🔪a few tests for d3.pointer d3.pointers remove a spurious console.warn🔪
+ src/pointers.js            |  1 -
+ test/pointer-test.js (new) | 41 +++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 41 insertions(+), 1 deletion(-)
+
+☕29c55b7🔪2020-08-05 10:13:56 +0200🔪Philippe Rivière🔪v2.0.0-rc.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f254f64🔪2020-08-05 10:13:04 +0200🔪Philippe Rivière🔪pointer tests🔪
+ src/pointers.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕1104d26🔪2020-08-04 19:04:56 +0200🔪Philippe Rivière🔪array🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕d03744a🔪2020-08-04 11:49:41 +0200🔪Philippe Rivière🔪document pointer, pointers🔪
+ README.md | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+☕bbc520a🔪2020-08-03 21:33:35 +0200🔪Philippe Rivière🔪Update src/pointers.js🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/pointers.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕10e738a🔪2020-08-03 21:33:28 +0200🔪Philippe Rivière🔪Update src/pointer.js🔪Co-authored-by: Mike Bostock <mbostock@gmail.com>
+ src/pointer.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕14ebfe7🔪2020-08-03 21:16:36 +0200🔪Philippe Rivière🔪use sourceEvent.currentTarget🔪
+ src/index.js    | 1 +
+ src/pointer.js  | 4 ++--
+ src/pointers.js | 1 +
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+☕eea6d35🔪2020-08-03 08:50:10 -0700🔪Mike Bostock🔪Add d3.pointers.🔪
+ src/pointer.js           |  3 +++
+ src/pointers.js (new)    | 10 ++++++++++
+ src/sourceEvent.js (new) |  5 +++++
+ 3 files changed, 18 insertions(+)
+
+☕afef83a🔪2020-07-24 13:05:06 +0200🔪Philippe Rivière🔪link syntax🔪
+ README.md | 102 +++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 51 insertions(+), 51 deletions(-)
+
+☕8d74aa2🔪2020-07-23 13:07:31 +0200🔪Philippe Rivière🔪1.4.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5220ca0🔪2020-07-23 12:55:08 +0200🔪Philippe Rivière🔪v2.0.0-rc.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9f3c5e8🔪2020-06-29 12:08:32 +0200🔪Philippe Rivière🔪*selection*.selection() returns itself🔪fixes #238
+
+ README.md                     | 4 ++++
+ src/selection/index.js        | 5 +++++
+ test/selection/select-test.js | 8 ++++++++
+ 3 files changed, 17 insertions(+)
+
+☕35edfe6🔪2020-04-06 17:14:04 +0800🔪xufanglu🔪Update README.md🔪append a DIV element to paragraph is not valid HTML
+https://stackoverflow.com/questions/10763780/putting-div-inside-p-is-adding-an-extra-p
+https://www.w3docs.com/learn-html/html-div-tag.html
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕f8c53bf🔪2019-11-16 22:07:40 -0800🔪Mike Bostock🔪Squelch Rollup warning.🔪
+ rollup.config.js | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕7398837🔪2019-11-16 18:15:21 -0800🔪Mike Bostock🔪2.0.0-rc.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕630e51c🔪2019-11-16 15:24:42 -0800🔪Mike Bostock🔪Test for selection.data(null).🔪
+ src/selection/data.js       | 2 +-
+ test/selection/data-test.js | 6 ++++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+☕4782e69🔪2019-11-16 15:21:04 -0800🔪Mike Bostock🔪Don’t allow data to be null.🔪
+ src/array.js               | 4 ++--
+ src/selectAll.js           | 2 +-
+ src/selection/selectAll.js | 3 ++-
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+
+☕8cde069🔪2019-11-16 15:06:47 -0800🔪Mike Bostock🔪Correctly iterate over a string.🔪
+ src/array.js | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕1ce33b5🔪2019-11-16 15:00:32 -0800🔪Mike Bostock🔪Adopt a Map.🔪
+ src/selection/data.js | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+
+☕addc21f🔪2019-11-16 19:17:40 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.4.0 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.4.0 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.4.0...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕d858f00🔪2019-11-16 11:16:44 -0800🔪Mike Bostock🔪1.4.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a80a7f2🔪2019-11-16 11:16:17 -0800🔪Mike Bostock🔪Ignore warnings.🔪
+ .eslintrc.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕bfc5cf3🔪2019-11-16 11:15:16 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .npmignore (gone) |    4 -
+ package.json      |   12 +-
+ yarn.lock         | 1201 ++++++++++++++++++++++++++++++++---------------------
+ 3 files changed, 727 insertions(+), 490 deletions(-)
+
+☕86ac8e2🔪2019-11-16 11:13:02 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕848f471🔪2019-11-06 18:01:40 +0000🔪dependabot[bot]🔪Bump js-yaml from 3.12.0 to 3.13.1🔪Bumps [js-yaml](https://github.com/nodeca/js-yaml) from 3.12.0 to 3.13.1.
+- [Release notes](https://github.com/nodeca/js-yaml/releases)
+- [Changelog](https://github.com/nodeca/js-yaml/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/nodeca/js-yaml/compare/3.12.0...3.13.1)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕dec3434🔪2019-11-06 18:01:34 +0000🔪dependabot[bot]🔪Bump lodash from 4.17.10 to 4.17.15🔪Bumps [lodash](https://github.com/lodash/lodash) from 4.17.10 to 4.17.15.
+- [Release notes](https://github.com/lodash/lodash/releases)
+- [Commits](https://github.com/lodash/lodash/compare/4.17.10...4.17.15)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕284bea2🔪2019-11-02 08:23:21 +0000🔪dependabot[bot]🔪Bump eslint-utils from 1.3.1 to 1.4.3🔪Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.3.1 to 1.4.3.
+- [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+- [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.3.1...v1.4.3)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ yarn.lock | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+☕7cdb9ed🔪2019-09-27 10:18:27 +0200🔪Christophe Coevoet🔪Mark the package as having no side effects🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕27c26dc🔪2019-08-19 10:29:46 +0200🔪Sylvain Lesage🔪docs: fix two links to anchors🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6666180🔪2019-07-30 10:46:00 -0700🔪Mike Bostock🔪Standardize array conversion.🔪
+ README.md                  |  4 ++--
+ src/array.js               |  2 +-
+ src/selectAll.js           |  2 +-
+ src/selection/selectAll.js | 10 +++++++++-
+ 4 files changed, 13 insertions(+), 5 deletions(-)
+
+☕f13c41a🔪2019-07-30 10:05:10 -0700🔪Mike Bostock🔪Don’t copy arrays.🔪
+ src/array.js (new)          | 3 +++
+ src/selectAll.js            | 3 ++-
+ src/selection/data.js       | 7 ++-----
+ test/selection/each-test.js | 2 +-
+ 4 files changed, 8 insertions(+), 7 deletions(-)
+
+☕fe2ed50🔪2019-07-30 09:32:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕9bce1bd🔪2019-07-30 07:37:42 -0700🔪Mike Bostock🔪Handle missing targets.🔪
+ src/pointer.js | 25 ++++++++++++-------------
+ 1 file changed, 12 insertions(+), 13 deletions(-)
+
+☕65c9592🔪2019-07-30 07:03:37 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 26 ++++++++++++++++++++++++--
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+
+☕772adb3🔪2019-07-29 17:33:52 -0700🔪Mike Bostock🔪Fix d3.pointer when the target is a window.🔪
+ README.md      | 8 +++++++-
+ src/pointer.js | 8 ++++++--
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+☕4b1ba83🔪2019-07-29 17:19:56 -0700🔪Mike Bostock🔪Explicit files.🔪
+ .npmignore (gone) | 4 ----
+ package.json      | 4 ++++
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕7cb8ad4🔪2019-07-29 17:17:59 -0700🔪Mike Bostock🔪2.0.0-rc.1🔪
+ package.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕e9765ea🔪2019-07-29 17:14:37 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ package.json     |    8 +-
+ src/namespace.js |    2 +-
+ yarn.lock        | 1203 ++++++++++++++++++++++++++++++++----------------------
+ 3 files changed, 726 insertions(+), 487 deletions(-)
+
+☕de28a3e🔪2019-07-29 16:50:47 -0700🔪Mike Bostock🔪Rename clientPoint to pointer.🔪
+ README.md                    | 6 +++---
+ src/index.js                 | 2 +-
+ src/{point.js => pointer.js} | 3 +--
+ 3 files changed, 5 insertions(+), 6 deletions(-)
+
+☕e2b8efe🔪2019-07-29 16:42:45 -0700🔪Mike Bostock🔪Don’t default options to false.🔪
+ README.md           |  6 ++----
+ src/selection/on.js | 21 ++++++++++-----------
+ 2 files changed, 12 insertions(+), 15 deletions(-)
+
+☕bfee680🔪2019-07-29 16:18:27 -0700🔪Mike Bostock🔪Rename to “target”.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕bcbf78e🔪2019-07-29 16:15:57 -0700🔪Mike Bostock🔪Default to event.currentTarget.🔪
+ README.md    | 4 ++--
+ src/point.js | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+☕13dbec6🔪2019-07-29 16:07:53 -0700🔪Mike Bostock🔪Remove sourceEvent.🔪
+ src/sourceEvent.js (gone) | 7 -------
+ 1 file changed, 7 deletions(-)
+
+☕f3f0e66🔪2019-07-29 16:05:09 -0700🔪Mike Bostock🔪Remove d3.event.🔪Listeners are now invoked with two arguments: the current event and the current
+datum. (Listeners no longer have capture the selection index and group.) Also
+removes d3.customEvent, d3.mouse, d3.touch, and d3.touches.
+
+Fixes #191.
+Fixes #189.
+
+ README.md                       | 28 ++++---------------------
+ src/index.js                    |  4 ----
+ src/mouse.js (gone)             |  8 --------
+ src/selection/on.js             | 45 +++--------------------------------------
+ src/touch.js (gone)             | 14 -------------
+ src/touches.js (gone)           | 12 -----------
+ test/event-test.js (gone)       | 32 -----------------------------
+ test/selection/dispatch-test.js | 16 +++++++--------
+ test/selection/on-test.js       | 29 ++++++++++++--------------
+ 9 files changed, 28 insertions(+), 160 deletions(-)
+
+☕2824b06🔪2019-07-29 15:45:44 -0700🔪Mike Bostock🔪Related d3/d3#3265.🔪
+ src/create.js              |  4 +--
+ src/creator.js             |  4 +--
+ src/index.js               | 36 +++++++++++++-------------
+ src/mouse.js               |  4 +--
+ src/namespace.js           |  2 +-
+ src/select.js              |  2 +-
+ src/selectAll.js           |  2 +-
+ src/selection/append.js    |  2 +-
+ src/selection/attr.js      |  2 +-
+ src/selection/data.js      |  6 ++---
+ src/selection/dispatch.js  |  2 +-
+ src/selection/enter.js     |  4 +--
+ src/selection/exit.js      |  4 +--
+ src/selection/filter.js    |  4 +--
+ src/selection/index.js     | 64 +++++++++++++++++++++++-----------------------
+ src/selection/insert.js    |  4 +--
+ src/selection/merge.js     |  2 +-
+ src/selection/select.js    |  4 +--
+ src/selection/selectAll.js |  4 +--
+ src/selection/sort.js      |  2 +-
+ src/selection/style.js     |  2 +-
+ src/sourceEvent.js         |  2 +-
+ src/touch.js               |  4 +--
+ src/touches.js             |  4 +--
+ 24 files changed, 85 insertions(+), 85 deletions(-)
+
+☕263a801🔪2019-03-18 13:37:38 -0700🔪Mike Bostock🔪Fix #204 - accept iterable in selection.data.🔪
+ src/selection/data.js       | 6 +++++-
+ test/selection/data-test.js | 7 +++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+☕54f6e6b🔪2019-03-18 13:31:28 -0700🔪Mike Bostock🔪Fix #208 - strict merge.🔪
+ src/selection/merge.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕60be25f🔪2019-03-17 21:18:47 -0700🔪Mike Bostock🔪Use self-iteration instead of each.🔪
+ src/selection/data.js       | 10 +++++-----
+ src/selection/nodes.js      |  4 +---
+ src/selection/size.js       |  4 ++--
+ test/selection/data-test.js |  7 +++++++
+ 4 files changed, 15 insertions(+), 10 deletions(-)
+
+☕20029cb🔪2019-03-17 21:11:40 -0700🔪Mike Bostock🔪Fix #197 iterable selections.🔪
+ src/selection/index.js                |  4 +++-
+ src/selection/iterator.js (new)       |  7 +++++++
+ test/selection/iterator-test.js (new) | 27 +++++++++++++++++++++++++++
+ 3 files changed, 37 insertions(+), 1 deletion(-)
+
+☕8fc76d7🔪2019-03-17 21:07:30 -0700🔪Mike Bostock🔪Fix #209.🔪
+ src/selectAll.js                |  2 +-
+ test/selectAll-test.js          | 10 ++++++++++
+ test/selection/dispatch-test.js |  2 +-
+ test/selection/each-test.js     |  2 +-
+ test/selection/on-test.js       |  2 +-
+ 5 files changed, 14 insertions(+), 4 deletions(-)
+
+☕8b260d2🔪2019-07-29 15:39:21 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7a65535🔪2019-07-29 15:37:11 -0700🔪Mike Bostock🔪Fix #214.🔪
+ README.md | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+
+☕be52f8c🔪2019-07-29 15:26:22 -0700🔪Mike Bostock🔪Fix #211.🔪
+ README.md | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+☕80c8014🔪2019-05-17 08:29:14 -0700🔪Mike Bostock🔪Allow cloning of detached nodes.🔪
+ src/selection/clone.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕e2b3d37🔪2019-03-17 09:02:49 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b1e4c70🔪2019-03-17 09:02:18 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕55d2a35🔪2019-03-17 09:02:03 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3da0c0c🔪2019-03-17 09:00:48 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕40f2689🔪2019-03-17 09:00:23 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕307991d🔪2019-03-17 08:59:55 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕be010b8🔪2019-03-17 08:59:16 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕341714c🔪2019-03-17 08:58:43 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕05a868f🔪2019-03-17 08:58:06 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 46 +++++++++-------------------------------------
+ 1 file changed, 9 insertions(+), 37 deletions(-)
+
+☕4c5b993🔪2019-03-17 08:47:39 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 78 ++++++++++++++++++++++++++++++---------------------------------
+ 1 file changed, 37 insertions(+), 41 deletions(-)
+
+☕59228e4🔪2019-03-17 08:43:10 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 14 ++++----------
+ 1 file changed, 4 insertions(+), 10 deletions(-)
+
+☕915bcc8🔪2019-01-28 10:14:22 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a393709🔪2019-01-28 10:13:30 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕ba2d0c6🔪2019-01-26 05:42:33 +0100🔪Hugo Trentesaux🔪typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fee76b1🔪2019-01-22 20:41:32 -0800🔪Mike Bostock🔪1.4.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕57373d4🔪2019-01-18 14:31:37 -0800🔪Mike Bostock🔪Shorten.🔪
+ src/selection/join.js | 21 ++++-----------------
+ 1 file changed, 4 insertions(+), 17 deletions(-)
+
+☕adfb77c🔪2019-01-18 13:35:48 -0800🔪Mike Bostock🔪Rename for style.🔪
+ src/selection/join.js | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕777bd69🔪2019-01-18 13:34:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕553d261🔪2019-01-18 13:33:16 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9dad3a0🔪2019-01-18 13:33:03 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕986c6f1🔪2019-01-18 13:32:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕1ca4ed0🔪2019-01-18 13:30:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕146af5d🔪2019-01-18 13:25:38 -0800🔪Mike Bostock🔪Add selection.join. Fixes #194.🔪
+ README.md                         | 50 +++++++++++++++++++++++++++------------
+ src/identity.js (new)             |  3 +++
+ src/matcher.js                    |  2 +-
+ src/selection/index.js            |  2 ++
+ src/selection/join.js (new)       | 20 ++++++++++++++++
+ src/selection/order.js            |  2 +-
+ test/selection/join-test.js (new) | 41 ++++++++++++++++++++++++++++++++
+ test/selection/order-test.js      | 10 --------
+ 8 files changed, 103 insertions(+), 27 deletions(-)
+
+☕2f33090🔪2018-10-20 01:01:38 -0400🔪Nathan Rosenquist🔪corrected 'the numbers' in documentation🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕37e2c80🔪2018-09-07 08:40:34 -0700🔪Mike Bostock🔪Remove vendor fallback.🔪
+ src/matcher.js | 19 +------------------
+ 1 file changed, 1 insertion(+), 18 deletions(-)
+
+☕9ffa69f🔪2018-09-07 08:55:37 -0700🔪Mike Bostock🔪Fix #113.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕6793469🔪2018-08-24 14:19:54 -0700🔪Mike Bostock🔪1.3.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2626e13🔪2018-08-24 14:01:08 -0700🔪Mike Bostock🔪Adopt npm_package_version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8b44242🔪2018-08-24 13:44:46 -0700🔪Mike Bostock🔪Move index; add unpkg & jsdelivr fields.🔪
+ index.js (gone)    | 18 ------------------
+ package.json       |  9 +++++----
+ rollup.config.js   |  6 +++---
+ src/index.js (new) | 18 ++++++++++++++++++
+ 4 files changed, 26 insertions(+), 25 deletions(-)
+
+☕4a23192🔪2018-08-24 13:44:21 -0700🔪Mike Bostock🔪Update .npmignore.🔪
+ .npmignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕28ef05a🔪2018-08-24 11:54:09 -0700🔪Mike Bostock🔪1.3.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕437f824🔪2018-08-24 11:54:08 -0700🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc (gone)             |   12 -
+ .eslintrc.json (new)         |   15 +
+ d3-selection.sublime-project |   16 +-
+ package.json                 |   19 +-
+ rollup.config.js             |   42 +-
+ test/create-test.js          |    4 +-
+ test/namespace-test.js       |    1 -
+ test/namespaces-test.js      |    1 -
+ test/selection/enter-test.js |    2 +-
+ test/selection/index-test.js |    1 -
+ yarn.lock (new)              | 1385 ++++++++++++++++++++++++++++++++++++++++++
+ 11 files changed, 1454 insertions(+), 44 deletions(-)
+
+☕4dcb341🔪2018-01-31 11:03:45 -0800🔪Mike Bostock🔪Combine lines.🔪
+ README.md | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕d149188🔪2018-01-31 14:02:52 -0500🔪Tom Wanzek🔪doc(clone): update deep explanation🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕27e3bdf🔪2018-01-31 13:41:56 -0500🔪Tom Wanzek🔪doc(clone): Clarify selection.clone description🔪This changes clarifies the **selection.clone([deep])** API description by:
+* adding a description of the return type,
+* explaining the optional `deep` parameter.
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕62c4f16🔪2018-01-28 10:12:41 -0800🔪Mike Bostock🔪1.3.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dc3b829🔪2018-01-28 10:11:58 -0800🔪Mike Bostock🔪Add d3.create. Fixes #156.🔪
+ README.md                 |  4 ++++
+ index.js                  |  1 +
+ src/create.js (new)       |  6 ++++++
+ test/create-test.js (new) | 29 +++++++++++++++++++++++++++++
+ 4 files changed, 40 insertions(+)
+
+☕a551afe🔪2018-01-28 10:04:59 -0800🔪Mike Bostock🔪Add selection.clone.🔪Fixes #149.
+
+ README.md                    | 10 ++++++++++
+ src/selection/clone.js (new) | 11 +++++++++++
+ src/selection/index.js       |  2 ++
+ 3 files changed, 23 insertions(+)
+
+☕f6d44d7🔪2018-01-28 09:59:28 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .gitignore                   |  2 +-
+ .npmignore                   |  2 +-
+ LICENSE                      |  2 +-
+ d3-selection.sublime-project |  2 +-
+ package.json                 | 14 +++++++-------
+ rollup.config.js (new)       | 14 ++++++++++++++
+ 6 files changed, 25 insertions(+), 11 deletions(-)
+
+☕dba7750🔪2017-11-21 16:44:09 -0500🔪Mike Bostock🔪1.2.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕efe498a🔪2017-10-30 15:52:06 -0700🔪Mike Bostock🔪Expose clientPoint.🔪
+ README.md | 4 ++++
+ index.js  | 1 +
+ 2 files changed, 5 insertions(+)
+
+☕97eb803🔪2017-09-30 08:24:02 -0700🔪Mike Bostock🔪Update README. Related #86.🔪
+ README.md | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕4fe8203🔪2017-06-13 08:45:05 -0700🔪Mike Bostock🔪Fix #131 - move window-test.🔪
+ test/{selection => }/window-test.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕c6040e7🔪2017-05-30 11:11:58 -0700🔪Mike Bostock🔪Fix #130.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕230509f🔪2017-05-25 07:14:47 -0700🔪Mike Bostock🔪Fix #129. Keys are strings.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fa0b172🔪2017-05-23 09:27:42 -0700🔪Mike Bostock🔪Update JSDOM.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕48bd034🔪2017-05-15 10:35:01 -0700🔪Mike Bostock🔪1.1.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e7c72a6🔪2017-03-08 10:26:04 -0800🔪Mike Bostock🔪Use inline style value, if present.🔪Rather than always returning the computed style value, selection.style now
+favors the inline value, if present, and only falls back to the computed value
+if an inline value is not present.
+
+By not computing the style value in the common case where an inline style is
+present, this is faster, but more importantly it is more predictable, since a
+computed value can be surprisingly different from an inline value, such as when
+the inline value is specified as a percentage.
+
+This change is especially useful for transition.style, d3/d3-transition#47, so
+that you can control the starting style value of a transition.
+
+ README.md                    |  6 +++++-
+ index.js                     |  1 +
+ src/selection/style.js       | 10 ++++++----
+ test/selection/style-test.js | 24 ++++++++++++++++++++++--
+ 4 files changed, 34 insertions(+), 7 deletions(-)
+
+☕00b904b🔪2017-05-05 16:34:44 -0700🔪Mike Bostock🔪1.0.6🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕eba2a94🔪2017-05-05 16:34:24 -0700🔪Mike Bostock🔪Update to JSDOM 10.🔪
+ package.json                     |  6 +++---
+ test/creator-test.js             |  6 +++---
+ test/event-test.js               |  6 +++---
+ test/jsdom.js (new)              |  5 +++++
+ test/matcher-test.js             |  4 ++--
+ test/namespace-test.js           |  2 +-
+ test/namespaces-test.js          |  2 +-
+ test/select-test.js              | 14 +++++++-------
+ test/selectAll-test.js           | 12 ++++++------
+ test/selection/append-test.js    | 30 +++++++++++++++---------------
+ test/selection/attr-test.js      | 14 +++++++-------
+ test/selection/call-test.js      |  6 +++---
+ test/selection/classed-test.js   | 14 +++++++-------
+ test/selection/data-test.js      | 32 ++++++++++++++++----------------
+ test/selection/datum-test.js     |  4 ++--
+ test/selection/dispatch-test.js  | 10 +++++-----
+ test/selection/each-test.js      |  6 +++---
+ test/selection/empty-test.js     |  6 +++---
+ test/selection/enter-test.js     | 24 ++++++++++++------------
+ test/selection/exit-test.js      | 12 ++++++------
+ test/selection/filter-test.js    | 18 +++++++++---------
+ test/selection/html-test.js      |  4 ++--
+ test/selection/index-test.js     |  8 ++++----
+ test/selection/insert-test.js    | 10 +++++-----
+ test/selection/merge-test.js     | 12 ++++++------
+ test/selection/node-test.js      |  8 ++++----
+ test/selection/nodes-test.js     |  8 ++++----
+ test/selection/on-test.js        | 30 +++++++++++++++---------------
+ test/selection/order-test.js     |  6 +++---
+ test/selection/property-test.js  |  4 ++--
+ test/selection/remove-test.js    |  8 ++++----
+ test/selection/select-test.js    | 22 +++++++++++-----------
+ test/selection/selectAll-test.js | 20 ++++++++++----------
+ test/selection/size-test.js      |  6 +++---
+ test/selection/sort-test.js      | 16 ++++++++--------
+ test/selection/style-test.js     | 14 +++++++-------
+ test/selection/text-test.js      |  4 ++--
+ test/selection/window-test.js    |  8 ++++----
+ test/selector-test.js            |  6 +++---
+ test/selectorAll-test.js         |  6 +++---
+ 40 files changed, 219 insertions(+), 214 deletions(-)
+
+☕26c72e0🔪2017-05-05 16:22:43 -0700🔪Mike Bostock🔪Fix quotes.🔪
+ src/selection/dispatch.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2a22f16🔪2017-04-28 13:15:45 -0400🔪Nathan Bowser🔪Check if event is a function.🔪IE11 has CustomEvent, but it's an object so firing `dispatch` on an
+element in IE11 blows up.
+
+ src/selection/dispatch.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1e33400🔪2017-03-10 09:47:52 -0800🔪Mike Bostock🔪1.0.5🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cc03254🔪2017-03-10 09:47:40 -0800🔪Mike Bostock🔪Update UglifyJS.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a504db2🔪2017-03-04 12:28:08 +0530🔪Curran Kelleher🔪Remove outdated documentation for local_remove🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c7554b6🔪2017-02-28 09:13:58 -0800🔪Mike Bostock🔪1.0.4🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fdeff83🔪2017-02-28 09:13:43 -0800🔪Mike Bostock🔪Update Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a1f2eb3🔪2017-02-14 14:13:35 +0530🔪Curran Kelleher🔪Fix typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a2cf4f3🔪2017-01-19 11:52:52 -0800🔪Mike Bostock🔪Document this as nodes[i]. Related #97.🔪
+ README.md | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕5048fa6🔪2017-01-06 09:22:09 -0800🔪Mike Bostock🔪Fix d3/d3#3018.🔪
+ README.md | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+☕9cd17b1🔪2016-11-22 16:49:22 -0800🔪Mike Bostock🔪1.0.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕376b888🔪2016-11-22 16:49:13 -0800🔪Mike Bostock🔪Update dependencies.🔪
+ .eslintrc    | 3 +--
+ package.json | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+☕081b17d🔪2016-09-25 16:27:46 -0400🔪Tom Wanzek🔪Update README * **[Fix](touch)**: The API documentation for `touch(...)` should reflect that an array with [x, y] coordinates is returned (or null).🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕6fdeb30🔪2016-09-18 19:08:04 +0800🔪lyrachord🔪fix typo🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7352263🔪2016-08-27 11:12:10 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1ada454🔪2016-08-23 00:23:12 +0300🔪Devinsuit🔪Add links to source🔪
+ README.md | 94 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 47 insertions(+), 47 deletions(-)
+
+☕8b86e87🔪2016-08-05 08:39:56 -0700🔪Mike Bostock🔪Update README. Fix #90.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c83c400🔪2016-08-02 14:31:42 -0700🔪Mike Bostock🔪1.0.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d3398b9🔪2016-08-02 14:31:42 -0700🔪Mike Bostock🔪Add module entry. Related rollup/rollup-plugin-node-resolve#48.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕489b9f8🔪2016-07-29 15:52:08 -0700🔪Mike Bostock🔪1.0.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3ba2562🔪2016-07-29 15:52:03 -0700🔪Mike Bostock🔪Update postpublish, Rollup.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕3e41f24🔪2016-07-28 08:04:05 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕938bed0🔪2016-07-28 08:03:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕50f65b6🔪2016-07-28 08:02:11 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕52d36fb🔪2016-07-28 07:59:11 -0700🔪Mike Bostock🔪Update README. Related #86.🔪
+ README.md | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+
+☕cc840ab🔪2016-07-26 23:52:38 -0400🔪wrgoldstein🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕26a1c1d🔪2016-06-29 16:43:53 -0700🔪Mike Bostock🔪Update README. Fixes d3/d3#2875.🔪
+ README.md | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕7234cdf🔪2016-06-24 10:57:43 -0700🔪Mike Bostock🔪1.0.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bbf8ffa🔪2016-06-24 10:57:39 -0700🔪Mike Bostock🔪Prepare for major release.🔪
+ README.md    | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕1bfbafc🔪2016-06-17 09:21:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕4a7f3ba🔪2016-06-16 14:29:05 -0700🔪Mike Bostock🔪More sensible select[All](null).🔪Previously it was being coerced to a string, and so it could (in very unlikely
+scenarios) select <null> or <undefined> elements; now it only selects nothing.
+
+Related #79.
+
+ src/selectAll.js         |  2 +-
+ src/selector.js          |  4 +++-
+ src/selectorAll.js       |  6 +++++-
+ test/select-test.js      |  2 +-
+ test/selectAll-test.js   | 16 ++++++++++++++++
+ test/selector-test.js    |  8 ++++++++
+ test/selectorAll-test.js | 17 +++++++++++++++++
+ 7 files changed, 51 insertions(+), 4 deletions(-)
+
+☕45fe9da🔪2016-06-16 13:16:16 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+☕c31f5bf🔪2016-06-14 10:22:55 -0700🔪Mike Bostock🔪Move EnterNode to enter.🔪
+ src/selection/data.js  | 17 +----------------
+ src/selection/enter.js | 16 ++++++++++++++++
+ 2 files changed, 17 insertions(+), 16 deletions(-)
+
+☕f87d2f9🔪2016-06-14 09:44:30 -0700🔪Mike Bostock🔪0.9.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0ddbde9🔪2016-06-14 09:44:24 -0700🔪Mike Bostock🔪Prepare for minor release.🔪
+ README.md    | 4 ++--
+ package.json | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕f1c87ca🔪2016-06-14 09:42:36 -0700🔪Mike Bostock🔪Revert "Change selection.filter to preserve index."🔪This reverts commit 0c252f1e8a020dc44eb084411b920b90542c1d2e.
+
+ README.md                     |  6 ++++--
+ src/selection/filter.js       |  4 ++--
+ test/selection/filter-test.js | 14 +++++++-------
+ 3 files changed, 13 insertions(+), 11 deletions(-)
+
+☕3820d48🔪2016-06-14 09:22:15 -0700🔪Mike Bostock🔪Tag as d3-module. Related d3/d3#2827.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕05697c1🔪2016-06-10 08:33:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕76f859f🔪2016-06-10 08:32:46 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f0775c1🔪2016-06-10 07:59:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕fff22c3🔪2016-06-08 09:22:47 -0700🔪Mike Bostock🔪Fix #77 - document group argument.🔪
+ README.md | 34 +++++++++++++++++-----------------
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+
+☕7f4c152🔪2016-06-07 17:35:59 -0700🔪Mike Bostock🔪0.8.0🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕79a0c10🔪2016-06-07 17:35:51 -0700🔪Mike Bostock🔪Export to d3.🔪Related d3/d3#2840.
+
+ README.md    |  6 +++---
+ index.js     |  1 -
+ package.json | 12 ++++++------
+ 3 files changed, 9 insertions(+), 10 deletions(-)
+
+☕e3b5455🔪2016-06-07 13:07:10 -0700🔪Mike Bostock🔪Fix #65 - restore selection.insert.🔪
+ README.md                           | 46 +++++++++++++++++++++++++----
+ src/selection/append.js             | 28 +++---------------
+ src/selection/index.js              |  2 ++
+ src/selection/insert.js (new)       | 14 +++++++++
+ test/selection/append-test.js       | 56 -----------------------------------
+ test/selection/enter-test.js        | 12 ++++----
+ test/selection/insert-test.js (new) | 59 +++++++++++++++++++++++++++++++++++++
+ 7 files changed, 125 insertions(+), 92 deletions(-)
+
+☕1c0b6a5🔪2016-05-27 16:24:19 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕093b8f9🔪2016-05-27 16:23:57 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕502e1c5🔪2016-05-27 16:22:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b833d4b🔪2016-05-27 16:21:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2add99a🔪2016-05-27 16:21:06 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕b386422🔪2016-05-27 16:19:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕54541ab🔪2016-05-27 16:17:48 -0700🔪Mike Bostock🔪Add d3.local!🔪
+ README.md          | 39 +++++++++++++++++++++++++++++++++++++++
+ index.js           |  1 +
+ src/local.js (new) | 27 +++++++++++++++++++++++++++
+ 3 files changed, 67 insertions(+)
+
+☕7e799a3🔪2016-05-24 15:33:27 -0700🔪Mike Bostock🔪0.7.3🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕60f3eb9🔪2016-05-24 15:05:32 -0700🔪Mike Bostock🔪Don’t ignore duplicate keys.🔪Instead of ignoring duplicate keys, we now define symmetric behavior: if there
+are multiple elements with the same key, the duplicates are added to the exit
+selection; if there are multiple data with the same key, the duplicates are
+added to the enter selection.
+
+Fixes d3/d3-axis#10. Related d3/d3#997 d3/d3#999.
+
+ README.md                   |  6 ++--
+ src/selection/data.js       | 32 +++++++------------
+ test/selection/data-test.js | 78 +++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 94 insertions(+), 22 deletions(-)
+
+☕0c478db🔪2016-05-18 09:52:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕df64100🔪2016-05-14 21:30:57 -0700🔪Mike Bostock🔪Update JSDOM.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1e31a0a🔪2016-05-14 21:10:10 -0700🔪Mike Bostock🔪Add ESLint. Related d3/d3-scale#59.🔪
+ .eslintrc    | 4 ++--
+ package.json | 3 ++-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+☕987fa09🔪2016-05-10 16:55:39 -0700🔪Mike Bostock🔪0.7.2🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c18dd4🔪2016-05-06 12:59:15 -0700🔪Mike Bostock🔪Rename callback to listener.🔪
+ src/selection/on.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕2e6967d🔪2016-05-06 12:58:45 -0700🔪Mike Bostock🔪Add d3.customEvent.🔪
+ README.md           |  4 ++++
+ index.js            |  2 +-
+ src/selection/on.js | 11 +++++++++++
+ 3 files changed, 16 insertions(+), 1 deletion(-)
+
+☕23dc352🔪2016-05-06 12:11:53 -0700🔪Mike Bostock🔪Fix #71 - remove undocumented event argument.🔪
+ src/mouse.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕4c2522e🔪2016-05-06 09:01:44 -0700🔪Mike Bostock🔪Optimize selection.{raise,lower}.🔪
+ src/selection/lower.js | 2 +-
+ src/selection/raise.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕67decc5🔪2016-05-03 11:21:59 -0700🔪Mike Bostock🔪0.7.1🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕adb0e17🔪2016-05-03 11:21:39 -0700🔪Mike Bostock🔪Remove unused vars.🔪
+ package.json | 2 +-
+ src/point.js | 3 ---
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+
+☕06e4c69🔪2016-04-24 12:17:35 -0700🔪Mike Bostock🔪Remove workaround for WebKit bug 44083.🔪It was fixed in 2010, and is no longer present in iOS 9, so I think it’s time.
+
+ src/point.js | 17 +----------------
+ 1 file changed, 1 insertion(+), 16 deletions(-)
+
+☕10047f4🔪2016-04-04 18:15:46 +0800🔪lyrachord🔪Update README.md🔪fix typo 'pseudo' in section about selection.selectAll(function selector)
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕af700ca🔪2016-03-15 10:22:03 -0700🔪Mike Bostock🔪Use glob.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c1ec38🔪2016-03-14 13:10:20 -0700🔪Mike Bostock🔪Drop faucet.🔪
+ package.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕709e542🔪2016-03-14 12:36:59 -0700🔪Mike Bostock🔪Windows build compatibility.🔪
+ index.js     | 2 +-
+ package.json | 7 ++++---
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+☕2bcf3d2🔪2016-03-06 15:11:15 -0800🔪Mike Bostock🔪Fix postpublish.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕01e69d9🔪2016-03-04 09:50:15 -0800🔪Mike Bostock🔪Create zipball on postpublish.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕9d8122d🔪2016-03-02 13:21:33 -0800🔪Mike Bostock🔪Revert "Verify that merge target is a selection."🔪This reverts commit 5d61eec0d42fd12a4e38a67bdab4a9934713f831.
+
+ src/selection/merge.js       | 1 -
+ test/selection/merge-test.js | 8 --------
+ 2 files changed, 9 deletions(-)
+
+☕dc70106🔪2016-03-02 13:19:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕5d61eec🔪2016-03-02 13:16:12 -0800🔪Mike Bostock🔪Verify that merge target is a selection.🔪
+ src/selection/merge.js       | 1 +
+ test/selection/merge-test.js | 8 ++++++++
+ 2 files changed, 9 insertions(+)
+
+☕e36657c🔪2016-03-01 14:14:27 -0800🔪Mike Bostock🔪Simpler version export.🔪
+ index.js     | 1 +
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+☕4d6bdec🔪2016-03-01 08:47:40 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a483c9c🔪2016-02-26 10:29:42 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4ffc48b🔪2016-02-26 10:17:36 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕257be30🔪2016-02-26 10:14:51 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e6c23fa🔪2016-02-26 10:13:44 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dba9cc6🔪2016-02-26 10:09:28 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕662584d🔪2016-02-26 10:05:09 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+☕b7fd1dd🔪2016-02-25 14:47:20 -0800🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5017603🔪2016-02-24 15:58:26 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕c6b6c4f🔪2016-02-22 20:40:24 -0800🔪Mike Bostock🔪Shorten.🔪
+ README.md | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕beae0bd🔪2016-02-22 20:37:57 -0800🔪Mike Bostock🔪Shorten.🔪
+ README.md | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+☕aeb7e5e🔪2016-02-22 17:53:20 -0800🔪Mike Bostock🔪Air it out.🔪
+ README.md | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+☕e2ab75b🔪2016-02-22 17:52:21 -0800🔪Mike Bostock🔪Air it out.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕2600009🔪2016-02-22 17:51:31 -0800🔪Mike Bostock🔪Air it out.🔪
+ README.md | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+
+☕02fceed🔪2016-02-22 15:27:07 -0800🔪Mike Bostock🔪Fix link in README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dd6a6f9🔪2016-02-22 15:26:02 -0800🔪Mike Bostock🔪0.7.0🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕43f8d35🔪2016-02-22 15:14:27 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕1ea49d8🔪2016-02-22 15:14:11 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕bdb8a17🔪2016-02-22 15:14:04 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕145a138🔪2016-02-22 15:13:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕14153ab🔪2016-02-22 15:13:00 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e352b7e🔪2016-02-22 15:12:33 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕ad3da86🔪2016-02-22 15:11:06 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 43 ++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 32 insertions(+), 11 deletions(-)
+
+☕af19a2d🔪2016-02-22 15:04:54 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕37edd1c🔪2016-02-22 15:03:32 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕247ff82🔪2016-02-22 15:02:17 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕e78b644🔪2016-02-22 15:00:37 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕a66df5b🔪2016-02-22 14:59:38 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕0c252f1🔪2016-02-22 14:56:55 -0800🔪Mike Bostock🔪Change selection.filter to preserve index.🔪This makes it more useful in conjunction with selection.merge.
+
+ README.md                     |  8 ++++----
+ src/selection/filter.js       |  4 ++--
+ test/selection/filter-test.js | 14 +++++++-------
+ 3 files changed, 13 insertions(+), 13 deletions(-)
+
+☕079c87e🔪2016-02-22 14:40:50 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕292be76🔪2016-02-22 14:40:21 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e995cb7🔪2016-02-22 14:40:08 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f93f8fd🔪2016-02-22 14:39:47 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕702041a🔪2016-02-22 14:38:25 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕632c9b6🔪2016-02-22 14:37:43 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 44 ++++++++++++++++++++++++--------------------
+ 1 file changed, 24 insertions(+), 20 deletions(-)
+
+☕96d6528🔪2016-02-22 14:18:46 -0800🔪Mike Bostock🔪Tests for selection.merge.🔪Also relax the constraint that the two parents arrays must be the same instance.
+Although this should be the common case when merging enter and update, it
+doesn’t seem desirable to enforce this strictly; instead, we now define the
+behavior that the returned selection always has the same structure (and parents)
+as this selection, and that any null nodes in this selection may be populated
+with the corresponding node from the other selection.
+
+ src/selection/merge.js             |  7 +++--
+ test/selection/merge-test.js (new) | 57 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 62 insertions(+), 2 deletions(-)
+
+☕72d52e3🔪2016-02-21 08:09:20 -0800🔪Mike Bostock🔪Don’t greedily create enter & exit.🔪They may not be used, so only create them when they are accessed.
+
+ src/selection/data.js        |   4 +-
+ src/selection/enter.js       |   2 +-
+ src/selection/exit.js        |   2 +-
+ test/selection/data-test.js  | 158 +++++++++++++------------------------------
+ test/selection/enter-test.js |   2 +-
+ test/selection/exit-test.js  |   2 +-
+ 6 files changed, 52 insertions(+), 118 deletions(-)
+
+☕cdeb147🔪2016-02-19 16:16:25 -0800🔪Mike Bostock🔪Fix tests for immutable selections.🔪
+ src/selection/sort.js        |   2 +
+ test/selection/data-test.js  | 143 +++++++++++++++++++++----------------------
+ test/selection/enter-test.js |  69 +++++++--------------
+ test/selection/exit-test.js  |  14 +----
+ test/selection/on-test.js    |   2 +-
+ test/selection/sort-test.js  |  35 +++++------
+ 6 files changed, 113 insertions(+), 152 deletions(-)
+
+☕5cc2087🔪2016-02-18 21:33:28 -0800🔪Mike Bostock🔪More concise.🔪
+ src/selection/merge.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕4c674f8🔪2016-02-18 21:07:28 -0800🔪Mike Bostock🔪More concise.🔪
+ src/selection/enter.js | 4 +---
+ src/selection/exit.js  | 4 +---
+ 2 files changed, 2 insertions(+), 6 deletions(-)
+
+☕a06b265🔪2016-02-18 21:05:14 -0800🔪Mike Bostock🔪Make selections immutable.🔪Fixes #60. (Tests still need updating.)
+
+ src/selection/data.js        |  8 ++++----
+ src/selection/enter.js       |  6 ++----
+ src/selection/exit.js        |  4 ++--
+ src/selection/index.js       |  2 ++
+ src/selection/merge.js (new) | 15 +++++++++++++++
+ src/selection/select.js      |  3 +--
+ src/selection/sort.js        |  4 ++--
+ 7 files changed, 28 insertions(+), 14 deletions(-)
+
+☕b3f64b7🔪2016-02-21 16:38:10 -0800🔪Mike Bostock🔪0.6.12🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕aeda367🔪2016-02-21 16:12:02 -0800🔪Mike Bostock🔪Use npm version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕03f2db5🔪2016-02-20 22:07:31 -0800🔪Mike Bostock🔪Fix #61 - prototype.constructor.🔪
+ src/selection/data.js        | 1 +
+ src/selection/index.js       | 1 +
+ test/selection/enter-test.js | 7 +++++++
+ test/selection/index-test.js | 1 +
+ 4 files changed, 10 insertions(+)
+
+☕8044b25🔪2016-02-17 17:45:30 -0800🔪Mike Bostock🔪Only use createElement for HTML.🔪Related mbostock/d3#2737.
+
+ package.json      | 2 +-
+ src/creator.js    | 7 ++++---
+ src/namespaces.js | 4 +++-
+ 3 files changed, 8 insertions(+), 5 deletions(-)
+
+☕d779816🔪2016-02-11 09:33:57 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cd1dd5b🔪2016-02-11 09:33:18 -0800🔪Mike Bostock🔪Copy-on-write for selection.data.🔪Also fix a bug where the exit groups could contain undefined entries, rather
+than being sparse, when a key function is used to join data.
+
+ src/selection/arrayify.js (gone) |  12 -----
+ src/selection/data.js            | 110 +++++++++++++++++----------------------
+ test/selection/data-test.js      |  77 ++++++++++++++++++++++++++-
+ 3 files changed, 123 insertions(+), 76 deletions(-)
+
+☕39a60e1🔪2016-02-11 08:49:36 -0800🔪Mike Bostock🔪Copy-on-write for selection.sort.🔪Related #58.
+
+ src/selection/sort.js       | 11 +++++++----
+ test/selection/sort-test.js | 16 ++++++++++++++++
+ 2 files changed, 23 insertions(+), 4 deletions(-)
+
+☕330a6d5🔪2016-02-10 20:32:34 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f95d158🔪2016-02-10 20:31:11 -0800🔪Mike Bostock🔪Fix for mouse{enter,leave} polyfill.🔪
+ src/selection/on.js | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕250d30c🔪2016-02-10 20:24:52 -0800🔪Mike Bostock🔪Fix #59 - selection.on and multiple typenames.🔪Related d3/d3-dispatch#6.
+
+ README.md                 |  10 +++--
+ src/noop.js (gone)        |   1 -
+ src/requote.js (gone)     |   5 ---
+ src/selection/on.js       | 103 +++++++++++++++++++++++++---------------------
+ test/selection/on-test.js |  44 ++++++++++----------
+ 5 files changed, 84 insertions(+), 79 deletions(-)
+
+☕01508e4🔪2016-02-05 14:21:39 -0800🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕d4d1e20🔪2016-02-05 14:03:27 -0800🔪Mike Bostock🔪Expose d3.window.🔪
+ README.md                           |  4 ++++
+ index.js                            |  1 +
+ package.json                        |  2 +-
+ src/defaultView.js (gone)           |  6 ------
+ src/point.js                        |  2 +-
+ src/selection/dispatch.js           |  2 +-
+ src/selection/style.js              |  2 +-
+ src/window.js (new)                 |  5 +++++
+ test/event-test.js                  |  4 ++--
+ test/select-test.js                 | 14 +++++++-------
+ test/selectAll-test.js              | 14 +++++++-------
+ test/selection/index-test.js        | 13 ++++++++-----
+ test/selection/window-test.js (new) | 21 +++++++++++++++++++++
+ 13 files changed, 59 insertions(+), 31 deletions(-)
+
+☕1e41b83🔪2016-02-04 17:22:35 -0800🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕89dd43e🔪2016-02-01 14:43:29 -0800🔪Mike Bostock🔪Add functional methods.🔪These are primarily intended for use by d3-transition, but they might have other
+uses (such as caching closures for optimization).
+
+ README.md                      | 60 ++++++++++++++++++++++++++++++++++++++++++
+ index.js                       |  4 +++
+ package.json                   |  2 +-
+ test/creator-test.js (new)     | 24 +++++++++++++++++
+ test/matcher-test.js (new)     | 13 +++++++++
+ test/selector-test.js (new)    | 13 +++++++++
+ test/selectorAll-test.js (new) | 17 ++++++++++++
+ 7 files changed, 132 insertions(+), 1 deletion(-)
+
+☕0627356🔪2016-02-01 14:03:32 -0800🔪Mike Bostock🔪Fix #57 - rename _nodes to _groups.🔪
+ package.json                     |  2 +-
+ src/selection/arrayify.js        |  2 +-
+ src/selection/data.js            |  4 ++--
+ src/selection/each.js            |  2 +-
+ src/selection/enter.js           |  2 +-
+ src/selection/exit.js            |  2 +-
+ src/selection/filter.js          |  2 +-
+ src/selection/index.js           |  4 ++--
+ src/selection/node.js            |  2 +-
+ src/selection/order.js           |  2 +-
+ src/selection/select.js          |  4 ++--
+ src/selection/selectAll.js       |  2 +-
+ test/select-test.js              | 18 ++++++++---------
+ test/selectAll-test.js           | 12 ++++++------
+ test/selection/append-test.js    | 28 +++++++++++++--------------
+ test/selection/data-test.js      | 42 ++++++++++++++++++++--------------------
+ test/selection/enter-test.js     | 16 +++++++--------
+ test/selection/exit-test.js      |  8 ++++----
+ test/selection/filter-test.js    | 18 ++++++++---------
+ test/selection/on-test.js        |  4 ++--
+ test/selection/select-test.js    | 18 ++++++++---------
+ test/selection/selectAll-test.js | 18 ++++++++---------
+ test/selection/sort-test.js      | 12 ++++++------
+ 23 files changed, 112 insertions(+), 112 deletions(-)
+
+☕d4c0912🔪2016-01-29 10:33:08 -0800🔪Mike Bostock🔪Generate anonymous AMD.🔪Also update Rollup. Related mbostock/d3#2725.
+
+ package.json | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕61841e2🔪2016-01-28 15:23:34 -0800🔪Mike Bostock🔪Move creator a separate file.🔪This matches matcher, selector and selectorAll.
+
+ src/creator.js (new)         | 24 ++++++++++++++++++++++++
+ src/selection/append.js      | 25 +------------------------
+ test/selection/index-test.js |  5 ++---
+ 3 files changed, 27 insertions(+), 27 deletions(-)
+
+☕231b38e🔪2016-01-28 14:43:54 -0800🔪Mike Bostock🔪Upgrade to JSDOM 8. Cheers, @domenic!🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1dcb96e🔪2016-01-27 09:48:23 -0800🔪Mike Bostock🔪Lower-case example call to createElement.🔪It’s equivalent because createElement implicitly lower-cases the element name in
+HTML and other case-insensitive documents. Yes, this is confusing because
+element.tagName is implicitly upper-cased in case-insensitive documents.
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f36e59d🔪2016-01-27 09:44:28 -0800🔪Mike Bostock🔪Use createElement if implied namespace matches document.🔪If the implied namespace of the created element matches that of the document
+element, the document’s createElement should be used instead of createElementNS;
+this way, in case-insensitive documents such as HTML, selection.append is
+likewise case-insensitive.
+
+Related mbostock/d3#2722.
+
+ package.json                  |  2 +-
+ src/selection/append.js       |  2 +-
+ test/selection/append-test.js | 20 ++++++++++++++++++++
+ 3 files changed, 22 insertions(+), 2 deletions(-)
+
+☕0f6d4f0🔪2016-01-20 10:24:11 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 14 ++++++--------
+ package.json |  2 +-
+ 2 files changed, 7 insertions(+), 9 deletions(-)
+
+☕680807b🔪2016-01-20 09:25:42 -0800🔪Mike Bostock🔪Tests for selection.exit.🔪
+ test/selection/data-test.js  | 105 ++++++++++++++++++++++++++++++++++++++-----
+ test/selection/enter-test.js |  26 +++++++++++
+ test/selection/exit-test.js  |  76 +++++++++++++++++++++++--------
+ 3 files changed, 177 insertions(+), 30 deletions(-)
+
+☕d83c9e5🔪2016-01-20 09:00:25 -0800🔪Mike Bostock🔪Change enter.append(…, null) to append after the last child.🔪Previously it behaved the same as enter.append(…), such that entering nodes were
+inserted before their following node in the update selection. This made it
+impossible to use enter.append to insert entering nodes as the last child, as
+selection.append(…) does! So now if a before node is explicitly specified, we
+observe it even if it is null.
+
+ README.md                    |   2 +-
+ src/selection/append.js      |   9 ++-
+ src/selection/data.js        |   2 +-
+ src/touch.js                 |   2 +
+ src/touches.js               |   2 +
+ test/selection/data-test.js  |   4 +-
+ test/selection/enter-test.js | 180 ++++++++++++++++++++++++++++---------------
+ 7 files changed, 134 insertions(+), 67 deletions(-)
+
+☕516f2a0🔪2016-01-19 20:48:56 -0800🔪Mike Bostock🔪Tests for selection.data.🔪
+ test/selection/append-test.js     |  16 ++--
+ test/selection/attr-test.js       |   8 +-
+ test/selection/classed-test.js    |   8 +-
+ test/selection/data-test.js (new) | 153 ++++++++++++++++++++++++++++++++++++++
+ test/selection/datum-test.js      |   8 +-
+ test/selection/filter-test.js     |   8 +-
+ test/selection/html-test.js       |   8 +-
+ test/selection/on-test.js         |   8 +-
+ test/selection/property-test.js   |   8 +-
+ test/selection/select-test.js     |   8 +-
+ test/selection/selectAll-test.js  |   8 +-
+ test/selection/style-test.js      |   8 +-
+ test/selection/text-test.js       |   8 +-
+ 13 files changed, 205 insertions(+), 52 deletions(-)
+
+☕5959b40🔪2016-01-19 20:22:58 -0800🔪Mike Bostock🔪Test namespaces with selection.append.🔪
+ test/selection/append-test.js | 57 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+
+☕13f68f0🔪2016-01-19 20:17:17 -0800🔪Mike Bostock🔪Tests for selection.append.🔪
+ test/selection/append-test.js (new) | 158 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 158 insertions(+)
+
+☕a2ac592🔪2016-01-19 18:08:49 -0800🔪Mike Bostock🔪Tests for d3.event.🔪
+ test/event-test.js (new) | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+☕3c1fc5c🔪2016-01-19 18:04:20 -0800🔪Mike Bostock🔪Tests for selection.on.🔪
+ src/selection/on.js       |   5 +-
+ test/selection/on-test.js | 258 +++++++++++++++++++++++++++++++++++++++-------
+ 2 files changed, 223 insertions(+), 40 deletions(-)
+
+☕bc6d498🔪2016-01-19 15:54:28 -0800🔪Mike Bostock🔪Bump year.🔪
+ LICENSE | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕505d537🔪2016-01-19 15:53:21 -0800🔪Mike Bostock🔪Remove unused var.🔪
+ package.json               | 5 ++---
+ src/selection/selectAll.js | 4 ++--
+ 2 files changed, 4 insertions(+), 5 deletions(-)
+
+☕a147d67🔪2016-01-19 15:51:18 -0800🔪Mike Bostock🔪Tests for selection.dispatch.🔪
+ test/selection/dispatch-test.js (new) | 69 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 69 insertions(+)
+
+☕fd10e8c🔪2016-01-19 15:40:28 -0800🔪Mike Bostock🔪Tests for selection.remove.🔪
+ test/selection/remove-test.js (new) | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+☕3c51991🔪2016-01-19 15:37:47 -0800🔪Mike Bostock🔪Tests for selection.datum.🔪
+ test/selection/datum-test.js (new) | 63 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 63 insertions(+)
+
+☕ebaa053🔪2016-01-19 15:34:19 -0800🔪Mike Bostock🔪Tests for selection.html.🔪
+ src/selection/html.js             |  8 +++--
+ test/selection/html-test.js (new) | 63 +++++++++++++++++++++++++++++++++++++++
+ test/selection/text-test.js       |  2 +-
+ 3 files changed, 70 insertions(+), 3 deletions(-)
+
+☕be3f9e7🔪2016-01-19 15:32:53 -0800🔪Mike Bostock🔪Tests for selection.text.🔪
+ src/selection/text.js           |  8 +++-
+ test/selection/property-test.js |  2 +-
+ test/selection/text-test.js     | 87 ++++++++++++++++++++++++++++-------------
+ 3 files changed, 67 insertions(+), 30 deletions(-)
+
+☕49e077a🔪2016-01-19 15:26:15 -0800🔪Mike Bostock🔪Tests for selection.property.🔪
+ test/selection/property-test.js (new) | 63 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 63 insertions(+)
+
+☕c6a04c3🔪2016-01-19 15:22:46 -0800🔪Mike Bostock🔪Tests for style priority.🔪
+ test/selection/attr-test.js        |  2 +-
+ test/selection/style-test.js (new) | 99 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 100 insertions(+), 1 deletion(-)
+
+☕9127f9a🔪2016-01-19 15:11:05 -0800🔪Mike Bostock🔪Tests for selection.attr.🔪
+ test/selection/attr-test.js (new) | 119 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 119 insertions(+)
+
+☕e7f60c1🔪2016-01-19 14:45:44 -0800🔪Mike Bostock🔪Tests for selection.size.🔪
+ test/selection/size-test.js (new) | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+☕3281c5e🔪2016-01-19 14:44:37 -0800🔪Mike Bostock🔪Tests for selection.empty.🔪
+ test/selection/empty-test.js (new) | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+☕2e7dfd5🔪2016-01-19 14:19:55 -0800🔪Mike Bostock🔪More tests for selection.node.🔪
+ test/selection/node-test.js | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+☕24da7f8🔪2016-01-19 14:18:53 -0800🔪Mike Bostock🔪Tests for selection.node.🔪
+ test/selection/node-test.js (new) | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+☕7dbbe31🔪2016-01-19 14:17:39 -0800🔪Mike Bostock🔪Tests for selection.nodes.🔪
+ test/selection/nodes-test.js (new) | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+☕077bd56🔪2016-01-19 14:14:07 -0800🔪Mike Bostock🔪Tests for selection.each.🔪
+ test/selection/each-test.js (new) | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+☕20c0420🔪2016-01-19 14:10:31 -0800🔪Mike Bostock🔪Tests for selection.call.🔪
+ test/selection/call-test.js (new) | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+☕721ce4e🔪2016-01-19 14:07:20 -0800🔪Mike Bostock🔪More selection.sort tests.🔪
+ test/selection/sort-test.js | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+☕df7c7b4🔪2016-01-19 14:06:14 -0800🔪Mike Bostock🔪Tests for selection.sort.🔪
+ test/selection/sort-test.js (new) | 70 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 70 insertions(+)
+
+☕c4a71cf🔪2016-01-19 13:33:13 -0800🔪Mike Bostock🔪Tests for selection.order.🔪
+ test/selection/order-test.js (new) | 35 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+
+☕649c6f4🔪2016-01-19 13:19:55 -0800🔪Mike Bostock🔪Temporarily disable broken tests.🔪
+ test/selection/enter-test.js | 126 +++++++++++++++++++++----------------------
+ test/selection/exit-test.js  |  36 ++++++-------
+ test/selection/on-test.js    |  70 ++++++++++++------------
+ test/selection/text-test.js  |  54 +++++++++----------
+ 4 files changed, 143 insertions(+), 143 deletions(-)
+
+☕f5b68ab🔪2016-01-19 13:19:12 -0800🔪Mike Bostock🔪Tests for selection.classed.🔪Also rewrite selection.classed so that it’s more efficient in the case where
+multiple class names are specified, and so that the code is simpler.
+
+ src/selection/classed.js       |  93 +++++++++++++++------------
+ test/selection/classed-test.js | 138 ++++++++++++++++++++++++++++++++++++++---
+ 2 files changed, 185 insertions(+), 46 deletions(-)
+
+☕27bd052🔪2016-01-19 12:28:12 -0800🔪Mike Bostock🔪Tests for selection.filter.🔪
+ test/selection/filter-test.js (new) | 89 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 89 insertions(+)
+
+☕3cbd39f🔪2016-01-19 12:14:44 -0800🔪Mike Bostock🔪Better select[All] tests.🔪
+ test/select-test.js              |   9 +--
+ test/selectAll-test.js           |   2 +-
+ test/selection/select-test.js    |  13 ++-
+ test/selection/selectAll-test.js | 169 ++++++++++++++++-----------------------
+ 4 files changed, 79 insertions(+), 114 deletions(-)
+
+☕7dc4549🔪2016-01-19 09:57:34 -0800🔪Mike Bostock🔪select[All](string) sets parent as document element.🔪
+ src/select.js          | 4 +++-
+ src/selectAll.js       | 4 +++-
+ test/select-test.js    | 2 +-
+ test/selectAll-test.js | 2 +-
+ 4 files changed, 8 insertions(+), 4 deletions(-)
+
+☕6eda8aa🔪2016-01-19 09:41:22 -0800🔪Mike Bostock🔪Better selection.select tests.🔪
+ test/select-test.js           |   2 +-
+ test/selectAll-test.js        |  14 ++--
+ test/selection/select-test.js | 179 +++++++++++++++---------------------------
+ 3 files changed, 70 insertions(+), 125 deletions(-)
+
+☕fb46763🔪2016-01-19 09:16:14 -0800🔪Mike Bostock🔪Pass parents array, not groups array.🔪This is now consistent with other selection methods!
+
+ src/selection/data.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1408169🔪2016-01-19 09:08:14 -0800🔪Mike Bostock🔪Better select[All] tests.🔪
+ test/select-test.js    | 22 ++++++++++++----------
+ test/selectAll-test.js | 22 ++++++++++------------
+ 2 files changed, 22 insertions(+), 22 deletions(-)
+
+☕c3ddb1f🔪2016-01-18 21:40:17 -0800🔪Mike Bostock🔪Use a parallel array to store parent nodes.🔪Instead of decorating each group with a _parent, keep a parallel array of
+parents. This is typically more efficient, and has the nice property that a
+parents array can be shared when creating a subselection, since the parents are
+immutable. (It’s also easier to test and inspect.)
+
+Note that this means you can no longer access nodes._parent in a selection
+function, but this was a private API.
+
+ src/select.js              |   4 +-
+ src/selectAll.js           |   4 +-
+ src/selection/arrayify.js  |   3 +-
+ src/selection/data.js      |  24 ++++++-----
+ src/selection/each.js      |   2 +-
+ src/selection/enter.js     |   3 +-
+ src/selection/exit.js      |   3 +-
+ src/selection/filter.js    |   5 +--
+ src/selection/index.js     |   9 ++--
+ src/selection/node.js      |   2 +-
+ src/selection/order.js     |   2 +-
+ src/selection/select.js    |   7 ++-
+ src/selection/selectAll.js |   6 +--
+ src/selection/sparse.js    |   4 +-
+ test/select-test.js        | 103 +++++++++++----------------------------------
+ test/selectAll-test.js     |  93 ++++++++++------------------------------
+ 16 files changed, 85 insertions(+), 189 deletions(-)
+
+☕f528d66🔪2016-01-18 15:09:44 -0800🔪Mike Bostock🔪Test d3.selection.🔪
+ test/selection/index-test.js (new) | 39 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+
+☕c8893e7🔪2016-01-18 14:46:46 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ef6003c🔪2016-01-16 13:39:45 -0800🔪Mike Bostock🔪Remove space.🔪
+ test/selection/text-test.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a33e600🔪2016-01-16 13:38:29 -0800🔪Mike Bostock🔪Rename for clarity.🔪
+ src/selection/sort.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕cbd24b1🔪2016-01-16 13:32:36 -0800🔪Mike Bostock🔪eslint🔪
+ .eslintrc (new)            | 13 +++++++++++++
+ index.js                   |  2 +-
+ package.json               |  3 ++-
+ src/constant.js            |  2 +-
+ src/defaultView.js         |  2 +-
+ src/mouse.js               |  2 +-
+ src/namespace.js           |  2 +-
+ src/noop.js                |  2 +-
+ src/point.js               |  8 +++++++-
+ src/requote.js             |  2 +-
+ src/select.js              |  2 +-
+ src/selectAll.js           |  2 +-
+ src/selection/append.js    |  2 +-
+ src/selection/arrayify.js  |  2 +-
+ src/selection/attr.js      |  2 +-
+ src/selection/call.js      |  2 +-
+ src/selection/classed.js   |  6 +++---
+ src/selection/data.js      |  2 +-
+ src/selection/datum.js     |  2 +-
+ src/selection/dispatch.js  |  2 +-
+ src/selection/each.js      |  2 +-
+ src/selection/empty.js     |  2 +-
+ src/selection/enter.js     |  2 +-
+ src/selection/exit.js      |  2 +-
+ src/selection/filter.js    |  2 +-
+ src/selection/html.js      |  2 +-
+ src/selection/index.js     |  2 +-
+ src/selection/lower.js     |  2 +-
+ src/selection/node.js      |  2 +-
+ src/selection/nodes.js     |  2 +-
+ src/selection/on.js        |  5 ++---
+ src/selection/order.js     |  2 +-
+ src/selection/property.js  |  2 +-
+ src/selection/raise.js     |  2 +-
+ src/selection/remove.js    |  2 +-
+ src/selection/select.js    |  2 +-
+ src/selection/selectAll.js |  2 +-
+ src/selection/size.js      |  2 +-
+ src/selection/sort.js      |  6 +++---
+ src/selection/sparse.js    |  2 +-
+ src/selection/style.js     |  2 +-
+ src/selection/text.js      |  2 +-
+ src/selector.js            |  2 +-
+ src/selectorAll.js         |  2 +-
+ src/sourceEvent.js         |  2 +-
+ src/touch.js               |  2 +-
+ src/touches.js             |  2 +-
+ 47 files changed, 71 insertions(+), 52 deletions(-)
+
+☕aeac73c🔪2016-01-16 16:28:44 -0200🔪Anthony Sherbondy🔪Fix text selection with constant value supplied🔪
+ src/selection/text.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕47c4e6d🔪2016-01-16 17:30:40 -0200🔪Anthony Sherbondy🔪tests🔪
+ test/selection/text-test.js (new) | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+
+☕327770c🔪2016-01-14 14:35:39 -0800🔪Mike Bostock🔪Don’t relax this optional argument.🔪
+ src/touch.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕2993dc9🔪2016-01-14 14:32:21 -0800🔪Mike Bostock🔪Remove unused import.🔪
+ src/selection/remove.js | 2 --
+ 1 file changed, 2 deletions(-)
+
+☕6212f6b🔪2016-01-14 14:22:29 -0800🔪Mike Bostock🔪Bump version.🔪
+ README.md    | 2 +-
+ package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕875cb02🔪2016-01-14 14:20:17 -0800🔪Mike Bostock🔪Fix #41 - add selection.{raise,lower}.🔪
+ README.md                    | 20 ++++++++++++++++++++
+ src/selection/index.js       |  4 ++++
+ src/selection/lower.js (new) |  7 +++++++
+ src/selection/raise.js (new) |  7 +++++++
+ 4 files changed, 38 insertions(+)
+
+☕46f61bd🔪2016-01-14 12:49:59 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕8a0ee89🔪2016-01-14 12:49:27 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+☕6662214🔪2016-01-14 12:47:50 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕784330a🔪2016-01-14 12:46:43 -0800🔪Mike Bostock🔪Don’t export requote.🔪
+ README.md | 8 --------
+ index.js  | 1 -
+ 2 files changed, 9 deletions(-)
+
+☕6581b79🔪2016-01-14 12:46:00 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕85212e9🔪2016-01-14 12:44:54 -0800🔪Mike Bostock🔪Remove `this` context for selection.call.🔪
+ README.md             | 16 ++++++++--------
+ src/selection/call.js |  3 ++-
+ 2 files changed, 10 insertions(+), 9 deletions(-)
+
+☕2bc0323🔪2016-01-14 12:41:20 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕0d89308🔪2016-01-14 12:40:58 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0de381a🔪2016-01-14 12:39:33 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕6f919ff🔪2016-01-14 12:38:03 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+☕b8ac017🔪2016-01-14 12:32:28 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕08f0df6🔪2016-01-14 12:29:54 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+☕5dc3426🔪2016-01-14 12:24:05 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 38 +++++++++++++++++---------------------
+ 1 file changed, 17 insertions(+), 21 deletions(-)
+
+☕34a2236🔪2016-01-14 12:10:12 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕cb9a1c7🔪2016-01-14 12:09:31 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕e72d43f🔪2016-01-14 12:03:23 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕de440a1🔪2016-01-14 12:02:49 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕2e81f80🔪2016-01-14 12:01:47 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+☕17a799c🔪2016-01-14 12:01:05 -0800🔪Mike Bostock🔪Update API reference.🔪
+ README.md | 46 +++++++++++++++++++++++++++-------------------
+ 1 file changed, 27 insertions(+), 19 deletions(-)
+
+☕67396fa🔪2016-01-13 22:05:57 -0800🔪Mike Bostock🔪Set to null rather than delete.🔪
+ src/selection/enter.js | 2 +-
+ src/selection/exit.js  | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕bfc16f6🔪2016-01-13 22:01:07 -0800🔪Mike Bostock🔪Self-destructing enter and exit selections.🔪This ensures that enter and exit selections are disposed after an update.
+
+ README.md                     | 10 +++++++---
+ src/selection/data.js         | 19 ++++++++++---------
+ src/selection/enter.js        | 14 ++++++--------
+ src/selection/exit.js         | 11 ++++-------
+ src/selection/remove.js       | 18 ++++++------------
+ src/selection/select.js       |  6 +++---
+ src/selection/sparse.js (new) |  5 +++++
+ test/selection/enter-test.js  |  6 +-----
+ 8 files changed, 42 insertions(+), 47 deletions(-)
+
+☕f3a6e4f🔪2016-01-13 20:58:45 -0800🔪Mike Bostock🔪Update selection.remove documentation.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d89023f🔪2016-01-13 20:30:23 -0800🔪Mike Bostock🔪Fix #54 - selection.remove now removes from the selection.🔪This makes it more symmetric with selection.append.
+
+ src/selection/arrayify.js |  2 ++
+ src/selection/each.js     |  2 ++
+ src/selection/node.js     |  2 ++
+ src/selection/remove.js   | 18 +++++++++++++-----
+ 4 files changed, 19 insertions(+), 5 deletions(-)
+
+☕a8a2422🔪2016-01-13 20:30:09 -0800🔪Mike Bostock🔪Set _parent for enter and exit selections.🔪
+ src/selection/enter.js | 1 +
+ src/selection/exit.js  | 4 +++-
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+☕f11458d🔪2016-01-13 16:56:24 -0800🔪Mike Bostock🔪Don’t greedily initialize.🔪
+ src/selection/index.js           |  2 --
+ test/select-test.js              | 28 ++++++++++++++--------------
+ test/selectAll-test.js           | 24 ++++++++++++------------
+ test/selection/enter-test.js     |  4 ++--
+ test/selection/exit-test.js      |  4 ++--
+ test/selection/select-test.js    | 16 ++++++++--------
+ test/selection/selectAll-test.js | 12 ++++++------
+ 7 files changed, 44 insertions(+), 46 deletions(-)
+
+☕d79618c🔪2016-01-13 16:55:35 -0800🔪Mike Bostock🔪Fix copy pasta.🔪
+ src/selection/enter.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9c12456🔪2016-01-13 16:54:25 -0800🔪Mike Bostock🔪Remove obsolete field.🔪
+ src/selection/index.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+☕e8c9010🔪2016-01-13 16:53:53 -0800🔪Mike Bostock🔪Push update backlink down to the group level.🔪
+ src/selection/enter.js         | 11 +++++++++--
+ src/selection/exit.js          |  9 +++++++--
+ src/selection/select.js        |  6 +++---
+ src/selection/sparse.js (gone) | 10 ----------
+ test/selection/enter-test.js   |  2 +-
+ 5 files changed, 20 insertions(+), 18 deletions(-)
+
+☕2df2f24🔪2016-01-13 16:41:17 -0800🔪Mike Bostock🔪Relax optional arguments.🔪Related mbostock/d3#2710.
+
+ src/mouse.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8cd52d7🔪2016-01-13 16:27:53 -0800🔪Mike Bostock🔪Rename blank to sparse.🔪
+ src/selection/enter.js                | 4 ++--
+ src/selection/exit.js                 | 4 ++--
+ src/selection/{blank.js => sparse.js} | 0
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+☕bb885cf🔪2016-01-13 16:24:22 -0800🔪Mike Bostock🔪Simpler bilevel selections.🔪Rather than preserve the entire hierarchy, use the D3 3.x approach and just
+retain a single level of nesting.
+
+ src/arrayify.js (gone)           |  28 -----
+ src/emptyOf.js (gone)            |  24 ----
+ src/select.js                    |   2 +-
+ src/selectAll.js                 |   2 +-
+ src/selection/arrayify.js (new)  |  11 ++
+ src/selection/blank.js (new)     |  10 ++
+ src/selection/data.js            | 240 +++++++++++++++++----------------------
+ src/selection/each.js            |  31 +----
+ src/selection/enter.js           |  10 +-
+ src/selection/exit.js            |   6 +-
+ src/selection/filter.js          |  44 +------
+ src/selection/index.js           |  15 +--
+ src/selection/node.js            |  30 +----
+ src/selection/on.js              |  20 ++--
+ src/selection/order.js           |  27 +----
+ src/selection/select.js          |  49 ++------
+ src/selection/selectAll.js       |  43 +------
+ src/selection/sort.js            |  20 +---
+ test/select-test.js              |  80 +++++++------
+ test/selectAll-test.js           |  72 ++++++------
+ test/selection/enter-test.js     |  57 +++++-----
+ test/selection/exit-test.js      |  11 +-
+ test/selection/on-test.js        |  16 ++-
+ test/selection/select-test.js    | 124 ++++++++++----------
+ test/selection/selectAll-test.js | 138 +++++++++-------------
+ 25 files changed, 425 insertions(+), 685 deletions(-)
+
+☕7b7e3c5🔪2016-01-13 14:55:31 -0800🔪Mike Bostock🔪Add tests for namespaces.🔪
+ test/namespace-test.js        |  9 +++++++++
+ test/namespaces-test.js (new) | 14 ++++++++++++++
+ 2 files changed, 23 insertions(+)
+
+☕4866261🔪2016-01-13 14:52:20 -0800🔪Mike Bostock🔪Better namespace tests.🔪
+ test/namespace-test.js | 31 +++++++++++++++++++++++--------
+ 1 file changed, 23 insertions(+), 8 deletions(-)
+
+☕c3a24e5🔪2016-01-13 14:48:34 -0800🔪Mike Bostock🔪Move selection method tests to a subfolder.🔪
+ test/{selection-classed-test.js => selection/classed-test.js}     | 2 +-
+ test/{selection-enter-test.js => selection/enter-test.js}         | 2 +-
+ test/{selection-exit-test.js => selection/exit-test.js}           | 2 +-
+ test/{selection-on-test.js => selection/on-test.js}               | 2 +-
+ test/{selection-select-test.js => selection/select-test.js}       | 2 +-
+ test/{selection-selectAll-test.js => selection/selectAll-test.js} | 2 +-
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+
+☕1ca2aec🔪2016-01-13 14:46:39 -0800🔪Mike Bostock🔪Indent.🔪
+ src/selection/attr.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕e62032a🔪2016-01-13 14:39:14 -0800🔪Mike Bostock🔪Move selection methods to a new folder.🔪
+ index.js                                           |  4 +-
+ src/emptyOf.js                                     |  2 +-
+ src/select.js                                      |  2 +-
+ src/selectAll.js                                   |  2 +-
+ src/selection.js (gone)                            | 69 ----------------------
+ src/{selection-append.js => selection/append.js}   |  4 +-
+ src/{selection-attr.js => selection/attr.js}       |  2 +-
+ src/{selection-call.js => selection/call.js}       |  0
+ src/{selection-classed.js => selection/classed.js} |  2 +-
+ src/{selection-data.js => selection/data.js}       |  2 +-
+ src/{selection-datum.js => selection/datum.js}     |  0
+ .../dispatch.js}                                   |  2 +-
+ src/{selection-each.js => selection/each.js}       |  0
+ src/{selection-empty.js => selection/empty.js}     |  0
+ src/{selection-enter.js => selection/enter.js}     |  2 +-
+ src/{selection-exit.js => selection/exit.js}       |  2 +-
+ src/{selection-filter.js => selection/filter.js}   |  4 +-
+ src/{selection-html.js => selection/html.js}       |  0
+ src/selection/index.js (new)                       | 69 ++++++++++++++++++++++
+ src/{selection-node.js => selection/node.js}       |  0
+ src/{selection-nodes.js => selection/nodes.js}     |  0
+ src/{selection-on.js => selection/on.js}           |  4 +-
+ src/{selection-order.js => selection/order.js}     |  0
+ .../property.js}                                   |  0
+ src/{selection-remove.js => selection/remove.js}   |  0
+ src/{selection-select.js => selection/select.js}   |  4 +-
+ .../selectAll.js}                                  |  4 +-
+ src/{selection-size.js => selection/size.js}       |  0
+ src/{selection-sort.js => selection/sort.js}       |  2 +-
+ src/{selection-style.js => selection/style.js}     |  2 +-
+ src/{selection-text.js => selection/text.js}       |  0
+ src/sourceEvent.js                                 |  2 +-
+ 32 files changed, 93 insertions(+), 93 deletions(-)
+
+☕4a91eeb🔪2016-01-13 14:24:42 -0800🔪Mike Bostock🔪Use top-level closures.🔪This reduces the number of closures that are created and not used.
+
+ src/matcher.js (new)               |  22 ++++++++
+ src/namespace.js                   |   2 +-
+ src/noop.js (new)                  |   1 +
+ src/selection-append.js            |  60 +++++++++++----------
+ src/selection-attr.js              |  80 ++++++++++++++++------------
+ src/selection-classed.js           |  84 ++++++++++++++++--------------
+ src/selection-data.js              |   3 +-
+ src/selection-datum.js             |   4 +-
+ src/selection-dispatch.js          |  31 ++++++-----
+ src/selection-filter.js            |  21 ++------
+ src/selection-html.js              |  25 +++++----
+ src/selection-on.js                | 104 ++++++++++++++++++++-----------------
+ src/selection-property.js          |  35 ++++++++-----
+ src/selection-remove.js            |  10 ++--
+ src/selection-select.js            |   8 +--
+ src/selection-selectAll.js         |  13 ++---
+ src/selection-sort.js              |   6 +--
+ src/selection-style.js             |  42 +++++++++------
+ src/selection-text.js              |  25 +++++----
+ src/{selectorOf.js => selector.js} |   0
+ src/selectorAll.js (new)           |   5 ++
+ 21 files changed, 330 insertions(+), 251 deletions(-)
+
+☕30d0eb3🔪2016-01-12 13:20:45 -0800🔪Mike Bostock🔪Relax optional arguments.🔪Related mbostock/d3#2710.
+
+ src/touch.js   | 2 +-
+ src/touches.js | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+☕4034b6c🔪2016-01-08 13:57:53 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕19d644e🔪2016-01-08 12:37:24 -0800🔪Mike Bostock🔪Re-order API reference.🔪
+ README.md | 68 +++++++++++++++++++++++++++++++--------------------------------
+ 1 file changed, 34 insertions(+), 34 deletions(-)
+
+☕9b173ae🔪2016-01-08 12:36:59 -0800🔪Mike Bostock🔪EnterNode must implement querySelector.🔪It’s used by selection.append when there’s a before selector.
+
+ src/selection-data.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕a741079🔪2016-01-07 11:53:47 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕d91a42a🔪2016-01-07 11:50:31 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕f785906🔪2016-01-07 11:49:02 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e33988f🔪2016-01-07 11:41:09 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 74 ++++++++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 59 insertions(+), 15 deletions(-)
+
+☕9747132🔪2016-01-07 11:31:53 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 31 +++++++++++++++++++------------
+ 1 file changed, 19 insertions(+), 12 deletions(-)
+
+☕aef99ee🔪2016-01-07 11:04:13 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 41 +++++++++++++++++++++--------------------
+ 1 file changed, 21 insertions(+), 20 deletions(-)
+
+☕1bd0a7e🔪2016-01-07 10:46:16 -0800🔪Mike Bostock🔪Fix tests.🔪
+ src/sourceEvent.js             | 2 +-
+ test/selection-classed-test.js | 8 ++++----
+ test/selection-on-test.js      | 8 ++++----
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+
+☕e740822🔪2016-01-07 10:44:27 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 46 ++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 36 insertions(+), 10 deletions(-)
+
+☕3cc275b🔪2016-01-07 10:27:34 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕190e923🔪2016-01-07 10:24:19 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+☕2a66b70🔪2016-01-07 10:22:42 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕b8ca293🔪2016-01-07 10:18:48 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+☕1017757🔪2016-01-07 10:09:28 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕df18921🔪2016-01-07 10:05:53 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕8081bea🔪2016-01-07 10:05:32 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕857dcf9🔪2016-01-07 10:04:57 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+
+☕b344b55🔪2016-01-07 10:03:26 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+☕05250b7🔪2016-01-07 10:01:37 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕beccf33🔪2016-01-07 10:00:59 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+
+☕0dacfc1🔪2016-01-07 09:49:52 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 23 +++++++++++++++++++----
+ 1 file changed, 19 insertions(+), 4 deletions(-)
+
+☕7da2b90🔪2016-01-07 09:44:36 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 26 ++++++++++++++++++++++----
+ 1 file changed, 22 insertions(+), 4 deletions(-)
+
+☕3224142🔪2016-01-07 09:41:39 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕b7c97f2🔪2016-01-07 09:40:44 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕8a474d6🔪2016-01-07 09:40:23 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 36 ++++++++++++++++++------------------
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+
+☕d7f389a🔪2016-01-07 09:34:42 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+☕a2d5dfb🔪2016-01-07 09:32:50 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕a2c030e🔪2016-01-07 09:32:15 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+☕994b4ca🔪2016-01-07 09:28:31 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+☕5c2e5f9🔪2016-01-07 09:28:09 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕9001b31🔪2016-01-07 09:26:17 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+☕982cdb8🔪2016-01-07 09:24:40 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕d4115c8🔪2016-01-07 09:24:01 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕b400b82🔪2016-01-07 09:23:46 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c126b87🔪2016-01-07 09:19:54 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕3cf2e9c🔪2016-01-07 09:19:41 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9da6969🔪2016-01-07 09:19:13 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕046ff73🔪2016-01-07 09:18:18 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7d40ea3🔪2016-01-07 09:14:57 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 65 +++++++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 36 insertions(+), 29 deletions(-)
+
+☕4b214a3🔪2016-01-07 08:56:50 -0800🔪Mike Bostock🔪Checkpoint API reference.🔪
+ README.md | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+☕ffdd12d🔪2016-01-06 17:04:35 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕a6fec76🔪2016-01-06 17:02:53 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕087d9a6🔪2016-01-06 17:02:41 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕239345a🔪2016-01-06 17:02:10 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+
+☕eb957da🔪2016-01-06 16:58:50 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1f262d4🔪2016-01-06 16:58:31 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fc6dfd2🔪2016-01-06 16:57:58 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕7510eae🔪2016-01-06 16:57:48 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕202b388🔪2016-01-06 16:55:47 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕997f5c7🔪2016-01-06 16:55:16 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+☕8e81957🔪2016-01-06 16:52:31 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md | 130 ++++++++++++++++++++++++++++++++++++++++++++++++--------------
+ 1 file changed, 101 insertions(+), 29 deletions(-)
+
+☕0441856🔪2016-01-06 16:37:50 -0800🔪Mike Bostock🔪Checkpoint.🔪
+ README.md                                          | 308 ++++++++++++++++++++-
+ index.js                                           |   2 +-
+ package.json                                       |   2 +-
+ src/{selection-class.js => selection-classed.js}   |   0
+ src/{selection-event.js => selection-on.js}        |   0
+ src/selection.js                                   |  11 +-
+ ...ion-class-test.js => selection-classed-test.js} |   0
+ ...election-event-test.js => selection-on-test.js} |   0
+ 8 files changed, 300 insertions(+), 23 deletions(-)
+
+☕2c64fde🔪2015-12-04 14:06:04 -0800🔪Mike Bostock🔪Fix #44 - don’t capture this._root before arrayify.🔪
+ src/constant.js (new) |  5 +++++
+ src/selection-data.js | 17 ++++++++---------
+ 2 files changed, 13 insertions(+), 9 deletions(-)
+
+☕3bd4174🔪2015-11-11 11:42:02 -0800🔪Mike Bostock🔪Use Rollup.🔪
+ package.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕1a9a4fb🔪2015-11-04 12:34:49 -0800🔪Mike Bostock🔪Bump version.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕974b0ba🔪2015-11-04 11:55:10 -0800🔪Mike Bostock🔪Concise re-exports.🔪
+ index.js | 33 ++++++++++-----------------------
+ 1 file changed, 10 insertions(+), 23 deletions(-)
+
+☕1ac0b3e🔪2015-11-03 23:44:51 -0800🔪Mike Bostock🔪Upgrade d3-bundler.🔪
+ package.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+☕a431782🔪2015-11-03 20:22:44 -0800🔪Mike Bostock🔪Fix #39 - remove Map polyfill.🔪
+ README.md              |  2 +-
+ d3.js (gone)           | 25 -------------------------
+ package.json           | 10 +++++-----
+ src/namespace.js       |  2 +-
+ src/namespaces.js      | 13 +++++++------
+ src/selection-data.js  | 18 ++++++++++--------
+ src/selection-event.js |  6 +++---
+ 7 files changed, 27 insertions(+), 49 deletions(-)
+
+☕6ca2837🔪2015-10-25 21:03:03 -0700🔪Mike Bostock🔪The XMLNS namespace is special.🔪Related mbostock/d3#1935.
+
+ src/namespace.js             |  2 +-
+ test/namespace-test.js (new) | 16 ++++++++++++++++
+ 2 files changed, 17 insertions(+), 1 deletion(-)
+
+☕fb910af🔪2015-08-21 09:33:04 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕55ee595🔪2015-08-19 14:14:19 -0700🔪Mike Bostock🔪Tweaks to test.🔪
+ test/selection-class-test.js | 15 +++++----------
+ 1 file changed, 5 insertions(+), 10 deletions(-)
+
+☕bfb3cdf🔪2015-08-11 22:23:49 -0400🔪Jim Kang🔪Fixed reference to classedRe in d3.class by 'restoring' it from d3.v3. Added test for d3.class.🔪
+ src/selection-class.js             |  6 +++++-
+ test/selection-class-test.js (new) | 18 ++++++++++++++++++
+ 2 files changed, 23 insertions(+), 1 deletion(-)
+
+☕5a187cd🔪2015-07-01 11:29:02 -0700🔪Mike Bostock🔪Fix uglify-js dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕00fb063🔪2015-06-16 13:39:26 -0700🔪Mike Bostock🔪Fix .npmignore.🔪
+ .npmignore   | 4 ++--
+ package.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+☕e4be1fd🔪2015-06-10 13:41:34 -0700🔪Mike Bostock🔪Give sublime-project a unique name.🔪
+ .gitignore                                            | 2 +-
+ index.sublime-project => d3-selection.sublime-project | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+☕850e040🔪2015-06-04 17:52:25 -0700🔪Mike Bostock🔪Update package.json.🔪
+ package.json | 21 +++++++++++++++++----
+ 1 file changed, 17 insertions(+), 4 deletions(-)
+
+☕6c344ac🔪2015-06-01 17:47:43 -0700🔪Mike Bostock🔪Prune published package.🔪
+ .npmignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕6f9a7e8🔪2015-06-01 17:40:15 -0700🔪Mike Bostock🔪Publish built file.🔪
+ .gitignore                       |  2 +-
+ .npmignore (new)                 |  1 +
+ test/d3.js => d3.js              |  2 +-
+ package.json                     | 11 ++++++-----
+ test/require-test.js (gone)      | 18 ------------------
+ test/select-test.js              |  2 +-
+ test/selectAll-test.js           |  2 +-
+ test/selection-enter-test.js     |  2 +-
+ test/selection-event-test.js     |  2 +-
+ test/selection-exit-test.js      |  2 +-
+ test/selection-select-test.js    |  2 +-
+ test/selection-selectAll-test.js |  2 +-
+ 12 files changed, 16 insertions(+), 32 deletions(-)
+
+☕4c813e4🔪2015-05-30 21:28:39 -0700🔪Mike Bostock🔪d3.selection() returns the root selection.🔪Fixes #34. Also, don’t see _parent unless it’s defined.
+
+ index.js                         |  4 ++--
+ src/emptyOf.js                   |  2 +-
+ src/select.js                    | 12 ++----------
+ src/selectAll.js                 | 12 ++----------
+ src/selection-filter.js          |  2 +-
+ src/selection-select.js          |  2 +-
+ src/selection-selectAll.js       |  2 +-
+ src/selection.js                 | 10 +++++++---
+ test/select-test.js              | 14 +++++++-------
+ test/selectAll-test.js           | 12 ++++++------
+ test/selection-enter-test.js     |  2 +-
+ test/selection-exit-test.js      |  2 +-
+ test/selection-select-test.js    | 14 +++++++-------
+ test/selection-selectAll-test.js | 12 ++++++------
+ 14 files changed, 45 insertions(+), 57 deletions(-)
+
+☕66d35cc🔪2015-05-29 09:38:59 -0700🔪Mike Bostock🔪Generate a custom build for tests.🔪
+ package.json     |  4 ++--
+ test/d3.js (new) | 25 +++++++++++++++++++++++++
+ 2 files changed, 27 insertions(+), 2 deletions(-)
+
+☕e9a72c6🔪2015-05-29 09:32:53 -0700🔪Mike Bostock🔪Bump d3-bundler dependency.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕de2926c🔪2015-05-29 09:29:58 -0700🔪Mike Bostock🔪Expunge generated files!🔪
+ .gitignore                       |    2 +
+ Makefile (gone)                  |   23 -
+ dist/d3-selection.js (gone)      | 1058 --------------------------------------
+ dist/d3-selection.min.js (gone)  |    1 -
+ index.js                         |    4 +-
+ package.json                     |   10 +-
+ src/selection-data.js            |    4 +-
+ test/require-test.js             |   12 +-
+ test/select-test.js              |    2 +-
+ test/selectAll-test.js           |    2 +-
+ test/selection-enter-test.js     |    2 +-
+ test/selection-event-test.js     |    2 +-
+ test/selection-exit-test.js      |    2 +-
+ test/selection-select-test.js    |    2 +-
+ test/selection-selectAll-test.js |    2 +-
+ 15 files changed, 21 insertions(+), 1107 deletions(-)
+
+☕fc7272c🔪2015-05-28 22:41:32 -0700🔪Mike Bostock🔪Don’t really need an aliased export.🔪
+ index.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕f53b423🔪2015-05-28 19:25:12 -0700🔪Mike Bostock🔪Fix indent.🔪
+ dist/d3-selection.js | 1606 +++++++++++++++++++++++++-------------------------
+ 1 file changed, 803 insertions(+), 803 deletions(-)
+
+☕a99193e🔪2015-05-28 18:03:27 -0700🔪Mike Bostock🔪No more globals.🔪
+ dist/d3-selection.js     | 1614 +++++++++++++++++++++++-----------------------
+ dist/d3-selection.min.js |    2 +-
+ index.js                 |    2 +
+ src/point.js             |    2 +-
+ src/selection-event.js   |   12 +-
+ src/selection-filter.js  |    2 +-
+ src/sourceEvent.js       |    8 +-
+ test/require-test.js     |    8 +-
+ 8 files changed, 832 insertions(+), 818 deletions(-)
+
+☕5bd4846🔪2015-05-28 16:31:46 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5ebd1b6🔪2015-05-27 22:03:23 -0700🔪Mike Bostock🔪Add jsnext:main.🔪
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+☕971ba82🔪2015-05-27 21:50:11 -0700🔪Mike Bostock🔪Fix Sublime Project.🔪
+ index.sublime-project | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+☕311b7a8🔪2015-05-27 21:45:44 -0700🔪Mike Bostock🔪Move generated files to dist.🔪
+ Makefile                                        | 8 ++++----
+ d3-selection.js => dist/d3-selection.js         | 0
+ d3-selection.min.js => dist/d3-selection.min.js | 0
+ package.json                                    | 4 ++--
+ test/require-test.js                            | 4 ++--
+ 5 files changed, 8 insertions(+), 8 deletions(-)
+
+☕5131790🔪2015-05-27 21:05:43 -0700🔪Mike Bostock🔪Force d3-bundler@~0.2.1.🔪
+ package.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕ebc459c🔪2015-05-27 20:37:15 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕68331d9🔪2015-05-27 20:36:20 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕fc2b320🔪2015-05-27 20:35:47 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕7938866🔪2015-05-27 20:35:29 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+☕3dca5cb🔪2015-05-27 20:34:34 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕ec56eea🔪2015-05-27 20:33:39 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 ++++--------
+ 1 file changed, 4 insertions(+), 8 deletions(-)
+
+☕ee6aa67🔪2015-05-27 20:32:04 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕cf813bd🔪2015-05-27 20:31:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+☕7393488🔪2015-05-27 20:31:14 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 36 +++++++++++++++++++++---------------
+ 1 file changed, 21 insertions(+), 15 deletions(-)
+
+☕8f8e287🔪2015-05-27 19:23:00 -0700🔪Mike Bostock🔪Change keyStack initialization.🔪
+ d3-selection.js       | 2 +-
+ d3-selection.min.js   | 2 +-
+ src/selection-data.js | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+☕97158cc🔪2015-05-27 18:52:51 -0700🔪Mike Bostock🔪Simpler export.🔪
+ d3-selection.js     | 9 +++------
+ d3-selection.min.js | 2 +-
+ 2 files changed, 4 insertions(+), 7 deletions(-)
+
+☕479ab30🔪2015-05-27 18:19:03 -0700🔪Mike Bostock🔪Adopt named exports.🔪
+ d3-selection.js     | 29 ++++++++++++++++-------------
+ d3-selection.min.js |  2 +-
+ index.js            | 20 ++++++++++----------
+ 3 files changed, 27 insertions(+), 24 deletions(-)
+
+☕4a7bb00🔪2015-05-27 13:46:12 -0700🔪Mike Bostock🔪Export global in Node.🔪
+ d3-selection.js                  |  2 +-
+ d3-selection.min.js              |  2 +-
+ package.json                     |  6 +++---
+ test/global-test.js (gone)       | 33 ---------------------------------
+ test/require-test.js             | 15 +++++++++++----
+ test/select-test.js              | 17 ++++++++++++++++-
+ test/selectAll-test.js           | 17 ++++++++++++++++-
+ test/selection-enter-test.js     |  2 +-
+ test/selection-event-test.js     |  2 +-
+ test/selection-exit-test.js      |  2 +-
+ test/selection-select-test.js    |  2 +-
+ test/selection-selectAll-test.js |  2 +-
+ 12 files changed, 53 insertions(+), 49 deletions(-)
+
+☕32f4165🔪2015-05-27 12:54:42 -0700🔪Mike Bostock🔪Fold selectorAllOf into selection-selectAll.🔪
+ d3-selection.js             | 12 ++++++------
+ d3-selection.min.js         |  2 +-
+ src/arrayify.js             |  1 -
+ src/selection-selectAll.js  |  7 ++++++-
+ src/selectorAllOf.js (gone) |  5 -----
+ 5 files changed, 13 insertions(+), 14 deletions(-)
+
+☕dd7bb0a🔪2015-05-27 12:43:48 -0700🔪Mike Bostock🔪Fix blank lines.🔪
+ d3-selection.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕0fb1d14🔪2015-05-27 12:40:44 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ad97254🔪2015-05-27 12:40:32 -0700🔪Mike Bostock🔪Move selection methods to separate files.🔪
+ d3-selection.js                  | 1382 ++++++++++++++++++++------------------
+ d3-selection.min.js              |    2 +-
+ index.js                         |    2 +
+ package.json                     |    2 +-
+ src/arrayify.js (new)            |   29 +
+ src/emptyOf.js (new)             |   24 +
+ src/requote.js (new)             |    5 +
+ src/selection-append.js (new)    |   36 +
+ src/selection-attr.js (new)      |   46 ++
+ src/selection-call.js (new)      |    5 +
+ src/selection-class.js (new)     |   50 ++
+ src/selection-data.js (new)      |  182 +++++
+ src/selection-datum.js (new)     |    3 +
+ src/selection-dispatch.js (new)  |   29 +
+ src/selection-each.js (new)      |   33 +
+ src/selection-empty.js (new)     |    3 +
+ src/selection-enter.js (new)     |   11 +
+ src/selection-event.js (new)     |   80 +++
+ src/selection-exit.js (new)      |    7 +
+ src/selection-filter.js (new)    |   62 ++
+ src/selection-html.js (new)      |   16 +
+ src/selection-node.js (new)      |   27 +
+ src/selection-nodes.js (new)     |    5 +
+ src/selection-order.js (new)     |   28 +
+ src/selection-property.js (new)  |   19 +
+ src/selection-remove.js (new)    |    6 +
+ src/selection-select.js (new)    |   52 ++
+ src/selection-selectAll.js (new) |   48 ++
+ src/selection-size.js (new)      |    5 +
+ src/selection-sort.js (new)      |   33 +
+ src/selection-style.js (new)     |   25 +
+ src/selection-text.js (new)      |   16 +
+ src/selection.js                 |  921 ++-----------------------
+ src/selectorAllOf.js (new)       |    5 +
+ src/selectorOf.js (new)          |    5 +
+ 35 files changed, 1663 insertions(+), 1541 deletions(-)
+
+☕fdaa4ee🔪2015-05-27 12:07:45 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕48fa0f4🔪2015-05-27 12:03:17 -0700🔪Mike Bostock🔪Adopt d3-bundler.🔪
+ Makefile              |  2 +-
+ bin/d3-bundler (gone) | 48 ------------------------------------------------
+ package.json          |  3 +--
+ 3 files changed, 2 insertions(+), 51 deletions(-)
+
+☕d67562e🔪2015-05-27 11:53:02 -0700🔪Mike Bostock🔪Adopt esperanto and ES6 modules.🔪
+ Makefile                         |    4 +-
+ bin/d3-bundler (new +x)          |   48 ++
+ d3-selection.js                  | 1624 +++++++++++++++++++-------------------
+ d3-selection.min.js              |    2 +-
+ index.js                         | 1005 +----------------------
+ package.json                     |    7 +-
+ src/defaultView.js (new)         |    6 +
+ src/mouse.js (new)               |    8 +
+ src/namespace.js (new)           |    7 +
+ src/namespaces.js (new)          |    6 +
+ src/point.js (new)               |   25 +
+ src/select.js (new)              |   13 +
+ src/selectAll.js (new)           |   13 +
+ src/selection.js (new)           |  883 +++++++++++++++++++++
+ src/sourceEvent.js (new)         |    5 +
+ src/touch.js (new)               |   12 +
+ src/touches.js (new)             |   10 +
+ test/global-test.js              |    2 +-
+ test/select-test.js              |    2 +-
+ test/selectAll-test.js           |    2 +-
+ test/selection-enter-test.js     |    2 +-
+ test/selection-event-test.js     |    2 +-
+ test/selection-exit-test.js      |    2 +-
+ test/selection-select-test.js    |    2 +-
+ test/selection-selectAll-test.js |    2 +-
+ 25 files changed, 1888 insertions(+), 1806 deletions(-)
+
+☕1cc8ba4🔪2015-05-26 21:16:05 -0700🔪Mike Bostock🔪Expose Map polyfill.🔪
+ d3-selection.js     | 10 +++++++++-
+ d3-selection.min.js |  2 +-
+ index.js            | 10 +++++++++-
+ 3 files changed, 19 insertions(+), 3 deletions(-)
+
+☕3e51a61🔪2015-05-26 15:08:10 -0700🔪Mike Bostock🔪Promote a few closures.🔪
+ d3-selection.js     | 200 ++++++++++++++++++++++++----------------------------
+ d3-selection.min.js |   2 +-
+ index.js            | 200 ++++++++++++++++++++++++----------------------------
+ 3 files changed, 183 insertions(+), 219 deletions(-)
+
+☕93e1669🔪2015-05-26 13:34:14 -0700🔪Mike Bostock🔪Bump version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕1706665🔪2015-05-26 13:29:30 -0700🔪Mike Bostock🔪Delete extraneous delete.🔪
+ d3-selection.js     | 1 -
+ d3-selection.min.js | 2 +-
+ index.js            | 1 -
+ 3 files changed, 1 insertion(+), 3 deletions(-)
+
+☕dd48d81🔪2015-05-26 13:23:13 -0700🔪Mike Bostock🔪Shorten.🔪
+ d3-selection.js     | 139 +++++++++++++++++++++++-----------------------------
+ d3-selection.min.js |   2 +-
+ index.js            | 139 +++++++++++++++++++++++-----------------------------
+ 3 files changed, 121 insertions(+), 159 deletions(-)
+
+☕8c1ea29🔪2015-05-26 13:13:48 -0700🔪Mike Bostock🔪Remove use of global.🔪
+ d3-selection.js     | 4 ++--
+ d3-selection.min.js | 2 +-
+ index.js            | 4 ++--
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+☕f7c4a9c🔪2015-05-26 13:09:41 -0700🔪Mike Bostock🔪Collapse a few one-liners.🔪
+ d3-selection.js     | 47 +++++++++++++++++------------------------------
+ d3-selection.min.js |  2 +-
+ index.js            | 47 +++++++++++++++++------------------------------
+ 3 files changed, 35 insertions(+), 61 deletions(-)
+
+☕d8a6b28🔪2015-05-26 12:52:25 -0700🔪Mike Bostock🔪Implement polyfills; fix enter & exit linking.🔪Polyfills are now implemented for mouseenter events, mouseleave events,
+element.matches and CustomEvent. The CustomEvent polyfill is implemented lazily
+on a per-window basis, whereas the others are only implemented once for the
+global document (and thus are typically only available in browsers, and not
+within the Node environment).
+
+In addition, this commit changes how the update selection is linked to the enter
+and update selections. Rather than linking each group, only the top-level update
+selection object now has a reference to the enter selection and exit selection.
+(Likewise, the enter selection now has a reference back to the update selection,
+rather than linking from each enter group.)
+
+ d3-selection.js                    | 149 +++++++++++++++----------------------
+ d3-selection.min.js                |   2 +-
+ index.js                           | 149 +++++++++++++++----------------------
+ test/require-test.js               |   4 +
+ test/selection-enter-test.js       |   3 +-
+ test/selection-event-test.js (new) |  39 ++++++++++
+ test/selection-exit-test.js        |   1 -
+ 7 files changed, 169 insertions(+), 178 deletions(-)
+
+☕45180dc🔪2015-05-26 11:01:12 -0700🔪Mike Bostock🔪Simplify code structure.🔪It was confusing supporting both the CommonJS require-style API and the
+standalone d3 namespace-based API. This is especially true given that some code
+will necessarily depend on globals (such as d3.select(string), which selects
+from the global document, and selection.event, which sets d3.event).
+
+ Makefile                                  |   4 +-
+ README.md                                 |   4 +-
+ d3-selection.js                           | 229 ++++++++++++++----------------
+ d3-selection.min.js                       |   2 +-
+ lib/d3/selection.js => index.js           | 192 ++++++++++++++++++-------
+ lib/d3/event.js (gone)                    |  56 --------
+ lib/d3/namespace.js (gone)                |  21 ---
+ package.json                              |   2 +-
+ standalone.js (gone)                      |  18 ---
+ test/global-test.js (new)                 |  33 +++++
+ test/{d3 => }/select-test.js              |  44 ++----
+ test/{d3 => }/selectAll-test.js           |  22 +--
+ test/{d3 => }/selection-enter-test.js     |  12 +-
+ test/{d3 => }/selection-exit-test.js      |   6 +-
+ test/{d3 => }/selection-select-test.js    |  32 ++---
+ test/{d3 => }/selection-selectAll-test.js |  24 ++--
+ 16 files changed, 343 insertions(+), 358 deletions(-)
+
+☕5fc4809🔪2015-05-26 10:12:14 -0700🔪Mike Bostock🔪Set _parent with d3.select[All](string).🔪
+ d3-selection.js        | 21 ++++++++++++++++++---
+ d3-selection.min.js    |  2 +-
+ lib/d3/selection.js    | 21 ++++++++++++++++++---
+ test/d3/select-test.js | 20 ++++++++++++++++++--
+ 4 files changed, 55 insertions(+), 9 deletions(-)
+
+☕da4f29a🔪2015-05-25 22:05:08 -0700🔪Mike Bostock🔪Check-in generated files.🔪
+ .gitignore                |    2 -
+ d3-selection.js (new)     | 1068 +++++++++++++++++++++++++++++++++++++++++++++
+ d3-selection.min.js (new) |    1 +
+ package.json              |    2 +-
+ 4 files changed, 1070 insertions(+), 3 deletions(-)
+
+☕9df0dff🔪2015-05-25 21:56:28 -0700🔪Mike Bostock🔪Set version.🔪
+ package.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ee56ebb🔪2015-05-25 21:50:36 -0700🔪Mike Bostock🔪Remove publish target.🔪
+ Makefile | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+☕42800ba🔪2015-05-25 18:55:30 -0700🔪Mike Bostock🔪Target test depends on all.🔪
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕9605aab🔪2015-05-24 22:04:38 -0700🔪Mike Bostock🔪Add selection.selectAll tests.🔪
+ test/d3/select-test.js                    |   8 +-
+ test/d3/selection-enter-test.js           |  12 +--
+ test/d3/selection-exit-test.js            |   2 +-
+ test/d3/selection-select-test.js          |  13 +--
+ test/d3/selection-selectAll-test.js (new) | 159 ++++++++++++++++++++++++++++++
+ 5 files changed, 177 insertions(+), 17 deletions(-)
+
+☕8ab1ab6🔪2015-05-24 21:43:01 -0700🔪Mike Bostock🔪Remove useless messages.🔪
+ test/d3/select-test.js           |  96 +++++++++++++-------------
+ test/d3/selectAll-test.js        |  86 ++++++++++++------------
+ test/d3/selection-enter-test.js  |  84 +++++++++++------------
+ test/d3/selection-exit-test.js   |  18 ++---
+ test/d3/selection-select-test.js | 142 ++++++++++++++++++++-------------------
+ 5 files changed, 216 insertions(+), 210 deletions(-)
+
+☕790c2d2🔪2015-05-24 16:40:58 -0700🔪Mike Bostock🔪Test selection.append inserts in data order.🔪
+ test/d3/selection-enter-test.js  | 52 +++++++++++++++++++++++++++++++++++++++-
+ test/d3/selection-select-test.js | 32 -------------------------
+ 2 files changed, 51 insertions(+), 33 deletions(-)
+
+☕6644d43🔪2015-05-24 16:34:56 -0700🔪Mike Bostock🔪Test enter.select directly.🔪
+ test/d3/selection-select-test.js | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+☕9d3fb78🔪2015-05-24 16:32:09 -0700🔪Mike Bostock🔪Test that update contains materialized nodes.🔪
+ test/d3/selection-select-test.js | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+☕b2f9f84🔪2015-05-24 16:30:59 -0700🔪Mike Bostock🔪Test moving from enter to update.🔪
+ test/d3/selection-select-test.js | 28 +++++++++++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+
+☕86101c3🔪2015-05-24 16:26:00 -0700🔪Mike Bostock🔪Tests for data and index.🔪
+ test/d3/selection-select-test.js | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+
+☕d75a863🔪2015-05-24 16:12:27 -0700🔪Mike Bostock🔪More selection.select tests.🔪
+ test/d3/selection-select-test.js | 71 +++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 67 insertions(+), 4 deletions(-)
+
+☕9916469🔪2015-05-23 21:17:10 -0700🔪Mike Bostock🔪Enable --standalone.🔪
+ Makefile                   |  2 +-
+ package.json               |  3 ++-
+ standalone.js              |  2 +-
+ test/require-test.js (new) | 17 +++++++++++++++++
+ 4 files changed, 21 insertions(+), 3 deletions(-)
+
+☕9be26f2🔪2015-05-22 20:52:24 -0700🔪Mike Bostock🔪More tests.🔪
+ test/d3/selectAll-test.js        | 14 ++++----
+ test/d3/selection-enter-test.js  |  4 +--
+ test/d3/selection-exit-test.js   |  4 +--
+ test/d3/selection-select-test.js | 69 +++++++++++++++++++++++++++++++++-------
+ 4 files changed, 69 insertions(+), 22 deletions(-)
+
+☕3d233c2🔪2015-05-22 20:38:35 -0700🔪Mike Bostock🔪Enter and exit tests.🔪
+ test/d3/select-test.js                 | 12 +++++-----
+ test/d3/selectAll-test.js              | 10 ++++-----
+ test/d3/selection-enter-test.js (new)  | 20 +++++++++++++++++
+ test/d3/selection-exit-test.js (new)   | 19 ++++++++++++++++
+ test/d3/selection-select-test.js (new) | 26 +++++++++++++++++++++
+ test/d3/selection-test.js (gone)       | 41 ----------------------------------
+ 6 files changed, 76 insertions(+), 52 deletions(-)
+
+☕2a7b7bf🔪2015-05-22 20:30:49 -0700🔪Mike Bostock🔪Add tests for select and selectAll.🔪
+ test/d3/select-test.js (new)    | 87 +++++++++++++++++++++++++++++++++++++++++
+ test/d3/selectAll-test.js (new) | 81 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 168 insertions(+)
+
+☕0a7483d🔪2015-05-22 16:08:51 -0700🔪Mike Bostock🔪Lazily construct class regular expression.🔪
+ lib/d3/selection.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+☕4a8bd51🔪2015-05-22 16:08:43 -0700🔪Mike Bostock🔪Oops, fix valueOf.🔪
+ lib/d3/selection.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕73a1ebf🔪2015-05-22 15:53:36 -0700🔪Mike Bostock🔪Only use creatorOf when not a function.🔪
+ lib/d3/selection.js | 29 ++++++++---------------------
+ 1 file changed, 8 insertions(+), 21 deletions(-)
+
+☕40e906a🔪2015-05-22 15:17:50 -0700🔪Mike Bostock🔪Inline a few functions.🔪
+ lib/d3/selection.js | 26 ++++++++------------------
+ 1 file changed, 8 insertions(+), 18 deletions(-)
+
+☕3e029bb🔪2015-05-22 15:11:57 -0700🔪Mike Bostock🔪Fix default comparator.🔪
+ lib/d3/selection.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕24d75b0🔪2015-05-22 15:08:11 -0700🔪Mike Bostock🔪Shorten.🔪
+ lib/d3/selection.js | 23 ++++-------------------
+ 1 file changed, 4 insertions(+), 19 deletions(-)
+
+☕25fc8f7🔪2015-05-22 15:04:40 -0700🔪Mike Bostock🔪Fix #9 - fallback for node.matches.🔪
+ lib/d3/selection.js | 53 ++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 28 insertions(+), 25 deletions(-)
+
+☕ae2c40f🔪2015-05-22 14:34:17 -0700🔪Mike Bostock🔪Rename cryptic private variables.🔪
+ lib/d3/selection.js | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+☕af0daca🔪2015-05-22 14:34:10 -0700🔪Mike Bostock🔪Tweak comment.🔪
+ lib/d3/selection.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕90bf0c2🔪2015-05-22 14:33:36 -0700🔪Mike Bostock🔪Initialize _enter and _exit to null.🔪Not strictly necessary, but might be a good idea for optimization?
+
+ lib/d3/selection.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕9a5130e🔪2015-05-22 11:20:48 -0700🔪Mike Bostock🔪Fix #8 - avoid slice.call(NodeList).🔪
+ lib/d3/selection.js | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+☕fb7d571🔪2015-05-22 10:53:33 -0700🔪Mike Bostock🔪Slightly more concise.🔪
+ lib/d3/selection.js | 79 ++++++++++++++++++++++++-----------------------------
+ 1 file changed, 35 insertions(+), 44 deletions(-)
+
+☕6c357af🔪2015-05-22 10:43:51 -0700🔪Mike Bostock🔪Slightly cleaner filtered listeners.🔪
+ lib/d3/selection.js | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+☕eb1a42f🔪2015-05-22 10:27:23 -0700🔪Mike Bostock🔪Listeners capture ancestors.🔪And then recompute ancestor data on events. Fixes #27.
+
+ lib/d3/selection.js | 25 ++++++++++++++-----------
+ 1 file changed, 14 insertions(+), 11 deletions(-)
+
+☕4f0e620🔪2015-05-22 10:05:38 -0700🔪Mike Bostock🔪Minor optimizations.🔪
+ lib/d3/selection.js | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+☕375fd2b🔪2015-05-22 09:49:12 -0700🔪Mike Bostock🔪Tweak comment.🔪
+ lib/d3/selection.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕612e5c0🔪2015-05-22 09:48:42 -0700🔪Mike Bostock🔪Tweak comment.🔪
+ lib/d3/selection.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕ecf7660🔪2015-05-21 21:43:06 -0700🔪Mike Bostock🔪Simpler key stack.🔪
+ lib/d3/selection.js | 22 ++++++++++------------
+ 1 file changed, 10 insertions(+), 12 deletions(-)
+
+☕a2d6e9a🔪2015-05-21 21:34:46 -0700🔪Mike Bostock🔪Hm, any array can be sparse.🔪
+ lib/d3/selection.js | 78 ++++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 53 insertions(+), 25 deletions(-)
+
+☕4123831🔪2015-05-21 21:03:47 -0700🔪Mike Bostock🔪Arrayify!🔪
+ lib/d3/selection.js | 60 ++++++++++++++++++++++++++++++++---------------------
+ 1 file changed, 36 insertions(+), 24 deletions(-)
+
+☕e409fa5🔪2015-05-21 20:47:05 -0700🔪Mike Bostock🔪Implement order and sort.🔪
+ lib/d3/selection.js | 92 ++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 60 insertions(+), 32 deletions(-)
+
+☕d936aa9🔪2015-05-21 20:26:12 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5e573b8🔪2015-05-21 20:24:38 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+
+☕415675e🔪2015-05-21 20:22:33 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕6b571ab🔪2015-05-21 20:21:24 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕496be88🔪2015-05-21 20:17:42 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕fb0ad59🔪2015-05-21 20:17:07 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕dff0513🔪2015-05-21 20:16:44 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+☕6f224c5🔪2015-05-21 20:10:01 -0700🔪Mike Bostock🔪Formatting.🔪
+ lib/d3/selection.js | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+
+☕52f1e4c🔪2015-05-21 20:06:28 -0700🔪Mike Bostock🔪Remove appended nodes from the enter selection.🔪Previously, we were just copying the nodes to the update selection, but it seems
+right to move them instead.
+
+ lib/d3/selection.js | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+☕0f06b31🔪2015-05-21 19:58:40 -0700🔪Mike Bostock🔪Reorder.🔪
+ lib/d3/selection.js | 134 ++++++++++++++++++++++++++--------------------------
+ 1 file changed, 67 insertions(+), 67 deletions(-)
+
+☕ff411bd🔪2015-05-21 19:56:40 -0700🔪Mike Bostock🔪Comments.🔪
+ lib/d3/selection.js | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+☕adf215f🔪2015-05-21 18:02:07 -0700🔪Mike Bostock🔪Fix #25 - actual placeholders!🔪
+ lib/d3/selection.js | 57 ++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 30 insertions(+), 27 deletions(-)
+
+☕36a62bf🔪2015-05-21 17:35:58 -0700🔪Mike Bostock🔪Experiment without EnterSelection.🔪
+ lib/d3/selection.js | 71 ++++++++++++++---------------------------------------
+ 1 file changed, 18 insertions(+), 53 deletions(-)
+
+☕727b01b🔪2015-05-21 17:24:49 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ lib/d3/selection.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+☕ab147f1🔪2015-05-21 17:21:47 -0700🔪Mike Bostock🔪Combine selection.insert into selection.append.🔪
+ README.md           |  2 ++
+ lib/d3/selection.js | 19 ++++++++++---------
+ standalone.js       |  1 +
+ 3 files changed, 13 insertions(+), 9 deletions(-)
+
+☕f38e03e🔪2015-05-21 16:56:27 -0700🔪Mike Bostock🔪Fix #24 - standardize this context.🔪Also fix bug with null update nodes when joining by key.
+
+ lib/d3/selection.js | 39 +++++++++++++++++++--------------------
+ 1 file changed, 19 insertions(+), 20 deletions(-)
+
+☕fbf2fa7🔪2015-05-21 16:56:15 -0700🔪Mike Bostock🔪Comments.🔪
+ lib/d3/selection.js | 25 ++++++++++---------------
+ 1 file changed, 10 insertions(+), 15 deletions(-)
+
+☕dcd26c6🔪2015-05-21 16:55:45 -0700🔪Mike Bostock🔪Don’t scope initialization.🔪
+ lib/d3/selection.js | 47 +++++++++++++++++++++++------------------------
+ 1 file changed, 23 insertions(+), 24 deletions(-)
+
+☕2eab8bb🔪2015-05-21 15:46:07 -0700🔪Mike Bostock🔪This is cleaner, I think.🔪
+ lib/d3/selection.js | 54 ++++++++++++++++++++++++++---------------------------
+ 1 file changed, 27 insertions(+), 27 deletions(-)
+
+☕cbca84c🔪2015-05-21 14:46:54 -0700🔪Mike Bostock🔪Slightly more verbose.🔪
+ lib/d3/selection.js | 20 ++++++++++++--------
+ 1 file changed, 12 insertions(+), 8 deletions(-)
+
+☕5088bb8🔪2015-05-21 14:43:47 -0700🔪Mike Bostock🔪Fix selection.node.🔪
+ lib/d3/selection.js | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+☕379825e🔪2015-05-21 14:36:09 -0700🔪Mike Bostock🔪Implement enter.select.🔪
+ lib/d3/selection.js | 67 ++++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 48 insertions(+), 19 deletions(-)
+
+☕3cfd5a5🔪2015-05-21 11:05:00 -0700🔪Mike Bostock🔪Copy _parent on enter and exit, too.🔪
+ README.md           | 2 +-
+ lib/d3/selection.js | 7 ++-----
+ 2 files changed, 3 insertions(+), 6 deletions(-)
+
+☕0797efa🔪2015-05-21 11:00:44 -0700🔪Mike Bostock🔪Implement nodes and no-args data.🔪
+ lib/d3/selection.js | 19 +++++++++++--------
+ 1 file changed, 11 insertions(+), 8 deletions(-)
+
+☕8acee62🔪2015-05-21 10:58:41 -0700🔪Mike Bostock🔪Simplify selection.node.🔪
+ lib/d3/selection.js | 19 +++++++------------
+ 1 file changed, 7 insertions(+), 12 deletions(-)
+
+☕c6a50ca🔪2015-05-21 10:50:43 -0700🔪Mike Bostock🔪Always propagate _parent.🔪It’s null on the _root, but that’s fine.
+
+ lib/d3/selection.js | 31 +++++++++++++++----------------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+☕7f04bff🔪2015-05-21 10:43:54 -0700🔪Mike Bostock🔪Bind data by key.🔪
+ lib/d3/selection.js | 193 ++++++++++++++++++++++++++--------------------------
+ 1 file changed, 97 insertions(+), 96 deletions(-)
+
+☕b0f8bfc🔪2015-05-21 10:09:37 -0700🔪Mike Bostock🔪Update nodes can be null.🔪
+ lib/d3/selection.js | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕eb48e75🔪2015-05-21 10:07:03 -0700🔪Mike Bostock🔪Checkpoint working data-join by index.🔪
+ lib/d3/selection.js | 286 +++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 182 insertions(+), 104 deletions(-)
+
+☕b7dae2b🔪2015-05-20 21:31:35 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ lib/d3/selection.js | 44 ++++++++++++++++++++++++++++----------------
+ 1 file changed, 28 insertions(+), 16 deletions(-)
+
+☕da438a2🔪2015-05-20 20:48:30 -0700🔪Mike Bostock🔪Checkpoint selection.data.🔪
+ lib/d3/selection.js | 200 ++++++++++++++++++++++++----------------------------
+ 1 file changed, 92 insertions(+), 108 deletions(-)
+
+☕d61ad2e🔪2015-05-20 20:20:46 -0700🔪Mike Bostock🔪Implement selection.filter.🔪
+ lib/d3/selection.js | 129 +++++++++++++++++++++++-----------------------------
+ 1 file changed, 57 insertions(+), 72 deletions(-)
+
+☕3d5b6ba🔪2015-05-20 20:14:12 -0700🔪Mike Bostock🔪Checkpoint hierarchical.🔪
+ lib/d3/selection.js | 702 ++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 431 insertions(+), 271 deletions(-)
+
+☕28fb8fb🔪2015-05-19 13:08:20 -0700🔪Mike Bostock🔪If groups are private, no need to slice.🔪
+ lib/d3/selection.js | 14 ++------------
+ 1 file changed, 2 insertions(+), 12 deletions(-)
+
+☕313734e🔪2015-05-19 13:04:57 -0700🔪Mike Bostock🔪Slightly shorter.🔪
+ lib/d3/selection.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕e7fbcb4🔪2015-05-19 12:27:14 -0700🔪Mike Bostock🔪Fix sparse arrays returned by nodes and data.🔪
+ lib/d3/selection.js | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+☕7ec4227🔪2015-05-19 10:53:00 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕e59c517🔪2015-05-19 10:48:57 -0700🔪Mike Bostock🔪Sticky enter and exit selections. Fixes #22.🔪Rather than create new enter and exit selections whenever joining to data, we
+lazily create them the first time they are accessed, and then subsequently
+update them in-place. Thus, the enter, update and exit selections are now all
+modified in-place when joining to data.
+
+A selection now keeps a reference to its lazily-constructed enter (_e) and exit
+(_x) selections. The old reference from an enter selection group back to its
+corresponding update selection group (group.update) is replaced with a reference
+to the update selection (_u) from the enter selection.
+
+ lib/d3/selection.js | 52 ++++++++++++++++++++++++++++------------------------
+ 1 file changed, 28 insertions(+), 24 deletions(-)
+
+☕3630ec0🔪2015-05-19 10:20:02 -0700🔪Mike Bostock🔪Enter and exit return empty by default.🔪
+ README.md                 |  2 +-
+ lib/d3/selection.js       | 32 +++++++++++++++++++++++++-------
+ test/d3/selection-test.js | 20 ++++++++++++++++++++
+ 3 files changed, 46 insertions(+), 8 deletions(-)
+
+☕938bb1d🔪2015-05-19 08:27:31 -0700🔪Mike Bostock🔪Polyfill for Map. Fixes #11.🔪Also simplify the polyfill for CustomEvent. The Firefox documentation suggests
+that a window-specific CustomEvent implementation is only necessary for crossing
+privilege boundaries.
+
+ lib/d3/selection.js | 55 ++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 29 insertions(+), 26 deletions(-)
+
+☕520f245🔪2015-05-16 14:07:53 -0700🔪Mike Bostock🔪Tweak README.🔪
+ README.md | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+☕945b142🔪2015-05-16 14:06:05 -0700🔪Mike Bostock🔪Tweak README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕5890f2d🔪2015-05-16 14:04:11 -0700🔪Mike Bostock🔪Implement selection.nodes, flatten selection.data.🔪Also makes selection.groups private; related #12. Fixes #17. Fixes #18.
+
+ README.md           |  8 ++++++--
+ lib/d3/selection.js | 54 ++++++++++++++++++++++++++++++-----------------------
+ 2 files changed, 37 insertions(+), 25 deletions(-)
+
+☕03b42b5🔪2015-05-16 13:47:17 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+☕acb40b3🔪2015-05-16 10:35:43 -0700🔪Mike Bostock🔪Working selection.dispatch.🔪
+ lib/d3/selection.js | 37 ++++++++++++++++++++++++++++---------
+ 1 file changed, 28 insertions(+), 9 deletions(-)
+
+☕4393098🔪2015-05-16 10:13:53 -0700🔪Mike Bostock🔪Rename selection.on to event; add dispatch.🔪Fixes #14 #15.
+
+ lib/d3/selection.js | 17 ++++++++++++++++-
+ standalone.js       |  1 +
+ 2 files changed, 17 insertions(+), 1 deletion(-)
+
+☕5b249c9🔪2015-05-16 09:59:06 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕c426660🔪2015-05-16 09:57:27 -0700🔪Mike Bostock🔪Update README.md🔪
+ README.md | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+☕39df16a🔪2015-05-15 17:28:11 -0700🔪Mike Bostock🔪Adopt tape & faucet for tests.🔪
+ Makefile                        |  2 +-
+ package.json                    |  5 +++--
+ test/d3/selection-test.js (new) | 21 +++++++++++++++++++++
+ 3 files changed, 25 insertions(+), 3 deletions(-)
+
+☕6c0b979🔪2015-05-15 16:53:19 -0700🔪Mike Bostock🔪Fix namespace.qualify reference.🔪
+ lib/d3/selection.js | 8 ++++----
+ standalone.js       | 5 ++++-
+ 2 files changed, 8 insertions(+), 5 deletions(-)
+
+☕7f00b74🔪2015-05-15 16:50:11 -0700🔪Mike Bostock🔪Restructure.🔪
+ lib/d3/{event/point.js => event.js}         | 34 +++++++++++++++++++++++++++--
+ lib/d3/event/mouse.js (gone)                |  8 -------
+ lib/d3/event/source.js (gone)               |  5 -----
+ lib/d3/event/touch.js (gone)                | 12 ----------
+ lib/d3/event/touches.js (gone)              | 10 ---------
+ lib/d3/namespace.js (new)                   | 21 ++++++++++++++++++
+ lib/d3/namespace/prefix.js (gone)           |  7 ------
+ lib/d3/namespace/qualify.js (gone)          | 14 ------------
+ lib/d3/{selection/index.js => selection.js} |  7 +++---
+ standalone.js                               | 17 ++++++++++-----
+ 10 files changed, 68 insertions(+), 67 deletions(-)
+
+☕4d2cfc4🔪2015-05-12 13:44:51 -0700🔪Mike Bostock🔪Add word of caution.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕c1917ca🔪2015-05-12 11:55:52 -0700🔪Mike Bostock🔪Fix typo.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕f3cdb0b🔪2015-05-12 10:19:37 -0700🔪Mike Bostock🔪Link to d3-selection-multi.🔪
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+☕df1f80f🔪2015-05-12 10:05:36 -0700🔪Mike Bostock🔪Extract multi-value map support.🔪This will be moved to an optional plug-in.
+
+ lib/d3/selection/index.js | 73 -----------------------------------------------
+ 1 file changed, 73 deletions(-)
+
+☕72a9e63🔪2015-05-11 23:11:39 -0700🔪Mike Bostock🔪Implement selection.properties. Fixes #5.🔪
+ lib/d3/selection/index.js | 68 ++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 43 insertions(+), 25 deletions(-)
+
+☕a6fc047🔪2015-05-11 23:03:05 -0700🔪Mike Bostock🔪Implement selection.attrs. Fixes #3.🔪
+ lib/d3/selection/index.js | 37 ++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 36 insertions(+), 1 deletion(-)
+
+☕6e65f80🔪2015-05-11 22:53:40 -0700🔪Mike Bostock🔪Minor edits.🔪
+ lib/d3/selection/index.js | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
+
+☕4b587e8🔪2015-05-11 22:50:11 -0700🔪Mike Bostock🔪Implement selection.data and enter selections.🔪Fixes #7.
+
+ lib/d3/selection/index.js | 154 +++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 147 insertions(+), 7 deletions(-)
+
+☕510d0f2🔪2015-05-11 17:23:59 -0700🔪Mike Bostock🔪Implement selection.on.🔪Also, some style changes to improve readability.
+
+ lib/d3/selection/index.js | 281 +++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 238 insertions(+), 43 deletions(-)
+
+☕b39fcb9🔪2015-05-11 15:00:24 -0700🔪Mike Bostock🔪Fix reference to selection.classed.🔪
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+☕7956b77🔪2015-05-11 14:58:54 -0700🔪Mike Bostock🔪Rename selection.classed to selection.class.🔪
+ README.md                 | 2 ++
+ lib/d3/selection/index.js | 8 ++++----
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+☕f70eab3🔪2015-05-11 14:22:38 -0700🔪Mike Bostock🔪Add placeholder selection.ons.🔪
+ README.md                 | 2 +-
+ lib/d3/selection/index.js | 3 +++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+☕8517687🔪2015-05-11 14:17:52 -0700🔪Mike Bostock🔪Add mouse, touch, touches. Fixes #2.🔪
+ lib/d3/event/mouse.js (new)   |  8 ++++++++
+ lib/d3/event/point.js (new)   | 26 ++++++++++++++++++++++++++
+ lib/d3/event/source.js (new)  |  5 +++++
+ lib/d3/event/touch.js (new)   | 12 ++++++++++++
+ lib/d3/event/touches.js (new) | 10 ++++++++++
+ standalone.js                 |  3 +++
+ 6 files changed, 64 insertions(+)
+
+☕56faf1b🔪2015-05-11 13:39:34 -0700🔪Mike Bostock🔪Add TODOs.🔪
+ README.md                 |  2 ++
+ lib/d3/selection/index.js | 16 ++++++++--------
+ 2 files changed, 10 insertions(+), 8 deletions(-)
+
+☕f963d4f🔪2015-05-11 13:36:05 -0700🔪Mike Bostock🔪Add note re. d3.namespace.🔪
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+☕0f1828f🔪2015-05-11 13:31:00 -0700🔪Mike Bostock🔪Add API changes to README.🔪
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+☕e1c0b4e🔪2015-05-11 13:19:28 -0700🔪Mike Bostock🔪Implement selection.filter.🔪
+ lib/d3/selection/index.js | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+☕f0eab4f🔪2015-05-11 13:03:48 -0700🔪Mike Bostock🔪Expose namespaces as d3.namespace in standalone.🔪Since I’m not planning on exporting any methods related to namespaces in the
+standalone API, it seems simpler to just export the map of prefixes.
+
+ standalone.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕600213e🔪2015-05-11 13:01:59 -0700🔪Mike Bostock🔪Expose select & selectAll in standalone.🔪
+ standalone.js | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+☕d941d10🔪2015-05-11 12:59:34 -0700🔪Mike Bostock🔪Add order and sort.🔪
+ lib/d3/selection/index.js | 24 ++++++++++++++++++++++--
+ 1 file changed, 22 insertions(+), 2 deletions(-)
+
+☕bc964c1🔪2015-05-11 12:53:14 -0700🔪Mike Bostock🔪Add LICENSE.🔪
+ LICENSE (new) | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+☕491c19f🔪2015-05-11 12:52:59 -0700🔪Mike Bostock🔪Update README.🔪
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+☕7a6f27a🔪2015-05-11 12:48:54 -0700🔪Mike Bostock🔪Add Makefile, package.json.🔪
+ .gitignore (new)                      |  5 ++++
+ Makefile (new)                        | 26 ++++++++++++++++++++
+ README.md (new)                       |  3 +++
+ index.sublime-project (new)           | 14 +++++++++++
+ lib/d3/selection/index.js             | 45 ++++++++++++++++++++++++++++++-----
+ lib/d3/selection/select-all.js (gone) | 14 -----------
+ lib/d3/selection/select.js (gone)     | 21 ----------------
+ package.json (new)                    | 16 +++++++++++++
+ standalone.js (new)                   |  3 +++
+ 9 files changed, 106 insertions(+), 41 deletions(-)
+
+☕832296b🔪2015-05-11 11:10:56 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ lib/d3/namespace/prefix.js (new)  |   7 +++
+ lib/d3/namespace/qualify.js (new) |  14 +++++
+ lib/d3/selection/index.js         | 106 ++++++++++++++++++++++++++++++++++----
+ 3 files changed, 116 insertions(+), 11 deletions(-)
+
+☕9ad07c9🔪2015-05-11 10:44:35 -0700🔪Mike Bostock🔪Checkpoint.🔪
+ lib/d3/selection/index.js (new)      | 188 +++++++++++++++++++++++++++++++++++
+ lib/d3/selection/select-all.js (new) |  14 +++
+ lib/d3/selection/select.js (new)     |  21 ++++
+ 3 files changed, 223 insertions(+)
